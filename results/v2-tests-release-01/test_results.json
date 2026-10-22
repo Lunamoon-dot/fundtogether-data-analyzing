@@ -1,0 +1,194 @@
+{
+  "browser_acceptance_executed": false,
+  "counts": {
+    "error": 0,
+    "fail": 0,
+    "not_run": 0,
+    "pass": 15,
+    "skipped": 0
+  },
+  "duration_seconds": 19.21665609999036,
+  "failure_fixture": false,
+  "records": [
+    {
+      "assertion_or_error": null,
+      "duration_seconds": 0.0021142000041436404,
+      "evidence": null,
+      "status": "pass",
+      "test_id": "V2-T01",
+      "unittest_id": "tests.test_v2_model.V2ModelTests.test_V2_T01_nested_schema_dispatch_and_errors"
+    },
+    {
+      "assertion_or_error": null,
+      "duration_seconds": 0.001611100000445731,
+      "evidence": null,
+      "status": "pass",
+      "test_id": "V2-T02",
+      "unittest_id": "tests.test_v2_model.V2ModelTests.test_V2_T02_distribution_matches_independent_oracle"
+    },
+    {
+      "assertion_or_error": null,
+      "duration_seconds": 0.00030169999809004366,
+      "evidence": null,
+      "status": "pass",
+      "test_id": "V2-T03",
+      "unittest_id": "tests.test_v2_model.V2ModelTests.test_V2_T03_signal_diagnostics_exact"
+    },
+    {
+      "assertion_or_error": null,
+      "duration_seconds": 0.01713200000813231,
+      "evidence": null,
+      "status": "pass",
+      "test_id": "V2-T04",
+      "unittest_id": "tests.test_v2_model.V2ModelTests.test_V2_T04_v1_reduction_states_predictions_and_analysis"
+    },
+    {
+      "assertion_or_error": null,
+      "duration_seconds": 0.018079699992085807,
+      "evidence": null,
+      "status": "pass",
+      "test_id": "V2-T05",
+      "unittest_id": "tests.test_v2_engine.V2EngineTests.test_V2_T05_candidate_predictions_metrics_and_observations"
+    },
+    {
+      "assertion_or_error": null,
+      "duration_seconds": 0.018837199997506104,
+      "evidence": null,
+      "status": "pass",
+      "test_id": "V2-T06",
+      "unittest_id": "tests.test_v2_engine.V2EngineTests.test_V2_T06_best_response_matches_independent_six_map_oracle"
+    },
+    {
+      "assertion_or_error": null,
+      "duration_seconds": 9.625682499987306,
+      "evidence": {
+        "arithmetic": "exact_integer_ratios",
+        "common_denominator": "19396824000000000",
+        "conditional_payoffs_integrated": 7776,
+        "equilibrium_count": 64,
+        "fixture": "V2-F01",
+        "full_strategy_deviations_compared": 5038848,
+        "payoff_cache_keys": "full raw config, mechanism, z, branch tuple, judge, trial action",
+        "profiles_checked": 46656,
+        "set_difference": []
+      },
+      "status": "pass",
+      "test_id": "V2-T07",
+      "unittest_id": "tests.test_v2_engine.V2EngineTests.test_V2_T07_search_direct_oracle_and_complete_branch_space"
+    },
+    {
+      "assertion_or_error": null,
+      "duration_seconds": 0.9008421000035014,
+      "evidence": null,
+      "status": "pass",
+      "test_id": "V2-T08",
+      "unittest_id": "tests.test_v2_io.V2IOTests.test_V2_T08_scenario_validation_and_mathematical_neutrality"
+    },
+    {
+      "assertion_or_error": null,
+      "duration_seconds": 0.4789503999927547,
+      "evidence": null,
+      "status": "pass",
+      "test_id": "V2-T09",
+      "unittest_id": "tests.test_v2_io.V2IOTests.test_V2_T09_manifest_certificate_freeze_and_scenario_identity"
+    },
+    {
+      "assertion_or_error": null,
+      "duration_seconds": 1.1344314000016311,
+      "evidence": null,
+      "status": "pass",
+      "test_id": "V2-T10",
+      "unittest_id": "tests.test_v2_io.V2IOTests.test_V2_T10_cli_analyze_scenario_and_no_overwrite"
+    },
+    {
+      "assertion_or_error": null,
+      "duration_seconds": 0.1937674000073457,
+      "evidence": null,
+      "status": "pass",
+      "test_id": "V2-T11",
+      "unittest_id": "tests.test_v2_io.V2IOTests.test_V2_T11_nested_sweep_axes_replay_and_invalid_rows"
+    },
+    {
+      "assertion_or_error": null,
+      "duration_seconds": 1.5494749999925261,
+      "evidence": null,
+      "status": "pass",
+      "test_id": "V2-T12",
+      "unittest_id": "tests.test_v2_server.V2ServerTests.test_V2_T12_status_validate_run_and_direct_parity"
+    },
+    {
+      "assertion_or_error": null,
+      "duration_seconds": 2.202986799995415,
+      "evidence": null,
+      "status": "pass",
+      "test_id": "V2-T13",
+      "unittest_id": "tests.test_v2_server.V2ServerTests.test_V2_T13_history_version_scenario_and_round_trip"
+    },
+    {
+      "assertion_or_error": null,
+      "duration_seconds": 0.012231500004418194,
+      "evidence": {
+        "counts": {
+          "error": 0,
+          "fail": 0,
+          "not_run": 0,
+          "pass": 47,
+          "skipped": 0
+        },
+        "run_id": "v2-v1-regression-release-02",
+        "source_matches": true
+      },
+      "status": "pass",
+      "test_id": "V2-T14",
+      "unittest_id": "tests.test_v2_release.V2ReleaseTests.test_V2_T14_current_source_full_v1_regression"
+    },
+    {
+      "assertion_or_error": null,
+      "duration_seconds": 2.918120699992869,
+      "evidence": {
+        "browser_runs": {
+          "B01": "browser-B01-v2-release-02",
+          "B02": "browser-B02-v2-release-02",
+          "B03": "browser-B03-v2-release-02",
+          "B04": "browser-B04-v2-release-02",
+          "B05": "browser-B05-v2-release-02",
+          "B06": "browser-B06-v2-release-02",
+          "B07": "browser-B07-v2-release-03",
+          "B08": "browser-B08-v2-release-02",
+          "B09": "browser-B09-v2-release-02",
+          "V2-B01": "v2-browser-B01-release-02",
+          "V2-B02": "v2-browser-B02-release-02",
+          "V2-B03": "v2-browser-B03-release-02",
+          "V2-B04": "v2-browser-B04-release-02",
+          "V2-B05": "v2-browser-B05-release-03",
+          "V2-B06": "v2-browser-B06-release-02"
+        },
+        "mutation_run": "v2-mutations-release-04",
+        "registry_ids": [
+          "V2-T01",
+          "V2-T02",
+          "V2-T03",
+          "V2-T04",
+          "V2-T05",
+          "V2-T06",
+          "V2-T07",
+          "V2-T08",
+          "V2-T09",
+          "V2-T10",
+          "V2-T11",
+          "V2-T12",
+          "V2-T13",
+          "V2-T14",
+          "V2-T15"
+        ]
+      },
+      "status": "pass",
+      "test_id": "V2-T15",
+      "unittest_id": "tests.test_v2_release.V2ReleaseTests.test_V2_T15_registry_browser_and_mutation_evidence"
+    }
+  ],
+  "reference_results": null,
+  "selected_ids": [],
+  "status": "passed",
+  "suite": "v2"
+}

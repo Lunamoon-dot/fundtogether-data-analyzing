@@ -1,6 +1,29 @@
 # CEAV-M1 — Trạng thái triển khai
 
-**Trạng thái hiện tại: IMPLEMENTED và VERIFIED trong phạm vi M1 local.**
+## Version 2
+
+**Trạng thái V2: `SPECIFIED`, `IMPLEMENTED` và `VERIFIED` trong phạm vi M1 local.**
+
+[CEAV_M1_V2_SPEC.md](CEAV_M1_V2_SPEC.md) revision `signal-heterogeneity-r1` định nghĩa sensitivity/specificity riêng cho tín hiệu chung và từng Judge, schema V2, quy hồi về V1, scenario metadata và V2-GATE-0–V2-GATE-5. [ENGINE_DESIGN_V2.md](ENGINE_DESIGN_V2.md) và [VERIFICATION_PLAN_V2.md](VERIFICATION_PLAN_V2.md) là contract/evidence plan đã được freeze trước production V2.
+
+Nghiệm thu: [report](results/v2-acceptance-release-01/report.md), [acceptance.json](results/v2-acceptance-release-01/acceptance.json), [benchmark](results/v2-acceptance-release-01/benchmark.json). Audit đạt 26/26 checks; `suite=v2` đạt 15/15 và `suite=all` đạt 62/62 methods, không fail/error/skipped/not_run.
+
+| Phần | Evidence V2 |
+| --- | --- |
+| Freeze/provenance | `spec_history/v2-implementation-start-20261022T161522230020Z/`; raw hashes spec/design/plan và oracle/tests có trước production |
+| Parser, distribution, diagnostics | V2-T01–T04; exact Fraction; heterogeneous, below-half và V1 reduction fixtures |
+| Candidate, best response, pure search | V2-T05–T07; đủ 3 Judge × 2 Z; direct oracle 46.656 profiles và 5.038.848 deviations; exact set equality |
+| Scenario, artifact, CLI, sweep | V2-T08–T11; scenario hash tách config hash; nested axes; no-overwrite |
+| API, UI, history, runner | V2-T12–T15; selector V1/V2, draft riêng, import/export, diagnostics và differences model/config/profile/scenario |
+| Browser | V2-B01–B06; Edge 155; desktop/mobile/keyboard; V1 B01–B09 cũng pass lại trên source cuối |
+| Mutation | `results/v2-mutations-release-04/`; V2-M01–M09 đều killed; baseline pass, production bytes unchanged |
+| Hồi quy V1 | `results/v2-v1-regression-release-02/`; đủ T01–T32, 47 methods pass |
+
+V2 không tạo ground truth ngoài đời và không tự ước lượng sensitivity/specificity. Scenario chỉ là metadata provenance, không tham gia phép tính. Kết quả vẫn giới hạn ở ba Judge, conditional independence và pure strategies.
+
+## Version 1
+
+**Trạng thái V1: `IMPLEMENTED` và `VERIFIED` trong phạm vi M1 local.**
 
 Nghiệm thu: [report](results/acceptance-release-01/report.md), [acceptance.json](results/acceptance-release-01/acceptance.json), [benchmark](results/acceptance-release-01/benchmark.json). Audit đối chiếu 68 điều kiện và đạt GATE-0–GATE-5; kiểm tra bổ sung đã đối chiếu raw hashes của 98 artifact cuối thuộc 12 run.
 

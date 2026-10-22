@@ -1,0 +1,140 @@
+{
+  "browser": "155.0.4283.62",
+  "errors": [],
+  "network": [
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/styles.css"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/app.js"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/status"
+    },
+    {
+      "method": "POST",
+      "url": "http://127.0.0.1:8877/api/runs"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/jobs/run-20261022T164607-159f8c661e"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/jobs/run-20261022T164607-159f8c661e"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/jobs/run-20261022T164607-159f8c661e"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/jobs/run-20261022T164607-159f8c661e"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/jobs/run-20261022T164607-159f8c661e"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/jobs/run-20261022T164607-159f8c661e"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/jobs/run-20261022T164607-159f8c661e"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/jobs/run-20261022T164607-159f8c661e"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/jobs/run-20261022T164607-159f8c661e"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/jobs/run-20261022T164607-159f8c661e"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/jobs/run-20261022T164607-159f8c661e"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/jobs/run-20261022T164607-159f8c661e"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/jobs/run-20261022T164607-159f8c661e"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/jobs/run-20261022T164607-159f8c661e"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/runs/run-20261022T164607-159f8c661e"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/runs/run-20261022T164607-159f8c661e/artifacts/equilibria.json"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/runs"
+    }
+  ],
+  "scenario": "V2-B04",
+  "status": "passed",
+  "steps": [
+    {
+      "observed": "ceav-m1-v2.0",
+      "status": "pass",
+      "step": "New form defaults to V2"
+    },
+    {
+      "observed": 202,
+      "status": "pass",
+      "step": "UI submitted equilibria"
+    },
+    {
+      "observed": "succeeded",
+      "status": "pass",
+      "step": "equilibria reached succeeded"
+    },
+    {
+      "observed": 432,
+      "status": "pass",
+      "step": "V2 search renders all branch candidates"
+    },
+    {
+      "observed": true,
+      "status": "pass",
+      "step": "Rejected V2 candidate exposes witness"
+    },
+    {
+      "observed": {
+        "branch": 432,
+        "full": 46656
+      },
+      "status": "pass",
+      "step": "V2 search covers declared pure space"
+    },
+    {
+      "observed": [],
+      "status": "pass",
+      "step": "No JavaScript runtime errors"
+    }
+  ],
+  "viewport": {
+    "height": 768,
+    "width": 1366
+  }
+}

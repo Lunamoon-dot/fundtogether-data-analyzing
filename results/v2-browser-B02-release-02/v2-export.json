@@ -1,0 +1,53 @@
+{
+  "config": {
+    "model_version": "ceav-m1-v2.0",
+    "public_signal": {
+      "sensitivity": "17/20",
+      "specificity": "3/5"
+    },
+    "judges": {
+      "A": {
+        "private_signal": {
+          "sensitivity": "9/10",
+          "specificity": "4/5"
+        },
+        "high_effort_cost": "1/20"
+      },
+      "B": {
+        "private_signal": {
+          "sensitivity": "3/4",
+          "specificity": "19/20"
+        },
+        "high_effort_cost": "1/10"
+      },
+      "C": {
+        "private_signal": {
+          "sensitivity": "13/20",
+          "specificity": "7/10"
+        },
+        "high_effort_cost": "1/25"
+      }
+    },
+    "pi": "1/2",
+    "f": "1/10",
+    "lambda": "3/4",
+    "fixed_reward": "8/5",
+    "reward_budget": "6",
+    "payout_value": "1",
+    "operating_cost": "0"
+  },
+  "profile": {
+    "0": [
+      "H01",
+      "H01",
+      "H01"
+    ],
+    "1": [
+      "H01",
+      "H01",
+      "H01"
+    ]
+  },
+  "mechanism": "rbts",
+  "scenario": null
+}

@@ -1,0 +1,106 @@
+{
+  "browser": "155.0.4283.62",
+  "cancelled_run": "run-20261022T164821-407031eb60",
+  "errors": [],
+  "network": [
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:64969/"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:64969/styles.css"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:64969/app.js"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:64969/api/status"
+    },
+    {
+      "method": "POST",
+      "url": "http://127.0.0.1:64969/api/runs"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:64969/api/jobs/run-20261022T164821-407031eb60"
+    },
+    {
+      "method": "POST",
+      "url": "http://127.0.0.1:64969/api/jobs/run-20261022T164821-407031eb60/cancel"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:64969/api/jobs/run-20261022T164821-407031eb60"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:64969/api/jobs/run-20261022T164821-407031eb60"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:64969/api/runs/run-20261022T164821-407031eb60"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:64969/api/runs"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:64969/api/browser-evidence"
+    },
+    {
+      "method": "POST",
+      "url": "http://127.0.0.1:64969/api/runs"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:64969/api/jobs/run-20261022T164822-5b15d93c5d"
+    }
+  ],
+  "restart_job": "run-20261022T164822-5b15d93c5d",
+  "restart_run": "run-20261022T164822-5b15d93c5d",
+  "scenario": "B07",
+  "status": "passed",
+  "steps": [
+    {
+      "observed": 409,
+      "status": "pass",
+      "step": "Backend rejects duplicate submit while UI disables controls"
+    },
+    {
+      "observed": true,
+      "status": "pass",
+      "step": "Run buttons disabled during active task"
+    },
+    {
+      "observed": "1/2",
+      "status": "pass",
+      "step": "Editing draft does not change active request snapshot"
+    },
+    {
+      "observed": true,
+      "status": "pass",
+      "step": "Cancelled task never publishes succeeded"
+    },
+    {
+      "observed": {
+        "manifest_status": "interrupted",
+        "ui": {
+          "metadata": "Run run-20261022T164822-5b15d93c5d · Bị gián đoạn\n\ntests · model ceav-m1-v1.0 · spec math-proof-r2 · freeze frozen_at_analyzer_implementation_start\nengine/source 52bebe19824fb2f4949769a1d7be4d48d4cb4d1258df46dc53d16b4c527351a8\nconfig — · profile — · scenario not_provided\n\nmanifest.json\nreport.md\nrequest.json\nNạp input run vào bản nháp\nGhim run để đối chiếu\nConfig, profile, scenario và lệnh tái lập"
+        },
+        "worker_alive": false,
+        "worker_pid": 11124
+      },
+      "status": "pass",
+      "step": "Abrupt server restart stops worker and reopens interrupted history"
+    }
+  ],
+  "viewport": {
+    "height": 768,
+    "width": 1366
+  },
+  "worker_pid": 11124
+}

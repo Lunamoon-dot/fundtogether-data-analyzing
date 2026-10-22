@@ -13,10 +13,12 @@ import platform
 import shutil
 import sys
 
-from . import ENGINE_VERSION, MODEL_VERSION
+from . import ENGINE_VERSION, V1_MODEL_VERSION, V2_MODEL_VERSION
 
 ROOT = Path(__file__).resolve().parents[1]
 FREEZE = "spec_history/implementation-start-20261022T081942148684Z"
+V2_FREEZE = "spec_history/v2-implementation-start-20261022T161522230020Z"
+FREEZES = {V1_MODEL_VERSION: FREEZE, V2_MODEL_VERSION: V2_FREEZE}
 
 
 def sha256(raw):
@@ -77,52 +79,62 @@ def write_json(path, value):
     temporary.replace(path)
 
 
-def documents(root=ROOT):
-    folder = root / FREEZE
+def documents(root=ROOT, model_version=V1_MODEL_VERSION):
+    if model_version not in FREEZES:
+        raise ValueError("Unsupported model version for document freeze")
+    freeze = FREEZES[model_version]
+    folder = root / freeze
     event = json.loads((folder / "manifest.json").read_text(encoding="utf-8"))
     if event["event"] != "analyzer_implementation_start" or event["freeze_status"] != "frozen_at_analyzer_implementation_start":
         raise ValueError("Missing implementation-start freeze event")
+    if event.get("model_version", V1_MODEL_VERSION) != model_version:
+        raise ValueError("Freeze event model version mismatch")
     if not event["reference_checker_preexisted"] or event["analyzer_existed_before_event"]:
         raise ValueError("Invalid implementation-start provenance")
     for filename, record in event["files"].items():
         if sha256((folder / filename).read_bytes()) != record["sha256"]:
             raise ValueError(f"Pinned document checksum mismatch: {filename}")
-    parent = root / "spec_history" / event["parent_revision"]
-    review = json.loads((parent / "manifest.json").read_text(encoding="utf-8"))
-    if sha256((parent / review["file"]).read_bytes()) != event["parent_sha256"] or review["sha256"] != event["parent_sha256"]:
-        raise ValueError("Snapshot parent checksum mismatch")
-    seen = set()
-    while review.get("parent_revision"):
-        revision = review["parent_revision"]
-        if revision in seen:
-            raise ValueError("Cycle in snapshot revision chain")
-        seen.add(revision)
-        previous_folder = root / "spec_history" / revision
-        previous = json.loads((previous_folder / "manifest.json").read_text(encoding="utf-8"))
-        if previous["sha256"] != review["parent_sha256"] or sha256((previous_folder / previous["file"]).read_bytes()) != previous["sha256"]:
-            raise ValueError("Historical snapshot chain checksum mismatch")
-        review = previous
+    if model_version == V1_MODEL_VERSION:
+        parent = root / "spec_history" / event["parent_revision"]
+        review = json.loads((parent / "manifest.json").read_text(encoding="utf-8"))
+        if sha256((parent / review["file"]).read_bytes()) != event["parent_sha256"] or review["sha256"] != event["parent_sha256"]:
+            raise ValueError("Snapshot parent checksum mismatch")
+        seen = set()
+        while review.get("parent_revision"):
+            revision = review["parent_revision"]
+            if revision in seen:
+                raise ValueError("Cycle in snapshot revision chain")
+            seen.add(revision)
+            previous_folder = root / "spec_history" / revision
+            previous = json.loads((previous_folder / "manifest.json").read_text(encoding="utf-8"))
+            if previous["sha256"] != review["parent_sha256"] or sha256((previous_folder / previous["file"]).read_bytes()) != previous["sha256"]:
+                raise ValueError("Historical snapshot chain checksum mismatch")
+            review = previous
+    elif not event.get("v2_oracle_preexisted") or event.get("v2_production_support_existed_before_event"):
+        raise ValueError("Invalid V2 implementation-start provenance")
     return event
 
 
 def source_files(root=ROOT):
     paths = []
-    for directory in ("ceav_m1", "web", "tests", "verification", "configs"):
+    for directory in ("ceav_m1", "web", "tests", "verification", "configs", "scenarios"):
         folder = root / directory
         if folder.exists():
             paths.extend(p for p in folder.rglob("*") if p.is_file() and "__pycache__" not in p.parts and p.suffix in (".py", ".json", ".html", ".css", ".js"))
     return sorted(paths, key=lambda path: path.relative_to(root).as_posix())
 
 
-def new_run(out, operation, config=None, profile=None, mechanism=None, request=None, argv=None, publication_owner="cli"):
-    event = documents()
+def new_run(out, operation, config=None, profile=None, mechanism=None, request=None, argv=None, publication_owner="cli", scenario=None, model_version=None):
+    model_version = config.model_version if config is not None else (model_version or V1_MODEL_VERSION)
+    freeze = FREEZES[model_version]
+    event = documents(model_version=model_version)
     out = Path(out).resolve()
     out.mkdir(parents=True, exist_ok=False)
     inputs = out / "inputs"
     inputs.mkdir()
     for filename in event["files"]:
-        shutil.copyfile(ROOT / FREEZE / filename, inputs / filename)
-    shutil.copyfile(ROOT / FREEZE / "manifest.json", inputs / "freeze_event.json")
+        shutil.copyfile(ROOT / freeze / filename, inputs / filename)
+    shutil.copyfile(ROOT / freeze / "manifest.json", inputs / "freeze_event.json")
     sources = []
     for path in source_files():
         relative = path.relative_to(ROOT)
@@ -132,13 +144,15 @@ def new_run(out, operation, config=None, profile=None, mechanism=None, request=N
         destination.write_bytes(raw)
         sources.append({"path": relative.as_posix(), "sha256": sha256(raw)})
     manifest = {"run_id": out.name, "operation": operation, "mechanism": mechanism, "status": "running",
-                "model_version": MODEL_VERSION, "engine_version": ENGINE_VERSION,
+                "model_version": model_version, "engine_version": ENGINE_VERSION,
                 "engine_revision": semantic_hash(sources), "source_files": sources,
                 "python": sys.version, "platform": platform.platform(), "machine": platform.machine(), "logical_cpu_count": os.cpu_count(),
                 "publication_owner": publication_owner,
                 "created_at_utc": datetime.now(timezone.utc).isoformat(), "argv": list(argv or sys.argv),
-                "randomness": "none", "spec": {"revision": event["spec_revision"], "snapshot": FREEZE + "/CEAV_M1_SPEC.md",
-                "sha256": event["files"]["CEAV_M1_SPEC.md"]["sha256"], "freeze_event": FREEZE + "/manifest.json",
+                "randomness": "none", "spec": {"revision": event["spec_revision"],
+                "snapshot": freeze + "/" + ("CEAV_M1_SPEC.md" if model_version == V1_MODEL_VERSION else "CEAV_M1_V2_SPEC.md"),
+                "sha256": event["files"]["CEAV_M1_SPEC.md" if model_version == V1_MODEL_VERSION else "CEAV_M1_V2_SPEC.md"]["sha256"],
+                "freeze_event": freeze + "/manifest.json",
                 "freeze_status": event["freeze_status"], "reference_checker_preexisted": True},
                 "documents": event["files"], "artifacts": []}
     if config is not None:
@@ -150,6 +164,9 @@ def new_run(out, operation, config=None, profile=None, mechanism=None, request=N
     if request is not None:
         write_json(out / "request.json", request)
         manifest["request_hash"] = semantic_hash(request)
+    if scenario is not None:
+        manifest.update(scenario=canonicalize(scenario), scenario_hash=semantic_hash(scenario))
+        write_json(out / "scenario.json", canonicalize(scenario))
     write_json(out / "manifest.json", manifest)
     return manifest
 
@@ -203,10 +220,18 @@ def finish_run(out, manifest, status="succeeded", error=None):
 LIMITATIONS = "M1: một claim, ba Judge; effort sau public Z; không stake/slashing, không ground-truth reward; chỉ cân bằng thuần, không chứng nhận mixed/coalition hoặc equilibrium selection. Đơn vị nghiên cứu chuẩn hóa, không phải tiền thực. Cân bằng không effort như all-Z có thể cùng tồn tại với high-effort; tăng lambda không tự loại bỏ cân bằng đạt score maximum."
 
 
-def research_context(config, profile=None):
-    text = "Miền tham số: 0 < pi,a,b < 1; costs, f, lambda, F, B, V, operating_cost >= 0.\n\nCấu hình thực tế của run:\n\n```json\n" + json.dumps(config, ensure_ascii=False, sort_keys=True, indent=2) + "\n```\n\n"
+def research_context(config, profile=None, scenario=None):
+    version = config.get("model_version", V1_MODEL_VERSION)
+    domain = ("0 < pi,a,b < 1; costs, f, lambda, F, B, V, operating_cost >= 0."
+              if version == V1_MODEL_VERSION else
+              "0 < pi,sensitivity,specificity < 1; cost, f, lambda, F, B, V, operating_cost >= 0.")
+    text = f"Model: {version}. Miền tham số: {domain}\n\nCấu hình thực tế của run:\n\n```json\n" + json.dumps(config, ensure_ascii=False, sort_keys=True, indent=2) + "\n```\n\n"
     if profile is not None:
         text += "Candidate effort/report profile:\n\n```json\n" + json.dumps(profile, sort_keys=True, indent=2) + "\n```\n\n"
+    if scenario is None:
+        text += "Scenario: not_provided.\n\n"
+    else:
+        text += "Scenario metadata (không tham gia phép tính):\n\n```json\n" + json.dumps(scenario, ensure_ascii=False, sort_keys=True, indent=2) + "\n```\n\n"
     return text + LIMITATIONS + "\n"
 
 
@@ -217,6 +242,8 @@ def write_analysis(out, result):
     write_json(out / "best_responses.json", result["best_responses"])
     manifest = json.loads((out / "manifest.json").read_text(encoding="utf-8"))
     identity = {key: manifest[key] for key in ("model_version", "engine_revision", "spec", "documents", "config_hash", "profile_hash", "mechanism")}
+    if "scenario_hash" in manifest:
+        identity["scenario_hash"] = manifest["scenario_hash"]
     identity["candidate_hash"] = semantic_hash({"config": result["config"], "profile": result["profile"], "predictions": result["predictions"], "mechanism": result["mechanism"]})
     write_json(out / "certificate.json", {"identity": identity, "requires_manifest_status": "succeeded", "analysis": summary | {"best_responses": result["best_responses"]}})
     write_csv(out / "states.csv", result["states"])
@@ -228,7 +255,8 @@ def write_analysis(out, result):
             f"Thực chi reward: {metrics['expected_reward_total']}; maximum reward: {result['reward_cap']}; budget: {result['reward_budget']}.\n\n"
             "Candidate payoff sử dụng candidate thật; best response và witness nằm trong best_responses.json. "
             "Witness giữ prediction của peer tại run gốc; dựng lại Bayesian predictions của một profile mới có thể thay đổi payoff.\n\n"
-            + research_context(result["config"], result["profile"]))
+            "Signal diagnostics nằm trong summary.json; đây là mô tả chất lượng tín hiệu theo prior, không phải decision accuracy hay utility.\n\n"
+            + research_context(result["config"], result["profile"], manifest.get("scenario")))
     (out / "report.md").write_text(text, encoding="utf-8", newline="\n")
 
 
@@ -236,6 +264,8 @@ def write_search(out, result):
     out = Path(out)
     manifest = json.loads((out / "manifest.json").read_text(encoding="utf-8"))
     identity = {key: manifest[key] for key in ("model_version", "engine_revision", "spec", "documents", "config_hash", "mechanism")}
+    if "scenario_hash" in manifest:
+        identity["scenario_hash"] = manifest["scenario_hash"]
     write_json(out / "equilibria.json", result | {"identity": identity, "requires_manifest_status": "succeeded"})
     summary = {key: value for key, value in result.items() if key != "branches"}
     summary["branch_equilibrium_counts"] = {z: b["equilibrium_count"] for z, b in result["branches"].items()}
@@ -243,4 +273,4 @@ def write_search(out, result):
     (out / "report.md").write_text(
         f"# CEAV-M1 — Tìm cân bằng thuần\n\nĐã kiểm tra {result['branch_candidate_count']} candidates; "
         f"số cân bằng theo Z: {summary['branch_equilibrium_counts']}; tổ hợp đầy đủ: {result['full_equilibrium_count']}.\n\n"
-        + result["combination_rule"] + "\n\n" + research_context(result["config"]), encoding="utf-8", newline="\n")
+        + result["combination_rule"] + "\n\n" + research_context(result["config"], scenario=manifest.get("scenario")), encoding="utf-8", newline="\n")

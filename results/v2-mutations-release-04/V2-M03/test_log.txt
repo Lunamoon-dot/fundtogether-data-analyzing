@@ -1,0 +1,53 @@
+test_V2_T02_distribution_matches_independent_oracle (tests.test_v2_model.V2ModelTests.test_V2_T02_distribution_matches_independent_oracle) ... FAIL
+test_V2_T05_candidate_predictions_metrics_and_observations (tests.test_v2_engine.V2EngineTests.test_V2_T05_candidate_predictions_metrics_and_observations) ... FAIL
+
+======================================================================
+FAIL: test_V2_T02_distribution_matches_independent_oracle (tests.test_v2_model.V2ModelTests.test_V2_T02_distribution_matches_independent_oracle)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\dell\Desktop\fundtogether_data_analyzing\results\v2-mutations-release-04\V2-M03\workspace\tests\test_v2_model.py", line 62, in test_V2_T02_distribution_matches_independent_oracle
+    self.assertEqual(actual, expected)
+AssertionError: Tuples differ: (((0,[21 chars]tion(96, 625)), ((1, 0, 0, 0, 0, 1), Fraction([1268 chars]00))) != (((0,[21 chars]tion(399, 2500)), ((1, 0, 0, 0, 0, 1), Fractio[1297 chars]00)))
+
+First differing element 0:
+((0, 0, 0, 0, 0, 0), Fraction(96, 625))
+((0, 0, 0, 0, 0, 0), Fraction(399, 2500))
+
+Diff is 5590 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_V2_T05_candidate_predictions_metrics_and_observations (tests.test_v2_engine.V2EngineTests.test_V2_T05_candidate_predictions_metrics_and_observations)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\dell\Desktop\fundtogether_data_analyzing\results\v2-mutations-release-04\V2-M03\workspace\tests\test_v2_engine.py", line 42, in test_V2_T05_candidate_predictions_metrics_and_observations
+    self.assertEqual(actual, expected["tables"][i])
+AssertionError: {(0, 0): Fraction(57, 250), (0, 1): Fraction(31, 50), (1, 0[42 chars]100)} != {(0, 0): Fraction(157, 500), (0, 1): Fraction(51, 100), (1,[46 chars]200)}
+- {(0, 0): Fraction(57, 250),
+?                       -
+
++ {(0, 0): Fraction(157, 500),
+?                   +     +
+
+-  (0, 1): Fraction(31, 50),
+?                   ^   ^
+
++  (0, 1): Fraction(51, 100),
+?                   ^   ^^
+
+-  (1, 0): Fraction(17, 50),
+?                   ^   ^
+
++  (1, 0): Fraction(37, 100),
+?                   ^   ^^
+
+-  (1, 1): Fraction(83, 100)}
+?                   ^   ^
+
++  (1, 1): Fraction(123, 200)}
+?                   ^^   ^
+
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.065s
+
+FAILED (failures=2)

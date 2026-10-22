@@ -1,0 +1,15 @@
+test_V2_T03_signal_diagnostics_exact (tests.test_v2_model.V2ModelTests.test_V2_T03_signal_diagnostics_exact) ... FAIL
+
+======================================================================
+FAIL: test_V2_T03_signal_diagnostics_exact (tests.test_v2_model.V2ModelTests.test_V2_T03_signal_diagnostics_exact)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\dell\Desktop\fundtogether_data_analyzing\results\v2-mutations-release-04\V2-M07\workspace\tests\test_v2_model.py", line 80, in test_V2_T03_signal_diagnostics_exact
+    self.assertEqual(actual, oracle_v2.diagnostics(raw))
+AssertionError: {'pub[185 chars]tion(23, 40)}, 'judges': {'A': {'private_signa[614 chars])}}}} != {'pub[185 chars]tion(31, 60)}, 'judges': {'A': {'private_signa[609 chars])}}}}
+Diff is 2372 characters long. Set self.maxDiff to None to see it.
+
+----------------------------------------------------------------------
+Ran 1 test in 0.003s
+
+FAILED (failures=1)

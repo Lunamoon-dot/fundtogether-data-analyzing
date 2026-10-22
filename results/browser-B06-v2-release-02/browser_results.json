@@ -1,0 +1,330 @@
+{
+  "all_job": "run-20261022T165456-7b64246c7e",
+  "all_run": "run-20261022T165456-7b64246c7e",
+  "browser": "155.0.4283.62",
+  "errors": [],
+  "network": [
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/styles.css"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/app.js"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/status"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/browser-evidence"
+    },
+    {
+      "method": "POST",
+      "url": "http://127.0.0.1:8877/api/runs"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/jobs/run-20261022T165447-ee1de83bea"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/jobs/run-20261022T165447-ee1de83bea"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/runs/run-20261022T165447-ee1de83bea"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/browser-evidence"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/runs/run-20261022T165447-ee1de83bea/artifacts/test_results.json"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/runs"
+    },
+    {
+      "method": "POST",
+      "url": "http://127.0.0.1:8877/api/runs"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/jobs/run-20261022T165448-6634eab258"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/jobs/run-20261022T165448-6634eab258"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/jobs/run-20261022T165448-6634eab258"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/jobs/run-20261022T165448-6634eab258"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/runs/run-20261022T165448-6634eab258"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/browser-evidence"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/runs/run-20261022T165448-6634eab258/artifacts/test_results.json"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/runs"
+    },
+    {
+      "method": "POST",
+      "url": "http://127.0.0.1:8877/api/runs"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/jobs/run-20261022T165450-85f70026c3"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/jobs/run-20261022T165450-85f70026c3"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/jobs/run-20261022T165450-85f70026c3"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/jobs/run-20261022T165450-85f70026c3"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/jobs/run-20261022T165450-85f70026c3"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/jobs/run-20261022T165450-85f70026c3"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/jobs/run-20261022T165450-85f70026c3"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/jobs/run-20261022T165450-85f70026c3"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/jobs/run-20261022T165450-85f70026c3"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/runs/run-20261022T165450-85f70026c3"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/browser-evidence"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/runs/run-20261022T165450-85f70026c3/artifacts/test_results.json"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/runs"
+    },
+    {
+      "method": "POST",
+      "url": "http://127.0.0.1:8877/api/runs"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/jobs/run-20261022T165453-de0043f66c"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/jobs/run-20261022T165453-de0043f66c"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/jobs/run-20261022T165453-de0043f66c"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/jobs/run-20261022T165453-de0043f66c"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/runs/run-20261022T165453-de0043f66c"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/browser-evidence"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/runs/run-20261022T165453-de0043f66c/artifacts/test_results.json"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/runs"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/runs/run-20261022T165453-de0043f66c/artifacts/test_log.txt?download=1"
+    },
+    {
+      "method": "POST",
+      "url": "http://127.0.0.1:8877/api/runs"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/jobs/run-20261022T165456-7b64246c7e"
+    }
+  ],
+  "scenario": "B06",
+  "status": "passed",
+  "steps": [
+    {
+      "observed": 202,
+      "status": "pass",
+      "step": "UI submitted reference"
+    },
+    {
+      "observed": {
+        "id": "run-20261022T165447-ee1de83bea",
+        "status": "succeeded"
+      },
+      "status": "pass",
+      "step": "UI observed terminal run"
+    },
+    {
+      "observed": {
+        "error": 0,
+        "fail": 0,
+        "not_run": 0,
+        "pass": 1,
+        "skipped": 0
+      },
+      "status": "pass",
+      "step": "reference executes through UI"
+    },
+    {
+      "observed": {
+        "decimal": 0.896,
+        "exact": "112/125"
+      },
+      "status": "pass",
+      "step": "Reference exposes newly computed exact results"
+    },
+    {
+      "observed": 202,
+      "status": "pass",
+      "step": "UI submitted goldens"
+    },
+    {
+      "observed": {
+        "id": "run-20261022T165448-6634eab258",
+        "status": "succeeded"
+      },
+      "status": "pass",
+      "step": "UI observed terminal run"
+    },
+    {
+      "observed": {
+        "error": 0,
+        "fail": 0,
+        "not_run": 0,
+        "pass": 4,
+        "skipped": 0
+      },
+      "status": "pass",
+      "step": "goldens executes through UI"
+    },
+    {
+      "observed": 202,
+      "status": "pass",
+      "step": "UI submitted selected T29"
+    },
+    {
+      "observed": {
+        "id": "run-20261022T165450-85f70026c3",
+        "status": "succeeded"
+      },
+      "status": "pass",
+      "step": "UI observed terminal run"
+    },
+    {
+      "observed": {
+        "error": 0,
+        "fail": 0,
+        "not_run": 0,
+        "pass": 2,
+        "skipped": 0
+      },
+      "status": "pass",
+      "step": "Missing-discovery fixture preserves not_run and runner error"
+    },
+    {
+      "observed": 202,
+      "status": "pass",
+      "step": "UI submitted explicit failure fixture"
+    },
+    {
+      "observed": {
+        "id": "run-20261022T165453-de0043f66c",
+        "status": "failed"
+      },
+      "status": "pass",
+      "step": "UI observed terminal run"
+    },
+    {
+      "observed": {
+        "error": 0,
+        "fail": 1,
+        "not_run": 0,
+        "pass": 0,
+        "skipped": 0
+      },
+      "status": "pass",
+      "step": "Intentional fixture yields actual failed run"
+    },
+    {
+      "observed": 202,
+      "status": "pass",
+      "step": "Full engine/API suite submitted through browser"
+    },
+    {
+      "observed": {
+        "counts": {
+          "error": 0,
+          "fail": 0,
+          "not_run": 0,
+          "pass": 47,
+          "skipped": 0
+        },
+        "job_status": "succeeded",
+        "ui": {
+          "text": "tests · model ceav-m1-v1.0 · profile theo phạm vi tác vụ · run run-20261022T165456-7b64246c7e\n\npassed\nselected\n\nerror: 0 · fail: 0 · not_run: 0 · pass: 47 · skipped: 0\n\nThời gian 274.445s. Browser acceptance executed: false.\n\nT-ID\tTest thực thi\tTrạng thái\tThời gian\tAssertion / evidence\nT01\ttests.test_core.CoreTests.test_T01_distribution\tpass\t0.009\t—\nT02\ttests.test_core.CoreTests.test_T02_information_boundaries\tpass\t0.001\t—\nT03\ttests.test_core.CoreTests.test_T03_bounds_endpoints\tpass\t0.007\t—\nT04\ttests.test_core.CoreTests.test_T04_roles\tpass\t0.000\t—\nT05\ttests.test_core.CoreTests.test_T05_H_constants_keep_private_prediction\tpass\t0.016\t—\nT05\ttests.test_core.CoreTests.test_T05_predictions_and_exact_loss\tpass\t0.002\t—\nT06\ttests.test_core.CoreTests.test_T06_fixed_constant_and_zero_costs\tpass\t0.061\t—\nT07\ttests.test_core.CoreTests.test_T07_uninformative_private_signal\tpass\t0.008\t—\nT08\ttests.test_core.CoreTests.test_T08_low_effort_maximum_profiles\tpass\t0.120\t—\nT09\ttests.test_core.CoreTests.test_T09_G1_all_judges_and_branches\tpass\t0.049\t—\nT10\ttests.test_core.CoreTests.test_T10_G3_negative_result\tpass\t0.032\t—\nT11\ttests.test_core.CoreTests.test_T11_G4_post_signal_effort\tpass\t0.033\t—\nT12\ttests.test_core.CoreTests.test_T12_peer_freeze_numeric_counterexample\tpass\t0.017\t—\nT13\ttests.test_core.CoreTests.test_T13_joint_expectation\tpass\t0.092\t—\nT14\ttests.test_core.CoreTests.test_T14_information_variance_identity\tpass\t0.026\t—\nT14\ttests.test_differential.DifferentialTests.test_T14_F12_catalog_all_branch_candidates\tpass\t220.385\t\nXem\n\nT15\ttests.test_core.CoreTests.test_T15_asymmetric_certificate_and_tamper\tpass\t0.207\t—\nT15\ttests.test_io.IOTests.test_T15_artifact_certificate_identity_and_cancelled_rejection\tpass\t1.135\t—\nT16\ttests.test_search.SearchTests.test_T16_complete_six_action_search\tpass\t0.001\t—\nT16\ttests.test_search.SearchTests.test_T16_constant_rewards_continuum_counts\tpass\t13.873\t—\nT17\ttests.test_search.SearchTests.test_T17_full_profile_set_equality\tpass\t3.209\t\nXem\n\nT18\ttests.test_search.SearchTests.test_T18_binary_and_cyclic_relabel\tpass\t0.024\t—\nT19\ttests.test_core.CoreTests.test_T19_threshold_and_reward_shift\tpass\t0.061\t—\nT20\ttests.test_core.CoreTests.test_T20_input_validation\tpass\t0.000\t—\nT20\ttests.test_io.IOTests.test_T20_exact_roundtrip_budget_accounting\tpass\t0.007\t—\nT21\ttests.test_io.IOTests.test_T21_cross_cwd_numeric_identity\tpass\t0.671\t—\nT21\ttests.test_io.IOTests.test_T21_deterministic_numeric_output_and_no_overwrite\tpass\t0.398\t—\nT21\ttests.test_io.IOTests.test_T21_semantic_hash_snapshot_provenance\tpass\t0.236\t—\nT22\ttests.test_io.IOTests.test_T22_cli_real_subprocess_artifacts_and_errors\tpass\t5.388\t—\nT23\ttests.test_server.ServerTests.test_T23_offline_assets_capabilities_port_conflict\tpass\t0.530\t—\nT24\ttests.test_server.ServerTests.test_T24_validation_fields_fraction_profile_presets\tpass\t0.573\t—\nT25\ttests.test_server.ServerTests.test_T25_API_CLI_exact_parity_G1_G4\tpass\t3.126\t—\nT26\ttests.test_server.ServerTests.test_T26_witness_artifact_all_six_branches\tpass\t1.169\t—\nT27\ttests.test_server.ServerTests.test_T27_search_progress_and_certificate_artifact\tpass\t4.105\t—\nT28\ttests.test_io.IOTests.test_T28_sweep_invalid_rows_replay\tpass\t0.081\t—\nT29\ttests.test_io.IOTests.test_T29_runner_actual_failure_and_missing_ids\tpass\t0.117\t\nXem\n\nT29\ttests.test_server.ServerTests.test_T29_API_failure_fixture_and_missing_group\tpass\t1.169\t—\nT30\ttests.test_io.IOTests.test_T30_comparison_equal_cap_actual_spend\tpass\t2.795\t—\nT30\ttests.test_search.SearchTests.test_T30_search_cancellation_no_certificate\tpass\t0.010\t—\nT30\ttests.test_server.ServerTests.test_T30_cancel_before_worker_launch\tpass\t0.523\t—\nT30\ttests.test_server.ServerTests.test_T30_duplicate_submit_immutable_snapshot_cancel\tpass\t1.388\t—\nT30\ttests.test_server.ServerTests.test_T30_success_before_cancel_and_worker_crash\tpass\t1.506\t—\nT31\ttests.test_server.ServerTests.test_T31_abrupt_parent_exit_kills_worker_tree\tpass\t2.549\t\nXem\n\nT31\ttests.test_server.ServerTests.test_T31_history_path_origin_allowlist\tpass\t1.173\t—\nT31\ttests.test_server.ServerTests.test_T31_restart_interrupted_run_and_completed_history\tpass\t2.101\t—\nT31\ttests.test_server.ServerTests.test_T31_symlink_junction_and_prefix_sibling_confinement\tpass\t0.578\t\nXem\n\nT32\ttests.test_browser_evidence.BrowserEvidenceTests.test_T32_current_source_desktop_mobile_browser_evidence\tpass\t0.177\t\nXem\nTải test_log.txt thật"
+        }
+      },
+      "status": "pass",
+      "step": "Complete all-suite result rendered by UI"
+    }
+  ],
+  "viewport": {
+    "height": 768,
+    "width": 1366
+  }
+}

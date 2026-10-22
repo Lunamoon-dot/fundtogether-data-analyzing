@@ -66,6 +66,10 @@ def run(scenario, out, base):
             return child, until(ready)
         if scenario == "B07":
             initial_server, base = start_server(0, "before-restart")
+        subprocess.run([node, str(entry), "-s=ceav-m1", "close"], cwd=ROOT, capture_output=True, text=True)
+        opened = subprocess.run([node, str(entry), "-s=ceav-m1", "open", base, "--browser=msedge"], cwd=ROOT, capture_output=True, text=True)
+        if opened.returncode:
+            raise ValueError("Cannot open Edge browser session: " + opened.stdout + opened.stderr)
         def browser_call(script_path, log_name):
             command = [node, str(entry), "-s=ceav-m1", "run-code", "--filename=" + str(script_path)]
             process = subprocess.run(command, cwd=ROOT, capture_output=True, text=True, encoding="utf-8", errors="replace")
@@ -74,7 +78,8 @@ def run(scenario, out, base):
             if process.returncode or "### Result\n" not in log:
                 raise ValueError("Browser flow failed; see " + log_name)
             return json.loads(log.split("### Result\n", 1)[1].split("\n###", 1)[0])
-        script = (ROOT / "verification/browser_flows.js").read_text(encoding="utf-8")
+        flow_name = "browser_flows_v2.js" if scenario.startswith("V2-") else "browser_flows.js"
+        script = (ROOT / "verification" / flow_name).read_text(encoding="utf-8")
         script = script.replace('"__SCENARIO__"', json.dumps(scenario)).replace('"__OUTPUT_DIR__"', json.dumps(out.as_posix())).replace('"__BASE_URL__"', json.dumps(base))
         (out / "flow.js").write_text(script, encoding="utf-8", newline="\n")
         result = browser_call(out / "flow.js", "browser_log.txt")
@@ -135,6 +140,8 @@ def run(scenario, out, base):
         finish_run(out, manifest, "failed", error)
         raise
     finally:
+        if 'node' in locals() and 'entry' in locals():
+            subprocess.run([node, str(entry), "-s=ceav-m1", "close"], cwd=ROOT, capture_output=True, text=True)
         for server in servers:
             if server.poll() is None:
                 server.terminate()
@@ -145,7 +152,7 @@ def run(scenario, out, base):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--scenario", choices=[f"B{i:02}" for i in range(1, 10)], required=True)
+    parser.add_argument("--scenario", choices=[f"B{i:02}" for i in range(1, 10)] + [f"V2-B{i:02}" for i in range(1, 7)], required=True)
     parser.add_argument("--out", type=Path, required=True)
     parser.add_argument("--base", default="http://127.0.0.1:8765")
     args = parser.parse_args()

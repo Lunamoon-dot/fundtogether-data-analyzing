@@ -2,7 +2,7 @@
 
 from fractions import Fraction as F
 
-from .model import JUDGES
+from .model import JUDGES, signal_diagnostics
 from .scoring import reward, score_judge
 from .strategies import build_candidate, observation_key, realized
 
@@ -64,6 +64,7 @@ def analyze(config, profile, mechanism="rbts"):
                     for i in range(3) for z in (0, 1)]
     maximum = max(c["regret"] for c in certificates)
     return {**SCOPE, **result, "mechanism": mechanism, "config": config.raw(), "profile": profile.raw(),
+            "signal_diagnostics": signal_diagnostics(config),
             "prediction_semantics": candidate.prediction_semantics,
             "predictions": [[{"observation": observation_key(obs), "prediction": p} for obs, p in table] for table in candidate.predictions],
             "best_responses": certificates, "max_regret": maximum,

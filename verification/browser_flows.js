@@ -20,6 +20,7 @@ async page => {
   try {
     await page.setViewportSize({width:1366,height:768});
     await page.goto(base);await page.locator("#connection").filter({hasText:"Engine sẵn sàng"}).waitFor({state:"attached"});
+    await page.locator("#model-version").selectOption("ceav-m1-v1.0");
     if(scenario==="B01") {
       await page.context().route("**/*",route=>route.request().url().startsWith(base)?route.continue():route.abort());
       await page.reload();await page.locator("#connection").filter({hasText:"Engine sẵn sàng"}).waitFor({state:"attached"});
@@ -85,6 +86,8 @@ async page => {
       await page.locator('[data-operation="compare"]').click();await page.locator("#errors").waitFor({state:"visible"});check((await page.locator("#errors").innerText()).includes("fixed_reward"),"Comparison rejects unequal cap",true);
       await page.locator("#equal-cap").click();await page.waitForFunction(()=>document.querySelector("#field-fixed-reward").value==="2");const compared=await runUI('[data-operation="compare"]',"compare");
       const summary=await read(`/api/runs/${compared.job.run_id}/artifacts/summary.json`);check(summary.mechanisms.fixed.metrics.expected_reward_total.exact!==summary.mechanisms.rbts.metrics.expected_reward_total.exact,"Equal cap does not imply equal actual spend",summary);await shot("comparison-actual-spend");
+      const comparisonText=await page.locator("#compare-result").innerText();
+      check(comparisonText.includes("Cùng một candidate/profile")&&comparisonText.includes("không tự chuyển Fixed sang Low Effort"),"Comparison explains why effort cost can match for a non-equilibrium Fixed candidate",comparisonText);
       check((await page.locator("#compare-result").innerText()).includes(compared.job.run_id),"Comparison table labels the actual run and model",compared.job.run_id);
       for(const name of ["fixed/states.csv","rbts/states.csv"]){const pending=page.waitForEvent("download");await page.locator("#run-metadata a").filter({hasText:name}).click();const download=await pending;await download.saveAs(output+"/"+name.replace("/","-"));}
       steps.push({step:"Comparison artifact source",status:"pass",observed:{run_id:compared.job.run_id,manifest:compared.manifest}});
@@ -100,7 +103,7 @@ async page => {
       const failure=await runUI('[data-operation="tests"]',"explicit failure fixture");const data=await read(`/api/runs/${failure.job.run_id}/artifacts/test_results.json`);
       check(failure.manifest.status==="failed"&&data.counts.fail===1,"Intentional fixture yields actual failed run",data.counts);await shot("test-failure-fixture");
       const downloadPromise=page.waitForEvent("download");await page.locator('#tests-result a').click();const download=await downloadPromise;await download.saveAs(output+"/failure-test-log.txt");
-      await page.locator("#failure-fixture").uncheck();await page.locator("#suite").selectOption("all");
+      await page.locator("#failure-fixture").uncheck();for(const checkbox of await page.locator('#test-ids input[value^="T"]').all())await checkbox.check();
       const pending=page.waitForResponse(r=>r.url()===base+"/api/runs"&&r.request().method()==="POST");await page.locator('[data-operation="tests"]').click();const response=await pending;check(response.status()===202,"Full engine/API suite submitted through browser",response.status());const all=await response.json();
       return {scenario,status:"pending_all",browser:page.context().browser().version(),viewport:page.viewportSize(),steps,network,errors,all_job:all.job_id,all_run:all.run_id};
     } else if(scenario==="B07") {
@@ -132,7 +135,7 @@ async page => {
       const activate=async selector=>{await tabTo(selector);await page.keyboard.press("Enter");};
       const keyRun=async operation=>{const pending=page.waitForResponse(r=>r.url()===base+"/api/runs"&&r.request().method()==="POST");await activate(`[data-operation="${operation}"]`);const response=await pending;check(response.status()===202,"Keyboard submits "+operation,response.status());const job=await response.json();await page.waitForFunction(({id,op})=>document.querySelector("#"+op+"-result")?.dataset.runId===id,{id:job.run_id,op:operation},{timeout:30000});return job;};
       for(const viewport of [{width:1366,height:768},{width:390,height:844}]){
-        await page.setViewportSize(viewport);await page.goto(base);await page.locator("#connection").filter({hasText:"Engine sẵn sàng"}).waitFor({state:"attached"});
+        await page.setViewportSize(viewport);await page.goto(base);await page.locator("#connection").filter({hasText:"Engine sẵn sàng"}).waitFor({state:"attached"});await page.locator("#model-version").selectOption("ceav-m1-v1.0");
         await tabTo("#field-pi");await page.keyboard.press("ControlOrMeta+A");await page.keyboard.type("1");await activate("#validate");await page.locator("#errors").waitFor({state:"visible"});
         check(await page.locator("#field-pi").getAttribute("aria-invalid")==="true","Keyboard validation names field at "+viewport.width,true);
         await tabTo("#field-pi");await page.keyboard.press("ControlOrMeta+A");await page.keyboard.type("1/2");

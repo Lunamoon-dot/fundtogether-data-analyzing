@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CEAV-M1 · Phòng thí nghiệm incentive</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#workspace">Đến vùng làm việc</a>
+  <header class="masthead">
+    <div><p class="eyebrow">CEAV / M1</p><h1>Phòng thí nghiệm incentive</h1><p class="subtitle">Một claim · Ba Judge · Kỳ vọng chính xác</p></div>
+    <div class="connection"><span id="connection">Đang kết nối engine…</span><span class="tag">Đơn vị nghiên cứu chuẩn hóa</span></div>
+  </header>
+  <nav aria-label="Chức năng chính" id="navigation">
+    <button data-view="analyze" aria-current="page">Phân tích</button>
+    <button data-view="equilibria">Tìm cân bằng</button>
+    <button data-view="sweep">Quét tham số</button>
+    <button data-view="compare">So sánh</button>
+    <button data-view="tests">Kiểm thử</button>
+    <button data-view="history">Lịch sử</button>
+  </nav>
+  <main id="workspace" tabindex="-1">
+    <section class="job-banner" aria-label="Trạng thái tác vụ">
+      <div><strong id="job-state">Chưa chạy</strong><p id="job-detail" aria-live="polite">Kết quả chỉ xuất hiện sau khi engine thực thi.</p><progress id="progress" hidden></progress></div>
+      <button id="cancel" class="danger" disabled>Hủy tác vụ</button>
+    </section>
+    <div id="errors" role="alert" tabindex="-1" hidden></div>
+    <div id="stale" class="notice" hidden>Bản nháp đã thay đổi. Kết quả bên dưới thuộc cấu hình đã chụp tại thời điểm chạy.</div>
+    <div class="layout" id="layout">
+      <aside id="draft" aria-label="Cấu hình và chiến lược">
+        <div class="section-heading"><h2>Kịch bản</h2><span class="muted">Bản nháp</span></div>
+        <label for="model-version">Phiên bản mô hình</label><select id="model-version"><option value="ceav-m1-v2.0">V2 · sensitivity/specificity riêng</option><option value="ceav-m1-v1.0">V1 · độ chính xác đối xứng</option></select>
+        <label for="preset">Preset đầu vào</label><select id="preset"></select>
+        <label for="mechanism">Cơ chế thưởng</label><select id="mechanism"><option value="rbts">RBTS scoring · Eq. (8)</option><option value="fixed">Fixed reward</option></select>
+        <form id="config-form" novalidate>
+          <h3>Phân phối và chi phí</h3><p id="model-help" class="help"></p>
+          <div id="model-fields" class="field-grid"></div>
+          <details><summary>Ngữ cảnh scenario (tùy chọn, không tham gia phép tính)</summary><label for="scenario-json">Scenario JSON</label><textarea id="scenario-json" rows="8" placeholder="Để trống nếu không có scenario"></textarea></details>
+          <div id="signal-diagnostics" class="diagnostics"><p class="help">Bấm “Kiểm tra đầu vào” để xem false-positive, false-negative và độ chính xác tín hiệu có trọng số prior.</p></div>
+          <details open><summary>Reward và đánh giá mất mát</summary><div id="reward-fields" class="field-grid"></div></details>
+          <h3>Action theo tín hiệu chung Z</h3>
+          <p class="help">L không quan sát X. H00/H11 vẫn quan sát X để dự đoán peer. Effort được chọn sau Z.</p>
+          <label for="quick-profile">Nạp nhanh profile</label><select id="quick-profile"><option value="all_high">All-H · báo X</option><option value="all_inverted">All-H · báo (1−X)</option><option value="all_z">All-Z</option><option value="all_not_z">All-(1−Z)</option><option value="all_pass">All-PASS</option><option value="all_fail">All-FAIL</option><option value="asymmetric_profile">F09 · bất đối xứng</option></select>
+          <div id="profile-editor"></div>
+          <div class="button-row"><button type="button" id="validate">Kiểm tra đầu vào</button><button type="button" id="export">Xuất JSON</button></div>
+          <label for="import">Nhập config/profile JSON</label><input type="file" id="import" accept="application/json,.json">
+        </form>
+        <details class="glossary"><summary>Chú giải và phạm vi</summary><dl><dt>Effort</dt><dd>Trả chi phí để quan sát tín hiệu riêng X.</dd><dt>Peer prediction</dt><dd>Dự đoán report của peer được chấm, không phải ground truth.</dd><dt>Regret</dt><dd>Utility tăng tối đa khi một Judge đổi chiến lược, giữ peer cố định.</dd><dt>False approval</dt><dd>P(D=1 | Y=0), tỷ lệ duyệt sai trong các claim không đạt.</dd><dt>Trần thưởng</dt><dd>Maximum reward; khác số reward thực chi.</dd></dl><p>Chỉ cân bằng thuần của biểu diễn dạng chuẩn rút gọn. Không chứng nhận mixed equilibrium, coalition stability hay equilibrium selection.</p></details>
+      </aside>
+      <section id="content" aria-label="Thao tác và kết quả">
+        <div class="view" data-panel="analyze"><div class="section-heading"><div><p class="eyebrow">01 / ANALYZE</p><h2>Incentive có bù chi phí?</h2></div><button class="primary run" data-operation="analyze" disabled>Chạy phân tích</button></div><p class="intro">Xem payoff của candidate thật và best response riêng cho từng Judge, từng Z. Prediction được engine tối ưu bằng giải tích.</p><div id="analyze-result" class="result"><p class="empty">Chọn một kịch bản và chạy để xem kết quả exact, certificate và 32 trạng thái.</p></div></div>
+        <div class="view" data-panel="equilibria" hidden><div class="section-heading"><div><p class="eyebrow">02 / PURE SEARCH</p><h2>Tìm cân bằng thuần</h2></div><button class="primary run" data-operation="equilibria" disabled>Tìm cân bằng</button></div><p class="intro">216 candidates mỗi nhánh · 46.656 full profile. Giữ cả H00/H11 và mọi tie. Không bao phủ mixed equilibria.</p><div id="equilibria-result" class="result"><p class="empty">Chưa có kết quả tìm kiếm.</p></div></div>
+        <div class="view" data-panel="sweep" hidden><div class="section-heading"><div><p class="eyebrow">03 / SWEEP</p><h2>Quét trên candidate cố định</h2></div><button class="primary run" data-operation="sweep" disabled>Chạy quét</button></div><p class="intro">Lặp analyze trên profile hiện tại; đây không phải bản đồ mọi cân bằng. Hàng vượt budget vẫn được giữ.</p><fieldset><legend>Axes · danh sách phân cách bằng dấu phẩy</legend><div id="sweep-axes"></div><p id="grid-preview" class="help"></p></fieldset><div id="sweep-result" class="result"><p class="empty">Chưa có điểm dữ liệu.</p></div></div>
+        <div class="view" data-panel="compare" hidden><div class="section-heading"><div><p class="eyebrow">04 / COMPARE</p><h2>So sánh cùng candidate/profile</h2></div><button class="primary run" data-operation="compare" disabled>Chạy so sánh</button></div><p class="intro">Fixed và RBTS cùng đánh giá profile hiện tại để so sánh có kiểm soát. Engine không tự chuyển Fixed sang Low Effort, nên accuracy và expected_effort_cost có thể giống nhau dù trạng thái cân bằng khác nhau. Yêu cầu F=f+2λ.</p><button id="equal-cap">Đặt F=f+2λ bằng engine</button><div id="compare-result" class="result"><p class="empty">Chưa có comparison.</p></div><h3>Đối chiếu hai run đã ghim</h3><p class="help">Ghim tối đa hai run ở Lịch sử. Các khác biệt về config/profile/model sẽ được nêu rõ.</p><div id="pinned-result"></div></div>
+        <div class="view" data-panel="tests" hidden><div class="section-heading"><div><p class="eyebrow">05 / VERIFICATION</p><h2>Kiểm thử bằng runner thật</h2></div><button class="primary run" data-operation="tests" disabled>Chạy kiểm thử</button></div><p class="intro">Zero tests, skipped và not_run không phải pass. Python unittest không tự xác nhận browser acceptance.</p><label for="suite">Phạm vi kiểm thử</label><select id="suite"><option value="reference">Reference · checker named profiles</option><option value="goldens">Golden G1–G4 · engine</option><option value="v2">V2 · T01–T15</option><option value="all">Toàn bộ V1+V2 engine/API suite</option><option value="selected">Nhóm T-ID được chọn</option></select><fieldset id="test-selection" hidden><legend>T-ID đã đăng ký</legend><div id="test-ids" class="check-grid"></div><label class="check"><input type="checkbox" id="failure-fixture"> Chạy thêm fixture failure công khai, tách khỏi engine</label></fieldset><div id="tests-result" class="result"><p class="empty">Chưa thực thi test.</p></div><details><summary>Browser acceptance V1 B01–B09 và V2-B01–B06</summary><p id="browser-evidence">Chưa có evidence trình duyệt được xác minh cho source hiện tại.</p></details></div>
+        <div class="view" data-panel="history" hidden><div class="section-heading"><div><p class="eyebrow">06 / HISTORY</p><h2>Run và bằng chứng đã lưu</h2></div><button id="refresh-history">Tải lại lịch sử</button></div><p class="intro">Mỗi run có input/source/spec pin riêng. Run cũ được giữ nguyên; queued/running bị gián đoạn không tự trở thành thành công.</p><div id="history-result"></div></div>
+        <div id="run-metadata"></div>
+      </section>
+    </div>
+  </main>
+  <footer>CEAV-M1 V1/V2 · Không ground-truth reward · Không stake/slashing · Kết quả mô hình, chưa phải thực nghiệm người dùng hoặc cơ chế production</footer>
+</body>
+</html>

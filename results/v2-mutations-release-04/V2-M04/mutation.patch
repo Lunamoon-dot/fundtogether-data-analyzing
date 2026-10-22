@@ -1,0 +1,11 @@
+--- ceav_m1/model.py
++++ ceav_m1/model.py
+@@ -165,7 +165,7 @@
+ 
+     judges = _exact_object(raw["judges"], JUDGES, "judges")
+     sensitivities, specificities, costs = [], [], []
+-    for judge in JUDGES:
++    for judge in judges:
+         item = _exact_object(judges[judge], ("private_signal", "high_effort_cost"), f"judges.{judge}")
+         signal = _exact_object(item["private_signal"], ("sensitivity", "specificity"), f"judges.{judge}.private_signal")
+         sensitivity = rational(signal["sensitivity"], f"judges.{judge}.private_signal.sensitivity")

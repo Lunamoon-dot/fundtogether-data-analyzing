@@ -1,0 +1,150 @@
+{
+  "browser": "155.0.4283.62",
+  "errors": [],
+  "network": [
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/styles.css"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/app.js"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/status"
+    },
+    {
+      "method": "POST",
+      "url": "http://127.0.0.1:8877/api/validate"
+    },
+    {
+      "method": "POST",
+      "url": "http://127.0.0.1:8877/api/validate"
+    },
+    {
+      "method": "POST",
+      "url": "http://127.0.0.1:8877/api/runs"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/jobs/run-20261022T164636-d1575a8014"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/jobs/run-20261022T164636-d1575a8014"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/jobs/run-20261022T164636-d1575a8014"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/runs/run-20261022T164636-d1575a8014"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/runs/run-20261022T164636-d1575a8014/artifacts/summary.json"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/runs/run-20261022T164636-d1575a8014/artifacts/best_responses.json"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/runs/run-20261022T164636-d1575a8014/artifacts/states.csv"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/runs"
+    }
+  ],
+  "scenario": "V2-B06",
+  "status": "passed",
+  "steps": [
+    {
+      "observed": "ceav-m1-v2.0",
+      "status": "pass",
+      "step": "New form defaults to V2"
+    },
+    {
+      "observed": "scenario.parameter_provenance.status: Cần assumption, pilot_estimate hoặc historical_estimate.",
+      "status": "pass",
+      "step": "Invalid scenario names exact field"
+    },
+    {
+      "observed": 202,
+      "status": "pass",
+      "step": "UI submitted analyze"
+    },
+    {
+      "observed": "succeeded",
+      "status": "pass",
+      "step": "analyze reached succeeded"
+    },
+    {
+      "observed": "b4b43d69e8e9ee909c66a4a59592328b19ab2f6ca1a49439bd428b97f630e974",
+      "status": "pass",
+      "step": "Valid scenario is hashed and downloadable"
+    },
+    {
+      "observed": true,
+      "status": "pass",
+      "step": "Keyboard focus reaches model selector at 1366"
+    },
+    {
+      "observed": {
+        "document": 1366,
+        "viewport": 1366
+      },
+      "status": "pass",
+      "step": "No page-wide overflow at 1366"
+    },
+    {
+      "observed": true,
+      "status": "pass",
+      "step": "Keyboard focus reaches model selector at 390"
+    },
+    {
+      "observed": {
+        "document": 390,
+        "viewport": 390
+      },
+      "status": "pass",
+      "step": "No page-wide overflow at 390"
+    },
+    {
+      "observed": [
+        {
+          "active": "model-version",
+          "viewport": {
+            "height": 768,
+            "width": 1366
+          }
+        },
+        {
+          "active": "model-version",
+          "viewport": {
+            "height": 844,
+            "width": 390
+          }
+        }
+      ],
+      "status": "pass",
+      "step": "V2 desktop/mobile keyboard flow"
+    },
+    {
+      "observed": [],
+      "status": "pass",
+      "step": "No JavaScript runtime errors"
+    }
+  ],
+  "viewport": {
+    "height": 844,
+    "width": 390
+  }
+}

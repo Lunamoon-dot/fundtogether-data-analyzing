@@ -1,0 +1,362 @@
+{
+  "checks": [
+    {
+      "evidence": {
+        "counts": {
+          "error": 0,
+          "fail": 0,
+          "not_run": 0,
+          "pass": 15,
+          "skipped": 0
+        },
+        "run": "v2-tests-release-01"
+      },
+      "requirement": "V2-T01 through V2-T15 executed",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "counts": {
+          "error": 0,
+          "fail": 0,
+          "not_run": 0,
+          "pass": 47,
+          "skipped": 0
+        },
+        "run": "v2-v1-regression-release-02"
+      },
+      "requirement": "V1 T01 through T32 regression",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "run": "browser-B01-v2-release-02"
+      },
+      "requirement": "B01 current-source browser acceptance",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "run": "browser-B02-v2-release-02"
+      },
+      "requirement": "B02 current-source browser acceptance",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "run": "browser-B03-v2-release-02"
+      },
+      "requirement": "B03 current-source browser acceptance",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "run": "browser-B04-v2-release-02"
+      },
+      "requirement": "B04 current-source browser acceptance",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "run": "browser-B05-v2-release-02"
+      },
+      "requirement": "B05 current-source browser acceptance",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "run": "browser-B06-v2-release-02"
+      },
+      "requirement": "B06 current-source browser acceptance",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "run": "browser-B07-v2-release-03"
+      },
+      "requirement": "B07 current-source browser acceptance",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "run": "browser-B08-v2-release-02"
+      },
+      "requirement": "B08 current-source browser acceptance",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "run": "browser-B09-v2-release-02"
+      },
+      "requirement": "B09 current-source browser acceptance",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "run": "v2-browser-B01-release-02"
+      },
+      "requirement": "V2-B01 current-source browser acceptance",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "run": "v2-browser-B02-release-02"
+      },
+      "requirement": "V2-B02 current-source browser acceptance",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "run": "v2-browser-B03-release-02"
+      },
+      "requirement": "V2-B03 current-source browser acceptance",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "run": "v2-browser-B04-release-02"
+      },
+      "requirement": "V2-B04 current-source browser acceptance",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "run": "v2-browser-B05-release-03"
+      },
+      "requirement": "V2-B05 current-source browser acceptance",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "run": "v2-browser-B06-release-02"
+      },
+      "requirement": "V2-B06 current-source browser acceptance",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "argv": [
+          "C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+          "-B",
+          "-m",
+          "unittest",
+          "tests.test_v2_model.V2ModelTests.test_V2_T02_distribution_matches_independent_oracle",
+          "-v"
+        ],
+        "assertion_log": "V2-M01/test_log.txt",
+        "baseline_source_hash": "52bebe19824fb2f4949769a1d7be4d48d4cb4d1258df46dc53d16b4c527351a8",
+        "exit_code": 1,
+        "expected_failure": "Y=0 uses specificity",
+        "mutation_id": "V2-M01",
+        "patch_sha256": "e51545865f47849de05f96c9b25c3e22521ded2663e6e3eda840f059b4ed0d99",
+        "status": "killed",
+        "test_ids": [
+          "tests.test_v2_model.V2ModelTests.test_V2_T02_distribution_matches_independent_oracle"
+        ]
+      },
+      "requirement": "V2-M01 targeted mutation killed",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "argv": [
+          "C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+          "-B",
+          "-m",
+          "unittest",
+          "tests.test_v2_model.V2ModelTests.test_V2_T02_distribution_matches_independent_oracle",
+          "-v"
+        ],
+        "assertion_log": "V2-M02/test_log.txt",
+        "baseline_source_hash": "52bebe19824fb2f4949769a1d7be4d48d4cb4d1258df46dc53d16b4c527351a8",
+        "exit_code": 1,
+        "expected_failure": "Y=1 uses sensitivity",
+        "mutation_id": "V2-M02",
+        "patch_sha256": "beb5e4005de4881c90c3e935e7e71f3aafde2f62070bb4bc81148ba1630ff923",
+        "status": "killed",
+        "test_ids": [
+          "tests.test_v2_model.V2ModelTests.test_V2_T02_distribution_matches_independent_oracle"
+        ]
+      },
+      "requirement": "V2-M02 targeted mutation killed",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "argv": [
+          "C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+          "-B",
+          "-m",
+          "unittest",
+          "tests.test_v2_model.V2ModelTests.test_V2_T02_distribution_matches_independent_oracle",
+          "tests.test_v2_engine.V2EngineTests.test_V2_T05_candidate_predictions_metrics_and_observations",
+          "-v"
+        ],
+        "assertion_log": "V2-M03/test_log.txt",
+        "baseline_source_hash": "52bebe19824fb2f4949769a1d7be4d48d4cb4d1258df46dc53d16b4c527351a8",
+        "exit_code": 1,
+        "expected_failure": "B/C retain their own channels",
+        "mutation_id": "V2-M03",
+        "patch_sha256": "57578e619066725d6ef3c93b8f09a9b580edc6a0501baa5bbc9ee3b24bc7f175",
+        "status": "killed",
+        "test_ids": [
+          "tests.test_v2_model.V2ModelTests.test_V2_T02_distribution_matches_independent_oracle",
+          "tests.test_v2_engine.V2EngineTests.test_V2_T05_candidate_predictions_metrics_and_observations"
+        ]
+      },
+      "requirement": "V2-M03 targeted mutation killed",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "argv": [
+          "C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+          "-B",
+          "-m",
+          "unittest",
+          "tests.test_v2_model.V2ModelTests.test_V2_T01_nested_schema_dispatch_and_errors",
+          "-v"
+        ],
+        "assertion_log": "V2-M04/test_log.txt",
+        "baseline_source_hash": "52bebe19824fb2f4949769a1d7be4d48d4cb4d1258df46dc53d16b4c527351a8",
+        "exit_code": 1,
+        "expected_failure": "Judge names, not JSON order, determine positions",
+        "mutation_id": "V2-M04",
+        "patch_sha256": "8b9c9c4212856aa2f8895220628323f61fdf7b7ac5a7d0f1fcce82caa1e0a301",
+        "status": "killed",
+        "test_ids": [
+          "tests.test_v2_model.V2ModelTests.test_V2_T01_nested_schema_dispatch_and_errors"
+        ]
+      },
+      "requirement": "V2-M04 targeted mutation killed",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "argv": [
+          "C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+          "-B",
+          "-m",
+          "unittest",
+          "tests.test_v2_model.V2ModelTests.test_V2_T01_nested_schema_dispatch_and_errors",
+          "-v"
+        ],
+        "assertion_log": "V2-M05/test_log.txt",
+        "baseline_source_hash": "52bebe19824fb2f4949769a1d7be4d48d4cb4d1258df46dc53d16b4c527351a8",
+        "exit_code": 1,
+        "expected_failure": "Missing specificity is rejected",
+        "mutation_id": "V2-M05",
+        "patch_sha256": "505a17fb24399649706669e07b0a2706d09286e0d8665c174559ea92a7d23319",
+        "status": "killed",
+        "test_ids": [
+          "tests.test_v2_model.V2ModelTests.test_V2_T01_nested_schema_dispatch_and_errors"
+        ]
+      },
+      "requirement": "V2-M05 targeted mutation killed",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "argv": [
+          "C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+          "-B",
+          "-m",
+          "unittest",
+          "tests.test_v2_io.V2IOTests.test_V2_T09_manifest_certificate_freeze_and_scenario_identity",
+          "-v"
+        ],
+        "assertion_log": "V2-M06/test_log.txt",
+        "baseline_source_hash": "52bebe19824fb2f4949769a1d7be4d48d4cb4d1258df46dc53d16b4c527351a8",
+        "exit_code": 1,
+        "expected_failure": "Semantic hash includes model_version",
+        "mutation_id": "V2-M06",
+        "patch_sha256": "040b0a6927c76fbbf0c45674aa8b0b9faf580e918c7976ed62837665ac22fa67",
+        "status": "killed",
+        "test_ids": [
+          "tests.test_v2_io.V2IOTests.test_V2_T09_manifest_certificate_freeze_and_scenario_identity"
+        ]
+      },
+      "requirement": "V2-M06 targeted mutation killed",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "argv": [
+          "C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+          "-B",
+          "-m",
+          "unittest",
+          "tests.test_v2_model.V2ModelTests.test_V2_T03_signal_diagnostics_exact",
+          "-v"
+        ],
+        "assertion_log": "V2-M07/test_log.txt",
+        "baseline_source_hash": "52bebe19824fb2f4949769a1d7be4d48d4cb4d1258df46dc53d16b4c527351a8",
+        "exit_code": 1,
+        "expected_failure": "Signal accuracy is prior weighted",
+        "mutation_id": "V2-M07",
+        "patch_sha256": "af18f395de1370d21d629c82d72eca20a02bd92576e8cedb478840ee50fca822",
+        "status": "killed",
+        "test_ids": [
+          "tests.test_v2_model.V2ModelTests.test_V2_T03_signal_diagnostics_exact"
+        ]
+      },
+      "requirement": "V2-M07 targeted mutation killed",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "argv": [
+          "C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+          "-B",
+          "-m",
+          "unittest",
+          "tests.test_v2_io.V2IOTests.test_V2_T08_scenario_validation_and_mathematical_neutrality",
+          "-v"
+        ],
+        "assertion_log": "V2-M08/test_log.txt",
+        "baseline_source_hash": "52bebe19824fb2f4949769a1d7be4d48d4cb4d1258df46dc53d16b4c527351a8",
+        "exit_code": 1,
+        "expected_failure": "Scenario cannot alter mathematics",
+        "mutation_id": "V2-M08",
+        "patch_sha256": "66709314af0521f9b95507a163a6a5dff3d8bb9d559b9787d4b1df59cd019055",
+        "status": "killed",
+        "test_ids": [
+          "tests.test_v2_io.V2IOTests.test_V2_T08_scenario_validation_and_mathematical_neutrality"
+        ]
+      },
+      "requirement": "V2-M08 targeted mutation killed",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "argv": [
+          "C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+          "-B",
+          "-m",
+          "unittest",
+          "tests.test_v2_model.V2ModelTests.test_V2_T04_v1_reduction_states_predictions_and_analysis",
+          "-v"
+        ],
+        "assertion_log": "V2-M09/test_log.txt",
+        "baseline_source_hash": "52bebe19824fb2f4949769a1d7be4d48d4cb4d1258df46dc53d16b4c527351a8",
+        "exit_code": 1,
+        "expected_failure": "V1 state generator semantics remain unchanged",
+        "mutation_id": "V2-M09",
+        "patch_sha256": "1f8e5129f08a251b45b11dc1b35e89ed2f63197ca11c99499d565448fd1170b3",
+        "status": "killed",
+        "test_ids": [
+          "tests.test_v2_model.V2ModelTests.test_V2_T04_v1_reduction_states_predictions_and_analysis"
+        ]
+      },
+      "requirement": "V2-M09 targeted mutation killed",
+      "status": "pass"
+    }
+  ],
+  "inputs": {
+    "mutation_manifest_sha256": "2bfcdd14c75a319bfe6399d5140e0b2afd0871430e0b615e5a3f488c81cf61f7",
+    "v1_regression_manifest_sha256": "7f0e21752402bac7ad65e887f0ab947fd61fb4d5bd55039e989afb3f4178ae9b",
+    "v2_tests_manifest_sha256": "c25e18d67554c96ac032cb6570580f251e7914395d10a3d3f4ec589f23bea638"
+  },
+  "model_version": "ceav-m1-v2.0",
+  "status": "passed"
+}

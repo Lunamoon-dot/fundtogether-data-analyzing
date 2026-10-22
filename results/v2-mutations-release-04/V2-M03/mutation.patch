@@ -1,0 +1,11 @@
+--- ceav_m1/signals.py
++++ ceav_m1/signals.py
+@@ -14,7 +14,7 @@
+         return (config.a, config.a), ((config.b, config.b),) * 3
+     if config.model_version == V2_MODEL_VERSION:
+         public = (config.public_sensitivity, config.public_specificity)
+-        private = tuple(zip(config.private_sensitivities, config.private_specificities))
++        private = ((config.private_sensitivities[0], config.private_specificities[0]),) * 3
+         return public, private
+     raise ValueError("Unsupported validated model version")
+ 

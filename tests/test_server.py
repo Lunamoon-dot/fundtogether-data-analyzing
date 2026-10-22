@@ -202,6 +202,16 @@ class ServerTests(unittest.TestCase):
         self.assertIsNone(internal["process"])
         self.assertFalse((lab.results / job["run_id"] / "summary.json").exists())
 
+    def test_T30_partial_output_before_manifest_is_preserved_and_finalized(self):
+        out = self.results / "run-partial-output"
+        (out / "inputs").mkdir(parents=True)
+        (out / "inputs" / "copied-before-cancel.txt").write_text("partial", encoding="utf-8")
+        manifest = self.server.lab.prepare_terminal_run(out, request())
+        self.assertEqual(manifest["run_id"], "run-partial-output")
+        self.assertTrue((out / "manifest.json").is_file())
+        preserved = self.results / ".jobs" / "run-partial-output" / "partial-output-before-terminal-publication" / "inputs" / "copied-before-cancel.txt"
+        self.assertEqual(preserved.read_text(encoding="utf-8"), "partial")
+
     def test_T30_success_before_cancel_and_worker_crash(self):
         self.install_barrier_lab()
         for mode, expected in (("barrier", "succeeded"), ("crash", "failed")):

@@ -1,0 +1,11 @@
+{
+  "base_config": "golden_g1.json",
+  "axes": {
+    "lambda": [
+      "0",
+      "1/2",
+      "1",
+      "2"
+    ]
+  }
+}

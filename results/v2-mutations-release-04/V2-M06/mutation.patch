@@ -1,0 +1,11 @@
+--- ceav_m1/output.py
++++ ceav_m1/output.py
+@@ -62,7 +62,7 @@
+     if hasattr(value, "raw"):
+         return canonicalize(value.raw())
+     if isinstance(value, dict):
+-        return {str(k): canonicalize(v) for k, v in value.items()}
++        return {str(k): canonicalize(v) for k, v in value.items() if str(k) != "model_version"}
+     if isinstance(value, (list, tuple)):
+         return [canonicalize(v) for v in value]
+     return value

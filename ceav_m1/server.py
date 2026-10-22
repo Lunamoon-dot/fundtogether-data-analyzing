@@ -8,6 +8,7 @@ import os
 from pathlib import Path
 import re
 import secrets
+import shutil
 import signal
 import socket
 import subprocess
@@ -15,10 +16,10 @@ import sys
 import threading
 from urllib.parse import unquote, urlsplit
 
-from . import ENGINE_VERSION, MODEL_VERSION
-from .__main__ import compare_config
-from .model import ValidationError, rational, validate_config
-from .output import ROOT, documents, exact_payload, finish_run, new_run, sha256, write_json
+from . import DEFAULT_MODEL_VERSION, ENGINE_VERSION, SUPPORTED_MODEL_VERSIONS, V1_MODEL_VERSION, V2_MODEL_VERSION
+from .__main__ import compare_config, validate_sweep_axes
+from .model import ValidationError, signal_diagnostics, validate_config, validate_scenario
+from .output import FREEZES, ROOT, documents, exact_payload, finish_run, new_run, sha256, write_json
 from .strategies import ACTIONS, validate_profile
 from .test_runner import SUITES
 
@@ -95,13 +96,15 @@ class Laboratory:
     def validate(self, request):
         if not isinstance(request, dict):
             raise ValidationError("request", "Cần JSON object.")
-        allowed = {"operation", "config", "profile", "mechanism", "axes", "suite", "test_ids", "failure_fixture"}
+        allowed = {"operation", "config", "profile", "mechanism", "axes", "suite", "test_ids", "failure_fixture", "scenario"}
         if set(request) - allowed:
             raise ValidationError(sorted(set(request) - allowed)[0], "Field không được hỗ trợ.")
         operation = request.get("operation", "analyze")
         if operation not in OPERATIONS:
             raise ValidationError("operation", "Operation không được hỗ trợ.")
         operation_fields = {"operation", "suite", "test_ids", "failure_fixture"} if operation == "tests" else {"operation", "config", "mechanism"}
+        if operation != "tests":
+            operation_fields.add("scenario")
         if operation not in ("tests", "equilibria"):
             operation_fields.add("profile")
         if operation == "sweep":
@@ -113,8 +116,8 @@ class Laboratory:
             if suite not in SUITES:
                 raise ValidationError("suite", "Suite không được hỗ trợ.")
             selected = request.get("test_ids", [])
-            if not isinstance(selected, list) or any(not isinstance(i, str) or not re.fullmatch(r"T(?:0[1-9]|[12][0-9]|3[0-2])", i) for i in selected):
-                raise ValidationError("test_ids", "Chỉ nhận IDs đã đăng ký T01–T32.")
+            if not isinstance(selected, list) or any(not isinstance(i, str) or not re.fullmatch(r"(?:T(?:0[1-9]|[12][0-9]|3[0-2])|V2-T(?:0[1-9]|1[0-5]))", i) for i in selected):
+                raise ValidationError("test_ids", "Chỉ nhận IDs đã đăng ký V1 T01–T32 hoặc V2-T01–V2-T15.")
             if type(request.get("failure_fixture", False)) is not bool:
                 raise ValidationError("failure_fixture", "Cần boolean.")
             fixture = request.get("failure_fixture", False)
@@ -128,16 +131,12 @@ class Laboratory:
             raise ValidationError("mechanism", "Chỉ hỗ trợ fixed hoặc rbts.")
         config = compare_config(request.get("config")) if operation == "compare" else validate_config(request.get("config"), mechanism)
         profile = validate_profile(request.get("profile")) if operation != "equilibria" else None
+        scenario = validate_scenario(request["scenario"]) if request.get("scenario") is not None else None
         if operation == "sweep":
             axes = request.get("axes")
-            if not isinstance(axes, dict) or not axes or set(axes) - {"pi", "a", "b", "c", "lambda"}:
-                raise ValidationError("axes", "Cần axes pi,a,b,c,lambda.")
-            for key, values in axes.items():
-                if not isinstance(values, list) or not values:
-                    raise ValidationError(f"axes.{key}", "Cần danh sách không rỗng.")
-                for value in values:
-                    rational(value, f"axes.{key}")
+            validate_sweep_axes(axes, config.model_version)
         return {"valid": True, "operation": operation, "config": config.raw(), "profile": profile.raw() if profile else None,
+                "scenario": scenario, "signal_diagnostics": signal_diagnostics(config),
                 "comparison_fixed_reward": str(config.f + 2 * config.multiplier)}
 
     def snapshot(self, job):
@@ -183,6 +182,9 @@ class Laboratory:
             write_json(staged / "sweep.json", {"base_config": "config.json", "axes": request["axes"]})
             config_path = staged / "sweep.json"
         command += ["--config", str(config_path), "--progress-json"]
+        if request.get("scenario") is not None:
+            write_json(staged / "scenario.json", request["scenario"])
+            command += ["--scenario", str(staged / "scenario.json")]
         if operation != "equilibria":
             write_json(staged / "profile.json", request["profile"])
             command += ["--profile", str(staged / "profile.json")]
@@ -193,10 +195,17 @@ class Laboratory:
     def prepare_terminal_run(self, out, request):
         if (out / "manifest.json").exists():
             return json.loads((out / "manifest.json").read_text(encoding="utf-8"))
+        if out.exists():
+            partial = self.staging / out.name / "partial-output-before-terminal-publication"
+            partial.parent.mkdir(parents=True, exist_ok=True)
+            if partial.exists():
+                raise ValueError("Partial output snapshot already exists")
+            shutil.move(str(out), str(partial))
         operation = request["operation"]
-        config = None if operation == "tests" else validate_config(request["config"], request.get("mechanism", "rbts"))
+        config = None if operation == "tests" else (compare_config(request["config"]) if operation == "compare" else validate_config(request["config"], request.get("mechanism", "rbts")))
         profile = validate_profile(request["profile"]) if operation in ("analyze", "compare", "sweep") else None
-        return new_run(out, operation, config, profile, request.get("mechanism"), request=request, publication_owner="local_server")
+        scenario = validate_scenario(request["scenario"]) if request.get("scenario") is not None else None
+        return new_run(out, operation, config, profile, request.get("mechanism"), request=request, publication_owner="local_server", scenario=scenario)
 
     def worker(self, job):
         process = None
@@ -288,7 +297,7 @@ class Laboratory:
                 continue
             try:
                 _, manifest = self.run_folder(folder.name)
-                records.append({key: manifest.get(key) for key in ("run_id", "operation", "mechanism", "status", "created_at_utc", "config_hash", "profile_hash", "spec", "engine_revision")})
+                records.append({key: manifest.get(key) for key in ("run_id", "operation", "mechanism", "status", "created_at_utc", "model_version", "config_hash", "profile_hash", "scenario_hash", "spec", "engine_revision")})
             except (OSError, ValueError, KeyError):
                 continue
         return sorted(records, key=lambda r: r["created_at_utc"] or "", reverse=True)
@@ -371,13 +380,17 @@ def create_server(port=8765, results_dir=None, laboratory=None):
                     mime = {"index.html": "text/html", "styles.css": "text/css", "app.js": "text/javascript"}[name]
                     self.send(200, asset.read_bytes(), mime + "; charset=utf-8")
                 elif path == "/api/status":
-                    event = documents()
+                    events = {version: documents(model_version=version) for version in SUPPORTED_MODEL_VERSIONS}
                     with lab.lock:
                         active = lab.snapshot(lab.jobs[lab.active]) if lab.active else None
                     presets = {name: json.loads((ROOT / "configs" / f"{name}.json").read_text(encoding="utf-8")) for name in ("golden_g1", "golden_g2", "golden_g3", "golden_g4", "asymmetric", "all_high", "all_inverted", "all_z", "all_not_z", "all_pass", "all_fail", "asymmetric_profile")}
-                    self.send(200, {"model_version": MODEL_VERSION, "engine_version": ENGINE_VERSION, "freeze_status": event["freeze_status"],
+                    v2_presets = {name: json.loads((ROOT / "configs" / "v2" / f"{name}.json").read_text(encoding="utf-8")) for name in ("symmetric_g1", "heterogeneous", "below_half")}
+                    self.send(200, {"model_version": DEFAULT_MODEL_VERSION, "default_model_version": DEFAULT_MODEL_VERSION,
+                                   "supported_model_versions": list(SUPPORTED_MODEL_VERSIONS), "engine_version": ENGINE_VERSION,
+                                   "freeze_status": events[DEFAULT_MODEL_VERSION]["freeze_status"],
+                                   "freezes": {version: {"path": FREEZES[version], "status": events[version]["freeze_status"]} for version in SUPPORTED_MODEL_VERSIONS},
                                    "capabilities": {operation: True for operation in OPERATIONS}, "suites": list(SUITES),
-                                   "token": lab.token, "active_job": active, "actions": ACTIONS, "presets": presets})
+                                   "token": lab.token, "active_job": active, "actions": ACTIONS, "presets": presets, "v2_presets": v2_presets})
                 elif path == "/api/runs":
                     self.send(200, {"runs": lab.history()})
                 elif path == "/api/browser-evidence":

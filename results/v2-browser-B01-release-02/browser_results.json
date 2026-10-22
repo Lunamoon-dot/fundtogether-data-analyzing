@@ -1,0 +1,54 @@
+{
+  "browser": "155.0.4283.62",
+  "errors": [],
+  "network": [
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/styles.css"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/app.js"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/status"
+    },
+    {
+      "method": "POST",
+      "url": "http://127.0.0.1:8877/api/validate"
+    }
+  ],
+  "scenario": "V2-B01",
+  "status": "passed",
+  "steps": [
+    {
+      "observed": "ceav-m1-v2.0",
+      "status": "pass",
+      "step": "New form defaults to V2"
+    },
+    {
+      "observed": "Chẩn đoán tín hiệu\n\nFPR=1−specificity; FNR=1−sensitivity; accuracy có trọng số prior. Đây không phải decision accuracy hay utility.\n\n{\n  \"public_signal\": {\n    \"sensitivity\": {\n      \"exact\": \"4/5\",\n      \"decimal\": 0.8\n    },\n    \"specificity\": {\n      \"exact\": \"3/5\",\n      \"decimal\": 0.6\n    },\n  ",
+      "status": "pass",
+      "step": "Validation renders signal diagnostics"
+    },
+    {
+      "observed": 12,
+      "status": "pass",
+      "step": "All public/Judge/cost V2 fields are editable"
+    },
+    {
+      "observed": [],
+      "status": "pass",
+      "step": "No JavaScript runtime errors"
+    }
+  ],
+  "viewport": {
+    "height": 768,
+    "width": 1366
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "browser": "155.0.4283.62",
+  "errors": [],
+  "network": [
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/styles.css"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/app.js"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/status"
+    },
+    {
+      "method": "POST",
+      "url": "http://127.0.0.1:8877/api/validate"
+    },
+    {
+      "method": "POST",
+      "url": "http://127.0.0.1:8877/api/validate"
+    },
+    {
+      "method": "POST",
+      "url": "http://127.0.0.1:8877/api/validate"
+    }
+  ],
+  "scenario": "B02",
+  "status": "passed",
+  "steps": [
+    {
+      "observed": "pi",
+      "status": "pass",
+      "step": "Invalid import names exact field"
+    },
+    {
+      "observed": "2/3",
+      "status": "pass",
+      "step": "Import/export preserves rational strings"
+    },
+    {
+      "observed": "H11",
+      "status": "pass",
+      "step": "All six action fields editable"
+    },
+    {
+      "observed": true,
+      "status": "pass",
+      "step": "Named all-H inverse-report profile is available"
+    },
+    {
+      "observed": [],
+      "status": "pass",
+      "step": "No JavaScript runtime errors"
+    }
+  ],
+  "viewport": {
+    "height": 768,
+    "width": 1366
+  }
+}

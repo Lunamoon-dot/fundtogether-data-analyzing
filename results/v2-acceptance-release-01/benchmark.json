@@ -1,0 +1,20 @@
+{
+  "command": "V2 direct oracle plus production search",
+  "duration_seconds": 9.625682499987306,
+  "evidence": {
+    "arithmetic": "exact_integer_ratios",
+    "common_denominator": "19396824000000000",
+    "conditional_payoffs_integrated": 7776,
+    "equilibrium_count": 64,
+    "fixture": "V2-F01",
+    "full_strategy_deviations_compared": 5038848,
+    "payoff_cache_keys": "full raw config, mechanism, z, branch tuple, judge, trial action",
+    "profiles_checked": 46656,
+    "set_difference": []
+  },
+  "logical_cpu_count": 16,
+  "machine": "AMD64",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "source_hash": "52bebe19824fb2f4949769a1d7be4d48d4cb4d1258df46dc53d16b4c527351a8"
+}

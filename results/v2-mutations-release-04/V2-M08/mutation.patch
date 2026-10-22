@@ -1,0 +1,11 @@
+--- ceav_m1/__main__.py
++++ ceav_m1/__main__.py
+@@ -64,6 +64,8 @@
+     profile = None if operation == "equilibria" else validate_profile(raw_profile)
+     config = compare_config(raw_config) if operation == "compare" else validate_config(raw_config, mechanism)
+     scenario = validate_scenario(scenario) if scenario is not None else None
++    if scenario is not None:
++        config = validate_config(raw_config | {"pi": "2/3"}, mechanism)
+     out = Path(out)
+     request = {"operation": operation, "config": raw_config, "profile": raw_profile, "mechanism": mechanism}
+     if sweep is not None:

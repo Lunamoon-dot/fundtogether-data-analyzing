@@ -2,6 +2,8 @@
 
 **Dành cho người chưa biết mô hình hoặc lý thuyết trò chơi.** Đối chiếu với code và chạy lại các ví dụ ngày 22/10/2026.
 
+**Phạm vi:** phần giải thích `a`, `b` và các ví dụ G1–G4 trong hướng dẫn này áp dụng cho Version 1 (`ceav-m1-v1.0`). Giao diện hiện hỗ trợ cả V1 và V2, mặc định V2; xem [HUONG_DAN_THAM_SO_V2.md](HUONG_DAN_THAM_SO_V2.md) để dùng sensitivity/specificity theo từng Judge.
+
 Bạn không cần đọc công thức trước. Hãy đọc mục 1–3, làm thử mục 2 trên giao diện, rồi tra từng thông số ở mục 4. Mục 7–9 giải thích kết quả và các chức năng còn lại; công thức nằm cuối file.
 
 ## 1. Phần mềm này dùng để trả lời điều gì?

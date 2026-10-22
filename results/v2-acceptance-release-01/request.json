@@ -1,0 +1,5 @@
+{
+  "mutations": "results\\v2-mutations-release-04",
+  "tests": "results\\v2-tests-release-01",
+  "v1_regression": "results\\v2-v1-regression-release-02"
+}

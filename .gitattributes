@@ -2,3 +2,7 @@
 # on every platform so a Windows checkout does not invalidate pinned hashes.
 * text=auto eol=lf
 *.png binary
+
+# Run artifacts and historical freezes are immutable raw-byte evidence.
+results/** -text
+spec_history/** -text

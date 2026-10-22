@@ -1,0 +1,135 @@
+{
+  "browser": "155.0.4283.62",
+  "errors": [],
+  "network": [
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/styles.css"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/app.js"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/status"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/styles.css"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/app.js"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/status"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/browser-evidence"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/runs"
+    }
+  ],
+  "scenario": "B01",
+  "status": "passed",
+  "steps": [
+    {
+      "observed": true,
+      "status": "pass",
+      "step": "Navigation opens analyze"
+    },
+    {
+      "observed": true,
+      "status": "pass",
+      "step": "Navigation opens equilibria"
+    },
+    {
+      "observed": true,
+      "status": "pass",
+      "step": "Navigation opens sweep"
+    },
+    {
+      "observed": true,
+      "status": "pass",
+      "step": "Navigation opens compare"
+    },
+    {
+      "observed": true,
+      "status": "pass",
+      "step": "Navigation opens tests"
+    },
+    {
+      "observed": true,
+      "status": "pass",
+      "step": "Navigation opens history"
+    },
+    {
+      "observed": [
+        {
+          "method": "GET",
+          "url": "http://127.0.0.1:8877/"
+        },
+        {
+          "method": "GET",
+          "url": "http://127.0.0.1:8877/styles.css"
+        },
+        {
+          "method": "GET",
+          "url": "http://127.0.0.1:8877/app.js"
+        },
+        {
+          "method": "GET",
+          "url": "http://127.0.0.1:8877/api/status"
+        },
+        {
+          "method": "GET",
+          "url": "http://127.0.0.1:8877/"
+        },
+        {
+          "method": "GET",
+          "url": "http://127.0.0.1:8877/styles.css"
+        },
+        {
+          "method": "GET",
+          "url": "http://127.0.0.1:8877/app.js"
+        },
+        {
+          "method": "GET",
+          "url": "http://127.0.0.1:8877/api/status"
+        },
+        {
+          "method": "GET",
+          "url": "http://127.0.0.1:8877/api/browser-evidence"
+        },
+        {
+          "method": "GET",
+          "url": "http://127.0.0.1:8877/api/runs"
+        }
+      ],
+      "status": "pass",
+      "step": "No external network dependency"
+    },
+    {
+      "observed": [],
+      "status": "pass",
+      "step": "No JavaScript runtime errors"
+    }
+  ],
+  "viewport": {
+    "height": 768,
+    "width": 1366
+  }
+}
