@@ -1,0 +1,31 @@
+{
+  "analyzer_existed_before_event": false,
+  "captured_at_utc": "2026-10-22T08:19:42.148684+00:00",
+  "design_revision": "engine-design-r1",
+  "event": "analyzer_implementation_start",
+  "files": {
+    "CEAV_M1_SPEC.md": {
+      "bytes": 71180,
+      "sha256": "c62cc8ae146603adceb1fb94560c541e198244ff83519be8a1adbe60a6781120"
+    },
+    "ENGINE_DESIGN.md": {
+      "bytes": 23400,
+      "sha256": "9acba0db2d546d7d2c0427a0e1e0dcff77c6d7329db9a3934ea291616ce9e447"
+    },
+    "VERIFICATION_PLAN.md": {
+      "bytes": 32090,
+      "sha256": "6096454551c4bbc0ab473edd8853888ca3f650401ef5ecbc45df7b262404448a"
+    }
+  },
+  "freeze_status": "frozen_at_analyzer_implementation_start",
+  "hash_basis": "raw_file_bytes",
+  "model_version": "ceav-m1-v1.0",
+  "parent_revision": "math-proof-r2",
+  "parent_sha256": "c62cc8ae146603adceb1fb94560c541e198244ff83519be8a1adbe60a6781120",
+  "reference_checker_preexisted": true,
+  "reference_checker_sha256": "a77957a66cf8816e1575734a0362f2a0ca4690a47e645ed0b12c8cd59ff62550",
+  "reference_results_sha256": "85622a6a7d2a03b787009b9a2f21a6fc7079dd87276b5ed7eb2cbd22c1ff7209",
+  "spec_revision": "math-proof-r2",
+  "timestamp_assurance": "local UTC clock; not a third-party timestamp",
+  "verification_revision": "verification-plan-r1"
+}

@@ -1,0 +1,32 @@
+{
+  "config": {
+    "model_version": "ceav-m1-v1.0",
+    "costs": [
+      "0",
+      "1/50",
+      "3/20"
+    ],
+    "pi": "2/3",
+    "a": "3/5",
+    "b": "4/5",
+    "f": "1/10",
+    "lambda": "3/4",
+    "fixed_reward": "8/5",
+    "reward_budget": "6",
+    "payout_value": "2",
+    "operating_cost": "1/10"
+  },
+  "profile": {
+    "0": [
+      "L0",
+      "L1",
+      "H00"
+    ],
+    "1": [
+      "H01",
+      "H10",
+      "H11"
+    ]
+  },
+  "mechanism": "rbts"
+}

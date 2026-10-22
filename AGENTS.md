@@ -1,0 +1,63 @@
+# CEAV-M1 — Hướng dẫn triển khai trong workspace độc lập
+
+## 1. Phạm vi và tài liệu phải đọc
+
+Workspace: `C:\Users\dell\Desktop\fundtogether_data_analyzing`. Chỉ thực hiện thay đổi cho hệ thống nghiên cứu này trong thư mục này. Hệ thống dùng Python 3.12+ standard library và HTML/CSS/JavaScript thuần theo đặc tả.
+
+Đọc [CEAV_M1_SPEC.md](CEAV_M1_SPEC.md) trước khi thay đổi behavior; đây là nguồn chuẩn của mô hình, timing, strategy space, payoff và acceptance.
+
+- **Engine/thuật toán, schema hoặc tối ưu hiệu năng:** đọc [ENGINE_DESIGN.md](ENGINE_DESIGN.md), nhất là module interface, observation, peer freeze, degeneracy và certificates.
+- **Viết test, sửa bug, review hoặc kết luận đã hoàn thành:** đọc [VERIFICATION_PLAN.md](VERIFICATION_PLAN.md); chọn fixture, oracle và gate tương ứng trước khi sửa.
+- **HTML/API/worker:** đọc thêm spec §18 và ENGINE_DESIGN §10; phải nối engine thật, đủ chức năng browser acceptance.
+- **Thay đổi lý luận hoặc tuyên bố học thuật:** đọc spec §9.4 và [references/PRIMARY_SOURCES.md](references/PRIMARY_SOURCES.md); đối chiếu lại nguồn khi đưa ra khẳng định mới.
+
+Giữ nguồn chuẩn theo vai trò: spec định nghĩa game; engine design định nghĩa implementation contract; verification plan định nghĩa evidence; file này định nghĩa workflow. Khi các tài liệu mâu thuẫn, chỉ rõ điều khoản và xử lý theo spec, không chọn phiên bản dễ pass test hơn. Ghi và giải quyết mâu thuẫn ảnh hưởng toán trước khi công bố kết quả phụ thuộc nó.
+
+Không nhập baseline, code, policy, cấu hình hoặc dữ liệu của workspace FundTogether cũ. Scope M1 không có blockchain, ví, database, stake, appeal hoặc cơ chế review production.
+
+## 2. Trước khi viết code
+
+1. Kiểm tra files/runtime hiện có; phân biệt code thực sự tồn tại với đường dẫn dự kiến trong tài liệu.
+2. Xác định requirement, interface, fixture và T-ID bị ảnh hưởng; nêu kế hoạch ngắn cùng bằng chứng hoàn thành.
+3. Trước khi tạo analyzer chính lần đầu, thực hiện freeze event theo spec §19. Pin cả ENGINE_DESIGN và VERIFICATION_PLAN vào bộ tài liệu triển khai, lưu raw bytes/hash thực tế. Checker reference đã có trước event.
+4. Chọn giải pháp đơn giản trong scope. Các quyết định reversible về tên/file có thể tự xử lý; thay đổi game, thông tin, payoff hoặc phạm vi cân bằng phải được giải thích và version hóa trước khi dùng.
+
+Các snapshot/manifest lịch sử là bất biến. Snapshot review hiện có không phải event implementation-start; không ghi lùi thời gian hoặc sửa lịch sử thành đã preregister.
+
+## 3. Quy tắc khi sửa engine
+
+- Giữ Fraction xuyên suốt phép tính và so sánh; decimal chỉ để hiển thị.
+- Strategy nhận observation đã che thông tin; scoring nhận report/prediction. Ground truth chỉ phục vụ phân phối/evaluator.
+- Dựng candidate prediction một lần; khi focal deviation, giữ nguyên toàn bộ peer tables và hành vi của peer.
+- Kiểm tra đủ từng Judge và từng Z, giữ mọi tie và sáu action; đọc riêng quy tắc fixed/lambda=0 trước khi viết best response/search.
+- Candidate payoff dùng strategy thật của candidate. Tối ưu của focal được trả riêng, không âm thầm thay candidate bằng optimum.
+- Giữ math ở engine; CLI, server và UI gọi cùng interface. Schema/metadata phải thể hiện đúng scope và trạng thái run.
+- Ưu tiên đường tính đơn giản đã đối chiếu oracle trước khi cache/tối ưu. Khi tối ưu, exact outputs, witnesses, ties và cache on/off phải khớp.
+
+Chi tiết thuật toán nằm ở ENGINE_DESIGN; không sao chép một bản công thức riêng vào file hướng dẫn này hoặc frontend.
+
+## 4. Quy tắc kiểm chứng và sửa lỗi
+
+Với bug thuật toán, tạo regression phát hiện lỗi trước khi sửa; với module mới, chuẩn bị fixture/oracle độc lập trước acceptance. Expected không được sinh bằng chính hàm đang test. Khi test fail, chẩn đoán cả code lẫn fixture; chỉ đổi expected khi có derivation độc lập và ghi lý do.
+
+Chạy checks phù hợp thay đổi, rồi các gates phụ thuộc bị ảnh hưởng theo VERIFICATION_PLAN. Giữ kết quả fail, log, config và witness tái lập. Mutation probes chạy trong bản copy tạm/test-only; không sửa production/golden để trình diễn failure.
+
+Test runner phải xác nhận tests đã được discover và thực thi. Thiếu suite hoặc selected ID là unavailable/error; zero tests, skipped và not_run không tính là pass. Kiểm tra HTML bằng browser flows, không suy từ server HTTP200 hoặc unittest xanh.
+
+Chỉ tuyên bố search exhaustive khi đã kiểm tra đủ phạm vi và T17 đạt; canceled/partial run không phải certificate. Hash đúng chứng minh identity của bytes, không chứng minh thuật toán đúng.
+
+## 5. Files, artifacts và khả năng tái lập
+
+- Giữ thay đổi tập trung; bảo toàn dữ liệu/kết quả và công việc không liên quan.
+- Mỗi run có thư mục mới và pinned inputs/source/spec; output đã tồn tại phải được từ chối thay vì ghi đè.
+- Phân biệt config semantic hash với raw file hash; timestamp/runtime không tham gia config hash.
+- Lệnh trong docs phải được đánh dấu hiện có hoặc mục tiêu. README hướng dẫn chạy chỉ được bổ sung từ lệnh đã thực sự kiểm tra.
+- Khi sửa contract triển khai, cập nhật đúng tài liệu sở hữu và mapping tests; giữ lịch sử revision của artifacts đã pin.
+
+## 6. Báo cáo tiến độ và hoàn thành
+
+Luôn phân biệt `SPECIFIED`, `IMPLEMENTED`, `VERIFIED` theo đúng module/phạm vi. Reference checker G1–G4 không đại diện analyzer tổng quát hoặc suite T01–T32.
+
+Báo cáo ngắn gồm: thay đổi; lý do; tests/commands đã chạy và kết quả; evidence paths; phần còn thiếu. Giữ giới hạn pure-equilibrium và kết quả bất lợi cho cơ chế trong output.
+
+Hoàn thành hệ thống khi đủ GATE-0–GATE-5 trong VERIFICATION_PLAN, bao gồm HTML/API và browser acceptance. Không tự giảm phạm vi để hoàn thành sớm, hoặc thêm M2/M3 để tránh kết quả âm của M1.

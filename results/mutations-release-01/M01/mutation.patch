@@ -1,0 +1,14 @@
+--- ceav_m1/best_response.py
++++ ceav_m1/best_response.py
+@@ -20,6 +20,11 @@
+     options = {}
+     constant = mechanism == "fixed" or config.multiplier == 0
+     for effort in ("L", "H"):
++        from .strategies import Profile, build_candidate
++        branches = [list(branch) for branch in candidate.profile.branches]
++        branches[z][judge] = "L0" if effort == "L" else "H01"
++        rebuilt = build_candidate(config, Profile(tuple(tuple(b) for b in branches)), mechanism=mechanism)
++        frozen_rows = [(s, *realized(rebuilt, s)) for s in rows]
+         groups = {}
+         for s, reports, predictions in frozen_rows:
+             groups.setdefault(observe(s, judge, effort), []).append((s, reports, predictions))

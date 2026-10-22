@@ -1,0 +1,266 @@
+{
+  "baseline_exit_code": 0,
+  "production_bytes_unchanged": true,
+  "records": [
+    {
+      "argv": [
+        "C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "tests.test_core.CoreTests.test_T12_peer_freeze_numeric_counterexample",
+        "-v"
+      ],
+      "assertion_log": "M01/test_log.txt",
+      "baseline_source_hash": "3c6f0f976a63823cde4a6d16cf73cb9177cf3f80d26be74ca778efc90203ada6",
+      "exit_code": 1,
+      "expected_failure": "T12/F04 peer payoff must stay at original candidate tables",
+      "mutation_id": "M01",
+      "patch_sha256": "f89732c95d13c6d2cf3534ff0326b76ce9ce4bc22ec2012c1de31f5b7c4083ed",
+      "status": "killed",
+      "test_ids": [
+        "tests.test_core.CoreTests.test_T12_peer_freeze_numeric_counterexample"
+      ]
+    },
+    {
+      "argv": [
+        "C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "tests.test_core.CoreTests.test_T11_G4_post_signal_effort",
+        "-v"
+      ],
+      "assertion_log": "M02/test_log.txt",
+      "baseline_source_hash": "3c6f0f976a63823cde4a6d16cf73cb9177cf3f80d26be74ca778efc90203ada6",
+      "exit_code": 1,
+      "expected_failure": "T11/F08 must reject averaged positive Delta",
+      "mutation_id": "M02",
+      "patch_sha256": "fc2a506e28108f876b150885a7348f9ef4dfa875fd831a03b9dc4c8b2e3ae351",
+      "status": "killed",
+      "test_ids": [
+        "tests.test_core.CoreTests.test_T11_G4_post_signal_effort"
+      ]
+    },
+    {
+      "argv": [
+        "C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "tests.test_core.CoreTests.test_T13_joint_expectation",
+        "-v"
+      ],
+      "assertion_log": "M03/test_log.txt",
+      "baseline_source_hash": "3c6f0f976a63823cde4a6d16cf73cb9177cf3f80d26be74ca778efc90203ada6",
+      "exit_code": 1,
+      "expected_failure": "T13 independent state oracle must distinguish joint and product marginals",
+      "mutation_id": "M03",
+      "patch_sha256": "260ff3848da30f41aea32d3ece53ffa45e64b3e75bacca589950981098fc1330",
+      "status": "killed",
+      "test_ids": [
+        "tests.test_core.CoreTests.test_T13_joint_expectation"
+      ]
+    },
+    {
+      "argv": [
+        "C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "tests.test_core.CoreTests.test_T05_H_constants_keep_private_prediction",
+        "-v"
+      ],
+      "assertion_log": "M04/test_log.txt",
+      "baseline_source_hash": "3c6f0f976a63823cde4a6d16cf73cb9177cf3f80d26be74ca778efc90203ada6",
+      "exit_code": 1,
+      "expected_failure": "T05/F13 H constant reports still observe private signal",
+      "mutation_id": "M04",
+      "patch_sha256": "62742a9c0afab5df497e5d3a316ebe3c8b4a57de3ae2eb747419ec497bad0820",
+      "status": "killed",
+      "test_ids": [
+        "tests.test_core.CoreTests.test_T05_H_constants_keep_private_prediction"
+      ]
+    },
+    {
+      "argv": [
+        "C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "tests.test_core.CoreTests.test_T04_roles",
+        "-v"
+      ],
+      "assertion_log": "M05/test_log.txt",
+      "baseline_source_hash": "3c6f0f976a63823cde4a6d16cf73cb9177cf3f80d26be74ca778efc90203ada6",
+      "exit_code": 1,
+      "expected_failure": "T04/F02 reference and scoring peer have distinct cyclic roles",
+      "mutation_id": "M05",
+      "patch_sha256": "78ec2170cae84a118f30f9b098dd6adf421ba7e0829705154221c78a48ee0dce",
+      "status": "killed",
+      "test_ids": [
+        "tests.test_core.CoreTests.test_T04_roles"
+      ]
+    },
+    {
+      "argv": [
+        "C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "tests.test_core.CoreTests.test_T05_predictions_and_exact_loss",
+        "-v"
+      ],
+      "assertion_log": "M06/test_log.txt",
+      "baseline_source_hash": "3c6f0f976a63823cde4a6d16cf73cb9177cf3f80d26be74ca778efc90203ada6",
+      "exit_code": 1,
+      "expected_failure": "T05/F11 production quadratic path must preserve tiny rational differences",
+      "mutation_id": "M06",
+      "patch_sha256": "aab4b50ac82df31fddc3fe105eeac55a5d823b25bf123b7396a38cb6d1cfb459",
+      "status": "killed",
+      "test_ids": [
+        "tests.test_core.CoreTests.test_T05_predictions_and_exact_loss"
+      ]
+    },
+    {
+      "argv": [
+        "C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "tests.test_core.CoreTests.test_T09_G1_all_judges_and_branches",
+        "-v"
+      ],
+      "assertion_log": "M07/test_log.txt",
+      "baseline_source_hash": "3c6f0f976a63823cde4a6d16cf73cb9177cf3f80d26be74ca778efc90203ada6",
+      "exit_code": 1,
+      "expected_failure": "T09/F05 retain both optimal low reports",
+      "mutation_id": "M07",
+      "patch_sha256": "b5edd6632f535fb303b98b23c8fb7ad6d129baa5fe3dc4cd81b3099b919d34ea",
+      "status": "killed",
+      "test_ids": [
+        "tests.test_core.CoreTests.test_T09_G1_all_judges_and_branches"
+      ]
+    },
+    {
+      "argv": [
+        "C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "tests.test_core.CoreTests.test_T05_predictions_and_exact_loss",
+        "-v"
+      ],
+      "assertion_log": "M08/test_log.txt",
+      "baseline_source_hash": "3c6f0f976a63823cde4a6d16cf73cb9177cf3f80d26be74ca778efc90203ada6",
+      "exit_code": 1,
+      "expected_failure": "T05/F06 prediction must target constant peer report, not Y",
+      "mutation_id": "M08",
+      "patch_sha256": "98c8e46f81220e6d12cbd81d0e11b34c39f68429371564e0b85f95d8250c87fc",
+      "status": "killed",
+      "test_ids": [
+        "tests.test_core.CoreTests.test_T05_predictions_and_exact_loss"
+      ]
+    },
+    {
+      "argv": [
+        "C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "tests.test_core.CoreTests.test_T06_fixed_constant_and_zero_costs",
+        "-v"
+      ],
+      "assertion_log": "M09/test_log.txt",
+      "baseline_source_hash": "3c6f0f976a63823cde4a6d16cf73cb9177cf3f80d26be74ca778efc90203ada6",
+      "exit_code": 1,
+      "expected_failure": "T06/F09 different judge costs must be preserved",
+      "mutation_id": "M09",
+      "patch_sha256": "a413b5be2467ff529045f225e5cf4834057ebb8908b01a137e0508acdb74392f",
+      "status": "killed",
+      "test_ids": [
+        "tests.test_core.CoreTests.test_T06_fixed_constant_and_zero_costs"
+      ]
+    },
+    {
+      "argv": [
+        "C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "tests.test_search.SearchTests.test_T18_binary_and_cyclic_relabel",
+        "-v"
+      ],
+      "assertion_log": "M10/test_log.txt",
+      "baseline_source_hash": "3c6f0f976a63823cde4a6d16cf73cb9177cf3f80d26be74ca778efc90203ada6",
+      "exit_code": 1,
+      "expected_failure": "T18 false approval denominator is P(Y=0)",
+      "mutation_id": "M10",
+      "patch_sha256": "df01205a1a798939c144a7be64d0a6ed0eba7fb0ecba3cc1288c9fbcaa18225f",
+      "status": "killed",
+      "test_ids": [
+        "tests.test_search.SearchTests.test_T18_binary_and_cyclic_relabel"
+      ]
+    },
+    {
+      "argv": [
+        "C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "tests.test_core.CoreTests.test_T06_fixed_constant_and_zero_costs",
+        "-v"
+      ],
+      "assertion_log": "M11/test_log.txt",
+      "baseline_source_hash": "3c6f0f976a63823cde4a6d16cf73cb9177cf3f80d26be74ca778efc90203ada6",
+      "exit_code": 1,
+      "expected_failure": "T06/T19 constant reward predictions form a continuum",
+      "mutation_id": "M11",
+      "patch_sha256": "9fd0f1ca49b9d26d728dc05fcc1eaf0d6acc27b5027e3aeb9a14fe0d17246464",
+      "status": "killed",
+      "test_ids": [
+        "tests.test_core.CoreTests.test_T06_fixed_constant_and_zero_costs"
+      ]
+    },
+    {
+      "argv": [
+        "C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "tests.test_server.ServerTests.test_T30_duplicate_submit_immutable_snapshot_cancel",
+        "-v"
+      ],
+      "assertion_log": "M12/test_log.txt",
+      "baseline_source_hash": "3c6f0f976a63823cde4a6d16cf73cb9177cf3f80d26be74ca778efc90203ada6",
+      "exit_code": 1,
+      "expected_failure": "T30 handshake proves cancel must stop the owned worker tree before terminal state",
+      "mutation_id": "M12",
+      "patch_sha256": "9ce6f4b50df9815ddf2b09737acc30e9fa8d5d09e1fbaa1f370398b3958e08e1",
+      "status": "killed",
+      "test_ids": [
+        "tests.test_server.ServerTests.test_T30_duplicate_submit_immutable_snapshot_cancel"
+      ]
+    },
+    {
+      "argv": [
+        "C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "tests.test_io.IOTests.test_T29_runner_actual_failure_and_missing_ids",
+        "-v"
+      ],
+      "assertion_log": "M13/test_log.txt",
+      "baseline_source_hash": "3c6f0f976a63823cde4a6d16cf73cb9177cf3f80d26be74ca778efc90203ada6",
+      "exit_code": 1,
+      "expected_failure": "T29 zero discovery and missing IDs cannot pass",
+      "mutation_id": "M13",
+      "patch_sha256": "daec2a026f91325a11e811eff84f9bf75d50d463bf750b27974d646a08fab23a",
+      "status": "killed",
+      "test_ids": [
+        "tests.test_io.IOTests.test_T29_runner_actual_failure_and_missing_ids"
+      ]
+    }
+  ]
+}

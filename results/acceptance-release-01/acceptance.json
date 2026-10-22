@@ -1,0 +1,6587 @@
+{
+  "all_suite_run": "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\results\\run-20261022T095215-bfe5abfabb",
+  "browser_runs": {
+    "B01": "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\results\\browser-B01-release-01",
+    "B02": "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\results\\browser-B02-release-01",
+    "B03": "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\results\\browser-B03-release-02",
+    "B04": "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\results\\browser-B04-release-01",
+    "B05": "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\results\\browser-B05-release-01",
+    "B06": "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\results\\browser-B06-release-01",
+    "B07": "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\results\\browser-B07-release-01",
+    "B08": "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\results\\browser-B08-release-01",
+    "B09": "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\results\\browser-B09-release-01"
+  },
+  "checks": [
+    {
+      "evidence": {
+        "analyzer_existed_before_event": false,
+        "captured_at_utc": "2026-10-22T08:19:42.148684+00:00",
+        "design_revision": "engine-design-r1",
+        "event": "analyzer_implementation_start",
+        "files": {
+          "CEAV_M1_SPEC.md": {
+            "bytes": 71180,
+            "sha256": "c62cc8ae146603adceb1fb94560c541e198244ff83519be8a1adbe60a6781120"
+          },
+          "ENGINE_DESIGN.md": {
+            "bytes": 23400,
+            "sha256": "9acba0db2d546d7d2c0427a0e1e0dcff77c6d7329db9a3934ea291616ce9e447"
+          },
+          "VERIFICATION_PLAN.md": {
+            "bytes": 32090,
+            "sha256": "6096454551c4bbc0ab473edd8853888ca3f650401ef5ecbc45df7b262404448a"
+          }
+        },
+        "freeze_status": "frozen_at_analyzer_implementation_start",
+        "hash_basis": "raw_file_bytes",
+        "model_version": "ceav-m1-v1.0",
+        "parent_revision": "math-proof-r2",
+        "parent_sha256": "c62cc8ae146603adceb1fb94560c541e198244ff83519be8a1adbe60a6781120",
+        "reference_checker_preexisted": true,
+        "reference_checker_sha256": "a77957a66cf8816e1575734a0362f2a0ca4690a47e645ed0b12c8cd59ff62550",
+        "reference_results_sha256": "85622a6a7d2a03b787009b9a2f21a6fc7079dd87276b5ed7eb2cbd22c1ff7209",
+        "spec_revision": "math-proof-r2",
+        "timestamp_assurance": "local UTC clock; not a third-party timestamp",
+        "verification_revision": "verification-plan-r1"
+      },
+      "requirement": "GATE-0 frozen raw documents, parent chain and reference preexistence",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "basis": "Exact prefix of current oracle before appended T17 helpers; raw bytes match oracle hash already recorded in pre-production F09 certificate. This file was materialized now, not backdated.",
+        "event": "reconstructed_reference_oracle_bytes",
+        "fixture": "asymmetric_oracle.json",
+        "sha256": "6eadc3a96a123d51816358bde62ee777bbfef96e2cf42b722ee1745e23af6b41",
+        "written_at_utc": "2026-10-22T09:14:36.621864+00:00"
+      },
+      "requirement": "F09 oracle raw bytes reproduce recorded pre-production identity",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "run": "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\results\\browser-B01-release-01"
+      },
+      "requirement": "B01 real browser scenario on current engine/web",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "run": "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\results\\browser-B02-release-01"
+      },
+      "requirement": "B02 real browser scenario on current engine/web",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "run": "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\results\\browser-B03-release-02"
+      },
+      "requirement": "B03 real browser scenario on current engine/web",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "run": "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\results\\browser-B04-release-01"
+      },
+      "requirement": "B04 real browser scenario on current engine/web",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "run": "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\results\\browser-B05-release-01"
+      },
+      "requirement": "B05 real browser scenario on current engine/web",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "run": "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\results\\browser-B06-release-01"
+      },
+      "requirement": "B06 real browser scenario on current engine/web",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "run": "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\results\\browser-B07-release-01"
+      },
+      "requirement": "B07 real browser scenario on current engine/web",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "run": "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\results\\browser-B08-release-01"
+      },
+      "requirement": "B08 real browser scenario on current engine/web",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "run": "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\results\\browser-B09-release-01"
+      },
+      "requirement": "B09 real browser scenario on current engine/web",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "counts": {
+          "error": 0,
+          "fail": 0,
+          "not_run": 0,
+          "pass": 47,
+          "skipped": 0
+        },
+        "run": "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\results\\run-20261022T095215-bfe5abfabb"
+      },
+      "requirement": "Complete all-suite is succeeded and pins current full source",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "run": "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\results\\run-20261022T095215-bfe5abfabb",
+        "unittest_ids": [
+          "tests.test_core.CoreTests.test_T01_distribution"
+        ]
+      },
+      "requirement": "T01 all registered assertions actually executed",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "run": "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\results\\run-20261022T095215-bfe5abfabb",
+        "unittest_ids": [
+          "tests.test_core.CoreTests.test_T02_information_boundaries"
+        ]
+      },
+      "requirement": "T02 all registered assertions actually executed",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "run": "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\results\\run-20261022T095215-bfe5abfabb",
+        "unittest_ids": [
+          "tests.test_core.CoreTests.test_T03_bounds_endpoints"
+        ]
+      },
+      "requirement": "T03 all registered assertions actually executed",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "run": "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\results\\run-20261022T095215-bfe5abfabb",
+        "unittest_ids": [
+          "tests.test_core.CoreTests.test_T04_roles"
+        ]
+      },
+      "requirement": "T04 all registered assertions actually executed",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "run": "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\results\\run-20261022T095215-bfe5abfabb",
+        "unittest_ids": [
+          "tests.test_core.CoreTests.test_T05_H_constants_keep_private_prediction",
+          "tests.test_core.CoreTests.test_T05_predictions_and_exact_loss"
+        ]
+      },
+      "requirement": "T05 all registered assertions actually executed",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "run": "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\results\\run-20261022T095215-bfe5abfabb",
+        "unittest_ids": [
+          "tests.test_core.CoreTests.test_T06_fixed_constant_and_zero_costs"
+        ]
+      },
+      "requirement": "T06 all registered assertions actually executed",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "run": "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\results\\run-20261022T095215-bfe5abfabb",
+        "unittest_ids": [
+          "tests.test_core.CoreTests.test_T07_uninformative_private_signal"
+        ]
+      },
+      "requirement": "T07 all registered assertions actually executed",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "run": "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\results\\run-20261022T095215-bfe5abfabb",
+        "unittest_ids": [
+          "tests.test_core.CoreTests.test_T08_low_effort_maximum_profiles"
+        ]
+      },
+      "requirement": "T08 all registered assertions actually executed",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "run": "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\results\\run-20261022T095215-bfe5abfabb",
+        "unittest_ids": [
+          "tests.test_core.CoreTests.test_T09_G1_all_judges_and_branches"
+        ]
+      },
+      "requirement": "T09 all registered assertions actually executed",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "run": "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\results\\run-20261022T095215-bfe5abfabb",
+        "unittest_ids": [
+          "tests.test_core.CoreTests.test_T10_G3_negative_result"
+        ]
+      },
+      "requirement": "T10 all registered assertions actually executed",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "run": "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\results\\run-20261022T095215-bfe5abfabb",
+        "unittest_ids": [
+          "tests.test_core.CoreTests.test_T11_G4_post_signal_effort"
+        ]
+      },
+      "requirement": "T11 all registered assertions actually executed",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "run": "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\results\\run-20261022T095215-bfe5abfabb",
+        "unittest_ids": [
+          "tests.test_core.CoreTests.test_T12_peer_freeze_numeric_counterexample"
+        ]
+      },
+      "requirement": "T12 all registered assertions actually executed",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "run": "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\results\\run-20261022T095215-bfe5abfabb",
+        "unittest_ids": [
+          "tests.test_core.CoreTests.test_T13_joint_expectation"
+        ]
+      },
+      "requirement": "T13 all registered assertions actually executed",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "run": "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\results\\run-20261022T095215-bfe5abfabb",
+        "unittest_ids": [
+          "tests.test_core.CoreTests.test_T14_information_variance_identity",
+          "tests.test_differential.DifferentialTests.test_T14_F12_catalog_all_branch_candidates"
+        ]
+      },
+      "requirement": "T14 all registered assertions actually executed",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "run": "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\results\\run-20261022T095215-bfe5abfabb",
+        "unittest_ids": [
+          "tests.test_core.CoreTests.test_T15_asymmetric_certificate_and_tamper",
+          "tests.test_io.IOTests.test_T15_artifact_certificate_identity_and_cancelled_rejection"
+        ]
+      },
+      "requirement": "T15 all registered assertions actually executed",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "run": "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\results\\run-20261022T095215-bfe5abfabb",
+        "unittest_ids": [
+          "tests.test_search.SearchTests.test_T16_complete_six_action_search",
+          "tests.test_search.SearchTests.test_T16_constant_rewards_continuum_counts"
+        ]
+      },
+      "requirement": "T16 all registered assertions actually executed",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "run": "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\results\\run-20261022T095215-bfe5abfabb",
+        "unittest_ids": [
+          "tests.test_search.SearchTests.test_T17_full_profile_set_equality"
+        ]
+      },
+      "requirement": "T17 all registered assertions actually executed",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "run": "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\results\\run-20261022T095215-bfe5abfabb",
+        "unittest_ids": [
+          "tests.test_search.SearchTests.test_T18_binary_and_cyclic_relabel"
+        ]
+      },
+      "requirement": "T18 all registered assertions actually executed",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "run": "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\results\\run-20261022T095215-bfe5abfabb",
+        "unittest_ids": [
+          "tests.test_core.CoreTests.test_T19_threshold_and_reward_shift"
+        ]
+      },
+      "requirement": "T19 all registered assertions actually executed",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "run": "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\results\\run-20261022T095215-bfe5abfabb",
+        "unittest_ids": [
+          "tests.test_core.CoreTests.test_T20_input_validation",
+          "tests.test_io.IOTests.test_T20_exact_roundtrip_budget_accounting"
+        ]
+      },
+      "requirement": "T20 all registered assertions actually executed",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "run": "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\results\\run-20261022T095215-bfe5abfabb",
+        "unittest_ids": [
+          "tests.test_io.IOTests.test_T21_cross_cwd_numeric_identity",
+          "tests.test_io.IOTests.test_T21_deterministic_numeric_output_and_no_overwrite",
+          "tests.test_io.IOTests.test_T21_semantic_hash_snapshot_provenance"
+        ]
+      },
+      "requirement": "T21 all registered assertions actually executed",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "run": "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\results\\run-20261022T095215-bfe5abfabb",
+        "unittest_ids": [
+          "tests.test_io.IOTests.test_T22_cli_real_subprocess_artifacts_and_errors"
+        ]
+      },
+      "requirement": "T22 all registered assertions actually executed",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "run": "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\results\\run-20261022T095215-bfe5abfabb",
+        "unittest_ids": [
+          "tests.test_server.ServerTests.test_T23_offline_assets_capabilities_port_conflict"
+        ]
+      },
+      "requirement": "T23 all registered assertions actually executed",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "run": "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\results\\run-20261022T095215-bfe5abfabb",
+        "unittest_ids": [
+          "tests.test_server.ServerTests.test_T24_validation_fields_fraction_profile_presets"
+        ]
+      },
+      "requirement": "T24 all registered assertions actually executed",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "run": "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\results\\run-20261022T095215-bfe5abfabb",
+        "unittest_ids": [
+          "tests.test_server.ServerTests.test_T25_API_CLI_exact_parity_G1_G4"
+        ]
+      },
+      "requirement": "T25 all registered assertions actually executed",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "run": "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\results\\run-20261022T095215-bfe5abfabb",
+        "unittest_ids": [
+          "tests.test_server.ServerTests.test_T26_witness_artifact_all_six_branches"
+        ]
+      },
+      "requirement": "T26 all registered assertions actually executed",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "run": "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\results\\run-20261022T095215-bfe5abfabb",
+        "unittest_ids": [
+          "tests.test_server.ServerTests.test_T27_search_progress_and_certificate_artifact"
+        ]
+      },
+      "requirement": "T27 all registered assertions actually executed",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "run": "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\results\\run-20261022T095215-bfe5abfabb",
+        "unittest_ids": [
+          "tests.test_io.IOTests.test_T28_sweep_invalid_rows_replay"
+        ]
+      },
+      "requirement": "T28 all registered assertions actually executed",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "run": "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\results\\run-20261022T095215-bfe5abfabb",
+        "unittest_ids": [
+          "tests.test_io.IOTests.test_T29_runner_actual_failure_and_missing_ids",
+          "tests.test_server.ServerTests.test_T29_API_failure_fixture_and_missing_group"
+        ]
+      },
+      "requirement": "T29 all registered assertions actually executed",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "run": "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\results\\run-20261022T095215-bfe5abfabb",
+        "unittest_ids": [
+          "tests.test_io.IOTests.test_T30_comparison_equal_cap_actual_spend",
+          "tests.test_search.SearchTests.test_T30_search_cancellation_no_certificate",
+          "tests.test_server.ServerTests.test_T30_cancel_before_worker_launch",
+          "tests.test_server.ServerTests.test_T30_duplicate_submit_immutable_snapshot_cancel",
+          "tests.test_server.ServerTests.test_T30_success_before_cancel_and_worker_crash"
+        ]
+      },
+      "requirement": "T30 all registered assertions actually executed",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "run": "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\results\\run-20261022T095215-bfe5abfabb",
+        "unittest_ids": [
+          "tests.test_server.ServerTests.test_T31_abrupt_parent_exit_kills_worker_tree",
+          "tests.test_server.ServerTests.test_T31_history_path_origin_allowlist",
+          "tests.test_server.ServerTests.test_T31_restart_interrupted_run_and_completed_history",
+          "tests.test_server.ServerTests.test_T31_symlink_junction_and_prefix_sibling_confinement"
+        ]
+      },
+      "requirement": "T31 all registered assertions actually executed",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "run": "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\results\\run-20261022T095215-bfe5abfabb",
+        "unittest_ids": [
+          "tests.test_browser_evidence.BrowserEvidenceTests.test_T32_current_source_desktop_mobile_browser_evidence"
+        ]
+      },
+      "requirement": "T32 all registered assertions actually executed",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "actual_methods": 47,
+        "registered_methods": 47
+      },
+      "requirement": "All-suite has no omitted/unregistered/skipped/zero tests",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "cache": "none across candidates",
+        "candidate_catalog": [
+          {
+            "actions": [
+              "L0",
+              "L0",
+              "L0"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "L0",
+              "L0",
+              "L1"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "L0",
+              "L0",
+              "H00"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "L0",
+              "L0",
+              "H01"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "L0",
+              "L0",
+              "H10"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "L0",
+              "L0",
+              "H11"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "L0",
+              "L1",
+              "L0"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "L0",
+              "L1",
+              "L1"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "L0",
+              "L1",
+              "H00"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "L0",
+              "L1",
+              "H01"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "L0",
+              "L1",
+              "H10"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "L0",
+              "L1",
+              "H11"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "L0",
+              "H00",
+              "L0"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "L0",
+              "H00",
+              "L1"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "L0",
+              "H00",
+              "H00"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "L0",
+              "H00",
+              "H01"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "L0",
+              "H00",
+              "H10"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "L0",
+              "H00",
+              "H11"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "L0",
+              "H01",
+              "L0"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "L0",
+              "H01",
+              "L1"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "L0",
+              "H01",
+              "H00"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "L0",
+              "H01",
+              "H01"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "L0",
+              "H01",
+              "H10"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "L0",
+              "H01",
+              "H11"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "L0",
+              "H10",
+              "L0"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "L0",
+              "H10",
+              "L1"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "L0",
+              "H10",
+              "H00"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "L0",
+              "H10",
+              "H01"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "L0",
+              "H10",
+              "H10"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "L0",
+              "H10",
+              "H11"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "L0",
+              "H11",
+              "L0"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "L0",
+              "H11",
+              "L1"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "L0",
+              "H11",
+              "H00"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "L0",
+              "H11",
+              "H01"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "L0",
+              "H11",
+              "H10"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "L0",
+              "H11",
+              "H11"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "L1",
+              "L0",
+              "L0"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "L1",
+              "L0",
+              "L1"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "L1",
+              "L0",
+              "H00"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "L1",
+              "L0",
+              "H01"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "L1",
+              "L0",
+              "H10"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "L1",
+              "L0",
+              "H11"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "L1",
+              "L1",
+              "L0"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "L1",
+              "L1",
+              "L1"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "L1",
+              "L1",
+              "H00"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "L1",
+              "L1",
+              "H01"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "L1",
+              "L1",
+              "H10"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "L1",
+              "L1",
+              "H11"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "L1",
+              "H00",
+              "L0"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "L1",
+              "H00",
+              "L1"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "L1",
+              "H00",
+              "H00"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "L1",
+              "H00",
+              "H01"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "L1",
+              "H00",
+              "H10"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "L1",
+              "H00",
+              "H11"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "L1",
+              "H01",
+              "L0"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "L1",
+              "H01",
+              "L1"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "L1",
+              "H01",
+              "H00"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "L1",
+              "H01",
+              "H01"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "L1",
+              "H01",
+              "H10"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "L1",
+              "H01",
+              "H11"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "L1",
+              "H10",
+              "L0"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "L1",
+              "H10",
+              "L1"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "L1",
+              "H10",
+              "H00"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "L1",
+              "H10",
+              "H01"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "L1",
+              "H10",
+              "H10"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "L1",
+              "H10",
+              "H11"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "L1",
+              "H11",
+              "L0"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "L1",
+              "H11",
+              "L1"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "L1",
+              "H11",
+              "H00"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "L1",
+              "H11",
+              "H01"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "L1",
+              "H11",
+              "H10"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "L1",
+              "H11",
+              "H11"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H00",
+              "L0",
+              "L0"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H00",
+              "L0",
+              "L1"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H00",
+              "L0",
+              "H00"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H00",
+              "L0",
+              "H01"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H00",
+              "L0",
+              "H10"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H00",
+              "L0",
+              "H11"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H00",
+              "L1",
+              "L0"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H00",
+              "L1",
+              "L1"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H00",
+              "L1",
+              "H00"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H00",
+              "L1",
+              "H01"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H00",
+              "L1",
+              "H10"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H00",
+              "L1",
+              "H11"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H00",
+              "H00",
+              "L0"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H00",
+              "H00",
+              "L1"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H00",
+              "H00",
+              "H00"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H00",
+              "H00",
+              "H01"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H00",
+              "H00",
+              "H10"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H00",
+              "H00",
+              "H11"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H00",
+              "H01",
+              "L0"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H00",
+              "H01",
+              "L1"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H00",
+              "H01",
+              "H00"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H00",
+              "H01",
+              "H01"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H00",
+              "H01",
+              "H10"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H00",
+              "H01",
+              "H11"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H00",
+              "H10",
+              "L0"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H00",
+              "H10",
+              "L1"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H00",
+              "H10",
+              "H00"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H00",
+              "H10",
+              "H01"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H00",
+              "H10",
+              "H10"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H00",
+              "H10",
+              "H11"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H00",
+              "H11",
+              "L0"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H00",
+              "H11",
+              "L1"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H00",
+              "H11",
+              "H00"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H00",
+              "H11",
+              "H01"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H00",
+              "H11",
+              "H10"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H00",
+              "H11",
+              "H11"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H01",
+              "L0",
+              "L0"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H01",
+              "L0",
+              "L1"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H01",
+              "L0",
+              "H00"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H01",
+              "L0",
+              "H01"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H01",
+              "L0",
+              "H10"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H01",
+              "L0",
+              "H11"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H01",
+              "L1",
+              "L0"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H01",
+              "L1",
+              "L1"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H01",
+              "L1",
+              "H00"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H01",
+              "L1",
+              "H01"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H01",
+              "L1",
+              "H10"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H01",
+              "L1",
+              "H11"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H01",
+              "H00",
+              "L0"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H01",
+              "H00",
+              "L1"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H01",
+              "H00",
+              "H00"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H01",
+              "H00",
+              "H01"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H01",
+              "H00",
+              "H10"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H01",
+              "H00",
+              "H11"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H01",
+              "H01",
+              "L0"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H01",
+              "H01",
+              "L1"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H01",
+              "H01",
+              "H00"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H01",
+              "H01",
+              "H01"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H01",
+              "H01",
+              "H10"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H01",
+              "H01",
+              "H11"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H01",
+              "H10",
+              "L0"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H01",
+              "H10",
+              "L1"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H01",
+              "H10",
+              "H00"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H01",
+              "H10",
+              "H01"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H01",
+              "H10",
+              "H10"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H01",
+              "H10",
+              "H11"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H01",
+              "H11",
+              "L0"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H01",
+              "H11",
+              "L1"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H01",
+              "H11",
+              "H00"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H01",
+              "H11",
+              "H01"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H01",
+              "H11",
+              "H10"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H01",
+              "H11",
+              "H11"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H10",
+              "L0",
+              "L0"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H10",
+              "L0",
+              "L1"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H10",
+              "L0",
+              "H00"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H10",
+              "L0",
+              "H01"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H10",
+              "L0",
+              "H10"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H10",
+              "L0",
+              "H11"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H10",
+              "L1",
+              "L0"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H10",
+              "L1",
+              "L1"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H10",
+              "L1",
+              "H00"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H10",
+              "L1",
+              "H01"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H10",
+              "L1",
+              "H10"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H10",
+              "L1",
+              "H11"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H10",
+              "H00",
+              "L0"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H10",
+              "H00",
+              "L1"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H10",
+              "H00",
+              "H00"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H10",
+              "H00",
+              "H01"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H10",
+              "H00",
+              "H10"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H10",
+              "H00",
+              "H11"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H10",
+              "H01",
+              "L0"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H10",
+              "H01",
+              "L1"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H10",
+              "H01",
+              "H00"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H10",
+              "H01",
+              "H01"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H10",
+              "H01",
+              "H10"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H10",
+              "H01",
+              "H11"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H10",
+              "H10",
+              "L0"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H10",
+              "H10",
+              "L1"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H10",
+              "H10",
+              "H00"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H10",
+              "H10",
+              "H01"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H10",
+              "H10",
+              "H10"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H10",
+              "H10",
+              "H11"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H10",
+              "H11",
+              "L0"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H10",
+              "H11",
+              "L1"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H10",
+              "H11",
+              "H00"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H10",
+              "H11",
+              "H01"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H10",
+              "H11",
+              "H10"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H10",
+              "H11",
+              "H11"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H11",
+              "L0",
+              "L0"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H11",
+              "L0",
+              "L1"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H11",
+              "L0",
+              "H00"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H11",
+              "L0",
+              "H01"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H11",
+              "L0",
+              "H10"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H11",
+              "L0",
+              "H11"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H11",
+              "L1",
+              "L0"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H11",
+              "L1",
+              "L1"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H11",
+              "L1",
+              "H00"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H11",
+              "L1",
+              "H01"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H11",
+              "L1",
+              "H10"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H11",
+              "L1",
+              "H11"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H11",
+              "H00",
+              "L0"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H11",
+              "H00",
+              "L1"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H11",
+              "H00",
+              "H00"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H11",
+              "H00",
+              "H01"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H11",
+              "H00",
+              "H10"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H11",
+              "H00",
+              "H11"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H11",
+              "H01",
+              "L0"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H11",
+              "H01",
+              "L1"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H11",
+              "H01",
+              "H00"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H11",
+              "H01",
+              "H01"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H11",
+              "H01",
+              "H10"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H11",
+              "H01",
+              "H11"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H11",
+              "H10",
+              "L0"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H11",
+              "H10",
+              "L1"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H11",
+              "H10",
+              "H00"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H11",
+              "H10",
+              "H01"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H11",
+              "H10",
+              "H10"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H11",
+              "H10",
+              "H11"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H11",
+              "H11",
+              "L0"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H11",
+              "H11",
+              "L1"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H11",
+              "H11",
+              "H00"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H11",
+              "H11",
+              "H01"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H11",
+              "H11",
+              "H10"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "H11",
+              "H11",
+              "H11"
+            ],
+            "z": 0
+          },
+          {
+            "actions": [
+              "L0",
+              "L0",
+              "L0"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "L0",
+              "L0",
+              "L1"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "L0",
+              "L0",
+              "H00"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "L0",
+              "L0",
+              "H01"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "L0",
+              "L0",
+              "H10"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "L0",
+              "L0",
+              "H11"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "L0",
+              "L1",
+              "L0"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "L0",
+              "L1",
+              "L1"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "L0",
+              "L1",
+              "H00"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "L0",
+              "L1",
+              "H01"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "L0",
+              "L1",
+              "H10"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "L0",
+              "L1",
+              "H11"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "L0",
+              "H00",
+              "L0"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "L0",
+              "H00",
+              "L1"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "L0",
+              "H00",
+              "H00"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "L0",
+              "H00",
+              "H01"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "L0",
+              "H00",
+              "H10"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "L0",
+              "H00",
+              "H11"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "L0",
+              "H01",
+              "L0"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "L0",
+              "H01",
+              "L1"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "L0",
+              "H01",
+              "H00"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "L0",
+              "H01",
+              "H01"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "L0",
+              "H01",
+              "H10"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "L0",
+              "H01",
+              "H11"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "L0",
+              "H10",
+              "L0"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "L0",
+              "H10",
+              "L1"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "L0",
+              "H10",
+              "H00"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "L0",
+              "H10",
+              "H01"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "L0",
+              "H10",
+              "H10"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "L0",
+              "H10",
+              "H11"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "L0",
+              "H11",
+              "L0"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "L0",
+              "H11",
+              "L1"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "L0",
+              "H11",
+              "H00"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "L0",
+              "H11",
+              "H01"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "L0",
+              "H11",
+              "H10"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "L0",
+              "H11",
+              "H11"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "L1",
+              "L0",
+              "L0"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "L1",
+              "L0",
+              "L1"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "L1",
+              "L0",
+              "H00"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "L1",
+              "L0",
+              "H01"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "L1",
+              "L0",
+              "H10"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "L1",
+              "L0",
+              "H11"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "L1",
+              "L1",
+              "L0"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "L1",
+              "L1",
+              "L1"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "L1",
+              "L1",
+              "H00"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "L1",
+              "L1",
+              "H01"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "L1",
+              "L1",
+              "H10"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "L1",
+              "L1",
+              "H11"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "L1",
+              "H00",
+              "L0"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "L1",
+              "H00",
+              "L1"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "L1",
+              "H00",
+              "H00"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "L1",
+              "H00",
+              "H01"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "L1",
+              "H00",
+              "H10"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "L1",
+              "H00",
+              "H11"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "L1",
+              "H01",
+              "L0"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "L1",
+              "H01",
+              "L1"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "L1",
+              "H01",
+              "H00"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "L1",
+              "H01",
+              "H01"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "L1",
+              "H01",
+              "H10"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "L1",
+              "H01",
+              "H11"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "L1",
+              "H10",
+              "L0"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "L1",
+              "H10",
+              "L1"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "L1",
+              "H10",
+              "H00"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "L1",
+              "H10",
+              "H01"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "L1",
+              "H10",
+              "H10"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "L1",
+              "H10",
+              "H11"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "L1",
+              "H11",
+              "L0"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "L1",
+              "H11",
+              "L1"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "L1",
+              "H11",
+              "H00"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "L1",
+              "H11",
+              "H01"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "L1",
+              "H11",
+              "H10"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "L1",
+              "H11",
+              "H11"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H00",
+              "L0",
+              "L0"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H00",
+              "L0",
+              "L1"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H00",
+              "L0",
+              "H00"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H00",
+              "L0",
+              "H01"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H00",
+              "L0",
+              "H10"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H00",
+              "L0",
+              "H11"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H00",
+              "L1",
+              "L0"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H00",
+              "L1",
+              "L1"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H00",
+              "L1",
+              "H00"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H00",
+              "L1",
+              "H01"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H00",
+              "L1",
+              "H10"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H00",
+              "L1",
+              "H11"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H00",
+              "H00",
+              "L0"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H00",
+              "H00",
+              "L1"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H00",
+              "H00",
+              "H00"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H00",
+              "H00",
+              "H01"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H00",
+              "H00",
+              "H10"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H00",
+              "H00",
+              "H11"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H00",
+              "H01",
+              "L0"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H00",
+              "H01",
+              "L1"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H00",
+              "H01",
+              "H00"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H00",
+              "H01",
+              "H01"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H00",
+              "H01",
+              "H10"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H00",
+              "H01",
+              "H11"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H00",
+              "H10",
+              "L0"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H00",
+              "H10",
+              "L1"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H00",
+              "H10",
+              "H00"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H00",
+              "H10",
+              "H01"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H00",
+              "H10",
+              "H10"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H00",
+              "H10",
+              "H11"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H00",
+              "H11",
+              "L0"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H00",
+              "H11",
+              "L1"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H00",
+              "H11",
+              "H00"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H00",
+              "H11",
+              "H01"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H00",
+              "H11",
+              "H10"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H00",
+              "H11",
+              "H11"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H01",
+              "L0",
+              "L0"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H01",
+              "L0",
+              "L1"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H01",
+              "L0",
+              "H00"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H01",
+              "L0",
+              "H01"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H01",
+              "L0",
+              "H10"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H01",
+              "L0",
+              "H11"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H01",
+              "L1",
+              "L0"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H01",
+              "L1",
+              "L1"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H01",
+              "L1",
+              "H00"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H01",
+              "L1",
+              "H01"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H01",
+              "L1",
+              "H10"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H01",
+              "L1",
+              "H11"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H01",
+              "H00",
+              "L0"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H01",
+              "H00",
+              "L1"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H01",
+              "H00",
+              "H00"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H01",
+              "H00",
+              "H01"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H01",
+              "H00",
+              "H10"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H01",
+              "H00",
+              "H11"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H01",
+              "H01",
+              "L0"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H01",
+              "H01",
+              "L1"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H01",
+              "H01",
+              "H00"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H01",
+              "H01",
+              "H01"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H01",
+              "H01",
+              "H10"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H01",
+              "H01",
+              "H11"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H01",
+              "H10",
+              "L0"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H01",
+              "H10",
+              "L1"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H01",
+              "H10",
+              "H00"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H01",
+              "H10",
+              "H01"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H01",
+              "H10",
+              "H10"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H01",
+              "H10",
+              "H11"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H01",
+              "H11",
+              "L0"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H01",
+              "H11",
+              "L1"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H01",
+              "H11",
+              "H00"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H01",
+              "H11",
+              "H01"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H01",
+              "H11",
+              "H10"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H01",
+              "H11",
+              "H11"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H10",
+              "L0",
+              "L0"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H10",
+              "L0",
+              "L1"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H10",
+              "L0",
+              "H00"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H10",
+              "L0",
+              "H01"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H10",
+              "L0",
+              "H10"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H10",
+              "L0",
+              "H11"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H10",
+              "L1",
+              "L0"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H10",
+              "L1",
+              "L1"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H10",
+              "L1",
+              "H00"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H10",
+              "L1",
+              "H01"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H10",
+              "L1",
+              "H10"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H10",
+              "L1",
+              "H11"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H10",
+              "H00",
+              "L0"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H10",
+              "H00",
+              "L1"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H10",
+              "H00",
+              "H00"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H10",
+              "H00",
+              "H01"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H10",
+              "H00",
+              "H10"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H10",
+              "H00",
+              "H11"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H10",
+              "H01",
+              "L0"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H10",
+              "H01",
+              "L1"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H10",
+              "H01",
+              "H00"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H10",
+              "H01",
+              "H01"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H10",
+              "H01",
+              "H10"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H10",
+              "H01",
+              "H11"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H10",
+              "H10",
+              "L0"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H10",
+              "H10",
+              "L1"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H10",
+              "H10",
+              "H00"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H10",
+              "H10",
+              "H01"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H10",
+              "H10",
+              "H10"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H10",
+              "H10",
+              "H11"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H10",
+              "H11",
+              "L0"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H10",
+              "H11",
+              "L1"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H10",
+              "H11",
+              "H00"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H10",
+              "H11",
+              "H01"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H10",
+              "H11",
+              "H10"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H10",
+              "H11",
+              "H11"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H11",
+              "L0",
+              "L0"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H11",
+              "L0",
+              "L1"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H11",
+              "L0",
+              "H00"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H11",
+              "L0",
+              "H01"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H11",
+              "L0",
+              "H10"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H11",
+              "L0",
+              "H11"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H11",
+              "L1",
+              "L0"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H11",
+              "L1",
+              "L1"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H11",
+              "L1",
+              "H00"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H11",
+              "L1",
+              "H01"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H11",
+              "L1",
+              "H10"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H11",
+              "L1",
+              "H11"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H11",
+              "H00",
+              "L0"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H11",
+              "H00",
+              "L1"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H11",
+              "H00",
+              "H00"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H11",
+              "H00",
+              "H01"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H11",
+              "H00",
+              "H10"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H11",
+              "H00",
+              "H11"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H11",
+              "H01",
+              "L0"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H11",
+              "H01",
+              "L1"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H11",
+              "H01",
+              "H00"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H11",
+              "H01",
+              "H01"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H11",
+              "H01",
+              "H10"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H11",
+              "H01",
+              "H11"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H11",
+              "H10",
+              "L0"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H11",
+              "H10",
+              "L1"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H11",
+              "H10",
+              "H00"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H11",
+              "H10",
+              "H01"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H11",
+              "H10",
+              "H10"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H11",
+              "H10",
+              "H11"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H11",
+              "H11",
+              "L0"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H11",
+              "H11",
+              "L1"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H11",
+              "H11",
+              "H00"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H11",
+              "H11",
+              "H01"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H11",
+              "H11",
+              "H10"
+            ],
+            "z": 1
+          },
+          {
+            "actions": [
+              "H11",
+              "H11",
+              "H11"
+            ],
+            "z": 1
+          }
+        ],
+        "catalog": [
+          {
+            "branch_candidates_compared": 432,
+            "config": {
+              "a": "1/3",
+              "b": "1/4",
+              "costs": [
+                "0",
+                "1/50",
+                "3/20"
+              ],
+              "f": "0",
+              "fixed_reward": "2",
+              "lambda": "1",
+              "model_version": "ceav-m1-v1.0",
+              "operating_cost": "0",
+              "payout_value": "1",
+              "pi": "1/5",
+              "reward_budget": "6"
+            }
+          },
+          {
+            "branch_candidates_compared": 432,
+            "config": {
+              "a": "1/3",
+              "b": "1/2",
+              "costs": [
+                "0",
+                "1/50",
+                "3/20"
+              ],
+              "f": "0",
+              "fixed_reward": "2",
+              "lambda": "1",
+              "model_version": "ceav-m1-v1.0",
+              "operating_cost": "0",
+              "payout_value": "1",
+              "pi": "1/5",
+              "reward_budget": "6"
+            }
+          },
+          {
+            "branch_candidates_compared": 432,
+            "config": {
+              "a": "1/3",
+              "b": "4/5",
+              "costs": [
+                "0",
+                "1/50",
+                "3/20"
+              ],
+              "f": "0",
+              "fixed_reward": "2",
+              "lambda": "1",
+              "model_version": "ceav-m1-v1.0",
+              "operating_cost": "0",
+              "payout_value": "1",
+              "pi": "1/5",
+              "reward_budget": "6"
+            }
+          },
+          {
+            "branch_candidates_compared": 432,
+            "config": {
+              "a": "1/2",
+              "b": "1/4",
+              "costs": [
+                "0",
+                "1/50",
+                "3/20"
+              ],
+              "f": "0",
+              "fixed_reward": "2",
+              "lambda": "1",
+              "model_version": "ceav-m1-v1.0",
+              "operating_cost": "0",
+              "payout_value": "1",
+              "pi": "1/5",
+              "reward_budget": "6"
+            }
+          },
+          {
+            "branch_candidates_compared": 432,
+            "config": {
+              "a": "1/2",
+              "b": "1/2",
+              "costs": [
+                "0",
+                "1/50",
+                "3/20"
+              ],
+              "f": "0",
+              "fixed_reward": "2",
+              "lambda": "1",
+              "model_version": "ceav-m1-v1.0",
+              "operating_cost": "0",
+              "payout_value": "1",
+              "pi": "1/5",
+              "reward_budget": "6"
+            }
+          },
+          {
+            "branch_candidates_compared": 432,
+            "config": {
+              "a": "1/2",
+              "b": "4/5",
+              "costs": [
+                "0",
+                "1/50",
+                "3/20"
+              ],
+              "f": "0",
+              "fixed_reward": "2",
+              "lambda": "1",
+              "model_version": "ceav-m1-v1.0",
+              "operating_cost": "0",
+              "payout_value": "1",
+              "pi": "1/5",
+              "reward_budget": "6"
+            }
+          },
+          {
+            "branch_candidates_compared": 432,
+            "config": {
+              "a": "4/5",
+              "b": "1/4",
+              "costs": [
+                "0",
+                "1/50",
+                "3/20"
+              ],
+              "f": "0",
+              "fixed_reward": "2",
+              "lambda": "1",
+              "model_version": "ceav-m1-v1.0",
+              "operating_cost": "0",
+              "payout_value": "1",
+              "pi": "1/5",
+              "reward_budget": "6"
+            }
+          },
+          {
+            "branch_candidates_compared": 432,
+            "config": {
+              "a": "4/5",
+              "b": "1/2",
+              "costs": [
+                "0",
+                "1/50",
+                "3/20"
+              ],
+              "f": "0",
+              "fixed_reward": "2",
+              "lambda": "1",
+              "model_version": "ceav-m1-v1.0",
+              "operating_cost": "0",
+              "payout_value": "1",
+              "pi": "1/5",
+              "reward_budget": "6"
+            }
+          },
+          {
+            "branch_candidates_compared": 432,
+            "config": {
+              "a": "4/5",
+              "b": "4/5",
+              "costs": [
+                "0",
+                "1/50",
+                "3/20"
+              ],
+              "f": "0",
+              "fixed_reward": "2",
+              "lambda": "1",
+              "model_version": "ceav-m1-v1.0",
+              "operating_cost": "0",
+              "payout_value": "1",
+              "pi": "1/5",
+              "reward_budget": "6"
+            }
+          },
+          {
+            "branch_candidates_compared": 432,
+            "config": {
+              "a": "1/3",
+              "b": "1/4",
+              "costs": [
+                "0",
+                "1/50",
+                "3/20"
+              ],
+              "f": "0",
+              "fixed_reward": "2",
+              "lambda": "1",
+              "model_version": "ceav-m1-v1.0",
+              "operating_cost": "0",
+              "payout_value": "1",
+              "pi": "1/2",
+              "reward_budget": "6"
+            }
+          },
+          {
+            "branch_candidates_compared": 432,
+            "config": {
+              "a": "1/3",
+              "b": "1/2",
+              "costs": [
+                "0",
+                "1/50",
+                "3/20"
+              ],
+              "f": "0",
+              "fixed_reward": "2",
+              "lambda": "1",
+              "model_version": "ceav-m1-v1.0",
+              "operating_cost": "0",
+              "payout_value": "1",
+              "pi": "1/2",
+              "reward_budget": "6"
+            }
+          },
+          {
+            "branch_candidates_compared": 432,
+            "config": {
+              "a": "1/3",
+              "b": "4/5",
+              "costs": [
+                "0",
+                "1/50",
+                "3/20"
+              ],
+              "f": "0",
+              "fixed_reward": "2",
+              "lambda": "1",
+              "model_version": "ceav-m1-v1.0",
+              "operating_cost": "0",
+              "payout_value": "1",
+              "pi": "1/2",
+              "reward_budget": "6"
+            }
+          },
+          {
+            "branch_candidates_compared": 432,
+            "config": {
+              "a": "1/2",
+              "b": "1/4",
+              "costs": [
+                "0",
+                "1/50",
+                "3/20"
+              ],
+              "f": "0",
+              "fixed_reward": "2",
+              "lambda": "1",
+              "model_version": "ceav-m1-v1.0",
+              "operating_cost": "0",
+              "payout_value": "1",
+              "pi": "1/2",
+              "reward_budget": "6"
+            }
+          },
+          {
+            "branch_candidates_compared": 432,
+            "config": {
+              "a": "1/2",
+              "b": "1/2",
+              "costs": [
+                "0",
+                "1/50",
+                "3/20"
+              ],
+              "f": "0",
+              "fixed_reward": "2",
+              "lambda": "1",
+              "model_version": "ceav-m1-v1.0",
+              "operating_cost": "0",
+              "payout_value": "1",
+              "pi": "1/2",
+              "reward_budget": "6"
+            }
+          },
+          {
+            "branch_candidates_compared": 432,
+            "config": {
+              "a": "1/2",
+              "b": "4/5",
+              "costs": [
+                "0",
+                "1/50",
+                "3/20"
+              ],
+              "f": "0",
+              "fixed_reward": "2",
+              "lambda": "1",
+              "model_version": "ceav-m1-v1.0",
+              "operating_cost": "0",
+              "payout_value": "1",
+              "pi": "1/2",
+              "reward_budget": "6"
+            }
+          },
+          {
+            "branch_candidates_compared": 432,
+            "config": {
+              "a": "4/5",
+              "b": "1/4",
+              "costs": [
+                "0",
+                "1/50",
+                "3/20"
+              ],
+              "f": "0",
+              "fixed_reward": "2",
+              "lambda": "1",
+              "model_version": "ceav-m1-v1.0",
+              "operating_cost": "0",
+              "payout_value": "1",
+              "pi": "1/2",
+              "reward_budget": "6"
+            }
+          },
+          {
+            "branch_candidates_compared": 432,
+            "config": {
+              "a": "4/5",
+              "b": "1/2",
+              "costs": [
+                "0",
+                "1/50",
+                "3/20"
+              ],
+              "f": "0",
+              "fixed_reward": "2",
+              "lambda": "1",
+              "model_version": "ceav-m1-v1.0",
+              "operating_cost": "0",
+              "payout_value": "1",
+              "pi": "1/2",
+              "reward_budget": "6"
+            }
+          },
+          {
+            "branch_candidates_compared": 432,
+            "config": {
+              "a": "4/5",
+              "b": "4/5",
+              "costs": [
+                "0",
+                "1/50",
+                "3/20"
+              ],
+              "f": "0",
+              "fixed_reward": "2",
+              "lambda": "1",
+              "model_version": "ceav-m1-v1.0",
+              "operating_cost": "0",
+              "payout_value": "1",
+              "pi": "1/2",
+              "reward_budget": "6"
+            }
+          },
+          {
+            "branch_candidates_compared": 432,
+            "config": {
+              "a": "1/3",
+              "b": "1/4",
+              "costs": [
+                "0",
+                "1/50",
+                "3/20"
+              ],
+              "f": "0",
+              "fixed_reward": "2",
+              "lambda": "1",
+              "model_version": "ceav-m1-v1.0",
+              "operating_cost": "0",
+              "payout_value": "1",
+              "pi": "4/5",
+              "reward_budget": "6"
+            }
+          },
+          {
+            "branch_candidates_compared": 432,
+            "config": {
+              "a": "1/3",
+              "b": "1/2",
+              "costs": [
+                "0",
+                "1/50",
+                "3/20"
+              ],
+              "f": "0",
+              "fixed_reward": "2",
+              "lambda": "1",
+              "model_version": "ceav-m1-v1.0",
+              "operating_cost": "0",
+              "payout_value": "1",
+              "pi": "4/5",
+              "reward_budget": "6"
+            }
+          },
+          {
+            "branch_candidates_compared": 432,
+            "config": {
+              "a": "1/3",
+              "b": "4/5",
+              "costs": [
+                "0",
+                "1/50",
+                "3/20"
+              ],
+              "f": "0",
+              "fixed_reward": "2",
+              "lambda": "1",
+              "model_version": "ceav-m1-v1.0",
+              "operating_cost": "0",
+              "payout_value": "1",
+              "pi": "4/5",
+              "reward_budget": "6"
+            }
+          },
+          {
+            "branch_candidates_compared": 432,
+            "config": {
+              "a": "1/2",
+              "b": "1/4",
+              "costs": [
+                "0",
+                "1/50",
+                "3/20"
+              ],
+              "f": "0",
+              "fixed_reward": "2",
+              "lambda": "1",
+              "model_version": "ceav-m1-v1.0",
+              "operating_cost": "0",
+              "payout_value": "1",
+              "pi": "4/5",
+              "reward_budget": "6"
+            }
+          },
+          {
+            "branch_candidates_compared": 432,
+            "config": {
+              "a": "1/2",
+              "b": "1/2",
+              "costs": [
+                "0",
+                "1/50",
+                "3/20"
+              ],
+              "f": "0",
+              "fixed_reward": "2",
+              "lambda": "1",
+              "model_version": "ceav-m1-v1.0",
+              "operating_cost": "0",
+              "payout_value": "1",
+              "pi": "4/5",
+              "reward_budget": "6"
+            }
+          },
+          {
+            "branch_candidates_compared": 432,
+            "config": {
+              "a": "1/2",
+              "b": "4/5",
+              "costs": [
+                "0",
+                "1/50",
+                "3/20"
+              ],
+              "f": "0",
+              "fixed_reward": "2",
+              "lambda": "1",
+              "model_version": "ceav-m1-v1.0",
+              "operating_cost": "0",
+              "payout_value": "1",
+              "pi": "4/5",
+              "reward_budget": "6"
+            }
+          },
+          {
+            "branch_candidates_compared": 432,
+            "config": {
+              "a": "4/5",
+              "b": "1/4",
+              "costs": [
+                "0",
+                "1/50",
+                "3/20"
+              ],
+              "f": "0",
+              "fixed_reward": "2",
+              "lambda": "1",
+              "model_version": "ceav-m1-v1.0",
+              "operating_cost": "0",
+              "payout_value": "1",
+              "pi": "4/5",
+              "reward_budget": "6"
+            }
+          },
+          {
+            "branch_candidates_compared": 432,
+            "config": {
+              "a": "4/5",
+              "b": "1/2",
+              "costs": [
+                "0",
+                "1/50",
+                "3/20"
+              ],
+              "f": "0",
+              "fixed_reward": "2",
+              "lambda": "1",
+              "model_version": "ceav-m1-v1.0",
+              "operating_cost": "0",
+              "payout_value": "1",
+              "pi": "4/5",
+              "reward_budget": "6"
+            }
+          },
+          {
+            "branch_candidates_compared": 432,
+            "config": {
+              "a": "4/5",
+              "b": "4/5",
+              "costs": [
+                "0",
+                "1/50",
+                "3/20"
+              ],
+              "f": "0",
+              "fixed_reward": "2",
+              "lambda": "1",
+              "model_version": "ceav-m1-v1.0",
+              "operating_cost": "0",
+              "payout_value": "1",
+              "pi": "4/5",
+              "reward_budget": "6"
+            }
+          }
+        ],
+        "discrepancies": [],
+        "duration_seconds": 199.91220469999826,
+        "fixture": "F12",
+        "reverse_order_branch_candidates": 11664,
+        "total_branch_candidates": 11664
+      },
+      "requirement": "F12 forward/reverse catalog exact differential",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "arithmetic": "exact_integer_ratios",
+        "common_denominator": "43365125000",
+        "conditional_payoffs_integrated": 7776,
+        "equilibrium_count": 100,
+        "full_strategy_deviations_compared": 5038848,
+        "payoff_cache_keys": "full raw config, mechanism, z, branch tuple, judge, trial action",
+        "profiles_checked": 46656,
+        "retained_full_profile_ids": [
+          {
+            "0": [
+              "H01",
+              "H01",
+              "H01"
+            ],
+            "1": [
+              "H01",
+              "H01",
+              "H01"
+            ]
+          },
+          {
+            "0": [
+              "H01",
+              "H01",
+              "H01"
+            ],
+            "1": [
+              "H10",
+              "H10",
+              "H10"
+            ]
+          },
+          {
+            "0": [
+              "H01",
+              "H01",
+              "H01"
+            ],
+            "1": [
+              "L0",
+              "L0",
+              "L0"
+            ]
+          },
+          {
+            "0": [
+              "H01",
+              "H01",
+              "H01"
+            ],
+            "1": [
+              "L0",
+              "L0",
+              "L1"
+            ]
+          },
+          {
+            "0": [
+              "H01",
+              "H01",
+              "H01"
+            ],
+            "1": [
+              "L0",
+              "L1",
+              "L0"
+            ]
+          },
+          {
+            "0": [
+              "H01",
+              "H01",
+              "H01"
+            ],
+            "1": [
+              "L0",
+              "L1",
+              "L1"
+            ]
+          },
+          {
+            "0": [
+              "H01",
+              "H01",
+              "H01"
+            ],
+            "1": [
+              "L1",
+              "L0",
+              "L0"
+            ]
+          },
+          {
+            "0": [
+              "H01",
+              "H01",
+              "H01"
+            ],
+            "1": [
+              "L1",
+              "L0",
+              "L1"
+            ]
+          },
+          {
+            "0": [
+              "H01",
+              "H01",
+              "H01"
+            ],
+            "1": [
+              "L1",
+              "L1",
+              "L0"
+            ]
+          },
+          {
+            "0": [
+              "H01",
+              "H01",
+              "H01"
+            ],
+            "1": [
+              "L1",
+              "L1",
+              "L1"
+            ]
+          },
+          {
+            "0": [
+              "H10",
+              "H10",
+              "H10"
+            ],
+            "1": [
+              "H01",
+              "H01",
+              "H01"
+            ]
+          },
+          {
+            "0": [
+              "H10",
+              "H10",
+              "H10"
+            ],
+            "1": [
+              "H10",
+              "H10",
+              "H10"
+            ]
+          },
+          {
+            "0": [
+              "H10",
+              "H10",
+              "H10"
+            ],
+            "1": [
+              "L0",
+              "L0",
+              "L0"
+            ]
+          },
+          {
+            "0": [
+              "H10",
+              "H10",
+              "H10"
+            ],
+            "1": [
+              "L0",
+              "L0",
+              "L1"
+            ]
+          },
+          {
+            "0": [
+              "H10",
+              "H10",
+              "H10"
+            ],
+            "1": [
+              "L0",
+              "L1",
+              "L0"
+            ]
+          },
+          {
+            "0": [
+              "H10",
+              "H10",
+              "H10"
+            ],
+            "1": [
+              "L0",
+              "L1",
+              "L1"
+            ]
+          },
+          {
+            "0": [
+              "H10",
+              "H10",
+              "H10"
+            ],
+            "1": [
+              "L1",
+              "L0",
+              "L0"
+            ]
+          },
+          {
+            "0": [
+              "H10",
+              "H10",
+              "H10"
+            ],
+            "1": [
+              "L1",
+              "L0",
+              "L1"
+            ]
+          },
+          {
+            "0": [
+              "H10",
+              "H10",
+              "H10"
+            ],
+            "1": [
+              "L1",
+              "L1",
+              "L0"
+            ]
+          },
+          {
+            "0": [
+              "H10",
+              "H10",
+              "H10"
+            ],
+            "1": [
+              "L1",
+              "L1",
+              "L1"
+            ]
+          },
+          {
+            "0": [
+              "L0",
+              "L0",
+              "L0"
+            ],
+            "1": [
+              "H01",
+              "H01",
+              "H01"
+            ]
+          },
+          {
+            "0": [
+              "L0",
+              "L0",
+              "L0"
+            ],
+            "1": [
+              "H10",
+              "H10",
+              "H10"
+            ]
+          },
+          {
+            "0": [
+              "L0",
+              "L0",
+              "L0"
+            ],
+            "1": [
+              "L0",
+              "L0",
+              "L0"
+            ]
+          },
+          {
+            "0": [
+              "L0",
+              "L0",
+              "L0"
+            ],
+            "1": [
+              "L0",
+              "L0",
+              "L1"
+            ]
+          },
+          {
+            "0": [
+              "L0",
+              "L0",
+              "L0"
+            ],
+            "1": [
+              "L0",
+              "L1",
+              "L0"
+            ]
+          },
+          {
+            "0": [
+              "L0",
+              "L0",
+              "L0"
+            ],
+            "1": [
+              "L0",
+              "L1",
+              "L1"
+            ]
+          },
+          {
+            "0": [
+              "L0",
+              "L0",
+              "L0"
+            ],
+            "1": [
+              "L1",
+              "L0",
+              "L0"
+            ]
+          },
+          {
+            "0": [
+              "L0",
+              "L0",
+              "L0"
+            ],
+            "1": [
+              "L1",
+              "L0",
+              "L1"
+            ]
+          },
+          {
+            "0": [
+              "L0",
+              "L0",
+              "L0"
+            ],
+            "1": [
+              "L1",
+              "L1",
+              "L0"
+            ]
+          },
+          {
+            "0": [
+              "L0",
+              "L0",
+              "L0"
+            ],
+            "1": [
+              "L1",
+              "L1",
+              "L1"
+            ]
+          },
+          {
+            "0": [
+              "L0",
+              "L0",
+              "L1"
+            ],
+            "1": [
+              "H01",
+              "H01",
+              "H01"
+            ]
+          },
+          {
+            "0": [
+              "L0",
+              "L0",
+              "L1"
+            ],
+            "1": [
+              "H10",
+              "H10",
+              "H10"
+            ]
+          },
+          {
+            "0": [
+              "L0",
+              "L0",
+              "L1"
+            ],
+            "1": [
+              "L0",
+              "L0",
+              "L0"
+            ]
+          },
+          {
+            "0": [
+              "L0",
+              "L0",
+              "L1"
+            ],
+            "1": [
+              "L0",
+              "L0",
+              "L1"
+            ]
+          },
+          {
+            "0": [
+              "L0",
+              "L0",
+              "L1"
+            ],
+            "1": [
+              "L0",
+              "L1",
+              "L0"
+            ]
+          },
+          {
+            "0": [
+              "L0",
+              "L0",
+              "L1"
+            ],
+            "1": [
+              "L0",
+              "L1",
+              "L1"
+            ]
+          },
+          {
+            "0": [
+              "L0",
+              "L0",
+              "L1"
+            ],
+            "1": [
+              "L1",
+              "L0",
+              "L0"
+            ]
+          },
+          {
+            "0": [
+              "L0",
+              "L0",
+              "L1"
+            ],
+            "1": [
+              "L1",
+              "L0",
+              "L1"
+            ]
+          },
+          {
+            "0": [
+              "L0",
+              "L0",
+              "L1"
+            ],
+            "1": [
+              "L1",
+              "L1",
+              "L0"
+            ]
+          },
+          {
+            "0": [
+              "L0",
+              "L0",
+              "L1"
+            ],
+            "1": [
+              "L1",
+              "L1",
+              "L1"
+            ]
+          },
+          {
+            "0": [
+              "L0",
+              "L1",
+              "L0"
+            ],
+            "1": [
+              "H01",
+              "H01",
+              "H01"
+            ]
+          },
+          {
+            "0": [
+              "L0",
+              "L1",
+              "L0"
+            ],
+            "1": [
+              "H10",
+              "H10",
+              "H10"
+            ]
+          },
+          {
+            "0": [
+              "L0",
+              "L1",
+              "L0"
+            ],
+            "1": [
+              "L0",
+              "L0",
+              "L0"
+            ]
+          },
+          {
+            "0": [
+              "L0",
+              "L1",
+              "L0"
+            ],
+            "1": [
+              "L0",
+              "L0",
+              "L1"
+            ]
+          },
+          {
+            "0": [
+              "L0",
+              "L1",
+              "L0"
+            ],
+            "1": [
+              "L0",
+              "L1",
+              "L0"
+            ]
+          },
+          {
+            "0": [
+              "L0",
+              "L1",
+              "L0"
+            ],
+            "1": [
+              "L0",
+              "L1",
+              "L1"
+            ]
+          },
+          {
+            "0": [
+              "L0",
+              "L1",
+              "L0"
+            ],
+            "1": [
+              "L1",
+              "L0",
+              "L0"
+            ]
+          },
+          {
+            "0": [
+              "L0",
+              "L1",
+              "L0"
+            ],
+            "1": [
+              "L1",
+              "L0",
+              "L1"
+            ]
+          },
+          {
+            "0": [
+              "L0",
+              "L1",
+              "L0"
+            ],
+            "1": [
+              "L1",
+              "L1",
+              "L0"
+            ]
+          },
+          {
+            "0": [
+              "L0",
+              "L1",
+              "L0"
+            ],
+            "1": [
+              "L1",
+              "L1",
+              "L1"
+            ]
+          },
+          {
+            "0": [
+              "L0",
+              "L1",
+              "L1"
+            ],
+            "1": [
+              "H01",
+              "H01",
+              "H01"
+            ]
+          },
+          {
+            "0": [
+              "L0",
+              "L1",
+              "L1"
+            ],
+            "1": [
+              "H10",
+              "H10",
+              "H10"
+            ]
+          },
+          {
+            "0": [
+              "L0",
+              "L1",
+              "L1"
+            ],
+            "1": [
+              "L0",
+              "L0",
+              "L0"
+            ]
+          },
+          {
+            "0": [
+              "L0",
+              "L1",
+              "L1"
+            ],
+            "1": [
+              "L0",
+              "L0",
+              "L1"
+            ]
+          },
+          {
+            "0": [
+              "L0",
+              "L1",
+              "L1"
+            ],
+            "1": [
+              "L0",
+              "L1",
+              "L0"
+            ]
+          },
+          {
+            "0": [
+              "L0",
+              "L1",
+              "L1"
+            ],
+            "1": [
+              "L0",
+              "L1",
+              "L1"
+            ]
+          },
+          {
+            "0": [
+              "L0",
+              "L1",
+              "L1"
+            ],
+            "1": [
+              "L1",
+              "L0",
+              "L0"
+            ]
+          },
+          {
+            "0": [
+              "L0",
+              "L1",
+              "L1"
+            ],
+            "1": [
+              "L1",
+              "L0",
+              "L1"
+            ]
+          },
+          {
+            "0": [
+              "L0",
+              "L1",
+              "L1"
+            ],
+            "1": [
+              "L1",
+              "L1",
+              "L0"
+            ]
+          },
+          {
+            "0": [
+              "L0",
+              "L1",
+              "L1"
+            ],
+            "1": [
+              "L1",
+              "L1",
+              "L1"
+            ]
+          },
+          {
+            "0": [
+              "L1",
+              "L0",
+              "L0"
+            ],
+            "1": [
+              "H01",
+              "H01",
+              "H01"
+            ]
+          },
+          {
+            "0": [
+              "L1",
+              "L0",
+              "L0"
+            ],
+            "1": [
+              "H10",
+              "H10",
+              "H10"
+            ]
+          },
+          {
+            "0": [
+              "L1",
+              "L0",
+              "L0"
+            ],
+            "1": [
+              "L0",
+              "L0",
+              "L0"
+            ]
+          },
+          {
+            "0": [
+              "L1",
+              "L0",
+              "L0"
+            ],
+            "1": [
+              "L0",
+              "L0",
+              "L1"
+            ]
+          },
+          {
+            "0": [
+              "L1",
+              "L0",
+              "L0"
+            ],
+            "1": [
+              "L0",
+              "L1",
+              "L0"
+            ]
+          },
+          {
+            "0": [
+              "L1",
+              "L0",
+              "L0"
+            ],
+            "1": [
+              "L0",
+              "L1",
+              "L1"
+            ]
+          },
+          {
+            "0": [
+              "L1",
+              "L0",
+              "L0"
+            ],
+            "1": [
+              "L1",
+              "L0",
+              "L0"
+            ]
+          },
+          {
+            "0": [
+              "L1",
+              "L0",
+              "L0"
+            ],
+            "1": [
+              "L1",
+              "L0",
+              "L1"
+            ]
+          },
+          {
+            "0": [
+              "L1",
+              "L0",
+              "L0"
+            ],
+            "1": [
+              "L1",
+              "L1",
+              "L0"
+            ]
+          },
+          {
+            "0": [
+              "L1",
+              "L0",
+              "L0"
+            ],
+            "1": [
+              "L1",
+              "L1",
+              "L1"
+            ]
+          },
+          {
+            "0": [
+              "L1",
+              "L0",
+              "L1"
+            ],
+            "1": [
+              "H01",
+              "H01",
+              "H01"
+            ]
+          },
+          {
+            "0": [
+              "L1",
+              "L0",
+              "L1"
+            ],
+            "1": [
+              "H10",
+              "H10",
+              "H10"
+            ]
+          },
+          {
+            "0": [
+              "L1",
+              "L0",
+              "L1"
+            ],
+            "1": [
+              "L0",
+              "L0",
+              "L0"
+            ]
+          },
+          {
+            "0": [
+              "L1",
+              "L0",
+              "L1"
+            ],
+            "1": [
+              "L0",
+              "L0",
+              "L1"
+            ]
+          },
+          {
+            "0": [
+              "L1",
+              "L0",
+              "L1"
+            ],
+            "1": [
+              "L0",
+              "L1",
+              "L0"
+            ]
+          },
+          {
+            "0": [
+              "L1",
+              "L0",
+              "L1"
+            ],
+            "1": [
+              "L0",
+              "L1",
+              "L1"
+            ]
+          },
+          {
+            "0": [
+              "L1",
+              "L0",
+              "L1"
+            ],
+            "1": [
+              "L1",
+              "L0",
+              "L0"
+            ]
+          },
+          {
+            "0": [
+              "L1",
+              "L0",
+              "L1"
+            ],
+            "1": [
+              "L1",
+              "L0",
+              "L1"
+            ]
+          },
+          {
+            "0": [
+              "L1",
+              "L0",
+              "L1"
+            ],
+            "1": [
+              "L1",
+              "L1",
+              "L0"
+            ]
+          },
+          {
+            "0": [
+              "L1",
+              "L0",
+              "L1"
+            ],
+            "1": [
+              "L1",
+              "L1",
+              "L1"
+            ]
+          },
+          {
+            "0": [
+              "L1",
+              "L1",
+              "L0"
+            ],
+            "1": [
+              "H01",
+              "H01",
+              "H01"
+            ]
+          },
+          {
+            "0": [
+              "L1",
+              "L1",
+              "L0"
+            ],
+            "1": [
+              "H10",
+              "H10",
+              "H10"
+            ]
+          },
+          {
+            "0": [
+              "L1",
+              "L1",
+              "L0"
+            ],
+            "1": [
+              "L0",
+              "L0",
+              "L0"
+            ]
+          },
+          {
+            "0": [
+              "L1",
+              "L1",
+              "L0"
+            ],
+            "1": [
+              "L0",
+              "L0",
+              "L1"
+            ]
+          },
+          {
+            "0": [
+              "L1",
+              "L1",
+              "L0"
+            ],
+            "1": [
+              "L0",
+              "L1",
+              "L0"
+            ]
+          },
+          {
+            "0": [
+              "L1",
+              "L1",
+              "L0"
+            ],
+            "1": [
+              "L0",
+              "L1",
+              "L1"
+            ]
+          },
+          {
+            "0": [
+              "L1",
+              "L1",
+              "L0"
+            ],
+            "1": [
+              "L1",
+              "L0",
+              "L0"
+            ]
+          },
+          {
+            "0": [
+              "L1",
+              "L1",
+              "L0"
+            ],
+            "1": [
+              "L1",
+              "L0",
+              "L1"
+            ]
+          },
+          {
+            "0": [
+              "L1",
+              "L1",
+              "L0"
+            ],
+            "1": [
+              "L1",
+              "L1",
+              "L0"
+            ]
+          },
+          {
+            "0": [
+              "L1",
+              "L1",
+              "L0"
+            ],
+            "1": [
+              "L1",
+              "L1",
+              "L1"
+            ]
+          },
+          {
+            "0": [
+              "L1",
+              "L1",
+              "L1"
+            ],
+            "1": [
+              "H01",
+              "H01",
+              "H01"
+            ]
+          },
+          {
+            "0": [
+              "L1",
+              "L1",
+              "L1"
+            ],
+            "1": [
+              "H10",
+              "H10",
+              "H10"
+            ]
+          },
+          {
+            "0": [
+              "L1",
+              "L1",
+              "L1"
+            ],
+            "1": [
+              "L0",
+              "L0",
+              "L0"
+            ]
+          },
+          {
+            "0": [
+              "L1",
+              "L1",
+              "L1"
+            ],
+            "1": [
+              "L0",
+              "L0",
+              "L1"
+            ]
+          },
+          {
+            "0": [
+              "L1",
+              "L1",
+              "L1"
+            ],
+            "1": [
+              "L0",
+              "L1",
+              "L0"
+            ]
+          },
+          {
+            "0": [
+              "L1",
+              "L1",
+              "L1"
+            ],
+            "1": [
+              "L0",
+              "L1",
+              "L1"
+            ]
+          },
+          {
+            "0": [
+              "L1",
+              "L1",
+              "L1"
+            ],
+            "1": [
+              "L1",
+              "L0",
+              "L0"
+            ]
+          },
+          {
+            "0": [
+              "L1",
+              "L1",
+              "L1"
+            ],
+            "1": [
+              "L1",
+              "L0",
+              "L1"
+            ]
+          },
+          {
+            "0": [
+              "L1",
+              "L1",
+              "L1"
+            ],
+            "1": [
+              "L1",
+              "L1",
+              "L0"
+            ]
+          },
+          {
+            "0": [
+              "L1",
+              "L1",
+              "L1"
+            ],
+            "1": [
+              "L1",
+              "L1",
+              "L1"
+            ]
+          }
+        ],
+        "set_difference": []
+      },
+      "requirement": "T17 direct full-profile exact set equality",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "run": "results\\mutations-release-01",
+        "source_matches_engine_web_tests": true
+      },
+      "requirement": "Mutation baseline and relevant production/test sources",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "argv": [
+          "C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+          "-B",
+          "-m",
+          "unittest",
+          "tests.test_core.CoreTests.test_T12_peer_freeze_numeric_counterexample",
+          "-v"
+        ],
+        "assertion_log": "M01/test_log.txt",
+        "baseline_source_hash": "3c6f0f976a63823cde4a6d16cf73cb9177cf3f80d26be74ca778efc90203ada6",
+        "exit_code": 1,
+        "expected_failure": "T12/F04 peer payoff must stay at original candidate tables",
+        "mutation_id": "M01",
+        "patch_sha256": "f89732c95d13c6d2cf3534ff0326b76ce9ce4bc22ec2012c1de31f5b7c4083ed",
+        "status": "killed",
+        "test_ids": [
+          "tests.test_core.CoreTests.test_T12_peer_freeze_numeric_counterexample"
+        ]
+      },
+      "requirement": "M01 targeted semantic mutant killed",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "argv": [
+          "C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+          "-B",
+          "-m",
+          "unittest",
+          "tests.test_core.CoreTests.test_T11_G4_post_signal_effort",
+          "-v"
+        ],
+        "assertion_log": "M02/test_log.txt",
+        "baseline_source_hash": "3c6f0f976a63823cde4a6d16cf73cb9177cf3f80d26be74ca778efc90203ada6",
+        "exit_code": 1,
+        "expected_failure": "T11/F08 must reject averaged positive Delta",
+        "mutation_id": "M02",
+        "patch_sha256": "fc2a506e28108f876b150885a7348f9ef4dfa875fd831a03b9dc4c8b2e3ae351",
+        "status": "killed",
+        "test_ids": [
+          "tests.test_core.CoreTests.test_T11_G4_post_signal_effort"
+        ]
+      },
+      "requirement": "M02 targeted semantic mutant killed",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "argv": [
+          "C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+          "-B",
+          "-m",
+          "unittest",
+          "tests.test_core.CoreTests.test_T13_joint_expectation",
+          "-v"
+        ],
+        "assertion_log": "M03/test_log.txt",
+        "baseline_source_hash": "3c6f0f976a63823cde4a6d16cf73cb9177cf3f80d26be74ca778efc90203ada6",
+        "exit_code": 1,
+        "expected_failure": "T13 independent state oracle must distinguish joint and product marginals",
+        "mutation_id": "M03",
+        "patch_sha256": "260ff3848da30f41aea32d3ece53ffa45e64b3e75bacca589950981098fc1330",
+        "status": "killed",
+        "test_ids": [
+          "tests.test_core.CoreTests.test_T13_joint_expectation"
+        ]
+      },
+      "requirement": "M03 targeted semantic mutant killed",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "argv": [
+          "C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+          "-B",
+          "-m",
+          "unittest",
+          "tests.test_core.CoreTests.test_T05_H_constants_keep_private_prediction",
+          "-v"
+        ],
+        "assertion_log": "M04/test_log.txt",
+        "baseline_source_hash": "3c6f0f976a63823cde4a6d16cf73cb9177cf3f80d26be74ca778efc90203ada6",
+        "exit_code": 1,
+        "expected_failure": "T05/F13 H constant reports still observe private signal",
+        "mutation_id": "M04",
+        "patch_sha256": "62742a9c0afab5df497e5d3a316ebe3c8b4a57de3ae2eb747419ec497bad0820",
+        "status": "killed",
+        "test_ids": [
+          "tests.test_core.CoreTests.test_T05_H_constants_keep_private_prediction"
+        ]
+      },
+      "requirement": "M04 targeted semantic mutant killed",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "argv": [
+          "C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+          "-B",
+          "-m",
+          "unittest",
+          "tests.test_core.CoreTests.test_T04_roles",
+          "-v"
+        ],
+        "assertion_log": "M05/test_log.txt",
+        "baseline_source_hash": "3c6f0f976a63823cde4a6d16cf73cb9177cf3f80d26be74ca778efc90203ada6",
+        "exit_code": 1,
+        "expected_failure": "T04/F02 reference and scoring peer have distinct cyclic roles",
+        "mutation_id": "M05",
+        "patch_sha256": "78ec2170cae84a118f30f9b098dd6adf421ba7e0829705154221c78a48ee0dce",
+        "status": "killed",
+        "test_ids": [
+          "tests.test_core.CoreTests.test_T04_roles"
+        ]
+      },
+      "requirement": "M05 targeted semantic mutant killed",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "argv": [
+          "C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+          "-B",
+          "-m",
+          "unittest",
+          "tests.test_core.CoreTests.test_T05_predictions_and_exact_loss",
+          "-v"
+        ],
+        "assertion_log": "M06/test_log.txt",
+        "baseline_source_hash": "3c6f0f976a63823cde4a6d16cf73cb9177cf3f80d26be74ca778efc90203ada6",
+        "exit_code": 1,
+        "expected_failure": "T05/F11 production quadratic path must preserve tiny rational differences",
+        "mutation_id": "M06",
+        "patch_sha256": "aab4b50ac82df31fddc3fe105eeac55a5d823b25bf123b7396a38cb6d1cfb459",
+        "status": "killed",
+        "test_ids": [
+          "tests.test_core.CoreTests.test_T05_predictions_and_exact_loss"
+        ]
+      },
+      "requirement": "M06 targeted semantic mutant killed",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "argv": [
+          "C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+          "-B",
+          "-m",
+          "unittest",
+          "tests.test_core.CoreTests.test_T09_G1_all_judges_and_branches",
+          "-v"
+        ],
+        "assertion_log": "M07/test_log.txt",
+        "baseline_source_hash": "3c6f0f976a63823cde4a6d16cf73cb9177cf3f80d26be74ca778efc90203ada6",
+        "exit_code": 1,
+        "expected_failure": "T09/F05 retain both optimal low reports",
+        "mutation_id": "M07",
+        "patch_sha256": "b5edd6632f535fb303b98b23c8fb7ad6d129baa5fe3dc4cd81b3099b919d34ea",
+        "status": "killed",
+        "test_ids": [
+          "tests.test_core.CoreTests.test_T09_G1_all_judges_and_branches"
+        ]
+      },
+      "requirement": "M07 targeted semantic mutant killed",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "argv": [
+          "C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+          "-B",
+          "-m",
+          "unittest",
+          "tests.test_core.CoreTests.test_T05_predictions_and_exact_loss",
+          "-v"
+        ],
+        "assertion_log": "M08/test_log.txt",
+        "baseline_source_hash": "3c6f0f976a63823cde4a6d16cf73cb9177cf3f80d26be74ca778efc90203ada6",
+        "exit_code": 1,
+        "expected_failure": "T05/F06 prediction must target constant peer report, not Y",
+        "mutation_id": "M08",
+        "patch_sha256": "98c8e46f81220e6d12cbd81d0e11b34c39f68429371564e0b85f95d8250c87fc",
+        "status": "killed",
+        "test_ids": [
+          "tests.test_core.CoreTests.test_T05_predictions_and_exact_loss"
+        ]
+      },
+      "requirement": "M08 targeted semantic mutant killed",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "argv": [
+          "C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+          "-B",
+          "-m",
+          "unittest",
+          "tests.test_core.CoreTests.test_T06_fixed_constant_and_zero_costs",
+          "-v"
+        ],
+        "assertion_log": "M09/test_log.txt",
+        "baseline_source_hash": "3c6f0f976a63823cde4a6d16cf73cb9177cf3f80d26be74ca778efc90203ada6",
+        "exit_code": 1,
+        "expected_failure": "T06/F09 different judge costs must be preserved",
+        "mutation_id": "M09",
+        "patch_sha256": "a413b5be2467ff529045f225e5cf4834057ebb8908b01a137e0508acdb74392f",
+        "status": "killed",
+        "test_ids": [
+          "tests.test_core.CoreTests.test_T06_fixed_constant_and_zero_costs"
+        ]
+      },
+      "requirement": "M09 targeted semantic mutant killed",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "argv": [
+          "C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+          "-B",
+          "-m",
+          "unittest",
+          "tests.test_search.SearchTests.test_T18_binary_and_cyclic_relabel",
+          "-v"
+        ],
+        "assertion_log": "M10/test_log.txt",
+        "baseline_source_hash": "3c6f0f976a63823cde4a6d16cf73cb9177cf3f80d26be74ca778efc90203ada6",
+        "exit_code": 1,
+        "expected_failure": "T18 false approval denominator is P(Y=0)",
+        "mutation_id": "M10",
+        "patch_sha256": "df01205a1a798939c144a7be64d0a6ed0eba7fb0ecba3cc1288c9fbcaa18225f",
+        "status": "killed",
+        "test_ids": [
+          "tests.test_search.SearchTests.test_T18_binary_and_cyclic_relabel"
+        ]
+      },
+      "requirement": "M10 targeted semantic mutant killed",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "argv": [
+          "C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+          "-B",
+          "-m",
+          "unittest",
+          "tests.test_core.CoreTests.test_T06_fixed_constant_and_zero_costs",
+          "-v"
+        ],
+        "assertion_log": "M11/test_log.txt",
+        "baseline_source_hash": "3c6f0f976a63823cde4a6d16cf73cb9177cf3f80d26be74ca778efc90203ada6",
+        "exit_code": 1,
+        "expected_failure": "T06/T19 constant reward predictions form a continuum",
+        "mutation_id": "M11",
+        "patch_sha256": "9fd0f1ca49b9d26d728dc05fcc1eaf0d6acc27b5027e3aeb9a14fe0d17246464",
+        "status": "killed",
+        "test_ids": [
+          "tests.test_core.CoreTests.test_T06_fixed_constant_and_zero_costs"
+        ]
+      },
+      "requirement": "M11 targeted semantic mutant killed",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "argv": [
+          "C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+          "-B",
+          "-m",
+          "unittest",
+          "tests.test_server.ServerTests.test_T30_duplicate_submit_immutable_snapshot_cancel",
+          "-v"
+        ],
+        "assertion_log": "M12/test_log.txt",
+        "baseline_source_hash": "3c6f0f976a63823cde4a6d16cf73cb9177cf3f80d26be74ca778efc90203ada6",
+        "exit_code": 1,
+        "expected_failure": "T30 handshake proves cancel must stop the owned worker tree before terminal state",
+        "mutation_id": "M12",
+        "patch_sha256": "9ce6f4b50df9815ddf2b09737acc30e9fa8d5d09e1fbaa1f370398b3958e08e1",
+        "status": "killed",
+        "test_ids": [
+          "tests.test_server.ServerTests.test_T30_duplicate_submit_immutable_snapshot_cancel"
+        ]
+      },
+      "requirement": "M12 targeted semantic mutant killed",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "argv": [
+          "C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+          "-B",
+          "-m",
+          "unittest",
+          "tests.test_io.IOTests.test_T29_runner_actual_failure_and_missing_ids",
+          "-v"
+        ],
+        "assertion_log": "M13/test_log.txt",
+        "baseline_source_hash": "3c6f0f976a63823cde4a6d16cf73cb9177cf3f80d26be74ca778efc90203ada6",
+        "exit_code": 1,
+        "expected_failure": "T29 zero discovery and missing IDs cannot pass",
+        "mutation_id": "M13",
+        "patch_sha256": "daec2a026f91325a11e811eff84f9bf75d50d463bf750b27974d646a08fab23a",
+        "status": "killed",
+        "test_ids": [
+          "tests.test_io.IOTests.test_T29_runner_actual_failure_and_missing_ids"
+        ]
+      },
+      "requirement": "M13 targeted semantic mutant killed",
+      "status": "pass"
+    },
+    {
+      "evidence": [
+        {
+          "api_run": "run-20261022T095152-f23f2bbbb1",
+          "cli_exit_code": 0,
+          "golden": "G1",
+          "numeric_artifacts_byte_equal": true
+        },
+        {
+          "api_run": "run-20261022T095153-59303e639a",
+          "cli_exit_code": 0,
+          "golden": "G2",
+          "numeric_artifacts_byte_equal": true
+        },
+        {
+          "api_run": "run-20261022T095153-8279bd2d76",
+          "cli_exit_code": 0,
+          "golden": "G3",
+          "numeric_artifacts_byte_equal": true
+        },
+        {
+          "api_run": "run-20261022T095154-ba34555bf6",
+          "cli_exit_code": 0,
+          "golden": "G4",
+          "numeric_artifacts_byte_equal": true
+        }
+      ],
+      "requirement": "Actual CLI/API byte equality G1-G4",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "run": "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\results\\run-20261022T095152-f23f2bbbb1"
+      },
+      "requirement": "G1 standalone certificate independently replayed",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "run": "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\results\\run-20261022T095153-59303e639a"
+      },
+      "requirement": "G2 standalone certificate independently replayed",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "run": "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\results\\run-20261022T095153-8279bd2d76"
+      },
+      "requirement": "G3 standalone certificate independently replayed",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "run": "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\results\\run-20261022T095154-ba34555bf6"
+      },
+      "requirement": "G4 standalone certificate independently replayed",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "manifest": {
+          "argv": [
+            "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\ceav_m1\\__main__.py",
+            "compare",
+            "--out",
+            "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\results\\run-20261022T094742-c8c1c9d142",
+            "--defer-publication",
+            "--parent-pid",
+            "3092",
+            "--config",
+            "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\results\\.jobs\\run-20261022T094742-c8c1c9d142\\config.json",
+            "--progress-json",
+            "--profile",
+            "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\results\\.jobs\\run-20261022T094742-c8c1c9d142\\profile.json"
+          ],
+          "artifacts": [
+            {
+              "bytes": 259,
+              "name": "config.json",
+              "sha256": "b1912e87095b9ca3e93f635b0d369b62b23ddabfaaaf7fa0ef4f666d5d8de661"
+            },
+            {
+              "bytes": 42285,
+              "name": "fixed/best_responses.json",
+              "sha256": "19de9319225589f9b95315c0182dac3b42b7e17c6841057cac9538d639399764"
+            },
+            {
+              "bytes": 57874,
+              "name": "fixed/certificate.json",
+              "sha256": "841383253d0b3a2d77e0555ec4de8b6d60da485739537b2fc99eeb0c547660a2"
+            },
+            {
+              "bytes": 259,
+              "name": "fixed/config.json",
+              "sha256": "b1912e87095b9ca3e93f635b0d369b62b23ddabfaaaf7fa0ef4f666d5d8de661"
+            },
+            {
+              "bytes": 11007,
+              "name": "fixed/manifest.json",
+              "sha256": "729c43471fb47183b0d9fea934df4f58ad82b0f436127ccc5b82b8c64495dbad"
+            },
+            {
+              "bytes": 95,
+              "name": "fixed/profile.json",
+              "sha256": "66712b6a53ded25a422ab0b4c91abf2d4f8724bb8dad6cdfe69a6cad5f2d60c1"
+            },
+            {
+              "bytes": 1444,
+              "name": "fixed/report.md",
+              "sha256": "e2a3c49e03cfb3f3fe30a630777b4e76708f86916787637ae39dd5f28a5e472a"
+            },
+            {
+              "bytes": 488,
+              "name": "fixed/request.json",
+              "sha256": "24dbf995857a60af9cc7f6e1faea123db21af30719bd14a2c2a796e073f156cd"
+            },
+            {
+              "bytes": 19872,
+              "name": "fixed/states.csv",
+              "sha256": "a768d691dac612a9e89dc598c11842501ccc3a522d2a998d77a7dac6c13f1d44"
+            },
+            {
+              "bytes": 5629,
+              "name": "fixed/summary.json",
+              "sha256": "de9cd95a85e376efd3d84a1bac92387d91122455a91e05ac7f1ee821713bf0d1"
+            },
+            {
+              "bytes": 95,
+              "name": "profile.json",
+              "sha256": "66712b6a53ded25a422ab0b4c91abf2d4f8724bb8dad6cdfe69a6cad5f2d60c1"
+            },
+            {
+              "bytes": 38913,
+              "name": "rbts/best_responses.json",
+              "sha256": "a5cd8004fbbd17219c6605b6b4dca08ccffd58a4f095c509617e76f8b7f9ee6a"
+            },
+            {
+              "bytes": 53930,
+              "name": "rbts/certificate.json",
+              "sha256": "ba55e94a4e6bdb02f612bdc92db30a6804c071edae7e9f669425617ddbac044a"
+            },
+            {
+              "bytes": 259,
+              "name": "rbts/config.json",
+              "sha256": "b1912e87095b9ca3e93f635b0d369b62b23ddabfaaaf7fa0ef4f666d5d8de661"
+            },
+            {
+              "bytes": 11005,
+              "name": "rbts/manifest.json",
+              "sha256": "99c2b8648cccf705a3039e356d291cbc7329b4e71b1dd04acb434f35b0974576"
+            },
+            {
+              "bytes": 95,
+              "name": "rbts/profile.json",
+              "sha256": "66712b6a53ded25a422ab0b4c91abf2d4f8724bb8dad6cdfe69a6cad5f2d60c1"
+            },
+            {
+              "bytes": 1466,
+              "name": "rbts/report.md",
+              "sha256": "15e9ef1f700bef995bc123d8df8d230e6f90bad3555ec5f4de70b35d8766c2e0"
+            },
+            {
+              "bytes": 487,
+              "name": "rbts/request.json",
+              "sha256": "226d8854ba476a24d0696627ac7d9aeb2f068b90a8fed90badff9aaf3bee7d1a"
+            },
+            {
+              "bytes": 24216,
+              "name": "rbts/states.csv",
+              "sha256": "7affc35902a6210a3b019cecf1ae94ae07a493b714690dfeacb3cc14d3664d57"
+            },
+            {
+              "bytes": 5970,
+              "name": "rbts/summary.json",
+              "sha256": "def9e36264225332941589cc2c9a7acee88c925e892cb6a60c69eb9da84122fb"
+            },
+            {
+              "bytes": 1150,
+              "name": "report.md",
+              "sha256": "6120042f59aa1d029cb642979829fc2ad10e41a9cd247b4c310bc3acc6ee68bf"
+            },
+            {
+              "bytes": 487,
+              "name": "request.json",
+              "sha256": "4e870afda103d558d97e65850e278a0419c3cb235005e453c8caa9e5e8ddb934"
+            },
+            {
+              "bytes": 3491,
+              "name": "summary.json",
+              "sha256": "a12af8cfb5dd2711f36614e6533b6ad0bb0b6927d214547189d38fc274c6c0ff"
+            },
+            {
+              "bytes": 108,
+              "name": "worker_log.txt",
+              "sha256": "908bd0a902a29eff44391734f7cb6e7e0571cec0b3e8d4f4c6726db6c937650b"
+            }
+          ],
+          "completed_at_utc": "2026-10-22T09:47:43.175321+00:00",
+          "config": {
+            "a": "7/10",
+            "b": "4/5",
+            "costs": [
+              "1/20",
+              "1/20",
+              "1/20"
+            ],
+            "f": "0",
+            "fixed_reward": "2",
+            "lambda": "1",
+            "model_version": "ceav-m1-v1.0",
+            "operating_cost": "0",
+            "payout_value": "1",
+            "pi": "1/2",
+            "reward_budget": "6"
+          },
+          "config_hash": "bda5c8793d24f3d2d32fce51383b89a04313577e42cfffb5280e99ba5afbdf96",
+          "created_at_utc": "2026-10-22T09:47:42.625180+00:00",
+          "documents": {
+            "CEAV_M1_SPEC.md": {
+              "bytes": 71180,
+              "sha256": "c62cc8ae146603adceb1fb94560c541e198244ff83519be8a1adbe60a6781120"
+            },
+            "ENGINE_DESIGN.md": {
+              "bytes": 23400,
+              "sha256": "9acba0db2d546d7d2c0427a0e1e0dcff77c6d7329db9a3934ea291616ce9e447"
+            },
+            "VERIFICATION_PLAN.md": {
+              "bytes": 32090,
+              "sha256": "6096454551c4bbc0ab473edd8853888ca3f650401ef5ecbc45df7b262404448a"
+            }
+          },
+          "duration_seconds": 0.510056800005259,
+          "engine_revision": "00e30fe36b4bf2ab134ca51f712c1a3e1121c5ec45de2d9056fa268d46ec57b8",
+          "engine_version": "ceav-m1-engine-v1",
+          "logical_cpu_count": 16,
+          "machine": "AMD64",
+          "mechanism": "rbts",
+          "model_version": "ceav-m1-v1.0",
+          "operation": "compare",
+          "platform": "Windows-11-10.0.26300-SP0",
+          "profile": {
+            "0": [
+              "H01",
+              "H01",
+              "H01"
+            ],
+            "1": [
+              "H01",
+              "H01",
+              "H01"
+            ]
+          },
+          "profile_hash": "2b5e101404e8e22918f3d45d17db7b3081c5d707e3c8cd6f72f41901ffb9a34e",
+          "publication_owner": "local_server",
+          "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+          "randomness": "none",
+          "request_hash": "beaa637cf12fa0eb9e01151dedaa521e260d59cb796dd89b48de28a59a7b37d1",
+          "run_id": "run-20261022T094742-c8c1c9d142",
+          "source_files": [
+            {
+              "path": "ceav_m1/__init__.py",
+              "sha256": "acf8075a7b488345b47e6f7b48af5072dcb7bcaf1979f0c4662662112a158691"
+            },
+            {
+              "path": "ceav_m1/__main__.py",
+              "sha256": "5e4400541547eccf5af7a82e38244c44a8d60ebb5d842f120f0ff7dedfb31215"
+            },
+            {
+              "path": "ceav_m1/best_response.py",
+              "sha256": "eace8ef8864de0a9c53293c18da7f68251eac168c82aed0d21aa659a5e75ab89"
+            },
+            {
+              "path": "ceav_m1/equilibria.py",
+              "sha256": "f75b660b8cea8234e533d282341ed16f5ae58eb1ab822bfa75bf71f6d6c84409"
+            },
+            {
+              "path": "ceav_m1/evaluate.py",
+              "sha256": "e430e49951fc012d04202462f107febaec82cbb47fbede573d290e36113eb7e8"
+            },
+            {
+              "path": "ceav_m1/model.py",
+              "sha256": "2103c02c44858fe9be8fa2af939158b4cedd450da92659cbb715134edb8f831e"
+            },
+            {
+              "path": "ceav_m1/output.py",
+              "sha256": "d23fd0fb901691ac1e0aef72c05c2ae243cbab22d45b5d03b32969a5d5d9421d"
+            },
+            {
+              "path": "ceav_m1/runtime.py",
+              "sha256": "a815848296e4391b050b3d17f64610fd9f05c5a4e705be832d74291a1ca6e79d"
+            },
+            {
+              "path": "ceav_m1/scoring.py",
+              "sha256": "9bc9cc09c3da7b5619c83f750b31df124fc453250ae5eb0f7cc4550d5a367451"
+            },
+            {
+              "path": "ceav_m1/server.py",
+              "sha256": "99010517ab2795f93f3d9a8d855f986870fa7704cf74a4907608f35758737e4a"
+            },
+            {
+              "path": "ceav_m1/strategies.py",
+              "sha256": "9ca37e72c1b67de7d48aea75148063c2f169cac4e56c31d3687a5a2b1c5dc9bb"
+            },
+            {
+              "path": "ceav_m1/test_runner.py",
+              "sha256": "bff978599627413871b4c6452a9fce68c041bef98e2883b85833e374fbd1bca8"
+            },
+            {
+              "path": "configs/all_fail.json",
+              "sha256": "34e268c3092aa8b40cdf0de2042536adb0e8147e5dc6bacdd56c76680e6e2adc"
+            },
+            {
+              "path": "configs/all_high.json",
+              "sha256": "66712b6a53ded25a422ab0b4c91abf2d4f8724bb8dad6cdfe69a6cad5f2d60c1"
+            },
+            {
+              "path": "configs/all_inverted.json",
+              "sha256": "33c3a09a74a4f022dead1d1e196c7f331ae30de779abbe23b0f7c1e35d1506f1"
+            },
+            {
+              "path": "configs/all_not_z.json",
+              "sha256": "f21bdf23f7f3dcbd377a2c9fc4b78f8fc250f9b2f6e526a93349c82057dbb02e"
+            },
+            {
+              "path": "configs/all_pass.json",
+              "sha256": "b3dac93103641affc8bd746db35ad5d49f0a0fafa65d8eaa8be49b8c9fb499c6"
+            },
+            {
+              "path": "configs/all_z.json",
+              "sha256": "2b97a46ef5fab95aa320af5ad14da81a18a2b1522482e0cb68f17d8ee5c43215"
+            },
+            {
+              "path": "configs/asymmetric.json",
+              "sha256": "b6ecfc6fe9cd0030f87039f1b9fb21f72fda84d334d45d625405e92fa6cd4d99"
+            },
+            {
+              "path": "configs/asymmetric_profile.json",
+              "sha256": "fead5f76e88fccc735afa3f3b722b775c5697cb10f2df7e4cafe321512e59b35"
+            },
+            {
+              "path": "configs/golden_g1.json",
+              "sha256": "29b4f77f70129bd51b54a43b54dc6932da80ecd88eae9906049cad56b48932bb"
+            },
+            {
+              "path": "configs/golden_g2.json",
+              "sha256": "29b4f77f70129bd51b54a43b54dc6932da80ecd88eae9906049cad56b48932bb"
+            },
+            {
+              "path": "configs/golden_g3.json",
+              "sha256": "8927e92f1e617c674840c24f67fac9fe434ee73023c6cd80c0f3a685d9765bab"
+            },
+            {
+              "path": "configs/golden_g4.json",
+              "sha256": "8108b13876e237b961ec77d3afe6b05cf45ccdb405ae1446e05c704c487a757e"
+            },
+            {
+              "path": "configs/sweep.json",
+              "sha256": "cb658854f5ca2d6c4eef895c59ded6cc77fb5f6a93e1202e8247bb7f9ac9bf98"
+            },
+            {
+              "path": "tests/__init__.py",
+              "sha256": "14ecdce21e733e50c3e5bca221b9d10c520cfa180380f733bdbf57e4e988488e"
+            },
+            {
+              "path": "tests/certificates.py",
+              "sha256": "4eef6291d2c3f7295ccb07fe2ed1ad13619c90e669fad4be790f208f42c5da4b"
+            },
+            {
+              "path": "tests/failure_fixture.py",
+              "sha256": "f7d9acf049ba5b4cee8135577fc564f2942fab2605e9dd7ac0acace82e5514b1"
+            },
+            {
+              "path": "tests/fixtures/asymmetric_oracle.json",
+              "sha256": "ce46cdefe3a5d229a0e93119abce00967e0a039ba891096d80c3ffbe1e1fdc2b"
+            },
+            {
+              "path": "tests/fixtures/oracle_preproduction.py",
+              "sha256": "6eadc3a96a123d51816358bde62ee777bbfef96e2cf42b722ee1745e23af6b41"
+            },
+            {
+              "path": "tests/fixtures/oracle_recovery.json",
+              "sha256": "2462378c7c1fa9780d6883e25a58ddb1302454b9876bb57dfe4b52c8bab39776"
+            },
+            {
+              "path": "tests/fixtures/reference.json",
+              "sha256": "aab77bf2f2160a9890e9b8ee2302bef62b79571a2b6f8f56e2b9f6b53fba3c75"
+            },
+            {
+              "path": "tests/oracle.py",
+              "sha256": "5da59305af4e563edc83498ee3b24e8ec08afc5bb1700a17b42d172223f790bd"
+            },
+            {
+              "path": "tests/registry.json",
+              "sha256": "ae773046a8d4254c6527519d2ab18cd059aa9ba4e7d9663c6d5f3491952299fd"
+            },
+            {
+              "path": "tests/server_fixture.py",
+              "sha256": "b63759f4b9c0c26f6f9f74407bd2757353833c70ffe122471d3f2455e490f646"
+            },
+            {
+              "path": "tests/test_browser_evidence.py",
+              "sha256": "c1d2955a7f6d014c3006c6e27628a44cdc58b8b9dafaadd85f4e088e5a8bbf66"
+            },
+            {
+              "path": "tests/test_core.py",
+              "sha256": "0e189a444a3a9c0c22bbac1d53f52fd5115875704ba35f52fd1985338945e433"
+            },
+            {
+              "path": "tests/test_differential.py",
+              "sha256": "a04ae477d2ba83cd0f8e97070b9356f44a942e2495c907efa3091091e16c8ade"
+            },
+            {
+              "path": "tests/test_io.py",
+              "sha256": "d48d2751ae2ad99e8f80a58e589a8eed71849c59fd166ccc5280db9194fc5892"
+            },
+            {
+              "path": "tests/test_search.py",
+              "sha256": "d4a690eebe44ae4eae5ca5b8d1f4b48e2825a1e7bf8b9b39d8178a2f028d0fde"
+            },
+            {
+              "path": "tests/test_server.py",
+              "sha256": "5044467f9ee3e1941140befe10003b4664ed209045c192599ce3339075a4620c"
+            },
+            {
+              "path": "tests/worker_fixture.py",
+              "sha256": "92c69b90b517af69a72d74e5a4b2d2962ad8a70fd67a6c5ffd5d3d4d688c3b18"
+            },
+            {
+              "path": "verification/acceptance_audit.py",
+              "sha256": "fd880280d8f7d358b9a0fe3ed8fad1b4a3a93d5d68c4f856180d0e96736374dc"
+            },
+            {
+              "path": "verification/browser_acceptance.py",
+              "sha256": "310f6ee29e453ceeaf2e7c8377fe11840186d586ffb57796c14d812bbb0bf488"
+            },
+            {
+              "path": "verification/browser_flows.js",
+              "sha256": "4a2982aa2a59f310edde1ddfb7c84e479ffea66084e70c0fd664e83360a6a20d"
+            },
+            {
+              "path": "verification/mutation_probes.py",
+              "sha256": "a8998209e02641a4fd440ef48a42a3b811c5c7a9bf4ab435b2acc3c0606e6b2e"
+            },
+            {
+              "path": "verification/reference_results.json",
+              "sha256": "85622a6a7d2a03b787009b9a2f21a6fc7079dd87276b5ed7eb2cbd22c1ff7209"
+            },
+            {
+              "path": "verification/verify_reference.py",
+              "sha256": "a77957a66cf8816e1575734a0362f2a0ca4690a47e645ed0b12c8cd59ff62550"
+            },
+            {
+              "path": "web/app.js",
+              "sha256": "098e0312335e0c9655167a473d0d8d1fe8c9334a26b1f16d40df9c351c1c1561"
+            },
+            {
+              "path": "web/index.html",
+              "sha256": "73e5c32e83e430d17d9366ef65fe7064d7034e07669f865696cce06082b57967"
+            },
+            {
+              "path": "web/styles.css",
+              "sha256": "255fd13aec106e5617999d501c5bdaf173ee243e405db62e5f41d74a07da55fa"
+            }
+          ],
+          "spec": {
+            "freeze_event": "spec_history/implementation-start-20261022T081942148684Z/manifest.json",
+            "freeze_status": "frozen_at_analyzer_implementation_start",
+            "reference_checker_preexisted": true,
+            "revision": "math-proof-r2",
+            "sha256": "c62cc8ae146603adceb1fb94560c541e198244ff83519be8a1adbe60a6781120",
+            "snapshot": "spec_history/implementation-start-20261022T081942148684Z/CEAV_M1_SPEC.md"
+          },
+          "status": "succeeded"
+        },
+        "run_id": "run-20261022T094742-c8c1c9d142"
+      },
+      "requirement": "Equal-cap comparison, independent sub-certificates and nested downloads",
+      "status": "pass"
+    },
+    {
+      "evidence": [
+        {
+          "command": "analyze",
+          "config_hash": "bda5c8793d24f3d2d32fce51383b89a04313577e42cfffb5280e99ba5afbdf96",
+          "duration_seconds": 0.03245980000065174,
+          "golden": "G1",
+          "logical_cpu_count": 16,
+          "machine": "AMD64",
+          "platform": "Windows-11-10.0.26300-SP0",
+          "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+          "run_id": "run-20261022T095152-f23f2bbbb1",
+          "source_hash": "3c6f0f976a63823cde4a6d16cf73cb9177cf3f80d26be74ca778efc90203ada6"
+        },
+        {
+          "command": "analyze",
+          "config_hash": "bda5c8793d24f3d2d32fce51383b89a04313577e42cfffb5280e99ba5afbdf96",
+          "duration_seconds": 0.02406630000041332,
+          "golden": "G2",
+          "logical_cpu_count": 16,
+          "machine": "AMD64",
+          "platform": "Windows-11-10.0.26300-SP0",
+          "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+          "run_id": "run-20261022T095153-59303e639a",
+          "source_hash": "3c6f0f976a63823cde4a6d16cf73cb9177cf3f80d26be74ca778efc90203ada6"
+        },
+        {
+          "command": "analyze",
+          "config_hash": "69d142851987765d0632442cbbd81ac62ff25b5b16a0f379ef76b719d8e4ab42",
+          "duration_seconds": 0.026018899996415712,
+          "golden": "G3",
+          "logical_cpu_count": 16,
+          "machine": "AMD64",
+          "platform": "Windows-11-10.0.26300-SP0",
+          "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+          "run_id": "run-20261022T095153-8279bd2d76",
+          "source_hash": "3c6f0f976a63823cde4a6d16cf73cb9177cf3f80d26be74ca778efc90203ada6"
+        },
+        {
+          "command": "analyze",
+          "config_hash": "5032b5c942e159bf3dbdc9bcafc1318292ecca75f79092231a77489b7f68782d",
+          "duration_seconds": 0.030576899996958673,
+          "golden": "G4",
+          "logical_cpu_count": 16,
+          "machine": "AMD64",
+          "platform": "Windows-11-10.0.26300-SP0",
+          "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+          "run_id": "run-20261022T095154-ba34555bf6",
+          "source_hash": "3c6f0f976a63823cde4a6d16cf73cb9177cf3f80d26be74ca778efc90203ada6"
+        },
+        {
+          "branch_candidates": 432,
+          "command": "equilibria",
+          "config_hash": "bda5c8793d24f3d2d32fce51383b89a04313577e42cfffb5280e99ba5afbdf96",
+          "duration_seconds": 4.1318638999946415,
+          "full_equilibria": 100,
+          "logical_cpu_count": 16,
+          "machine": "AMD64",
+          "platform": "Windows-11-10.0.26300-SP0",
+          "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+          "run_id": "run-20261022T094731-afcc8d207a",
+          "source_hash": "00e30fe36b4bf2ab134ca51f712c1a3e1121c5ec45de2d9056fa268d46ec57b8"
+        }
+      ],
+      "requirement": "Measured analyze and exhaustive pure-search benchmarks",
+      "status": "pass"
+    }
+  ],
+  "claims_production_or_user_study": false,
+  "gates": {
+    "GATE-0": true,
+    "GATE-1": true,
+    "GATE-2": true,
+    "GATE-3": true,
+    "GATE-4": true,
+    "GATE-5": true
+  },
+  "mutation_run": "results\\mutations-release-01",
+  "status": "passed"
+}

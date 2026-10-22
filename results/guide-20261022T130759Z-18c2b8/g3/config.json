@@ -1,0 +1,17 @@
+{
+  "a": "9/10",
+  "b": "3/4",
+  "costs": [
+    "1/20",
+    "1/20",
+    "1/20"
+  ],
+  "f": "0",
+  "fixed_reward": "2",
+  "lambda": "1",
+  "model_version": "ceav-m1-v1.0",
+  "operating_cost": "0",
+  "payout_value": "1",
+  "pi": "1/2",
+  "reward_budget": "6"
+}

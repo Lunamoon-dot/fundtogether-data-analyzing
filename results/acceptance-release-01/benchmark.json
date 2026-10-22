@@ -1,0 +1,66 @@
+{
+  "runs": [
+    {
+      "command": "analyze",
+      "config_hash": "bda5c8793d24f3d2d32fce51383b89a04313577e42cfffb5280e99ba5afbdf96",
+      "duration_seconds": 0.03245980000065174,
+      "golden": "G1",
+      "logical_cpu_count": 16,
+      "machine": "AMD64",
+      "platform": "Windows-11-10.0.26300-SP0",
+      "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+      "run_id": "run-20261022T095152-f23f2bbbb1",
+      "source_hash": "3c6f0f976a63823cde4a6d16cf73cb9177cf3f80d26be74ca778efc90203ada6"
+    },
+    {
+      "command": "analyze",
+      "config_hash": "bda5c8793d24f3d2d32fce51383b89a04313577e42cfffb5280e99ba5afbdf96",
+      "duration_seconds": 0.02406630000041332,
+      "golden": "G2",
+      "logical_cpu_count": 16,
+      "machine": "AMD64",
+      "platform": "Windows-11-10.0.26300-SP0",
+      "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+      "run_id": "run-20261022T095153-59303e639a",
+      "source_hash": "3c6f0f976a63823cde4a6d16cf73cb9177cf3f80d26be74ca778efc90203ada6"
+    },
+    {
+      "command": "analyze",
+      "config_hash": "69d142851987765d0632442cbbd81ac62ff25b5b16a0f379ef76b719d8e4ab42",
+      "duration_seconds": 0.026018899996415712,
+      "golden": "G3",
+      "logical_cpu_count": 16,
+      "machine": "AMD64",
+      "platform": "Windows-11-10.0.26300-SP0",
+      "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+      "run_id": "run-20261022T095153-8279bd2d76",
+      "source_hash": "3c6f0f976a63823cde4a6d16cf73cb9177cf3f80d26be74ca778efc90203ada6"
+    },
+    {
+      "command": "analyze",
+      "config_hash": "5032b5c942e159bf3dbdc9bcafc1318292ecca75f79092231a77489b7f68782d",
+      "duration_seconds": 0.030576899996958673,
+      "golden": "G4",
+      "logical_cpu_count": 16,
+      "machine": "AMD64",
+      "platform": "Windows-11-10.0.26300-SP0",
+      "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+      "run_id": "run-20261022T095154-ba34555bf6",
+      "source_hash": "3c6f0f976a63823cde4a6d16cf73cb9177cf3f80d26be74ca778efc90203ada6"
+    },
+    {
+      "branch_candidates": 432,
+      "command": "equilibria",
+      "config_hash": "bda5c8793d24f3d2d32fce51383b89a04313577e42cfffb5280e99ba5afbdf96",
+      "duration_seconds": 4.1318638999946415,
+      "full_equilibria": 100,
+      "logical_cpu_count": 16,
+      "machine": "AMD64",
+      "platform": "Windows-11-10.0.26300-SP0",
+      "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+      "run_id": "run-20261022T094731-afcc8d207a",
+      "source_hash": "00e30fe36b4bf2ab134ca51f712c1a3e1121c5ec45de2d9056fa268d46ec57b8"
+    }
+  ],
+  "timed_scope": "engine and artifact generation, excluding input/source pinning"
+}

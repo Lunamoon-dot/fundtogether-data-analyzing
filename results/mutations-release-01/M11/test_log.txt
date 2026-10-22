@@ -1,0 +1,17 @@
+test_T06_fixed_constant_and_zero_costs (tests.test_core.CoreTests.test_T06_fixed_constant_and_zero_costs) ... FAIL
+
+======================================================================
+FAIL: test_T06_fixed_constant_and_zero_costs (tests.test_core.CoreTests.test_T06_fixed_constant_and_zero_costs)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\dell\Desktop\fundtogether_data_analyzing\results\mutations-release-01\M11\workspace\tests\test_core.py", line 109, in test_T06_fixed_constant_and_zero_costs
+    self.assertEqual(result["prediction_semantics"], "arbitrary_reachable_predictions")
+AssertionError: 'unique_on_reachable_observations' != 'arbitrary_reachable_predictions'
+- unique_on_reachable_observations
++ arbitrary_reachable_predictions
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.011s
+
+FAILED (failures=1)

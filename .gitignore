@@ -1,0 +1,35 @@
+# Python caches and local tooling state
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.playwright-cli/
+
+# Generated runs are immutable local evidence. Keep only the curated Version 1
+# release evidence referenced by README, IMPLEMENTATION_STATUS, and the guide.
+results/*
+!results/acceptance-release-01/
+!results/acceptance-release-01/**
+!results/run-20261022T095215-bfe5abfabb/
+!results/run-20261022T095215-bfe5abfabb/**
+!results/mutations-release-01/
+!results/mutations-release-01/**
+!results/browser-B01-release-01/
+!results/browser-B01-release-01/**
+!results/browser-B02-release-01/
+!results/browser-B02-release-01/**
+!results/browser-B03-release-02/
+!results/browser-B03-release-02/**
+!results/browser-B04-release-01/
+!results/browser-B04-release-01/**
+!results/browser-B05-release-01/
+!results/browser-B05-release-01/**
+!results/browser-B06-release-01/
+!results/browser-B06-release-01/**
+!results/browser-B07-release-01/
+!results/browser-B07-release-01/**
+!results/browser-B08-release-01/
+!results/browser-B08-release-01/**
+!results/browser-B09-release-01/
+!results/browser-B09-release-01/**
+!results/guide-20261022T130759Z-18c2b8/
+!results/guide-20261022T130759Z-18c2b8/**

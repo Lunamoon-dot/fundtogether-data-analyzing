@@ -1,0 +1,22 @@
+--- ceav_m1/best_response.py
++++ ceav_m1/best_response.py
+@@ -46,7 +46,7 @@
+                                  "score_optimal_reports": reports})
+         score = information + prediction
+         base_reward = config.fixed_reward if mechanism == "fixed" else config.f + config.multiplier * score
+-        utility = base_reward - (config.costs[judge] if effort == "H" else F(0))
++        utility = base_reward - (config.costs[0] if effort == "H" else F(0))
+         maps = ["".join(map(str, rs)) for rs in product(*(o["optimal_reports"] for o in observations))]
+         options[effort] = {"information_score": information, "prediction_score": prediction, "score": score,
+                            "utility": utility, "observations": observations,
+--- ceav_m1/evaluate.py
++++ ceav_m1/evaluate.py
+@@ -29,7 +29,7 @@
+             score = score_judge(reports, predictions, i)
+             action = candidate.profile.branches[state.z][i]
+             paid = reward(score["total_score"], mechanism, config)
+-            cost = config.costs[i] if action[0] == "H" else F(0)
++            cost = config.costs[0] if action[0] == "H" else F(0)
+             values = {"score": score["total_score"], "reward": paid, "effort_cost": cost, "utility": paid - cost}
+             for key, value in values.items():
+                 totals[i][key] += state.probability * value

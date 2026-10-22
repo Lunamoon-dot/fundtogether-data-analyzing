@@ -1,0 +1,18 @@
+test_T05_predictions_and_exact_loss (tests.test_core.CoreTests.test_T05_predictions_and_exact_loss) ... FAIL
+
+======================================================================
+FAIL: test_T05_predictions_and_exact_loss (tests.test_core.CoreTests.test_T05_predictions_and_exact_loss)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\dell\Desktop\fundtogether_data_analyzing\results\mutations-release-01\M08\workspace\tests\test_core.py", line 89, in test_T05_predictions_and_exact_loss
+    self.assertEqual({p for table in candidate.predictions for _, p in table}, {F(name == "all_pass")})
+AssertionError: Items in the first set but not the second:
+Fraction(7, 10)
+Fraction(3, 10)
+Items in the second set but not the first:
+Fraction(1, 1)
+
+----------------------------------------------------------------------
+Ran 1 test in 0.012s
+
+FAILED (failures=1)

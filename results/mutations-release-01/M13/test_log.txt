@@ -1,0 +1,14 @@
+test_T29_runner_actual_failure_and_missing_ids (tests.test_io.IOTests.test_T29_runner_actual_failure_and_missing_ids) ... FAIL
+
+======================================================================
+FAIL: test_T29_runner_actual_failure_and_missing_ids (tests.test_io.IOTests.test_T29_runner_actual_failure_and_missing_ids)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\dell\Desktop\fundtogether_data_analyzing\results\mutations-release-01\M13\workspace\tests\test_io.py", line 166, in test_T29_runner_actual_failure_and_missing_ids
+    self.assertEqual(result["counts"]["error"], 1)
+AssertionError: 0 != 1
+
+----------------------------------------------------------------------
+Ran 1 test in 0.423s
+
+FAILED (failures=1)

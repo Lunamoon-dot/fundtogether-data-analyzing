@@ -1,0 +1,305 @@
+{
+  "arithmetic": "rational_exact",
+  "branch_masses": [
+    {
+      "decimal": 0.5,
+      "exact": "1/2"
+    },
+    {
+      "decimal": 0.5,
+      "exact": "1/2"
+    }
+  ],
+  "claims_equilibrium_selection": false,
+  "claims_mixed_equilibrium_coverage": false,
+  "config": {
+    "a": "9/10",
+    "b": "3/4",
+    "costs": [
+      "1/20",
+      "1/20",
+      "1/20"
+    ],
+    "f": "0",
+    "fixed_reward": "2",
+    "lambda": "1",
+    "model_version": "ceav-m1-v1.0",
+    "operating_cost": "0",
+    "payout_value": "1",
+    "pi": "1/2",
+    "reward_budget": "6"
+  },
+  "effort_timing": "after_public_signal",
+  "equilibrium_concept": "pure_strategy_nash_in_reduced_normal_form",
+  "equilibrium_status": "not_equilibrium",
+  "judges": [
+    {
+      "effort_cost": {
+        "decimal": 0.05,
+        "exact": "1/20"
+      },
+      "reward": {
+        "decimal": 1.5199617346938776,
+        "exact": "23833/15680"
+      },
+      "score": {
+        "decimal": 1.5199617346938776,
+        "exact": "23833/15680"
+      },
+      "utility": {
+        "decimal": 1.4699617346938776,
+        "exact": "23049/15680"
+      }
+    },
+    {
+      "effort_cost": {
+        "decimal": 0.05,
+        "exact": "1/20"
+      },
+      "reward": {
+        "decimal": 1.5199617346938776,
+        "exact": "23833/15680"
+      },
+      "score": {
+        "decimal": 1.5199617346938776,
+        "exact": "23833/15680"
+      },
+      "utility": {
+        "decimal": 1.4699617346938776,
+        "exact": "23049/15680"
+      }
+    },
+    {
+      "effort_cost": {
+        "decimal": 0.05,
+        "exact": "1/20"
+      },
+      "reward": {
+        "decimal": 1.5199617346938776,
+        "exact": "23833/15680"
+      },
+      "score": {
+        "decimal": 1.5199617346938776,
+        "exact": "23833/15680"
+      },
+      "utility": {
+        "decimal": 1.4699617346938776,
+        "exact": "23049/15680"
+      }
+    }
+  ],
+  "max_regret": {
+    "decimal": 0.02003826530612245,
+    "exact": "1571/78400"
+  },
+  "mechanism": "rbts",
+  "metrics": {
+    "accuracy": {
+      "decimal": 0.84375,
+      "exact": "27/32"
+    },
+    "cash_review_cost": {
+      "decimal": 4.559885204081633,
+      "exact": "71499/15680"
+    },
+    "expected_effort_cost": {
+      "decimal": 0.15,
+      "exact": "3/20"
+    },
+    "expected_judge_utility": [
+      {
+        "decimal": 1.4699617346938776,
+        "exact": "23049/15680"
+      },
+      {
+        "decimal": 1.4699617346938776,
+        "exact": "23049/15680"
+      },
+      {
+        "decimal": 1.4699617346938776,
+        "exact": "23049/15680"
+      }
+    ],
+    "expected_payout": {
+      "decimal": 0.5,
+      "exact": "1/2"
+    },
+    "expected_reward_total": {
+      "decimal": 4.559885204081633,
+      "exact": "71499/15680"
+    },
+    "false_approval_rate": {
+      "decimal": 0.15625,
+      "exact": "5/32"
+    },
+    "false_rejection_rate": {
+      "decimal": 0.15625,
+      "exact": "5/32"
+    },
+    "operating_cost": {
+      "decimal": 0.0,
+      "exact": "0"
+    },
+    "wrong_payout_probability": {
+      "decimal": 0.078125,
+      "exact": "5/64"
+    },
+    "wrong_payout_value": {
+      "decimal": 0.078125,
+      "exact": "5/64"
+    }
+  },
+  "peer_tables_frozen_on_deviation": true,
+  "prediction_semantics": "unique_on_reachable_observations",
+  "predictions": [
+    [
+      {
+        "observation": [
+          0,
+          0
+        ],
+        "prediction": {
+          "decimal": 0.26785714285714285,
+          "exact": "15/56"
+        }
+      },
+      {
+        "observation": [
+          0,
+          1
+        ],
+        "prediction": {
+          "decimal": 0.375,
+          "exact": "3/8"
+        }
+      },
+      {
+        "observation": [
+          1,
+          0
+        ],
+        "prediction": {
+          "decimal": 0.625,
+          "exact": "5/8"
+        }
+      },
+      {
+        "observation": [
+          1,
+          1
+        ],
+        "prediction": {
+          "decimal": 0.7321428571428571,
+          "exact": "41/56"
+        }
+      }
+    ],
+    [
+      {
+        "observation": [
+          0,
+          0
+        ],
+        "prediction": {
+          "decimal": 0.26785714285714285,
+          "exact": "15/56"
+        }
+      },
+      {
+        "observation": [
+          0,
+          1
+        ],
+        "prediction": {
+          "decimal": 0.375,
+          "exact": "3/8"
+        }
+      },
+      {
+        "observation": [
+          1,
+          0
+        ],
+        "prediction": {
+          "decimal": 0.625,
+          "exact": "5/8"
+        }
+      },
+      {
+        "observation": [
+          1,
+          1
+        ],
+        "prediction": {
+          "decimal": 0.7321428571428571,
+          "exact": "41/56"
+        }
+      }
+    ],
+    [
+      {
+        "observation": [
+          0,
+          0
+        ],
+        "prediction": {
+          "decimal": 0.26785714285714285,
+          "exact": "15/56"
+        }
+      },
+      {
+        "observation": [
+          0,
+          1
+        ],
+        "prediction": {
+          "decimal": 0.375,
+          "exact": "3/8"
+        }
+      },
+      {
+        "observation": [
+          1,
+          0
+        ],
+        "prediction": {
+          "decimal": 0.625,
+          "exact": "5/8"
+        }
+      },
+      {
+        "observation": [
+          1,
+          1
+        ],
+        "prediction": {
+          "decimal": 0.7321428571428571,
+          "exact": "41/56"
+        }
+      }
+    ]
+  ],
+  "profile": {
+    "0": [
+      "H01",
+      "H01",
+      "H01"
+    ],
+    "1": [
+      "H01",
+      "H01",
+      "H01"
+    ]
+  },
+  "reward_budget": {
+    "decimal": 6.0,
+    "exact": "6"
+  },
+  "reward_cap": {
+    "decimal": 6.0,
+    "exact": "6"
+  },
+  "scoring_rule": "rbts_eq8",
+  "status": "succeeded",
+  "strategy_scope": "pure_effort_report_with_continuous_optimal_predictions"
+}

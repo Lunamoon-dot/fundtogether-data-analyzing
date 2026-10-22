@@ -1,0 +1,14 @@
+test_T12_peer_freeze_numeric_counterexample (tests.test_core.CoreTests.test_T12_peer_freeze_numeric_counterexample) ... FAIL
+
+======================================================================
+FAIL: test_T12_peer_freeze_numeric_counterexample (tests.test_core.CoreTests.test_T12_peer_freeze_numeric_counterexample)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\dell\Desktop\fundtogether_data_analyzing\results\mutations-release-01\M01\workspace\tests\test_core.py", line 185, in test_T12_peer_freeze_numeric_counterexample
+    self.assertEqual(result["low"]["score"], F(3611, 2500))
+AssertionError: Fraction(3461, 2500) != Fraction(3611, 2500)
+
+----------------------------------------------------------------------
+Ran 1 test in 0.020s
+
+FAILED (failures=1)

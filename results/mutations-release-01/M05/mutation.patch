@@ -1,0 +1,11 @@
+--- ceav_m1/scoring.py
++++ ceav_m1/scoring.py
+@@ -16,7 +16,7 @@
+         raise ValueError("Reports must be binary")
+     if any(not isinstance(p, F) or not 0 <= p <= 1 for p in predictions):
+         raise ValueError("Predictions must be rational and in [0,1]")
+-    j, k = (judge + 1) % 3, (judge + 2) % 3
++    j, k = (judge + 2) % 3, (judge + 1) % 3
+     p = predictions[j]
+     shadow = p + (2 * reports[judge] - 1) * min(p, 1 - p)
+     information = quadratic(shadow, reports[k])

@@ -1,0 +1,11 @@
+--- ceav_m1/evaluate.py
++++ ceav_m1/evaluate.py
+@@ -44,7 +44,7 @@
+         approvals += state.probability * decision
+     reward_total = sum(row["reward"] for row in totals)
+     effort_cost = sum(row["effort_cost"] for row in totals)
+-    metrics = {"accuracy": accuracy, "false_approval_rate": fp / (1 - config.pi), "false_rejection_rate": fn / config.pi,
++    metrics = {"accuracy": accuracy, "false_approval_rate": fp / config.pi, "false_rejection_rate": fn / config.pi,
+                "wrong_payout_probability": fp, "wrong_payout_value": config.payout_value * fp,
+                "expected_payout": config.payout_value * approvals, "expected_reward_total": reward_total,
+                "expected_effort_cost": effort_cost, "expected_judge_utility": [row["utility"] for row in totals],

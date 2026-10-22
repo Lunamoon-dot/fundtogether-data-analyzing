@@ -1,0 +1,14 @@
+test_T18_binary_and_cyclic_relabel (tests.test_search.SearchTests.test_T18_binary_and_cyclic_relabel) ... FAIL
+
+======================================================================
+FAIL: test_T18_binary_and_cyclic_relabel (tests.test_search.SearchTests.test_T18_binary_and_cyclic_relabel)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\dell\Desktop\fundtogether_data_analyzing\results\mutations-release-01\M10\workspace\tests\test_search.py", line 64, in test_T18_binary_and_cyclic_relabel
+    self.assertEqual(flipped["metrics"]["false_approval_rate"], original["metrics"]["false_rejection_rate"])
+AssertionError: Fraction(22, 25) != Fraction(11, 25)
+
+----------------------------------------------------------------------
+Ran 1 test in 2.452s
+
+FAILED (failures=1)

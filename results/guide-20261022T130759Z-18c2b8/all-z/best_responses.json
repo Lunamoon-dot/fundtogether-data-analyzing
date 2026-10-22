@@ -1,0 +1,1538 @@
+[
+  {
+    "best_efforts": [
+      "L"
+    ],
+    "best_utility": {
+      "decimal": 2.0,
+      "exact": "2"
+    },
+    "branch_probability": {
+      "decimal": 0.5,
+      "exact": "1/2"
+    },
+    "candidate": {
+      "effort_cost": {
+        "decimal": 0.0,
+        "exact": "0"
+      },
+      "reward": {
+        "decimal": 2.0,
+        "exact": "2"
+      },
+      "score": {
+        "decimal": 2.0,
+        "exact": "2"
+      },
+      "utility": {
+        "decimal": 2.0,
+        "exact": "2"
+      }
+    },
+    "candidate_action": "L0",
+    "delta_utility": {
+      "decimal": -0.05,
+      "exact": "-1/20"
+    },
+    "frozen_peer_tables": [
+      {
+        "judge": "B",
+        "table": [
+          {
+            "observation": [
+              0
+            ],
+            "prediction": {
+              "decimal": 0.0,
+              "exact": "0"
+            }
+          },
+          {
+            "observation": [
+              1
+            ],
+            "prediction": {
+              "decimal": 1.0,
+              "exact": "1"
+            }
+          }
+        ]
+      },
+      {
+        "judge": "C",
+        "table": [
+          {
+            "observation": [
+              0
+            ],
+            "prediction": {
+              "decimal": 0.0,
+              "exact": "0"
+            }
+          },
+          {
+            "observation": [
+              1
+            ],
+            "prediction": {
+              "decimal": 1.0,
+              "exact": "1"
+            }
+          }
+        ]
+      }
+    ],
+    "high": {
+      "information_score": {
+        "decimal": 1.0,
+        "exact": "1"
+      },
+      "observations": [
+        {
+          "information_by_report": [
+            {
+              "decimal": 1.0,
+              "exact": "1"
+            },
+            {
+              "decimal": 1.0,
+              "exact": "1"
+            }
+          ],
+          "observation": [
+            0,
+            0
+          ],
+          "optimal_prediction": {
+            "decimal": 0.0,
+            "exact": "0"
+          },
+          "optimal_prediction_score": {
+            "decimal": 1.0,
+            "exact": "1"
+          },
+          "optimal_reports": [
+            0,
+            1
+          ],
+          "probability_given_z": {
+            "decimal": 0.62,
+            "exact": "31/50"
+          },
+          "score_optimal_reports": [
+            0,
+            1
+          ]
+        },
+        {
+          "information_by_report": [
+            {
+              "decimal": 1.0,
+              "exact": "1"
+            },
+            {
+              "decimal": 1.0,
+              "exact": "1"
+            }
+          ],
+          "observation": [
+            0,
+            1
+          ],
+          "optimal_prediction": {
+            "decimal": 0.0,
+            "exact": "0"
+          },
+          "optimal_prediction_score": {
+            "decimal": 1.0,
+            "exact": "1"
+          },
+          "optimal_reports": [
+            0,
+            1
+          ],
+          "probability_given_z": {
+            "decimal": 0.38,
+            "exact": "19/50"
+          },
+          "score_optimal_reports": [
+            0,
+            1
+          ]
+        }
+      ],
+      "optimal_actions": [
+        "H00",
+        "H01",
+        "H10",
+        "H11"
+      ],
+      "prediction_score": {
+        "decimal": 1.0,
+        "exact": "1"
+      },
+      "score": {
+        "decimal": 2.0,
+        "exact": "2"
+      },
+      "utility": {
+        "decimal": 1.95,
+        "exact": "39/20"
+      }
+    },
+    "judge": "A",
+    "low": {
+      "information_score": {
+        "decimal": 1.0,
+        "exact": "1"
+      },
+      "observations": [
+        {
+          "information_by_report": [
+            {
+              "decimal": 1.0,
+              "exact": "1"
+            },
+            {
+              "decimal": 1.0,
+              "exact": "1"
+            }
+          ],
+          "observation": [
+            0
+          ],
+          "optimal_prediction": {
+            "decimal": 0.0,
+            "exact": "0"
+          },
+          "optimal_prediction_score": {
+            "decimal": 1.0,
+            "exact": "1"
+          },
+          "optimal_reports": [
+            0,
+            1
+          ],
+          "probability_given_z": {
+            "decimal": 1.0,
+            "exact": "1"
+          },
+          "score_optimal_reports": [
+            0,
+            1
+          ]
+        }
+      ],
+      "optimal_actions": [
+        "L0",
+        "L1"
+      ],
+      "prediction_score": {
+        "decimal": 1.0,
+        "exact": "1"
+      },
+      "score": {
+        "decimal": 2.0,
+        "exact": "2"
+      },
+      "utility": {
+        "decimal": 2.0,
+        "exact": "2"
+      }
+    },
+    "optimal_actions": [
+      "L0",
+      "L1"
+    ],
+    "prediction_optimum": "unique_on_reachable_observations",
+    "reference_judge": "B",
+    "regret": {
+      "decimal": 0.0,
+      "exact": "0"
+    },
+    "report_optimum": "listed_report_maps",
+    "scoring_peer_judge": "C",
+    "witness": null,
+    "z": 0
+  },
+  {
+    "best_efforts": [
+      "L"
+    ],
+    "best_utility": {
+      "decimal": 2.0,
+      "exact": "2"
+    },
+    "branch_probability": {
+      "decimal": 0.5,
+      "exact": "1/2"
+    },
+    "candidate": {
+      "effort_cost": {
+        "decimal": 0.0,
+        "exact": "0"
+      },
+      "reward": {
+        "decimal": 2.0,
+        "exact": "2"
+      },
+      "score": {
+        "decimal": 2.0,
+        "exact": "2"
+      },
+      "utility": {
+        "decimal": 2.0,
+        "exact": "2"
+      }
+    },
+    "candidate_action": "L1",
+    "delta_utility": {
+      "decimal": -0.05,
+      "exact": "-1/20"
+    },
+    "frozen_peer_tables": [
+      {
+        "judge": "B",
+        "table": [
+          {
+            "observation": [
+              0
+            ],
+            "prediction": {
+              "decimal": 0.0,
+              "exact": "0"
+            }
+          },
+          {
+            "observation": [
+              1
+            ],
+            "prediction": {
+              "decimal": 1.0,
+              "exact": "1"
+            }
+          }
+        ]
+      },
+      {
+        "judge": "C",
+        "table": [
+          {
+            "observation": [
+              0
+            ],
+            "prediction": {
+              "decimal": 0.0,
+              "exact": "0"
+            }
+          },
+          {
+            "observation": [
+              1
+            ],
+            "prediction": {
+              "decimal": 1.0,
+              "exact": "1"
+            }
+          }
+        ]
+      }
+    ],
+    "high": {
+      "information_score": {
+        "decimal": 1.0,
+        "exact": "1"
+      },
+      "observations": [
+        {
+          "information_by_report": [
+            {
+              "decimal": 1.0,
+              "exact": "1"
+            },
+            {
+              "decimal": 1.0,
+              "exact": "1"
+            }
+          ],
+          "observation": [
+            1,
+            0
+          ],
+          "optimal_prediction": {
+            "decimal": 1.0,
+            "exact": "1"
+          },
+          "optimal_prediction_score": {
+            "decimal": 1.0,
+            "exact": "1"
+          },
+          "optimal_reports": [
+            0,
+            1
+          ],
+          "probability_given_z": {
+            "decimal": 0.38,
+            "exact": "19/50"
+          },
+          "score_optimal_reports": [
+            0,
+            1
+          ]
+        },
+        {
+          "information_by_report": [
+            {
+              "decimal": 1.0,
+              "exact": "1"
+            },
+            {
+              "decimal": 1.0,
+              "exact": "1"
+            }
+          ],
+          "observation": [
+            1,
+            1
+          ],
+          "optimal_prediction": {
+            "decimal": 1.0,
+            "exact": "1"
+          },
+          "optimal_prediction_score": {
+            "decimal": 1.0,
+            "exact": "1"
+          },
+          "optimal_reports": [
+            0,
+            1
+          ],
+          "probability_given_z": {
+            "decimal": 0.62,
+            "exact": "31/50"
+          },
+          "score_optimal_reports": [
+            0,
+            1
+          ]
+        }
+      ],
+      "optimal_actions": [
+        "H00",
+        "H01",
+        "H10",
+        "H11"
+      ],
+      "prediction_score": {
+        "decimal": 1.0,
+        "exact": "1"
+      },
+      "score": {
+        "decimal": 2.0,
+        "exact": "2"
+      },
+      "utility": {
+        "decimal": 1.95,
+        "exact": "39/20"
+      }
+    },
+    "judge": "A",
+    "low": {
+      "information_score": {
+        "decimal": 1.0,
+        "exact": "1"
+      },
+      "observations": [
+        {
+          "information_by_report": [
+            {
+              "decimal": 1.0,
+              "exact": "1"
+            },
+            {
+              "decimal": 1.0,
+              "exact": "1"
+            }
+          ],
+          "observation": [
+            1
+          ],
+          "optimal_prediction": {
+            "decimal": 1.0,
+            "exact": "1"
+          },
+          "optimal_prediction_score": {
+            "decimal": 1.0,
+            "exact": "1"
+          },
+          "optimal_reports": [
+            0,
+            1
+          ],
+          "probability_given_z": {
+            "decimal": 1.0,
+            "exact": "1"
+          },
+          "score_optimal_reports": [
+            0,
+            1
+          ]
+        }
+      ],
+      "optimal_actions": [
+        "L0",
+        "L1"
+      ],
+      "prediction_score": {
+        "decimal": 1.0,
+        "exact": "1"
+      },
+      "score": {
+        "decimal": 2.0,
+        "exact": "2"
+      },
+      "utility": {
+        "decimal": 2.0,
+        "exact": "2"
+      }
+    },
+    "optimal_actions": [
+      "L0",
+      "L1"
+    ],
+    "prediction_optimum": "unique_on_reachable_observations",
+    "reference_judge": "B",
+    "regret": {
+      "decimal": 0.0,
+      "exact": "0"
+    },
+    "report_optimum": "listed_report_maps",
+    "scoring_peer_judge": "C",
+    "witness": null,
+    "z": 1
+  },
+  {
+    "best_efforts": [
+      "L"
+    ],
+    "best_utility": {
+      "decimal": 2.0,
+      "exact": "2"
+    },
+    "branch_probability": {
+      "decimal": 0.5,
+      "exact": "1/2"
+    },
+    "candidate": {
+      "effort_cost": {
+        "decimal": 0.0,
+        "exact": "0"
+      },
+      "reward": {
+        "decimal": 2.0,
+        "exact": "2"
+      },
+      "score": {
+        "decimal": 2.0,
+        "exact": "2"
+      },
+      "utility": {
+        "decimal": 2.0,
+        "exact": "2"
+      }
+    },
+    "candidate_action": "L0",
+    "delta_utility": {
+      "decimal": -0.05,
+      "exact": "-1/20"
+    },
+    "frozen_peer_tables": [
+      {
+        "judge": "C",
+        "table": [
+          {
+            "observation": [
+              0
+            ],
+            "prediction": {
+              "decimal": 0.0,
+              "exact": "0"
+            }
+          },
+          {
+            "observation": [
+              1
+            ],
+            "prediction": {
+              "decimal": 1.0,
+              "exact": "1"
+            }
+          }
+        ]
+      },
+      {
+        "judge": "A",
+        "table": [
+          {
+            "observation": [
+              0
+            ],
+            "prediction": {
+              "decimal": 0.0,
+              "exact": "0"
+            }
+          },
+          {
+            "observation": [
+              1
+            ],
+            "prediction": {
+              "decimal": 1.0,
+              "exact": "1"
+            }
+          }
+        ]
+      }
+    ],
+    "high": {
+      "information_score": {
+        "decimal": 1.0,
+        "exact": "1"
+      },
+      "observations": [
+        {
+          "information_by_report": [
+            {
+              "decimal": 1.0,
+              "exact": "1"
+            },
+            {
+              "decimal": 1.0,
+              "exact": "1"
+            }
+          ],
+          "observation": [
+            0,
+            0
+          ],
+          "optimal_prediction": {
+            "decimal": 0.0,
+            "exact": "0"
+          },
+          "optimal_prediction_score": {
+            "decimal": 1.0,
+            "exact": "1"
+          },
+          "optimal_reports": [
+            0,
+            1
+          ],
+          "probability_given_z": {
+            "decimal": 0.62,
+            "exact": "31/50"
+          },
+          "score_optimal_reports": [
+            0,
+            1
+          ]
+        },
+        {
+          "information_by_report": [
+            {
+              "decimal": 1.0,
+              "exact": "1"
+            },
+            {
+              "decimal": 1.0,
+              "exact": "1"
+            }
+          ],
+          "observation": [
+            0,
+            1
+          ],
+          "optimal_prediction": {
+            "decimal": 0.0,
+            "exact": "0"
+          },
+          "optimal_prediction_score": {
+            "decimal": 1.0,
+            "exact": "1"
+          },
+          "optimal_reports": [
+            0,
+            1
+          ],
+          "probability_given_z": {
+            "decimal": 0.38,
+            "exact": "19/50"
+          },
+          "score_optimal_reports": [
+            0,
+            1
+          ]
+        }
+      ],
+      "optimal_actions": [
+        "H00",
+        "H01",
+        "H10",
+        "H11"
+      ],
+      "prediction_score": {
+        "decimal": 1.0,
+        "exact": "1"
+      },
+      "score": {
+        "decimal": 2.0,
+        "exact": "2"
+      },
+      "utility": {
+        "decimal": 1.95,
+        "exact": "39/20"
+      }
+    },
+    "judge": "B",
+    "low": {
+      "information_score": {
+        "decimal": 1.0,
+        "exact": "1"
+      },
+      "observations": [
+        {
+          "information_by_report": [
+            {
+              "decimal": 1.0,
+              "exact": "1"
+            },
+            {
+              "decimal": 1.0,
+              "exact": "1"
+            }
+          ],
+          "observation": [
+            0
+          ],
+          "optimal_prediction": {
+            "decimal": 0.0,
+            "exact": "0"
+          },
+          "optimal_prediction_score": {
+            "decimal": 1.0,
+            "exact": "1"
+          },
+          "optimal_reports": [
+            0,
+            1
+          ],
+          "probability_given_z": {
+            "decimal": 1.0,
+            "exact": "1"
+          },
+          "score_optimal_reports": [
+            0,
+            1
+          ]
+        }
+      ],
+      "optimal_actions": [
+        "L0",
+        "L1"
+      ],
+      "prediction_score": {
+        "decimal": 1.0,
+        "exact": "1"
+      },
+      "score": {
+        "decimal": 2.0,
+        "exact": "2"
+      },
+      "utility": {
+        "decimal": 2.0,
+        "exact": "2"
+      }
+    },
+    "optimal_actions": [
+      "L0",
+      "L1"
+    ],
+    "prediction_optimum": "unique_on_reachable_observations",
+    "reference_judge": "C",
+    "regret": {
+      "decimal": 0.0,
+      "exact": "0"
+    },
+    "report_optimum": "listed_report_maps",
+    "scoring_peer_judge": "A",
+    "witness": null,
+    "z": 0
+  },
+  {
+    "best_efforts": [
+      "L"
+    ],
+    "best_utility": {
+      "decimal": 2.0,
+      "exact": "2"
+    },
+    "branch_probability": {
+      "decimal": 0.5,
+      "exact": "1/2"
+    },
+    "candidate": {
+      "effort_cost": {
+        "decimal": 0.0,
+        "exact": "0"
+      },
+      "reward": {
+        "decimal": 2.0,
+        "exact": "2"
+      },
+      "score": {
+        "decimal": 2.0,
+        "exact": "2"
+      },
+      "utility": {
+        "decimal": 2.0,
+        "exact": "2"
+      }
+    },
+    "candidate_action": "L1",
+    "delta_utility": {
+      "decimal": -0.05,
+      "exact": "-1/20"
+    },
+    "frozen_peer_tables": [
+      {
+        "judge": "C",
+        "table": [
+          {
+            "observation": [
+              0
+            ],
+            "prediction": {
+              "decimal": 0.0,
+              "exact": "0"
+            }
+          },
+          {
+            "observation": [
+              1
+            ],
+            "prediction": {
+              "decimal": 1.0,
+              "exact": "1"
+            }
+          }
+        ]
+      },
+      {
+        "judge": "A",
+        "table": [
+          {
+            "observation": [
+              0
+            ],
+            "prediction": {
+              "decimal": 0.0,
+              "exact": "0"
+            }
+          },
+          {
+            "observation": [
+              1
+            ],
+            "prediction": {
+              "decimal": 1.0,
+              "exact": "1"
+            }
+          }
+        ]
+      }
+    ],
+    "high": {
+      "information_score": {
+        "decimal": 1.0,
+        "exact": "1"
+      },
+      "observations": [
+        {
+          "information_by_report": [
+            {
+              "decimal": 1.0,
+              "exact": "1"
+            },
+            {
+              "decimal": 1.0,
+              "exact": "1"
+            }
+          ],
+          "observation": [
+            1,
+            0
+          ],
+          "optimal_prediction": {
+            "decimal": 1.0,
+            "exact": "1"
+          },
+          "optimal_prediction_score": {
+            "decimal": 1.0,
+            "exact": "1"
+          },
+          "optimal_reports": [
+            0,
+            1
+          ],
+          "probability_given_z": {
+            "decimal": 0.38,
+            "exact": "19/50"
+          },
+          "score_optimal_reports": [
+            0,
+            1
+          ]
+        },
+        {
+          "information_by_report": [
+            {
+              "decimal": 1.0,
+              "exact": "1"
+            },
+            {
+              "decimal": 1.0,
+              "exact": "1"
+            }
+          ],
+          "observation": [
+            1,
+            1
+          ],
+          "optimal_prediction": {
+            "decimal": 1.0,
+            "exact": "1"
+          },
+          "optimal_prediction_score": {
+            "decimal": 1.0,
+            "exact": "1"
+          },
+          "optimal_reports": [
+            0,
+            1
+          ],
+          "probability_given_z": {
+            "decimal": 0.62,
+            "exact": "31/50"
+          },
+          "score_optimal_reports": [
+            0,
+            1
+          ]
+        }
+      ],
+      "optimal_actions": [
+        "H00",
+        "H01",
+        "H10",
+        "H11"
+      ],
+      "prediction_score": {
+        "decimal": 1.0,
+        "exact": "1"
+      },
+      "score": {
+        "decimal": 2.0,
+        "exact": "2"
+      },
+      "utility": {
+        "decimal": 1.95,
+        "exact": "39/20"
+      }
+    },
+    "judge": "B",
+    "low": {
+      "information_score": {
+        "decimal": 1.0,
+        "exact": "1"
+      },
+      "observations": [
+        {
+          "information_by_report": [
+            {
+              "decimal": 1.0,
+              "exact": "1"
+            },
+            {
+              "decimal": 1.0,
+              "exact": "1"
+            }
+          ],
+          "observation": [
+            1
+          ],
+          "optimal_prediction": {
+            "decimal": 1.0,
+            "exact": "1"
+          },
+          "optimal_prediction_score": {
+            "decimal": 1.0,
+            "exact": "1"
+          },
+          "optimal_reports": [
+            0,
+            1
+          ],
+          "probability_given_z": {
+            "decimal": 1.0,
+            "exact": "1"
+          },
+          "score_optimal_reports": [
+            0,
+            1
+          ]
+        }
+      ],
+      "optimal_actions": [
+        "L0",
+        "L1"
+      ],
+      "prediction_score": {
+        "decimal": 1.0,
+        "exact": "1"
+      },
+      "score": {
+        "decimal": 2.0,
+        "exact": "2"
+      },
+      "utility": {
+        "decimal": 2.0,
+        "exact": "2"
+      }
+    },
+    "optimal_actions": [
+      "L0",
+      "L1"
+    ],
+    "prediction_optimum": "unique_on_reachable_observations",
+    "reference_judge": "C",
+    "regret": {
+      "decimal": 0.0,
+      "exact": "0"
+    },
+    "report_optimum": "listed_report_maps",
+    "scoring_peer_judge": "A",
+    "witness": null,
+    "z": 1
+  },
+  {
+    "best_efforts": [
+      "L"
+    ],
+    "best_utility": {
+      "decimal": 2.0,
+      "exact": "2"
+    },
+    "branch_probability": {
+      "decimal": 0.5,
+      "exact": "1/2"
+    },
+    "candidate": {
+      "effort_cost": {
+        "decimal": 0.0,
+        "exact": "0"
+      },
+      "reward": {
+        "decimal": 2.0,
+        "exact": "2"
+      },
+      "score": {
+        "decimal": 2.0,
+        "exact": "2"
+      },
+      "utility": {
+        "decimal": 2.0,
+        "exact": "2"
+      }
+    },
+    "candidate_action": "L0",
+    "delta_utility": {
+      "decimal": -0.05,
+      "exact": "-1/20"
+    },
+    "frozen_peer_tables": [
+      {
+        "judge": "A",
+        "table": [
+          {
+            "observation": [
+              0
+            ],
+            "prediction": {
+              "decimal": 0.0,
+              "exact": "0"
+            }
+          },
+          {
+            "observation": [
+              1
+            ],
+            "prediction": {
+              "decimal": 1.0,
+              "exact": "1"
+            }
+          }
+        ]
+      },
+      {
+        "judge": "B",
+        "table": [
+          {
+            "observation": [
+              0
+            ],
+            "prediction": {
+              "decimal": 0.0,
+              "exact": "0"
+            }
+          },
+          {
+            "observation": [
+              1
+            ],
+            "prediction": {
+              "decimal": 1.0,
+              "exact": "1"
+            }
+          }
+        ]
+      }
+    ],
+    "high": {
+      "information_score": {
+        "decimal": 1.0,
+        "exact": "1"
+      },
+      "observations": [
+        {
+          "information_by_report": [
+            {
+              "decimal": 1.0,
+              "exact": "1"
+            },
+            {
+              "decimal": 1.0,
+              "exact": "1"
+            }
+          ],
+          "observation": [
+            0,
+            0
+          ],
+          "optimal_prediction": {
+            "decimal": 0.0,
+            "exact": "0"
+          },
+          "optimal_prediction_score": {
+            "decimal": 1.0,
+            "exact": "1"
+          },
+          "optimal_reports": [
+            0,
+            1
+          ],
+          "probability_given_z": {
+            "decimal": 0.62,
+            "exact": "31/50"
+          },
+          "score_optimal_reports": [
+            0,
+            1
+          ]
+        },
+        {
+          "information_by_report": [
+            {
+              "decimal": 1.0,
+              "exact": "1"
+            },
+            {
+              "decimal": 1.0,
+              "exact": "1"
+            }
+          ],
+          "observation": [
+            0,
+            1
+          ],
+          "optimal_prediction": {
+            "decimal": 0.0,
+            "exact": "0"
+          },
+          "optimal_prediction_score": {
+            "decimal": 1.0,
+            "exact": "1"
+          },
+          "optimal_reports": [
+            0,
+            1
+          ],
+          "probability_given_z": {
+            "decimal": 0.38,
+            "exact": "19/50"
+          },
+          "score_optimal_reports": [
+            0,
+            1
+          ]
+        }
+      ],
+      "optimal_actions": [
+        "H00",
+        "H01",
+        "H10",
+        "H11"
+      ],
+      "prediction_score": {
+        "decimal": 1.0,
+        "exact": "1"
+      },
+      "score": {
+        "decimal": 2.0,
+        "exact": "2"
+      },
+      "utility": {
+        "decimal": 1.95,
+        "exact": "39/20"
+      }
+    },
+    "judge": "C",
+    "low": {
+      "information_score": {
+        "decimal": 1.0,
+        "exact": "1"
+      },
+      "observations": [
+        {
+          "information_by_report": [
+            {
+              "decimal": 1.0,
+              "exact": "1"
+            },
+            {
+              "decimal": 1.0,
+              "exact": "1"
+            }
+          ],
+          "observation": [
+            0
+          ],
+          "optimal_prediction": {
+            "decimal": 0.0,
+            "exact": "0"
+          },
+          "optimal_prediction_score": {
+            "decimal": 1.0,
+            "exact": "1"
+          },
+          "optimal_reports": [
+            0,
+            1
+          ],
+          "probability_given_z": {
+            "decimal": 1.0,
+            "exact": "1"
+          },
+          "score_optimal_reports": [
+            0,
+            1
+          ]
+        }
+      ],
+      "optimal_actions": [
+        "L0",
+        "L1"
+      ],
+      "prediction_score": {
+        "decimal": 1.0,
+        "exact": "1"
+      },
+      "score": {
+        "decimal": 2.0,
+        "exact": "2"
+      },
+      "utility": {
+        "decimal": 2.0,
+        "exact": "2"
+      }
+    },
+    "optimal_actions": [
+      "L0",
+      "L1"
+    ],
+    "prediction_optimum": "unique_on_reachable_observations",
+    "reference_judge": "A",
+    "regret": {
+      "decimal": 0.0,
+      "exact": "0"
+    },
+    "report_optimum": "listed_report_maps",
+    "scoring_peer_judge": "B",
+    "witness": null,
+    "z": 0
+  },
+  {
+    "best_efforts": [
+      "L"
+    ],
+    "best_utility": {
+      "decimal": 2.0,
+      "exact": "2"
+    },
+    "branch_probability": {
+      "decimal": 0.5,
+      "exact": "1/2"
+    },
+    "candidate": {
+      "effort_cost": {
+        "decimal": 0.0,
+        "exact": "0"
+      },
+      "reward": {
+        "decimal": 2.0,
+        "exact": "2"
+      },
+      "score": {
+        "decimal": 2.0,
+        "exact": "2"
+      },
+      "utility": {
+        "decimal": 2.0,
+        "exact": "2"
+      }
+    },
+    "candidate_action": "L1",
+    "delta_utility": {
+      "decimal": -0.05,
+      "exact": "-1/20"
+    },
+    "frozen_peer_tables": [
+      {
+        "judge": "A",
+        "table": [
+          {
+            "observation": [
+              0
+            ],
+            "prediction": {
+              "decimal": 0.0,
+              "exact": "0"
+            }
+          },
+          {
+            "observation": [
+              1
+            ],
+            "prediction": {
+              "decimal": 1.0,
+              "exact": "1"
+            }
+          }
+        ]
+      },
+      {
+        "judge": "B",
+        "table": [
+          {
+            "observation": [
+              0
+            ],
+            "prediction": {
+              "decimal": 0.0,
+              "exact": "0"
+            }
+          },
+          {
+            "observation": [
+              1
+            ],
+            "prediction": {
+              "decimal": 1.0,
+              "exact": "1"
+            }
+          }
+        ]
+      }
+    ],
+    "high": {
+      "information_score": {
+        "decimal": 1.0,
+        "exact": "1"
+      },
+      "observations": [
+        {
+          "information_by_report": [
+            {
+              "decimal": 1.0,
+              "exact": "1"
+            },
+            {
+              "decimal": 1.0,
+              "exact": "1"
+            }
+          ],
+          "observation": [
+            1,
+            0
+          ],
+          "optimal_prediction": {
+            "decimal": 1.0,
+            "exact": "1"
+          },
+          "optimal_prediction_score": {
+            "decimal": 1.0,
+            "exact": "1"
+          },
+          "optimal_reports": [
+            0,
+            1
+          ],
+          "probability_given_z": {
+            "decimal": 0.38,
+            "exact": "19/50"
+          },
+          "score_optimal_reports": [
+            0,
+            1
+          ]
+        },
+        {
+          "information_by_report": [
+            {
+              "decimal": 1.0,
+              "exact": "1"
+            },
+            {
+              "decimal": 1.0,
+              "exact": "1"
+            }
+          ],
+          "observation": [
+            1,
+            1
+          ],
+          "optimal_prediction": {
+            "decimal": 1.0,
+            "exact": "1"
+          },
+          "optimal_prediction_score": {
+            "decimal": 1.0,
+            "exact": "1"
+          },
+          "optimal_reports": [
+            0,
+            1
+          ],
+          "probability_given_z": {
+            "decimal": 0.62,
+            "exact": "31/50"
+          },
+          "score_optimal_reports": [
+            0,
+            1
+          ]
+        }
+      ],
+      "optimal_actions": [
+        "H00",
+        "H01",
+        "H10",
+        "H11"
+      ],
+      "prediction_score": {
+        "decimal": 1.0,
+        "exact": "1"
+      },
+      "score": {
+        "decimal": 2.0,
+        "exact": "2"
+      },
+      "utility": {
+        "decimal": 1.95,
+        "exact": "39/20"
+      }
+    },
+    "judge": "C",
+    "low": {
+      "information_score": {
+        "decimal": 1.0,
+        "exact": "1"
+      },
+      "observations": [
+        {
+          "information_by_report": [
+            {
+              "decimal": 1.0,
+              "exact": "1"
+            },
+            {
+              "decimal": 1.0,
+              "exact": "1"
+            }
+          ],
+          "observation": [
+            1
+          ],
+          "optimal_prediction": {
+            "decimal": 1.0,
+            "exact": "1"
+          },
+          "optimal_prediction_score": {
+            "decimal": 1.0,
+            "exact": "1"
+          },
+          "optimal_reports": [
+            0,
+            1
+          ],
+          "probability_given_z": {
+            "decimal": 1.0,
+            "exact": "1"
+          },
+          "score_optimal_reports": [
+            0,
+            1
+          ]
+        }
+      ],
+      "optimal_actions": [
+        "L0",
+        "L1"
+      ],
+      "prediction_score": {
+        "decimal": 1.0,
+        "exact": "1"
+      },
+      "score": {
+        "decimal": 2.0,
+        "exact": "2"
+      },
+      "utility": {
+        "decimal": 2.0,
+        "exact": "2"
+      }
+    },
+    "optimal_actions": [
+      "L0",
+      "L1"
+    ],
+    "prediction_optimum": "unique_on_reachable_observations",
+    "reference_judge": "A",
+    "regret": {
+      "decimal": 0.0,
+      "exact": "0"
+    },
+    "report_optimum": "listed_report_maps",
+    "scoring_peer_judge": "B",
+    "witness": null,
+    "z": 1
+  }
+]

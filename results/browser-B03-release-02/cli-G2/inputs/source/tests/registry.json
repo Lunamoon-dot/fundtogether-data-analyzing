@@ -1,0 +1,366 @@
+{
+  "model_version": "ceav-m1-v1.0",
+  "note": "Mapping proves registration only; pass requires executed assertions and required browser/mutation evidence.",
+  "spec_revision": "math-proof-r2",
+  "tests": {
+    "T01": {
+      "acceptance_status": "determined_by_executed_run_and_browser_evidence",
+      "browser_scenario_ids": [],
+      "fixture_ids": [
+        "F01",
+        "F12"
+      ],
+      "unittest_ids": [
+        "tests.test_core.CoreTests.test_T01_distribution"
+      ]
+    },
+    "T02": {
+      "acceptance_status": "determined_by_executed_run_and_browser_evidence",
+      "browser_scenario_ids": [],
+      "fixture_ids": [
+        "F09"
+      ],
+      "unittest_ids": [
+        "tests.test_core.CoreTests.test_T02_information_boundaries"
+      ]
+    },
+    "T03": {
+      "acceptance_status": "determined_by_executed_run_and_browser_evidence",
+      "browser_scenario_ids": [],
+      "fixture_ids": [
+        "F02",
+        "F06"
+      ],
+      "unittest_ids": [
+        "tests.test_core.CoreTests.test_T03_bounds_endpoints"
+      ]
+    },
+    "T04": {
+      "acceptance_status": "determined_by_executed_run_and_browser_evidence",
+      "browser_scenario_ids": [],
+      "fixture_ids": [
+        "F02",
+        "F09"
+      ],
+      "unittest_ids": [
+        "tests.test_core.CoreTests.test_T04_roles"
+      ]
+    },
+    "T05": {
+      "acceptance_status": "determined_by_executed_run_and_browser_evidence",
+      "browser_scenario_ids": [],
+      "fixture_ids": [
+        "F05",
+        "F11",
+        "F13"
+      ],
+      "unittest_ids": [
+        "tests.test_core.CoreTests.test_T05_H_constants_keep_private_prediction",
+        "tests.test_core.CoreTests.test_T05_predictions_and_exact_loss"
+      ]
+    },
+    "T06": {
+      "acceptance_status": "determined_by_executed_run_and_browser_evidence",
+      "browser_scenario_ids": [],
+      "fixture_ids": [
+        "F10"
+      ],
+      "unittest_ids": [
+        "tests.test_core.CoreTests.test_T06_fixed_constant_and_zero_costs"
+      ]
+    },
+    "T07": {
+      "acceptance_status": "determined_by_executed_run_and_browser_evidence",
+      "browser_scenario_ids": [],
+      "fixture_ids": [
+        "F01",
+        "F12"
+      ],
+      "unittest_ids": [
+        "tests.test_core.CoreTests.test_T07_uninformative_private_signal"
+      ]
+    },
+    "T08": {
+      "acceptance_status": "determined_by_executed_run_and_browser_evidence",
+      "browser_scenario_ids": [],
+      "fixture_ids": [
+        "F06"
+      ],
+      "unittest_ids": [
+        "tests.test_core.CoreTests.test_T08_low_effort_maximum_profiles"
+      ]
+    },
+    "T09": {
+      "acceptance_status": "determined_by_executed_run_and_browser_evidence",
+      "browser_scenario_ids": [],
+      "fixture_ids": [
+        "F05"
+      ],
+      "unittest_ids": [
+        "tests.test_core.CoreTests.test_T09_G1_all_judges_and_branches"
+      ]
+    },
+    "T10": {
+      "acceptance_status": "determined_by_executed_run_and_browser_evidence",
+      "browser_scenario_ids": [],
+      "fixture_ids": [
+        "F07"
+      ],
+      "unittest_ids": [
+        "tests.test_core.CoreTests.test_T10_G3_negative_result"
+      ]
+    },
+    "T11": {
+      "acceptance_status": "determined_by_executed_run_and_browser_evidence",
+      "browser_scenario_ids": [],
+      "fixture_ids": [
+        "F08"
+      ],
+      "unittest_ids": [
+        "tests.test_core.CoreTests.test_T11_G4_post_signal_effort"
+      ]
+    },
+    "T12": {
+      "acceptance_status": "determined_by_executed_run_and_browser_evidence",
+      "browser_scenario_ids": [],
+      "fixture_ids": [
+        "F04",
+        "F09"
+      ],
+      "unittest_ids": [
+        "tests.test_core.CoreTests.test_T12_peer_freeze_numeric_counterexample"
+      ]
+    },
+    "T13": {
+      "acceptance_status": "determined_by_executed_run_and_browser_evidence",
+      "browser_scenario_ids": [],
+      "fixture_ids": [
+        "F03",
+        "F09"
+      ],
+      "unittest_ids": [
+        "tests.test_core.CoreTests.test_T13_joint_expectation"
+      ]
+    },
+    "T14": {
+      "acceptance_status": "determined_by_executed_run_and_browser_evidence",
+      "browser_scenario_ids": [],
+      "fixture_ids": [
+        "F05",
+        "F12"
+      ],
+      "unittest_ids": [
+        "tests.test_core.CoreTests.test_T14_information_variance_identity",
+        "tests.test_differential.DifferentialTests.test_T14_F12_catalog_all_branch_candidates"
+      ]
+    },
+    "T15": {
+      "acceptance_status": "determined_by_executed_run_and_browser_evidence",
+      "browser_scenario_ids": [],
+      "fixture_ids": [
+        "F05",
+        "F08",
+        "F09"
+      ],
+      "unittest_ids": [
+        "tests.test_core.CoreTests.test_T15_asymmetric_certificate_and_tamper",
+        "tests.test_io.IOTests.test_T15_artifact_certificate_identity_and_cancelled_rejection"
+      ]
+    },
+    "T16": {
+      "acceptance_status": "determined_by_executed_run_and_browser_evidence",
+      "browser_scenario_ids": [],
+      "fixture_ids": [
+        "F09",
+        "F10",
+        "F13"
+      ],
+      "unittest_ids": [
+        "tests.test_search.SearchTests.test_T16_complete_six_action_search",
+        "tests.test_search.SearchTests.test_T16_constant_rewards_continuum_counts"
+      ]
+    },
+    "T17": {
+      "acceptance_status": "determined_by_executed_run_and_browser_evidence",
+      "browser_scenario_ids": [],
+      "fixture_ids": [
+        "F05"
+      ],
+      "unittest_ids": [
+        "tests.test_search.SearchTests.test_T17_full_profile_set_equality"
+      ]
+    },
+    "T18": {
+      "acceptance_status": "determined_by_executed_run_and_browser_evidence",
+      "browser_scenario_ids": [],
+      "fixture_ids": [
+        "F09",
+        "F12"
+      ],
+      "unittest_ids": [
+        "tests.test_search.SearchTests.test_T18_binary_and_cyclic_relabel"
+      ]
+    },
+    "T19": {
+      "acceptance_status": "determined_by_executed_run_and_browser_evidence",
+      "browser_scenario_ids": [],
+      "fixture_ids": [
+        "F05",
+        "F10"
+      ],
+      "unittest_ids": [
+        "tests.test_core.CoreTests.test_T19_threshold_and_reward_shift"
+      ]
+    },
+    "T20": {
+      "acceptance_status": "determined_by_executed_run_and_browser_evidence",
+      "browser_scenario_ids": [],
+      "fixture_ids": [
+        "F11"
+      ],
+      "unittest_ids": [
+        "tests.test_core.CoreTests.test_T20_input_validation",
+        "tests.test_io.IOTests.test_T20_exact_roundtrip_budget_accounting"
+      ]
+    },
+    "T21": {
+      "acceptance_status": "determined_by_executed_run_and_browser_evidence",
+      "browser_scenario_ids": [],
+      "fixture_ids": [
+        "F11"
+      ],
+      "unittest_ids": [
+        "tests.test_io.IOTests.test_T21_cross_cwd_numeric_identity",
+        "tests.test_io.IOTests.test_T21_deterministic_numeric_output_and_no_overwrite",
+        "tests.test_io.IOTests.test_T21_semantic_hash_snapshot_provenance"
+      ]
+    },
+    "T22": {
+      "acceptance_status": "determined_by_executed_run_and_browser_evidence",
+      "browser_scenario_ids": [],
+      "fixture_ids": [],
+      "unittest_ids": [
+        "tests.test_io.IOTests.test_T22_cli_real_subprocess_artifacts_and_errors"
+      ]
+    },
+    "T23": {
+      "acceptance_status": "determined_by_executed_run_and_browser_evidence",
+      "browser_scenario_ids": [
+        "B01"
+      ],
+      "fixture_ids": [],
+      "unittest_ids": [
+        "tests.test_server.ServerTests.test_T23_offline_assets_capabilities_port_conflict"
+      ]
+    },
+    "T24": {
+      "acceptance_status": "determined_by_executed_run_and_browser_evidence",
+      "browser_scenario_ids": [
+        "B02"
+      ],
+      "fixture_ids": [],
+      "unittest_ids": [
+        "tests.test_server.ServerTests.test_T24_validation_fields_fraction_profile_presets"
+      ]
+    },
+    "T25": {
+      "acceptance_status": "determined_by_executed_run_and_browser_evidence",
+      "browser_scenario_ids": [
+        "B03"
+      ],
+      "fixture_ids": [],
+      "unittest_ids": [
+        "tests.test_server.ServerTests.test_T25_API_CLI_exact_parity_G1_G4"
+      ]
+    },
+    "T26": {
+      "acceptance_status": "determined_by_executed_run_and_browser_evidence",
+      "browser_scenario_ids": [
+        "B03"
+      ],
+      "fixture_ids": [],
+      "unittest_ids": [
+        "tests.test_server.ServerTests.test_T26_witness_artifact_all_six_branches"
+      ]
+    },
+    "T27": {
+      "acceptance_status": "determined_by_executed_run_and_browser_evidence",
+      "browser_scenario_ids": [
+        "B04"
+      ],
+      "fixture_ids": [],
+      "unittest_ids": [
+        "tests.test_server.ServerTests.test_T27_search_progress_and_certificate_artifact"
+      ]
+    },
+    "T28": {
+      "acceptance_status": "determined_by_executed_run_and_browser_evidence",
+      "browser_scenario_ids": [
+        "B05"
+      ],
+      "fixture_ids": [],
+      "unittest_ids": [
+        "tests.test_io.IOTests.test_T28_sweep_invalid_rows_replay"
+      ]
+    },
+    "T29": {
+      "acceptance_status": "determined_by_executed_run_and_browser_evidence",
+      "browser_scenario_ids": [
+        "B06"
+      ],
+      "fixture_ids": [],
+      "unittest_ids": [
+        "tests.test_io.IOTests.test_T29_runner_actual_failure_and_missing_ids",
+        "tests.test_server.ServerTests.test_T29_API_failure_fixture_and_missing_group"
+      ]
+    },
+    "T30": {
+      "acceptance_status": "determined_by_executed_run_and_browser_evidence",
+      "browser_scenario_ids": [
+        "B05",
+        "B07"
+      ],
+      "fixture_ids": [],
+      "unittest_ids": [
+        "tests.test_io.IOTests.test_T30_comparison_equal_cap_actual_spend",
+        "tests.test_search.SearchTests.test_T30_search_cancellation_no_certificate",
+        "tests.test_server.ServerTests.test_T30_cancel_before_worker_launch",
+        "tests.test_server.ServerTests.test_T30_duplicate_submit_immutable_snapshot_cancel",
+        "tests.test_server.ServerTests.test_T30_success_before_cancel_and_worker_crash"
+      ]
+    },
+    "T31": {
+      "acceptance_status": "determined_by_executed_run_and_browser_evidence",
+      "browser_scenario_ids": [
+        "B07",
+        "B08"
+      ],
+      "fixture_ids": [],
+      "unittest_ids": [
+        "tests.test_server.ServerTests.test_T31_abrupt_parent_exit_kills_worker_tree",
+        "tests.test_server.ServerTests.test_T31_history_path_origin_allowlist",
+        "tests.test_server.ServerTests.test_T31_restart_interrupted_run_and_completed_history",
+        "tests.test_server.ServerTests.test_T31_symlink_junction_and_prefix_sibling_confinement"
+      ]
+    },
+    "T32": {
+      "acceptance_status": "determined_by_executed_run_and_browser_evidence",
+      "browser_scenario_ids": [
+        "B01",
+        "B02",
+        "B03",
+        "B04",
+        "B05",
+        "B06",
+        "B07",
+        "B08",
+        "B09"
+      ],
+      "fixture_ids": [],
+      "unittest_ids": [
+        "tests.test_browser_evidence.BrowserEvidenceTests.test_T32_current_source_desktop_mobile_browser_evidence"
+      ]
+    }
+  },
+  "verification_revision": "verification-plan-r1"
+}

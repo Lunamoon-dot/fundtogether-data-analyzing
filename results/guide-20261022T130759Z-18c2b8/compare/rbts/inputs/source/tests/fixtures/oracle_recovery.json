@@ -1,0 +1,7 @@
+{
+  "basis": "Exact prefix of current oracle before appended T17 helpers; raw bytes match oracle hash already recorded in pre-production F09 certificate. This file was materialized now, not backdated.",
+  "event": "reconstructed_reference_oracle_bytes",
+  "fixture": "asymmetric_oracle.json",
+  "sha256": "6eadc3a96a123d51816358bde62ee777bbfef96e2cf42b722ee1745e23af6b41",
+  "written_at_utc": "2026-10-22T09:14:36.621864+00:00"
+}

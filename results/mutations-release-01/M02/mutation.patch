@@ -1,0 +1,11 @@
+--- ceav_m1/evaluate.py
++++ ceav_m1/evaluate.py
+@@ -62,7 +62,7 @@
+     result = evaluate(config, candidate, mechanism)
+     certificates = [solve_branch(config, candidate, i, z, mechanism, result["conditional"][i][z])
+                     for i in range(3) for z in (0, 1)]
+-    maximum = max(c["regret"] for c in certificates)
++    maximum = F(0) if all(sum(c["branch_probability"] * c["delta_utility"] for c in certificates if c["judge"] == label) >= 0 for label in JUDGES) else max(c["regret"] for c in certificates)
+     return {**SCOPE, **result, "mechanism": mechanism, "config": config.raw(), "profile": profile.raw(),
+             "prediction_semantics": candidate.prediction_semantics,
+             "predictions": [[{"observation": observation_key(obs), "prediction": p} for obs, p in table] for table in candidate.predictions],

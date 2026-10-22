@@ -1,0 +1,4 @@
+# Raw-byte hashes are part of the reproducibility contract. Keep text bytes LF
+# on every platform so a Windows checkout does not invalidate pinned hashes.
+* text=auto eol=lf
+*.png binary

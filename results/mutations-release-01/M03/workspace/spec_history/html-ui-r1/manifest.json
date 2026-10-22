@@ -1,0 +1,12 @@
+{
+  "spec_revision": "html-ui-r1",
+  "model_version": "ceav-m1-v1.0",
+  "event": "snapshot_before_math_proof_revision",
+  "captured_at_utc": "2026-10-22T07:34:14.436928+00:00",
+  "file": "CEAV_M1_SPEC.md",
+  "sha256": "541ceb5bc309eec3edc4848ad2bed565c57f9c5ddd33f765c68a7006fede0378",
+  "hash_basis": "raw_file_bytes",
+  "freeze_status": "not_frozen_for_analyzer_implementation",
+  "analyzer_implementation_started": false,
+  "reference_checker_preexisted": true
+}

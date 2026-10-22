@@ -1,0 +1,224 @@
+{
+  "browser": "155.0.4283.62",
+  "errors": [],
+  "network": [
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8765/"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8765/styles.css"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8765/app.js"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8765/api/status"
+    },
+    {
+      "method": "POST",
+      "url": "http://127.0.0.1:8765/api/runs"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8765/api/jobs/run-20261022T094731-afcc8d207a"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8765/api/jobs/run-20261022T094731-afcc8d207a"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8765/api/jobs/run-20261022T094731-afcc8d207a"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8765/api/jobs/run-20261022T094731-afcc8d207a"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8765/api/jobs/run-20261022T094731-afcc8d207a"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8765/api/jobs/run-20261022T094731-afcc8d207a"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8765/api/jobs/run-20261022T094731-afcc8d207a"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8765/api/jobs/run-20261022T094731-afcc8d207a"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8765/api/jobs/run-20261022T094731-afcc8d207a"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8765/api/jobs/run-20261022T094731-afcc8d207a"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8765/api/jobs/run-20261022T094731-afcc8d207a"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8765/api/jobs/run-20261022T094731-afcc8d207a"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8765/api/jobs/run-20261022T094731-afcc8d207a"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8765/api/runs/run-20261022T094731-afcc8d207a"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8765/api/runs/run-20261022T094731-afcc8d207a/artifacts/equilibria.json"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8765/api/runs"
+    },
+    {
+      "method": "POST",
+      "url": "http://127.0.0.1:8765/api/runs"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8765/api/jobs/run-20261022T094736-332aa58b09"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8765/api/jobs/run-20261022T094736-332aa58b09"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8765/api/runs/run-20261022T094736-332aa58b09"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8765/api/runs/run-20261022T094736-332aa58b09/artifacts/summary.json"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8765/api/runs/run-20261022T094736-332aa58b09/artifacts/best_responses.json"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8765/api/runs/run-20261022T094736-332aa58b09/artifacts/states.csv"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8765/api/runs"
+    }
+  ],
+  "scenario": "B04",
+  "status": "passed",
+  "steps": [
+    {
+      "observed": 202,
+      "status": "pass",
+      "step": "UI submitted equilibria"
+    },
+    {
+      "observed": {
+        "id": "run-20261022T094731-afcc8d207a",
+        "status": "succeeded"
+      },
+      "status": "pass",
+      "step": "UI observed terminal run"
+    },
+    {
+      "observed": 432,
+      "status": "pass",
+      "step": "Search renders all branch candidates"
+    },
+    {
+      "observed": 144,
+      "status": "pass",
+      "step": "Effort filter works for an individual Judge"
+    },
+    {
+      "observed": true,
+      "status": "pass",
+      "step": "Rejected candidate exposes witness"
+    },
+    {
+      "observed": 432,
+      "status": "pass",
+      "step": "Backend counted all candidates"
+    },
+    {
+      "observed": true,
+      "status": "pass",
+      "step": "Combination opens analyze"
+    },
+    {
+      "observed": "L0",
+      "status": "pass",
+      "step": "Combination profile preserved 0/0"
+    },
+    {
+      "observed": "L0",
+      "status": "pass",
+      "step": "Combination profile preserved 0/1"
+    },
+    {
+      "observed": "L0",
+      "status": "pass",
+      "step": "Combination profile preserved 0/2"
+    },
+    {
+      "observed": "L0",
+      "status": "pass",
+      "step": "Combination profile preserved 1/0"
+    },
+    {
+      "observed": "L0",
+      "status": "pass",
+      "step": "Combination profile preserved 1/1"
+    },
+    {
+      "observed": "L0",
+      "status": "pass",
+      "step": "Combination profile preserved 1/2"
+    },
+    {
+      "observed": 202,
+      "status": "pass",
+      "step": "UI submitted selected full profile"
+    },
+    {
+      "observed": {
+        "id": "run-20261022T094736-332aa58b09",
+        "status": "succeeded"
+      },
+      "status": "pass",
+      "step": "UI observed terminal run"
+    },
+    {
+      "observed": {
+        "analyze": "run-20261022T094736-332aa58b09",
+        "search": "run-20261022T094731-afcc8d207a"
+      },
+      "status": "pass",
+      "step": "Search and full analysis IDs"
+    },
+    {
+      "observed": [],
+      "status": "pass",
+      "step": "No JavaScript runtime errors"
+    }
+  ],
+  "viewport": {
+    "height": 768,
+    "width": 1366
+  }
+}

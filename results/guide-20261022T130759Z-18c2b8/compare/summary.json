@@ -1,0 +1,146 @@
+{
+  "comparison_scope": "fixed_candidate_equal_cap",
+  "config_hash": "bda5c8793d24f3d2d32fce51383b89a04313577e42cfffb5280e99ba5afbdf96",
+  "equal_cap": true,
+  "mechanisms": {
+    "fixed": {
+      "equilibrium_status": "not_equilibrium",
+      "max_regret": {
+        "decimal": 0.05,
+        "exact": "1/20"
+      },
+      "metrics": {
+        "accuracy": {
+          "decimal": 0.896,
+          "exact": "112/125"
+        },
+        "cash_review_cost": {
+          "decimal": 6.0,
+          "exact": "6"
+        },
+        "expected_effort_cost": {
+          "decimal": 0.15,
+          "exact": "3/20"
+        },
+        "expected_judge_utility": [
+          {
+            "decimal": 1.95,
+            "exact": "39/20"
+          },
+          {
+            "decimal": 1.95,
+            "exact": "39/20"
+          },
+          {
+            "decimal": 1.95,
+            "exact": "39/20"
+          }
+        ],
+        "expected_payout": {
+          "decimal": 0.5,
+          "exact": "1/2"
+        },
+        "expected_reward_total": {
+          "decimal": 6.0,
+          "exact": "6"
+        },
+        "false_approval_rate": {
+          "decimal": 0.104,
+          "exact": "13/125"
+        },
+        "false_rejection_rate": {
+          "decimal": 0.104,
+          "exact": "13/125"
+        },
+        "operating_cost": {
+          "decimal": 0.0,
+          "exact": "0"
+        },
+        "wrong_payout_probability": {
+          "decimal": 0.052,
+          "exact": "13/250"
+        },
+        "wrong_payout_value": {
+          "decimal": 0.052,
+          "exact": "13/250"
+        }
+      },
+      "reward_cap": {
+        "decimal": 6.0,
+        "exact": "6"
+      }
+    },
+    "rbts": {
+      "equilibrium_status": "exact_pure_equilibrium",
+      "max_regret": {
+        "decimal": 0.0,
+        "exact": "0"
+      },
+      "metrics": {
+        "accuracy": {
+          "decimal": 0.896,
+          "exact": "112/125"
+        },
+        "cash_review_cost": {
+          "decimal": 4.6272265374537715,
+          "exact": "1003301286/216825625"
+        },
+        "expected_effort_cost": {
+          "decimal": 0.15,
+          "exact": "3/20"
+        },
+        "expected_judge_utility": [
+          {
+            "decimal": 1.4924088458179239,
+            "exact": "1294369923/867302500"
+          },
+          {
+            "decimal": 1.4924088458179239,
+            "exact": "1294369923/867302500"
+          },
+          {
+            "decimal": 1.4924088458179239,
+            "exact": "1294369923/867302500"
+          }
+        ],
+        "expected_payout": {
+          "decimal": 0.5,
+          "exact": "1/2"
+        },
+        "expected_reward_total": {
+          "decimal": 4.6272265374537715,
+          "exact": "1003301286/216825625"
+        },
+        "false_approval_rate": {
+          "decimal": 0.104,
+          "exact": "13/125"
+        },
+        "false_rejection_rate": {
+          "decimal": 0.104,
+          "exact": "13/125"
+        },
+        "operating_cost": {
+          "decimal": 0.0,
+          "exact": "0"
+        },
+        "wrong_payout_probability": {
+          "decimal": 0.052,
+          "exact": "13/250"
+        },
+        "wrong_payout_value": {
+          "decimal": 0.052,
+          "exact": "13/250"
+        }
+      },
+      "reward_cap": {
+        "decimal": 6.0,
+        "exact": "6"
+      }
+    }
+  },
+  "profile_hash": "2b5e101404e8e22918f3d45d17db7b3081c5d707e3c8cd6f72f41901ffb9a34e",
+  "reward_cap": {
+    "decimal": 6.0,
+    "exact": "6"
+  }
+}

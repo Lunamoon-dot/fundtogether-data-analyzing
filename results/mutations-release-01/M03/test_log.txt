@@ -1,0 +1,21 @@
+test_T13_joint_expectation (tests.test_core.CoreTests.test_T13_joint_expectation) ... FAIL
+
+======================================================================
+FAIL: test_T13_joint_expectation (tests.test_core.CoreTests.test_T13_joint_expectation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\dell\Desktop\fundtogether_data_analyzing\results\mutations-release-01\M03\workspace\tests\test_core.py", line 201, in test_T13_joint_expectation
+    self.assertTrue(verify_analysis(analyze(config(), profile())))
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\Desktop\fundtogether_data_analyzing\results\mutations-release-01\M03\workspace\ceav_m1\evaluate.py", line 63, in analyze
+    certificates = [solve_branch(config, candidate, i, z, mechanism, result["conditional"][i][z])
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\Desktop\fundtogether_data_analyzing\results\mutations-release-01\M03\workspace\ceav_m1\best_response.py", line 59, in solve_branch
+    assert regret >= 0, "Negative regret is a calculation error"
+           ^^^^^^^^^^^
+AssertionError: Negative regret is a calculation error
+
+----------------------------------------------------------------------
+Ran 1 test in 0.106s
+
+FAILED (failures=1)

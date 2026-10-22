@@ -1,0 +1,11 @@
+--- ceav_m1/scoring.py
++++ ceav_m1/scoring.py
+@@ -6,7 +6,7 @@
+ def quadratic(p, report):
+     if not isinstance(p, F) or not 0 <= p <= 1 or type(report) is not int or report not in (0, 1):
+         raise ValueError("Expected rational prediction in [0,1] and binary report")
+-    return 2 * p - p * p if report else 1 - p * p
++    return F(float(2 * p - p * p if report else 1 - p * p))
+ 
+ 
+ def score_judge(reports, predictions, judge):

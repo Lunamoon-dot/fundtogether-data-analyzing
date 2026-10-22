@@ -1,0 +1,530 @@
+{
+  "browser": "155.0.4283.62",
+  "errors": [],
+  "network": [
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8765/"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8765/styles.css"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8765/app.js"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8765/api/status"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8765/api/runs"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8765/api/runs/run-20261022T094739-279e5a4009"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8765/api/runs/run-20261022T094739-279e5a4009/artifacts/summary.json"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8765/api/runs/run-20261022T094739-279e5a4009/artifacts/best_responses.json"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8765/api/runs/run-20261022T094739-279e5a4009/artifacts/states.csv"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8765/api/runs/run-20261022T094739-279e5a4009/artifacts/manifest.json?download=1"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8765/api/runs/run-20261022T094739-279e5a4009/artifacts/config.json?download=1"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8765/api/runs/run-20261022T094739-279e5a4009/artifacts/profile.json?download=1"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8765/api/runs/run-20261022T094739-279e5a4009/artifacts/summary.json?download=1"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8765/api/runs/run-20261022T094739-279e5a4009/artifacts/best_responses.json?download=1"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8765/api/runs/run-20261022T094739-279e5a4009/artifacts/states.csv?download=1"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8765/api/runs/run-20261022T094739-279e5a4009/artifacts/report.md?download=1"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8765/api/runs"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8765/api/runs"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8765/api/runs"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8765/api/runs/run-20261022T094739-279e5a4009"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8765/api/runs/run-20261022T094736-332aa58b09"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8765/api/runs/run-20261022T094739-279e5a4009/artifacts/summary.json"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8765/api/runs/run-20261022T094736-332aa58b09/artifacts/summary.json"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8765/api/runs/run-20261022T094739-279e5a4009"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8765/api/runs/run-20261022T094736-332aa58b09"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8765/api/runs/run-20261022T094739-279e5a4009/artifacts/summary.json"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8765/api/runs/run-20261022T094736-332aa58b09/artifacts/summary.json"
+    }
+  ],
+  "scenario": "B08",
+  "status": "passed",
+  "steps": [
+    {
+      "observed": 40,
+      "status": "pass",
+      "step": "History contains completed real analysis runs"
+    },
+    {
+      "observed": {
+        "freeze_event": "spec_history/implementation-start-20261022T081942148684Z/manifest.json",
+        "freeze_status": "frozen_at_analyzer_implementation_start",
+        "reference_checker_preexisted": true,
+        "revision": "math-proof-r2",
+        "sha256": "c62cc8ae146603adceb1fb94560c541e198244ff83519be8a1adbe60a6781120",
+        "snapshot": "spec_history/implementation-start-20261022T081942148684Z/CEAV_M1_SPEC.md"
+      },
+      "status": "pass",
+      "step": "History displays actual spec and freeze versions"
+    },
+    {
+      "observed": {
+        "first": "run-20261022T094739-279e5a4009",
+        "second": "run-20261022T094736-332aa58b09"
+      },
+      "status": "pass",
+      "step": "Pinned run differences are explicitly disclosed"
+    },
+    {
+      "observed": {
+        "manifest": {
+          "argv": [
+            "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\ceav_m1\\__main__.py",
+            "analyze",
+            "--out",
+            "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\results\\run-20261022T094739-279e5a4009",
+            "--defer-publication",
+            "--parent-pid",
+            "3092",
+            "--config",
+            "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\results\\.jobs\\run-20261022T094739-279e5a4009\\config.json",
+            "--progress-json",
+            "--profile",
+            "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\results\\.jobs\\run-20261022T094739-279e5a4009\\profile.json",
+            "--mechanism",
+            "rbts"
+          ],
+          "artifacts": [
+            {
+              "bytes": 43521,
+              "name": "best_responses.json",
+              "sha256": "9fe0cee0a6b3e3792ab88f8d334d9ff7eda3bdd55364ad352646cc971176a5c6"
+            },
+            {
+              "bytes": 59346,
+              "name": "certificate.json",
+              "sha256": "e61a3b8fd0e8d4785a205e75c476fafc290abc2ba8a78e875b6dc146d031776a"
+            },
+            {
+              "bytes": 261,
+              "name": "config.json",
+              "sha256": "f576a3ee9b21c5fa501e54ccb3e90fb25f764ffa16fdb9eeca50acaabcff8890"
+            },
+            {
+              "bytes": 95,
+              "name": "profile.json",
+              "sha256": "66712b6a53ded25a422ab0b4c91abf2d4f8724bb8dad6cdfe69a6cad5f2d60c1"
+            },
+            {
+              "bytes": 1477,
+              "name": "report.md",
+              "sha256": "3e17a7c4833fcda33b17235ab53ceaa3e20599495b9c644bd20845fdaf5f463f"
+            },
+            {
+              "bytes": 489,
+              "name": "request.json",
+              "sha256": "a7be652b01ae0bf539a029280ebbffbd5d8958f0551d0bee0f3284b0456d27d8"
+            },
+            {
+              "bytes": 24228,
+              "name": "states.csv",
+              "sha256": "9f37063d0fd088b8eec5d3117d9593ac00b23c406f846edc8ea36f7cb34cf1b6"
+            },
+            {
+              "bytes": 5986,
+              "name": "summary.json",
+              "sha256": "7a9805631f5e9503623c7e016fa95e3bde5013c5639b0863587b0a55f5e4f5ce"
+            },
+            {
+              "bytes": 108,
+              "name": "worker_log.txt",
+              "sha256": "817cff82854d5c7d43ce4c0828df7abb73f2890d628f6dfe891fd5dd1213cec5"
+            }
+          ],
+          "completed_at_utc": "2026-10-22T09:47:40.355092+00:00",
+          "config": {
+            "a": "7/10",
+            "b": "4/5",
+            "costs": [
+              "1/20",
+              "1/20",
+              "1/20"
+            ],
+            "f": "0",
+            "fixed_reward": "2",
+            "lambda": "1/2",
+            "model_version": "ceav-m1-v1.0",
+            "operating_cost": "0",
+            "payout_value": "1",
+            "pi": "1/2",
+            "reward_budget": "6"
+          },
+          "config_hash": "990e089975aa1ac4bd2f4e6a9aad01fee64979c99f36fb6a2202f049b51c9169",
+          "created_at_utc": "2026-10-22T09:47:40.276697+00:00",
+          "documents": {
+            "CEAV_M1_SPEC.md": {
+              "bytes": 71180,
+              "sha256": "c62cc8ae146603adceb1fb94560c541e198244ff83519be8a1adbe60a6781120"
+            },
+            "ENGINE_DESIGN.md": {
+              "bytes": 23400,
+              "sha256": "9acba0db2d546d7d2c0427a0e1e0dcff77c6d7329db9a3934ea291616ce9e447"
+            },
+            "VERIFICATION_PLAN.md": {
+              "bytes": 32090,
+              "sha256": "6096454551c4bbc0ab473edd8853888ca3f650401ef5ecbc45df7b262404448a"
+            }
+          },
+          "duration_seconds": 0.04050509999797214,
+          "engine_revision": "00e30fe36b4bf2ab134ca51f712c1a3e1121c5ec45de2d9056fa268d46ec57b8",
+          "engine_version": "ceav-m1-engine-v1",
+          "logical_cpu_count": 16,
+          "machine": "AMD64",
+          "mechanism": "rbts",
+          "model_version": "ceav-m1-v1.0",
+          "operation": "analyze",
+          "platform": "Windows-11-10.0.26300-SP0",
+          "profile": {
+            "0": [
+              "H01",
+              "H01",
+              "H01"
+            ],
+            "1": [
+              "H01",
+              "H01",
+              "H01"
+            ]
+          },
+          "profile_hash": "2b5e101404e8e22918f3d45d17db7b3081c5d707e3c8cd6f72f41901ffb9a34e",
+          "publication_owner": "local_server",
+          "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+          "randomness": "none",
+          "request_hash": "267663dea9f597254eae7357637bd462bd415dce39ba0eb05b166ae5b157aff7",
+          "run_id": "run-20261022T094739-279e5a4009",
+          "source_files": [
+            {
+              "path": "ceav_m1/__init__.py",
+              "sha256": "acf8075a7b488345b47e6f7b48af5072dcb7bcaf1979f0c4662662112a158691"
+            },
+            {
+              "path": "ceav_m1/__main__.py",
+              "sha256": "5e4400541547eccf5af7a82e38244c44a8d60ebb5d842f120f0ff7dedfb31215"
+            },
+            {
+              "path": "ceav_m1/best_response.py",
+              "sha256": "eace8ef8864de0a9c53293c18da7f68251eac168c82aed0d21aa659a5e75ab89"
+            },
+            {
+              "path": "ceav_m1/equilibria.py",
+              "sha256": "f75b660b8cea8234e533d282341ed16f5ae58eb1ab822bfa75bf71f6d6c84409"
+            },
+            {
+              "path": "ceav_m1/evaluate.py",
+              "sha256": "e430e49951fc012d04202462f107febaec82cbb47fbede573d290e36113eb7e8"
+            },
+            {
+              "path": "ceav_m1/model.py",
+              "sha256": "2103c02c44858fe9be8fa2af939158b4cedd450da92659cbb715134edb8f831e"
+            },
+            {
+              "path": "ceav_m1/output.py",
+              "sha256": "d23fd0fb901691ac1e0aef72c05c2ae243cbab22d45b5d03b32969a5d5d9421d"
+            },
+            {
+              "path": "ceav_m1/runtime.py",
+              "sha256": "a815848296e4391b050b3d17f64610fd9f05c5a4e705be832d74291a1ca6e79d"
+            },
+            {
+              "path": "ceav_m1/scoring.py",
+              "sha256": "9bc9cc09c3da7b5619c83f750b31df124fc453250ae5eb0f7cc4550d5a367451"
+            },
+            {
+              "path": "ceav_m1/server.py",
+              "sha256": "99010517ab2795f93f3d9a8d855f986870fa7704cf74a4907608f35758737e4a"
+            },
+            {
+              "path": "ceav_m1/strategies.py",
+              "sha256": "9ca37e72c1b67de7d48aea75148063c2f169cac4e56c31d3687a5a2b1c5dc9bb"
+            },
+            {
+              "path": "ceav_m1/test_runner.py",
+              "sha256": "bff978599627413871b4c6452a9fce68c041bef98e2883b85833e374fbd1bca8"
+            },
+            {
+              "path": "configs/all_fail.json",
+              "sha256": "34e268c3092aa8b40cdf0de2042536adb0e8147e5dc6bacdd56c76680e6e2adc"
+            },
+            {
+              "path": "configs/all_high.json",
+              "sha256": "66712b6a53ded25a422ab0b4c91abf2d4f8724bb8dad6cdfe69a6cad5f2d60c1"
+            },
+            {
+              "path": "configs/all_inverted.json",
+              "sha256": "33c3a09a74a4f022dead1d1e196c7f331ae30de779abbe23b0f7c1e35d1506f1"
+            },
+            {
+              "path": "configs/all_not_z.json",
+              "sha256": "f21bdf23f7f3dcbd377a2c9fc4b78f8fc250f9b2f6e526a93349c82057dbb02e"
+            },
+            {
+              "path": "configs/all_pass.json",
+              "sha256": "b3dac93103641affc8bd746db35ad5d49f0a0fafa65d8eaa8be49b8c9fb499c6"
+            },
+            {
+              "path": "configs/all_z.json",
+              "sha256": "2b97a46ef5fab95aa320af5ad14da81a18a2b1522482e0cb68f17d8ee5c43215"
+            },
+            {
+              "path": "configs/asymmetric.json",
+              "sha256": "b6ecfc6fe9cd0030f87039f1b9fb21f72fda84d334d45d625405e92fa6cd4d99"
+            },
+            {
+              "path": "configs/asymmetric_profile.json",
+              "sha256": "fead5f76e88fccc735afa3f3b722b775c5697cb10f2df7e4cafe321512e59b35"
+            },
+            {
+              "path": "configs/golden_g1.json",
+              "sha256": "29b4f77f70129bd51b54a43b54dc6932da80ecd88eae9906049cad56b48932bb"
+            },
+            {
+              "path": "configs/golden_g2.json",
+              "sha256": "29b4f77f70129bd51b54a43b54dc6932da80ecd88eae9906049cad56b48932bb"
+            },
+            {
+              "path": "configs/golden_g3.json",
+              "sha256": "8927e92f1e617c674840c24f67fac9fe434ee73023c6cd80c0f3a685d9765bab"
+            },
+            {
+              "path": "configs/golden_g4.json",
+              "sha256": "8108b13876e237b961ec77d3afe6b05cf45ccdb405ae1446e05c704c487a757e"
+            },
+            {
+              "path": "configs/sweep.json",
+              "sha256": "cb658854f5ca2d6c4eef895c59ded6cc77fb5f6a93e1202e8247bb7f9ac9bf98"
+            },
+            {
+              "path": "tests/__init__.py",
+              "sha256": "14ecdce21e733e50c3e5bca221b9d10c520cfa180380f733bdbf57e4e988488e"
+            },
+            {
+              "path": "tests/certificates.py",
+              "sha256": "4eef6291d2c3f7295ccb07fe2ed1ad13619c90e669fad4be790f208f42c5da4b"
+            },
+            {
+              "path": "tests/failure_fixture.py",
+              "sha256": "f7d9acf049ba5b4cee8135577fc564f2942fab2605e9dd7ac0acace82e5514b1"
+            },
+            {
+              "path": "tests/fixtures/asymmetric_oracle.json",
+              "sha256": "ce46cdefe3a5d229a0e93119abce00967e0a039ba891096d80c3ffbe1e1fdc2b"
+            },
+            {
+              "path": "tests/fixtures/oracle_preproduction.py",
+              "sha256": "6eadc3a96a123d51816358bde62ee777bbfef96e2cf42b722ee1745e23af6b41"
+            },
+            {
+              "path": "tests/fixtures/oracle_recovery.json",
+              "sha256": "2462378c7c1fa9780d6883e25a58ddb1302454b9876bb57dfe4b52c8bab39776"
+            },
+            {
+              "path": "tests/fixtures/reference.json",
+              "sha256": "aab77bf2f2160a9890e9b8ee2302bef62b79571a2b6f8f56e2b9f6b53fba3c75"
+            },
+            {
+              "path": "tests/oracle.py",
+              "sha256": "5da59305af4e563edc83498ee3b24e8ec08afc5bb1700a17b42d172223f790bd"
+            },
+            {
+              "path": "tests/registry.json",
+              "sha256": "ae773046a8d4254c6527519d2ab18cd059aa9ba4e7d9663c6d5f3491952299fd"
+            },
+            {
+              "path": "tests/server_fixture.py",
+              "sha256": "b63759f4b9c0c26f6f9f74407bd2757353833c70ffe122471d3f2455e490f646"
+            },
+            {
+              "path": "tests/test_browser_evidence.py",
+              "sha256": "c1d2955a7f6d014c3006c6e27628a44cdc58b8b9dafaadd85f4e088e5a8bbf66"
+            },
+            {
+              "path": "tests/test_core.py",
+              "sha256": "0e189a444a3a9c0c22bbac1d53f52fd5115875704ba35f52fd1985338945e433"
+            },
+            {
+              "path": "tests/test_differential.py",
+              "sha256": "a04ae477d2ba83cd0f8e97070b9356f44a942e2495c907efa3091091e16c8ade"
+            },
+            {
+              "path": "tests/test_io.py",
+              "sha256": "d48d2751ae2ad99e8f80a58e589a8eed71849c59fd166ccc5280db9194fc5892"
+            },
+            {
+              "path": "tests/test_search.py",
+              "sha256": "d4a690eebe44ae4eae5ca5b8d1f4b48e2825a1e7bf8b9b39d8178a2f028d0fde"
+            },
+            {
+              "path": "tests/test_server.py",
+              "sha256": "5044467f9ee3e1941140befe10003b4664ed209045c192599ce3339075a4620c"
+            },
+            {
+              "path": "tests/worker_fixture.py",
+              "sha256": "92c69b90b517af69a72d74e5a4b2d2962ad8a70fd67a6c5ffd5d3d4d688c3b18"
+            },
+            {
+              "path": "verification/acceptance_audit.py",
+              "sha256": "fd880280d8f7d358b9a0fe3ed8fad1b4a3a93d5d68c4f856180d0e96736374dc"
+            },
+            {
+              "path": "verification/browser_acceptance.py",
+              "sha256": "310f6ee29e453ceeaf2e7c8377fe11840186d586ffb57796c14d812bbb0bf488"
+            },
+            {
+              "path": "verification/browser_flows.js",
+              "sha256": "4a2982aa2a59f310edde1ddfb7c84e479ffea66084e70c0fd664e83360a6a20d"
+            },
+            {
+              "path": "verification/mutation_probes.py",
+              "sha256": "a8998209e02641a4fd440ef48a42a3b811c5c7a9bf4ab435b2acc3c0606e6b2e"
+            },
+            {
+              "path": "verification/reference_results.json",
+              "sha256": "85622a6a7d2a03b787009b9a2f21a6fc7079dd87276b5ed7eb2cbd22c1ff7209"
+            },
+            {
+              "path": "verification/verify_reference.py",
+              "sha256": "a77957a66cf8816e1575734a0362f2a0ca4690a47e645ed0b12c8cd59ff62550"
+            },
+            {
+              "path": "web/app.js",
+              "sha256": "098e0312335e0c9655167a473d0d8d1fe8c9334a26b1f16d40df9c351c1c1561"
+            },
+            {
+              "path": "web/index.html",
+              "sha256": "73e5c32e83e430d17d9366ef65fe7064d7034e07669f865696cce06082b57967"
+            },
+            {
+              "path": "web/styles.css",
+              "sha256": "255fd13aec106e5617999d501c5bdaf173ee243e405db62e5f41d74a07da55fa"
+            }
+          ],
+          "spec": {
+            "freeze_event": "spec_history/implementation-start-20261022T081942148684Z/manifest.json",
+            "freeze_status": "frozen_at_analyzer_implementation_start",
+            "reference_checker_preexisted": true,
+            "revision": "math-proof-r2",
+            "sha256": "c62cc8ae146603adceb1fb94560c541e198244ff83519be8a1adbe60a6781120",
+            "snapshot": "spec_history/implementation-start-20261022T081942148684Z/CEAV_M1_SPEC.md"
+          },
+          "status": "succeeded"
+        },
+        "run_id": "run-20261022T094739-279e5a4009"
+      },
+      "status": "pass",
+      "step": "Downloaded artifact source"
+    },
+    {
+      "observed": [],
+      "status": "pass",
+      "step": "No JavaScript runtime errors"
+    },
+    {
+      "observed": [
+        {
+          "artifact": "config.json",
+          "download_hash_matches": true
+        },
+        {
+          "artifact": "profile.json",
+          "download_hash_matches": true
+        },
+        {
+          "artifact": "summary.json",
+          "download_hash_matches": true
+        },
+        {
+          "artifact": "best_responses.json",
+          "download_hash_matches": true
+        },
+        {
+          "artifact": "states.csv",
+          "download_hash_matches": true
+        },
+        {
+          "artifact": "report.md",
+          "download_hash_matches": true
+        }
+      ],
+      "status": "pass",
+      "step": "Downloaded bytes match run manifest hashes"
+    }
+  ],
+  "viewport": {
+    "height": 768,
+    "width": 1366
+  }
+}

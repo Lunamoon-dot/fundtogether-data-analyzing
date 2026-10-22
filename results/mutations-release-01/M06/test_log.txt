@@ -1,0 +1,14 @@
+test_T05_predictions_and_exact_loss (tests.test_core.CoreTests.test_T05_predictions_and_exact_loss) ... FAIL
+
+======================================================================
+FAIL: test_T05_predictions_and_exact_loss (tests.test_core.CoreTests.test_T05_predictions_and_exact_loss)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\dell\Desktop\fundtogether_data_analyzing\results\mutations-release-01\M06\workspace\tests\test_core.py", line 86, in test_T05_predictions_and_exact_loss
+    self.assertEqual(expected(q) - expected(p), (p - q) ** 2)
+AssertionError: Fraction(250199979298361, 2251799813685248) != Fraction(1, 9)
+
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+FAILED (failures=1)

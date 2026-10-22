@@ -1,0 +1,11 @@
+--- ceav_m1/strategies.py
++++ ceav_m1/strategies.py
+@@ -69,7 +69,7 @@
+         k = (i + 2) % 3
+         for state in rows:
+             actions = profile.branches[state.z]
+-            own = observe(state, i, actions[i][0])
++            own = LowObservation(state.z) if actions[i] in ("H00", "H11") else observe(state, i, actions[i][0])
+             peer = report_for(actions[k], observe(state, k, actions[k][0]))
+             mass, ones = groups.get(own, (F(0), F(0)))
+             groups[own] = (mass + state.probability, ones + state.probability * peer)

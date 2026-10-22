@@ -1,0 +1,2376 @@
+{
+  "G1": {
+    "accuracy": {
+      "decimal": 0.896,
+      "exact": "112/125"
+    },
+    "branches": {
+      "0": {
+        "candidate_score": {
+          "decimal": 1.542408845817924,
+          "exact": "334433762/216825625"
+        },
+        "delta_utility": {
+          "decimal": 0.048008845817923966,
+          "exact": "10409548/216825625"
+        },
+        "high": {
+          "information": {
+            "decimal": 0.7537501021846472,
+            "exact": "163432337/216825625"
+          },
+          "prediction": {
+            "decimal": 0.7886587436332767,
+            "exact": "11613/14725"
+          },
+          "rules": [
+            {
+              "observation": [
+                0,
+                0
+              ],
+              "optimal_prediction": {
+                "decimal": 0.25806451612903225,
+                "exact": "8/31"
+              },
+              "optimal_reports": [
+                0
+              ]
+            },
+            {
+              "observation": [
+                0,
+                1
+              ],
+              "optimal_prediction": {
+                "decimal": 0.5789473684210527,
+                "exact": "11/19"
+              },
+              "optimal_reports": [
+                1
+              ]
+            }
+          ],
+          "score": {
+            "decimal": 1.542408845817924,
+            "exact": "334433762/216825625"
+          }
+        },
+        "low": {
+          "information": {
+            "decimal": 0.68,
+            "exact": "17/25"
+          },
+          "prediction": {
+            "decimal": 0.7644,
+            "exact": "1911/2500"
+          },
+          "rules": [
+            {
+              "observation": [
+                0
+              ],
+              "optimal_prediction": {
+                "decimal": 0.38,
+                "exact": "19/50"
+              },
+              "optimal_reports": [
+                0,
+                1
+              ]
+            }
+          ],
+          "score": {
+            "decimal": 1.4444,
+            "exact": "3611/2500"
+          }
+        },
+        "probability": {
+          "decimal": 0.5,
+          "exact": "1/2"
+        },
+        "regret": {
+          "decimal": 0.0,
+          "exact": "0"
+        }
+      },
+      "1": {
+        "candidate_score": {
+          "decimal": 1.542408845817924,
+          "exact": "334433762/216825625"
+        },
+        "delta_utility": {
+          "decimal": 0.048008845817923966,
+          "exact": "10409548/216825625"
+        },
+        "high": {
+          "information": {
+            "decimal": 0.7537501021846472,
+            "exact": "163432337/216825625"
+          },
+          "prediction": {
+            "decimal": 0.7886587436332767,
+            "exact": "11613/14725"
+          },
+          "rules": [
+            {
+              "observation": [
+                1,
+                0
+              ],
+              "optimal_prediction": {
+                "decimal": 0.42105263157894735,
+                "exact": "8/19"
+              },
+              "optimal_reports": [
+                0
+              ]
+            },
+            {
+              "observation": [
+                1,
+                1
+              ],
+              "optimal_prediction": {
+                "decimal": 0.7419354838709677,
+                "exact": "23/31"
+              },
+              "optimal_reports": [
+                1
+              ]
+            }
+          ],
+          "score": {
+            "decimal": 1.542408845817924,
+            "exact": "334433762/216825625"
+          }
+        },
+        "low": {
+          "information": {
+            "decimal": 0.68,
+            "exact": "17/25"
+          },
+          "prediction": {
+            "decimal": 0.7644,
+            "exact": "1911/2500"
+          },
+          "rules": [
+            {
+              "observation": [
+                1
+              ],
+              "optimal_prediction": {
+                "decimal": 0.62,
+                "exact": "31/50"
+              },
+              "optimal_reports": [
+                0,
+                1
+              ]
+            }
+          ],
+          "score": {
+            "decimal": 1.4444,
+            "exact": "3611/2500"
+          }
+        },
+        "probability": {
+          "decimal": 0.5,
+          "exact": "1/2"
+        },
+        "regret": {
+          "decimal": 0.0,
+          "exact": "0"
+        }
+      }
+    },
+    "candidate_expected_score": {
+      "decimal": 1.542408845817924,
+      "exact": "334433762/216825625"
+    },
+    "candidate_is_pure_equilibrium": true,
+    "delta_score": {
+      "decimal": 0.09800884581792396,
+      "exact": "85003317/867302500"
+    },
+    "delta_utility": {
+      "decimal": 0.048008845817923966,
+      "exact": "10409548/216825625"
+    },
+    "false_approval_rate": {
+      "decimal": 0.104,
+      "exact": "13/125"
+    },
+    "false_rejection_rate": {
+      "decimal": 0.104,
+      "exact": "13/125"
+    },
+    "high": {
+      "information": {
+        "decimal": 0.7537501021846472,
+        "exact": "163432337/216825625"
+      },
+      "prediction": {
+        "decimal": 0.7886587436332767,
+        "exact": "11613/14725"
+      },
+      "rules": [
+        {
+          "observation": [
+            0,
+            0
+          ],
+          "optimal_prediction": {
+            "decimal": 0.25806451612903225,
+            "exact": "8/31"
+          },
+          "optimal_reports": [
+            0
+          ]
+        },
+        {
+          "observation": [
+            0,
+            1
+          ],
+          "optimal_prediction": {
+            "decimal": 0.5789473684210527,
+            "exact": "11/19"
+          },
+          "optimal_reports": [
+            1
+          ]
+        },
+        {
+          "observation": [
+            1,
+            0
+          ],
+          "optimal_prediction": {
+            "decimal": 0.42105263157894735,
+            "exact": "8/19"
+          },
+          "optimal_reports": [
+            0
+          ]
+        },
+        {
+          "observation": [
+            1,
+            1
+          ],
+          "optimal_prediction": {
+            "decimal": 0.7419354838709677,
+            "exact": "23/31"
+          },
+          "optimal_reports": [
+            1
+          ]
+        }
+      ],
+      "score": {
+        "decimal": 1.542408845817924,
+        "exact": "334433762/216825625"
+      }
+    },
+    "low": {
+      "information": {
+        "decimal": 0.68,
+        "exact": "17/25"
+      },
+      "prediction": {
+        "decimal": 0.7644,
+        "exact": "1911/2500"
+      },
+      "rules": [
+        {
+          "observation": [
+            0
+          ],
+          "optimal_prediction": {
+            "decimal": 0.38,
+            "exact": "19/50"
+          },
+          "optimal_reports": [
+            0,
+            1
+          ]
+        },
+        {
+          "observation": [
+            1
+          ],
+          "optimal_prediction": {
+            "decimal": 0.62,
+            "exact": "31/50"
+          },
+          "optimal_reports": [
+            0,
+            1
+          ]
+        }
+      ],
+      "score": {
+        "decimal": 1.4444,
+        "exact": "3611/2500"
+      }
+    },
+    "wrong_payout_value_for_V1": {
+      "decimal": 0.052,
+      "exact": "13/250"
+    }
+  },
+  "G1_lambda_threshold": {
+    "decimal": 0.5101580330094648,
+    "exact": "43365125/85003317"
+  },
+  "G2": {
+    "FAIL": {
+      "accuracy": {
+        "decimal": 0.5,
+        "exact": "1/2"
+      },
+      "branches": {
+        "0": {
+          "candidate_score": {
+            "decimal": 2.0,
+            "exact": "2"
+          },
+          "delta_utility": {
+            "decimal": -0.05,
+            "exact": "-1/20"
+          },
+          "high": {
+            "information": {
+              "decimal": 1.0,
+              "exact": "1"
+            },
+            "prediction": {
+              "decimal": 1.0,
+              "exact": "1"
+            },
+            "rules": [
+              {
+                "observation": [
+                  0,
+                  0
+                ],
+                "optimal_prediction": {
+                  "decimal": 0.0,
+                  "exact": "0"
+                },
+                "optimal_reports": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "observation": [
+                  0,
+                  1
+                ],
+                "optimal_prediction": {
+                  "decimal": 0.0,
+                  "exact": "0"
+                },
+                "optimal_reports": [
+                  0,
+                  1
+                ]
+              }
+            ],
+            "score": {
+              "decimal": 2.0,
+              "exact": "2"
+            }
+          },
+          "low": {
+            "information": {
+              "decimal": 1.0,
+              "exact": "1"
+            },
+            "prediction": {
+              "decimal": 1.0,
+              "exact": "1"
+            },
+            "rules": [
+              {
+                "observation": [
+                  0
+                ],
+                "optimal_prediction": {
+                  "decimal": 0.0,
+                  "exact": "0"
+                },
+                "optimal_reports": [
+                  0,
+                  1
+                ]
+              }
+            ],
+            "score": {
+              "decimal": 2.0,
+              "exact": "2"
+            }
+          },
+          "probability": {
+            "decimal": 0.5,
+            "exact": "1/2"
+          },
+          "regret": {
+            "decimal": 0.0,
+            "exact": "0"
+          }
+        },
+        "1": {
+          "candidate_score": {
+            "decimal": 2.0,
+            "exact": "2"
+          },
+          "delta_utility": {
+            "decimal": -0.05,
+            "exact": "-1/20"
+          },
+          "high": {
+            "information": {
+              "decimal": 1.0,
+              "exact": "1"
+            },
+            "prediction": {
+              "decimal": 1.0,
+              "exact": "1"
+            },
+            "rules": [
+              {
+                "observation": [
+                  1,
+                  0
+                ],
+                "optimal_prediction": {
+                  "decimal": 0.0,
+                  "exact": "0"
+                },
+                "optimal_reports": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "observation": [
+                  1,
+                  1
+                ],
+                "optimal_prediction": {
+                  "decimal": 0.0,
+                  "exact": "0"
+                },
+                "optimal_reports": [
+                  0,
+                  1
+                ]
+              }
+            ],
+            "score": {
+              "decimal": 2.0,
+              "exact": "2"
+            }
+          },
+          "low": {
+            "information": {
+              "decimal": 1.0,
+              "exact": "1"
+            },
+            "prediction": {
+              "decimal": 1.0,
+              "exact": "1"
+            },
+            "rules": [
+              {
+                "observation": [
+                  1
+                ],
+                "optimal_prediction": {
+                  "decimal": 0.0,
+                  "exact": "0"
+                },
+                "optimal_reports": [
+                  0,
+                  1
+                ]
+              }
+            ],
+            "score": {
+              "decimal": 2.0,
+              "exact": "2"
+            }
+          },
+          "probability": {
+            "decimal": 0.5,
+            "exact": "1/2"
+          },
+          "regret": {
+            "decimal": 0.0,
+            "exact": "0"
+          }
+        }
+      },
+      "candidate_expected_score": {
+        "decimal": 2.0,
+        "exact": "2"
+      },
+      "candidate_is_pure_equilibrium": true,
+      "delta_score": {
+        "decimal": 0.0,
+        "exact": "0"
+      },
+      "delta_utility": {
+        "decimal": -0.05,
+        "exact": "-1/20"
+      },
+      "false_approval_rate": {
+        "decimal": 0.0,
+        "exact": "0"
+      },
+      "false_rejection_rate": {
+        "decimal": 1.0,
+        "exact": "1"
+      },
+      "high": {
+        "information": {
+          "decimal": 1.0,
+          "exact": "1"
+        },
+        "prediction": {
+          "decimal": 1.0,
+          "exact": "1"
+        },
+        "rules": [
+          {
+            "observation": [
+              0,
+              0
+            ],
+            "optimal_prediction": {
+              "decimal": 0.0,
+              "exact": "0"
+            },
+            "optimal_reports": [
+              0,
+              1
+            ]
+          },
+          {
+            "observation": [
+              0,
+              1
+            ],
+            "optimal_prediction": {
+              "decimal": 0.0,
+              "exact": "0"
+            },
+            "optimal_reports": [
+              0,
+              1
+            ]
+          },
+          {
+            "observation": [
+              1,
+              0
+            ],
+            "optimal_prediction": {
+              "decimal": 0.0,
+              "exact": "0"
+            },
+            "optimal_reports": [
+              0,
+              1
+            ]
+          },
+          {
+            "observation": [
+              1,
+              1
+            ],
+            "optimal_prediction": {
+              "decimal": 0.0,
+              "exact": "0"
+            },
+            "optimal_reports": [
+              0,
+              1
+            ]
+          }
+        ],
+        "score": {
+          "decimal": 2.0,
+          "exact": "2"
+        }
+      },
+      "low": {
+        "information": {
+          "decimal": 1.0,
+          "exact": "1"
+        },
+        "prediction": {
+          "decimal": 1.0,
+          "exact": "1"
+        },
+        "rules": [
+          {
+            "observation": [
+              0
+            ],
+            "optimal_prediction": {
+              "decimal": 0.0,
+              "exact": "0"
+            },
+            "optimal_reports": [
+              0,
+              1
+            ]
+          },
+          {
+            "observation": [
+              1
+            ],
+            "optimal_prediction": {
+              "decimal": 0.0,
+              "exact": "0"
+            },
+            "optimal_reports": [
+              0,
+              1
+            ]
+          }
+        ],
+        "score": {
+          "decimal": 2.0,
+          "exact": "2"
+        }
+      },
+      "wrong_payout_value_for_V1": {
+        "decimal": 0.0,
+        "exact": "0"
+      }
+    },
+    "NOT_Z": {
+      "accuracy": {
+        "decimal": 0.3,
+        "exact": "3/10"
+      },
+      "branches": {
+        "0": {
+          "candidate_score": {
+            "decimal": 2.0,
+            "exact": "2"
+          },
+          "delta_utility": {
+            "decimal": -0.05,
+            "exact": "-1/20"
+          },
+          "high": {
+            "information": {
+              "decimal": 1.0,
+              "exact": "1"
+            },
+            "prediction": {
+              "decimal": 1.0,
+              "exact": "1"
+            },
+            "rules": [
+              {
+                "observation": [
+                  0,
+                  0
+                ],
+                "optimal_prediction": {
+                  "decimal": 1.0,
+                  "exact": "1"
+                },
+                "optimal_reports": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "observation": [
+                  0,
+                  1
+                ],
+                "optimal_prediction": {
+                  "decimal": 1.0,
+                  "exact": "1"
+                },
+                "optimal_reports": [
+                  0,
+                  1
+                ]
+              }
+            ],
+            "score": {
+              "decimal": 2.0,
+              "exact": "2"
+            }
+          },
+          "low": {
+            "information": {
+              "decimal": 1.0,
+              "exact": "1"
+            },
+            "prediction": {
+              "decimal": 1.0,
+              "exact": "1"
+            },
+            "rules": [
+              {
+                "observation": [
+                  0
+                ],
+                "optimal_prediction": {
+                  "decimal": 1.0,
+                  "exact": "1"
+                },
+                "optimal_reports": [
+                  0,
+                  1
+                ]
+              }
+            ],
+            "score": {
+              "decimal": 2.0,
+              "exact": "2"
+            }
+          },
+          "probability": {
+            "decimal": 0.5,
+            "exact": "1/2"
+          },
+          "regret": {
+            "decimal": 0.0,
+            "exact": "0"
+          }
+        },
+        "1": {
+          "candidate_score": {
+            "decimal": 2.0,
+            "exact": "2"
+          },
+          "delta_utility": {
+            "decimal": -0.05,
+            "exact": "-1/20"
+          },
+          "high": {
+            "information": {
+              "decimal": 1.0,
+              "exact": "1"
+            },
+            "prediction": {
+              "decimal": 1.0,
+              "exact": "1"
+            },
+            "rules": [
+              {
+                "observation": [
+                  1,
+                  0
+                ],
+                "optimal_prediction": {
+                  "decimal": 0.0,
+                  "exact": "0"
+                },
+                "optimal_reports": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "observation": [
+                  1,
+                  1
+                ],
+                "optimal_prediction": {
+                  "decimal": 0.0,
+                  "exact": "0"
+                },
+                "optimal_reports": [
+                  0,
+                  1
+                ]
+              }
+            ],
+            "score": {
+              "decimal": 2.0,
+              "exact": "2"
+            }
+          },
+          "low": {
+            "information": {
+              "decimal": 1.0,
+              "exact": "1"
+            },
+            "prediction": {
+              "decimal": 1.0,
+              "exact": "1"
+            },
+            "rules": [
+              {
+                "observation": [
+                  1
+                ],
+                "optimal_prediction": {
+                  "decimal": 0.0,
+                  "exact": "0"
+                },
+                "optimal_reports": [
+                  0,
+                  1
+                ]
+              }
+            ],
+            "score": {
+              "decimal": 2.0,
+              "exact": "2"
+            }
+          },
+          "probability": {
+            "decimal": 0.5,
+            "exact": "1/2"
+          },
+          "regret": {
+            "decimal": 0.0,
+            "exact": "0"
+          }
+        }
+      },
+      "candidate_expected_score": {
+        "decimal": 2.0,
+        "exact": "2"
+      },
+      "candidate_is_pure_equilibrium": true,
+      "delta_score": {
+        "decimal": 0.0,
+        "exact": "0"
+      },
+      "delta_utility": {
+        "decimal": -0.05,
+        "exact": "-1/20"
+      },
+      "false_approval_rate": {
+        "decimal": 0.7,
+        "exact": "7/10"
+      },
+      "false_rejection_rate": {
+        "decimal": 0.7,
+        "exact": "7/10"
+      },
+      "high": {
+        "information": {
+          "decimal": 1.0,
+          "exact": "1"
+        },
+        "prediction": {
+          "decimal": 1.0,
+          "exact": "1"
+        },
+        "rules": [
+          {
+            "observation": [
+              0,
+              0
+            ],
+            "optimal_prediction": {
+              "decimal": 1.0,
+              "exact": "1"
+            },
+            "optimal_reports": [
+              0,
+              1
+            ]
+          },
+          {
+            "observation": [
+              0,
+              1
+            ],
+            "optimal_prediction": {
+              "decimal": 1.0,
+              "exact": "1"
+            },
+            "optimal_reports": [
+              0,
+              1
+            ]
+          },
+          {
+            "observation": [
+              1,
+              0
+            ],
+            "optimal_prediction": {
+              "decimal": 0.0,
+              "exact": "0"
+            },
+            "optimal_reports": [
+              0,
+              1
+            ]
+          },
+          {
+            "observation": [
+              1,
+              1
+            ],
+            "optimal_prediction": {
+              "decimal": 0.0,
+              "exact": "0"
+            },
+            "optimal_reports": [
+              0,
+              1
+            ]
+          }
+        ],
+        "score": {
+          "decimal": 2.0,
+          "exact": "2"
+        }
+      },
+      "low": {
+        "information": {
+          "decimal": 1.0,
+          "exact": "1"
+        },
+        "prediction": {
+          "decimal": 1.0,
+          "exact": "1"
+        },
+        "rules": [
+          {
+            "observation": [
+              0
+            ],
+            "optimal_prediction": {
+              "decimal": 1.0,
+              "exact": "1"
+            },
+            "optimal_reports": [
+              0,
+              1
+            ]
+          },
+          {
+            "observation": [
+              1
+            ],
+            "optimal_prediction": {
+              "decimal": 0.0,
+              "exact": "0"
+            },
+            "optimal_reports": [
+              0,
+              1
+            ]
+          }
+        ],
+        "score": {
+          "decimal": 2.0,
+          "exact": "2"
+        }
+      },
+      "wrong_payout_value_for_V1": {
+        "decimal": 0.35,
+        "exact": "7/20"
+      }
+    },
+    "PASS": {
+      "accuracy": {
+        "decimal": 0.5,
+        "exact": "1/2"
+      },
+      "branches": {
+        "0": {
+          "candidate_score": {
+            "decimal": 2.0,
+            "exact": "2"
+          },
+          "delta_utility": {
+            "decimal": -0.05,
+            "exact": "-1/20"
+          },
+          "high": {
+            "information": {
+              "decimal": 1.0,
+              "exact": "1"
+            },
+            "prediction": {
+              "decimal": 1.0,
+              "exact": "1"
+            },
+            "rules": [
+              {
+                "observation": [
+                  0,
+                  0
+                ],
+                "optimal_prediction": {
+                  "decimal": 1.0,
+                  "exact": "1"
+                },
+                "optimal_reports": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "observation": [
+                  0,
+                  1
+                ],
+                "optimal_prediction": {
+                  "decimal": 1.0,
+                  "exact": "1"
+                },
+                "optimal_reports": [
+                  0,
+                  1
+                ]
+              }
+            ],
+            "score": {
+              "decimal": 2.0,
+              "exact": "2"
+            }
+          },
+          "low": {
+            "information": {
+              "decimal": 1.0,
+              "exact": "1"
+            },
+            "prediction": {
+              "decimal": 1.0,
+              "exact": "1"
+            },
+            "rules": [
+              {
+                "observation": [
+                  0
+                ],
+                "optimal_prediction": {
+                  "decimal": 1.0,
+                  "exact": "1"
+                },
+                "optimal_reports": [
+                  0,
+                  1
+                ]
+              }
+            ],
+            "score": {
+              "decimal": 2.0,
+              "exact": "2"
+            }
+          },
+          "probability": {
+            "decimal": 0.5,
+            "exact": "1/2"
+          },
+          "regret": {
+            "decimal": 0.0,
+            "exact": "0"
+          }
+        },
+        "1": {
+          "candidate_score": {
+            "decimal": 2.0,
+            "exact": "2"
+          },
+          "delta_utility": {
+            "decimal": -0.05,
+            "exact": "-1/20"
+          },
+          "high": {
+            "information": {
+              "decimal": 1.0,
+              "exact": "1"
+            },
+            "prediction": {
+              "decimal": 1.0,
+              "exact": "1"
+            },
+            "rules": [
+              {
+                "observation": [
+                  1,
+                  0
+                ],
+                "optimal_prediction": {
+                  "decimal": 1.0,
+                  "exact": "1"
+                },
+                "optimal_reports": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "observation": [
+                  1,
+                  1
+                ],
+                "optimal_prediction": {
+                  "decimal": 1.0,
+                  "exact": "1"
+                },
+                "optimal_reports": [
+                  0,
+                  1
+                ]
+              }
+            ],
+            "score": {
+              "decimal": 2.0,
+              "exact": "2"
+            }
+          },
+          "low": {
+            "information": {
+              "decimal": 1.0,
+              "exact": "1"
+            },
+            "prediction": {
+              "decimal": 1.0,
+              "exact": "1"
+            },
+            "rules": [
+              {
+                "observation": [
+                  1
+                ],
+                "optimal_prediction": {
+                  "decimal": 1.0,
+                  "exact": "1"
+                },
+                "optimal_reports": [
+                  0,
+                  1
+                ]
+              }
+            ],
+            "score": {
+              "decimal": 2.0,
+              "exact": "2"
+            }
+          },
+          "probability": {
+            "decimal": 0.5,
+            "exact": "1/2"
+          },
+          "regret": {
+            "decimal": 0.0,
+            "exact": "0"
+          }
+        }
+      },
+      "candidate_expected_score": {
+        "decimal": 2.0,
+        "exact": "2"
+      },
+      "candidate_is_pure_equilibrium": true,
+      "delta_score": {
+        "decimal": 0.0,
+        "exact": "0"
+      },
+      "delta_utility": {
+        "decimal": -0.05,
+        "exact": "-1/20"
+      },
+      "false_approval_rate": {
+        "decimal": 1.0,
+        "exact": "1"
+      },
+      "false_rejection_rate": {
+        "decimal": 0.0,
+        "exact": "0"
+      },
+      "high": {
+        "information": {
+          "decimal": 1.0,
+          "exact": "1"
+        },
+        "prediction": {
+          "decimal": 1.0,
+          "exact": "1"
+        },
+        "rules": [
+          {
+            "observation": [
+              0,
+              0
+            ],
+            "optimal_prediction": {
+              "decimal": 1.0,
+              "exact": "1"
+            },
+            "optimal_reports": [
+              0,
+              1
+            ]
+          },
+          {
+            "observation": [
+              0,
+              1
+            ],
+            "optimal_prediction": {
+              "decimal": 1.0,
+              "exact": "1"
+            },
+            "optimal_reports": [
+              0,
+              1
+            ]
+          },
+          {
+            "observation": [
+              1,
+              0
+            ],
+            "optimal_prediction": {
+              "decimal": 1.0,
+              "exact": "1"
+            },
+            "optimal_reports": [
+              0,
+              1
+            ]
+          },
+          {
+            "observation": [
+              1,
+              1
+            ],
+            "optimal_prediction": {
+              "decimal": 1.0,
+              "exact": "1"
+            },
+            "optimal_reports": [
+              0,
+              1
+            ]
+          }
+        ],
+        "score": {
+          "decimal": 2.0,
+          "exact": "2"
+        }
+      },
+      "low": {
+        "information": {
+          "decimal": 1.0,
+          "exact": "1"
+        },
+        "prediction": {
+          "decimal": 1.0,
+          "exact": "1"
+        },
+        "rules": [
+          {
+            "observation": [
+              0
+            ],
+            "optimal_prediction": {
+              "decimal": 1.0,
+              "exact": "1"
+            },
+            "optimal_reports": [
+              0,
+              1
+            ]
+          },
+          {
+            "observation": [
+              1
+            ],
+            "optimal_prediction": {
+              "decimal": 1.0,
+              "exact": "1"
+            },
+            "optimal_reports": [
+              0,
+              1
+            ]
+          }
+        ],
+        "score": {
+          "decimal": 2.0,
+          "exact": "2"
+        }
+      },
+      "wrong_payout_value_for_V1": {
+        "decimal": 0.5,
+        "exact": "1/2"
+      }
+    },
+    "Z": {
+      "accuracy": {
+        "decimal": 0.7,
+        "exact": "7/10"
+      },
+      "branches": {
+        "0": {
+          "candidate_score": {
+            "decimal": 2.0,
+            "exact": "2"
+          },
+          "delta_utility": {
+            "decimal": -0.05,
+            "exact": "-1/20"
+          },
+          "high": {
+            "information": {
+              "decimal": 1.0,
+              "exact": "1"
+            },
+            "prediction": {
+              "decimal": 1.0,
+              "exact": "1"
+            },
+            "rules": [
+              {
+                "observation": [
+                  0,
+                  0
+                ],
+                "optimal_prediction": {
+                  "decimal": 0.0,
+                  "exact": "0"
+                },
+                "optimal_reports": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "observation": [
+                  0,
+                  1
+                ],
+                "optimal_prediction": {
+                  "decimal": 0.0,
+                  "exact": "0"
+                },
+                "optimal_reports": [
+                  0,
+                  1
+                ]
+              }
+            ],
+            "score": {
+              "decimal": 2.0,
+              "exact": "2"
+            }
+          },
+          "low": {
+            "information": {
+              "decimal": 1.0,
+              "exact": "1"
+            },
+            "prediction": {
+              "decimal": 1.0,
+              "exact": "1"
+            },
+            "rules": [
+              {
+                "observation": [
+                  0
+                ],
+                "optimal_prediction": {
+                  "decimal": 0.0,
+                  "exact": "0"
+                },
+                "optimal_reports": [
+                  0,
+                  1
+                ]
+              }
+            ],
+            "score": {
+              "decimal": 2.0,
+              "exact": "2"
+            }
+          },
+          "probability": {
+            "decimal": 0.5,
+            "exact": "1/2"
+          },
+          "regret": {
+            "decimal": 0.0,
+            "exact": "0"
+          }
+        },
+        "1": {
+          "candidate_score": {
+            "decimal": 2.0,
+            "exact": "2"
+          },
+          "delta_utility": {
+            "decimal": -0.05,
+            "exact": "-1/20"
+          },
+          "high": {
+            "information": {
+              "decimal": 1.0,
+              "exact": "1"
+            },
+            "prediction": {
+              "decimal": 1.0,
+              "exact": "1"
+            },
+            "rules": [
+              {
+                "observation": [
+                  1,
+                  0
+                ],
+                "optimal_prediction": {
+                  "decimal": 1.0,
+                  "exact": "1"
+                },
+                "optimal_reports": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "observation": [
+                  1,
+                  1
+                ],
+                "optimal_prediction": {
+                  "decimal": 1.0,
+                  "exact": "1"
+                },
+                "optimal_reports": [
+                  0,
+                  1
+                ]
+              }
+            ],
+            "score": {
+              "decimal": 2.0,
+              "exact": "2"
+            }
+          },
+          "low": {
+            "information": {
+              "decimal": 1.0,
+              "exact": "1"
+            },
+            "prediction": {
+              "decimal": 1.0,
+              "exact": "1"
+            },
+            "rules": [
+              {
+                "observation": [
+                  1
+                ],
+                "optimal_prediction": {
+                  "decimal": 1.0,
+                  "exact": "1"
+                },
+                "optimal_reports": [
+                  0,
+                  1
+                ]
+              }
+            ],
+            "score": {
+              "decimal": 2.0,
+              "exact": "2"
+            }
+          },
+          "probability": {
+            "decimal": 0.5,
+            "exact": "1/2"
+          },
+          "regret": {
+            "decimal": 0.0,
+            "exact": "0"
+          }
+        }
+      },
+      "candidate_expected_score": {
+        "decimal": 2.0,
+        "exact": "2"
+      },
+      "candidate_is_pure_equilibrium": true,
+      "delta_score": {
+        "decimal": 0.0,
+        "exact": "0"
+      },
+      "delta_utility": {
+        "decimal": -0.05,
+        "exact": "-1/20"
+      },
+      "false_approval_rate": {
+        "decimal": 0.3,
+        "exact": "3/10"
+      },
+      "false_rejection_rate": {
+        "decimal": 0.3,
+        "exact": "3/10"
+      },
+      "high": {
+        "information": {
+          "decimal": 1.0,
+          "exact": "1"
+        },
+        "prediction": {
+          "decimal": 1.0,
+          "exact": "1"
+        },
+        "rules": [
+          {
+            "observation": [
+              0,
+              0
+            ],
+            "optimal_prediction": {
+              "decimal": 0.0,
+              "exact": "0"
+            },
+            "optimal_reports": [
+              0,
+              1
+            ]
+          },
+          {
+            "observation": [
+              0,
+              1
+            ],
+            "optimal_prediction": {
+              "decimal": 0.0,
+              "exact": "0"
+            },
+            "optimal_reports": [
+              0,
+              1
+            ]
+          },
+          {
+            "observation": [
+              1,
+              0
+            ],
+            "optimal_prediction": {
+              "decimal": 1.0,
+              "exact": "1"
+            },
+            "optimal_reports": [
+              0,
+              1
+            ]
+          },
+          {
+            "observation": [
+              1,
+              1
+            ],
+            "optimal_prediction": {
+              "decimal": 1.0,
+              "exact": "1"
+            },
+            "optimal_reports": [
+              0,
+              1
+            ]
+          }
+        ],
+        "score": {
+          "decimal": 2.0,
+          "exact": "2"
+        }
+      },
+      "low": {
+        "information": {
+          "decimal": 1.0,
+          "exact": "1"
+        },
+        "prediction": {
+          "decimal": 1.0,
+          "exact": "1"
+        },
+        "rules": [
+          {
+            "observation": [
+              0
+            ],
+            "optimal_prediction": {
+              "decimal": 0.0,
+              "exact": "0"
+            },
+            "optimal_reports": [
+              0,
+              1
+            ]
+          },
+          {
+            "observation": [
+              1
+            ],
+            "optimal_prediction": {
+              "decimal": 1.0,
+              "exact": "1"
+            },
+            "optimal_reports": [
+              0,
+              1
+            ]
+          }
+        ],
+        "score": {
+          "decimal": 2.0,
+          "exact": "2"
+        }
+      },
+      "wrong_payout_value_for_V1": {
+        "decimal": 0.15,
+        "exact": "3/20"
+      }
+    }
+  },
+  "G3": {
+    "accuracy": {
+      "decimal": 0.84375,
+      "exact": "27/32"
+    },
+    "branches": {
+      "0": {
+        "candidate_score": {
+          "decimal": 1.5199617346938776,
+          "exact": "23833/15680"
+        },
+        "delta_utility": {
+          "decimal": -0.02003826530612245,
+          "exact": "-1571/78400"
+        },
+        "high": {
+          "information": {
+            "decimal": 0.7275510204081632,
+            "exact": "713/980"
+          },
+          "prediction": {
+            "decimal": 0.7924107142857143,
+            "exact": "355/448"
+          },
+          "rules": [
+            {
+              "observation": [
+                0,
+                0
+              ],
+              "optimal_prediction": {
+                "decimal": 0.26785714285714285,
+                "exact": "15/56"
+              },
+              "optimal_reports": [
+                0
+              ]
+            },
+            {
+              "observation": [
+                0,
+                1
+              ],
+              "optimal_prediction": {
+                "decimal": 0.375,
+                "exact": "3/8"
+              },
+              "optimal_reports": [
+                1
+              ]
+            }
+          ],
+          "score": {
+            "decimal": 1.5199617346938776,
+            "exact": "23833/15680"
+          }
+        },
+        "low": {
+          "information": {
+            "decimal": 0.7,
+            "exact": "7/10"
+          },
+          "prediction": {
+            "decimal": 0.79,
+            "exact": "79/100"
+          },
+          "rules": [
+            {
+              "observation": [
+                0
+              ],
+              "optimal_prediction": {
+                "decimal": 0.3,
+                "exact": "3/10"
+              },
+              "optimal_reports": [
+                0,
+                1
+              ]
+            }
+          ],
+          "score": {
+            "decimal": 1.49,
+            "exact": "149/100"
+          }
+        },
+        "probability": {
+          "decimal": 0.5,
+          "exact": "1/2"
+        },
+        "regret": {
+          "decimal": 0.02003826530612245,
+          "exact": "1571/78400"
+        }
+      },
+      "1": {
+        "candidate_score": {
+          "decimal": 1.5199617346938776,
+          "exact": "23833/15680"
+        },
+        "delta_utility": {
+          "decimal": -0.02003826530612245,
+          "exact": "-1571/78400"
+        },
+        "high": {
+          "information": {
+            "decimal": 0.7275510204081632,
+            "exact": "713/980"
+          },
+          "prediction": {
+            "decimal": 0.7924107142857143,
+            "exact": "355/448"
+          },
+          "rules": [
+            {
+              "observation": [
+                1,
+                0
+              ],
+              "optimal_prediction": {
+                "decimal": 0.625,
+                "exact": "5/8"
+              },
+              "optimal_reports": [
+                0
+              ]
+            },
+            {
+              "observation": [
+                1,
+                1
+              ],
+              "optimal_prediction": {
+                "decimal": 0.7321428571428571,
+                "exact": "41/56"
+              },
+              "optimal_reports": [
+                1
+              ]
+            }
+          ],
+          "score": {
+            "decimal": 1.5199617346938776,
+            "exact": "23833/15680"
+          }
+        },
+        "low": {
+          "information": {
+            "decimal": 0.7,
+            "exact": "7/10"
+          },
+          "prediction": {
+            "decimal": 0.79,
+            "exact": "79/100"
+          },
+          "rules": [
+            {
+              "observation": [
+                1
+              ],
+              "optimal_prediction": {
+                "decimal": 0.7,
+                "exact": "7/10"
+              },
+              "optimal_reports": [
+                0,
+                1
+              ]
+            }
+          ],
+          "score": {
+            "decimal": 1.49,
+            "exact": "149/100"
+          }
+        },
+        "probability": {
+          "decimal": 0.5,
+          "exact": "1/2"
+        },
+        "regret": {
+          "decimal": 0.02003826530612245,
+          "exact": "1571/78400"
+        }
+      }
+    },
+    "candidate_expected_score": {
+      "decimal": 1.5199617346938776,
+      "exact": "23833/15680"
+    },
+    "candidate_is_pure_equilibrium": false,
+    "delta_score": {
+      "decimal": 0.02996173469387755,
+      "exact": "2349/78400"
+    },
+    "delta_utility": {
+      "decimal": -0.02003826530612245,
+      "exact": "-1571/78400"
+    },
+    "false_approval_rate": {
+      "decimal": 0.15625,
+      "exact": "5/32"
+    },
+    "false_rejection_rate": {
+      "decimal": 0.15625,
+      "exact": "5/32"
+    },
+    "high": {
+      "information": {
+        "decimal": 0.7275510204081632,
+        "exact": "713/980"
+      },
+      "prediction": {
+        "decimal": 0.7924107142857143,
+        "exact": "355/448"
+      },
+      "rules": [
+        {
+          "observation": [
+            0,
+            0
+          ],
+          "optimal_prediction": {
+            "decimal": 0.26785714285714285,
+            "exact": "15/56"
+          },
+          "optimal_reports": [
+            0
+          ]
+        },
+        {
+          "observation": [
+            0,
+            1
+          ],
+          "optimal_prediction": {
+            "decimal": 0.375,
+            "exact": "3/8"
+          },
+          "optimal_reports": [
+            1
+          ]
+        },
+        {
+          "observation": [
+            1,
+            0
+          ],
+          "optimal_prediction": {
+            "decimal": 0.625,
+            "exact": "5/8"
+          },
+          "optimal_reports": [
+            0
+          ]
+        },
+        {
+          "observation": [
+            1,
+            1
+          ],
+          "optimal_prediction": {
+            "decimal": 0.7321428571428571,
+            "exact": "41/56"
+          },
+          "optimal_reports": [
+            1
+          ]
+        }
+      ],
+      "score": {
+        "decimal": 1.5199617346938776,
+        "exact": "23833/15680"
+      }
+    },
+    "low": {
+      "information": {
+        "decimal": 0.7,
+        "exact": "7/10"
+      },
+      "prediction": {
+        "decimal": 0.79,
+        "exact": "79/100"
+      },
+      "rules": [
+        {
+          "observation": [
+            0
+          ],
+          "optimal_prediction": {
+            "decimal": 0.3,
+            "exact": "3/10"
+          },
+          "optimal_reports": [
+            0,
+            1
+          ]
+        },
+        {
+          "observation": [
+            1
+          ],
+          "optimal_prediction": {
+            "decimal": 0.7,
+            "exact": "7/10"
+          },
+          "optimal_reports": [
+            0,
+            1
+          ]
+        }
+      ],
+      "score": {
+        "decimal": 1.49,
+        "exact": "149/100"
+      }
+    },
+    "wrong_payout_value_for_V1": {
+      "decimal": 0.078125,
+      "exact": "5/64"
+    }
+  },
+  "G4": {
+    "accuracy": {
+      "decimal": 0.896,
+      "exact": "112/125"
+    },
+    "branches": {
+      "0": {
+        "candidate_score": {
+          "decimal": 1.5389937190082645,
+          "exact": "581932/378125"
+        },
+        "delta_utility": {
+          "decimal": 0.052761032027655044,
+          "exact": "28808183/546012500"
+        },
+        "high": {
+          "information": {
+            "decimal": 0.7539755371900826,
+            "exact": "285097/378125"
+          },
+          "prediction": {
+            "decimal": 0.7850181818181818,
+            "exact": "5397/6875"
+          },
+          "rules": [
+            {
+              "observation": [
+                0,
+                0
+              ],
+              "optimal_prediction": {
+                "decimal": 0.38,
+                "exact": "19/50"
+              },
+              "optimal_reports": [
+                0
+              ]
+            },
+            {
+              "observation": [
+                0,
+                1
+              ],
+              "optimal_prediction": {
+                "decimal": 0.7236363636363636,
+                "exact": "199/275"
+              },
+              "optimal_reports": [
+                1
+              ]
+            }
+          ],
+          "score": {
+            "decimal": 1.5389937190082645,
+            "exact": "581932/378125"
+          }
+        },
+        "low": {
+          "information": {
+            "decimal": 0.68,
+            "exact": "17/25"
+          },
+          "prediction": {
+            "decimal": 0.7562326869806094,
+            "exact": "273/361"
+          },
+          "rules": [
+            {
+              "observation": [
+                0
+              ],
+              "optimal_prediction": {
+                "decimal": 0.5789473684210527,
+                "exact": "11/19"
+              },
+              "optimal_reports": [
+                0,
+                1
+              ]
+            }
+          ],
+          "score": {
+            "decimal": 1.4362326869806095,
+            "exact": "12962/9025"
+          }
+        },
+        "probability": {
+          "decimal": 0.38,
+          "exact": "19/50"
+        },
+        "regret": {
+          "decimal": 0.0,
+          "exact": "0"
+        }
+      },
+      "1": {
+        "candidate_score": {
+          "decimal": 1.591148182206232,
+          "exact": "81541372/51246875"
+        },
+        "delta_utility": {
+          "decimal": -0.009320080020614947,
+          "exact": "-59225497/6354612500"
+        },
+        "high": {
+          "information": {
+            "decimal": 0.7774438343801451,
+            "exact": "39841567/51246875"
+          },
+          "prediction": {
+            "decimal": 0.8137043478260869,
+            "exact": "11697/14375"
+          },
+          "rules": [
+            {
+              "observation": [
+                1,
+                0
+              ],
+              "optimal_prediction": {
+                "decimal": 0.62,
+                "exact": "31/50"
+              },
+              "optimal_reports": [
+                0
+              ]
+            },
+            {
+              "observation": [
+                1,
+                1
+              ],
+              "optimal_prediction": {
+                "decimal": 0.7843478260869565,
+                "exact": "451/575"
+              },
+              "optimal_reports": [
+                1
+              ]
+            }
+          ],
+          "score": {
+            "decimal": 1.591148182206232,
+            "exact": "81541372/51246875"
+          }
+        },
+        "low": {
+          "information": {
+            "decimal": 0.7419354838709677,
+            "exact": "23/31"
+          },
+          "prediction": {
+            "decimal": 0.8085327783558793,
+            "exact": "777/961"
+          },
+          "rules": [
+            {
+              "observation": [
+                1
+              ],
+              "optimal_prediction": {
+                "decimal": 0.7419354838709677,
+                "exact": "23/31"
+              },
+              "optimal_reports": [
+                0,
+                1
+              ]
+            }
+          ],
+          "score": {
+            "decimal": 1.550468262226847,
+            "exact": "1490/961"
+          }
+        },
+        "probability": {
+          "decimal": 0.62,
+          "exact": "31/50"
+        },
+        "regret": {
+          "decimal": 0.009320080020614947,
+          "exact": "59225497/6354612500"
+        }
+      }
+    },
+    "candidate_expected_score": {
+      "decimal": 1.5713294861910043,
+      "exact": "7857752272/5000703125"
+    },
+    "candidate_is_pure_equilibrium": false,
+    "delta_score": {
+      "decimal": 0.06427074255772765,
+      "exact": "189303953958/2945414140625"
+    },
+    "delta_utility": {
+      "decimal": 0.01427074255772765,
+      "exact": "168132987707/11781656562500"
+    },
+    "false_approval_rate": {
+      "decimal": 0.104,
+      "exact": "13/125"
+    },
+    "false_rejection_rate": {
+      "decimal": 0.104,
+      "exact": "13/125"
+    },
+    "high": {
+      "information": {
+        "decimal": 0.7685258814479213,
+        "exact": "3843169777/5000703125"
+      },
+      "prediction": {
+        "decimal": 0.802803604743083,
+        "exact": "3173583/3953125"
+      },
+      "rules": [
+        {
+          "observation": [
+            0,
+            0
+          ],
+          "optimal_prediction": {
+            "decimal": 0.38,
+            "exact": "19/50"
+          },
+          "optimal_reports": [
+            0
+          ]
+        },
+        {
+          "observation": [
+            0,
+            1
+          ],
+          "optimal_prediction": {
+            "decimal": 0.7236363636363636,
+            "exact": "199/275"
+          },
+          "optimal_reports": [
+            1
+          ]
+        },
+        {
+          "observation": [
+            1,
+            0
+          ],
+          "optimal_prediction": {
+            "decimal": 0.62,
+            "exact": "31/50"
+          },
+          "optimal_reports": [
+            0
+          ]
+        },
+        {
+          "observation": [
+            1,
+            1
+          ],
+          "optimal_prediction": {
+            "decimal": 0.7843478260869565,
+            "exact": "451/575"
+          },
+          "optimal_reports": [
+            1
+          ]
+        }
+      ],
+      "score": {
+        "decimal": 1.5713294861910043,
+        "exact": "7857752272/5000703125"
+      }
+    },
+    "low": {
+      "information": {
+        "decimal": 0.7184,
+        "exact": "449/625"
+      },
+      "prediction": {
+        "decimal": 0.7886587436332767,
+        "exact": "11613/14725"
+      },
+      "rules": [
+        {
+          "observation": [
+            0
+          ],
+          "optimal_prediction": {
+            "decimal": 0.5789473684210527,
+            "exact": "11/19"
+          },
+          "optimal_reports": [
+            0,
+            1
+          ]
+        },
+        {
+          "observation": [
+            1
+          ],
+          "optimal_prediction": {
+            "decimal": 0.7419354838709677,
+            "exact": "23/31"
+          },
+          "optimal_reports": [
+            0,
+            1
+          ]
+        }
+      ],
+      "score": {
+        "decimal": 1.5070587436332767,
+        "exact": "554786/368125"
+      }
+    },
+    "wrong_payout_value_for_V1": {
+      "decimal": 0.0208,
+      "exact": "13/625"
+    }
+  },
+  "arithmetic": "fractions.Fraction",
+  "configurations": {
+    "G1_and_G2": {
+      "a": {
+        "decimal": 0.7,
+        "exact": "7/10"
+      },
+      "b": {
+        "decimal": 0.8,
+        "exact": "4/5"
+      },
+      "cost": {
+        "decimal": 0.05,
+        "exact": "1/20"
+      },
+      "multiplier": {
+        "decimal": 1.0,
+        "exact": "1"
+      },
+      "pi": {
+        "decimal": 0.5,
+        "exact": "1/2"
+      }
+    },
+    "G3": {
+      "a": {
+        "decimal": 0.9,
+        "exact": "9/10"
+      },
+      "b": {
+        "decimal": 0.75,
+        "exact": "3/4"
+      },
+      "cost": {
+        "decimal": 0.05,
+        "exact": "1/20"
+      },
+      "multiplier": {
+        "decimal": 1.0,
+        "exact": "1"
+      },
+      "pi": {
+        "decimal": 0.5,
+        "exact": "1/2"
+      }
+    },
+    "G4": {
+      "a": {
+        "decimal": 0.7,
+        "exact": "7/10"
+      },
+      "b": {
+        "decimal": 0.8,
+        "exact": "4/5"
+      },
+      "cost": {
+        "decimal": 0.05,
+        "exact": "1/20"
+      },
+      "multiplier": {
+        "decimal": 1.0,
+        "exact": "1"
+      },
+      "pi": {
+        "decimal": 0.8,
+        "exact": "4/5"
+      }
+    },
+    "shared": {
+      "f": {
+        "decimal": 0.0,
+        "exact": "0"
+      },
+      "fixed_reward": {
+        "decimal": 2.0,
+        "exact": "2"
+      },
+      "payout_value": {
+        "decimal": 1.0,
+        "exact": "1"
+      },
+      "reward_budget": {
+        "decimal": 6.0,
+        "exact": "6"
+      }
+    }
+  },
+  "scope": "Named-profile reference checks only; no exhaustive equilibrium search",
+  "spec_version": "ceav-m1-v1.0"
+}

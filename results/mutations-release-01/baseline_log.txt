@@ -1,0 +1,16 @@
+test_T04_roles (tests.test_core.CoreTests.test_T04_roles) ... ok
+test_T05_H_constants_keep_private_prediction (tests.test_core.CoreTests.test_T05_H_constants_keep_private_prediction) ... ok
+test_T05_predictions_and_exact_loss (tests.test_core.CoreTests.test_T05_predictions_and_exact_loss) ... ok
+test_T06_fixed_constant_and_zero_costs (tests.test_core.CoreTests.test_T06_fixed_constant_and_zero_costs) ... ok
+test_T09_G1_all_judges_and_branches (tests.test_core.CoreTests.test_T09_G1_all_judges_and_branches) ... ok
+test_T11_G4_post_signal_effort (tests.test_core.CoreTests.test_T11_G4_post_signal_effort) ... ok
+test_T12_peer_freeze_numeric_counterexample (tests.test_core.CoreTests.test_T12_peer_freeze_numeric_counterexample) ... ok
+test_T13_joint_expectation (tests.test_core.CoreTests.test_T13_joint_expectation) ... ok
+test_T29_runner_actual_failure_and_missing_ids (tests.test_io.IOTests.test_T29_runner_actual_failure_and_missing_ids) ... ok
+test_T18_binary_and_cyclic_relabel (tests.test_search.SearchTests.test_T18_binary_and_cyclic_relabel) ... ok
+test_T30_duplicate_submit_immutable_snapshot_cancel (tests.test_server.ServerTests.test_T30_duplicate_submit_immutable_snapshot_cancel) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 5.196s
+
+OK

@@ -1,0 +1,14 @@
+test_T30_duplicate_submit_immutable_snapshot_cancel (tests.test_server.ServerTests.test_T30_duplicate_submit_immutable_snapshot_cancel) ... FAIL
+
+======================================================================
+FAIL: test_T30_duplicate_submit_immutable_snapshot_cancel (tests.test_server.ServerTests.test_T30_duplicate_submit_immutable_snapshot_cancel)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\dell\Desktop\fundtogether_data_analyzing\results\mutations-release-01\M12\workspace\tests\test_server.py", line 178, in test_T30_duplicate_submit_immutable_snapshot_cancel
+    self.assertIsNotNone(process.poll())
+AssertionError: unexpectedly None
+
+----------------------------------------------------------------------
+Ran 1 test in 1.551s
+
+FAILED (failures=1)

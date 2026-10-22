@@ -1,0 +1,14 @@
+test_T04_roles (tests.test_core.CoreTests.test_T04_roles) ... FAIL
+
+======================================================================
+FAIL: test_T04_roles (tests.test_core.CoreTests.test_T04_roles)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\dell\Desktop\fundtogether_data_analyzing\results\mutations-release-01\M05\workspace\tests\test_core.py", line 79, in test_T04_roles
+    self.assertEqual(row["total_score"], F(fixture["scores"][i]))
+AssertionError: Fraction(6, 5) != Fraction(49, 25)
+
+----------------------------------------------------------------------
+Ran 1 test in 0.002s
+
+FAILED (failures=1)

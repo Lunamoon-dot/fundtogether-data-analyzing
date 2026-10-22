@@ -1,0 +1,16 @@
+--- ceav_m1/best_response.py
++++ ceav_m1/best_response.py
+@@ -30,10 +30,11 @@
+             values = []
+             for r in (0, 1):
+                 total = F(0)
+-                for s, reports, predictions in group:
++                for s, _, predictions in group:
+                     ref = predictions[j]
+                     shadow = ref + (2 * r - 1) * min(ref, 1 - ref)
+-                    total += s.probability / group_mass * quadratic(shadow, reports[k])
++                    for other, reports, _ in group:
++                        total += s.probability * other.probability / group_mass**2 * quadratic(shadow, reports[k])
+                 values.append(total)
+             best = max(values)
+             reports = [r for r in (0, 1) if values[r] == best]

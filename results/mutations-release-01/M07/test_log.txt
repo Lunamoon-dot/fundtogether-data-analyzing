@@ -1,0 +1,21 @@
+test_T09_G1_all_judges_and_branches (tests.test_core.CoreTests.test_T09_G1_all_judges_and_branches) ... FAIL
+
+======================================================================
+FAIL: test_T09_G1_all_judges_and_branches (tests.test_core.CoreTests.test_T09_G1_all_judges_and_branches)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\dell\Desktop\fundtogether_data_analyzing\results\mutations-release-01\M07\workspace\tests\test_core.py", line 146, in test_T09_G1_all_judges_and_branches
+    self.assertEqual(branch["low"]["observations"][0]["optimal_reports"], [0, 1])
+AssertionError: Lists differ: [0] != [0, 1]
+
+Second list contains 1 additional elements.
+First extra element 1:
+1
+
+- [0]
++ [0, 1]
+
+----------------------------------------------------------------------
+Ran 1 test in 0.031s
+
+FAILED (failures=1)

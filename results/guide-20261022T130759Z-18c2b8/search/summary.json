@@ -1,0 +1,39 @@
+{
+  "arithmetic": "rational_exact",
+  "branch_candidate_count": 432,
+  "branch_equilibrium_counts": {
+    "0": 10,
+    "1": 10
+  },
+  "claims_equilibrium_selection": false,
+  "claims_mixed_equilibrium_coverage": false,
+  "combination_rule": "Cartesian product of retained z=0 and z=1 branch IDs; choose both branches before analyzing metrics.",
+  "config": {
+    "a": "7/10",
+    "b": "4/5",
+    "costs": [
+      "1/20",
+      "1/20",
+      "1/20"
+    ],
+    "f": "0",
+    "fixed_reward": "2",
+    "lambda": "1",
+    "model_version": "ceav-m1-v1.0",
+    "operating_cost": "0",
+    "payout_value": "1",
+    "pi": "1/2",
+    "reward_budget": "6"
+  },
+  "effort_timing": "after_public_signal",
+  "enumeration_completed": true,
+  "equilibrium_concept": "pure_strategy_nash_in_reduced_normal_form",
+  "full_equilibrium_count": 100,
+  "full_profile_count": 46656,
+  "mechanism": "rbts",
+  "peer_tables_frozen_on_deviation": true,
+  "prediction_semantics": "unique_on_reachable_observations",
+  "scoring_rule": "rbts_eq8",
+  "status": "succeeded",
+  "strategy_scope": "pure_effort_report_with_continuous_optimal_predictions"
+}

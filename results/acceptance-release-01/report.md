@@ -1,0 +1,81 @@
+# CEAV-M1 — Acceptance audit
+
+PASS
+
+- GATE-0: pass
+- GATE-1: pass
+- GATE-2: pass
+- GATE-3: pass
+- GATE-4: pass
+- GATE-5: pass
+
+- pass: GATE-0 frozen raw documents, parent chain and reference preexistence
+- pass: F09 oracle raw bytes reproduce recorded pre-production identity
+- pass: B01 real browser scenario on current engine/web
+- pass: B02 real browser scenario on current engine/web
+- pass: B03 real browser scenario on current engine/web
+- pass: B04 real browser scenario on current engine/web
+- pass: B05 real browser scenario on current engine/web
+- pass: B06 real browser scenario on current engine/web
+- pass: B07 real browser scenario on current engine/web
+- pass: B08 real browser scenario on current engine/web
+- pass: B09 real browser scenario on current engine/web
+- pass: Complete all-suite is succeeded and pins current full source
+- pass: T01 all registered assertions actually executed
+- pass: T02 all registered assertions actually executed
+- pass: T03 all registered assertions actually executed
+- pass: T04 all registered assertions actually executed
+- pass: T05 all registered assertions actually executed
+- pass: T06 all registered assertions actually executed
+- pass: T07 all registered assertions actually executed
+- pass: T08 all registered assertions actually executed
+- pass: T09 all registered assertions actually executed
+- pass: T10 all registered assertions actually executed
+- pass: T11 all registered assertions actually executed
+- pass: T12 all registered assertions actually executed
+- pass: T13 all registered assertions actually executed
+- pass: T14 all registered assertions actually executed
+- pass: T15 all registered assertions actually executed
+- pass: T16 all registered assertions actually executed
+- pass: T17 all registered assertions actually executed
+- pass: T18 all registered assertions actually executed
+- pass: T19 all registered assertions actually executed
+- pass: T20 all registered assertions actually executed
+- pass: T21 all registered assertions actually executed
+- pass: T22 all registered assertions actually executed
+- pass: T23 all registered assertions actually executed
+- pass: T24 all registered assertions actually executed
+- pass: T25 all registered assertions actually executed
+- pass: T26 all registered assertions actually executed
+- pass: T27 all registered assertions actually executed
+- pass: T28 all registered assertions actually executed
+- pass: T29 all registered assertions actually executed
+- pass: T30 all registered assertions actually executed
+- pass: T31 all registered assertions actually executed
+- pass: T32 all registered assertions actually executed
+- pass: All-suite has no omitted/unregistered/skipped/zero tests
+- pass: F12 forward/reverse catalog exact differential
+- pass: T17 direct full-profile exact set equality
+- pass: Mutation baseline and relevant production/test sources
+- pass: M01 targeted semantic mutant killed
+- pass: M02 targeted semantic mutant killed
+- pass: M03 targeted semantic mutant killed
+- pass: M04 targeted semantic mutant killed
+- pass: M05 targeted semantic mutant killed
+- pass: M06 targeted semantic mutant killed
+- pass: M07 targeted semantic mutant killed
+- pass: M08 targeted semantic mutant killed
+- pass: M09 targeted semantic mutant killed
+- pass: M10 targeted semantic mutant killed
+- pass: M11 targeted semantic mutant killed
+- pass: M12 targeted semantic mutant killed
+- pass: M13 targeted semantic mutant killed
+- pass: Actual CLI/API byte equality G1-G4
+- pass: G1 standalone certificate independently replayed
+- pass: G2 standalone certificate independently replayed
+- pass: G3 standalone certificate independently replayed
+- pass: G4 standalone certificate independently replayed
+- pass: Equal-cap comparison, independent sub-certificates and nested downloads
+- pass: Measured analyze and exhaustive pure-search benchmarks
+
+Scope remains pure equilibrium in CEAV-M1; no mixed/coalition/selection, human behavior or production claim.

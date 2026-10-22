@@ -1,0 +1,17 @@
+test_T11_G4_post_signal_effort (tests.test_core.CoreTests.test_T11_G4_post_signal_effort) ... FAIL
+
+======================================================================
+FAIL: test_T11_G4_post_signal_effort (tests.test_core.CoreTests.test_T11_G4_post_signal_effort)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\dell\Desktop\fundtogether_data_analyzing\results\mutations-release-01\M02\workspace\tests\test_core.py", line 169, in test_T11_G4_post_signal_effort
+    self.assertEqual(result["equilibrium_status"], "not_equilibrium")
+AssertionError: 'exact_pure_equilibrium' != 'not_equilibrium'
+- exact_pure_equilibrium
++ not_equilibrium
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.031s
+
+FAILED (failures=1)

@@ -1,0 +1,8 @@
+### Result
+{"metadata":"Run run-20261022T094747-c23c05aadb · Bị gián đoạn\n\ntests · model ceav-m1-v1.0 · spec math-proof-r2 · freeze frozen_at_analyzer_implementation_start\nengine/source 00e30fe36b4bf2ab134ca51f712c1a3e1121c5ec45de2d9056fa268d46ec57b8\nconfig — · profile —\n\nmanifest.json\nreport.md\nrequest.json\nNạp input run vào bản nháp\nGhim run để đối chiếu\nConfig, profile và lệnh tái lập"}
+### Ran Playwright code
+```js
+await (async page => { await page.reload(); await page.locator("#connection").filter({hasText:"Engine sẵn sàng"}).waitFor(); await page.locator('[data-view="history"]').click(); await page.locator("[data-open-run=\"run-20261022T094747-c23c05aadb\"]").click(); await page.waitForFunction(id=>document.querySelector("#run-metadata").textContent.includes(id),"run-20261022T094747-c23c05aadb"); await page.screenshot({path:"C:/Users/dell/Desktop/fundtogether_data_analyzing/results/browser-B07-release-01/interrupted-after-restart.png"}); return {metadata: await page.locator("#run-metadata").innerText()}; })(page);
+```
+### Events
+- New console entries: .playwright-cli\console-2026-10-22T08-50-56-590Z.log#L20-L21

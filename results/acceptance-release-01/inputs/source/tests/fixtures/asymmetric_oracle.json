@@ -1,0 +1,649 @@
+{
+  "config": {
+    "a": "3/5",
+    "b": "4/5",
+    "costs": [
+      "0",
+      "1/50",
+      "3/20"
+    ],
+    "f": "1/10",
+    "fixed_reward": "8/5",
+    "lambda": "3/4",
+    "model_version": "ceav-m1-v1.0",
+    "operating_cost": "0",
+    "payout_value": "1",
+    "pi": "2/3",
+    "reward_budget": "6"
+  },
+  "derivation": "Independent six-action state enumeration; generated before production engine exists",
+  "expected": {
+    "accuracy": "13/25",
+    "branches": [
+      {
+        "candidate": {
+          "cost": "0",
+          "information": "0",
+          "prediction": "1",
+          "predictions": {
+            "(0, 0)": "1",
+            "(0, 1)": "1",
+            "(1,)": "13/20"
+          },
+          "reward": "17/20",
+          "score": "1",
+          "utility": "17/20"
+        },
+        "delta": "0",
+        "high_utility": "17/20",
+        "judge": 0,
+        "low_utility": "17/20",
+        "optimal_actions": [
+          "L0",
+          "L1",
+          "H00",
+          "H01",
+          "H10",
+          "H11"
+        ],
+        "regret": "0",
+        "trials": {
+          "H00": {
+            "cost": "0",
+            "information": "0",
+            "prediction": "1",
+            "predictions": {
+              "(0, 0)": "1",
+              "(0, 1)": "1"
+            },
+            "reward": "17/20",
+            "score": "1",
+            "utility": "17/20"
+          },
+          "H01": {
+            "cost": "0",
+            "information": "0",
+            "prediction": "1",
+            "predictions": {
+              "(0, 0)": "1",
+              "(0, 1)": "1"
+            },
+            "reward": "17/20",
+            "score": "1",
+            "utility": "17/20"
+          },
+          "H10": {
+            "cost": "0",
+            "information": "0",
+            "prediction": "1",
+            "predictions": {
+              "(0, 0)": "1",
+              "(0, 1)": "1"
+            },
+            "reward": "17/20",
+            "score": "1",
+            "utility": "17/20"
+          },
+          "H11": {
+            "cost": "0",
+            "information": "0",
+            "prediction": "1",
+            "predictions": {
+              "(0, 0)": "1",
+              "(0, 1)": "1"
+            },
+            "reward": "17/20",
+            "score": "1",
+            "utility": "17/20"
+          },
+          "L0": {
+            "cost": "0",
+            "information": "0",
+            "prediction": "1",
+            "predictions": {
+              "(0,)": "1"
+            },
+            "reward": "17/20",
+            "score": "1",
+            "utility": "17/20"
+          },
+          "L1": {
+            "cost": "0",
+            "information": "0",
+            "prediction": "1",
+            "predictions": {
+              "(0,)": "1"
+            },
+            "reward": "17/20",
+            "score": "1",
+            "utility": "17/20"
+          }
+        },
+        "z": 0
+      },
+      {
+        "candidate": {
+          "cost": "0",
+          "information": "7/20",
+          "prediction": "309/400",
+          "predictions": {
+            "(0, 0)": "1",
+            "(0, 1)": "1",
+            "(1,)": "13/20"
+          },
+          "reward": "1507/1600",
+          "score": "449/400",
+          "utility": "1507/1600"
+        },
+        "delta": "2187/145600",
+        "high_utility": "34831/36400",
+        "judge": 0,
+        "low_utility": "1507/1600",
+        "optimal_actions": [
+          "H00",
+          "H01",
+          "H10",
+          "H11"
+        ],
+        "regret": "2187/145600",
+        "trials": {
+          "H00": {
+            "cost": "0",
+            "information": "7/20",
+            "prediction": "1803/2275",
+            "predictions": {
+              "(1, 0)": "16/35",
+              "(1, 1)": "49/65"
+            },
+            "reward": "34831/36400",
+            "score": "10397/9100",
+            "utility": "34831/36400"
+          },
+          "H01": {
+            "cost": "0",
+            "information": "7/20",
+            "prediction": "1803/2275",
+            "predictions": {
+              "(1, 0)": "16/35",
+              "(1, 1)": "49/65"
+            },
+            "reward": "34831/36400",
+            "score": "10397/9100",
+            "utility": "34831/36400"
+          },
+          "H10": {
+            "cost": "0",
+            "information": "7/20",
+            "prediction": "1803/2275",
+            "predictions": {
+              "(1, 0)": "16/35",
+              "(1, 1)": "49/65"
+            },
+            "reward": "34831/36400",
+            "score": "10397/9100",
+            "utility": "34831/36400"
+          },
+          "H11": {
+            "cost": "0",
+            "information": "7/20",
+            "prediction": "1803/2275",
+            "predictions": {
+              "(1, 0)": "16/35",
+              "(1, 1)": "49/65"
+            },
+            "reward": "34831/36400",
+            "score": "10397/9100",
+            "utility": "34831/36400"
+          },
+          "L0": {
+            "cost": "0",
+            "information": "7/20",
+            "prediction": "309/400",
+            "predictions": {
+              "(1,)": "13/20"
+            },
+            "reward": "1507/1600",
+            "score": "449/400",
+            "utility": "1507/1600"
+          },
+          "L1": {
+            "cost": "0",
+            "information": "7/20",
+            "prediction": "309/400",
+            "predictions": {
+              "(1,)": "13/20"
+            },
+            "reward": "1507/1600",
+            "score": "449/400",
+            "utility": "1507/1600"
+          }
+        },
+        "z": 1
+      },
+      {
+        "candidate": {
+          "cost": "1/50",
+          "information": "26491/42875",
+          "prediction": "1",
+          "predictions": {
+            "(0, 0)": "0",
+            "(0, 1)": "0",
+            "(1, 0)": "0",
+            "(1, 1)": "0"
+          },
+          "reward": "56312/42875",
+          "score": "69366/42875",
+          "utility": "110909/85750"
+        },
+        "delta": "-1/50",
+        "high_utility": "79/50",
+        "judge": 1,
+        "low_utility": "8/5",
+        "optimal_actions": [
+          "L0"
+        ],
+        "regret": "26291/85750",
+        "trials": {
+          "H00": {
+            "cost": "1/50",
+            "information": "1",
+            "prediction": "1",
+            "predictions": {
+              "(0, 0)": "0",
+              "(0, 1)": "0"
+            },
+            "reward": "8/5",
+            "score": "2",
+            "utility": "79/50"
+          },
+          "H01": {
+            "cost": "1/50",
+            "information": "23419/42875",
+            "prediction": "1",
+            "predictions": {
+              "(0, 0)": "0",
+              "(0, 1)": "0"
+            },
+            "reward": "54008/42875",
+            "score": "66294/42875",
+            "utility": "106301/85750"
+          },
+          "H10": {
+            "cost": "1/50",
+            "information": "26491/42875",
+            "prediction": "1",
+            "predictions": {
+              "(0, 0)": "0",
+              "(0, 1)": "0"
+            },
+            "reward": "56312/42875",
+            "score": "69366/42875",
+            "utility": "110909/85750"
+          },
+          "H11": {
+            "cost": "1/50",
+            "information": "201/1225",
+            "prediction": "1",
+            "predictions": {
+              "(0, 0)": "0",
+              "(0, 1)": "0"
+            },
+            "reward": "1192/1225",
+            "score": "1426/1225",
+            "utility": "467/490"
+          },
+          "L0": {
+            "cost": "0",
+            "information": "1",
+            "prediction": "1",
+            "predictions": {
+              "(0,)": "0"
+            },
+            "reward": "8/5",
+            "score": "2",
+            "utility": "8/5"
+          },
+          "L1": {
+            "cost": "0",
+            "information": "201/1225",
+            "prediction": "1",
+            "predictions": {
+              "(0,)": "0"
+            },
+            "reward": "1192/1225",
+            "score": "1426/1225",
+            "utility": "1192/1225"
+          }
+        },
+        "z": 0
+      },
+      {
+        "candidate": {
+          "cost": "1/50",
+          "information": "0",
+          "prediction": "1",
+          "predictions": {
+            "(0, 0)": "0",
+            "(0, 1)": "0",
+            "(1, 0)": "0",
+            "(1, 1)": "0"
+          },
+          "reward": "17/20",
+          "score": "1",
+          "utility": "83/100"
+        },
+        "delta": "-1/50",
+        "high_utility": "83/100",
+        "judge": 1,
+        "low_utility": "17/20",
+        "optimal_actions": [
+          "L0",
+          "L1"
+        ],
+        "regret": "1/50",
+        "trials": {
+          "H00": {
+            "cost": "1/50",
+            "information": "0",
+            "prediction": "1",
+            "predictions": {
+              "(1, 0)": "0",
+              "(1, 1)": "0"
+            },
+            "reward": "17/20",
+            "score": "1",
+            "utility": "83/100"
+          },
+          "H01": {
+            "cost": "1/50",
+            "information": "0",
+            "prediction": "1",
+            "predictions": {
+              "(1, 0)": "0",
+              "(1, 1)": "0"
+            },
+            "reward": "17/20",
+            "score": "1",
+            "utility": "83/100"
+          },
+          "H10": {
+            "cost": "1/50",
+            "information": "0",
+            "prediction": "1",
+            "predictions": {
+              "(1, 0)": "0",
+              "(1, 1)": "0"
+            },
+            "reward": "17/20",
+            "score": "1",
+            "utility": "83/100"
+          },
+          "H11": {
+            "cost": "1/50",
+            "information": "0",
+            "prediction": "1",
+            "predictions": {
+              "(1, 0)": "0",
+              "(1, 1)": "0"
+            },
+            "reward": "17/20",
+            "score": "1",
+            "utility": "83/100"
+          },
+          "L0": {
+            "cost": "0",
+            "information": "0",
+            "prediction": "1",
+            "predictions": {
+              "(1,)": "0"
+            },
+            "reward": "17/20",
+            "score": "1",
+            "utility": "17/20"
+          },
+          "L1": {
+            "cost": "0",
+            "information": "0",
+            "prediction": "1",
+            "predictions": {
+              "(1,)": "0"
+            },
+            "reward": "17/20",
+            "score": "1",
+            "utility": "17/20"
+          }
+        },
+        "z": 1
+      },
+      {
+        "candidate": {
+          "cost": "0",
+          "information": "16/35",
+          "prediction": "921/1225",
+          "predictions": {
+            "(0,)": "16/35",
+            "(1, 0)": "1",
+            "(1, 1)": "1"
+          },
+          "reward": "4933/4900",
+          "score": "1481/1225",
+          "utility": "4933/4900"
+        },
+        "delta": "-5889/46550",
+        "high_utility": "11707/13300",
+        "judge": 2,
+        "low_utility": "4933/4900",
+        "optimal_actions": [
+          "L0",
+          "L1"
+        ],
+        "regret": "0",
+        "trials": {
+          "H00": {
+            "cost": "3/20",
+            "information": "16/35",
+            "prediction": "372/475",
+            "predictions": {
+              "(0, 0)": "13/20",
+              "(0, 1)": "28/95"
+            },
+            "reward": "6851/6650",
+            "score": "4124/3325",
+            "utility": "11707/13300"
+          },
+          "H01": {
+            "cost": "3/20",
+            "information": "16/35",
+            "prediction": "372/475",
+            "predictions": {
+              "(0, 0)": "13/20",
+              "(0, 1)": "28/95"
+            },
+            "reward": "6851/6650",
+            "score": "4124/3325",
+            "utility": "11707/13300"
+          },
+          "H10": {
+            "cost": "3/20",
+            "information": "16/35",
+            "prediction": "372/475",
+            "predictions": {
+              "(0, 0)": "13/20",
+              "(0, 1)": "28/95"
+            },
+            "reward": "6851/6650",
+            "score": "4124/3325",
+            "utility": "11707/13300"
+          },
+          "H11": {
+            "cost": "3/20",
+            "information": "16/35",
+            "prediction": "372/475",
+            "predictions": {
+              "(0, 0)": "13/20",
+              "(0, 1)": "28/95"
+            },
+            "reward": "6851/6650",
+            "score": "4124/3325",
+            "utility": "11707/13300"
+          },
+          "L0": {
+            "cost": "0",
+            "information": "16/35",
+            "prediction": "921/1225",
+            "predictions": {
+              "(0,)": "16/35"
+            },
+            "reward": "4933/4900",
+            "score": "1481/1225",
+            "utility": "4933/4900"
+          },
+          "L1": {
+            "cost": "0",
+            "information": "16/35",
+            "prediction": "921/1225",
+            "predictions": {
+              "(0,)": "16/35"
+            },
+            "reward": "4933/4900",
+            "score": "1481/1225",
+            "utility": "4933/4900"
+          }
+        },
+        "z": 0
+      },
+      {
+        "candidate": {
+          "cost": "3/20",
+          "information": "1657/2000",
+          "prediction": "1",
+          "predictions": {
+            "(0,)": "16/35",
+            "(1, 0)": "1",
+            "(1, 1)": "1"
+          },
+          "reward": "11771/8000",
+          "score": "3657/2000",
+          "utility": "10571/8000"
+        },
+        "delta": "-3/20",
+        "high_utility": "29/20",
+        "judge": 2,
+        "low_utility": "8/5",
+        "optimal_actions": [
+          "L1"
+        ],
+        "regret": "2229/8000",
+        "trials": {
+          "H00": {
+            "cost": "3/20",
+            "information": "51/100",
+            "prediction": "1",
+            "predictions": {
+              "(1, 0)": "1",
+              "(1, 1)": "1"
+            },
+            "reward": "493/400",
+            "score": "151/100",
+            "utility": "433/400"
+          },
+          "H01": {
+            "cost": "3/20",
+            "information": "1657/2000",
+            "prediction": "1",
+            "predictions": {
+              "(1, 0)": "1",
+              "(1, 1)": "1"
+            },
+            "reward": "11771/8000",
+            "score": "3657/2000",
+            "utility": "10571/8000"
+          },
+          "H10": {
+            "cost": "3/20",
+            "information": "1363/2000",
+            "prediction": "1",
+            "predictions": {
+              "(1, 0)": "1",
+              "(1, 1)": "1"
+            },
+            "reward": "10889/8000",
+            "score": "3363/2000",
+            "utility": "9689/8000"
+          },
+          "H11": {
+            "cost": "3/20",
+            "information": "1",
+            "prediction": "1",
+            "predictions": {
+              "(1, 0)": "1",
+              "(1, 1)": "1"
+            },
+            "reward": "8/5",
+            "score": "2",
+            "utility": "29/20"
+          },
+          "L0": {
+            "cost": "0",
+            "information": "51/100",
+            "prediction": "1",
+            "predictions": {
+              "(1,)": "1"
+            },
+            "reward": "493/400",
+            "score": "151/100",
+            "utility": "493/400"
+          },
+          "L1": {
+            "cost": "0",
+            "information": "1",
+            "prediction": "1",
+            "predictions": {
+              "(1,)": "1"
+            },
+            "reward": "8/5",
+            "score": "2",
+            "utility": "8/5"
+          }
+        },
+        "z": 1
+      }
+    ],
+    "expected_payout": "14/25",
+    "false_approval_rate": "14/25",
+    "false_rejection_rate": "11/25",
+    "tables": [
+      {
+        "(0, 0)": "1",
+        "(0, 1)": "1",
+        "(1,)": "13/20"
+      },
+      {
+        "(0, 0)": "0",
+        "(0, 1)": "0",
+        "(1, 0)": "0",
+        "(1, 1)": "0"
+      },
+      {
+        "(0,)": "16/35",
+        "(1, 0)": "1",
+        "(1, 1)": "1"
+      }
+    ],
+    "wrong_payout_value": "14/75"
+  },
+  "fixture_id": "F09",
+  "oracle_sha256": "6eadc3a96a123d51816358bde62ee777bbfef96e2cf42b722ee1745e23af6b41",
+  "profile": {
+    "0": [
+      "H00",
+      "H10",
+      "L1"
+    ],
+    "1": [
+      "L0",
+      "H11",
+      "H01"
+    ]
+  }
+}

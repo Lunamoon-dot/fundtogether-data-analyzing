@@ -1,0 +1,12 @@
+--- ceav_m1/server.py
++++ ceav_m1/server.py
+@@ -261,7 +261,8 @@
+             job.update(cancel_requested=True, stop_reason=reason)
+             process = job["process"]
+         if process is not None:
+-            terminate_tree(process)
++            job["status"] = "cancelled"
++            return self.snapshot(job)
+         job["done"].wait(5)
+         with self.lock:
+             return self.snapshot(job)

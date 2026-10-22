@@ -1,0 +1,860 @@
+{
+  "version": 1,
+  "artifact": {
+    "identity": "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\results\\case-evaluation-release-01",
+    "revision": "4f8642ea72e5b34aa49aa4d642cf3bbb80aa5734a93fae4d9d81d4926f076394",
+    "view": "REPORT.md and four CSV tables; linked acceptance evidence"
+  },
+  "categories": [
+    {
+      "id": "usefulness",
+      "label": "Usefulness and completeness",
+      "applicable": true,
+      "assessment": "All four requested cases, metrics, deviations and source lineage are covered."
+    },
+    {
+      "id": "clarity",
+      "label": "Analytical clarity",
+      "applicable": true,
+      "assessment": "Two minor issues: unescaped table pipes in definitions, and utility ranking described as stronger incentive in G2."
+    },
+    {
+      "id": "visual",
+      "label": "Visual and interaction consistency",
+      "applicable": false,
+      "assessment": "Static Markdown/CSV review; live application rendering and interactions were not rerun.",
+      "reason": "Static Markdown/CSV review; live application rendering and interactions were not rerun."
+    },
+    {
+      "id": "source",
+      "label": "Source authority and confidence",
+      "applicable": true,
+      "assessment": "Case/source manifests and current 51-file source identity match; acceptance evidence inspected, not all tests/browser flows rerun."
+    },
+    {
+      "id": "value",
+      "label": "Value accuracy",
+      "applicable": true,
+      "assessment": "Independently recomputed all four cases, 128 state rows, 24 Judge-Z best responses and 42 predictions with rational arithmetic."
+    },
+    {
+      "id": "chart",
+      "label": "Within-chart agreement",
+      "applicable": false,
+      "assessment": "No quantitative charts in this bundle.",
+      "reason": "No quantitative charts in this bundle."
+    },
+    {
+      "id": "details",
+      "label": "Complete source details",
+      "applicable": true,
+      "assessment": "All four cases have linked config, profile, source manifests, states and certificates."
+    },
+    {
+      "id": "consistency",
+      "label": "Cross-artifact consistency",
+      "applicable": true,
+      "assessment": "CSV outputs, source metrics, branch witnesses, checksums and numerical narrative agree."
+    },
+    {
+      "id": "quality",
+      "label": "Data-quality controls",
+      "applicable": true,
+      "assessment": "Four cases have complete distinct state/observation/branch coverage, valid probability masses and explicit conditional denominators."
+    },
+    {
+      "id": "conclusion",
+      "label": "Conclusion support",
+      "applicable": true,
+      "assessment": "Equilibrium/non-equilibrium conclusions and three comparisons are supported within M1; no behavioral or selection claim established."
+    }
+  ],
+  "units": [
+    {
+      "id": "G1",
+      "label": "G1",
+      "kind": "component",
+      "revision": "4f8642ea72e5b34aa49aa4d642cf3bbb80aa5734a93fae4d9d81d4926f076394",
+      "categories": {
+        "value": {
+          "checks": [
+            {
+              "id": "review",
+              "state": "passed",
+              "evidence": [
+                "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\reviews\\case_evaluation_release_01\\recheck_results.json"
+              ],
+              "revision": "4f8642ea72e5b34aa49aa4d642cf3bbb80aa5734a93fae4d9d81d4926f076394"
+            }
+          ],
+          "findings": []
+        },
+        "source": {
+          "checks": [
+            {
+              "id": "review",
+              "state": "passed",
+              "evidence": [
+                "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\reviews\\case_evaluation_release_01\\recheck_results.json"
+              ],
+              "revision": "4f8642ea72e5b34aa49aa4d642cf3bbb80aa5734a93fae4d9d81d4926f076394"
+            }
+          ],
+          "findings": []
+        },
+        "details": {
+          "checks": [
+            {
+              "id": "review",
+              "state": "passed",
+              "evidence": [
+                "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\reviews\\case_evaluation_release_01\\recheck_results.json"
+              ],
+              "revision": "4f8642ea72e5b34aa49aa4d642cf3bbb80aa5734a93fae4d9d81d4926f076394"
+            }
+          ],
+          "findings": []
+        },
+        "consistency": {
+          "checks": [
+            {
+              "id": "review",
+              "state": "passed",
+              "evidence": [
+                "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\reviews\\case_evaluation_release_01\\recheck_results.json"
+              ],
+              "revision": "4f8642ea72e5b34aa49aa4d642cf3bbb80aa5734a93fae4d9d81d4926f076394"
+            }
+          ],
+          "findings": []
+        },
+        "quality": {
+          "checks": [
+            {
+              "id": "review",
+              "state": "passed",
+              "evidence": [
+                "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\reviews\\case_evaluation_release_01\\recheck_results.json"
+              ],
+              "revision": "4f8642ea72e5b34aa49aa4d642cf3bbb80aa5734a93fae4d9d81d4926f076394"
+            }
+          ],
+          "findings": []
+        },
+        "conclusion": {
+          "checks": [
+            {
+              "id": "review",
+              "state": "passed",
+              "evidence": [
+                "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\reviews\\case_evaluation_release_01\\recheck_results.json"
+              ],
+              "revision": "4f8642ea72e5b34aa49aa4d642cf3bbb80aa5734a93fae4d9d81d4926f076394"
+            }
+          ],
+          "findings": []
+        },
+        "clarity": {
+          "checks": [
+            {
+              "id": "review",
+              "state": "passed",
+              "evidence": [
+                "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\reviews\\case_evaluation_release_01\\recheck_results.json"
+              ],
+              "revision": "4f8642ea72e5b34aa49aa4d642cf3bbb80aa5734a93fae4d9d81d4926f076394"
+            }
+          ],
+          "findings": []
+        }
+      }
+    },
+    {
+      "id": "G2",
+      "label": "G2",
+      "kind": "component",
+      "revision": "4f8642ea72e5b34aa49aa4d642cf3bbb80aa5734a93fae4d9d81d4926f076394",
+      "categories": {
+        "value": {
+          "checks": [
+            {
+              "id": "review",
+              "state": "passed",
+              "evidence": [
+                "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\reviews\\case_evaluation_release_01\\recheck_results.json"
+              ],
+              "revision": "4f8642ea72e5b34aa49aa4d642cf3bbb80aa5734a93fae4d9d81d4926f076394"
+            }
+          ],
+          "findings": []
+        },
+        "source": {
+          "checks": [
+            {
+              "id": "review",
+              "state": "passed",
+              "evidence": [
+                "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\reviews\\case_evaluation_release_01\\recheck_results.json"
+              ],
+              "revision": "4f8642ea72e5b34aa49aa4d642cf3bbb80aa5734a93fae4d9d81d4926f076394"
+            }
+          ],
+          "findings": []
+        },
+        "details": {
+          "checks": [
+            {
+              "id": "review",
+              "state": "passed",
+              "evidence": [
+                "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\reviews\\case_evaluation_release_01\\recheck_results.json"
+              ],
+              "revision": "4f8642ea72e5b34aa49aa4d642cf3bbb80aa5734a93fae4d9d81d4926f076394"
+            }
+          ],
+          "findings": []
+        },
+        "consistency": {
+          "checks": [
+            {
+              "id": "review",
+              "state": "passed",
+              "evidence": [
+                "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\reviews\\case_evaluation_release_01\\recheck_results.json"
+              ],
+              "revision": "4f8642ea72e5b34aa49aa4d642cf3bbb80aa5734a93fae4d9d81d4926f076394"
+            }
+          ],
+          "findings": []
+        },
+        "quality": {
+          "checks": [
+            {
+              "id": "review",
+              "state": "passed",
+              "evidence": [
+                "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\reviews\\case_evaluation_release_01\\recheck_results.json"
+              ],
+              "revision": "4f8642ea72e5b34aa49aa4d642cf3bbb80aa5734a93fae4d9d81d4926f076394"
+            }
+          ],
+          "findings": []
+        },
+        "conclusion": {
+          "checks": [
+            {
+              "id": "review",
+              "state": "passed",
+              "evidence": [
+                "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\reviews\\case_evaluation_release_01\\recheck_results.json"
+              ],
+              "revision": "4f8642ea72e5b34aa49aa4d642cf3bbb80aa5734a93fae4d9d81d4926f076394"
+            }
+          ],
+          "findings": []
+        },
+        "clarity": {
+          "checks": [
+            {
+              "id": "review",
+              "state": "failed",
+              "evidence": [
+                "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\results\\case-evaluation-release-01\\REPORT.md:128"
+              ],
+              "revision": "4f8642ea72e5b34aa49aa4d642cf3bbb80aa5734a93fae4d9d81d4926f076394"
+            }
+          ],
+          "findings": [
+            {
+              "id": "G2-wording",
+              "status": "open",
+              "checkIds": [
+                "review"
+              ],
+              "description": "Higher utility across equilibria described as stronger incentive",
+              "severity": "P2"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "G3",
+      "label": "G3",
+      "kind": "component",
+      "revision": "4f8642ea72e5b34aa49aa4d642cf3bbb80aa5734a93fae4d9d81d4926f076394",
+      "categories": {
+        "value": {
+          "checks": [
+            {
+              "id": "review",
+              "state": "passed",
+              "evidence": [
+                "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\reviews\\case_evaluation_release_01\\recheck_results.json"
+              ],
+              "revision": "4f8642ea72e5b34aa49aa4d642cf3bbb80aa5734a93fae4d9d81d4926f076394"
+            }
+          ],
+          "findings": []
+        },
+        "source": {
+          "checks": [
+            {
+              "id": "review",
+              "state": "passed",
+              "evidence": [
+                "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\reviews\\case_evaluation_release_01\\recheck_results.json"
+              ],
+              "revision": "4f8642ea72e5b34aa49aa4d642cf3bbb80aa5734a93fae4d9d81d4926f076394"
+            }
+          ],
+          "findings": []
+        },
+        "details": {
+          "checks": [
+            {
+              "id": "review",
+              "state": "passed",
+              "evidence": [
+                "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\reviews\\case_evaluation_release_01\\recheck_results.json"
+              ],
+              "revision": "4f8642ea72e5b34aa49aa4d642cf3bbb80aa5734a93fae4d9d81d4926f076394"
+            }
+          ],
+          "findings": []
+        },
+        "consistency": {
+          "checks": [
+            {
+              "id": "review",
+              "state": "passed",
+              "evidence": [
+                "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\reviews\\case_evaluation_release_01\\recheck_results.json"
+              ],
+              "revision": "4f8642ea72e5b34aa49aa4d642cf3bbb80aa5734a93fae4d9d81d4926f076394"
+            }
+          ],
+          "findings": []
+        },
+        "quality": {
+          "checks": [
+            {
+              "id": "review",
+              "state": "passed",
+              "evidence": [
+                "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\reviews\\case_evaluation_release_01\\recheck_results.json"
+              ],
+              "revision": "4f8642ea72e5b34aa49aa4d642cf3bbb80aa5734a93fae4d9d81d4926f076394"
+            }
+          ],
+          "findings": []
+        },
+        "conclusion": {
+          "checks": [
+            {
+              "id": "review",
+              "state": "passed",
+              "evidence": [
+                "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\reviews\\case_evaluation_release_01\\recheck_results.json"
+              ],
+              "revision": "4f8642ea72e5b34aa49aa4d642cf3bbb80aa5734a93fae4d9d81d4926f076394"
+            }
+          ],
+          "findings": []
+        },
+        "clarity": {
+          "checks": [
+            {
+              "id": "review",
+              "state": "passed",
+              "evidence": [
+                "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\reviews\\case_evaluation_release_01\\recheck_results.json"
+              ],
+              "revision": "4f8642ea72e5b34aa49aa4d642cf3bbb80aa5734a93fae4d9d81d4926f076394"
+            }
+          ],
+          "findings": []
+        }
+      }
+    },
+    {
+      "id": "G4",
+      "label": "G4",
+      "kind": "component",
+      "revision": "4f8642ea72e5b34aa49aa4d642cf3bbb80aa5734a93fae4d9d81d4926f076394",
+      "categories": {
+        "value": {
+          "checks": [
+            {
+              "id": "review",
+              "state": "passed",
+              "evidence": [
+                "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\reviews\\case_evaluation_release_01\\recheck_results.json"
+              ],
+              "revision": "4f8642ea72e5b34aa49aa4d642cf3bbb80aa5734a93fae4d9d81d4926f076394"
+            }
+          ],
+          "findings": []
+        },
+        "source": {
+          "checks": [
+            {
+              "id": "review",
+              "state": "passed",
+              "evidence": [
+                "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\reviews\\case_evaluation_release_01\\recheck_results.json"
+              ],
+              "revision": "4f8642ea72e5b34aa49aa4d642cf3bbb80aa5734a93fae4d9d81d4926f076394"
+            }
+          ],
+          "findings": []
+        },
+        "details": {
+          "checks": [
+            {
+              "id": "review",
+              "state": "passed",
+              "evidence": [
+                "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\reviews\\case_evaluation_release_01\\recheck_results.json"
+              ],
+              "revision": "4f8642ea72e5b34aa49aa4d642cf3bbb80aa5734a93fae4d9d81d4926f076394"
+            }
+          ],
+          "findings": []
+        },
+        "consistency": {
+          "checks": [
+            {
+              "id": "review",
+              "state": "passed",
+              "evidence": [
+                "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\reviews\\case_evaluation_release_01\\recheck_results.json"
+              ],
+              "revision": "4f8642ea72e5b34aa49aa4d642cf3bbb80aa5734a93fae4d9d81d4926f076394"
+            }
+          ],
+          "findings": []
+        },
+        "quality": {
+          "checks": [
+            {
+              "id": "review",
+              "state": "passed",
+              "evidence": [
+                "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\reviews\\case_evaluation_release_01\\recheck_results.json"
+              ],
+              "revision": "4f8642ea72e5b34aa49aa4d642cf3bbb80aa5734a93fae4d9d81d4926f076394"
+            }
+          ],
+          "findings": []
+        },
+        "conclusion": {
+          "checks": [
+            {
+              "id": "review",
+              "state": "passed",
+              "evidence": [
+                "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\reviews\\case_evaluation_release_01\\recheck_results.json"
+              ],
+              "revision": "4f8642ea72e5b34aa49aa4d642cf3bbb80aa5734a93fae4d9d81d4926f076394"
+            }
+          ],
+          "findings": []
+        },
+        "clarity": {
+          "checks": [
+            {
+              "id": "review",
+              "state": "passed",
+              "evidence": [
+                "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\reviews\\case_evaluation_release_01\\recheck_results.json"
+              ],
+              "revision": "4f8642ea72e5b34aa49aa4d642cf3bbb80aa5734a93fae4d9d81d4926f076394"
+            }
+          ],
+          "findings": []
+        }
+      }
+    },
+    {
+      "id": "overview",
+      "label": "overview",
+      "kind": "component",
+      "revision": "4f8642ea72e5b34aa49aa4d642cf3bbb80aa5734a93fae4d9d81d4926f076394",
+      "categories": {
+        "clarity": {
+          "checks": [
+            {
+              "id": "review",
+              "state": "passed",
+              "evidence": [
+                "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\results\\case-evaluation-release-01\\REPORT.md"
+              ],
+              "revision": "4f8642ea72e5b34aa49aa4d642cf3bbb80aa5734a93fae4d9d81d4926f076394"
+            }
+          ],
+          "findings": []
+        }
+      }
+    },
+    {
+      "id": "scope",
+      "label": "scope",
+      "kind": "component",
+      "revision": "4f8642ea72e5b34aa49aa4d642cf3bbb80aa5734a93fae4d9d81d4926f076394",
+      "categories": {
+        "clarity": {
+          "checks": [
+            {
+              "id": "review",
+              "state": "passed",
+              "evidence": [
+                "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\results\\case-evaluation-release-01\\REPORT.md"
+              ],
+              "revision": "4f8642ea72e5b34aa49aa4d642cf3bbb80aa5734a93fae4d9d81d4926f076394"
+            }
+          ],
+          "findings": []
+        }
+      }
+    },
+    {
+      "id": "definitions",
+      "label": "definitions",
+      "kind": "component",
+      "revision": "4f8642ea72e5b34aa49aa4d642cf3bbb80aa5734a93fae4d9d81d4926f076394",
+      "categories": {
+        "clarity": {
+          "checks": [
+            {
+              "id": "review",
+              "state": "failed",
+              "evidence": [
+                "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\results\\case-evaluation-release-01\\REPORT.md:43"
+              ],
+              "revision": "4f8642ea72e5b34aa49aa4d642cf3bbb80aa5734a93fae4d9d81d4926f076394"
+            }
+          ],
+          "findings": [
+            {
+              "id": "definitions-wording",
+              "status": "open",
+              "checkIds": [
+                "review"
+              ],
+              "description": "Unescaped inner pipes in conditional probability definitions",
+              "severity": "P2"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "inputs",
+      "label": "inputs",
+      "kind": "component",
+      "revision": "4f8642ea72e5b34aa49aa4d642cf3bbb80aa5734a93fae4d9d81d4926f076394",
+      "categories": {
+        "clarity": {
+          "checks": [
+            {
+              "id": "review",
+              "state": "passed",
+              "evidence": [
+                "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\results\\case-evaluation-release-01\\REPORT.md"
+              ],
+              "revision": "4f8642ea72e5b34aa49aa4d642cf3bbb80aa5734a93fae4d9d81d4926f076394"
+            }
+          ],
+          "findings": []
+        }
+      }
+    },
+    {
+      "id": "main-results",
+      "label": "main-results",
+      "kind": "component",
+      "revision": "4f8642ea72e5b34aa49aa4d642cf3bbb80aa5734a93fae4d9d81d4926f076394",
+      "categories": {
+        "clarity": {
+          "checks": [
+            {
+              "id": "review",
+              "state": "passed",
+              "evidence": [
+                "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\results\\case-evaluation-release-01\\REPORT.md"
+              ],
+              "revision": "4f8642ea72e5b34aa49aa4d642cf3bbb80aa5734a93fae4d9d81d4926f076394"
+            }
+          ],
+          "findings": []
+        }
+      }
+    },
+    {
+      "id": "comparison-section",
+      "label": "comparison-section",
+      "kind": "component",
+      "revision": "4f8642ea72e5b34aa49aa4d642cf3bbb80aa5734a93fae4d9d81d4926f076394",
+      "categories": {
+        "clarity": {
+          "checks": [
+            {
+              "id": "review",
+              "state": "passed",
+              "evidence": [
+                "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\results\\case-evaluation-release-01\\REPORT.md"
+              ],
+              "revision": "4f8642ea72e5b34aa49aa4d642cf3bbb80aa5734a93fae4d9d81d4926f076394"
+            }
+          ],
+          "findings": []
+        }
+      }
+    },
+    {
+      "id": "acceptance-section",
+      "label": "acceptance-section",
+      "kind": "component",
+      "revision": "4f8642ea72e5b34aa49aa4d642cf3bbb80aa5734a93fae4d9d81d4926f076394",
+      "categories": {
+        "clarity": {
+          "checks": [
+            {
+              "id": "review",
+              "state": "passed",
+              "evidence": [
+                "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\results\\case-evaluation-release-01\\REPORT.md"
+              ],
+              "revision": "4f8642ea72e5b34aa49aa4d642cf3bbb80aa5734a93fae4d9d81d4926f076394"
+            }
+          ],
+          "findings": []
+        }
+      }
+    },
+    {
+      "id": "question-1",
+      "label": "G1 equilibrium",
+      "kind": "question",
+      "revision": "4f8642ea72e5b34aa49aa4d642cf3bbb80aa5734a93fae4d9d81d4926f076394",
+      "categories": {
+        "usefulness": {
+          "checks": [
+            {
+              "id": "review",
+              "state": "passed",
+              "evidence": [
+                "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\reviews\\case_evaluation_release_01\\recheck_results.json"
+              ],
+              "revision": "4f8642ea72e5b34aa49aa4d642cf3bbb80aa5734a93fae4d9d81d4926f076394"
+            }
+          ],
+          "findings": []
+        }
+      }
+    },
+    {
+      "id": "question-2",
+      "label": "G2 low-effort equilibrium",
+      "kind": "question",
+      "revision": "4f8642ea72e5b34aa49aa4d642cf3bbb80aa5734a93fae4d9d81d4926f076394",
+      "categories": {
+        "usefulness": {
+          "checks": [
+            {
+              "id": "review",
+              "state": "passed",
+              "evidence": [
+                "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\reviews\\case_evaluation_release_01\\recheck_results.json"
+              ],
+              "revision": "4f8642ea72e5b34aa49aa4d642cf3bbb80aa5734a93fae4d9d81d4926f076394"
+            }
+          ],
+          "findings": []
+        }
+      }
+    },
+    {
+      "id": "question-3",
+      "label": "G3 deviation",
+      "kind": "question",
+      "revision": "4f8642ea72e5b34aa49aa4d642cf3bbb80aa5734a93fae4d9d81d4926f076394",
+      "categories": {
+        "usefulness": {
+          "checks": [
+            {
+              "id": "review",
+              "state": "passed",
+              "evidence": [
+                "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\reviews\\case_evaluation_release_01\\recheck_results.json"
+              ],
+              "revision": "4f8642ea72e5b34aa49aa4d642cf3bbb80aa5734a93fae4d9d81d4926f076394"
+            }
+          ],
+          "findings": []
+        }
+      }
+    },
+    {
+      "id": "question-4",
+      "label": "G4 timing",
+      "kind": "question",
+      "revision": "4f8642ea72e5b34aa49aa4d642cf3bbb80aa5734a93fae4d9d81d4926f076394",
+      "categories": {
+        "usefulness": {
+          "checks": [
+            {
+              "id": "review",
+              "state": "passed",
+              "evidence": [
+                "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\reviews\\case_evaluation_release_01\\recheck_results.json"
+              ],
+              "revision": "4f8642ea72e5b34aa49aa4d642cf3bbb80aa5734a93fae4d9d81d4926f076394"
+            }
+          ],
+          "findings": []
+        }
+      }
+    },
+    {
+      "id": "question-5",
+      "label": "Comparable decision metrics and costs",
+      "kind": "question",
+      "revision": "4f8642ea72e5b34aa49aa4d642cf3bbb80aa5734a93fae4d9d81d4926f076394",
+      "categories": {
+        "usefulness": {
+          "checks": [
+            {
+              "id": "review",
+              "state": "passed",
+              "evidence": [
+                "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\reviews\\case_evaluation_release_01\\recheck_results.json"
+              ],
+              "revision": "4f8642ea72e5b34aa49aa4d642cf3bbb80aa5734a93fae4d9d81d4926f076394"
+            }
+          ],
+          "findings": []
+        }
+      }
+    },
+    {
+      "id": "question-6",
+      "label": "Inspectable provenance",
+      "kind": "question",
+      "revision": "4f8642ea72e5b34aa49aa4d642cf3bbb80aa5734a93fae4d9d81d4926f076394",
+      "categories": {
+        "usefulness": {
+          "checks": [
+            {
+              "id": "review",
+              "state": "passed",
+              "evidence": [
+                "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\reviews\\case_evaluation_release_01\\recheck_results.json"
+              ],
+              "revision": "4f8642ea72e5b34aa49aa4d642cf3bbb80aa5734a93fae4d9d81d4926f076394"
+            }
+          ],
+          "findings": []
+        }
+      }
+    },
+    {
+      "id": "G1-vs-G2",
+      "label": "G1-vs-G2",
+      "kind": "comparison",
+      "revision": "4f8642ea72e5b34aa49aa4d642cf3bbb80aa5734a93fae4d9d81d4926f076394",
+      "categories": {
+        "conclusion": {
+          "checks": [
+            {
+              "id": "review",
+              "state": "passed",
+              "evidence": [
+                "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\results\\case-evaluation-release-01\\REPORT.md"
+              ],
+              "revision": "4f8642ea72e5b34aa49aa4d642cf3bbb80aa5734a93fae4d9d81d4926f076394"
+            }
+          ],
+          "findings": []
+        }
+      }
+    },
+    {
+      "id": "G1-vs-G3",
+      "label": "G1-vs-G3",
+      "kind": "comparison",
+      "revision": "4f8642ea72e5b34aa49aa4d642cf3bbb80aa5734a93fae4d9d81d4926f076394",
+      "categories": {
+        "conclusion": {
+          "checks": [
+            {
+              "id": "review",
+              "state": "passed",
+              "evidence": [
+                "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\results\\case-evaluation-release-01\\REPORT.md"
+              ],
+              "revision": "4f8642ea72e5b34aa49aa4d642cf3bbb80aa5734a93fae4d9d81d4926f076394"
+            }
+          ],
+          "findings": []
+        }
+      }
+    },
+    {
+      "id": "G1-vs-G4",
+      "label": "G1-vs-G4",
+      "kind": "comparison",
+      "revision": "4f8642ea72e5b34aa49aa4d642cf3bbb80aa5734a93fae4d9d81d4926f076394",
+      "categories": {
+        "conclusion": {
+          "checks": [
+            {
+              "id": "review",
+              "state": "passed",
+              "evidence": [
+                "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\results\\case-evaluation-release-01\\REPORT.md"
+              ],
+              "revision": "4f8642ea72e5b34aa49aa4d642cf3bbb80aa5734a93fae4d9d81d4926f076394"
+            }
+          ],
+          "findings": []
+        }
+      }
+    },
+    {
+      "id": "acceptance-claim",
+      "label": "Historical acceptance evidence on current source",
+      "kind": "claim",
+      "revision": "4f8642ea72e5b34aa49aa4d642cf3bbb80aa5734a93fae4d9d81d4926f076394",
+      "categories": {
+        "source": {
+          "checks": [
+            {
+              "id": "review",
+              "state": "passed",
+              "evidence": [
+                "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\reviews\\case_evaluation_release_01\\release_identity_checks.json"
+              ],
+              "revision": "4f8642ea72e5b34aa49aa4d642cf3bbb80aa5734a93fae4d9d81d4926f076394"
+            }
+          ],
+          "findings": []
+        },
+        "conclusion": {
+          "checks": [
+            {
+              "id": "review",
+              "state": "passed",
+              "evidence": [
+                "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\reviews\\case_evaluation_release_01\\release_identity_checks.json"
+              ],
+              "revision": "4f8642ea72e5b34aa49aa4d642cf3bbb80aa5734a93fae4d9d81d4926f076394"
+            }
+          ],
+          "findings": []
+        }
+      }
+    }
+  ]
+}

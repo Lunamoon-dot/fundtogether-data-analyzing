@@ -1,0 +1,25 @@
+test_T05_H_constants_keep_private_prediction (tests.test_core.CoreTests.test_T05_H_constants_keep_private_prediction) ... FAIL
+
+======================================================================
+FAIL: test_T05_H_constants_keep_private_prediction (tests.test_core.CoreTests.test_T05_H_constants_keep_private_prediction)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\dell\Desktop\fundtogether_data_analyzing\results\mutations-release-01\M04\workspace\tests\test_core.py", line 97, in test_T05_H_constants_keep_private_prediction
+    self.assertEqual(values, list(map(F, FIXTURES["F05"]["predictions"])))
+AssertionError: Lists differ: [Fraction(19, 50), Fraction(31, 50)] != [Fraction(8, 31), Fraction(11, 19), Fraction(8, 19), Fraction(23, 31)]
+
+First differing element 0:
+Fraction(19, 50)
+Fraction(8, 31)
+
+Second list contains 2 additional elements.
+First extra element 2:
+Fraction(8, 19)
+
+- [Fraction(19, 50), Fraction(31, 50)]
++ [Fraction(8, 31), Fraction(11, 19), Fraction(8, 19), Fraction(23, 31)]
+
+----------------------------------------------------------------------
+Ran 1 test in 0.006s
+
+FAILED (failures=1)

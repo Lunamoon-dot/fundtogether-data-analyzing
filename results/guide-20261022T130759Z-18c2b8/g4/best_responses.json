@@ -1,0 +1,1853 @@
+[
+  {
+    "best_efforts": [
+      "H"
+    ],
+    "best_utility": {
+      "decimal": 1.4889937190082645,
+      "exact": "2252103/1512500"
+    },
+    "branch_probability": {
+      "decimal": 0.38,
+      "exact": "19/50"
+    },
+    "candidate": {
+      "effort_cost": {
+        "decimal": 0.05,
+        "exact": "1/20"
+      },
+      "reward": {
+        "decimal": 1.5389937190082645,
+        "exact": "581932/378125"
+      },
+      "score": {
+        "decimal": 1.5389937190082645,
+        "exact": "581932/378125"
+      },
+      "utility": {
+        "decimal": 1.4889937190082645,
+        "exact": "2252103/1512500"
+      }
+    },
+    "candidate_action": "H01",
+    "delta_utility": {
+      "decimal": 0.052761032027655044,
+      "exact": "28808183/546012500"
+    },
+    "frozen_peer_tables": [
+      {
+        "judge": "B",
+        "table": [
+          {
+            "observation": [
+              0,
+              0
+            ],
+            "prediction": {
+              "decimal": 0.38,
+              "exact": "19/50"
+            }
+          },
+          {
+            "observation": [
+              0,
+              1
+            ],
+            "prediction": {
+              "decimal": 0.7236363636363636,
+              "exact": "199/275"
+            }
+          },
+          {
+            "observation": [
+              1,
+              0
+            ],
+            "prediction": {
+              "decimal": 0.62,
+              "exact": "31/50"
+            }
+          },
+          {
+            "observation": [
+              1,
+              1
+            ],
+            "prediction": {
+              "decimal": 0.7843478260869565,
+              "exact": "451/575"
+            }
+          }
+        ]
+      },
+      {
+        "judge": "C",
+        "table": [
+          {
+            "observation": [
+              0,
+              0
+            ],
+            "prediction": {
+              "decimal": 0.38,
+              "exact": "19/50"
+            }
+          },
+          {
+            "observation": [
+              0,
+              1
+            ],
+            "prediction": {
+              "decimal": 0.7236363636363636,
+              "exact": "199/275"
+            }
+          },
+          {
+            "observation": [
+              1,
+              0
+            ],
+            "prediction": {
+              "decimal": 0.62,
+              "exact": "31/50"
+            }
+          },
+          {
+            "observation": [
+              1,
+              1
+            ],
+            "prediction": {
+              "decimal": 0.7843478260869565,
+              "exact": "451/575"
+            }
+          }
+        ]
+      }
+    ],
+    "high": {
+      "information_score": {
+        "decimal": 0.7539755371900826,
+        "exact": "285097/378125"
+      },
+      "observations": [
+        {
+          "information_by_report": [
+            {
+              "decimal": 0.7407799008264463,
+              "exact": "1400537/1890625"
+            },
+            {
+              "decimal": 0.565088,
+              "exact": "17659/31250"
+            }
+          ],
+          "observation": [
+            0,
+            0
+          ],
+          "optimal_prediction": {
+            "decimal": 0.38,
+            "exact": "19/50"
+          },
+          "optimal_prediction_score": {
+            "decimal": 0.7644,
+            "exact": "1911/2500"
+          },
+          "optimal_reports": [
+            0
+          ],
+          "probability_given_z": {
+            "decimal": 0.42105263157894735,
+            "exact": "8/19"
+          },
+          "score_optimal_reports": [
+            0
+          ]
+        },
+        {
+          "information_by_report": [
+            {
+              "decimal": 0.6357964357625845,
+              "exact": "13222579/20796875"
+            },
+            {
+              "decimal": 0.7635723636363636,
+              "exact": "131239/171875"
+            }
+          ],
+          "observation": [
+            0,
+            1
+          ],
+          "optimal_prediction": {
+            "decimal": 0.7236363636363636,
+            "exact": "199/275"
+          },
+          "optimal_prediction_score": {
+            "decimal": 0.8000132231404958,
+            "exact": "60501/75625"
+          },
+          "optimal_reports": [
+            1
+          ],
+          "probability_given_z": {
+            "decimal": 0.5789473684210527,
+            "exact": "11/19"
+          },
+          "score_optimal_reports": [
+            1
+          ]
+        }
+      ],
+      "optimal_actions": [
+        "H01"
+      ],
+      "prediction_score": {
+        "decimal": 0.7850181818181818,
+        "exact": "5397/6875"
+      },
+      "score": {
+        "decimal": 1.5389937190082645,
+        "exact": "581932/378125"
+      },
+      "utility": {
+        "decimal": 1.4889937190082645,
+        "exact": "2252103/1512500"
+      }
+    },
+    "judge": "A",
+    "low": {
+      "information_score": {
+        "decimal": 0.68,
+        "exact": "17/25"
+      },
+      "observations": [
+        {
+          "information_by_report": [
+            {
+              "decimal": 0.68,
+              "exact": "17/25"
+            },
+            {
+              "decimal": 0.68,
+              "exact": "17/25"
+            }
+          ],
+          "observation": [
+            0
+          ],
+          "optimal_prediction": {
+            "decimal": 0.5789473684210527,
+            "exact": "11/19"
+          },
+          "optimal_prediction_score": {
+            "decimal": 0.7562326869806094,
+            "exact": "273/361"
+          },
+          "optimal_reports": [
+            0,
+            1
+          ],
+          "probability_given_z": {
+            "decimal": 1.0,
+            "exact": "1"
+          },
+          "score_optimal_reports": [
+            0,
+            1
+          ]
+        }
+      ],
+      "optimal_actions": [
+        "L0",
+        "L1"
+      ],
+      "prediction_score": {
+        "decimal": 0.7562326869806094,
+        "exact": "273/361"
+      },
+      "score": {
+        "decimal": 1.4362326869806095,
+        "exact": "12962/9025"
+      },
+      "utility": {
+        "decimal": 1.4362326869806095,
+        "exact": "12962/9025"
+      }
+    },
+    "optimal_actions": [
+      "H01"
+    ],
+    "prediction_optimum": "unique_on_reachable_observations",
+    "reference_judge": "B",
+    "regret": {
+      "decimal": 0.0,
+      "exact": "0"
+    },
+    "report_optimum": "listed_report_maps",
+    "scoring_peer_judge": "C",
+    "witness": null,
+    "z": 0
+  },
+  {
+    "best_efforts": [
+      "L"
+    ],
+    "best_utility": {
+      "decimal": 1.550468262226847,
+      "exact": "1490/961"
+    },
+    "branch_probability": {
+      "decimal": 0.62,
+      "exact": "31/50"
+    },
+    "candidate": {
+      "effort_cost": {
+        "decimal": 0.05,
+        "exact": "1/20"
+      },
+      "reward": {
+        "decimal": 1.591148182206232,
+        "exact": "81541372/51246875"
+      },
+      "score": {
+        "decimal": 1.591148182206232,
+        "exact": "81541372/51246875"
+      },
+      "utility": {
+        "decimal": 1.541148182206232,
+        "exact": "315916113/204987500"
+      }
+    },
+    "candidate_action": "H01",
+    "delta_utility": {
+      "decimal": -0.009320080020614947,
+      "exact": "-59225497/6354612500"
+    },
+    "frozen_peer_tables": [
+      {
+        "judge": "B",
+        "table": [
+          {
+            "observation": [
+              0,
+              0
+            ],
+            "prediction": {
+              "decimal": 0.38,
+              "exact": "19/50"
+            }
+          },
+          {
+            "observation": [
+              0,
+              1
+            ],
+            "prediction": {
+              "decimal": 0.7236363636363636,
+              "exact": "199/275"
+            }
+          },
+          {
+            "observation": [
+              1,
+              0
+            ],
+            "prediction": {
+              "decimal": 0.62,
+              "exact": "31/50"
+            }
+          },
+          {
+            "observation": [
+              1,
+              1
+            ],
+            "prediction": {
+              "decimal": 0.7843478260869565,
+              "exact": "451/575"
+            }
+          }
+        ]
+      },
+      {
+        "judge": "C",
+        "table": [
+          {
+            "observation": [
+              0,
+              0
+            ],
+            "prediction": {
+              "decimal": 0.38,
+              "exact": "19/50"
+            }
+          },
+          {
+            "observation": [
+              0,
+              1
+            ],
+            "prediction": {
+              "decimal": 0.7236363636363636,
+              "exact": "199/275"
+            }
+          },
+          {
+            "observation": [
+              1,
+              0
+            ],
+            "prediction": {
+              "decimal": 0.62,
+              "exact": "31/50"
+            }
+          },
+          {
+            "observation": [
+              1,
+              1
+            ],
+            "prediction": {
+              "decimal": 0.7843478260869565,
+              "exact": "451/575"
+            }
+          }
+        ]
+      }
+    ],
+    "high": {
+      "information_score": {
+        "decimal": 0.7774438343801451,
+        "exact": "39841567/51246875"
+      },
+      "observations": [
+        {
+          "information_by_report": [
+            {
+              "decimal": 0.7575948582230624,
+              "exact": "1252399/1653125"
+            },
+            {
+              "decimal": 0.62,
+              "exact": "31/50"
+            }
+          ],
+          "observation": [
+            1,
+            0
+          ],
+          "optimal_prediction": {
+            "decimal": 0.62,
+            "exact": "31/50"
+          },
+          "optimal_prediction_score": {
+            "decimal": 0.7644,
+            "exact": "1911/2500"
+          },
+          "optimal_reports": [
+            0
+          ],
+          "probability_given_z": {
+            "decimal": 0.25806451612903225,
+            "exact": "8/31"
+          },
+          "score_optimal_reports": [
+            0
+          ]
+        },
+        {
+          "information_by_report": [
+            {
+              "decimal": 0.7364887449658913,
+              "exact": "28002683/38021875"
+            },
+            {
+              "decimal": 0.7843478260869565,
+              "exact": "451/575"
+            }
+          ],
+          "observation": [
+            1,
+            1
+          ],
+          "optimal_prediction": {
+            "decimal": 0.7843478260869565,
+            "exact": "451/575"
+          },
+          "optimal_prediction_score": {
+            "decimal": 0.830853686200378,
+            "exact": "274701/330625"
+          },
+          "optimal_reports": [
+            1
+          ],
+          "probability_given_z": {
+            "decimal": 0.7419354838709677,
+            "exact": "23/31"
+          },
+          "score_optimal_reports": [
+            1
+          ]
+        }
+      ],
+      "optimal_actions": [
+        "H01"
+      ],
+      "prediction_score": {
+        "decimal": 0.8137043478260869,
+        "exact": "11697/14375"
+      },
+      "score": {
+        "decimal": 1.591148182206232,
+        "exact": "81541372/51246875"
+      },
+      "utility": {
+        "decimal": 1.541148182206232,
+        "exact": "315916113/204987500"
+      }
+    },
+    "judge": "A",
+    "low": {
+      "information_score": {
+        "decimal": 0.7419354838709677,
+        "exact": "23/31"
+      },
+      "observations": [
+        {
+          "information_by_report": [
+            {
+              "decimal": 0.7419354838709677,
+              "exact": "23/31"
+            },
+            {
+              "decimal": 0.7419354838709677,
+              "exact": "23/31"
+            }
+          ],
+          "observation": [
+            1
+          ],
+          "optimal_prediction": {
+            "decimal": 0.7419354838709677,
+            "exact": "23/31"
+          },
+          "optimal_prediction_score": {
+            "decimal": 0.8085327783558793,
+            "exact": "777/961"
+          },
+          "optimal_reports": [
+            0,
+            1
+          ],
+          "probability_given_z": {
+            "decimal": 1.0,
+            "exact": "1"
+          },
+          "score_optimal_reports": [
+            0,
+            1
+          ]
+        }
+      ],
+      "optimal_actions": [
+        "L0",
+        "L1"
+      ],
+      "prediction_score": {
+        "decimal": 0.8085327783558793,
+        "exact": "777/961"
+      },
+      "score": {
+        "decimal": 1.550468262226847,
+        "exact": "1490/961"
+      },
+      "utility": {
+        "decimal": 1.550468262226847,
+        "exact": "1490/961"
+      }
+    },
+    "optimal_actions": [
+      "L0",
+      "L1"
+    ],
+    "prediction_optimum": "unique_on_reachable_observations",
+    "reference_judge": "B",
+    "regret": {
+      "decimal": 0.009320080020614947,
+      "exact": "59225497/6354612500"
+    },
+    "report_optimum": "listed_report_maps",
+    "scoring_peer_judge": "C",
+    "witness": {
+      "action": "L0",
+      "conditional_gain": {
+        "decimal": 0.009320080020614947,
+        "exact": "59225497/6354612500"
+      },
+      "ex_ante_gain": {
+        "decimal": 0.005778449612781267,
+        "exact": "59225497/10249375000"
+      },
+      "judge": "A",
+      "new_utility": {
+        "decimal": 1.550468262226847,
+        "exact": "1490/961"
+      },
+      "old_utility": {
+        "decimal": 1.541148182206232,
+        "exact": "315916113/204987500"
+      },
+      "peer_predictions_remain_candidate_tables": true,
+      "prediction_map": [
+        {
+          "observation": [
+            1
+          ],
+          "prediction": {
+            "decimal": 0.7419354838709677,
+            "exact": "23/31"
+          }
+        }
+      ],
+      "z": 1
+    },
+    "z": 1
+  },
+  {
+    "best_efforts": [
+      "H"
+    ],
+    "best_utility": {
+      "decimal": 1.4889937190082645,
+      "exact": "2252103/1512500"
+    },
+    "branch_probability": {
+      "decimal": 0.38,
+      "exact": "19/50"
+    },
+    "candidate": {
+      "effort_cost": {
+        "decimal": 0.05,
+        "exact": "1/20"
+      },
+      "reward": {
+        "decimal": 1.5389937190082645,
+        "exact": "581932/378125"
+      },
+      "score": {
+        "decimal": 1.5389937190082645,
+        "exact": "581932/378125"
+      },
+      "utility": {
+        "decimal": 1.4889937190082645,
+        "exact": "2252103/1512500"
+      }
+    },
+    "candidate_action": "H01",
+    "delta_utility": {
+      "decimal": 0.052761032027655044,
+      "exact": "28808183/546012500"
+    },
+    "frozen_peer_tables": [
+      {
+        "judge": "C",
+        "table": [
+          {
+            "observation": [
+              0,
+              0
+            ],
+            "prediction": {
+              "decimal": 0.38,
+              "exact": "19/50"
+            }
+          },
+          {
+            "observation": [
+              0,
+              1
+            ],
+            "prediction": {
+              "decimal": 0.7236363636363636,
+              "exact": "199/275"
+            }
+          },
+          {
+            "observation": [
+              1,
+              0
+            ],
+            "prediction": {
+              "decimal": 0.62,
+              "exact": "31/50"
+            }
+          },
+          {
+            "observation": [
+              1,
+              1
+            ],
+            "prediction": {
+              "decimal": 0.7843478260869565,
+              "exact": "451/575"
+            }
+          }
+        ]
+      },
+      {
+        "judge": "A",
+        "table": [
+          {
+            "observation": [
+              0,
+              0
+            ],
+            "prediction": {
+              "decimal": 0.38,
+              "exact": "19/50"
+            }
+          },
+          {
+            "observation": [
+              0,
+              1
+            ],
+            "prediction": {
+              "decimal": 0.7236363636363636,
+              "exact": "199/275"
+            }
+          },
+          {
+            "observation": [
+              1,
+              0
+            ],
+            "prediction": {
+              "decimal": 0.62,
+              "exact": "31/50"
+            }
+          },
+          {
+            "observation": [
+              1,
+              1
+            ],
+            "prediction": {
+              "decimal": 0.7843478260869565,
+              "exact": "451/575"
+            }
+          }
+        ]
+      }
+    ],
+    "high": {
+      "information_score": {
+        "decimal": 0.7539755371900826,
+        "exact": "285097/378125"
+      },
+      "observations": [
+        {
+          "information_by_report": [
+            {
+              "decimal": 0.7407799008264463,
+              "exact": "1400537/1890625"
+            },
+            {
+              "decimal": 0.565088,
+              "exact": "17659/31250"
+            }
+          ],
+          "observation": [
+            0,
+            0
+          ],
+          "optimal_prediction": {
+            "decimal": 0.38,
+            "exact": "19/50"
+          },
+          "optimal_prediction_score": {
+            "decimal": 0.7644,
+            "exact": "1911/2500"
+          },
+          "optimal_reports": [
+            0
+          ],
+          "probability_given_z": {
+            "decimal": 0.42105263157894735,
+            "exact": "8/19"
+          },
+          "score_optimal_reports": [
+            0
+          ]
+        },
+        {
+          "information_by_report": [
+            {
+              "decimal": 0.6357964357625845,
+              "exact": "13222579/20796875"
+            },
+            {
+              "decimal": 0.7635723636363636,
+              "exact": "131239/171875"
+            }
+          ],
+          "observation": [
+            0,
+            1
+          ],
+          "optimal_prediction": {
+            "decimal": 0.7236363636363636,
+            "exact": "199/275"
+          },
+          "optimal_prediction_score": {
+            "decimal": 0.8000132231404958,
+            "exact": "60501/75625"
+          },
+          "optimal_reports": [
+            1
+          ],
+          "probability_given_z": {
+            "decimal": 0.5789473684210527,
+            "exact": "11/19"
+          },
+          "score_optimal_reports": [
+            1
+          ]
+        }
+      ],
+      "optimal_actions": [
+        "H01"
+      ],
+      "prediction_score": {
+        "decimal": 0.7850181818181818,
+        "exact": "5397/6875"
+      },
+      "score": {
+        "decimal": 1.5389937190082645,
+        "exact": "581932/378125"
+      },
+      "utility": {
+        "decimal": 1.4889937190082645,
+        "exact": "2252103/1512500"
+      }
+    },
+    "judge": "B",
+    "low": {
+      "information_score": {
+        "decimal": 0.68,
+        "exact": "17/25"
+      },
+      "observations": [
+        {
+          "information_by_report": [
+            {
+              "decimal": 0.68,
+              "exact": "17/25"
+            },
+            {
+              "decimal": 0.68,
+              "exact": "17/25"
+            }
+          ],
+          "observation": [
+            0
+          ],
+          "optimal_prediction": {
+            "decimal": 0.5789473684210527,
+            "exact": "11/19"
+          },
+          "optimal_prediction_score": {
+            "decimal": 0.7562326869806094,
+            "exact": "273/361"
+          },
+          "optimal_reports": [
+            0,
+            1
+          ],
+          "probability_given_z": {
+            "decimal": 1.0,
+            "exact": "1"
+          },
+          "score_optimal_reports": [
+            0,
+            1
+          ]
+        }
+      ],
+      "optimal_actions": [
+        "L0",
+        "L1"
+      ],
+      "prediction_score": {
+        "decimal": 0.7562326869806094,
+        "exact": "273/361"
+      },
+      "score": {
+        "decimal": 1.4362326869806095,
+        "exact": "12962/9025"
+      },
+      "utility": {
+        "decimal": 1.4362326869806095,
+        "exact": "12962/9025"
+      }
+    },
+    "optimal_actions": [
+      "H01"
+    ],
+    "prediction_optimum": "unique_on_reachable_observations",
+    "reference_judge": "C",
+    "regret": {
+      "decimal": 0.0,
+      "exact": "0"
+    },
+    "report_optimum": "listed_report_maps",
+    "scoring_peer_judge": "A",
+    "witness": null,
+    "z": 0
+  },
+  {
+    "best_efforts": [
+      "L"
+    ],
+    "best_utility": {
+      "decimal": 1.550468262226847,
+      "exact": "1490/961"
+    },
+    "branch_probability": {
+      "decimal": 0.62,
+      "exact": "31/50"
+    },
+    "candidate": {
+      "effort_cost": {
+        "decimal": 0.05,
+        "exact": "1/20"
+      },
+      "reward": {
+        "decimal": 1.591148182206232,
+        "exact": "81541372/51246875"
+      },
+      "score": {
+        "decimal": 1.591148182206232,
+        "exact": "81541372/51246875"
+      },
+      "utility": {
+        "decimal": 1.541148182206232,
+        "exact": "315916113/204987500"
+      }
+    },
+    "candidate_action": "H01",
+    "delta_utility": {
+      "decimal": -0.009320080020614947,
+      "exact": "-59225497/6354612500"
+    },
+    "frozen_peer_tables": [
+      {
+        "judge": "C",
+        "table": [
+          {
+            "observation": [
+              0,
+              0
+            ],
+            "prediction": {
+              "decimal": 0.38,
+              "exact": "19/50"
+            }
+          },
+          {
+            "observation": [
+              0,
+              1
+            ],
+            "prediction": {
+              "decimal": 0.7236363636363636,
+              "exact": "199/275"
+            }
+          },
+          {
+            "observation": [
+              1,
+              0
+            ],
+            "prediction": {
+              "decimal": 0.62,
+              "exact": "31/50"
+            }
+          },
+          {
+            "observation": [
+              1,
+              1
+            ],
+            "prediction": {
+              "decimal": 0.7843478260869565,
+              "exact": "451/575"
+            }
+          }
+        ]
+      },
+      {
+        "judge": "A",
+        "table": [
+          {
+            "observation": [
+              0,
+              0
+            ],
+            "prediction": {
+              "decimal": 0.38,
+              "exact": "19/50"
+            }
+          },
+          {
+            "observation": [
+              0,
+              1
+            ],
+            "prediction": {
+              "decimal": 0.7236363636363636,
+              "exact": "199/275"
+            }
+          },
+          {
+            "observation": [
+              1,
+              0
+            ],
+            "prediction": {
+              "decimal": 0.62,
+              "exact": "31/50"
+            }
+          },
+          {
+            "observation": [
+              1,
+              1
+            ],
+            "prediction": {
+              "decimal": 0.7843478260869565,
+              "exact": "451/575"
+            }
+          }
+        ]
+      }
+    ],
+    "high": {
+      "information_score": {
+        "decimal": 0.7774438343801451,
+        "exact": "39841567/51246875"
+      },
+      "observations": [
+        {
+          "information_by_report": [
+            {
+              "decimal": 0.7575948582230624,
+              "exact": "1252399/1653125"
+            },
+            {
+              "decimal": 0.62,
+              "exact": "31/50"
+            }
+          ],
+          "observation": [
+            1,
+            0
+          ],
+          "optimal_prediction": {
+            "decimal": 0.62,
+            "exact": "31/50"
+          },
+          "optimal_prediction_score": {
+            "decimal": 0.7644,
+            "exact": "1911/2500"
+          },
+          "optimal_reports": [
+            0
+          ],
+          "probability_given_z": {
+            "decimal": 0.25806451612903225,
+            "exact": "8/31"
+          },
+          "score_optimal_reports": [
+            0
+          ]
+        },
+        {
+          "information_by_report": [
+            {
+              "decimal": 0.7364887449658913,
+              "exact": "28002683/38021875"
+            },
+            {
+              "decimal": 0.7843478260869565,
+              "exact": "451/575"
+            }
+          ],
+          "observation": [
+            1,
+            1
+          ],
+          "optimal_prediction": {
+            "decimal": 0.7843478260869565,
+            "exact": "451/575"
+          },
+          "optimal_prediction_score": {
+            "decimal": 0.830853686200378,
+            "exact": "274701/330625"
+          },
+          "optimal_reports": [
+            1
+          ],
+          "probability_given_z": {
+            "decimal": 0.7419354838709677,
+            "exact": "23/31"
+          },
+          "score_optimal_reports": [
+            1
+          ]
+        }
+      ],
+      "optimal_actions": [
+        "H01"
+      ],
+      "prediction_score": {
+        "decimal": 0.8137043478260869,
+        "exact": "11697/14375"
+      },
+      "score": {
+        "decimal": 1.591148182206232,
+        "exact": "81541372/51246875"
+      },
+      "utility": {
+        "decimal": 1.541148182206232,
+        "exact": "315916113/204987500"
+      }
+    },
+    "judge": "B",
+    "low": {
+      "information_score": {
+        "decimal": 0.7419354838709677,
+        "exact": "23/31"
+      },
+      "observations": [
+        {
+          "information_by_report": [
+            {
+              "decimal": 0.7419354838709677,
+              "exact": "23/31"
+            },
+            {
+              "decimal": 0.7419354838709677,
+              "exact": "23/31"
+            }
+          ],
+          "observation": [
+            1
+          ],
+          "optimal_prediction": {
+            "decimal": 0.7419354838709677,
+            "exact": "23/31"
+          },
+          "optimal_prediction_score": {
+            "decimal": 0.8085327783558793,
+            "exact": "777/961"
+          },
+          "optimal_reports": [
+            0,
+            1
+          ],
+          "probability_given_z": {
+            "decimal": 1.0,
+            "exact": "1"
+          },
+          "score_optimal_reports": [
+            0,
+            1
+          ]
+        }
+      ],
+      "optimal_actions": [
+        "L0",
+        "L1"
+      ],
+      "prediction_score": {
+        "decimal": 0.8085327783558793,
+        "exact": "777/961"
+      },
+      "score": {
+        "decimal": 1.550468262226847,
+        "exact": "1490/961"
+      },
+      "utility": {
+        "decimal": 1.550468262226847,
+        "exact": "1490/961"
+      }
+    },
+    "optimal_actions": [
+      "L0",
+      "L1"
+    ],
+    "prediction_optimum": "unique_on_reachable_observations",
+    "reference_judge": "C",
+    "regret": {
+      "decimal": 0.009320080020614947,
+      "exact": "59225497/6354612500"
+    },
+    "report_optimum": "listed_report_maps",
+    "scoring_peer_judge": "A",
+    "witness": {
+      "action": "L0",
+      "conditional_gain": {
+        "decimal": 0.009320080020614947,
+        "exact": "59225497/6354612500"
+      },
+      "ex_ante_gain": {
+        "decimal": 0.005778449612781267,
+        "exact": "59225497/10249375000"
+      },
+      "judge": "B",
+      "new_utility": {
+        "decimal": 1.550468262226847,
+        "exact": "1490/961"
+      },
+      "old_utility": {
+        "decimal": 1.541148182206232,
+        "exact": "315916113/204987500"
+      },
+      "peer_predictions_remain_candidate_tables": true,
+      "prediction_map": [
+        {
+          "observation": [
+            1
+          ],
+          "prediction": {
+            "decimal": 0.7419354838709677,
+            "exact": "23/31"
+          }
+        }
+      ],
+      "z": 1
+    },
+    "z": 1
+  },
+  {
+    "best_efforts": [
+      "H"
+    ],
+    "best_utility": {
+      "decimal": 1.4889937190082645,
+      "exact": "2252103/1512500"
+    },
+    "branch_probability": {
+      "decimal": 0.38,
+      "exact": "19/50"
+    },
+    "candidate": {
+      "effort_cost": {
+        "decimal": 0.05,
+        "exact": "1/20"
+      },
+      "reward": {
+        "decimal": 1.5389937190082645,
+        "exact": "581932/378125"
+      },
+      "score": {
+        "decimal": 1.5389937190082645,
+        "exact": "581932/378125"
+      },
+      "utility": {
+        "decimal": 1.4889937190082645,
+        "exact": "2252103/1512500"
+      }
+    },
+    "candidate_action": "H01",
+    "delta_utility": {
+      "decimal": 0.052761032027655044,
+      "exact": "28808183/546012500"
+    },
+    "frozen_peer_tables": [
+      {
+        "judge": "A",
+        "table": [
+          {
+            "observation": [
+              0,
+              0
+            ],
+            "prediction": {
+              "decimal": 0.38,
+              "exact": "19/50"
+            }
+          },
+          {
+            "observation": [
+              0,
+              1
+            ],
+            "prediction": {
+              "decimal": 0.7236363636363636,
+              "exact": "199/275"
+            }
+          },
+          {
+            "observation": [
+              1,
+              0
+            ],
+            "prediction": {
+              "decimal": 0.62,
+              "exact": "31/50"
+            }
+          },
+          {
+            "observation": [
+              1,
+              1
+            ],
+            "prediction": {
+              "decimal": 0.7843478260869565,
+              "exact": "451/575"
+            }
+          }
+        ]
+      },
+      {
+        "judge": "B",
+        "table": [
+          {
+            "observation": [
+              0,
+              0
+            ],
+            "prediction": {
+              "decimal": 0.38,
+              "exact": "19/50"
+            }
+          },
+          {
+            "observation": [
+              0,
+              1
+            ],
+            "prediction": {
+              "decimal": 0.7236363636363636,
+              "exact": "199/275"
+            }
+          },
+          {
+            "observation": [
+              1,
+              0
+            ],
+            "prediction": {
+              "decimal": 0.62,
+              "exact": "31/50"
+            }
+          },
+          {
+            "observation": [
+              1,
+              1
+            ],
+            "prediction": {
+              "decimal": 0.7843478260869565,
+              "exact": "451/575"
+            }
+          }
+        ]
+      }
+    ],
+    "high": {
+      "information_score": {
+        "decimal": 0.7539755371900826,
+        "exact": "285097/378125"
+      },
+      "observations": [
+        {
+          "information_by_report": [
+            {
+              "decimal": 0.7407799008264463,
+              "exact": "1400537/1890625"
+            },
+            {
+              "decimal": 0.565088,
+              "exact": "17659/31250"
+            }
+          ],
+          "observation": [
+            0,
+            0
+          ],
+          "optimal_prediction": {
+            "decimal": 0.38,
+            "exact": "19/50"
+          },
+          "optimal_prediction_score": {
+            "decimal": 0.7644,
+            "exact": "1911/2500"
+          },
+          "optimal_reports": [
+            0
+          ],
+          "probability_given_z": {
+            "decimal": 0.42105263157894735,
+            "exact": "8/19"
+          },
+          "score_optimal_reports": [
+            0
+          ]
+        },
+        {
+          "information_by_report": [
+            {
+              "decimal": 0.6357964357625845,
+              "exact": "13222579/20796875"
+            },
+            {
+              "decimal": 0.7635723636363636,
+              "exact": "131239/171875"
+            }
+          ],
+          "observation": [
+            0,
+            1
+          ],
+          "optimal_prediction": {
+            "decimal": 0.7236363636363636,
+            "exact": "199/275"
+          },
+          "optimal_prediction_score": {
+            "decimal": 0.8000132231404958,
+            "exact": "60501/75625"
+          },
+          "optimal_reports": [
+            1
+          ],
+          "probability_given_z": {
+            "decimal": 0.5789473684210527,
+            "exact": "11/19"
+          },
+          "score_optimal_reports": [
+            1
+          ]
+        }
+      ],
+      "optimal_actions": [
+        "H01"
+      ],
+      "prediction_score": {
+        "decimal": 0.7850181818181818,
+        "exact": "5397/6875"
+      },
+      "score": {
+        "decimal": 1.5389937190082645,
+        "exact": "581932/378125"
+      },
+      "utility": {
+        "decimal": 1.4889937190082645,
+        "exact": "2252103/1512500"
+      }
+    },
+    "judge": "C",
+    "low": {
+      "information_score": {
+        "decimal": 0.68,
+        "exact": "17/25"
+      },
+      "observations": [
+        {
+          "information_by_report": [
+            {
+              "decimal": 0.68,
+              "exact": "17/25"
+            },
+            {
+              "decimal": 0.68,
+              "exact": "17/25"
+            }
+          ],
+          "observation": [
+            0
+          ],
+          "optimal_prediction": {
+            "decimal": 0.5789473684210527,
+            "exact": "11/19"
+          },
+          "optimal_prediction_score": {
+            "decimal": 0.7562326869806094,
+            "exact": "273/361"
+          },
+          "optimal_reports": [
+            0,
+            1
+          ],
+          "probability_given_z": {
+            "decimal": 1.0,
+            "exact": "1"
+          },
+          "score_optimal_reports": [
+            0,
+            1
+          ]
+        }
+      ],
+      "optimal_actions": [
+        "L0",
+        "L1"
+      ],
+      "prediction_score": {
+        "decimal": 0.7562326869806094,
+        "exact": "273/361"
+      },
+      "score": {
+        "decimal": 1.4362326869806095,
+        "exact": "12962/9025"
+      },
+      "utility": {
+        "decimal": 1.4362326869806095,
+        "exact": "12962/9025"
+      }
+    },
+    "optimal_actions": [
+      "H01"
+    ],
+    "prediction_optimum": "unique_on_reachable_observations",
+    "reference_judge": "A",
+    "regret": {
+      "decimal": 0.0,
+      "exact": "0"
+    },
+    "report_optimum": "listed_report_maps",
+    "scoring_peer_judge": "B",
+    "witness": null,
+    "z": 0
+  },
+  {
+    "best_efforts": [
+      "L"
+    ],
+    "best_utility": {
+      "decimal": 1.550468262226847,
+      "exact": "1490/961"
+    },
+    "branch_probability": {
+      "decimal": 0.62,
+      "exact": "31/50"
+    },
+    "candidate": {
+      "effort_cost": {
+        "decimal": 0.05,
+        "exact": "1/20"
+      },
+      "reward": {
+        "decimal": 1.591148182206232,
+        "exact": "81541372/51246875"
+      },
+      "score": {
+        "decimal": 1.591148182206232,
+        "exact": "81541372/51246875"
+      },
+      "utility": {
+        "decimal": 1.541148182206232,
+        "exact": "315916113/204987500"
+      }
+    },
+    "candidate_action": "H01",
+    "delta_utility": {
+      "decimal": -0.009320080020614947,
+      "exact": "-59225497/6354612500"
+    },
+    "frozen_peer_tables": [
+      {
+        "judge": "A",
+        "table": [
+          {
+            "observation": [
+              0,
+              0
+            ],
+            "prediction": {
+              "decimal": 0.38,
+              "exact": "19/50"
+            }
+          },
+          {
+            "observation": [
+              0,
+              1
+            ],
+            "prediction": {
+              "decimal": 0.7236363636363636,
+              "exact": "199/275"
+            }
+          },
+          {
+            "observation": [
+              1,
+              0
+            ],
+            "prediction": {
+              "decimal": 0.62,
+              "exact": "31/50"
+            }
+          },
+          {
+            "observation": [
+              1,
+              1
+            ],
+            "prediction": {
+              "decimal": 0.7843478260869565,
+              "exact": "451/575"
+            }
+          }
+        ]
+      },
+      {
+        "judge": "B",
+        "table": [
+          {
+            "observation": [
+              0,
+              0
+            ],
+            "prediction": {
+              "decimal": 0.38,
+              "exact": "19/50"
+            }
+          },
+          {
+            "observation": [
+              0,
+              1
+            ],
+            "prediction": {
+              "decimal": 0.7236363636363636,
+              "exact": "199/275"
+            }
+          },
+          {
+            "observation": [
+              1,
+              0
+            ],
+            "prediction": {
+              "decimal": 0.62,
+              "exact": "31/50"
+            }
+          },
+          {
+            "observation": [
+              1,
+              1
+            ],
+            "prediction": {
+              "decimal": 0.7843478260869565,
+              "exact": "451/575"
+            }
+          }
+        ]
+      }
+    ],
+    "high": {
+      "information_score": {
+        "decimal": 0.7774438343801451,
+        "exact": "39841567/51246875"
+      },
+      "observations": [
+        {
+          "information_by_report": [
+            {
+              "decimal": 0.7575948582230624,
+              "exact": "1252399/1653125"
+            },
+            {
+              "decimal": 0.62,
+              "exact": "31/50"
+            }
+          ],
+          "observation": [
+            1,
+            0
+          ],
+          "optimal_prediction": {
+            "decimal": 0.62,
+            "exact": "31/50"
+          },
+          "optimal_prediction_score": {
+            "decimal": 0.7644,
+            "exact": "1911/2500"
+          },
+          "optimal_reports": [
+            0
+          ],
+          "probability_given_z": {
+            "decimal": 0.25806451612903225,
+            "exact": "8/31"
+          },
+          "score_optimal_reports": [
+            0
+          ]
+        },
+        {
+          "information_by_report": [
+            {
+              "decimal": 0.7364887449658913,
+              "exact": "28002683/38021875"
+            },
+            {
+              "decimal": 0.7843478260869565,
+              "exact": "451/575"
+            }
+          ],
+          "observation": [
+            1,
+            1
+          ],
+          "optimal_prediction": {
+            "decimal": 0.7843478260869565,
+            "exact": "451/575"
+          },
+          "optimal_prediction_score": {
+            "decimal": 0.830853686200378,
+            "exact": "274701/330625"
+          },
+          "optimal_reports": [
+            1
+          ],
+          "probability_given_z": {
+            "decimal": 0.7419354838709677,
+            "exact": "23/31"
+          },
+          "score_optimal_reports": [
+            1
+          ]
+        }
+      ],
+      "optimal_actions": [
+        "H01"
+      ],
+      "prediction_score": {
+        "decimal": 0.8137043478260869,
+        "exact": "11697/14375"
+      },
+      "score": {
+        "decimal": 1.591148182206232,
+        "exact": "81541372/51246875"
+      },
+      "utility": {
+        "decimal": 1.541148182206232,
+        "exact": "315916113/204987500"
+      }
+    },
+    "judge": "C",
+    "low": {
+      "information_score": {
+        "decimal": 0.7419354838709677,
+        "exact": "23/31"
+      },
+      "observations": [
+        {
+          "information_by_report": [
+            {
+              "decimal": 0.7419354838709677,
+              "exact": "23/31"
+            },
+            {
+              "decimal": 0.7419354838709677,
+              "exact": "23/31"
+            }
+          ],
+          "observation": [
+            1
+          ],
+          "optimal_prediction": {
+            "decimal": 0.7419354838709677,
+            "exact": "23/31"
+          },
+          "optimal_prediction_score": {
+            "decimal": 0.8085327783558793,
+            "exact": "777/961"
+          },
+          "optimal_reports": [
+            0,
+            1
+          ],
+          "probability_given_z": {
+            "decimal": 1.0,
+            "exact": "1"
+          },
+          "score_optimal_reports": [
+            0,
+            1
+          ]
+        }
+      ],
+      "optimal_actions": [
+        "L0",
+        "L1"
+      ],
+      "prediction_score": {
+        "decimal": 0.8085327783558793,
+        "exact": "777/961"
+      },
+      "score": {
+        "decimal": 1.550468262226847,
+        "exact": "1490/961"
+      },
+      "utility": {
+        "decimal": 1.550468262226847,
+        "exact": "1490/961"
+      }
+    },
+    "optimal_actions": [
+      "L0",
+      "L1"
+    ],
+    "prediction_optimum": "unique_on_reachable_observations",
+    "reference_judge": "A",
+    "regret": {
+      "decimal": 0.009320080020614947,
+      "exact": "59225497/6354612500"
+    },
+    "report_optimum": "listed_report_maps",
+    "scoring_peer_judge": "B",
+    "witness": {
+      "action": "L0",
+      "conditional_gain": {
+        "decimal": 0.009320080020614947,
+        "exact": "59225497/6354612500"
+      },
+      "ex_ante_gain": {
+        "decimal": 0.005778449612781267,
+        "exact": "59225497/10249375000"
+      },
+      "judge": "C",
+      "new_utility": {
+        "decimal": 1.550468262226847,
+        "exact": "1490/961"
+      },
+      "old_utility": {
+        "decimal": 1.541148182206232,
+        "exact": "315916113/204987500"
+      },
+      "peer_predictions_remain_candidate_tables": true,
+      "prediction_map": [
+        {
+          "observation": [
+            1
+          ],
+          "prediction": {
+            "decimal": 0.7419354838709677,
+            "exact": "23/31"
+          }
+        }
+      ],
+      "z": 1
+    },
+    "z": 1
+  }
+]

@@ -1,0 +1,14 @@
+test_T06_fixed_constant_and_zero_costs (tests.test_core.CoreTests.test_T06_fixed_constant_and_zero_costs) ... FAIL
+
+======================================================================
+FAIL: test_T06_fixed_constant_and_zero_costs (tests.test_core.CoreTests.test_T06_fixed_constant_and_zero_costs)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\dell\Desktop\fundtogether_data_analyzing\results\mutations-release-01\M09\workspace\tests\test_core.py", line 112, in test_T06_fixed_constant_and_zero_costs
+    self.assertEqual(b["regret"], c.costs[i])
+AssertionError: Fraction(0, 1) != Fraction(1, 50)
+
+----------------------------------------------------------------------
+Ran 1 test in 0.039s
+
+FAILED (failures=1)

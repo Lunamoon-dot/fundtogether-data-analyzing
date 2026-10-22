@@ -1,0 +1,328 @@
+{
+  "axes": {
+    "lambda": [
+      "0",
+      "1/2",
+      "1",
+      "2"
+    ]
+  },
+  "rows": [
+    {
+      "A_z0_delta_utility": {
+        "decimal": -0.05,
+        "exact": "-1/20"
+      },
+      "A_z0_regret": {
+        "decimal": 0.05,
+        "exact": "1/20"
+      },
+      "A_z1_delta_utility": {
+        "decimal": -0.05,
+        "exact": "-1/20"
+      },
+      "A_z1_regret": {
+        "decimal": 0.05,
+        "exact": "1/20"
+      },
+      "B_z0_delta_utility": {
+        "decimal": -0.05,
+        "exact": "-1/20"
+      },
+      "B_z0_regret": {
+        "decimal": 0.05,
+        "exact": "1/20"
+      },
+      "B_z1_delta_utility": {
+        "decimal": -0.05,
+        "exact": "-1/20"
+      },
+      "B_z1_regret": {
+        "decimal": 0.05,
+        "exact": "1/20"
+      },
+      "C_z0_delta_utility": {
+        "decimal": -0.05,
+        "exact": "-1/20"
+      },
+      "C_z0_regret": {
+        "decimal": 0.05,
+        "exact": "1/20"
+      },
+      "C_z1_delta_utility": {
+        "decimal": -0.05,
+        "exact": "-1/20"
+      },
+      "C_z1_regret": {
+        "decimal": 0.05,
+        "exact": "1/20"
+      },
+      "accuracy": {
+        "decimal": 0.896,
+        "exact": "112/125"
+      },
+      "cash_review_cost": {
+        "decimal": 0.0,
+        "exact": "0"
+      },
+      "config_hash": "7d366e71f253476a272d32f28b400fc375c0addf20bbcff4fad43b2cfd2a0939",
+      "config_json": "{\"a\": \"7/10\", \"b\": \"4/5\", \"costs\": [\"1/20\", \"1/20\", \"1/20\"], \"f\": \"0\", \"fixed_reward\": \"2\", \"lambda\": \"0\", \"model_version\": \"ceav-m1-v1.0\", \"operating_cost\": \"0\", \"payout_value\": \"1\", \"pi\": \"1/2\", \"reward_budget\": \"6\"}",
+      "equilibrium_status": "not_equilibrium",
+      "expected_effort_cost": {
+        "decimal": 0.15,
+        "exact": "3/20"
+      },
+      "expected_payout": {
+        "decimal": 0.5,
+        "exact": "1/2"
+      },
+      "expected_reward_total": {
+        "decimal": 0.0,
+        "exact": "0"
+      },
+      "false_approval_rate": {
+        "decimal": 0.104,
+        "exact": "13/125"
+      },
+      "false_rejection_rate": {
+        "decimal": 0.104,
+        "exact": "13/125"
+      },
+      "lambda": {
+        "decimal": 0.0,
+        "exact": "0"
+      },
+      "mechanism": "rbts",
+      "operating_cost": {
+        "decimal": 0.0,
+        "exact": "0"
+      },
+      "point_id": 0,
+      "profile_hash": "2b5e101404e8e22918f3d45d17db7b3081c5d707e3c8cd6f72f41901ffb9a34e",
+      "status": "valid",
+      "wrong_payout_probability": {
+        "decimal": 0.052,
+        "exact": "13/250"
+      },
+      "wrong_payout_value": {
+        "decimal": 0.052,
+        "exact": "13/250"
+      }
+    },
+    {
+      "A_z0_delta_utility": {
+        "decimal": -0.0009955770910380173,
+        "exact": "-1726933/1734605000"
+      },
+      "A_z0_regret": {
+        "decimal": 0.0009955770910380173,
+        "exact": "1726933/1734605000"
+      },
+      "A_z1_delta_utility": {
+        "decimal": -0.0009955770910380173,
+        "exact": "-1726933/1734605000"
+      },
+      "A_z1_regret": {
+        "decimal": 0.0009955770910380173,
+        "exact": "1726933/1734605000"
+      },
+      "B_z0_delta_utility": {
+        "decimal": -0.0009955770910380173,
+        "exact": "-1726933/1734605000"
+      },
+      "B_z0_regret": {
+        "decimal": 0.0009955770910380173,
+        "exact": "1726933/1734605000"
+      },
+      "B_z1_delta_utility": {
+        "decimal": -0.0009955770910380173,
+        "exact": "-1726933/1734605000"
+      },
+      "B_z1_regret": {
+        "decimal": 0.0009955770910380173,
+        "exact": "1726933/1734605000"
+      },
+      "C_z0_delta_utility": {
+        "decimal": -0.0009955770910380173,
+        "exact": "-1726933/1734605000"
+      },
+      "C_z0_regret": {
+        "decimal": 0.0009955770910380173,
+        "exact": "1726933/1734605000"
+      },
+      "C_z1_delta_utility": {
+        "decimal": -0.0009955770910380173,
+        "exact": "-1726933/1734605000"
+      },
+      "C_z1_regret": {
+        "decimal": 0.0009955770910380173,
+        "exact": "1726933/1734605000"
+      },
+      "accuracy": {
+        "decimal": 0.896,
+        "exact": "112/125"
+      },
+      "cash_review_cost": {
+        "decimal": 2.3136132687268858,
+        "exact": "501650643/216825625"
+      },
+      "config_hash": "990e089975aa1ac4bd2f4e6a9aad01fee64979c99f36fb6a2202f049b51c9169",
+      "config_json": "{\"a\": \"7/10\", \"b\": \"4/5\", \"costs\": [\"1/20\", \"1/20\", \"1/20\"], \"f\": \"0\", \"fixed_reward\": \"2\", \"lambda\": \"1/2\", \"model_version\": \"ceav-m1-v1.0\", \"operating_cost\": \"0\", \"payout_value\": \"1\", \"pi\": \"1/2\", \"reward_budget\": \"6\"}",
+      "equilibrium_status": "not_equilibrium",
+      "expected_effort_cost": {
+        "decimal": 0.15,
+        "exact": "3/20"
+      },
+      "expected_payout": {
+        "decimal": 0.5,
+        "exact": "1/2"
+      },
+      "expected_reward_total": {
+        "decimal": 2.3136132687268858,
+        "exact": "501650643/216825625"
+      },
+      "false_approval_rate": {
+        "decimal": 0.104,
+        "exact": "13/125"
+      },
+      "false_rejection_rate": {
+        "decimal": 0.104,
+        "exact": "13/125"
+      },
+      "lambda": {
+        "decimal": 0.5,
+        "exact": "1/2"
+      },
+      "mechanism": "rbts",
+      "operating_cost": {
+        "decimal": 0.0,
+        "exact": "0"
+      },
+      "point_id": 1,
+      "profile_hash": "2b5e101404e8e22918f3d45d17db7b3081c5d707e3c8cd6f72f41901ffb9a34e",
+      "status": "valid",
+      "wrong_payout_probability": {
+        "decimal": 0.052,
+        "exact": "13/250"
+      },
+      "wrong_payout_value": {
+        "decimal": 0.052,
+        "exact": "13/250"
+      }
+    },
+    {
+      "A_z0_delta_utility": {
+        "decimal": 0.048008845817923966,
+        "exact": "10409548/216825625"
+      },
+      "A_z0_regret": {
+        "decimal": 0.0,
+        "exact": "0"
+      },
+      "A_z1_delta_utility": {
+        "decimal": 0.048008845817923966,
+        "exact": "10409548/216825625"
+      },
+      "A_z1_regret": {
+        "decimal": 0.0,
+        "exact": "0"
+      },
+      "B_z0_delta_utility": {
+        "decimal": 0.048008845817923966,
+        "exact": "10409548/216825625"
+      },
+      "B_z0_regret": {
+        "decimal": 0.0,
+        "exact": "0"
+      },
+      "B_z1_delta_utility": {
+        "decimal": 0.048008845817923966,
+        "exact": "10409548/216825625"
+      },
+      "B_z1_regret": {
+        "decimal": 0.0,
+        "exact": "0"
+      },
+      "C_z0_delta_utility": {
+        "decimal": 0.048008845817923966,
+        "exact": "10409548/216825625"
+      },
+      "C_z0_regret": {
+        "decimal": 0.0,
+        "exact": "0"
+      },
+      "C_z1_delta_utility": {
+        "decimal": 0.048008845817923966,
+        "exact": "10409548/216825625"
+      },
+      "C_z1_regret": {
+        "decimal": 0.0,
+        "exact": "0"
+      },
+      "accuracy": {
+        "decimal": 0.896,
+        "exact": "112/125"
+      },
+      "cash_review_cost": {
+        "decimal": 4.6272265374537715,
+        "exact": "1003301286/216825625"
+      },
+      "config_hash": "bda5c8793d24f3d2d32fce51383b89a04313577e42cfffb5280e99ba5afbdf96",
+      "config_json": "{\"a\": \"7/10\", \"b\": \"4/5\", \"costs\": [\"1/20\", \"1/20\", \"1/20\"], \"f\": \"0\", \"fixed_reward\": \"2\", \"lambda\": \"1\", \"model_version\": \"ceav-m1-v1.0\", \"operating_cost\": \"0\", \"payout_value\": \"1\", \"pi\": \"1/2\", \"reward_budget\": \"6\"}",
+      "equilibrium_status": "exact_pure_equilibrium",
+      "expected_effort_cost": {
+        "decimal": 0.15,
+        "exact": "3/20"
+      },
+      "expected_payout": {
+        "decimal": 0.5,
+        "exact": "1/2"
+      },
+      "expected_reward_total": {
+        "decimal": 4.6272265374537715,
+        "exact": "1003301286/216825625"
+      },
+      "false_approval_rate": {
+        "decimal": 0.104,
+        "exact": "13/125"
+      },
+      "false_rejection_rate": {
+        "decimal": 0.104,
+        "exact": "13/125"
+      },
+      "lambda": {
+        "decimal": 1.0,
+        "exact": "1"
+      },
+      "mechanism": "rbts",
+      "operating_cost": {
+        "decimal": 0.0,
+        "exact": "0"
+      },
+      "point_id": 2,
+      "profile_hash": "2b5e101404e8e22918f3d45d17db7b3081c5d707e3c8cd6f72f41901ffb9a34e",
+      "status": "valid",
+      "wrong_payout_probability": {
+        "decimal": 0.052,
+        "exact": "13/250"
+      },
+      "wrong_payout_value": {
+        "decimal": 0.052,
+        "exact": "13/250"
+      }
+    },
+    {
+      "config_json": "{\"a\": \"7/10\", \"b\": \"4/5\", \"costs\": [\"1/20\", \"1/20\", \"1/20\"], \"f\": \"0\", \"fixed_reward\": \"2\", \"lambda\": \"2\", \"model_version\": \"ceav-m1-v1.0\", \"operating_cost\": \"0\", \"payout_value\": \"1\", \"pi\": \"1/2\", \"reward_budget\": \"6\"}",
+      "error": "reward_budget: invalid_budget: cần ít nhất 12 cho rbts.",
+      "lambda": {
+        "decimal": 2.0,
+        "exact": "2"
+      },
+      "mechanism": "rbts",
+      "point_id": 3,
+      "profile_hash": "2b5e101404e8e22918f3d45d17db7b3081c5d707e3c8cd6f72f41901ffb9a34e",
+      "status": "invalid_budget"
+    }
+  ],
+  "scope": "fixed_candidate_analysis_only"
+}

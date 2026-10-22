@@ -1,0 +1,33 @@
+{
+  "current_engine_revision": "3c6f0f976a63823cde4a6d16cf73cb9177cf3f80d26be74ca778efc90203ada6",
+  "checks": {
+    "G1": {
+      "certificate_replay": "passed",
+      "current_source_matches": true,
+      "source_files": 51
+    },
+    "G2": {
+      "certificate_replay": "passed",
+      "current_source_matches": true,
+      "source_files": 51
+    },
+    "G3": {
+      "certificate_replay": "passed",
+      "current_source_matches": true,
+      "source_files": 51
+    },
+    "G4": {
+      "certificate_replay": "passed",
+      "current_source_matches": true,
+      "source_files": 51
+    },
+    "acceptance-release-01": {
+      "current_source_matches": true
+    },
+    "run-20261022T095215-bfe5abfabb": {
+      "current_source_matches": true
+    }
+  },
+  "recheck_reproduces": true,
+  "scope_limit": "Full 47-test suite and live browser flows were not rerun in this review; existing pinned evidence was inspected. T17 was rerun by the independent reviewer."
+}

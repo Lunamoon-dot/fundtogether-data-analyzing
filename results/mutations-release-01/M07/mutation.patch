@@ -1,0 +1,11 @@
+--- ceav_m1/best_response.py
++++ ceav_m1/best_response.py
+@@ -36,7 +36,7 @@
+                     total += s.probability / group_mass * quadratic(shadow, reports[k])
+                 values.append(total)
+             best = max(values)
+-            reports = [r for r in (0, 1) if values[r] == best]
++            reports = [r for r in (0, 1) if values[r] == best][:1]
+             optimal_prediction_score = 1 - q + q * q
+             information += group_mass / mass * best
+             prediction += group_mass / mass * optimal_prediction_score
