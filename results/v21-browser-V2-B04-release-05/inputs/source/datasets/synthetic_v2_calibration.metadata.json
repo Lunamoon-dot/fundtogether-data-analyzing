@@ -1,0 +1,8 @@
+{
+  "dataset_version": "ceav-calibration-v1",
+  "dataset_id": "synthetic-v2-calibration-40",
+  "provenance_status": "synthetic",
+  "purpose": "Pipeline and exact-estimator verification only",
+  "truth_definition": "Synthetic Y assigned by fixture construction",
+  "notes": "Not real campaign evidence and not an estimate of Judge performance."
+}

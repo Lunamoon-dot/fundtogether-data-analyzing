@@ -1,0 +1,11 @@
+--- ceav_m1/signals.py
++++ ceav_m1/signals.py
+@@ -38,7 +38,7 @@
+             "specificity": specificity,
+             "false_negative_rate": 1 - sensitivity,
+             "false_positive_rate": 1 - specificity,
+-            "prior_weighted_accuracy": config.pi * sensitivity + (1 - config.pi) * specificity,
++            "prior_weighted_accuracy": (sensitivity + specificity) / 2,
+         }
+ 
+     return {

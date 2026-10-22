@@ -1,0 +1,11 @@
+--- ceav_m1/model.py
++++ ceav_m1/model.py
+@@ -157,6 +157,8 @@
+         if values[key] < 0:
+             raise ValidationError(key, "Không được âm.")
+ 
++    if "specificity" not in raw["public_signal"]:
++        raw["public_signal"]["specificity"] = raw["public_signal"]["sensitivity"]
+     public = _exact_object(raw["public_signal"], ("sensitivity", "specificity"), "public_signal")
+     public_values = tuple(rational(public[key], f"public_signal.{key}") for key in ("sensitivity", "specificity"))
+     for key, value in zip(("sensitivity", "specificity"), public_values):

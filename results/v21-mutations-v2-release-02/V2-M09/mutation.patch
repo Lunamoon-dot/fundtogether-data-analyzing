@@ -1,0 +1,11 @@
+--- ceav_m1/signals.py
++++ ceav_m1/signals.py
+@@ -11,7 +11,7 @@
+ 
+ def signal_parameters(config):
+     if config.model_version == V1_MODEL_VERSION:
+-        return (config.a, config.a), ((config.b, config.b),) * 3
++        return (config.a, config.a), ((config.a, config.a),) * 3
+     if config.model_version == V2_MODEL_VERSION:
+         public = (config.public_sensitivity, config.public_specificity)
+         private = tuple(zip(config.private_sensitivities, config.private_specificities))

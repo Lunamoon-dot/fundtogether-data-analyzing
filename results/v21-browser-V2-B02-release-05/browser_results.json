@@ -1,0 +1,64 @@
+{
+  "browser": "155.0.4283.62",
+  "errors": [],
+  "network": [
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/styles.css"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/app.js"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/status"
+    },
+    {
+      "method": "POST",
+      "url": "http://127.0.0.1:8877/api/validate"
+    }
+  ],
+  "scenario": "V2-B02",
+  "status": "passed",
+  "steps": [
+    {
+      "observed": "ceav-m1-v2.0",
+      "status": "pass",
+      "step": "New form defaults to V2"
+    },
+    {
+      "observed": "17/20",
+      "status": "pass",
+      "step": "V2 draft survives V1 round trip"
+    },
+    {
+      "observed": "3/5",
+      "status": "pass",
+      "step": "V1 draft survives V2 round trip"
+    },
+    {
+      "observed": "ceav-m1-v2.0",
+      "status": "pass",
+      "step": "Import selects V2 schema"
+    },
+    {
+      "observed": "17/20",
+      "status": "pass",
+      "step": "Export/import preserves exact rational"
+    },
+    {
+      "observed": [],
+      "status": "pass",
+      "step": "No JavaScript runtime errors"
+    }
+  ],
+  "viewport": {
+    "height": 768,
+    "width": 1366
+  }
+}

@@ -8,6 +8,7 @@ Chọn nguồn chuẩn theo model version trước khi thay đổi behavior:
 
 - **V1:** đọc [CEAV_M1_SPEC.md](CEAV_M1_SPEC.md); đây là nguồn chuẩn của model `ceav-m1-v1.0`.
 - **V2 signal/schema hoặc implementation V2:** đọc [CEAV_M1_V2_SPEC.md](CEAV_M1_V2_SPEC.md), [ENGINE_DESIGN_V2.md](ENGINE_DESIGN_V2.md), [VERIFICATION_PLAN_V2.md](VERIFICATION_PLAN_V2.md), rồi đọc các phần V1 mà spec V2 tuyên bố kế thừa. V2 đã được kiểm chứng local; giữ evidence V2 và hồi quy V1 khi thay đổi vùng dùng chung.
+- **Dataset calibration V2.1:** đọc [CEAV_M1_V2_1_CALIBRATION_SPEC.md](CEAV_M1_V2_1_CALIBRATION_SPEC.md), [ENGINE_DESIGN_V2_1_CALIBRATION.md](ENGINE_DESIGN_V2_1_CALIBRATION.md) và [VERIFICATION_PLAN_V2_1_CALIBRATION.md](VERIFICATION_PLAN_V2_1_CALIBRATION.md). Calibration sinh config V2 nhưng không được gọi synthetic data là dữ liệu thực.
 
 - **Engine/thuật toán, schema hoặc tối ưu hiệu năng V1:** đọc [ENGINE_DESIGN.md](ENGINE_DESIGN.md), nhất là module interface, observation, peer freeze, degeneracy và certificates.
 - **Viết test, sửa bug, review hoặc kết luận V1 đã hoàn thành:** đọc [VERIFICATION_PLAN.md](VERIFICATION_PLAN.md); chọn fixture, oracle và gate tương ứng trước khi sửa.

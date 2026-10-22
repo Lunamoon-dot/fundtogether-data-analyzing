@@ -1,0 +1,15 @@
+{
+  "feature_version": "ceav-m1-v2.1-calibration",
+  "spec_revision": "ceav-calibration-v1",
+  "verification_revision": "calibration-verification-r1",
+  "tests": {
+    "CAL-T01": {"unittest_ids": ["tests.test_calibration.CalibrationTests.test_CAL_T01_fixture_matches_manual_expected"], "fixture_ids": ["CAL-F01"], "browser_scenario_ids": []},
+    "CAL-T02": {"unittest_ids": ["tests.test_calibration.CalibrationTests.test_CAL_T02_strict_dataset_validation"], "fixture_ids": ["CAL-F01"], "browser_scenario_ids": []},
+    "CAL-T03": {"unittest_ids": ["tests.test_calibration.CalibrationTests.test_CAL_T03_semantic_and_raw_hashes"], "fixture_ids": ["CAL-F01"], "browser_scenario_ids": []},
+    "CAL-T04": {"unittest_ids": ["tests.test_calibration.CalibrationTests.test_CAL_T04_generated_config_preserves_economics_and_runs"], "fixture_ids": ["CAL-F01"], "browser_scenario_ids": []},
+    "CAL-T05": {"unittest_ids": ["tests.test_calibration.CalibrationTests.test_CAL_T05_cli_artifacts_and_no_overwrite"], "fixture_ids": ["CAL-F01"], "browser_scenario_ids": []},
+    "CAL-T06": {"unittest_ids": ["tests.test_calibration_server.CalibrationServerTests.test_CAL_T06_api_worker_matches_direct_and_rejects_invalid"], "fixture_ids": ["CAL-F01"], "browser_scenario_ids": []},
+    "CAL-T07": {"unittest_ids": ["tests.test_calibration_release.CalibrationReleaseTests.test_CAL_T07_browser_evidence"], "fixture_ids": ["CAL-F01"], "browser_scenario_ids": ["CAL-B01"]},
+    "CAL-T08": {"unittest_ids": ["tests.test_calibration_release.CalibrationReleaseTests.test_CAL_T08_full_regression_evidence"], "fixture_ids": [], "browser_scenario_ids": []}
+  }
+}

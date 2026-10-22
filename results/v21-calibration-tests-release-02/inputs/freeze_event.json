@@ -1,0 +1,71 @@
+{
+  "analyzer_existed_before_event": false,
+  "created_at_utc": "2026-10-22T16:15:22.268282+00:00",
+  "design_revision": "engine-design-v2-r1",
+  "event": "analyzer_implementation_start",
+  "files": {
+    "CEAV_M1_V2_SPEC.md": {
+      "bytes": 27179,
+      "role": "spec",
+      "sha256": "c198e239728132dc0436aac0cdb48f94c02daa41ee11f5a853d0fb5996de7b1d"
+    },
+    "ENGINE_DESIGN_V2.md": {
+      "bytes": 10845,
+      "role": "engine_design",
+      "sha256": "f1b89a8b429464e3eef36cc73821cf4558616acfd0d38a7d9c4af9f7bff8cc14"
+    },
+    "VERIFICATION_PLAN_V2.md": {
+      "bytes": 9255,
+      "role": "verification_plan",
+      "sha256": "dff015fc007467fd7db56032722d87a8c5725186660656664f0d8a8e410814ec"
+    }
+  },
+  "freeze_status": "frozen_at_analyzer_implementation_start",
+  "model_version": "ceav-m1-v2.0",
+  "parent_release": {
+    "commit": "f5a1ba430f9b276f6ee58c3900326f546e0266fe",
+    "tag": "v1.0.0"
+  },
+  "preexisting_test_assets": {
+    "configs/v2/below_half.json": {
+      "bytes": 642,
+      "role": "below_half_fixture",
+      "sha256": "41bce8776d06aa64b904a75eeb48123ce9d43b62e715ce5b8f5bad0816b4ca72"
+    },
+    "configs/v2/heterogeneous.json": {
+      "bytes": 648,
+      "role": "heterogeneous_fixture",
+      "sha256": "9103c83cfbae97f658109150a2232e159904cda8b0c1556f813cc678b4c42272"
+    },
+    "configs/v2/symmetric_g1.json": {
+      "bytes": 637,
+      "role": "reduction_fixture",
+      "sha256": "2b81139c9d8335ae3f4c1d77eca9281464d7444c7c9967dd1f90bbc622667f2d"
+    },
+    "scenarios/sample_campaign/scenario.json": {
+      "bytes": 916,
+      "role": "scenario_fixture",
+      "sha256": "8848ed06abd31ead9d4df1f05a5a4a562af6e06fbde538ac4295fe3c40331aba"
+    },
+    "tests/oracle_v2.py": {
+      "bytes": 1945,
+      "role": "independent_distribution_oracle",
+      "sha256": "07ec20365d7501871dc5b466598c8544f9cd1d01f9960c06c7c0b7e8eea19cd5"
+    },
+    "tests/test_v2_model.py": {
+      "bytes": 4374,
+      "role": "red_seam_tests",
+      "sha256": "93d35028373dbc5b48c3c114cb6dd655baf18aa442c3e31cab37ed203c4eac1d"
+    }
+  },
+  "red_test": {
+    "command": "python -m unittest tests.test_v2_model -v",
+    "failure": "ImportError: cannot import name signal_diagnostics from ceav_m1.model",
+    "status": "failed_as_expected"
+  },
+  "reference_checker_preexisted": true,
+  "spec_revision": "signal-heterogeneity-r1",
+  "v2_oracle_preexisted": true,
+  "v2_production_support_existed_before_event": false,
+  "verification_revision": "verification-v2-r1"
+}

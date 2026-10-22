@@ -1,0 +1,110 @@
+{
+  "browser_acceptance_executed": false,
+  "counts": {
+    "error": 0,
+    "fail": 0,
+    "not_run": 0,
+    "pass": 8,
+    "skipped": 0
+  },
+  "duration_seconds": 1.911692599998787,
+  "failure_fixture": false,
+  "records": [
+    {
+      "assertion_or_error": null,
+      "duration_seconds": 0.0024879999982658774,
+      "evidence": null,
+      "status": "pass",
+      "test_id": "CAL-T01",
+      "unittest_id": "tests.test_calibration.CalibrationTests.test_CAL_T01_fixture_matches_manual_expected"
+    },
+    {
+      "assertion_or_error": null,
+      "duration_seconds": 0.003318200004287064,
+      "evidence": null,
+      "status": "pass",
+      "test_id": "CAL-T02",
+      "unittest_id": "tests.test_calibration.CalibrationTests.test_CAL_T02_strict_dataset_validation"
+    },
+    {
+      "assertion_or_error": null,
+      "duration_seconds": 0.002152299988665618,
+      "evidence": null,
+      "status": "pass",
+      "test_id": "CAL-T03",
+      "unittest_id": "tests.test_calibration.CalibrationTests.test_CAL_T03_semantic_and_raw_hashes"
+    },
+    {
+      "assertion_or_error": null,
+      "duration_seconds": 0.008458899988909252,
+      "evidence": null,
+      "status": "pass",
+      "test_id": "CAL-T04",
+      "unittest_id": "tests.test_calibration.CalibrationTests.test_CAL_T04_generated_config_preserves_economics_and_runs"
+    },
+    {
+      "assertion_or_error": null,
+      "duration_seconds": 0.5035100999957649,
+      "evidence": null,
+      "status": "pass",
+      "test_id": "CAL-T05",
+      "unittest_id": "tests.test_calibration.CalibrationTests.test_CAL_T05_cli_artifacts_and_no_overwrite"
+    },
+    {
+      "assertion_or_error": null,
+      "duration_seconds": 0.9028228999959538,
+      "evidence": null,
+      "status": "pass",
+      "test_id": "CAL-T06",
+      "unittest_id": "tests.test_calibration_server.CalibrationServerTests.test_CAL_T06_api_worker_matches_direct_and_rejects_invalid"
+    },
+    {
+      "assertion_or_error": null,
+      "duration_seconds": 0.25709240000287537,
+      "evidence": {
+        "run_id": "v21-browser-CAL-B01-release-05",
+        "source_matches": true,
+        "steps": 13
+      },
+      "status": "pass",
+      "test_id": "CAL-T07",
+      "unittest_id": "tests.test_calibration_release.CalibrationReleaseTests.test_CAL_T07_browser_evidence"
+    },
+    {
+      "assertion_or_error": null,
+      "duration_seconds": 0.10632130000158213,
+      "evidence": {
+        "runs": {
+          "v1": {
+            "counts": {
+              "error": 0,
+              "fail": 0,
+              "not_run": 0,
+              "pass": 47,
+              "skipped": 0
+            },
+            "run_id": "v21-v1-regression-release-02"
+          },
+          "v2": {
+            "counts": {
+              "error": 0,
+              "fail": 0,
+              "not_run": 0,
+              "pass": 15,
+              "skipped": 0
+            },
+            "run_id": "v21-v2-tests-release-02"
+          }
+        },
+        "source_matches": true
+      },
+      "status": "pass",
+      "test_id": "CAL-T08",
+      "unittest_id": "tests.test_calibration_release.CalibrationReleaseTests.test_CAL_T08_full_regression_evidence"
+    }
+  ],
+  "reference_results": null,
+  "selected_ids": [],
+  "status": "passed",
+  "suite": "calibration"
+}

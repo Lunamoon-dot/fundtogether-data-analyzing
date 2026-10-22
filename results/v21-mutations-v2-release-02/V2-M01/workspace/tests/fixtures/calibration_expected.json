@@ -1,0 +1,28 @@
+{
+  "fixture_id": "CAL-F01",
+  "derivation": "Manual counts fixed before production calibrator: 20 positive and 20 negative cases; each signal pattern is counted directly from the CSV construction table.",
+  "row_count": 40,
+  "class_counts": {"0": 20, "1": 20},
+  "pi": {"numerator": 20, "denominator": 40, "value": "1/2"},
+  "public_signal": {
+    "sensitivity": {"numerator": 16, "denominator": 20, "value": "4/5"},
+    "specificity": {"numerator": 12, "denominator": 20, "value": "3/5"}
+  },
+  "judges": {
+    "A": {
+      "sensitivity": {"numerator": 18, "denominator": 20, "value": "9/10"},
+      "specificity": {"numerator": 16, "denominator": 20, "value": "4/5"},
+      "mean_cost": {"numerator": 1, "denominator": 20, "value": "1/20"}
+    },
+    "B": {
+      "sensitivity": {"numerator": 15, "denominator": 20, "value": "3/4"},
+      "specificity": {"numerator": 19, "denominator": 20, "value": "19/20"},
+      "mean_cost": {"numerator": 1, "denominator": 10, "value": "1/10"}
+    },
+    "C": {
+      "sensitivity": {"numerator": 13, "denominator": 20, "value": "13/20"},
+      "specificity": {"numerator": 14, "denominator": 20, "value": "7/10"},
+      "mean_cost": {"numerator": 1, "denominator": 25, "value": "1/25"}
+    }
+  }
+}

@@ -1,0 +1,20 @@
+test_V2_T04_v1_reduction_states_predictions_and_analysis (tests.test_v2_model.V2ModelTests.test_V2_T04_v1_reduction_states_predictions_and_analysis) ... FAIL
+
+======================================================================
+FAIL: test_V2_T04_v1_reduction_states_predictions_and_analysis (tests.test_v2_model.V2ModelTests.test_V2_T04_v1_reduction_states_predictions_and_analysis)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\dell\Desktop\fundtogether_data_analyzing\results\v21-mutations-v2-release-02\V2-M09\workspace\tests\test_v2_model.py", line 87, in test_V2_T04_v1_reduction_states_predictions_and_analysis
+    self.assertEqual(enumerate_states(v1), enumerate_states(v2))
+AssertionError: Tuples differ: (Weig[67 chars]tion(2401, 20000)), WeightedState(state_id=1, [2787 chars]00))) != (Weig[67 chars]tion(112, 625)), WeightedState(state_id=1, y=0[2673 chars]25)))
+
+First differing element 0:
+Weigh[21 chars]y=0, z=0, signals=(0, 0, 0), probability=Fraction(2401, 20000))
+Weigh[21 chars]y=0, z=0, signals=(0, 0, 0), probability=Fraction(112, 625))
+
+Diff is 9826 characters long. Set self.maxDiff to None to see it.
+
+----------------------------------------------------------------------
+Ran 1 test in 0.012s
+
+FAILED (failures=1)

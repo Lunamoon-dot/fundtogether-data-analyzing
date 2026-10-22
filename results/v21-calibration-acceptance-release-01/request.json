@@ -1,0 +1,5 @@
+{
+  "tests": "results\\v21-calibration-tests-release-02",
+  "v1": "results\\v21-v1-regression-release-02",
+  "v2": "results\\v21-v2-tests-release-02"
+}

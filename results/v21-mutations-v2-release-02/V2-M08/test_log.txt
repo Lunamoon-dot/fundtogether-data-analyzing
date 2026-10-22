@@ -1,0 +1,15 @@
+test_V2_T08_scenario_validation_and_mathematical_neutrality (tests.test_v2_io.V2IOTests.test_V2_T08_scenario_validation_and_mathematical_neutrality) ... FAIL
+
+======================================================================
+FAIL: test_V2_T08_scenario_validation_and_mathematical_neutrality (tests.test_v2_io.V2IOTests.test_V2_T08_scenario_validation_and_mathematical_neutrality)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\dell\Desktop\fundtogether_data_analyzing\results\v21-mutations-v2-release-02\V2-M08\workspace\tests\test_v2_io.py", line 34, in test_V2_T08_scenario_validation_and_mathematical_neutrality
+    self.assertEqual(plain, contextual)
+AssertionError: {'str[392 chars]tion(1791, 2000), 'false_approval_rate': Fract[65601 chars]ded'} != {'str[392 chars]tion(887, 1000), 'false_approval_rate': Fracti[66067 chars]ded'}
+Diff is 285581 characters long. Set self.maxDiff to None to see it.
+
+----------------------------------------------------------------------
+Ran 1 test in 1.776s
+
+FAILED (failures=1)

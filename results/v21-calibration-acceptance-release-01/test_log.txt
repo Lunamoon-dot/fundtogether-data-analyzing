@@ -1,0 +1,13 @@
+test_CAL_T01_fixture_matches_manual_expected (tests.test_calibration.CalibrationTests.test_CAL_T01_fixture_matches_manual_expected) ... ok
+test_CAL_T02_strict_dataset_validation (tests.test_calibration.CalibrationTests.test_CAL_T02_strict_dataset_validation) ... ok
+test_CAL_T03_semantic_and_raw_hashes (tests.test_calibration.CalibrationTests.test_CAL_T03_semantic_and_raw_hashes) ... ok
+test_CAL_T04_generated_config_preserves_economics_and_runs (tests.test_calibration.CalibrationTests.test_CAL_T04_generated_config_preserves_economics_and_runs) ... ok
+test_CAL_T05_cli_artifacts_and_no_overwrite (tests.test_calibration.CalibrationTests.test_CAL_T05_cli_artifacts_and_no_overwrite) ... ok
+test_CAL_T06_api_worker_matches_direct_and_rejects_invalid (tests.test_calibration_server.CalibrationServerTests.test_CAL_T06_api_worker_matches_direct_and_rejects_invalid) ... ok
+test_CAL_T07_browser_evidence (tests.test_calibration_release.CalibrationReleaseTests.test_CAL_T07_browser_evidence) ... ok
+test_CAL_T08_full_regression_evidence (tests.test_calibration_release.CalibrationReleaseTests.test_CAL_T08_full_regression_evidence) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 1.786s
+
+OK

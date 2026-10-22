@@ -13,7 +13,7 @@ import unittest
 from . import V2_MODEL_VERSION
 from .output import ROOT, LIMITATIONS, finish_run, new_run, write_json
 
-SUITES = ("reference", "goldens", "v2", "all", "selected")
+SUITES = ("reference", "goldens", "v2", "calibration", "all", "selected")
 
 
 def flatten(suite):
@@ -35,8 +35,8 @@ class RecordedResult(unittest.TextTestResult):
         super().startTest(test)
 
     def record(self, test, status, detail=None):
-        ids = re.findall(r"_(V2_)?T(\d{2})(?:_|$)", test.id())
-        self.records.append({"test_id": (("V2-" if ids[0][0] else "") + "T" + ids[0][1]) if ids else None, "unittest_id": test.id(),
+        ids = re.findall(r"_(?:(V2|CAL)_)?T(\d{2})(?:_|$)", test.id())
+        self.records.append({"test_id": (((ids[0][0] + "-") if ids[0][0] else "") + "T" + ids[0][1]) if ids else None, "unittest_id": test.id(),
                              "status": status, "duration_seconds": time.perf_counter() - self.started[test.id()],
                              "assertion_or_error": detail, "evidence": getattr(test, "evidence", None)})
 
@@ -103,22 +103,26 @@ def run_suite(selector, selected=None, injected_fixture=False):
         tests = discover()
         registered = json.loads((ROOT / "tests/registry.json").read_text(encoding="utf-8"))
         registered_v2 = json.loads((ROOT / "tests/registry_v2.json").read_text(encoding="utf-8"))
+        registered_calibration = json.loads((ROOT / "tests/registry_calibration.json").read_text(encoding="utf-8"))
         if set(registered["tests"]) != {f"T{i:02}" for i in range(1, 33)}:
             raise ValueError("Test registry must contain T01-T32")
         if set(registered_v2["tests"]) != {f"V2-T{i:02}" for i in range(1, 16)}:
             raise ValueError("V2 test registry must contain V2-T01 through V2-T15")
+        if set(registered_calibration["tests"]) != {f"CAL-T{i:02}" for i in range(1, 9)}:
+            raise ValueError("Calibration test registry must contain CAL-T01 through CAL-T08")
         available = {test.id(): test for test in tests}
         v1_ids = [f"T{i:02}" for i in range(1, 33)]
         v2_ids = [f"V2-T{i:02}" for i in range(1, 16)]
-        wanted = (v1_ids + v2_ids if selector == "all" else v2_ids if selector == "v2" else
+        calibration_ids = [f"CAL-T{i:02}" for i in range(1, 9)]
+        wanted = (v1_ids + v2_ids + calibration_ids if selector == "all" else v2_ids if selector == "v2" else calibration_ids if selector == "calibration" else
                   ["T08", "T09", "T10", "T11"] if selector == "goldens" else list(dict.fromkeys(selected or [])))
         if not wanted and not injected_fixture:
             raise ValueError("No selected test IDs; zero tests cannot pass")
-        if any(not re.fullmatch(r"(?:T(?:0[1-9]|[12][0-9]|3[0-2])|V2-T(?:0[1-9]|1[0-5]))", value) for value in wanted):
-            raise ValueError("Only registered V1 T01-T32 or V2-T01 through V2-T15 IDs are accepted")
+        if any(not re.fullmatch(r"(?:T(?:0[1-9]|[12][0-9]|3[0-2])|V2-T(?:0[1-9]|1[0-5])|CAL-T0[1-8])", value) for value in wanted):
+            raise ValueError("Only registered V1, V2 or CAL test IDs are accepted")
         chosen = []
         for test_id in wanted:
-            registry = registered_v2 if test_id.startswith("V2-") else registered
+            registry = registered_calibration if test_id.startswith("CAL-") else registered_v2 if test_id.startswith("V2-") else registered
             ids = registry["tests"][test_id]["unittest_ids"]
             if not ids or any(identity not in available for identity in ids):
                 records.append({"test_id": test_id, "status": "not_run", "assertion_or_error": "Registered tests missing from real discovery"})
@@ -147,14 +151,14 @@ def run_suite(selector, selected=None, injected_fixture=False):
 
 def write_test_run(out, selector, selected=None, injected_fixture=False, argv=None, defer_publication=False):
     out = Path(out)
-    manifest = new_run(out, "tests", request={"suite": selector, "test_ids": selected or [], "failure_fixture": injected_fixture}, argv=argv, publication_owner="local_server" if defer_publication else "cli", model_version=V2_MODEL_VERSION if selector in ("v2", "all") or any(value.startswith("V2-") for value in (selected or [])) else None)
+    manifest = new_run(out, "tests", request={"suite": selector, "test_ids": selected or [], "failure_fixture": injected_fixture}, argv=argv, publication_owner="local_server" if defer_publication else "cli", model_version=V2_MODEL_VERSION if selector in ("v2", "calibration", "all") or any(value.startswith(("V2-", "CAL-")) for value in (selected or [])) else None)
     try:
         result, log = run_suite(selector, selected, injected_fixture)
         write_json(out / "test_results.json", result)
         if result["reference_results"] is not None:
             write_json(out / "reference_results.json", result["reference_results"])
         (out / "test_log.txt").write_text(log, encoding="utf-8", newline="\n")
-        (out / "report.md").write_text(f"# CEAV-M1 — Tests\n\nSuite: {selector}; result: {result['status']}; counts: {result['counts']}.\n\nBrowser acceptance được thu riêng; unittest không tự xác nhận V1 B01–B09 hoặc V2-B01–B06.\n\n" + LIMITATIONS + "\n", encoding="utf-8", newline="\n")
+        (out / "report.md").write_text(f"# CEAV-M1 — Tests\n\nSuite: {selector}; result: {result['status']}; counts: {result['counts']}.\n\nBrowser acceptance được thu riêng; unittest không tự xác nhận V1 B01–B09, V2-B01–B06 hoặc CAL-B01.\n\n" + LIMITATIONS + "\n", encoding="utf-8", newline="\n")
         if not defer_publication:
             finish_run(out, manifest, "succeeded" if result["status"] == "passed" else "failed")
         return result

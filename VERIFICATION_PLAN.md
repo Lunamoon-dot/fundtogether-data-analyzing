@@ -275,7 +275,7 @@ Security scope local theo spec: traversal `..`, encoded path, absolute path, Win
 | B03 | Analyze G1–G4, mở exact/details, G4 witness, clone candidate | CLI/API artifacts đối chiếu và ảnh render đúng số/trạng thái |
 | B04 | Search đủ 216 mỗi nhánh, lọc/chọn tổ hợp, mở analyze | Progress backend, certificate được chọn và profile chuyển sang |
 | B05 | Sweep nhỏ có invalid budget; chart/table; compare equal cap | Hàng lỗi, giá trị exact, actual spend riêng và config từng run |
-| B06 | Chạy các suites, selected IDs, injected failure, missing test, tải log | Test_results/log thật; UI phân biệt pass/fail/error/skipped/not_run |
+| B06 | Chạy các suites, selected T01–T31, injected failure, missing test, tải log | Test_results/log thật; UI phân biệt pass/fail/error/skipped/not_run. T32 được chạy sau khi đủ B01–B09 để tránh tự phụ thuộc vào B06. |
 | B07 | Duplicate submit, cancel, đổi draft khi đang chạy, restart | Job IDs, snapshot, process evidence và terminal artifacts |
 | B08 | History, tải từng artifact, mở lại run, xem versions/freeze status | Artifact hashes, metadata và screenshot |
 | B09 | Lặp flows chính bằng bàn phím ở desktop/mobile | Focus/label, form errors, table scroll, contrast measurements và ảnh hai viewport |

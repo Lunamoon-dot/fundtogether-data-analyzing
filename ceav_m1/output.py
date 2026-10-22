@@ -117,10 +117,10 @@ def documents(root=ROOT, model_version=V1_MODEL_VERSION):
 
 def source_files(root=ROOT):
     paths = []
-    for directory in ("ceav_m1", "web", "tests", "verification", "configs", "scenarios"):
+    for directory in ("ceav_m1", "web", "tests", "verification", "configs", "scenarios", "datasets"):
         folder = root / directory
         if folder.exists():
-            paths.extend(p for p in folder.rglob("*") if p.is_file() and "__pycache__" not in p.parts and p.suffix in (".py", ".json", ".html", ".css", ".js"))
+            paths.extend(p for p in folder.rglob("*") if p.is_file() and "__pycache__" not in p.parts and p.suffix in (".py", ".json", ".html", ".css", ".js", ".csv"))
     return sorted(paths, key=lambda path: path.relative_to(root).as_posix())
 
 

@@ -3,7 +3,7 @@
 const $ = id => document.getElementById(id);
 const esc = value => String(value ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const copy = value => JSON.parse(JSON.stringify(value));
-const state = {view:"analyze", status:null, active:null, revision:0, runRevision:null, analysis:null, search:null, sweep:null, manifest:null, pinned:[], drafts:{}, activeModel:"ceav-m1-v2.0"};
+const state = {view:"analyze", status:null, active:null, revision:0, runRevision:null, analysis:null, search:null, sweep:null, calibration:null, calibrationDataset:null, manifest:null, pinned:[], drafts:{}, activeModel:"ceav-m1-v2.0"};
 const labels = {queued:"Đang chờ",running:"Đang chạy",succeeded:"Thành công",failed:"Thất bại",cancelled:"Đã hủy",interrupted:"Bị gián đoạn"};
 const rewardFields = [
   ["f","f · Reward cơ bản","0","reward"], ["lambda","λ · Hệ số RBTS","1","reward"], ["fixed_reward","F · Fixed reward","2","reward"],
@@ -11,7 +11,7 @@ const rewardFields = [
 ];
 const modelFields = {
   "ceav-m1-v1.0":[["pi","π · P(Y=1)","1/2","model"],["a","a · P(Z=Y)","7/10","model"],["b","b · P(Xᵢ=Y)","4/5","model"],["costs[0]","c_A · Chi phí A","1/20","model"],["costs[1]","c_B · Chi phí B","1/20","model"],["costs[2]","c_C · Chi phí C","1/20","model"]],
-  "ceav-m1-v2.0":[["pi","π · P(Y=1)","1/2","model"],["public_signal.sensitivity","Z sensitivity · P(Z=1 | Y=1)","4/5","model"],["public_signal.specificity","Z specificity · P(Z=0 | Y=0)","3/5","model"],...["A","B","C"].flatMap((judge,i)=>[[`judges.${judge}.private_signal.sensitivity`,`${judge} sensitivity · P(X_${judge}=1 | Y=1)`,["9/10","3/4","13/20"][i],"model"],[`judges.${judge}.private_signal.specificity`,`${judge} specificity · P(X_${judge}=0 | Y=0)`,["4/5","19/20","7/10"][i],"model"],[`judges.${judge}.high_effort_cost`,`c_${judge} · Chi phí ${judge}`,["1/20","1/10","1/25"][i],"model"]])]
+  "ceav-m1-v2.0":[["pi","Prior π · P(Y=1)","1/2","model"],["public_signal.sensitivity","Sensitivity · P(Z=1 | Y=1)","4/5","model"],["public_signal.specificity","Specificity · P(Z=0 | Y=0)","3/5","model"],...["A","B","C"].flatMap((judge,i)=>[[`judges.${judge}.private_signal.sensitivity`,`Sensitivity · P(X_${judge}=1 | Y=1)`,["9/10","3/4","13/20"][i],"model"],[`judges.${judge}.private_signal.specificity`,`Specificity · P(X_${judge}=0 | Y=0)`,["4/5","19/20","7/10"][i],"model"],[`judges.${judge}.high_effort_cost`,`Chi phí High Effort · c_${judge}`,["1/20","1/10","1/25"][i],"model"]])]
 };
 const sweepAxes = {"ceav-m1-v1.0":["pi","a","b","c","lambda"],"ceav-m1-v2.0":["pi","public_signal.sensitivity","public_signal.specificity","judges.A.private_signal.sensitivity","judges.A.private_signal.specificity","judges.A.high_effort_cost","judges.B.private_signal.sensitivity","judges.B.private_signal.specificity","judges.B.high_effort_cost","judges.C.private_signal.sensitivity","judges.C.private_signal.specificity","judges.C.high_effort_cost","lambda"]};
 const fields = () => [...modelFields[state.activeModel],...rewardFields];
@@ -39,12 +39,20 @@ function setupForms() {
     label.innerHTML=`<input type="checkbox" value="${id}" ${i<=5?"checked":""}>${id}`; $("test-ids").append(label);
   }
   for(let i=1;i<=15;i++){const id="V2-T"+String(i).padStart(2,"0"),label=document.createElement("label");label.className="check";label.innerHTML=`<input type="checkbox" value="${id}">${id}`;$("test-ids").append(label);}
+  for(let i=1;i<=8;i++){const id="CAL-T"+String(i).padStart(2,"0"),label=document.createElement("label");label.className="check";label.innerHTML=`<input type="checkbox" value="${id}">${id}`;$("test-ids").append(label);}
   renderModelFields(state.activeModel);
 }
 
 function renderModelFields(version) {
-  state.activeModel=version;$("model-version").value=version;$("model-fields").innerHTML="";
-  for(const [name,label,value] of modelFields[version]){const wrapper=document.createElement("div");wrapper.innerHTML=`<label for="${fieldId(name)}">${esc(label)}</label><input type="text" id="${fieldId(name)}" data-field="${esc(name)}" value="${esc(value)}" aria-describedby="${fieldId(name)}-error"><span class="field-error" id="${fieldId(name)}-error"></span>`;$("model-fields").append(wrapper);}
+  state.activeModel=version;$("model-version").value=version;const container=$("model-fields");container.innerHTML="";
+  if(version==="ceav-m1-v2.0"){
+    const definitions=Object.fromEntries(modelFields[version].map(field=>[field[0],field]));
+    const groups=[
+      ["Prior và tín hiệu chung Z",["pi","public_signal.sensitivity","public_signal.specificity"],"model-group-public"],
+      ...["A","B","C"].map(judge=>[`Judge ${judge} · tín hiệu riêng`,[`judges.${judge}.private_signal.sensitivity`,`judges.${judge}.private_signal.specificity`,`judges.${judge}.high_effort_cost`],"model-group-judge"])
+    ];
+    container.innerHTML=groups.map(([title,names,className])=>`<fieldset class="model-group ${className}"><legend>${esc(title)}</legend><div class="model-group-fields">${names.map(name=>{const [,label,value]=definitions[name],parts=label.split(" · ");return `<div class="model-field"><label for="${fieldId(name)}"><span class="model-field-name">${esc(parts[0])}</span><span class="model-field-formula">${esc(parts[1])}</span></label><input type="text" id="${fieldId(name)}" data-field="${esc(name)}" value="${esc(value)}" aria-describedby="${fieldId(name)}-error"><span class="field-error" id="${fieldId(name)}-error"></span></div>`;}).join("")}</div></fieldset>`).join("");
+  }else for(const [name,label,value] of modelFields[version]){const wrapper=document.createElement("div");wrapper.innerHTML=`<label for="${fieldId(name)}">${esc(label)}</label><input type="text" id="${fieldId(name)}" data-field="${esc(name)}" value="${esc(value)}" aria-describedby="${fieldId(name)}-error"><span class="field-error" id="${fieldId(name)}-error"></span>`;container.append(wrapper);}
   $("model-help").textContent=version==="ceav-m1-v1.0"?"V1: a và b là xác suất tín hiệu bằng Y ở cả hai lớp Y. Nhập chuỗi như 0.05 hoặc 1/20.":"V2: sensitivity là P(tín hiệu=1 | Y=1); specificity là P(tín hiệu=0 | Y=0). Mỗi Judge có kênh và chi phí riêng.";
   $("sweep-axes").innerHTML="";for(const axis of sweepAxes[version]){const row=document.createElement("div");row.className="axis-row";row.innerHTML=`<label class="check" for="axis-${axisId(axis)}-enabled"><input type="checkbox" id="axis-${axisId(axis)}-enabled" ${axis==="lambda"?"checked":""}>${esc(axis)}</label><input type="text" id="axis-${axisId(axis)}" aria-label="Giá trị axis ${esc(axis)}" value="${axis==="lambda"?"0, 1/2, 1, 2":"1/2, 4/5"}">`;$("sweep-axes").append(row);}
   renderPresets(version);previewGrid();
@@ -79,7 +87,7 @@ function clearErrors() {
 }
 function showError(error) {
   const messages=error.payload?.errors||[{message:error.message||String(error)}];
-  $("errors").textContent=messages.map(e=>(e.field?e.field+": ":"")+e.message).join(" · "); $("errors").hidden=false;
+  $("errors").textContent=messages.map(e=>(e.field?e.field+": ":"")+(e.row?`dòng ${e.row}: `:"")+e.message).join(" · "); $("errors").hidden=false;
   for(const message of messages) {
     const input=$(fieldId(message.field||""));
     if(input) {input.setAttribute("aria-invalid","true"); $(fieldId(message.field)+"-error").textContent=message.message;}
@@ -96,7 +104,7 @@ function switchView(view) {
   state.view=view;
   document.querySelectorAll("[data-panel]").forEach(el=>el.hidden=el.dataset.panel!==view);
   document.querySelectorAll("[data-view]").forEach(el=>{if(el.dataset.view===view)el.setAttribute("aria-current","page");else el.removeAttribute("aria-current");});
-  $("draft").hidden=["tests","history"].includes(view); $("layout").classList.toggle("full",$("draft").hidden);
+  $("draft").hidden=["calibration","tests","history"].includes(view); $("layout").classList.toggle("full",$("draft").hidden);
   if(view==="history") refreshHistory().catch(showError);
   if(view==="compare") renderPinned().catch(showError);
   if(view==="tests") api("/api/browser-evidence").then(data=>{
@@ -118,7 +126,13 @@ function updateJob(job) {
 }
 async function submit(operation) {
   clearErrors();
-  const request=operation==="tests"?{operation,suite:$("suite").value,test_ids:[...$("test-ids").querySelectorAll("input:checked")].map(e=>e.value),failure_fixture:$("suite").value==="selected"&&$("failure-fixture").checked}:{operation,...readDraft()};
+  let request;
+  if(operation==="tests")request={operation,suite:$("suite").value,test_ids:[...$("test-ids").querySelectorAll("input:checked")].map(e=>e.value),failure_fixture:$("suite").value==="selected"&&$("failure-fixture").checked};
+  else if(operation==="calibrate"){
+    if(!state.calibrationDataset)throw new Error("Hãy chọn CSV hoặc dùng dataset synthetic mẫu trước.");
+    const base=state.activeModel==="ceav-m1-v2.0"?readDraft().config:(state.drafts["ceav-m1-v2.0"]?.config||state.status.v2_presets.heterogeneous);
+    request={operation,dataset_csv:state.calibrationDataset.text,source_name:state.calibrationDataset.name,provenance_status:$("calibration-provenance").value,base_config:base,mechanism:$("mechanism").value};
+  }else request={operation,...readDraft()};
   if(operation==="sweep")request.axes=readAxes();
   if(operation==="equilibria")delete request.profile;
   const job=await api("/api/runs",request); state.active=job.job_id; state.pendingRevision=state.revision; updateJob(job); poll(job.job_id);
@@ -140,11 +154,12 @@ function labelResult(manifest,target) {
 }
 function renderMetadata(manifest) {
   const names=["manifest.json",...manifest.artifacts.map(a=>a.name)];
-  $("run-metadata").innerHTML=`<details open><summary>Run ${esc(manifest.run_id)} · ${badge(manifest.status)}</summary><p class="run-note">${esc(manifest.operation)} · model ${esc(manifest.model_version)} · spec ${esc(manifest.spec?.revision)} · freeze ${esc(manifest.spec?.freeze_status)}<br>engine/source ${esc(manifest.engine_revision)}<br>config ${esc(manifest.config_hash||"—")} · profile ${esc(manifest.profile_hash||"—")} · scenario ${esc(manifest.scenario_hash||"not_provided")}</p><div class="downloads">${names.map(name=>`<a href="${artifactURL(manifest.run_id,name,true)}">${esc(name)}</a>`).join("")}</div><div class="button-row"><button data-load-run="${esc(manifest.run_id)}">Nạp input run vào bản nháp</button><button data-pin="${esc(manifest.run_id)}">Ghim run để đối chiếu</button></div><details><summary>Config, profile, scenario và lệnh tái lập</summary>${jsonBlock({config:manifest.config,profile:manifest.profile,scenario:manifest.scenario||null,argv:manifest.argv,documents:manifest.documents})}</details></details>`;
+  const load=manifest.operation==="calibrate"?"":`<button data-load-run="${esc(manifest.run_id)}">Nạp input run vào bản nháp</button>`;
+  $("run-metadata").innerHTML=`<details open><summary>Run ${esc(manifest.run_id)} · ${badge(manifest.status)}</summary><p class="run-note">${esc(manifest.operation)} · model ${esc(manifest.model_version)} · spec ${esc(manifest.spec?.revision)} · freeze ${esc(manifest.spec?.freeze_status)}<br>engine/source ${esc(manifest.engine_revision)}<br>config ${esc(manifest.config_hash||"—")} · profile ${esc(manifest.profile_hash||"—")} · scenario ${esc(manifest.scenario_hash||"not_provided")}</p><div class="downloads">${names.map(name=>`<a href="${artifactURL(manifest.run_id,name,true)}">${esc(name)}</a>`).join("")}</div><div class="button-row">${load}<button data-pin="${esc(manifest.run_id)}">Ghim run để đối chiếu</button></div><details><summary>Config, profile, scenario và lệnh tái lập</summary>${jsonBlock({config:manifest.config,profile:manifest.profile,scenario:manifest.scenario||null,argv:manifest.argv,documents:manifest.documents,calibration:manifest.calibration||null})}</details></details>`;
 }
 async function openRun(run) {
   const manifest=await api("/api/runs/"+encodeURIComponent(run)); state.manifest=manifest;
-  const operation=manifest.operation; if(["analyze","equilibria","sweep","compare","tests"].includes(operation))switchView(operation);
+  const operation=manifest.operation; if(["analyze","equilibria","sweep","compare","tests","calibrate"].includes(operation))switchView(operation==="calibrate"?"calibration":operation);
   renderMetadata(manifest);
   const names=manifest.artifacts.map(a=>a.name);
   if(operation==="tests"&&names.includes("test_results.json")){renderTests(await artifact(run,"test_results.json"),run);labelResult(manifest,$("tests-result"));$("tests-result").dataset.runId=run;return;}
@@ -152,7 +167,8 @@ async function openRun(run) {
     const target=$(operation+"-result"); if(target){target.innerHTML=`<p class="notice">${esc(labels[manifest.status]||manifest.status)}. Run này không được dùng làm certificate hoàn chỉnh. Log và artifact còn lại có thể tải ở bên dưới.</p>`;labelResult(manifest,target);target.dataset.runId=run;}
     return;
   }
-  if(operation==="analyze") {
+  if(operation==="calibrate"){state.calibration=await artifact(run,"calibration.json");renderCalibration(state.calibration);}
+  else if(operation==="analyze") {
     const summary=await artifact(run,"summary.json"), responses=await artifact(run,"best_responses.json");
     state.analysis={...summary,best_responses:responses};renderAnalysis(state.analysis);
     const response=await fetch(artifactURL(run,"states.csv"));state.csv=parseCSV(await response.text());renderStates();
@@ -160,6 +176,11 @@ async function openRun(run) {
   else if(operation==="sweep"){state.sweep=await artifact(run,"sweep.json");state.sweepProfile=manifest.profile;renderSweep();}
   else if(operation==="compare")renderComparison(await artifact(run,"summary.json"));
   const target=$(operation+"-result");if(target){labelResult(manifest,target);target.dataset.runId=run;}
+}
+function renderCalibration(result) {
+  const rows=[["Tín hiệu chung Z","sensitivity",result.estimates.public_signal.sensitivity],["Tín hiệu chung Z","specificity",result.estimates.public_signal.specificity]];
+  for(const judge of ["A","B","C"]){const item=result.estimates.judges[judge];rows.push([`Judge ${judge}`,"sensitivity",item.private_signal.sensitivity],[`Judge ${judge}`,"specificity",item.private_signal.specificity],[`Judge ${judge}`,"high_effort_cost",item.high_effort_cost]);}
+  $("calibrate-result").innerHTML=`<div class="verdict"><strong>Đã tạo config V2 từ ${result.row_count} case</strong>${badge("succeeded")}</div><div class="metrics">${metric("Y=1",{exact:String(result.class_counts["1"]),decimal:result.class_counts["1"]},"Số case positive")}${metric("Y=0",{exact:String(result.class_counts["0"]),decimal:result.class_counts["0"]},"Số case negative")}${metric("π",{exact:result.estimates.pi.value,decimal:Number(result.class_counts["1"])/result.row_count},"Tỷ lệ Y=1 trong dataset")}${metric("Provenance",null,result.provenance_status)}</div>${table(["Kênh","Estimate","Numerator / denominator","Exact"],rows.map(([channel,name,value])=>[esc(channel),esc(name),`${value.numerator} / ${value.denominator}`,esc(value.value)]))}<p class="notice">${result.warnings.map(esc).join(" ")}</p><div class="button-row"><button id="apply-calibration" class="primary">Nạp config vào Phân tích</button></div><details><summary>Generated config và identity dataset</summary>${jsonBlock({dataset_hash:result.dataset_hash,raw_sha256:result.raw_sha256,config:result.config})}</details>`;
 }
 function metric(label,value,definition) {return `<div class="metric"><div class="label">${esc(label)}</div><div class="value">${esc(decimal(value))}</div><span class="exact">${esc(value?.exact||"")}</span><span class="help">${esc(definition)}</span></div>`;}
 function branchDetails(branch,withWitness=false) {
@@ -250,6 +271,8 @@ async function handleClick(event) {
     if(button.dataset.witness){const [judge,z]=button.dataset.witness.split("-");const b=state.analysis.best_responses.find(r=>r.judge===judge&&String(r.z)===z);const p=copy(state.analysis.profile);p[z]["ABC".indexOf(judge)]=b.witness.action;putDraft(state.analysis.config,p,state.analysis.mechanism);$("job-detail").textContent="Đã nạp deviation. Run mới sẽ dựng prediction của candidate mới; witness gốc vẫn giữ nguyên.";return;}
     if(button.dataset.certificate){const r=Object.values(state.search.branches).flatMap(b=>b.candidates).find(r=>r.id===button.dataset.certificate);$("search-certificate").innerHTML=`<h3>${esc(r.id)} · ${r.accepted?"Cân bằng":"Bị bác"}</h3>`+r.certificates.map(c=>branchDetails(c)).join("");$("search-certificate").scrollIntoView({block:"start"});return;}
     if(button.dataset.sweepPoint!==undefined){const row=state.sweep.rows[Number(button.dataset.sweepPoint)];putDraft(JSON.parse(row.config_json),state.sweepProfile,state.manifest.mechanism);switchView("analyze");return;}
+    if(button.id==="load-calibration-sample"){const response=await fetch("/api/calibration/sample.csv");if(!response.ok)throw new Error("Không tải được dataset mẫu.");state.calibrationDataset={name:"synthetic_v2_calibration.csv",text:await response.text()};$("calibration-file-status").textContent=`Đã nạp ${state.calibrationDataset.name} · synthetic fixture.`;$("calibration-provenance").value="synthetic";return;}
+    if(button.id==="apply-calibration"){if(!state.calibration)throw new Error("Chưa có calibration thành công.");const current=readDraft();putDraft(state.calibration.config,current.profile,current.mechanism,current.scenario);switchView("analyze");$("job-detail").textContent="Đã nạp config calibration vào draft V2. Hãy kiểm tra profile rồi chạy phân tích.";return;}
     if(button.id==="cancel"&&state.active){button.disabled=true;updateJob(await api("/api/jobs/"+encodeURIComponent(state.active)+"/cancel",{}));return;}
     if(button.id==="validate"){clearErrors();const response=await api("/api/validate",{operation:"analyze",...readDraft()});$("signal-diagnostics").innerHTML=`<h3>Chẩn đoán tín hiệu</h3><p class="help">FPR=1−specificity; FNR=1−sensitivity; accuracy có trọng số prior. Đây không phải decision accuracy hay utility.</p>${jsonBlock(response.signal_diagnostics)}`;$("job-detail").textContent="Đầu vào hợp lệ theo validator của engine.";return;}
     if(button.id==="equal-cap"){const response=await api("/api/validate",{operation:"analyze",...readDraft()});$(fieldId("fixed_reward")).value=response.comparison_fixed_reward;changed();$("job-detail").textContent="Đã chủ động đặt F=f+2λ theo kết quả exact từ engine.";return;}
@@ -264,6 +287,7 @@ $("config-form").addEventListener("submit",event=>event.preventDefault());
 $("config-form").addEventListener("input",changed);$("config-form").addEventListener("change",changed);$("mechanism").addEventListener("change",changed);
 $("sweep-axes").addEventListener("input",previewGrid);$("sweep-axes").addEventListener("change",previewGrid);
 $("suite").addEventListener("change",()=>$("test-selection").hidden=$("suite").value!=="selected");
+$("calibration-file").addEventListener("change",async event=>{try{clearErrors();const file=event.target.files[0];if(!file)return;state.calibrationDataset={name:file.name,text:await file.text()};$("calibration-file-status").textContent=`Đã chọn ${file.name} · ${file.size.toLocaleString("vi-VN")} bytes.`;}catch(error){showError(error);}});
 $("model-version").addEventListener("change",event=>{try{state.drafts[state.activeModel]=readDraft();const version=event.target.value;if(state.drafts[version]){const draft=state.drafts[version];putDraft(draft.config,draft.profile,draft.mechanism,draft.scenario);}else{renderModelFields(version);const config=version==="ceav-m1-v2.0"?state.status.v2_presets.heterogeneous:state.status.presets.golden_g1;putDraft(config,state.status.presets.all_high,"rbts",null);}$("signal-diagnostics").innerHTML='<p class="help">Bấm “Kiểm tra đầu vào” để xem diagnostics của draft này.</p>';}catch(error){showError(error);event.target.value=state.activeModel;}});
 $("preset").addEventListener("change",()=>{const name=$("preset").value;const profileName=name==="golden_g2"?"all_z":name==="asymmetric"?"asymmetric_profile":"all_high";const config=state.activeModel==="ceav-m1-v2.0"?state.status.v2_presets[name]:state.status.presets[name];putDraft(config,state.status.presets[profileName],"rbts");$("quick-profile").value=profileName;});
 $("quick-profile").addEventListener("change",()=>putDraft(readDraft().config,state.status.presets[$("quick-profile").value],readDraft().mechanism));

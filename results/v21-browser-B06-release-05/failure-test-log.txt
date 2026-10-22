@@ -1,0 +1,19 @@
+test_explicit_failure_fixture (tests.failure_fixture.IntentionalFailure.test_explicit_failure_fixture) ... FAIL
+
+======================================================================
+FAIL: test_explicit_failure_fixture (tests.failure_fixture.IntentionalFailure.test_explicit_failure_fixture)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\dell\Desktop\fundtogether_data_analyzing\tests\failure_fixture.py", line 8, in test_explicit_failure_fixture
+    self.assertEqual("intentional fixture actual", "intentional fixture expected", "Explicit failure fixture; production engine is untouched")
+AssertionError: 'intentional fixture actual' != 'intentional fixture expected'
+- intentional fixture actual
+?                     ^  ^^^
++ intentional fixture expected
+?                     ^^^^  ^^
+ : Explicit failure fixture; production engine is untouched
+
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+FAILED (failures=1)

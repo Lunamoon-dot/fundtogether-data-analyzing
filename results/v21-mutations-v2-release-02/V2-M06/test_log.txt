@@ -1,0 +1,14 @@
+test_V2_T09_manifest_certificate_freeze_and_scenario_identity (tests.test_v2_io.V2IOTests.test_V2_T09_manifest_certificate_freeze_and_scenario_identity) ... FAIL
+
+======================================================================
+FAIL: test_V2_T09_manifest_certificate_freeze_and_scenario_identity (tests.test_v2_io.V2IOTests.test_V2_T09_manifest_certificate_freeze_and_scenario_identity)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\dell\Desktop\fundtogether_data_analyzing\results\v21-mutations-v2-release-02\V2-M06\workspace\tests\test_v2_io.py", line 47, in test_V2_T09_manifest_certificate_freeze_and_scenario_identity
+    self.assertNotEqual(semantic_hash(raw_v2()), semantic_hash(raw_v2() | {"model_version": "changed-for-hash-check"}))
+AssertionError: '7526c5dc6dc8fa0f0209c41aea3db26a05cf6c1bb5f2a560719becf99497d880' == '7526c5dc6dc8fa0f0209c41aea3db26a05cf6c1bb5f2a560719becf99497d880'
+
+----------------------------------------------------------------------
+Ran 1 test in 1.386s
+
+FAILED (failures=1)

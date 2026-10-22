@@ -1,0 +1,91 @@
+{
+  "checks": [
+    {
+      "evidence": {
+        "counts": {
+          "error": 0,
+          "fail": 0,
+          "not_run": 0,
+          "pass": 8,
+          "skipped": 0
+        },
+        "run": "v21-calibration-tests-release-02"
+      },
+      "requirement": "CAL-T01 through CAL-T08 executed",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "counts": {
+          "error": 0,
+          "fail": 0,
+          "not_run": 0,
+          "pass": 47,
+          "skipped": 0
+        },
+        "run": "v21-v1-regression-release-02"
+      },
+      "requirement": "V1 regression executed",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "counts": {
+          "error": 0,
+          "fail": 0,
+          "not_run": 0,
+          "pass": 15,
+          "skipped": 0
+        },
+        "run": "v21-v2-tests-release-02"
+      },
+      "requirement": "V2 regression executed",
+      "status": "pass"
+    },
+    {
+      "evidence": "b66df2cf8d518f638f86e18a812c8d44e9ae4cec7490805328879492cd4ed436",
+      "requirement": "Calibration tests use current source",
+      "status": "pass"
+    },
+    {
+      "evidence": "b66df2cf8d518f638f86e18a812c8d44e9ae4cec7490805328879492cd4ed436",
+      "requirement": "V1 regression uses current source",
+      "status": "pass"
+    },
+    {
+      "evidence": "b66df2cf8d518f638f86e18a812c8d44e9ae4cec7490805328879492cd4ed436",
+      "requirement": "V2 regression uses current source",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "run": "v21-browser-CAL-B01-release-05"
+      },
+      "requirement": "CAL-B01 current-source browser acceptance",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "files": 5,
+        "freeze": "ceav-m1-v2.1-calibration"
+      },
+      "requirement": "Calibration implementation-start freeze is intact",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "sha256": "0d4fec6cb1d25c2d8c9970d90fee31f0b5c3b7a305a516e68b7272edf8da247a"
+      },
+      "requirement": "Synthetic fixture is pinned and labeled",
+      "status": "pass"
+    }
+  ],
+  "feature_version": "ceav-m1-v2.1-calibration",
+  "inputs": {
+    "calibration_tests_manifest_sha256": "e2e7e56735b74c49c01f3222ed302af97c46659320b13afaa91788f10f6e15c0",
+    "v1_manifest_sha256": "6431602f936d3a5d523b312706a062aa44b549329c21c6c9e0485cb36fc82634",
+    "v2_manifest_sha256": "910441eed4cf06d220c686174c96462bd36cfa52663b47745d87b7189d9abc6a"
+  },
+  "model_version": "ceav-m1-v2.0",
+  "status": "passed"
+}

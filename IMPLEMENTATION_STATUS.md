@@ -1,5 +1,25 @@
 # CEAV-M1 — Trạng thái triển khai
 
+## Version 2.1 — Data Calibration
+
+**Trạng thái hiện tại: `SPECIFIED`, `IMPLEMENTED` và `VERIFIED` trong phạm vi calibration local.**
+
+V2.1 thêm view **Dữ liệu**, strict CSV parser, exact estimator, CLI/API worker và immutable calibration artifacts. Feature sinh config `ceav-m1-v2.0`; game, scoring và equilibrium search không đổi. Dataset mẫu 40 case là synthetic fixture, không phải evidence thực tế.
+
+Nguồn chuẩn: [spec](CEAV_M1_V2_1_CALIBRATION_SPEC.md), [engine design](ENGINE_DESIGN_V2_1_CALIBRATION.md), [verification plan](VERIFICATION_PLAN_V2_1_CALIBRATION.md), [hướng dẫn sử dụng](HUONG_DAN_DATASET_V2_1.md).
+
+Nghiệm thu: [report](results/v21-calibration-acceptance-release-01/report.md) và [acceptance.json](results/v21-calibration-acceptance-release-01/acceptance.json). Audit calibration đạt 9/9 checks; CAL-T01–CAL-T08 đạt 8/8, V1 đạt 47/47 methods, V2 đạt 15/15, CAL-B01 và toàn bộ V1/V2 browser regression đều pass trên source hash `b66df2cf8d518f638f86e18a812c8d44e9ae4cec7490805328879492cd4ed436`.
+
+| Phần | Evidence V2.1 |
+| --- | --- |
+| Freeze/fixture | `spec_history/v2.1-calibration-implementation-start-20261022T173242126063Z/`; spec/design/plan, CSV 40 case và expected độc lập được pin trước production module |
+| Parser/estimator/config | CAL-T01–CAL-T04; exact Fraction, strict schema, semantic/raw hashes, generated config chạy được |
+| CLI/API/artifacts | CAL-T05–CAL-T06; worker/direct parity, no-overwrite, raw dataset và freeze được pin |
+| Browser | `results/v21-browser-CAL-B01-release-05/`; 13/13 bước desktop/mobile, explicit apply và không có JavaScript error |
+| Regression | `results/v21-v1-regression-release-02/` 47/47; `results/v21-v2-tests-release-02/` 15/15; V1 B01–B09 và V2-B01–B06 pass |
+
+Phạm vi VERIFIED chỉ chứng minh pipeline calibration local và giữ nguyên behavior V1/V2. Dataset mẫu vẫn là synthetic; hệ thống chưa có dữ liệu Judge thực, confidence interval, missing-signal estimator hoặc bằng chứng dataset đại diện.
+
 ## Version 2
 
 **Trạng thái V2: `SPECIFIED`, `IMPLEMENTED` và `VERIFIED` trong phạm vi M1 local.**

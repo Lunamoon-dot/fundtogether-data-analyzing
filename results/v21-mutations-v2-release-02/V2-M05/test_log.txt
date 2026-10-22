@@ -1,0 +1,26 @@
+test_V2_T01_nested_schema_dispatch_and_errors (tests.test_v2_model.V2ModelTests.test_V2_T01_nested_schema_dispatch_and_errors) ... 
+  test_V2_T01_nested_schema_dispatch_and_errors (tests.test_v2_model.V2ModelTests.test_V2_T01_nested_schema_dispatch_and_errors) (field='public_signal') ... FAIL
+test_V2_T01_nested_schema_dispatch_and_errors (tests.test_v2_model.V2ModelTests.test_V2_T01_nested_schema_dispatch_and_errors) ... ERROR
+
+======================================================================
+ERROR: test_V2_T01_nested_schema_dispatch_and_errors (tests.test_v2_model.V2ModelTests.test_V2_T01_nested_schema_dispatch_and_errors)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\dell\Desktop\fundtogether_data_analyzing\results\v21-mutations-v2-release-02\V2-M05\workspace\tests\test_v2_model.py", line 55, in test_V2_T01_nested_schema_dispatch_and_errors
+    self.assertEqual(caught.exception.field, field)
+                     ^^^^^^^^^^^^^^^^
+AttributeError: '_AssertRaisesContext' object has no attribute 'exception'
+
+======================================================================
+FAIL: test_V2_T01_nested_schema_dispatch_and_errors (tests.test_v2_model.V2ModelTests.test_V2_T01_nested_schema_dispatch_and_errors) (field='public_signal')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\dell\Desktop\fundtogether_data_analyzing\results\v21-mutations-v2-release-02\V2-M05\workspace\tests\test_v2_model.py", line 53, in test_V2_T01_nested_schema_dispatch_and_errors
+    with self.subTest(field=field), self.assertRaises(ValidationError) as caught:
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValidationError not raised
+
+----------------------------------------------------------------------
+Ran 1 test in 0.004s
+
+FAILED (failures=1, errors=1)

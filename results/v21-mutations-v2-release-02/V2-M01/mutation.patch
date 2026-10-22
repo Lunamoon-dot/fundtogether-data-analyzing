@@ -1,0 +1,11 @@
+--- ceav_m1/signals.py
++++ ceav_m1/signals.py
+@@ -6,7 +6,7 @@
+ def likelihood(value, truth, sensitivity, specificity):
+     if truth:
+         return sensitivity if value else 1 - sensitivity
+-    return specificity if not value else 1 - specificity
++    return sensitivity if not value else 1 - sensitivity
+ 
+ 
+ def signal_parameters(config):

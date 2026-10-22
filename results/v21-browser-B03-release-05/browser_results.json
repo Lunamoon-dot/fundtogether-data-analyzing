@@ -1,0 +1,438 @@
+{
+  "browser": "155.0.4283.62",
+  "errors": [],
+  "network": [
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/styles.css"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/app.js"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/status"
+    },
+    {
+      "method": "POST",
+      "url": "http://127.0.0.1:8877/api/runs"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/jobs/run-20261022T185946-0842b62b89"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/jobs/run-20261022T185946-0842b62b89"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/jobs/run-20261022T185946-0842b62b89"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/runs/run-20261022T185946-0842b62b89"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/runs/run-20261022T185946-0842b62b89/artifacts/summary.json"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/runs/run-20261022T185946-0842b62b89/artifacts/best_responses.json"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/runs/run-20261022T185946-0842b62b89/artifacts/states.csv"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/runs"
+    },
+    {
+      "method": "POST",
+      "url": "http://127.0.0.1:8877/api/runs"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/jobs/run-20261022T185947-ab18785e5b"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/jobs/run-20261022T185947-ab18785e5b"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/jobs/run-20261022T185947-ab18785e5b"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/runs/run-20261022T185947-ab18785e5b"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/runs/run-20261022T185947-ab18785e5b/artifacts/summary.json"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/runs/run-20261022T185947-ab18785e5b/artifacts/best_responses.json"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/runs/run-20261022T185947-ab18785e5b/artifacts/states.csv"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/runs"
+    },
+    {
+      "method": "POST",
+      "url": "http://127.0.0.1:8877/api/runs"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/jobs/run-20261022T185949-ea6603a91b"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/jobs/run-20261022T185949-ea6603a91b"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/jobs/run-20261022T185949-ea6603a91b"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/runs/run-20261022T185949-ea6603a91b"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/runs/run-20261022T185949-ea6603a91b/artifacts/summary.json"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/runs/run-20261022T185949-ea6603a91b/artifacts/best_responses.json"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/runs/run-20261022T185949-ea6603a91b/artifacts/states.csv"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/runs"
+    },
+    {
+      "method": "POST",
+      "url": "http://127.0.0.1:8877/api/runs"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/jobs/run-20261022T185951-c94d2f9473"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/jobs/run-20261022T185951-c94d2f9473"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/jobs/run-20261022T185951-c94d2f9473"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/runs/run-20261022T185951-c94d2f9473"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/runs/run-20261022T185951-c94d2f9473/artifacts/summary.json"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/runs/run-20261022T185951-c94d2f9473/artifacts/best_responses.json"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/runs/run-20261022T185951-c94d2f9473/artifacts/states.csv"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/runs"
+    },
+    {
+      "method": "POST",
+      "url": "http://127.0.0.1:8877/api/runs"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/jobs/run-20261022T185952-6949cff900"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/jobs/run-20261022T185952-6949cff900"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/jobs/run-20261022T185952-6949cff900"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/runs/run-20261022T185952-6949cff900"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/runs/run-20261022T185952-6949cff900/artifacts/summary.json"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/runs/run-20261022T185952-6949cff900/artifacts/best_responses.json"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/runs/run-20261022T185952-6949cff900/artifacts/states.csv"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/runs"
+    }
+  ],
+  "scenario": "B03",
+  "status": "passed",
+  "steps": [
+    {
+      "observed": 202,
+      "status": "pass",
+      "step": "UI submitted analyze"
+    },
+    {
+      "observed": {
+        "id": "run-20261022T185946-0842b62b89",
+        "status": "succeeded"
+      },
+      "status": "pass",
+      "step": "UI observed terminal run"
+    },
+    {
+      "observed": "succeeded",
+      "status": "pass",
+      "step": "G1 engine run completed"
+    },
+    {
+      "observed": "exact_pure_equilibrium",
+      "status": "pass",
+      "step": "G1 equilibrium verdict"
+    },
+    {
+      "observed": 6,
+      "status": "pass",
+      "step": "G1 renders six judge/Z certificates"
+    },
+    {
+      "observed": 16,
+      "status": "pass",
+      "step": "State table filters ground-truth label"
+    },
+    {
+      "observed": 8,
+      "status": "pass",
+      "step": "State table combines Y/Z filters"
+    },
+    {
+      "observed": 4,
+      "status": "pass",
+      "step": "State table filters majority decision"
+    },
+    {
+      "observed": 202,
+      "status": "pass",
+      "step": "UI submitted analyze"
+    },
+    {
+      "observed": {
+        "id": "run-20261022T185947-ab18785e5b",
+        "status": "succeeded"
+      },
+      "status": "pass",
+      "step": "UI observed terminal run"
+    },
+    {
+      "observed": "succeeded",
+      "status": "pass",
+      "step": "G2 engine run completed"
+    },
+    {
+      "observed": "exact_pure_equilibrium",
+      "status": "pass",
+      "step": "G2 equilibrium verdict"
+    },
+    {
+      "observed": 6,
+      "status": "pass",
+      "step": "G2 renders six judge/Z certificates"
+    },
+    {
+      "observed": 202,
+      "status": "pass",
+      "step": "UI submitted analyze"
+    },
+    {
+      "observed": {
+        "id": "run-20261022T185949-ea6603a91b",
+        "status": "succeeded"
+      },
+      "status": "pass",
+      "step": "UI observed terminal run"
+    },
+    {
+      "observed": "succeeded",
+      "status": "pass",
+      "step": "G3 engine run completed"
+    },
+    {
+      "observed": "not_equilibrium",
+      "status": "pass",
+      "step": "G3 equilibrium verdict"
+    },
+    {
+      "observed": 6,
+      "status": "pass",
+      "step": "G3 renders six judge/Z certificates"
+    },
+    {
+      "observed": 202,
+      "status": "pass",
+      "step": "UI submitted analyze"
+    },
+    {
+      "observed": {
+        "id": "run-20261022T185951-c94d2f9473",
+        "status": "succeeded"
+      },
+      "status": "pass",
+      "step": "UI observed terminal run"
+    },
+    {
+      "observed": "succeeded",
+      "status": "pass",
+      "step": "G4 engine run completed"
+    },
+    {
+      "observed": "not_equilibrium",
+      "status": "pass",
+      "step": "G4 equilibrium verdict"
+    },
+    {
+      "observed": 6,
+      "status": "pass",
+      "step": "G4 renders six judge/Z certificates"
+    },
+    {
+      "observed": true,
+      "status": "pass",
+      "step": "Witness loaded as new candidate branch"
+    },
+    {
+      "observed": 202,
+      "status": "pass",
+      "step": "UI submitted analyze-clone"
+    },
+    {
+      "observed": {
+        "id": "run-20261022T185952-6949cff900",
+        "status": "succeeded"
+      },
+      "status": "pass",
+      "step": "UI observed terminal run"
+    },
+    {
+      "observed": "run-20261022T185952-6949cff900",
+      "status": "pass",
+      "step": "Clone creates a distinct run"
+    },
+    {
+      "observed": "run-20261022T185951-c94d2f9473",
+      "status": "pass",
+      "step": "Original G4 run unchanged after clone"
+    },
+    {
+      "observed": [
+        {
+          "accuracy": "112/125",
+          "config_hash": "bda5c8793d24f3d2d32fce51383b89a04313577e42cfffb5280e99ba5afbdf96",
+          "golden": "G1",
+          "profile_hash": "2b5e101404e8e22918f3d45d17db7b3081c5d707e3c8cd6f72f41901ffb9a34e",
+          "run_id": "run-20261022T185946-0842b62b89",
+          "verdict": "exact_pure_equilibrium"
+        },
+        {
+          "accuracy": "7/10",
+          "config_hash": "bda5c8793d24f3d2d32fce51383b89a04313577e42cfffb5280e99ba5afbdf96",
+          "golden": "G2",
+          "profile_hash": "a22c9d6180cf1a268dec1a6dcda3fb703f638b429c231ce06f6013c0bae0bf75",
+          "run_id": "run-20261022T185947-ab18785e5b",
+          "verdict": "exact_pure_equilibrium"
+        },
+        {
+          "accuracy": "27/32",
+          "config_hash": "69d142851987765d0632442cbbd81ac62ff25b5b16a0f379ef76b719d8e4ab42",
+          "golden": "G3",
+          "profile_hash": "2b5e101404e8e22918f3d45d17db7b3081c5d707e3c8cd6f72f41901ffb9a34e",
+          "run_id": "run-20261022T185949-ea6603a91b",
+          "verdict": "not_equilibrium"
+        },
+        {
+          "accuracy": "112/125",
+          "config_hash": "5032b5c942e159bf3dbdc9bcafc1318292ecca75f79092231a77489b7f68782d",
+          "golden": "G4",
+          "profile_hash": "2b5e101404e8e22918f3d45d17db7b3081c5d707e3c8cd6f72f41901ffb9a34e",
+          "run_id": "run-20261022T185951-c94d2f9473",
+          "verdict": "not_equilibrium"
+        }
+      ],
+      "status": "pass",
+      "step": "Golden run identities"
+    },
+    {
+      "observed": [],
+      "status": "pass",
+      "step": "No JavaScript runtime errors"
+    },
+    {
+      "observed": [
+        {
+          "api_run": "run-20261022T185946-0842b62b89",
+          "cli_exit_code": 0,
+          "golden": "G1",
+          "numeric_artifacts_byte_equal": true
+        },
+        {
+          "api_run": "run-20261022T185947-ab18785e5b",
+          "cli_exit_code": 0,
+          "golden": "G2",
+          "numeric_artifacts_byte_equal": true
+        },
+        {
+          "api_run": "run-20261022T185949-ea6603a91b",
+          "cli_exit_code": 0,
+          "golden": "G3",
+          "numeric_artifacts_byte_equal": true
+        },
+        {
+          "api_run": "run-20261022T185951-c94d2f9473",
+          "cli_exit_code": 0,
+          "golden": "G4",
+          "numeric_artifacts_byte_equal": true
+        }
+      ],
+      "status": "pass",
+      "step": "Actual CLI/API numeric artifacts match byte-for-byte G1-G4"
+    }
+  ],
+  "viewport": {
+    "height": 768,
+    "width": 1366
+  }
+}

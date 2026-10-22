@@ -1,0 +1,26 @@
+[
+  {
+    "api_run": "run-20261022T185946-0842b62b89",
+    "cli_exit_code": 0,
+    "golden": "G1",
+    "numeric_artifacts_byte_equal": true
+  },
+  {
+    "api_run": "run-20261022T185947-ab18785e5b",
+    "cli_exit_code": 0,
+    "golden": "G2",
+    "numeric_artifacts_byte_equal": true
+  },
+  {
+    "api_run": "run-20261022T185949-ea6603a91b",
+    "cli_exit_code": 0,
+    "golden": "G3",
+    "numeric_artifacts_byte_equal": true
+  },
+  {
+    "api_run": "run-20261022T185951-c94d2f9473",
+    "cli_exit_code": 0,
+    "golden": "G4",
+    "numeric_artifacts_byte_equal": true
+  }
+]

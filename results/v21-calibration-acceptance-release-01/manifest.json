@@ -1,0 +1,387 @@
+{
+  "argv": [
+    "verification/acceptance_audit_calibration.py",
+    "--out",
+    "results/v21-calibration-acceptance-release-01",
+    "--tests",
+    "results/v21-calibration-tests-release-02",
+    "--v1",
+    "results/v21-v1-regression-release-02",
+    "--v2",
+    "results/v21-v2-tests-release-02"
+  ],
+  "artifacts": [
+    {
+      "bytes": 2493,
+      "name": "acceptance.json",
+      "sha256": "f7fdea1fd13e48a920480bbaf490c100fa7078bfba2b5ba8bf3c3d755e59d0d5"
+    },
+    {
+      "bytes": 448,
+      "name": "report.md",
+      "sha256": "f8fd0360ef6944c3baf9fee4c30b939e6478cf84831b99d43f67c1896f6376dc"
+    },
+    {
+      "bytes": 152,
+      "name": "request.json",
+      "sha256": "0a56f600af8d774298ab87125ab4894d87681429395b828a6c8d7d6f6fd7c3e9"
+    },
+    {
+      "bytes": 1235,
+      "name": "test_log.txt",
+      "sha256": "132dd2fefd464c0c16e1271275de5642c824b5f895be06a700d48762073e88df"
+    },
+    {
+      "bytes": 3269,
+      "name": "test_results.json",
+      "sha256": "99b1632df50860fea452eceae7c252ca1f4816894efa997de6897010976a9705"
+    }
+  ],
+  "completed_at_utc": "2026-10-22T19:23:14.861812+00:00",
+  "created_at_utc": "2026-10-22T19:23:14.518162+00:00",
+  "documents": {
+    "CEAV_M1_V2_SPEC.md": {
+      "bytes": 27179,
+      "role": "spec",
+      "sha256": "c198e239728132dc0436aac0cdb48f94c02daa41ee11f5a853d0fb5996de7b1d"
+    },
+    "ENGINE_DESIGN_V2.md": {
+      "bytes": 10845,
+      "role": "engine_design",
+      "sha256": "f1b89a8b429464e3eef36cc73821cf4558616acfd0d38a7d9c4af9f7bff8cc14"
+    },
+    "VERIFICATION_PLAN_V2.md": {
+      "bytes": 9255,
+      "role": "verification_plan",
+      "sha256": "dff015fc007467fd7db56032722d87a8c5725186660656664f0d8a8e410814ec"
+    }
+  },
+  "engine_revision": "b66df2cf8d518f638f86e18a812c8d44e9ae4cec7490805328879492cd4ed436",
+  "engine_version": "ceav-m1-engine-v2.1",
+  "logical_cpu_count": 16,
+  "machine": "AMD64",
+  "mechanism": null,
+  "model_version": "ceav-m1-v2.0",
+  "operation": "calibration_acceptance",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "publication_owner": "cli",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "randomness": "none",
+  "request_hash": "1daae7214aedfafd5a3faa9165ac6ef44af67c2dc8b2fb62d0ae4e8f0eccb604",
+  "run_id": "v21-calibration-acceptance-release-01",
+  "source_files": [
+    {
+      "path": "ceav_m1/__init__.py",
+      "sha256": "6a1ec0077cc447a6b491d8b89c34d98ab9e5ca30ce13f65093bf792f403d2406"
+    },
+    {
+      "path": "ceav_m1/__main__.py",
+      "sha256": "7eae3f341de34a762177a82be2ea97ba8f50e4b052a2dcbe34839cab6cf9d57f"
+    },
+    {
+      "path": "ceav_m1/best_response.py",
+      "sha256": "eace8ef8864de0a9c53293c18da7f68251eac168c82aed0d21aa659a5e75ab89"
+    },
+    {
+      "path": "ceav_m1/calibration.py",
+      "sha256": "aad640ce9d3e5259b23e1f097ed94f447768e876dfe209138b06ec6ae791901e"
+    },
+    {
+      "path": "ceav_m1/equilibria.py",
+      "sha256": "f75b660b8cea8234e533d282341ed16f5ae58eb1ab822bfa75bf71f6d6c84409"
+    },
+    {
+      "path": "ceav_m1/evaluate.py",
+      "sha256": "e4d33f7ca1c2ef40b5942448c9e69545e5b3f63f8a8776c9028a0365e9939e77"
+    },
+    {
+      "path": "ceav_m1/model.py",
+      "sha256": "ea86f6bb0bbb7250269e50dacb1cf7aaef7a5cc7bb6c4214df1d58515fd6a928"
+    },
+    {
+      "path": "ceav_m1/output.py",
+      "sha256": "8b99913247107f11552074653738ebb53ecbef842dfa6be2755d34fc367d1ab5"
+    },
+    {
+      "path": "ceav_m1/runtime.py",
+      "sha256": "a815848296e4391b050b3d17f64610fd9f05c5a4e705be832d74291a1ca6e79d"
+    },
+    {
+      "path": "ceav_m1/scoring.py",
+      "sha256": "9bc9cc09c3da7b5619c83f750b31df124fc453250ae5eb0f7cc4550d5a367451"
+    },
+    {
+      "path": "ceav_m1/server.py",
+      "sha256": "5a49ce299ac3464d0c522c3e10816d1849e9be012ef949d844ce61c77e039fa8"
+    },
+    {
+      "path": "ceav_m1/signals.py",
+      "sha256": "2f37dbafefa4b2b829d2559c5eab033974cad6590ff93344b7e029ea525f309b"
+    },
+    {
+      "path": "ceav_m1/strategies.py",
+      "sha256": "9ca37e72c1b67de7d48aea75148063c2f169cac4e56c31d3687a5a2b1c5dc9bb"
+    },
+    {
+      "path": "ceav_m1/test_runner.py",
+      "sha256": "03693845d010988d43cca5fd62eea328d05020e15e5426ddbf82d2adde6fbdaf"
+    },
+    {
+      "path": "configs/all_fail.json",
+      "sha256": "34e268c3092aa8b40cdf0de2042536adb0e8147e5dc6bacdd56c76680e6e2adc"
+    },
+    {
+      "path": "configs/all_high.json",
+      "sha256": "66712b6a53ded25a422ab0b4c91abf2d4f8724bb8dad6cdfe69a6cad5f2d60c1"
+    },
+    {
+      "path": "configs/all_inverted.json",
+      "sha256": "33c3a09a74a4f022dead1d1e196c7f331ae30de779abbe23b0f7c1e35d1506f1"
+    },
+    {
+      "path": "configs/all_not_z.json",
+      "sha256": "f21bdf23f7f3dcbd377a2c9fc4b78f8fc250f9b2f6e526a93349c82057dbb02e"
+    },
+    {
+      "path": "configs/all_pass.json",
+      "sha256": "b3dac93103641affc8bd746db35ad5d49f0a0fafa65d8eaa8be49b8c9fb499c6"
+    },
+    {
+      "path": "configs/all_z.json",
+      "sha256": "2b97a46ef5fab95aa320af5ad14da81a18a2b1522482e0cb68f17d8ee5c43215"
+    },
+    {
+      "path": "configs/asymmetric.json",
+      "sha256": "b6ecfc6fe9cd0030f87039f1b9fb21f72fda84d334d45d625405e92fa6cd4d99"
+    },
+    {
+      "path": "configs/asymmetric_profile.json",
+      "sha256": "fead5f76e88fccc735afa3f3b722b775c5697cb10f2df7e4cafe321512e59b35"
+    },
+    {
+      "path": "configs/golden_g1.json",
+      "sha256": "29b4f77f70129bd51b54a43b54dc6932da80ecd88eae9906049cad56b48932bb"
+    },
+    {
+      "path": "configs/golden_g2.json",
+      "sha256": "29b4f77f70129bd51b54a43b54dc6932da80ecd88eae9906049cad56b48932bb"
+    },
+    {
+      "path": "configs/golden_g3.json",
+      "sha256": "8927e92f1e617c674840c24f67fac9fe434ee73023c6cd80c0f3a685d9765bab"
+    },
+    {
+      "path": "configs/golden_g4.json",
+      "sha256": "8108b13876e237b961ec77d3afe6b05cf45ccdb405ae1446e05c704c487a757e"
+    },
+    {
+      "path": "configs/sweep.json",
+      "sha256": "cb658854f5ca2d6c4eef895c59ded6cc77fb5f6a93e1202e8247bb7f9ac9bf98"
+    },
+    {
+      "path": "configs/v2/below_half.json",
+      "sha256": "41bce8776d06aa64b904a75eeb48123ce9d43b62e715ce5b8f5bad0816b4ca72"
+    },
+    {
+      "path": "configs/v2/heterogeneous.json",
+      "sha256": "9103c83cfbae97f658109150a2232e159904cda8b0c1556f813cc678b4c42272"
+    },
+    {
+      "path": "configs/v2/symmetric_g1.json",
+      "sha256": "2b81139c9d8335ae3f4c1d77eca9281464d7444c7c9967dd1f90bbc622667f2d"
+    },
+    {
+      "path": "datasets/synthetic_v2_calibration.csv",
+      "sha256": "0d4fec6cb1d25c2d8c9970d90fee31f0b5c3b7a305a516e68b7272edf8da247a"
+    },
+    {
+      "path": "datasets/synthetic_v2_calibration.metadata.json",
+      "sha256": "8825d1503b1659f6e75aa3113c396877438c56373610a9bdceda36a8447e5315"
+    },
+    {
+      "path": "scenarios/sample_campaign/scenario.json",
+      "sha256": "8848ed06abd31ead9d4df1f05a5a4a562af6e06fbde538ac4295fe3c40331aba"
+    },
+    {
+      "path": "tests/__init__.py",
+      "sha256": "14ecdce21e733e50c3e5bca221b9d10c520cfa180380f733bdbf57e4e988488e"
+    },
+    {
+      "path": "tests/certificates.py",
+      "sha256": "ff0626fcbe3409d68d698e2c8efb1ae9ef4488c9302e1897845de057a64f28d6"
+    },
+    {
+      "path": "tests/failure_fixture.py",
+      "sha256": "f7d9acf049ba5b4cee8135577fc564f2942fab2605e9dd7ac0acace82e5514b1"
+    },
+    {
+      "path": "tests/fixtures/asymmetric_oracle.json",
+      "sha256": "ce46cdefe3a5d229a0e93119abce00967e0a039ba891096d80c3ffbe1e1fdc2b"
+    },
+    {
+      "path": "tests/fixtures/calibration_expected.json",
+      "sha256": "526be2f37f5be7f06d39793943288a9d1c9b60ab6158bde55235f301ac8de2c4"
+    },
+    {
+      "path": "tests/fixtures/oracle_preproduction.py",
+      "sha256": "6eadc3a96a123d51816358bde62ee777bbfef96e2cf42b722ee1745e23af6b41"
+    },
+    {
+      "path": "tests/fixtures/oracle_recovery.json",
+      "sha256": "2462378c7c1fa9780d6883e25a58ddb1302454b9876bb57dfe4b52c8bab39776"
+    },
+    {
+      "path": "tests/fixtures/reference.json",
+      "sha256": "aab77bf2f2160a9890e9b8ee2302bef62b79571a2b6f8f56e2b9f6b53fba3c75"
+    },
+    {
+      "path": "tests/oracle.py",
+      "sha256": "5da59305af4e563edc83498ee3b24e8ec08afc5bb1700a17b42d172223f790bd"
+    },
+    {
+      "path": "tests/oracle_v2.py",
+      "sha256": "07ec20365d7501871dc5b466598c8544f9cd1d01f9960c06c7c0b7e8eea19cd5"
+    },
+    {
+      "path": "tests/registry.json",
+      "sha256": "ae773046a8d4254c6527519d2ab18cd059aa9ba4e7d9663c6d5f3491952299fd"
+    },
+    {
+      "path": "tests/registry_calibration.json",
+      "sha256": "88f2f576b587a013ea058b400deaad64ef844d59a4fc185d9a50d6af4e4ae385"
+    },
+    {
+      "path": "tests/registry_v2.json",
+      "sha256": "9ef380e723ce5b11f054ae3d4482c48529b119685ae6762a7f8add1aeff1f428"
+    },
+    {
+      "path": "tests/server_fixture.py",
+      "sha256": "b63759f4b9c0c26f6f9f74407bd2757353833c70ffe122471d3f2455e490f646"
+    },
+    {
+      "path": "tests/test_browser_evidence.py",
+      "sha256": "c1d2955a7f6d014c3006c6e27628a44cdc58b8b9dafaadd85f4e088e5a8bbf66"
+    },
+    {
+      "path": "tests/test_calibration.py",
+      "sha256": "5a1a409170e4eadc4f68548344c9f49ddca8b71ee6753d619678e46ee3498bfc"
+    },
+    {
+      "path": "tests/test_calibration_release.py",
+      "sha256": "238fd71bc9854b3c462d664eb7d9c98fa5a01291f48ae457f6301ad279fbe231"
+    },
+    {
+      "path": "tests/test_calibration_server.py",
+      "sha256": "e5de882314d14df2225ca7a55579c5353d6f528539acac5c37128e49b5d71d09"
+    },
+    {
+      "path": "tests/test_core.py",
+      "sha256": "84ca5559d264828e8976671ed824dc58d5dbbc0f48190b2d081d6f4f06046e74"
+    },
+    {
+      "path": "tests/test_differential.py",
+      "sha256": "a04ae477d2ba83cd0f8e97070b9356f44a942e2495c907efa3091091e16c8ade"
+    },
+    {
+      "path": "tests/test_io.py",
+      "sha256": "d48d2751ae2ad99e8f80a58e589a8eed71849c59fd166ccc5280db9194fc5892"
+    },
+    {
+      "path": "tests/test_search.py",
+      "sha256": "4b0d871512807dc8077ced5a1159ebd9598be12ea258631c93b52dbb1a8fae4e"
+    },
+    {
+      "path": "tests/test_server.py",
+      "sha256": "f6ee4b02c763be84c5efaa9f44cbaa21656ea61908707dc1051128302d49e3c9"
+    },
+    {
+      "path": "tests/test_v2_engine.py",
+      "sha256": "30b22bf478d65ab7027a21cb655215db34b9c24f421f2dff2ed7e05137fdec4e"
+    },
+    {
+      "path": "tests/test_v2_io.py",
+      "sha256": "e0d119957ef4505d7ee9cd9b59d4c207efb2614263aec3efb3c5083ff26cd3da"
+    },
+    {
+      "path": "tests/test_v2_model.py",
+      "sha256": "0064950d5e21139d23074456531220310b717ab4097dc17acc6fc6002b42d578"
+    },
+    {
+      "path": "tests/test_v2_release.py",
+      "sha256": "02d1a44b7cf72150cba950208680de88bb4060d633d4744185d6f130000d31e0"
+    },
+    {
+      "path": "tests/test_v2_server.py",
+      "sha256": "8ec767e77fd210fb8f94434583209618a6abcab3542bc59a47faa31097017323"
+    },
+    {
+      "path": "tests/worker_fixture.py",
+      "sha256": "92c69b90b517af69a72d74e5a4b2d2962ad8a70fd67a6c5ffd5d3d4d688c3b18"
+    },
+    {
+      "path": "verification/acceptance_audit.py",
+      "sha256": "fd880280d8f7d358b9a0fe3ed8fad1b4a3a93d5d68c4f856180d0e96736374dc"
+    },
+    {
+      "path": "verification/acceptance_audit_calibration.py",
+      "sha256": "1aba5fb21373f670f88e9b22a35fd500cddaf76ee0362f20d076076a7c9f99dc"
+    },
+    {
+      "path": "verification/acceptance_audit_v2.py",
+      "sha256": "35ff34d808dc44b01e4974b3af8dc1db877480b4b9683dec7ea7abbb04e557b3"
+    },
+    {
+      "path": "verification/browser_acceptance.py",
+      "sha256": "be14d6d12ce095df792387d7db59a1a514e214990173e8a0c4348deeb2d48a2d"
+    },
+    {
+      "path": "verification/browser_flows.js",
+      "sha256": "afb7c81231cd97fa6dc5be4b6273bf88e8115eab18a920d5f107a9e4ee0a953c"
+    },
+    {
+      "path": "verification/browser_flows_calibration.js",
+      "sha256": "c4b6df06b82355b9e63d1835a1428dac05203f81a9a2985d9e441def1cf6ba9a"
+    },
+    {
+      "path": "verification/browser_flows_v2.js",
+      "sha256": "db2ecc92803879cc38bdc22497959188b593b108343671ea88ce40ed805c6ce0"
+    },
+    {
+      "path": "verification/mutation_probes.py",
+      "sha256": "a8998209e02641a4fd440ef48a42a3b811c5c7a9bf4ab435b2acc3c0606e6b2e"
+    },
+    {
+      "path": "verification/mutation_probes_v2.py",
+      "sha256": "d4521db623205f5e860ffdeabb1abed803e7d43923ed2a5b8f51add454f99850"
+    },
+    {
+      "path": "verification/reference_results.json",
+      "sha256": "85622a6a7d2a03b787009b9a2f21a6fc7079dd87276b5ed7eb2cbd22c1ff7209"
+    },
+    {
+      "path": "verification/verify_reference.py",
+      "sha256": "a77957a66cf8816e1575734a0362f2a0ca4690a47e645ed0b12c8cd59ff62550"
+    },
+    {
+      "path": "web/app.js",
+      "sha256": "a2a1225a431cb7336a40acb2a20dcbd294e3939646a32012538154b7c7ab51c8"
+    },
+    {
+      "path": "web/index.html",
+      "sha256": "5536838fed6e333bf205695080b16712fe3c41899a7dcb88c4026b67ab34de66"
+    },
+    {
+      "path": "web/styles.css",
+      "sha256": "1503b7416d7c207b6c01f9e00be8854e82309c67689d64dd5210fb55cb4861e7"
+    }
+  ],
+  "spec": {
+    "freeze_event": "spec_history/v2-implementation-start-20261022T161522230020Z/manifest.json",
+    "freeze_status": "frozen_at_analyzer_implementation_start",
+    "reference_checker_preexisted": true,
+    "revision": "signal-heterogeneity-r1",
+    "sha256": "c198e239728132dc0436aac0cdb48f94c02daa41ee11f5a853d0fb5996de7b1d",
+    "snapshot": "spec_history/v2-implementation-start-20261022T161522230020Z/CEAV_M1_V2_SPEC.md"
+  },
+  "status": "succeeded"
+}

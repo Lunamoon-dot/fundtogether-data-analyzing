@@ -1,0 +1,20 @@
+test_V2_T02_distribution_matches_independent_oracle (tests.test_v2_model.V2ModelTests.test_V2_T02_distribution_matches_independent_oracle) ... FAIL
+
+======================================================================
+FAIL: test_V2_T02_distribution_matches_independent_oracle (tests.test_v2_model.V2ModelTests.test_V2_T02_distribution_matches_independent_oracle)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\dell\Desktop\fundtogether_data_analyzing\results\v21-mutations-v2-release-02\V2-M01\workspace\tests\test_v2_model.py", line 62, in test_V2_T02_distribution_matches_independent_oracle
+    self.assertEqual(actual, expected)
+AssertionError: Tuples differ: (((0,[22 chars]ion(351, 2000)), ((1, 0, 0, 0, 0, 1), Fraction[1296 chars]00))) != (((0,[22 chars]ion(399, 2500)), ((1, 0, 0, 0, 0, 1), Fraction[1296 chars]00)))
+
+First differing element 0:
+((0, 0, 0, 0, 0, 0), Fraction(351, 2000))
+((0, 0, 0, 0, 0, 0), Fraction(399, 2500))
+
+Diff is 3522 characters long. Set self.maxDiff to None to see it.
+
+----------------------------------------------------------------------
+Ran 1 test in 0.012s
+
+FAILED (failures=1)

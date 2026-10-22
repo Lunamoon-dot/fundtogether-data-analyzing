@@ -1,0 +1,102 @@
+{
+  "browser": "155.0.4283.62",
+  "errors": [],
+  "network": [
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/styles.css"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/app.js"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/status"
+    },
+    {
+      "method": "POST",
+      "url": "http://127.0.0.1:8877/api/runs"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/jobs/run-20261022T191154-e1ec168518"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/jobs/run-20261022T191154-e1ec168518"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/jobs/run-20261022T191154-e1ec168518"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/runs/run-20261022T191154-e1ec168518"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/runs/run-20261022T191154-e1ec168518/artifacts/sweep.json"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/runs"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/runs"
+    }
+  ],
+  "scenario": "V2-B05",
+  "status": "passed",
+  "steps": [
+    {
+      "observed": "ceav-m1-v2.0",
+      "status": "pass",
+      "step": "New form defaults to V2"
+    },
+    {
+      "observed": 202,
+      "status": "pass",
+      "step": "UI submitted sweep"
+    },
+    {
+      "observed": "succeeded",
+      "status": "pass",
+      "step": "sweep reached succeeded"
+    },
+    {
+      "observed": 4,
+      "status": "pass",
+      "step": "Nested V2 sweep renders Cartesian rows"
+    },
+    {
+      "observed": true,
+      "status": "pass",
+      "step": "V2 sweep preserves invalid budget rows"
+    },
+    {
+      "observed": "b4b43d69e8e9ee909c66a4a59592328b19ab2f6ca1a49439bd428b97f630e974",
+      "status": "pass",
+      "step": "Sweep pins scenario separately"
+    },
+    {
+      "observed": "Run / UTC\tModel\tTác vụ\tCơ chế\tTrạng thái\tConfig / scenario\tThao tác\nrun-20261022T191154-e1ec168518\n2026-10-22T19:11:55.239317+00:00\tceav-m1-v2.0\tsweep\trbts\tThành công\t\n77377e6697ca949ebdc1e94793141d9608934c97375df538165f04a40f15eb93\nb4b43d69e8e9ee909c66a4a59592328b19ab2f6ca1a49439bd428b97f630e974\n\tM",
+      "status": "pass",
+      "step": "History exposes model and scenario hash"
+    },
+    {
+      "observed": [],
+      "status": "pass",
+      "step": "No JavaScript runtime errors"
+    }
+  ],
+  "viewport": {
+    "height": 768,
+    "width": 1366
+  }
+}

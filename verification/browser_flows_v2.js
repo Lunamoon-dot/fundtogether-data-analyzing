@@ -11,6 +11,15 @@ async page => {
     await page.setViewportSize({width:1366,height:768});await page.goto(base);await page.locator("#connection").filter({hasText:"Engine sẵn sàng"}).waitFor();
     check(await page.locator("#model-version").inputValue()==="ceav-m1-v2.0","New form defaults to V2",await page.locator("#model-version").inputValue());
     if(scenario==="V2-B01"){
+      const groups=await page.locator("#model-fields .model-group").evaluateAll(items=>items.map(item=>({title:item.querySelector("legend")?.textContent,fields:[...item.querySelectorAll("[data-field]")].map(field=>field.dataset.field)})));
+      check(JSON.stringify(groups)===JSON.stringify([
+        {title:"Prior và tín hiệu chung Z",fields:["pi","public_signal.sensitivity","public_signal.specificity"]},
+        {title:"Judge A · tín hiệu riêng",fields:["judges.A.private_signal.sensitivity","judges.A.private_signal.specificity","judges.A.high_effort_cost"]},
+        {title:"Judge B · tín hiệu riêng",fields:["judges.B.private_signal.sensitivity","judges.B.private_signal.specificity","judges.B.high_effort_cost"]},
+        {title:"Judge C · tín hiệu riêng",fields:["judges.C.private_signal.sensitivity","judges.C.private_signal.specificity","judges.C.high_effort_cost"]}
+      ]),"V2 fields are grouped by public signal and Judge",groups);
+      const groupLayout=await page.locator("#model-fields .model-group").evaluateAll(items=>items.map(item=>({x:Math.round(item.getBoundingClientRect().x),width:Math.round(item.getBoundingClientRect().width)})));
+      check(groupLayout.every(item=>item.width>=240)&&new Set(groupLayout.map(item=>item.x)).size===1,"V2 groups stack at readable width",groupLayout);
       const values={"pi":"2/3","public_signal.sensitivity":"4/5","public_signal.specificity":"3/5","judges.A.private_signal.sensitivity":"9/10","judges.A.private_signal.specificity":"4/5","judges.A.high_effort_cost":"1/20","judges.B.private_signal.sensitivity":"3/4","judges.B.private_signal.specificity":"19/20","judges.B.high_effort_cost":"1/10","judges.C.private_signal.sensitivity":"13/20","judges.C.private_signal.specificity":"7/10","judges.C.high_effort_cost":"1/25"};
       for(const [name,value] of Object.entries(values))await page.locator(`[data-field="${name}"]`).fill(value);
       await page.locator("#validate").click();await page.locator("#job-detail").filter({hasText:"Đầu vào hợp lệ"}).waitFor();

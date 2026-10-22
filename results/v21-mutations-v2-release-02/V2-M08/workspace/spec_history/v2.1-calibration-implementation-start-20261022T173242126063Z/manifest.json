@@ -1,0 +1,38 @@
+{
+  "created_at_utc": "2026-10-22T17:32:42.129075Z",
+  "event": "implementation_start",
+  "feature": "ceav-m1-v2.1-calibration",
+  "files": [
+    {
+      "bytes": 4682,
+      "sha256": "73745d4b63ebb794d4060ba11154a786c13a9d3de725c7b0b184f1cc553c9a35",
+      "snapshot": "CEAV_M1_V2_1_CALIBRATION_SPEC.md",
+      "source": "CEAV_M1_V2_1_CALIBRATION_SPEC.md"
+    },
+    {
+      "bytes": 2641,
+      "sha256": "f9cdb8316d039941a64fa13ad771a91586a2e9c91401a43e884b096a65424809",
+      "snapshot": "ENGINE_DESIGN_V2_1_CALIBRATION.md",
+      "source": "ENGINE_DESIGN_V2_1_CALIBRATION.md"
+    },
+    {
+      "bytes": 1929,
+      "sha256": "446accacf113db9f7a3f70db48a68d91f7095143b670afb99914f1b3e634ac89",
+      "snapshot": "VERIFICATION_PLAN_V2_1_CALIBRATION.md",
+      "source": "VERIFICATION_PLAN_V2_1_CALIBRATION.md"
+    },
+    {
+      "bytes": 1431,
+      "sha256": "0d4fec6cb1d25c2d8c9970d90fee31f0b5c3b7a305a516e68b7272edf8da247a",
+      "snapshot": "synthetic_v2_calibration.csv",
+      "source": "datasets/synthetic_v2_calibration.csv"
+    },
+    {
+      "bytes": 1242,
+      "sha256": "526be2f37f5be7f06d39793943288a9d1c9b60ab6158bde55235f301ac8de2c4",
+      "snapshot": "calibration_expected.json",
+      "source": "tests/fixtures/calibration_expected.json"
+    }
+  ],
+  "note": "Created before ceav_m1/calibration.py production implementation."
+}

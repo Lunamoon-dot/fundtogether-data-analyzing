@@ -1,0 +1,166 @@
+{
+  "browser": "155.0.4283.62",
+  "errors": [],
+  "network": [
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/styles.css"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/app.js"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/status"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/calibration/sample.csv"
+    },
+    {
+      "method": "POST",
+      "url": "http://127.0.0.1:8877/api/runs"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/jobs/run-20261022T185924-01e6918a13"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/jobs/run-20261022T185924-01e6918a13"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/jobs/run-20261022T185924-01e6918a13"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/runs/run-20261022T185924-01e6918a13"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/runs/run-20261022T185924-01e6918a13/artifacts/calibration.json"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8877/api/runs"
+    }
+  ],
+  "run_id": "run-20261022T185924-01e6918a13",
+  "scenario": "CAL-B01",
+  "status": "passed",
+  "steps": [
+    {
+      "observed": true,
+      "status": "pass",
+      "step": "Calibration is a separate full-width data view"
+    },
+    {
+      "observed": "synthetic",
+      "status": "pass",
+      "step": "Sample is explicitly labeled synthetic"
+    },
+    {
+      "observed": 202,
+      "status": "pass",
+      "step": "UI submits calibration through worker"
+    },
+    {
+      "observed": {
+        "operation": "calibrate",
+        "status": "succeeded"
+      },
+      "status": "pass",
+      "step": "Calibration reaches immutable succeeded run"
+    },
+    {
+      "observed": {
+        "0": 20,
+        "1": 20
+      },
+      "status": "pass",
+      "step": "UI run calibrates all 40 labeled cases"
+    },
+    {
+      "observed": {
+        "sensitivity": {
+          "denominator": 20,
+          "numerator": 16,
+          "value": "4/5"
+        },
+        "specificity": {
+          "denominator": 20,
+          "numerator": 12,
+          "value": "3/5"
+        }
+      },
+      "status": "pass",
+      "step": "Public estimates match independent fixture"
+    },
+    {
+      "observed": {
+        "high_effort_cost": {
+          "denominator": 10,
+          "numerator": 1,
+          "value": "1/10"
+        },
+        "private_signal": {
+          "sensitivity": {
+            "denominator": 20,
+            "numerator": 15,
+            "value": "3/4"
+          },
+          "specificity": {
+            "denominator": 20,
+            "numerator": 19,
+            "value": "19/20"
+          }
+        }
+      },
+      "status": "pass",
+      "step": "Heterogeneous Judge estimate is preserved"
+    },
+    {
+      "observed": "rbts · model ceav-m1-v2.0 · profile theo phạm vi tác vụ · run run-20261022T185924-01e6918a13\n\nĐã tạo config V2 từ 40 case\nThành công\nY=1\n20\n20\nSố case positive\nY=0\n20\n20\nSố case negative\nπ\n0,5\n1/2\nTỷ lệ Y=1 trong dataset\nProvenance\n—\nsynthetic\nKênh\tEstimate\tNumerator / denominator\tExact\nTín hiệu chung Z\tsensitivity\t16 / 20\t4/5\nTín hiệu chung Z\tspecificity\t12 / 20\t3/5\nJudge A\tsensitivity\t18 / 20\t9/10\nJudge A\tspecificity\t16 / 20\t4/5\nJudge A\thigh_effort_cost\t1 / 20\t1/20\nJudge B\tsensitivity\t15 / 20\t",
+      "status": "pass",
+      "step": "Result explains scope and explicit apply action"
+    },
+    {
+      "observed": "ceav-m1-v2.0",
+      "status": "pass",
+      "step": "Apply selects V2 model"
+    },
+    {
+      "observed": true,
+      "status": "pass",
+      "step": "Generated exact config is loaded into analysis draft"
+    },
+    {
+      "observed": "Đã nạp config calibration vào draft V2. Hãy kiểm tra profile rồi chạy phân tích.",
+      "status": "pass",
+      "step": "UI requires explicit apply before analysis"
+    },
+    {
+      "observed": {
+        "document": 390,
+        "viewport": 390
+      },
+      "status": "pass",
+      "step": "No page-wide overflow on mobile"
+    },
+    {
+      "observed": [],
+      "status": "pass",
+      "step": "No JavaScript runtime errors"
+    }
+  ],
+  "viewport": {
+    "height": 844,
+    "width": 390
+  }
+}

@@ -1,0 +1,51 @@
+### Result
+{"scenario":"CAL-B01","status":"passed","browser":"155.0.4283.62","viewport":{"width":390,"height":844},"steps":[{"step":"Calibration is a separate full-width data view","status":"pass","observed":true},{"step":"Sample is explicitly labeled synthetic","status":"pass","observed":"synthetic"},{"step":"UI submits calibration through worker","status":"pass","observed":202},{"step":"Calibration reaches immutable succeeded run","status":"pass","observed":{"status":"succeeded","operation":"calibrate"}},{"step":"UI run calibrates all 40 labeled cases","status":"pass","observed":{"0":20,"1":20}},{"step":"Public estimates match independent fixture","status":"pass","observed":{"sensitivity":{"denominator":20,"numerator":16,"value":"4/5"},"specificity":{"denominator":20,"numerator":12,"value":"3/5"}}},{"step":"Heterogeneous Judge estimate is preserved","status":"pass","observed":{"high_effort_cost":{"denominator":10,"numerator":1,"value":"1/10"},"private_signal":{"sensitivity":{"denominator":20,"numerator":15,"value":"3/4"},"specificity":{"denominator":20,"numerator":19,"value":"19/20"}}}},{"step":"Result explains scope and explicit apply action","status":"pass","observed":"rbts · model ceav-m1-v2.0 · profile theo phạm vi tác vụ · run run-20261022T185924-01e6918a13\n\nĐã tạo config V2 từ 40 case\nThành công\nY=1\n20\n20\nSố case positive\nY=0\n20\n20\nSố case negative\nπ\n0,5\n1/2\nTỷ lệ Y=1 trong dataset\nProvenance\n—\nsynthetic\nKênh\tEstimate\tNumerator / denominator\tExact\nTín hiệu chung Z\tsensitivity\t16 / 20\t4/5\nTín hiệu chung Z\tspecificity\t12 / 20\t3/5\nJudge A\tsensitivity\t18 / 20\t9/10\nJudge A\tspecificity\t16 / 20\t4/5\nJudge A\thigh_effort_cost\t1 / 20\t1/20\nJudge B\tsensitivity\t15 / 20\t"},{"step":"Apply selects V2 model","status":"pass","observed":"ceav-m1-v2.0"},{"step":"Generated exact config is loaded into analysis draft","status":"pass","observed":true},{"step":"UI requires explicit apply before analysis","status":"pass","observed":"Đã nạp config calibration vào draft V2. Hãy kiểm tra profile rồi chạy phân tích."},{"step":"No page-wide overflow on mobile","status":"pass","observed":{"document":390,"viewport":390}},{"step":"No JavaScript runtime errors","status":"pass","observed":[]}],"network":[{"url":"http://127.0.0.1:8877/","method":"GET"},{"url":"http://127.0.0.1:8877/styles.css","method":"GET"},{"url":"http://127.0.0.1:8877/app.js","method":"GET"},{"url":"http://127.0.0.1:8877/api/status","method":"GET"},{"url":"http://127.0.0.1:8877/api/calibration/sample.csv","method":"GET"},{"url":"http://127.0.0.1:8877/api/runs","method":"POST"},{"url":"http://127.0.0.1:8877/api/jobs/run-20261022T185924-01e6918a13","method":"GET"},{"url":"http://127.0.0.1:8877/api/jobs/run-20261022T185924-01e6918a13","method":"GET"},{"url":"http://127.0.0.1:8877/api/jobs/run-20261022T185924-01e6918a13","method":"GET"},{"url":"http://127.0.0.1:8877/api/runs/run-20261022T185924-01e6918a13","method":"GET"},{"url":"http://127.0.0.1:8877/api/runs/run-20261022T185924-01e6918a13/artifacts/calibration.json","method":"GET"},{"url":"http://127.0.0.1:8877/api/runs","method":"GET"}],"errors":[],"run_id":"run-20261022T185924-01e6918a13"}
+### Ran Playwright code
+```js
+await (async page => {
+  const scenario="CAL-B01",output="C:/Users/dell/Desktop/fundtogether_data_analyzing/results/v21-browser-CAL-B01-release-05",base="http://127.0.0.1:8877",steps=[],errors=[],network=[];
+  page.on("pageerror",error=>errors.push(error.message));
+  page.on("request",request=>network.push({url:request.url(),method:request.method()}));
+  const check=(condition,message,observed)=>{steps.push({step:message,status:condition?"pass":"fail",observed});if(!condition)throw new Error(message+": "+JSON.stringify(observed));};
+  const read=async path=>{const response=await page.request.get(base+path);if(response.status()!==200)throw new Error("GET "+path+": "+response.status());return response.json();};
+  const shot=async name=>page.screenshot({path:output+"/"+name+".png",fullPage:false});
+  try {
+    await page.setViewportSize({width:1366,height:768});
+    await page.goto(base);
+    await page.locator("#connection").filter({hasText:"Engine sẵn sàng"}).waitFor();
+    await page.locator('[data-view="calibration"]').click();
+    check(await page.locator("#draft").isHidden(),"Calibration is a separate full-width data view",true);
+    await page.locator("#load-calibration-sample").click();
+    await page.locator("#calibration-file-status").filter({hasText:"synthetic_v2_calibration.csv"}).waitFor();
+    check(await page.locator("#calibration-provenance").inputValue()==="synthetic","Sample is explicitly labeled synthetic",await page.locator("#calibration-provenance").inputValue());
+    const pending=page.waitForResponse(r=>r.url()===base+"/api/runs"&&r.request().method()==="POST");
+    await page.locator('[data-operation="calibrate"]').click();
+    const response=await pending;
+    check(response.status()===202,"UI submits calibration through worker",response.status());
+    const job=await response.json();
+    await page.waitForFunction(id=>document.querySelector("#calibrate-result")?.dataset.runId===id,job.run_id,{timeout:30000});
+    const manifest=await read("/api/runs/"+job.run_id);
+    const result=await read(`/api/runs/${job.run_id}/artifacts/calibration.json`);
+    check(manifest.status==="succeeded"&&manifest.operation==="calibrate","Calibration reaches immutable succeeded run",{status:manifest.status,operation:manifest.operation});
+    check(result.row_count===40&&result.class_counts["0"]===20&&result.class_counts["1"]===20,"UI run calibrates all 40 labeled cases",result.class_counts);
+    check(result.estimates.public_signal.sensitivity.value==="4/5"&&result.estimates.public_signal.specificity.value==="3/5","Public estimates match independent fixture",result.estimates.public_signal);
+    check(result.estimates.judges.B.private_signal.specificity.value==="19/20","Heterogeneous Judge estimate is preserved",result.estimates.judges.B);
+    const visible=await page.locator("#calibrate-result").innerText();
+    check(visible.includes("40 case")&&visible.toLowerCase().includes("synthetic")&&visible.includes("Nạp config vào Phân tích"),"Result explains scope and explicit apply action",visible.slice(0,500));
+    await shot("calibration-desktop");
+    await page.locator("#apply-calibration").click();
+    check(await page.locator("#model-version").inputValue()==="ceav-m1-v2.0","Apply selects V2 model",await page.locator("#model-version").inputValue());
+    check(await page.locator("#field-public-signal-sensitivity").inputValue()==="4/5"&&await page.locator("#field-judges-B-private-signal-specificity").inputValue()==="19/20","Generated exact config is loaded into analysis draft",true);
+    check((await page.locator("#job-detail").innerText()).includes("Đã nạp config calibration"),"UI requires explicit apply before analysis",await page.locator("#job-detail").innerText());
+    await page.setViewportSize({width:390,height:844});
+    const overflow=await page.evaluate(()=>({document:document.documentElement.scrollWidth,viewport:innerWidth}));
+    check(overflow.document<=overflow.viewport+1,"No page-wide overflow on mobile",overflow);
+    await shot("calibration-mobile-applied");
+    check(errors.length===0,"No JavaScript runtime errors",errors);
+    return {scenario,status:"passed",browser:page.context().browser().version(),viewport:page.viewportSize(),steps,network,errors,run_id:job.run_id};
+  } catch(error) {
+    return {scenario,status:"failed",browser:page.context().browser().version(),viewport:page.viewportSize(),steps,error:error.stack,network,errors};
+  }
+}
+)(page);
+```

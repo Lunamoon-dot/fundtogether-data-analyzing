@@ -18,13 +18,14 @@ from urllib.parse import unquote, urlsplit
 
 from . import DEFAULT_MODEL_VERSION, ENGINE_VERSION, SUPPORTED_MODEL_VERSIONS, V1_MODEL_VERSION, V2_MODEL_VERSION
 from .__main__ import compare_config, validate_sweep_axes
+from .calibration import PROVENANCE_STATUSES, calibrate_dataset
 from .model import ValidationError, signal_diagnostics, validate_config, validate_scenario
 from .output import FREEZES, ROOT, documents, exact_payload, finish_run, new_run, sha256, write_json
 from .strategies import ACTIONS, validate_profile
 from .test_runner import SUITES
 
 TERMINAL = ("succeeded", "failed", "cancelled", "interrupted")
-OPERATIONS = ("analyze", "equilibria", "sweep", "compare", "tests")
+OPERATIONS = ("analyze", "equilibria", "sweep", "compare", "tests", "calibrate")
 SAFE_ID = re.compile(r"[A-Za-z0-9][A-Za-z0-9_-]{0,95}\Z")
 
 
@@ -96,12 +97,26 @@ class Laboratory:
     def validate(self, request):
         if not isinstance(request, dict):
             raise ValidationError("request", "Cần JSON object.")
-        allowed = {"operation", "config", "profile", "mechanism", "axes", "suite", "test_ids", "failure_fixture", "scenario"}
+        allowed = {"operation", "config", "profile", "mechanism", "axes", "suite", "test_ids", "failure_fixture", "scenario",
+                   "dataset_csv", "source_name", "provenance_status", "base_config"}
         if set(request) - allowed:
             raise ValidationError(sorted(set(request) - allowed)[0], "Field không được hỗ trợ.")
         operation = request.get("operation", "analyze")
         if operation not in OPERATIONS:
             raise ValidationError("operation", "Operation không được hỗ trợ.")
+        if operation == "calibrate":
+            fields = {"operation", "dataset_csv", "source_name", "provenance_status", "base_config", "mechanism"}
+            if set(request) - fields:
+                raise ValidationError(sorted(set(request) - fields)[0], "Field không được hỗ trợ cho calibration.")
+            missing = fields - set(request)
+            if missing:
+                raise ValidationError(sorted(missing)[0], "Thiếu field bắt buộc.")
+            if not isinstance(request["dataset_csv"], str):
+                raise ValidationError("dataset_csv", "Cần nội dung CSV dạng text.")
+            result = calibrate_dataset(request["dataset_csv"].encode("utf-8"), request["base_config"], request["mechanism"],
+                                       request["provenance_status"], request["source_name"])
+            return {"valid": True, "operation": operation, "dataset_hash": result["dataset_hash"],
+                    "row_count": result["row_count"], "config": result["config"]}
         operation_fields = {"operation", "suite", "test_ids", "failure_fixture"} if operation == "tests" else {"operation", "config", "mechanism"}
         if operation != "tests":
             operation_fields.add("scenario")
@@ -116,8 +131,8 @@ class Laboratory:
             if suite not in SUITES:
                 raise ValidationError("suite", "Suite không được hỗ trợ.")
             selected = request.get("test_ids", [])
-            if not isinstance(selected, list) or any(not isinstance(i, str) or not re.fullmatch(r"(?:T(?:0[1-9]|[12][0-9]|3[0-2])|V2-T(?:0[1-9]|1[0-5]))", i) for i in selected):
-                raise ValidationError("test_ids", "Chỉ nhận IDs đã đăng ký V1 T01–T32 hoặc V2-T01–V2-T15.")
+            if not isinstance(selected, list) or any(not isinstance(i, str) or not re.fullmatch(r"(?:T(?:0[1-9]|[12][0-9]|3[0-2])|V2-T(?:0[1-9]|1[0-5])|CAL-T0[1-8])", i) for i in selected):
+                raise ValidationError("test_ids", "Chỉ nhận IDs đã đăng ký V1, V2 hoặc CAL-T01–CAL-T08.")
             if type(request.get("failure_fixture", False)) is not bool:
                 raise ValidationError("failure_fixture", "Cần boolean.")
             fixture = request.get("failure_fixture", False)
@@ -176,6 +191,14 @@ class Laboratory:
             if request.get("failure_fixture"):
                 command += ["--failure-fixture"]
             return command
+        if operation == "calibrate":
+            dataset = staged / "dataset.csv"
+            dataset.write_text(request["dataset_csv"], encoding="utf-8", newline="")
+            write_json(staged / "base_config.json", request["base_config"])
+            command += ["--dataset", str(dataset), "--base-config", str(staged / "base_config.json"),
+                        "--source-name", request["source_name"], "--mechanism", request["mechanism"],
+                        "--provenance-status", request["provenance_status"]]
+            return command
         write_json(staged / "config.json", request["config"])
         config_path = staged / "config.json"
         if operation == "sweep":
@@ -202,6 +225,11 @@ class Laboratory:
                 raise ValueError("Partial output snapshot already exists")
             shutil.move(str(out), str(partial))
         operation = request["operation"]
+        if operation == "calibrate":
+            calibrated = calibrate_dataset(request["dataset_csv"].encode("utf-8"), request["base_config"], request["mechanism"],
+                                            request["provenance_status"], request["source_name"])
+            return new_run(out, operation, validate_config(calibrated["config"], request["mechanism"]), mechanism=request["mechanism"],
+                           request={key: value for key, value in request.items() if key != "dataset_csv"}, publication_owner="local_server")
         config = None if operation == "tests" else (compare_config(request["config"]) if operation == "compare" else validate_config(request["config"], request.get("mechanism", "rbts")))
         profile = validate_profile(request["profile"]) if operation in ("analyze", "compare", "sweep") else None
         scenario = validate_scenario(request["scenario"]) if request.get("scenario") is not None else None
@@ -320,14 +348,15 @@ class Laboratory:
                 scenario = result["scenario"]
                 if scenario in latest:
                     continue
-                relevant = [item for item in manifest["source_files"] if item["path"].startswith(("ceav_m1/", "web/", "configs/"))]
+                relevant = [item for item in manifest["source_files"] if item["path"].startswith(("ceav_m1/", "web/", "configs/", "datasets/", "verification/"))]
                 match = all(sha256((ROOT / item["path"]).read_bytes()) == item["sha256"] for item in relevant)
                 latest[scenario] = {"scenario": scenario, "run_id": manifest["run_id"], "status": result["status"],
                                     "browser": result["browser"], "viewport": result["viewport"], "source_matches": match,
-                                    "source_comparison_scope": "engine_web_and_presets", "full_source_hash": manifest["engine_revision"]}
+                                    "source_comparison_scope": "engine_web_presets_datasets_and_browser_flows", "full_source_hash": manifest["engine_revision"]}
             except (OSError, ValueError, KeyError):
                 continue
-        return {"records": [latest[key] for key in sorted(latest)], "required_scenarios": [f"B{i:02}" for i in range(1, 10)]}
+        required = [f"B{i:02}" for i in range(1, 10)] + [f"V2-B{i:02}" for i in range(1, 7)] + ["CAL-B01"]
+        return {"records": [latest[key] for key in sorted(latest)], "required_scenarios": required}
 
 
 class LoopbackHTTPServer(ThreadingHTTPServer):
@@ -350,16 +379,19 @@ def create_server(port=8765, results_dir=None, laboratory=None):
 
         def send(self, status, body, content_type="application/json; charset=utf-8", download=None):
             data = body if isinstance(body, bytes) else json.dumps(exact_payload(body), ensure_ascii=False, allow_nan=False).encode("utf-8")
-            self.send_response(status)
-            self.send_header("Content-Type", content_type)
-            self.send_header("Content-Length", str(len(data)))
-            self.send_header("Cache-Control", "no-store")
-            self.send_header("X-Content-Type-Options", "nosniff")
-            self.send_header("Content-Security-Policy", "default-src 'self'; script-src 'self'; style-src 'self'; connect-src 'self'; img-src 'self' data:; base-uri 'none'; frame-ancestors 'none'")
-            if download:
-                self.send_header("Content-Disposition", f'attachment; filename="{download}"')
-            self.end_headers()
-            self.wfile.write(data)
+            try:
+                self.send_response(status)
+                self.send_header("Content-Type", content_type)
+                self.send_header("Content-Length", str(len(data)))
+                self.send_header("Cache-Control", "no-store")
+                self.send_header("X-Content-Type-Options", "nosniff")
+                self.send_header("Content-Security-Policy", "default-src 'self'; script-src 'self'; style-src 'self'; connect-src 'self'; img-src 'self' data:; base-uri 'none'; frame-ancestors 'none'")
+                if download:
+                    self.send_header("Content-Disposition", f'attachment; filename="{download}"')
+                self.end_headers()
+                self.wfile.write(data)
+            except (BrokenPipeError, ConnectionResetError, ConnectionAbortedError):
+                self.close_connection = True
 
         def check_host(self):
             port = self.server.server_address[1]
@@ -391,6 +423,9 @@ def create_server(port=8765, results_dir=None, laboratory=None):
                                    "freezes": {version: {"path": FREEZES[version], "status": events[version]["freeze_status"]} for version in SUPPORTED_MODEL_VERSIONS},
                                    "capabilities": {operation: True for operation in OPERATIONS}, "suites": list(SUITES),
                                    "token": lab.token, "active_job": active, "actions": ACTIONS, "presets": presets, "v2_presets": v2_presets})
+                elif path == "/api/calibration/sample.csv":
+                    sample = ROOT / "datasets" / "synthetic_v2_calibration.csv"
+                    self.send(200, sample.read_bytes(), "text/csv; charset=utf-8", sample.name if urlsplit(self.path).query == "download=1" else None)
                 elif path == "/api/runs":
                     self.send(200, {"runs": lab.history()})
                 elif path == "/api/browser-evidence":
@@ -417,12 +452,13 @@ def create_server(port=8765, results_dir=None, laboratory=None):
         def do_POST(self):
             try:
                 host = self.check_host()
-                if self.headers.get("Origin") != f"http://{host}" or not secrets.compare_digest(self.headers.get("X-CEAV-Token", ""), lab.token):
-                    raise PermissionError("Same-origin and session token required")
                 length = int(self.headers.get("Content-Length", "0"))
                 if not 0 < length <= 2_000_000 or self.headers.get_content_type() != "application/json":
                     raise ValueError("Expected bounded application/json body")
-                request = json.loads(self.rfile.read(length))
+                body = self.rfile.read(length)
+                if self.headers.get("Origin") != f"http://{host}" or not secrets.compare_digest(self.headers.get("X-CEAV-Token", ""), lab.token):
+                    raise PermissionError("Same-origin and session token required")
+                request = json.loads(body)
                 path = unquote(urlsplit(self.path).path)
                 if path == "/api/validate":
                     self.send(200, lab.validate(request))

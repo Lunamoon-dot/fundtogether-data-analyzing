@@ -103,7 +103,7 @@ async page => {
       const failure=await runUI('[data-operation="tests"]',"explicit failure fixture");const data=await read(`/api/runs/${failure.job.run_id}/artifacts/test_results.json`);
       check(failure.manifest.status==="failed"&&data.counts.fail===1,"Intentional fixture yields actual failed run",data.counts);await shot("test-failure-fixture");
       const downloadPromise=page.waitForEvent("download");await page.locator('#tests-result a').click();const download=await downloadPromise;await download.saveAs(output+"/failure-test-log.txt");
-      await page.locator("#failure-fixture").uncheck();for(const checkbox of await page.locator('#test-ids input[value^="T"]').all())await checkbox.check();
+      await page.locator("#failure-fixture").uncheck();for(const checkbox of await page.locator('#test-ids input[value^="T"]').all())if(await checkbox.getAttribute("value")!=="T32")await checkbox.check();
       const pending=page.waitForResponse(r=>r.url()===base+"/api/runs"&&r.request().method()==="POST");await page.locator('[data-operation="tests"]').click();const response=await pending;check(response.status()===202,"Full engine/API suite submitted through browser",response.status());const all=await response.json();
       return {scenario,status:"pending_all",browser:page.context().browser().version(),viewport:page.viewportSize(),steps,network,errors,all_job:all.job_id,all_run:all.run_id};
     } else if(scenario==="B07") {

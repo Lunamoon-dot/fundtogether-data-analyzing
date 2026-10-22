@@ -7,6 +7,7 @@ from pathlib import Path
 import sys
 import time
 
+from .calibration import PROVENANCE_STATUSES, write_calibration_run
 from .equilibria import CancelledError, search_pure
 from .evaluate import analyze
 from .model import ValidationError, rational, validate_config, validate_scenario
@@ -150,12 +151,21 @@ def main(argv=None):
         command.add_argument("--defer-publication", action="store_true", help=argparse.SUPPRESS)
         command.add_argument("--parent-pid", type=int, help=argparse.SUPPRESS)
     tests = commands.add_parser("tests")
-    tests.add_argument("--suite", choices=("reference", "goldens", "v2", "all", "selected"), required=True)
+    tests.add_argument("--suite", choices=("reference", "goldens", "v2", "calibration", "all", "selected"), required=True)
     tests.add_argument("--test-id", action="append", default=[])
     tests.add_argument("--failure-fixture", action="store_true")
     tests.add_argument("--out", type=Path, required=True)
     tests.add_argument("--defer-publication", action="store_true", help=argparse.SUPPRESS)
     tests.add_argument("--parent-pid", type=int, help=argparse.SUPPRESS)
+    calibrate = commands.add_parser("calibrate")
+    calibrate.add_argument("--dataset", type=Path, required=True)
+    calibrate.add_argument("--source-name")
+    calibrate.add_argument("--base-config", type=Path, required=True)
+    calibrate.add_argument("--mechanism", choices=("fixed", "rbts"), default="rbts")
+    calibrate.add_argument("--provenance-status", choices=PROVENANCE_STATUSES, required=True)
+    calibrate.add_argument("--out", type=Path, required=True)
+    calibrate.add_argument("--defer-publication", action="store_true", help=argparse.SUPPRESS)
+    calibrate.add_argument("--parent-pid", type=int, help=argparse.SUPPRESS)
     serve = commands.add_parser("serve")
     serve.add_argument("--port", type=int, default=8765)
     args = parser.parse_args(argv)
@@ -172,6 +182,12 @@ def main(argv=None):
             result = write_test_run(args.out, args.suite, args.test_id, args.failure_fixture, defer_publication=args.defer_publication)
             print(json.dumps(result["counts"]))
             return 0 if result["status"] == "passed" else 1
+        if args.operation == "calibrate":
+            write_calibration_run(args.dataset.read_bytes(), read_json(args.base_config), args.mechanism,
+                                  args.provenance_status, args.out, args.source_name or args.dataset.name,
+                                  defer_publication=args.defer_publication)
+            print(f"Completed calibrate: {args.out.resolve()}")
+            return 0
         raw_config = read_json(args.config)
         raw_profile = read_json(args.profile) if args.operation != "equilibria" else None
         sweep = None

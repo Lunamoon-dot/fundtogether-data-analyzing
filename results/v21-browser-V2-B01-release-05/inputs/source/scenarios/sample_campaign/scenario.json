@@ -1,0 +1,22 @@
+{
+  "scenario_version": "ceav-scenario-v1",
+  "scenario_id": "sample-campaign-01",
+  "claim": {
+    "text": "Milestone có đạt tiêu chí nghiệm thu hay không",
+    "y_equals_1_when": "Tất cả tiêu chí nghiệm thu bắt buộc được đáp ứng",
+    "truth_resolution": "Đánh giá hậu nghiệm độc lập sau quyết định"
+  },
+  "public_signal": {
+    "meaning_of_1": "Tài liệu công khai có vẻ ủng hộ claim",
+    "source": "Bộ tài liệu do Creator công bố"
+  },
+  "judges": {
+    "A": {"private_check": "Đối chiếu hóa đơn và nhà cung cấp"},
+    "B": {"private_check": "Kiểm tra sản phẩm thực tế"},
+    "C": {"private_check": "Đối chiếu tiến độ và hồ sơ nghiệm thu"}
+  },
+  "parameter_provenance": {
+    "status": "assumption",
+    "notes": "Thông số phục vụ thí nghiệm; chưa hiệu chuẩn bằng dữ liệu thực"
+  }
+}

@@ -15,6 +15,7 @@ from urllib.parse import urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
+from ceav_m1 import V2_MODEL_VERSION
 from ceav_m1.output import finish_run, new_run, sha256, write_json
 from ceav_m1.runtime import process_alive
 
@@ -43,7 +44,7 @@ def until(predicate, timeout=15):
 
 def run(scenario, out, base):
     out = Path(out).resolve()
-    manifest = new_run(out, "browser_acceptance", request={"scenario": scenario, "base_url": base})
+    manifest = new_run(out, "browser_acceptance", request={"scenario": scenario, "base_url": base}, model_version=V2_MODEL_VERSION if scenario.startswith(("V2-", "CAL-")) else None)
     servers, streams = [], []
     try:
         cli = shutil.which("playwright-cli.cmd") or shutil.which("playwright-cli")
@@ -51,6 +52,15 @@ def run(scenario, out, base):
         entry = Path(cli).parent / "node_modules/@playwright/cli/playwright-cli.js"
         if not cli or not node or not entry.is_file():
             raise ValueError("Installed playwright-cli runtime unavailable")
+        def open_browser():
+            last = None
+            for _ in range(10):
+                opened = subprocess.run([node, str(entry), "-s=ceav-m1", "open", base, "--browser=msedge"], cwd=ROOT, capture_output=True, text=True)
+                if not opened.returncode:
+                    return
+                last = opened.stdout + opened.stderr
+                time.sleep(0.5)
+            raise ValueError("Cannot open Edge browser session: " + str(last))
         def start_server(port, suffix):
             stream = (out / f"server-{suffix}.txt").open("x", encoding="utf-8")
             streams.append(stream)
@@ -67,9 +77,7 @@ def run(scenario, out, base):
         if scenario == "B07":
             initial_server, base = start_server(0, "before-restart")
         subprocess.run([node, str(entry), "-s=ceav-m1", "close"], cwd=ROOT, capture_output=True, text=True)
-        opened = subprocess.run([node, str(entry), "-s=ceav-m1", "open", base, "--browser=msedge"], cwd=ROOT, capture_output=True, text=True)
-        if opened.returncode:
-            raise ValueError("Cannot open Edge browser session: " + opened.stdout + opened.stderr)
+        open_browser()
         def browser_call(script_path, log_name):
             command = [node, str(entry), "-s=ceav-m1", "run-code", "--filename=" + str(script_path)]
             process = subprocess.run(command, cwd=ROOT, capture_output=True, text=True, encoding="utf-8", errors="replace")
@@ -78,13 +86,23 @@ def run(scenario, out, base):
             if process.returncode or "### Result\n" not in log:
                 raise ValueError("Browser flow failed; see " + log_name)
             return json.loads(log.split("### Result\n", 1)[1].split("\n###", 1)[0])
-        flow_name = "browser_flows_v2.js" if scenario.startswith("V2-") else "browser_flows.js"
+        flow_name = "browser_flows_calibration.js" if scenario.startswith("CAL-") else "browser_flows_v2.js" if scenario.startswith("V2-") else "browser_flows.js"
         script = (ROOT / "verification" / flow_name).read_text(encoding="utf-8")
         script = script.replace('"__SCENARIO__"', json.dumps(scenario)).replace('"__OUTPUT_DIR__"', json.dumps(out.as_posix())).replace('"__BASE_URL__"', json.dumps(base))
         (out / "flow.js").write_text(script, encoding="utf-8", newline="\n")
         result = browser_call(out / "flow.js", "browser_log.txt")
         if result["status"] == "pending_all":
-            job = until(lambda: (lambda item: item if item["status"] not in ("queued", "running") else None)(get_json(base + "/api/jobs/" + result["all_job"])), timeout=600)
+            deadline = time.monotonic() + 600
+            while True:
+                job = get_json(base + "/api/jobs/" + result["all_job"])
+                if job["status"] not in ("queued", "running"):
+                    break
+                if time.monotonic() >= deadline:
+                    raise ValueError("Timed out waiting for full suite")
+                heartbeat = subprocess.run([node, str(entry), "-s=ceav-m1", "tab-list"], cwd=ROOT, capture_output=True, text=True)
+                if heartbeat.returncode:
+                    raise ValueError("Browser session closed during full suite: " + heartbeat.stdout + heartbeat.stderr)
+                time.sleep(10)
             code = 'async page => { const id = ' + json.dumps(result["all_run"]) + '; await page.waitForFunction(id => document.querySelector("#tests-result").dataset.runId===id, id, {timeout:30000}); await page.locator("#tests-result").scrollIntoViewIfNeeded(); await page.screenshot({path:' + json.dumps((out / "all-suite-results.png").as_posix()) + '}); return {text: await page.locator("#tests-result").innerText()}; }'
             (out / "finish.js").write_text(code, encoding="utf-8")
             ui = browser_call(out / "finish.js", "browser_finish_log.txt")
@@ -152,7 +170,7 @@ def run(scenario, out, base):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--scenario", choices=[f"B{i:02}" for i in range(1, 10)] + [f"V2-B{i:02}" for i in range(1, 7)], required=True)
+    parser.add_argument("--scenario", choices=[f"B{i:02}" for i in range(1, 10)] + [f"V2-B{i:02}" for i in range(1, 7)] + ["CAL-B01"], required=True)
     parser.add_argument("--out", type=Path, required=True)
     parser.add_argument("--base", default="http://127.0.0.1:8765")
     args = parser.parse_args()

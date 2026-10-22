@@ -1,0 +1,25 @@
+test_V2_T01_nested_schema_dispatch_and_errors (tests.test_v2_model.V2ModelTests.test_V2_T01_nested_schema_dispatch_and_errors) ... FAIL
+
+======================================================================
+FAIL: test_V2_T01_nested_schema_dispatch_and_errors (tests.test_v2_model.V2ModelTests.test_V2_T01_nested_schema_dispatch_and_errors)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\dell\Desktop\fundtogether_data_analyzing\results\v21-mutations-v2-release-02\V2-M04\workspace\tests\test_v2_model.py", line 36, in test_V2_T01_nested_schema_dispatch_and_errors
+    self.assertEqual(reordered_config.costs, (F(1, 20), F(1, 10), F(1, 25)))
+AssertionError: Tuples differ: (Fraction(1, 25), Fraction(1, 20), Fraction(1, 10)) != (Fraction(1, 20), Fraction(1, 10), Fraction(1, 25))
+
+First differing element 0:
+Fraction(1, 25)
+Fraction(1, 20)
+
+- (Fraction(1, 25), Fraction(1, 20), Fraction(1, 10))
+?               ^               ^                ^^
+
++ (Fraction(1, 20), Fraction(1, 10), Fraction(1, 25))
+?               ^               ^                ^^
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.003s
+
+FAILED (failures=1)

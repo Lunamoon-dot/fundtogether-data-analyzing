@@ -1,0 +1,14 @@
+{
+  "spec_revision": "math-proof-r2",
+  "model_version": "ceav-m1-v1.0",
+  "event": "review_snapshot_after_math_proof_revision",
+  "captured_at_utc": "2026-10-22T07:40:15.290794+00:00",
+  "file": "CEAV_M1_SPEC.md",
+  "sha256": "c62cc8ae146603adceb1fb94560c541e198244ff83519be8a1adbe60a6781120",
+  "hash_basis": "raw_file_bytes",
+  "parent_revision": "html-ui-r1",
+  "parent_sha256": "541ceb5bc309eec3edc4848ad2bed565c57f9c5ddd33f765c68a7006fede0378",
+  "freeze_status": "not_frozen_for_analyzer_implementation",
+  "analyzer_implementation_started": false,
+  "reference_checker_preexisted": true
+}
