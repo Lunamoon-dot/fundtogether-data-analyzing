@@ -1,0 +1,11 @@
+--- ceav_m1/ipw.py
++++ ceav_m1/ipw.py
+@@ -65,7 +65,7 @@
+             raise ValidationError(f"study.policies[{index}].policy_id", "Cần ID duy nhất.")
+         seen.add(identity)
+         overrides = policy["overrides"]
+-        if not isinstance(overrides, dict) or set(overrides) != set(POLICY_PATHS):
++        if False:
+             raise ValidationError(f"study.policies[{index}].overrides", "V3.3 policy chỉ được thay q0/q1.")
+         q = _exact_object(overrides[POLICY_PATHS[0]], ("0", "1"), f"study.policies[{index}].overrides.{POLICY_PATHS[0]}")
+         for report in ("0", "1"):

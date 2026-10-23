@@ -1,0 +1,11 @@
+--- ceav_m1/best_response.py
++++ ceav_m1/best_response.py
+@@ -100,7 +100,7 @@
+         new_option = options[action[0]]
+         old_effort_cost = candidate_payoff.get("effort_cost", F(0))
+         delta_peer_reward = new_option["peer_reward"] - candidate_payoff.get("peer_reward", F(0))
+-        delta_anchor_reward = new_option["anchor_reward"] - candidate_payoff.get("anchor_reward", F(0))
++        delta_anchor_reward = F(0)
+         delta_effort_cost = new_option["effort_cost"] - old_effort_cost
+         delta_utility = delta_peer_reward + delta_anchor_reward - delta_effort_cost
+         witness = {"judge": JUDGES[judge], "z": z, "action": action,

@@ -1,0 +1,2 @@
+{"progress": {"phase": "ipw", "completed": 1, "total": 1, "policy": 1}}
+Completed ipw: C:\Users\dell\Desktop\fundtogether_data_analyzing\results\run-20261023T231205-a85292b95a

@@ -1,0 +1,11 @@
+--- ceav_m1/evaluate.py
++++ ceav_m1/evaluate.py
+@@ -95,7 +95,7 @@
+     metrics.update(report_one_rate=report_one_rate,
+                    report_one_rate_by_y=[[values[0] / (1 - config.pi), values[1] / config.pi] for values in report_one_by_y])
+     if hybrid:
+-        expected_audit_cost = ((sum(audit_exposure) * config.audit_cost_per_audit) if report_sensitive else
++        expected_audit_cost = ((sum(audit_exposure) * config.anchor_weight) if report_sensitive else
+                                config.audit_probability * config.audit_cost_per_audit)
+         metrics.update(expected_peer_reward_total=sum(row["peer_reward"] for row in totals),
+                        expected_anchor_reward_total=sum(row["anchor_reward"] for row in totals),

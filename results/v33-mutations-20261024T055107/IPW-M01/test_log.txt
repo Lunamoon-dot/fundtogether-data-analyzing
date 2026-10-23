@@ -1,0 +1,21 @@
+test_IPW_T06_expected_anchor_and_audit_cost_match_oracle (tests.test_v3_3.V33IPWTests.test_IPW_T06_expected_anchor_and_audit_cost_match_oracle) ... FAIL
+
+======================================================================
+FAIL: test_IPW_T06_expected_anchor_and_audit_cost_match_oracle (tests.test_v3_3.V33IPWTests.test_IPW_T06_expected_anchor_and_audit_cost_match_oracle)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\dell\Desktop\fundtogether_data_analyzing\results\v33-mutations-20261024T055107\IPW-M01\workspace\tests\test_v3_3.py", line 86, in test_IPW_T06_expected_anchor_and_audit_cost_match_oracle
+    self.assertEqual(result["metrics"]["anchor_reward_second_moment"], oracle["second_moment"])
+AssertionError: Lists differ: [Fraction(14079, 5000), Fraction(14079, 5000), Fraction(1444, 625)] != [Fraction(54511, 7500), Fraction(29963, 3750), Fraction(31407, 5000)]
+
+First differing element 0:
+Fraction(14079, 5000)
+Fraction(54511, 7500)
+
+- [Fraction(14079, 5000), Fraction(14079, 5000), Fraction(1444, 625)]
++ [Fraction(54511, 7500), Fraction(29963, 3750), Fraction(31407, 5000)]
+
+----------------------------------------------------------------------
+Ran 1 test in 0.090s
+
+FAILED (failures=1)

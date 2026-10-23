@@ -1,0 +1,11 @@
+--- ceav_m1/model.py
++++ ceav_m1/model.py
+@@ -511,7 +511,7 @@
+     probabilities = _exact_object(anchor["audit_probability_by_report"], ("0", "1"), "verification_anchor.audit_probability_by_report")
+     q = tuple(rational(probabilities[str(report)], f"verification_anchor.audit_probability_by_report.{report}") for report in (0, 1))
+     for report, value in zip((0, 1), q):
+-        if not 0 < value <= 1:
++        if not 0 <= value <= 1:
+             raise ValidationError(f"verification_anchor.audit_probability_by_report.{report}", "IPW yêu cầu xác suất thuộc khoảng (0,1].")
+     verification = tuple(rational(anchor[key], f"verification_anchor.{key}") for key in ("sensitivity", "specificity"))
+     for key, value in zip(("sensitivity", "specificity"), verification):

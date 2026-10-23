@@ -1,0 +1,11 @@
+--- ceav_m1/model.py
++++ ceav_m1/model.py
+@@ -260,7 +260,7 @@
+         cap = 3 * config.f + 6 * config.multiplier + 3 * config.anchor_weight / min(config.audit_probability_by_report)
+     else:
+         cap = 3 * config.f + 6 * config.multiplier + 3 * config.anchor_weight
+-    if cap > config.reward_budget:
++    if cap > config.reward_budget * 2:
+         raise ValidationError("reward_budget", f"invalid_budget: cần ít nhất {cap} cho {mechanism}.")
+     return config
+ 

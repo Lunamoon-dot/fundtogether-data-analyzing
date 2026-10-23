@@ -1,0 +1,20 @@
+test_IPW_T06_expected_anchor_and_audit_cost_match_oracle (tests.test_v3_3.V33IPWTests.test_IPW_T06_expected_anchor_and_audit_cost_match_oracle) ... FAIL
+
+======================================================================
+FAIL: test_IPW_T06_expected_anchor_and_audit_cost_match_oracle (tests.test_v3_3.V33IPWTests.test_IPW_T06_expected_anchor_and_audit_cost_match_oracle)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\dell\Desktop\fundtogether_data_analyzing\results\v33-mutations-20261024T055107\IPW-M05\workspace\tests\test_v3_3.py", line 103, in test_IPW_T06_expected_anchor_and_audit_cost_match_oracle
+    self.assertEqual(covariance, expected_covariance)
+AssertionError: Lists differ: [[Fra[28 chars]tion(3168497, 750000), Fraction(785897, 250000[160 chars]00)]] != [[Fra[28 chars]tion(141151, 1000000), Fraction(4693, 62500)],[156 chars]00)]]
+
+First differing element 0:
+[Fraction(3803857, 750000), Fraction(3168497, 750000), Fraction(785897, 250000)]
+[Fraction(3803857, 750000), Fraction(141151, 1000000), Fraction(4693, 62500)]
+
+Diff is 702 characters long. Set self.maxDiff to None to see it.
+
+----------------------------------------------------------------------
+Ran 1 test in 0.081s
+
+FAILED (failures=1)

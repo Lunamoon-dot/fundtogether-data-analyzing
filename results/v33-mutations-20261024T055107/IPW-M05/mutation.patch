@@ -1,0 +1,11 @@
+--- ceav_m1/evaluate.py
++++ ceav_m1/evaluate.py
+@@ -67,7 +67,7 @@
+                     for j in range(3):
+                         if reports[i] == state.verification and reports[j] == state.verification:
+                             factor = (config.anchor_weight * config.anchor_weight / audit_probability
+-                                      if i == j else config.anchor_weight * config.anchor_weight)
++                                      if i == j else config.anchor_weight * config.anchor_weight / audit_probability)
+                             anchor_cross_moment[i][j] += state.probability * factor
+             for key, value in values.items():
+                 totals[i][key] += state.probability * value

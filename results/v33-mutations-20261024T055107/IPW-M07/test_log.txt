@@ -1,0 +1,15 @@
+test_IPW_T10_study_rejects_non_q_policy_override (tests.test_v3_3.V33IPWTests.test_IPW_T10_study_rejects_non_q_policy_override) ... FAIL
+
+======================================================================
+FAIL: test_IPW_T10_study_rejects_non_q_policy_override (tests.test_v3_3.V33IPWTests.test_IPW_T10_study_rejects_non_q_policy_override)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\dell\Desktop\fundtogether_data_analyzing\results\v33-mutations-20261024T055107\IPW-M07\workspace\tests\test_v3_3.py", line 149, in test_IPW_T10_study_rejects_non_q_policy_override
+    with self.assertRaises(ValidationError) as caught:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValidationError not raised
+
+----------------------------------------------------------------------
+Ran 1 test in 0.224s
+
+FAILED (failures=1)

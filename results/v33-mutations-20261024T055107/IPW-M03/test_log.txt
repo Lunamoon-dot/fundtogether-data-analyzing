@@ -1,0 +1,14 @@
+test_IPW_T03_ipw_cap_is_checked_against_shared_budget (tests.test_v3_3.V33IPWTests.test_IPW_T03_ipw_cap_is_checked_against_shared_budget) ... FAIL
+
+======================================================================
+FAIL: test_IPW_T03_ipw_cap_is_checked_against_shared_budget (tests.test_v3_3.V33IPWTests.test_IPW_T03_ipw_cap_is_checked_against_shared_budget)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\dell\Desktop\fundtogether_data_analyzing\results\v33-mutations-20261024T055107\IPW-M03\workspace\tests\test_v3_3.py", line 56, in test_IPW_T03_ipw_cap_is_checked_against_shared_budget
+    self.assertIsInstance(result, ValidationError)
+AssertionError: V33Config(pi=Fraction(1, 2), public_sensitivity=Fraction(4, 5), public_specificity=Fraction(3, 5), private_sensitivities=(Fraction(9, 10), Fraction(3, 4), Fraction(13, 20)), private_specificities=(Fraction(4, 5), Fraction(19, 20), Fraction(7, 10)), costs=(Fraction(1, 20), Fraction(1, 10), Fraction(1, 25)), audit_probability_by_report=(Fraction(1, 4), Fraction(3, 4)), audit_reward_mode='ipw', verification_sensitivity=Fraction(9, 10), verification_specificity=Fraction(9, 10), audit_cost_per_audit=Fraction(1, 5), f=Fraction(1, 10), multiplier=Fraction(0, 1), anchor_weight=Fraction(19, 10), reward_budget=Fraction(23, 1), payout_value=Fraction(1, 1), operating_cost=Fraction(0, 1), fixed_reward=Fraction(0, 1), model_version='ceav-m1-v3.3') is not an instance of <class 'ceav_m1.model.ValidationError'>
+
+----------------------------------------------------------------------
+Ran 1 test in 0.002s
+
+FAILED (failures=1)

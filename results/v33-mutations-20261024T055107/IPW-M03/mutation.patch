@@ -1,0 +1,11 @@
+--- ceav_m1/model.py
++++ ceav_m1/model.py
+@@ -257,7 +257,7 @@
+     elif mechanism == "rbts":
+         cap = 3 * config.f + 6 * config.multiplier
+     elif config.model_version == V33_MODEL_VERSION:
+-        cap = 3 * config.f + 6 * config.multiplier + 3 * config.anchor_weight / min(config.audit_probability_by_report)
++        cap = 3 * config.f + 6 * config.multiplier + 3 * config.anchor_weight
+     else:
+         cap = 3 * config.f + 6 * config.multiplier + 3 * config.anchor_weight
+     if cap > config.reward_budget:

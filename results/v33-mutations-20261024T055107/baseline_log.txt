@@ -1,0 +1,10 @@
+test_IPW_T02_zero_report_probability_is_rejected (tests.test_v3_3.V33IPWTests.test_IPW_T02_zero_report_probability_is_rejected) ... ok
+test_IPW_T03_ipw_cap_is_checked_against_shared_budget (tests.test_v3_3.V33IPWTests.test_IPW_T03_ipw_cap_is_checked_against_shared_budget) ... ok
+test_IPW_T06_expected_anchor_and_audit_cost_match_oracle (tests.test_v3_3.V33IPWTests.test_IPW_T06_expected_anchor_and_audit_cost_match_oracle) ... ok
+test_IPW_T08_failure_witness_reconstructs_utility_exactly (tests.test_v3_3.V33IPWTests.test_IPW_T08_failure_witness_reconstructs_utility_exactly) ... ok
+test_IPW_T10_study_rejects_non_q_policy_override (tests.test_v3_3.V33IPWTests.test_IPW_T10_study_rejects_non_q_policy_override) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 25.316s
+
+OK

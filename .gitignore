@@ -77,3 +77,21 @@ results/v2-mutations-release-04/V2-M*/workspace/
 !results/browser-B08-v2-release-02/**
 !results/browser-B09-v2-release-02/
 !results/browser-B09-v2-release-02/**
+
+# Curated V3.3 IPW evidence. The full nested-equilibrium JSON is kept local
+# because it exceeds GitHub's regular-file limit; ipw_public.json is the
+# checked-in exact point/policy projection with the original hash recorded.
+!results/v33-ipw-full-20261024T052707/
+!results/v33-ipw-full-20261024T052707/**
+results/v33-ipw-full-20261024T052707/inputs/
+results/v33-ipw-full-20261024T052707/ipw.json
+!results/v33-mutations-20261024T055107/
+!results/v33-mutations-20261024T055107/**
+results/v33-mutations-20261024T055107/inputs/
+results/v33-mutations-20261024T055107/IPW-M*/workspace/
+!results/v33-ipw-acceptance-20261024T060910/
+!results/v33-ipw-acceptance-20261024T060910/**
+results/v33-ipw-acceptance-20261024T060910/inputs/
+!results/run-20261023T231205-a85292b95a/
+!results/run-20261023T231205-a85292b95a/**
+results/run-20261023T231205-a85292b95a/inputs/

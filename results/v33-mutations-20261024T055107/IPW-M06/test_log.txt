@@ -1,0 +1,14 @@
+test_IPW_T08_failure_witness_reconstructs_utility_exactly (tests.test_v3_3.V33IPWTests.test_IPW_T08_failure_witness_reconstructs_utility_exactly) ... FAIL
+
+======================================================================
+FAIL: test_IPW_T08_failure_witness_reconstructs_utility_exactly (tests.test_v3_3.V33IPWTests.test_IPW_T08_failure_witness_reconstructs_utility_exactly)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\dell\Desktop\fundtogether_data_analyzing\results\v33-mutations-20261024T055107\IPW-M06\workspace\tests\test_v3_3.py", line 128, in test_IPW_T08_failure_witness_reconstructs_utility_exactly
+    self.assertEqual(witness["reconstruction_error"], F(0))
+AssertionError: Fraction(57, 500) != Fraction(0, 1)
+
+----------------------------------------------------------------------
+Ran 1 test in 22.729s
+
+FAILED (failures=1)

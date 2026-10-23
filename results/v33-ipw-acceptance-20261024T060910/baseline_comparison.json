@@ -1,0 +1,14 @@
+{
+  "models": [
+    {
+      "model_version": "ceav-m1-v3.2",
+      "status": "rerun_required_same_budget"
+    },
+    {
+      "model_version": "ceav-m1-v3.0",
+      "status": "reference_only"
+    }
+  ],
+  "shared_reward_budget": "24",
+  "status": "reference_only"
+}

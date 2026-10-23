@@ -1,0 +1,32 @@
+test_IPW_T02_zero_report_probability_is_rejected (tests.test_v3_3.V33IPWTests.test_IPW_T02_zero_report_probability_is_rejected) ... ERROR
+
+======================================================================
+ERROR: test_IPW_T02_zero_report_probability_is_rejected (tests.test_v3_3.V33IPWTests.test_IPW_T02_zero_report_probability_is_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\dell\Desktop\fundtogether_data_analyzing\results\v33-mutations-20261024T055107\IPW-M02\workspace\tests\test_v3_3.py", line 48, in test_IPW_T02_zero_report_probability_is_rejected
+    result = validation_result(raw)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\Desktop\fundtogether_data_analyzing\results\v33-mutations-20261024T055107\IPW-M02\workspace\tests\test_v3_3.py", line 31, in validation_result
+    return validate_config(raw, "hybrid_anchor")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\Desktop\fundtogether_data_analyzing\results\v33-mutations-20261024T055107\IPW-M02\workspace\ceav_m1\model.py", line 549, in validate_config
+    return _validate_v33(raw, mechanism)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\Desktop\fundtogether_data_analyzing\results\v33-mutations-20261024T055107\IPW-M02\workspace\ceav_m1\model.py", line 527, in _validate_v33
+    return _validate_budget(config, mechanism)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\Desktop\fundtogether_data_analyzing\results\v33-mutations-20261024T055107\IPW-M02\workspace\ceav_m1\model.py", line 260, in _validate_budget
+    cap = 3 * config.f + 6 * config.multiplier + 3 * config.anchor_weight / min(config.audit_probability_by_report)
+                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  File "C:\Users\dell\AppData\Local\Programs\Python\Python312\Lib\fractions.py", line 615, in forward
+    return monomorphic_operator(a, b)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\AppData\Local\Programs\Python\Python312\Lib\fractions.py", line 763, in _div
+    raise ZeroDivisionError('Fraction(%s, 0)' % db)
+ZeroDivisionError: Fraction(1, 0)
+
+----------------------------------------------------------------------
+Ran 1 test in 0.003s
+
+FAILED (errors=1)

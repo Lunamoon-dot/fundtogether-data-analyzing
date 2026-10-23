@@ -1,0 +1,11 @@
+--- ceav_m1/evaluate.py
++++ ceav_m1/evaluate.py
+@@ -62,7 +62,7 @@
+                 verification_matches[i] += state.probability * (anchor if report_sensitive else (reports[i] == state.verification))
+                 audit_exposure[i] += state.probability * audit_probability
+                 if ipw and reports[i] == state.verification:
+-                    anchor_second_moment[i] += state.probability * config.anchor_weight * config.anchor_weight / audit_probability
++                    anchor_second_moment[i] += state.probability * config.anchor_weight * config.anchor_weight
+                 if ipw:
+                     for j in range(3):
+                         if reports[i] == state.verification and reports[j] == state.verification:
