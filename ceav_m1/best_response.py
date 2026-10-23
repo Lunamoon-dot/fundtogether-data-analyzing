@@ -3,8 +3,10 @@
 from fractions import Fraction as F
 from itertools import product
 
+from . import V32_MODEL_VERSION
 from .model import JUDGES, observe
 from .scoring import quadratic
+from .signals import audit_probability_for_report
 from .strategies import ACTIONS, observation_key, realized
 
 
@@ -19,8 +21,9 @@ def solve_branch(config, frozen_candidate, judge, z, mechanism="rbts", candidate
     frozen_rows = [(s, *realized(candidate, s)) for s in rows]
     options = {}
     prediction_constant = mechanism == "fixed" or config.multiplier == 0
+    anchor_active = (any(config.audit_probability_by_report) if config.model_version == V32_MODEL_VERSION else config.audit_probability) if mechanism == "hybrid_anchor" else F(0)
     report_constant = mechanism == "fixed" or (mechanism == "rbts" and config.multiplier == 0) or (
-        mechanism == "hybrid_anchor" and config.multiplier == 0 and (config.anchor_weight == 0 or config.audit_probability == 0))
+        mechanism == "hybrid_anchor" and config.multiplier == 0 and (config.anchor_weight == 0 or not anchor_active))
     for effort in ("L", "H"):
         groups = {}
         for s, reports, predictions in frozen_rows:
@@ -37,7 +40,8 @@ def solve_branch(config, frozen_candidate, judge, z, mechanism="rbts", candidate
                     shadow = ref + (2 * r - 1) * min(ref, 1 - ref)
                     total += s.probability / group_mass * quadratic(shadow, reports[k])
                     if mechanism == "hybrid_anchor":
-                        anchor += s.probability / group_mass * (s.audit and r == s.verification)
+                        audit_probability = audit_probability_for_report(config, r)
+                        anchor += s.probability / group_mass * (audit_probability * (r == s.verification) if config.model_version == V32_MODEL_VERSION else (s.audit and r == s.verification))
                 values.append(total)
                 anchors.append(anchor)
             optimal_prediction_score = 1 - q + q * q

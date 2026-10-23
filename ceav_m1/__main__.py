@@ -13,6 +13,7 @@ from .evaluate import analyze
 from .incentives import classify_landscape, validate_incentive_axes, write_incentive_run
 from .model import ValidationError, rational, validate_config, validate_scenario
 from .output import finish_run, new_run, research_context, semantic_hash, write_analysis, write_csv, write_json, write_search
+from .report_sensitive import load_report_sensitive_study, write_report_sensitive_run
 from .robustness import load_robustness_study, write_robustness_run
 from .strategies import validate_profile
 
@@ -186,7 +187,7 @@ def main(argv=None):
         command.add_argument("--defer-publication", action="store_true", help=argparse.SUPPRESS)
         command.add_argument("--parent-pid", type=int, help=argparse.SUPPRESS)
     tests = commands.add_parser("tests")
-    tests.add_argument("--suite", choices=("reference", "goldens", "v2", "calibration", "incentives", "v3", "robustness", "all", "selected"), required=True)
+    tests.add_argument("--suite", choices=("reference", "goldens", "v2", "calibration", "incentives", "v3", "robustness", "v3_2", "all", "selected"), required=True)
     tests.add_argument("--test-id", action="append", default=[])
     tests.add_argument("--failure-fixture", action="store_true")
     tests.add_argument("--out", type=Path, required=True)
@@ -217,6 +218,12 @@ def main(argv=None):
     robustness.add_argument("--progress-json", action="store_true", help=argparse.SUPPRESS)
     robustness.add_argument("--defer-publication", action="store_true", help=argparse.SUPPRESS)
     robustness.add_argument("--parent-pid", type=int, help=argparse.SUPPRESS)
+    report_sensitive = commands.add_parser("report-sensitive", aliases=("report_sensitive",))
+    report_sensitive.add_argument("--study", type=Path, required=True)
+    report_sensitive.add_argument("--out", type=Path, required=True)
+    report_sensitive.add_argument("--progress-json", action="store_true", help=argparse.SUPPRESS)
+    report_sensitive.add_argument("--defer-publication", action="store_true", help=argparse.SUPPRESS)
+    report_sensitive.add_argument("--parent-pid", type=int, help=argparse.SUPPRESS)
     serve = commands.add_parser("serve")
     serve.add_argument("--port", type=int, default=8765)
     args = parser.parse_args(argv)
@@ -257,6 +264,14 @@ def main(argv=None):
             write_robustness_run(load_robustness_study(args.study), args.out,
                                  defer_publication=args.defer_publication, on_progress=robustness_progress)
             print(f"Completed robustness: {args.out.resolve()}")
+            return 0
+        if args.operation in ("report-sensitive", "report_sensitive"):
+            def report_sensitive_progress(value):
+                if args.progress_json:
+                    print(json.dumps({"progress": value}), flush=True)
+            write_report_sensitive_run(load_report_sensitive_study(args.study), args.out,
+                                       defer_publication=args.defer_publication, on_progress=report_sensitive_progress)
+            print(f"Completed report-sensitive: {args.out.resolve()}")
             return 0
         raw_config = read_json(args.config)
         raw_profile = read_json(args.profile) if args.operation != "equilibria" else None

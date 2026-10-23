@@ -1,0 +1,101 @@
+{
+  "analysis_version": "ceav-m1-v3.2-report-sensitive",
+  "analyzer_existed_before_event": true,
+  "created_at_utc": "2026-10-24T03:00:00.000000+00:00",
+  "design_revision": "report-sensitive-spot-check-r1",
+  "event": "analyzer_revision_implementation_start",
+  "files": {
+    "CEAV_M1_V3_2_REPORT_SENSITIVE_SPEC.md": {
+      "bytes": 6413,
+      "role": "analysis_spec",
+      "sha256": "8005fc559889177f70b3b0e5b324037d0e114d8f07412d0168befb76f8118a6c"
+    },
+    "ENGINE_DESIGN_V3_2_REPORT_SENSITIVE.md": {
+      "bytes": 2071,
+      "role": "analysis_engine_design",
+      "sha256": "39995dc6ea2cae31da852829bf51c702ff7ad652c396a2b922929be73685824b"
+    },
+    "VERIFICATION_PLAN_V3_2_REPORT_SENSITIVE.md": {
+      "bytes": 1883,
+      "role": "analysis_verification_plan",
+      "sha256": "68c65cd23b906dc6ae2d400791fde413c8b1e36413742ea3376cce2cedef22d2"
+    },
+    "CEAV_M1_V3_1_ROBUSTNESS_SPEC.md": {
+      "bytes": 8572,
+      "role": "parent_v3_1_spec",
+      "sha256": "8e353a3c15a3f52d070a0a283cb4fa6e61d48a720c1f200d7ecb0483d031d468"
+    },
+    "ENGINE_DESIGN_V3_1_ROBUSTNESS.md": {
+      "bytes": 4514,
+      "role": "parent_v3_1_engine_design",
+      "sha256": "2340f3718eb4f9cf71d72f014b43b7e1411bad9a02164e9c79eadf8c2f30c727"
+    },
+    "VERIFICATION_PLAN_V3_1_ROBUSTNESS.md": {
+      "bytes": 3699,
+      "role": "parent_v3_1_verification",
+      "sha256": "8a036929eab369bfa5a46987bae7afaae3d42217d3af157feaf801ef8bd8357a"
+    },
+    "CEAV_M1_V3_ANCHOR_SPEC.md": {
+      "bytes": 26805,
+      "role": "parent_v3_spec",
+      "sha256": "ab3fd7d797472077ae57147898449dd249695b5693ca3047b930f142cd87111e"
+    },
+    "ENGINE_DESIGN_V3_ANCHOR.md": {
+      "bytes": 9823,
+      "role": "parent_v3_engine_design",
+      "sha256": "e0096632303b321361a970444053fd4d3c4737316e9b57e086f43cd6a5da85c9"
+    },
+    "VERIFICATION_PLAN_V3_ANCHOR.md": {
+      "bytes": 8574,
+      "role": "parent_v3_verification",
+      "sha256": "281e099533a6438bc439657950759d5643b495ecabdfa4358e63d27216bd7dab"
+    }
+  },
+  "freeze_status": "frozen_at_analyzer_revision_implementation_start",
+  "model_version": "ceav-m1-v3.2",
+  "parent_manifest_sha256": "30fab1ca22bc22d7c828ff735ddc597a0ffbe3629d2a127c05d8391caa99f5fb",
+  "parent_revision": "v3.1-robustness-implementation-start-20261023T141156959593Z",
+  "parent_source": {
+    "git_head": "c32cd3d0eb711f7f3b8863783562f194c28436cf",
+    "working_tree_note": "V3.2 specs, oracle, fixture and red tests were added before production report-sensitive support."
+  },
+  "preexisting_test_assets": {
+    "tests/oracle_v3_2.py": {
+      "bytes": 3075,
+      "role": "preexisting_v3_2_red_test_asset",
+      "sha256": "207f7d8ef0e413ca7c1e7e86871d188a9f199710d37d889ed026e4e101c9dd03"
+    },
+    "tests/test_v3_2.py": {
+      "bytes": 5503,
+      "role": "preexisting_v3_2_red_test_asset",
+      "sha256": "49a7f7dc45a571348dd9701921e7e3846010a655396464839e8b5dd6730b9a55"
+    },
+    "tests/registry_v3_2.json": {
+      "bytes": 1873,
+      "role": "preexisting_v3_2_red_test_asset",
+      "sha256": "957c76f4382bb74c0393d9912ccd6790549fc39536075d23701ee97a933c0c7d"
+    },
+    "configs/v3/report_sensitive_base_v3_2.json": {
+      "bytes": 763,
+      "role": "preexisting_v3_2_red_test_asset",
+      "sha256": "a41abdf31301b9c96c182da57f82650836e2d3607881065caa12a0a5c300ff23"
+    },
+    "tests/fixtures/v3_2_report_sensitive_study.json": {
+      "bytes": 789,
+      "role": "preexisting_v3_2_red_test_asset",
+      "sha256": "98d4995c86c1917040bac0a4cb29ecd0cb4c4f797031f19539c63d7df1aec779"
+    }
+  },
+  "red_test": {
+    "command": "python -B -m unittest tests.test_v3_2 -v",
+    "failure": "ImportError: cannot import name V32_MODEL_VERSION",
+    "status": "failed_as_expected"
+  },
+  "reference_checker_preexisted": true,
+  "spec_revision": "report-sensitive-spot-check-r1",
+  "v3_oracle_preexisted": true,
+  "v3_production_support_existed_before_event": true,
+  "v3_1_robustness_support_existed_before_event": true,
+  "v3_2_oracle_preexisted": true,
+  "v3_2_report_sensitive_support_existed_before_event": false
+}

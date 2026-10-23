@@ -38,6 +38,20 @@ V3.1 không thêm tín hiệu, payoff, Judge hay authority mới. Analyzer mở 
 
 Kết quả nghiên cứu không chọn được policy robust: cả 6 policy đều có ít nhất một uncertainty point vi phạm gate. Pareto frontier gồm `v3_r1_baseline`, `anchor_q50` và `anchor_q80`; `anchor_q80` có nhiều point pass nhất (6/18) nhưng vẫn vi phạm false-approval, false-rejection hoặc cash-cost gate ở các point khác. Đây là kết quả bất lợi được giữ nguyên, không phải bằng chứng V3.1 đã sẵn sàng production. [Acceptance audit](results/v31-acceptance-final/report.md) xác nhận toàn bộ gate, nhưng không biến assumption grid thành confidence interval và không mô hình hóa latency.
 
+## Version 3.2 — Report-sensitive spot-checking
+
+V3.2 là một game version mới, được freeze tại `spec_history/v3.2-report-sensitive-implementation-start-20261024T030000000000Z/`. Nó giữ 3 Judge, signal model, majority decision và pure search của V3.1 nhưng thay audit scalar `q` bằng `q0/q1`: mỗi Judge có audit riêng, xác suất audit phụ thuộc report của chính Judge. State support giảm từ 128 potential states của V3 xuống 64 state rows vì audit chỉ được áp dụng sau report, bằng kỳ vọng exact.
+
+| Phần | Evidence V3.2 |
+| --- | --- |
+| Strict schema và boundary | V32-T01–T03; q0/q1 bắt buộc, scalar `audit_probability` bị từ chối, 64 states normalize |
+| Accounting và report-sensitive incentive | V32-T04–T06; independent oracle, expected audit exposure, anchor theo `q_r`, peer tables frozen |
+| Exhaustive pure search | V32-T07; đủ 432 branch candidates |
+| Study và failure witnesses | V32-T08; finite policy grid, worst-equilibrium gates, decomposition theo failure type |
+| CLI/API provenance | V32-T09–T10; run pin spec/freeze, API validation, registry discoverability |
+
+Acceptance runner V3.2 đã pass `10/10`: [results/v32-tests-final-02/test_results.json](results/v32-tests-final-02/test_results.json). Fixture study có ba policy ở một uncertainty point: symmetric `q0=q1=1/2` đạt accuracy `1813/2000`, false approval `51/500`; report-1 emphasis `q0=1/4,q1=3/4` đạt accuracy `7633/10000`, false approval `2237/5000`; report-0 emphasis `q0=3/4,q1=1/4` đạt accuracy `96/125`, false approval `1/250` nhưng false rejection `23/50`. Cả ba đều qua gate rộng của fixture; trade-off report-0 được giữ nguyên thay vì gọi là cải thiện tổng quát. Study cuối: [report](results/v32-report-sensitive-final-02/report.md) và [JSON](results/v32-report-sensitive-final-02/report_sensitive.json). Đây là kết quả của synthetic/assumption fixture, chưa phải dữ liệu Judge ngoài đời và chưa phải production readiness.
+
 ## Version 2.2 — Incentive Diagnostics
 
 **Trạng thái hiện tại: `SPECIFIED`, `IMPLEMENTED` và targeted verification; chưa công bố full `VERIFIED` release.**

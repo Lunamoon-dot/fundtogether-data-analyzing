@@ -1,6 +1,6 @@
 # CEAV-M1
 
-**Phiên bản chạy được hiện tại:** Version 3.1 · robustness grid trên game hybrid RBTS + verification anchor `ceav-m1-v3.0`; V3.1 không đổi game, chỉ kiểm tra độ bền của policy dưới uncertainty.
+**Phiên bản chạy được hiện tại:** Version 3.2 · report-sensitive spot-checking `ceav-m1-v3.2`; mỗi Judge có audit riêng với xác suất `q0/q1` theo report. V3.1 vẫn giữ nguyên game V3 và được hồi quy khi thay đổi.
 
 **Version 2.2 diagnostics:** `SPECIFIED`, `IMPLEMENTED` và đã qua targeted verification INC-T01–INC-T08 cùng INC-B01. Trạng thái full release còn chờ toàn bộ regression/evidence INC-GATE-5. V2.1, V2.0 và V1 giữ trạng thái nghiệm thu trước đó trên source đã pin của từng release.
 
@@ -16,7 +16,7 @@ Từ `C:\Users\dell\Desktop\fundtogether_data_analyzing`:
 python -m ceav_m1 serve --port 8765
 ```
 
-Mở [http://127.0.0.1:8765](http://127.0.0.1:8765). Form mặc định là V3 với ba nhóm tín hiệu cũ và nhóm verification anchor `q/sensitivity/specificity/cost_per_audit`; reward hiển thị `f`, `lambda_peer` và `anchor_weight` riêng. Màn hình **Dữ liệu** vẫn tạo config V2; **Chẩn đoán động lực** vẫn chạy V2.2. Chỉnh tham số dạng chuỗi hữu tỉ, ví dụ `1/20` hoặc `0.05`. Chi tiết và download của mỗi run nằm dưới kết quả.
+Mở [http://127.0.0.1:8765](http://127.0.0.1:8765). Form có V3.2 với hai trường audit `q0/q1` theo report; reward hiển thị `f`, `lambda_peer` và `anchor_weight` riêng. Màn hình **Dữ liệu** vẫn tạo config V2; **Chẩn đoán động lực** vẫn chạy V2.2. Chỉnh tham số dạng chuỗi hữu tỉ, ví dụ `1/20` hoặc `0.05`. Chi tiết và download của mỗi run nằm dưới kết quả.
 
 Server chỉ bind loopback. Nếu port bận, lệnh trả lỗi; chọn port khác bằng `--port`. Chỉ chạy một tác vụ nặng tại một thời điểm. Hủy tác vụ dừng worker; run cancelled/interrupted không phải certificate hoàn chỉnh. `Ctrl+C` kết thúc server.
 
@@ -41,6 +41,8 @@ python -m ceav_m1 tests --suite incentives --out results/my-incentive-tests
 python -m ceav_m1 tests --suite v3 --out results/my-v3-tests
 python -m ceav_m1 robustness --study configs/v3/robustness_v3_1.json --out results/my-v3.1-robustness
 python -m ceav_m1 tests --suite robustness --out results/my-v3.1-tests
+python -m ceav_m1 report-sensitive --study tests/fixtures/v3_2_report_sensitive_study.json --out results/my-v3.2-report-sensitive
+python -m ceav_m1 tests --suite v3_2 --out results/my-v3.2-tests
 python -m ceav_m1 tests --suite all --out results/my-all-tests
 python -m ceav_m1 tests --suite selected --test-id T01 --test-id V2-T11 --out results/my-selected
 ```
@@ -48,6 +50,8 @@ python -m ceav_m1 tests --suite selected --test-id T01 --test-id V2-T11 --out re
 `configs/sweep.json` giải `base_config` tương đối với file sweep. Output tương đối với cwd. So sánh yêu cầu `F=f+2*lambda`; cùng trần không có nghĩa cùng reward thực chi. Sweep V1/V2 giữ profile cố định và chỉ phân tích candidate. Sweep V3 giữ candidate metrics, exhaustive pure-equilibrium landscape và khoảng min/max exact của decision/accounting metrics tại mọi cân bằng thuần; hàng invalid vẫn được giữ.
 
 V3.1 dùng study đã khai báo trong [`configs/v3/robustness_v3_1.json`](configs/v3/robustness_v3_1.json): 6 policy × 18 uncertainty scenarios = 108 points, mỗi point kiểm đủ 432 branch candidates. Policy chỉ bền vững khi mọi scenario qua gate theo equilibrium xấu nhất. Kết quả chính là false approval, wrongly paid value, false rejection và cash review cost; accuracy chỉ là diagnostic. Grid không nội suy, các range là provenance assumptions chứ không phải confidence intervals, và latency chưa được mô hình hóa.
+
+V3.2 dùng [`CEAV_M1_V3_2_REPORT_SENSITIVE_SPEC.md`](CEAV_M1_V3_2_REPORT_SENSITIVE_SPEC.md): spot-check theo report `q0/q1` và audit riêng cho từng Judge. Study finite giữ 3 Judge, majority decision và exhaustive 432 branch candidates; output thêm expected audit exposure, failure witness và decomposition `effort_cost/report_sensitive_anchor/peer_score`. Fixture mặc định so sánh symmetric, report-1 emphasis và report-0 emphasis; report-0 giảm false approval nhưng làm false rejection tăng mạnh trong run synthetic. Đây là mô hình incentive mới, không phải claim về nguồn audit thực tế.
 
 Acceptance V3.1 đã pass: [audit](results/v31-acceptance-final/report.md), [full runner](results/v31-all-tests-final/report.md), [study 108 điểm](results/v31-robustness-study-release-02/report.md), [browser ROB-B01](results/v31-browser-final-ROB-B01/report.md) và [mutation probes](results/v31-mutations-final/report.md). Kết quả chính là **không có policy robust** trong grid đã khai báo; `anchor_q80` chỉ đạt 6/18 scenario, nên đây là chẩn đoán giới hạn của policy hiện tại chứ không phải tuyên bố accuracy hay production readiness.
 
@@ -68,6 +72,7 @@ Nghiệm thu M1 local đã đạt GATE-0–GATE-5: 47 tests pass, B01–B09 pass
 - [CEAV_M1_V2_2_INCENTIVE_SPEC.md](CEAV_M1_V2_2_INCENTIVE_SPEC.md), [ENGINE_DESIGN_V2_2_INCENTIVES.md](ENGINE_DESIGN_V2_2_INCENTIVES.md) và [VERIFICATION_PLAN_V2_2_INCENTIVES.md](VERIFICATION_PLAN_V2_2_INCENTIVES.md): contract V2.2, decomposition, conditional thresholds và equilibrium landscape.
 - [CEAV_M1_V3_ANCHOR_SPEC.md](CEAV_M1_V3_ANCHOR_SPEC.md), [ENGINE_DESIGN_V3_ANCHOR.md](ENGINE_DESIGN_V3_ANCHOR.md) và [VERIFICATION_PLAN_V3_ANCHOR.md](VERIFICATION_PLAN_V3_ANCHOR.md): model, implementation contract và evidence plan V3 đã nghiệm thu local.
 - [CEAV_M1_V3_1_ROBUSTNESS_SPEC.md](CEAV_M1_V3_1_ROBUSTNESS_SPEC.md), [ENGINE_DESIGN_V3_1_ROBUSTNESS.md](ENGINE_DESIGN_V3_1_ROBUSTNESS.md) và [VERIFICATION_PLAN_V3_1_ROBUSTNESS.md](VERIFICATION_PLAN_V3_1_ROBUSTNESS.md): robustness grid, worst-equilibrium gates, baselines và uncertainty provenance trên game V3 không đổi.
+- [CEAV_M1_V3_2_REPORT_SENSITIVE_SPEC.md](CEAV_M1_V3_2_REPORT_SENSITIVE_SPEC.md), [ENGINE_DESIGN_V3_2_REPORT_SENSITIVE.md](ENGINE_DESIGN_V3_2_REPORT_SENSITIVE.md) và [VERIFICATION_PLAN_V3_2_REPORT_SENSITIVE.md](VERIFICATION_PLAN_V3_2_REPORT_SENSITIVE.md): q0/q1 report-sensitive spot-checking, per-Judge audit accounting và failure witnesses.
 - [ENGINE_DESIGN_V2.md](ENGINE_DESIGN_V2.md) và [VERIFICATION_PLAN_V2.md](VERIFICATION_PLAN_V2.md): contract triển khai và evidence V2.
 - [ENGINE_DESIGN.md](ENGINE_DESIGN.md): hợp đồng thuật toán V1.
 - [VERIFICATION_PLAN.md](VERIFICATION_PLAN.md): oracle, fixtures, T01–T32, B01–B09, M01–M13 và gates V1.
