@@ -11,6 +11,7 @@ from .calibration import PROVENANCE_STATUSES, write_calibration_run
 from .equilibria import CancelledError, search_pure, summarize_equilibrium_metrics
 from .evaluate import analyze
 from .incentives import classify_landscape, validate_incentive_axes, write_incentive_run
+from .ipw import load_ipw_study, write_ipw_run
 from .model import ValidationError, rational, validate_config, validate_scenario
 from .output import finish_run, new_run, research_context, semantic_hash, write_analysis, write_csv, write_json, write_search
 from .report_sensitive import load_report_sensitive_study, write_report_sensitive_run
@@ -187,7 +188,7 @@ def main(argv=None):
         command.add_argument("--defer-publication", action="store_true", help=argparse.SUPPRESS)
         command.add_argument("--parent-pid", type=int, help=argparse.SUPPRESS)
     tests = commands.add_parser("tests")
-    tests.add_argument("--suite", choices=("reference", "goldens", "v2", "calibration", "incentives", "v3", "robustness", "v3_2", "all", "selected"), required=True)
+    tests.add_argument("--suite", choices=("reference", "goldens", "v2", "calibration", "incentives", "v3", "robustness", "v3_2", "v3_3", "all", "selected"), required=True)
     tests.add_argument("--test-id", action="append", default=[])
     tests.add_argument("--failure-fixture", action="store_true")
     tests.add_argument("--out", type=Path, required=True)
@@ -224,6 +225,12 @@ def main(argv=None):
     report_sensitive.add_argument("--progress-json", action="store_true", help=argparse.SUPPRESS)
     report_sensitive.add_argument("--defer-publication", action="store_true", help=argparse.SUPPRESS)
     report_sensitive.add_argument("--parent-pid", type=int, help=argparse.SUPPRESS)
+    ipw = commands.add_parser("ipw")
+    ipw.add_argument("--study", type=Path, required=True)
+    ipw.add_argument("--out", type=Path, required=True)
+    ipw.add_argument("--progress-json", action="store_true", help=argparse.SUPPRESS)
+    ipw.add_argument("--defer-publication", action="store_true", help=argparse.SUPPRESS)
+    ipw.add_argument("--parent-pid", type=int, help=argparse.SUPPRESS)
     serve = commands.add_parser("serve")
     serve.add_argument("--port", type=int, default=8765)
     args = parser.parse_args(argv)
@@ -272,6 +279,14 @@ def main(argv=None):
             write_report_sensitive_run(load_report_sensitive_study(args.study), args.out,
                                        defer_publication=args.defer_publication, on_progress=report_sensitive_progress)
             print(f"Completed report-sensitive: {args.out.resolve()}")
+            return 0
+        if args.operation == "ipw":
+            def ipw_progress(value):
+                if args.progress_json:
+                    print(json.dumps({"progress": value}), flush=True)
+            write_ipw_run(load_ipw_study(args.study), args.out,
+                          defer_publication=args.defer_publication, on_progress=ipw_progress)
+            print(f"Completed ipw: {args.out.resolve()}")
             return 0
         raw_config = read_json(args.config)
         raw_profile = read_json(args.profile) if args.operation != "equilibria" else None

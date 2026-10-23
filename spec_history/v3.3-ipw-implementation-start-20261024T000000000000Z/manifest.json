@@ -1,0 +1,93 @@
+{
+  "analysis_version": "ceav-m1-v3.3-ipw",
+  "analyzer_existed_before_event": true,
+  "created_at_utc": "2026-10-24T04:00:00.000000+00:00",
+  "design_revision": "ipw-audit-reward-r1",
+  "event": "analyzer_revision_implementation_start",
+  "files": {
+    "CEAV_M1_V3_2_REPORT_SENSITIVE_SPEC.md": {
+      "bytes": 6413,
+      "role": "parent_v3_2_spec",
+      "sha256": "8005fc559889177f70b3b0e5b324037d0e114d8f07412d0168befb76f8118a6c"
+    },
+    "CEAV_M1_V3_3_IPW_SPEC.md": {
+      "bytes": 11366,
+      "role": "analysis_spec",
+      "sha256": "32e09e280406363502cec54998ede4e7842a858b22ac0055ac17bc08162af5cf"
+    },
+    "ENGINE_DESIGN_V3_2_REPORT_SENSITIVE.md": {
+      "bytes": 2071,
+      "role": "parent_v3_2_engine_design",
+      "sha256": "39995dc6ea2cae31da852829bf51c702ff7ad652c396a2b922929be73685824b"
+    },
+    "ENGINE_DESIGN_V3_3_IPW.md": {
+      "bytes": 5055,
+      "role": "analysis_engine_design",
+      "sha256": "940f7863da3e04a5c1823a0e2731c0374194b2916626bd53b02eb4fabfe1b7ed"
+    },
+    "VERIFICATION_PLAN_V3_2_REPORT_SENSITIVE.md": {
+      "bytes": 1883,
+      "role": "parent_v3_2_verification",
+      "sha256": "68c65cd23b906dc6ae2d400791fde413c8b1e36413742ea3376cce2cedef22d2"
+    },
+    "VERIFICATION_PLAN_V3_3_IPW.md": {
+      "bytes": 5160,
+      "role": "analysis_verification_plan",
+      "sha256": "bff38cd8be84563b9fdd20a8dc1cc4e0fbbd8b42d9ec7ea1e1dbdbd2ed62ad72"
+    },
+    "configs/v3/ipw_base_v3_3.json": {
+      "bytes": 796,
+      "role": "preexisting_v3_3_red_fixture",
+      "sha256": "0bc657cbeeb3c46ff20b91b27d8f2e8927a4b5627b5350151a6d668b3ecf4e10"
+    },
+    "tests/oracle_v3_3.py": {
+      "bytes": 2517,
+      "role": "preexisting_v3_3_oracle_red_asset",
+      "sha256": "da3fe5531c03d206de427720723ed00f274b4b160be6de0d94b802b29a7b42c5"
+    },
+    "tests/test_v3_3.py": {
+      "bytes": 2187,
+      "role": "preexisting_v3_3_red_tests",
+      "sha256": "bc673c70c9149dab8284515402354bce2f80a5e211761c7a53738722826c72fe"
+    }
+  },
+  "freeze_status": "frozen_at_analyzer_revision_implementation_start",
+  "model_version": "ceav-m1-v3.3",
+  "parent_manifest_sha256": "0d8f5422bc859f3a44918ea11acf8e55f39d4667bd65c5ac715aa77b6abf611d",
+  "parent_revision": "v3.2-report-sensitive-implementation-start-20261024T030000000000Z",
+  "parent_source": {
+    "git_head": "0e76ce8",
+    "working_tree_note": "V3.3 spec, design, verification plan, independent oracle and red tests preexisted production IPW support."
+  },
+  "preexisting_test_assets": {
+    "configs/v3/ipw_base_v3_3.json": {
+      "bytes": 796,
+      "role": "preexisting_v3_3_red_fixture",
+      "sha256": "0bc657cbeeb3c46ff20b91b27d8f2e8927a4b5627b5350151a6d668b3ecf4e10"
+    },
+    "tests/oracle_v3_3.py": {
+      "bytes": 2517,
+      "role": "preexisting_v3_3_oracle_red_asset",
+      "sha256": "da3fe5531c03d206de427720723ed00f274b4b160be6de0d94b802b29a7b42c5"
+    },
+    "tests/test_v3_3.py": {
+      "bytes": 2187,
+      "role": "preexisting_v3_3_red_tests",
+      "sha256": "bc673c70c9149dab8284515402354bce2f80a5e211761c7a53738722826c72fe"
+    }
+  },
+  "red_test": {
+    "command": "python -m unittest tests.test_v3_3 -v",
+    "failure": "V33_MODEL_VERSION missing and V3.3 schema rejected as unsupported",
+    "status": "failed_as_expected"
+  },
+  "reference_checker_preexisted": true,
+  "spec_revision": "ipw-audit-reward-r1",
+  "v3_1_robustness_support_existed_before_event": true,
+  "v3_2_oracle_preexisted": true,
+  "v3_2_report_sensitive_support_existed_before_event": true,
+  "v3_3_ipw_support_existed_before_event": false,
+  "v3_3_oracle_preexisted": true,
+  "v3_oracle_preexisted": true,
+  "v3_production_support_existed_before_event": true
+}

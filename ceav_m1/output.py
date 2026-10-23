@@ -13,16 +13,19 @@ import platform
 import shutil
 import sys
 
-from . import ENGINE_VERSION, V1_MODEL_VERSION, V2_MODEL_VERSION, V3_MODEL_VERSION, V32_MODEL_VERSION
+from . import ENGINE_VERSION, V1_MODEL_VERSION, V2_MODEL_VERSION, V3_MODEL_VERSION, V32_MODEL_VERSION, V33_MODEL_VERSION
 
 ROOT = Path(__file__).resolve().parents[1]
 FREEZE = "spec_history/implementation-start-20261022T081942148684Z"
 V2_FREEZE = "spec_history/v2-implementation-start-20261022T161522230020Z"
 V3_FREEZE = "spec_history/v3.1-robustness-implementation-start-20261023T141156959593Z"
 V32_FREEZE = "spec_history/v3.2-report-sensitive-implementation-start-20261024T030000000000Z"
-FREEZES = {V1_MODEL_VERSION: FREEZE, V2_MODEL_VERSION: V2_FREEZE, V3_MODEL_VERSION: V3_FREEZE, V32_MODEL_VERSION: V32_FREEZE}
+V33_FREEZE = "spec_history/v3.3-ipw-implementation-start-20261024T000000000000Z"
+FREEZES = {V1_MODEL_VERSION: FREEZE, V2_MODEL_VERSION: V2_FREEZE, V3_MODEL_VERSION: V3_FREEZE,
+           V32_MODEL_VERSION: V32_FREEZE, V33_MODEL_VERSION: V33_FREEZE}
 SPEC_FILES = {V1_MODEL_VERSION: "CEAV_M1_SPEC.md", V2_MODEL_VERSION: "CEAV_M1_V2_SPEC.md",
-              V3_MODEL_VERSION: "CEAV_M1_V3_ANCHOR_SPEC.md", V32_MODEL_VERSION: "CEAV_M1_V3_2_REPORT_SENSITIVE_SPEC.md"}
+              V3_MODEL_VERSION: "CEAV_M1_V3_ANCHOR_SPEC.md", V32_MODEL_VERSION: "CEAV_M1_V3_2_REPORT_SENSITIVE_SPEC.md",
+              V33_MODEL_VERSION: "CEAV_M1_V3_3_IPW_SPEC.md"}
 
 
 def sha256(raw):
@@ -90,7 +93,7 @@ def documents(root=ROOT, model_version=V1_MODEL_VERSION):
     folder = root / freeze
     event = json.loads((folder / "manifest.json").read_text(encoding="utf-8"))
     allowed_events = {("analyzer_implementation_start", "frozen_at_analyzer_implementation_start")}
-    if model_version in (V3_MODEL_VERSION, V32_MODEL_VERSION):
+    if model_version in (V3_MODEL_VERSION, V32_MODEL_VERSION, V33_MODEL_VERSION):
         allowed_events.add(("analyzer_revision_implementation_start", "frozen_at_analyzer_revision_implementation_start"))
     if (event["event"], event["freeze_status"]) not in allowed_events:
         raise ValueError("Missing implementation-start freeze event")
@@ -133,6 +136,15 @@ def documents(root=ROOT, model_version=V1_MODEL_VERSION):
                 or not event.get("v3_1_robustness_support_existed_before_event")
                 or not event.get("v3_2_oracle_preexisted") or event.get("v3_2_report_sensitive_support_existed_before_event")):
             raise ValueError("Invalid V3.2 revision-start provenance")
+    elif model_version == V33_MODEL_VERSION:
+        parent = root / "spec_history" / event["parent_revision"] / "manifest.json"
+        if sha256(parent.read_bytes()) != event.get("parent_manifest_sha256"):
+            raise ValueError("Invalid V3.3 revision parent")
+        if (not event.get("v3_oracle_preexisted") or not event.get("v3_production_support_existed_before_event")
+                or not event.get("v3_1_robustness_support_existed_before_event")
+                or not event.get("v3_2_oracle_preexisted") or not event.get("v3_2_report_sensitive_support_existed_before_event")
+                or not event.get("v3_3_oracle_preexisted") or event.get("v3_3_ipw_support_existed_before_event")):
+            raise ValueError("Invalid V3.3 revision-start provenance")
     elif event.get("analysis_version") == "ceav-m1-v3.1-robustness":
         parent = root / "spec_history" / event["parent_revision"] / "manifest.json"
         if sha256(parent.read_bytes()) != event.get("parent_manifest_sha256"):
@@ -169,7 +181,9 @@ def new_run(out, operation, config=None, profile=None, mechanism=None, request=N
     inputs = out / "inputs"
     inputs.mkdir()
     for filename in event["files"]:
-        shutil.copyfile(ROOT / freeze / filename, inputs / filename)
+        destination = inputs / filename
+        destination.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(ROOT / freeze / filename, destination)
     shutil.copyfile(ROOT / freeze / "manifest.json", inputs / "freeze_event.json")
     sources = []
     for path in source_files():
@@ -267,6 +281,8 @@ def research_context(config, profile=None, scenario=None):
         domain = "V2 signal domain; 0<=q<=1; 1/2<verification sensitivity/specificity<=1; reward/cost nonnegative."
     else:
         domain = "V2 signal domain; 0<=q0,q1<=1; 1/2<verification sensitivity/specificity<=1; reward/cost nonnegative. V3.2 audit là per-Judge và phụ thuộc report."
+    if version == V33_MODEL_VERSION:
+        domain = "V2 signal domain; 0<q0,q1<=1; audit_reward_mode=ipw; 1/2<verification sensitivity/specificity<=1; reward/cost nonnegative. IPW cap dùng q_min."
     text = f"Model: {version}. Miền tham số: {domain}\n\nCấu hình thực tế của run:\n\n```json\n" + json.dumps(config, ensure_ascii=False, sort_keys=True, indent=2) + "\n```\n\n"
     if profile is not None:
         text += "Candidate effort/report profile:\n\n```json\n" + json.dumps(profile, sort_keys=True, indent=2) + "\n```\n\n"

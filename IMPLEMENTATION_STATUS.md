@@ -52,6 +52,14 @@ V3.2 là một game version mới, được freeze tại `spec_history/v3.2-repo
 
 Acceptance runner V3.2 đã pass `10/10`: [results/v32-tests-final-02/test_results.json](results/v32-tests-final-02/test_results.json). Fixture study có ba policy ở một uncertainty point: symmetric `q0=q1=1/2` đạt accuracy `1813/2000`, false approval `51/500`; report-1 emphasis `q0=1/4,q1=3/4` đạt accuracy `7633/10000`, false approval `2237/5000`; report-0 emphasis `q0=3/4,q1=1/4` đạt accuracy `96/125`, false approval `1/250` nhưng false rejection `23/50`. Cả ba đều qua gate rộng của fixture; trade-off report-0 được giữ nguyên thay vì gọi là cải thiện tổng quát. Study cuối: [report](results/v32-report-sensitive-final-02/report.md) và [JSON](results/v32-report-sensitive-final-02/report_sensitive.json). Đây là kết quả của synthetic/assumption fixture, chưa phải dữ liệu Judge ngoài đời và chưa phải production readiness.
 
+## Version 3.3 — IPW audit reward
+
+**Trạng thái:** `SPECIFIED` + `IMPLEMENTED`; engine/CLI/API/UI local đã nối và targeted evidence đã pass. Full browser/release verification chưa hoàn tất vì môi trường hiện tại tắt browser local.
+
+V3.3 được freeze tại `spec_history/v3.3-ipw-implementation-start-20261024T000000000000Z/`. Nó thay đổi payoff anchor, không sửa nghĩa V3.2: với `q0,q1 > 0`, expected anchor reward trở thành `mu * P(T=r | observation)`; cap dùng `3f + 6lambda + 3mu/q_min`; output thêm second moment, variance, covariance, payment cap và decomposition exact của utility deviation.
+
+Evidence hiện có: IPW-T01–T13 `13/13`; full study `54/54` points, mỗi point `432/432` branch candidates; mutation probes `IPW-M01–M08` `8/8` killed trong isolated copies; server status/validate/run API smoke pass (HTTP `200`/`202`, acceptance job `succeeded`) và expose V3.3 preset, study, operation. Artifact study: [report](results/v33-ipw-full-20261024T052707/report.md), [ipw.json](results/v33-ipw-full-20261024T052707/ipw.json), [mutation report](results/v33-mutations-20261024T055107/report.md), [post-fix covariance acceptance](results/v33-ipw-acceptance-20261024T060910/report.md). Cả ba policy đều `0/18` robust trong assumption grid; đây là kết quả nghiên cứu bất lợi, không phải lỗi analyzer. Full historical runner đạt `117 pass / 6 fail`; sáu fail là browser/regression evidence cũ không khớp source hiện tại, không phải V3.3 engine assertion. Chưa gọi V3.3 là production-ready hoặc dữ liệu Judge thật.
+
 ## Version 2.2 — Incentive Diagnostics
 
 **Trạng thái hiện tại: `SPECIFIED`, `IMPLEMENTED` và targeted verification; chưa công bố full `VERIFIED` release.**

@@ -3,7 +3,7 @@
 from fractions import Fraction as F
 from itertools import product
 
-from . import V32_MODEL_VERSION
+from . import V32_MODEL_VERSION, V33_MODEL_VERSION
 from .model import JUDGES, observe
 from .scoring import quadratic
 from .signals import audit_probability_for_report
@@ -21,7 +21,7 @@ def solve_branch(config, frozen_candidate, judge, z, mechanism="rbts", candidate
     frozen_rows = [(s, *realized(candidate, s)) for s in rows]
     options = {}
     prediction_constant = mechanism == "fixed" or config.multiplier == 0
-    anchor_active = (any(config.audit_probability_by_report) if config.model_version == V32_MODEL_VERSION else config.audit_probability) if mechanism == "hybrid_anchor" else F(0)
+    anchor_active = (any(config.audit_probability_by_report) if config.model_version in (V32_MODEL_VERSION, V33_MODEL_VERSION) else config.audit_probability) if mechanism == "hybrid_anchor" else F(0)
     report_constant = mechanism == "fixed" or (mechanism == "rbts" and config.multiplier == 0) or (
         mechanism == "hybrid_anchor" and config.multiplier == 0 and (config.anchor_weight == 0 or not anchor_active))
     for effort in ("L", "H"):
@@ -41,7 +41,12 @@ def solve_branch(config, frozen_candidate, judge, z, mechanism="rbts", candidate
                     total += s.probability / group_mass * quadratic(shadow, reports[k])
                     if mechanism == "hybrid_anchor":
                         audit_probability = audit_probability_for_report(config, r)
-                        anchor += s.probability / group_mass * (audit_probability * (r == s.verification) if config.model_version == V32_MODEL_VERSION else (s.audit and r == s.verification))
+                        if config.model_version == V32_MODEL_VERSION:
+                            anchor += s.probability / group_mass * audit_probability * (r == s.verification)
+                        elif config.model_version == V33_MODEL_VERSION:
+                            anchor += s.probability / group_mass * (r == s.verification)
+                        else:
+                            anchor += s.probability / group_mass * (s.audit and r == s.verification)
                 values.append(total)
                 anchors.append(anchor)
             optimal_prediction_score = 1 - q + q * q
@@ -76,10 +81,11 @@ def solve_branch(config, frozen_candidate, judge, z, mechanism="rbts", candidate
             base_reward = config.f + config.multiplier * prediction + gross_value
         utility = base_reward - (config.costs[judge] if effort == "H" else F(0))
         maps = ["".join(map(str, rs)) for rs in product(*(o["optimal_reports"] for o in observations))]
+        effort_cost = config.costs[judge] if effort == "H" else F(0)
         options[effort] = {"information_score": information, "prediction_score": prediction, "score": score,
                            "anchor_score": anchor_value, "peer_reward": peer_reward, "anchor_reward": anchor_reward,
                            "gross_reward": base_reward,
-                           "utility": utility, "observations": observations,
+                           "effort_cost": effort_cost, "utility": utility, "observations": observations,
                            "optimal_actions": [effort + report_map for report_map in maps]}
     assert options["H"]["gross_reward"] >= options["L"]["gross_reward"], "Value-of-information invariant failed"
     best = max(option["utility"] for option in options.values())
@@ -91,10 +97,19 @@ def solve_branch(config, frozen_candidate, judge, z, mechanism="rbts", candidate
     if regret > 0:
         action = optimal_actions[0]
         observations = options[action[0]]["observations"]
+        new_option = options[action[0]]
+        old_effort_cost = candidate_payoff.get("effort_cost", F(0))
+        delta_peer_reward = new_option["peer_reward"] - candidate_payoff.get("peer_reward", F(0))
+        delta_anchor_reward = new_option["anchor_reward"] - candidate_payoff.get("anchor_reward", F(0))
+        delta_effort_cost = new_option["effort_cost"] - old_effort_cost
+        delta_utility = delta_peer_reward + delta_anchor_reward - delta_effort_cost
         witness = {"judge": JUDGES[judge], "z": z, "action": action,
                    "prediction_map": [{"observation": o["observation"], "prediction": o["optimal_prediction"]} for o in observations],
                    "old_utility": candidate_payoff["utility"], "new_utility": best,
                    "conditional_gain": regret, "ex_ante_gain": mass * regret,
+                   "delta_peer_reward": delta_peer_reward, "delta_anchor_reward": delta_anchor_reward,
+                   "delta_effort_cost": delta_effort_cost, "delta_utility": delta_utility,
+                   "reconstruction_error": (best - candidate_payoff["utility"]) - delta_utility,
                    "peer_predictions_remain_candidate_tables": True}
     return {"judge": JUDGES[judge], "z": z, "branch_probability": mass,
             "reference_judge": JUDGES[j], "scoring_peer_judge": JUDGES[k],

@@ -16,7 +16,7 @@ import sys
 import threading
 from urllib.parse import unquote, urlsplit
 
-from . import DEFAULT_MODEL_VERSION, ENGINE_VERSION, SUPPORTED_MODEL_VERSIONS, V1_MODEL_VERSION, V2_MODEL_VERSION, V3_MODEL_VERSION
+from . import DEFAULT_MODEL_VERSION, ENGINE_VERSION, SUPPORTED_MODEL_VERSIONS, V1_MODEL_VERSION, V2_MODEL_VERSION, V3_MODEL_VERSION, V33_MODEL_VERSION
 from .__main__ import compare_config, validate_sweep_axes
 from .calibration import PROVENANCE_STATUSES, calibrate_dataset
 from .incentives import validate_incentive_axes
@@ -24,11 +24,12 @@ from .model import ValidationError, signal_diagnostics, validate_config, validat
 from .output import FREEZES, ROOT, documents, exact_payload, finish_run, new_run, sha256, write_json
 from .robustness import expand_study, load_robustness_study, validate_robustness_study
 from .report_sensitive import expand_report_sensitive_study, load_report_sensitive_study, validate_report_sensitive_study
+from .ipw import expand_ipw_study, load_ipw_study, validate_ipw_study
 from .strategies import ACTIONS, validate_profile
 from .test_runner import SUITES
 
 TERMINAL = ("succeeded", "failed", "cancelled", "interrupted")
-OPERATIONS = ("analyze", "equilibria", "sweep", "compare", "tests", "calibrate", "incentives", "robustness", "report_sensitive")
+OPERATIONS = ("analyze", "equilibria", "sweep", "compare", "tests", "calibrate", "incentives", "robustness", "report_sensitive", "ipw")
 SAFE_ID = re.compile(r"[A-Za-z0-9][A-Za-z0-9_-]{0,95}\Z")
 
 
@@ -128,6 +129,17 @@ class Laboratory:
                     "grid": {"policy_count": len(study["policies"]),
                               "scenario_count_per_policy": len(points) // len(study["policies"]), "total_points": len(points)},
                     "gates": study["gates"]}
+        if operation == "ipw":
+            if set(request) != {"operation", "study"}:
+                extra = set(request) - {"operation", "study"}
+                raise ValidationError(sorted(extra)[0] if extra else "study", "IPW cần đúng operation và study.")
+            study = validate_ipw_study(request["study"])
+            points = expand_ipw_study(study)
+            return {"valid": True, "operation": operation, "analysis_version": study["analysis_version"],
+                    "model_version": V33_MODEL_VERSION,
+                    "grid": {"policy_count": len(study["policies"]),
+                              "scenario_count_per_policy": len(points) // len(study["policies"]), "total_points": len(points)},
+                    "gates": study["gates"]}
         if operation == "calibrate":
             fields = {"operation", "dataset_csv", "source_name", "provenance_status", "base_config", "mechanism"}
             if set(request) - fields:
@@ -155,8 +167,8 @@ class Laboratory:
             if suite not in SUITES:
                 raise ValidationError("suite", "Suite không được hỗ trợ.")
             selected = request.get("test_ids", [])
-            if not isinstance(selected, list) or any(not isinstance(i, str) or not re.fullmatch(r"(?:T(?:0[1-9]|[12][0-9]|3[0-2])|V2-T(?:0[1-9]|1[0-5])|CAL-T0[1-8]|INC-T0[1-8]|V3-T(?:0[1-9]|1[0-2])|ROB-T(?:0[1-9]|10)|V32-T(?:0[1-9]|10))", i) for i in selected):
-                raise ValidationError("test_ids", "Chỉ nhận IDs đã đăng ký V1, V2, CAL, INC, V3, ROB hoặc V32.")
+            if not isinstance(selected, list) or any(not isinstance(i, str) or not re.fullmatch(r"(?:T(?:0[1-9]|[12][0-9]|3[0-2])|V2-T(?:0[1-9]|1[0-5])|CAL-T0[1-8]|INC-T0[1-8]|V3-T(?:0[1-9]|1[0-2])|ROB-T(?:0[1-9]|10)|V32-T(?:0[1-9]|10)|IPW-T(?:0[1-9]|1[0-3]))", i) for i in selected):
+                raise ValidationError("test_ids", "Chỉ nhận IDs đã đăng ký V1, V2, CAL, INC, V3, ROB, V32 hoặc IPW.")
             if type(request.get("failure_fixture", False)) is not bool:
                 raise ValidationError("failure_fixture", "Cần boolean.")
             fixture = request.get("failure_fixture", False)
@@ -227,6 +239,10 @@ class Laboratory:
             write_json(staged / "report_sensitive_study.json", request["study"])
             command += ["--study", str(staged / "report_sensitive_study.json"), "--progress-json"]
             return command
+        if operation == "ipw":
+            write_json(staged / "ipw_study.json", request["study"])
+            command += ["--study", str(staged / "ipw_study.json"), "--progress-json"]
+            return command
         if operation == "calibrate":
             dataset = staged / "dataset.csv"
             dataset.write_text(request["dataset_csv"], encoding="utf-8", newline="")
@@ -276,6 +292,11 @@ class Laboratory:
                            publication_owner="local_server")
         if operation == "report_sensitive":
             study = validate_report_sensitive_study(request["study"])
+            config = validate_config(study["base_config"], "hybrid_anchor")
+            return new_run(out, operation, config, mechanism="hybrid_anchor", request=request,
+                           publication_owner="local_server")
+        if operation == "ipw":
+            study = validate_ipw_study(request["study"])
             config = validate_config(study["base_config"], "hybrid_anchor")
             return new_run(out, operation, config, mechanism="hybrid_anchor", request=request,
                            publication_owner="local_server")
@@ -469,7 +490,14 @@ def create_server(port=8765, results_dir=None, laboratory=None):
                     v3_presets = {name: json.loads((ROOT / "configs" / "v3" / f"{name}.json").read_text(encoding="utf-8"))
                                   for name in ("heterogeneous_anchor", "anchor_dominant_q50")}
                     v32_presets = {"report_sensitive_base": json.loads((ROOT / "configs/v3/report_sensitive_base_v3_2.json").read_text(encoding="utf-8"))}
+                    v33_presets = {"ipw_base": json.loads((ROOT / "configs/v3/ipw_base_v3_3.json").read_text(encoding="utf-8"))}
                     report_sensitive_acceptance = load_report_sensitive_study(ROOT / "tests/fixtures/v3_2_report_sensitive_study.json")
+                    ipw_full = load_ipw_study(ROOT / "tests/fixtures/v3_3_ipw_study.json")
+                    ipw_acceptance = deepcopy(ipw_full)
+                    ipw_acceptance["policies"] = ipw_acceptance["policies"][:1]
+                    ipw_acceptance["uncertainty_axes"] = {"pi": ["1/2"],
+                                                            "verification_anchor.quality": ["9/10"],
+                                                            "judges.high_effort_cost_multiplier": ["1"]}
                     robustness_full = load_robustness_study(ROOT / "configs/v3/robustness_v3_1.json")
                     robustness_acceptance = load_robustness_study(ROOT / "tests/fixtures/v3_1_robustness_study.json")
                     robustness_acceptance["policies"] = robustness_acceptance["policies"][:1]
@@ -484,8 +512,10 @@ def create_server(port=8765, results_dir=None, laboratory=None):
                                    "capabilities": {operation: True for operation in OPERATIONS}, "suites": list(SUITES),
                                    "token": lab.token, "active_job": active, "actions": ACTIONS, "presets": presets,
                                    "v2_presets": v2_presets, "v3_presets": v3_presets, "v32_presets": v32_presets,
+                                   "v33_presets": v33_presets,
                                    "robustness_studies": {"acceptance": robustness_acceptance, "full": robustness_full},
-                                   "report_sensitive_studies": {"acceptance": report_sensitive_acceptance}})
+                                   "report_sensitive_studies": {"acceptance": report_sensitive_acceptance},
+                                   "ipw_studies": {"acceptance": ipw_acceptance, "full": ipw_full}})
                 elif path == "/api/calibration/sample.csv":
                     sample = ROOT / "datasets" / "synthetic_v2_calibration.csv"
                     self.send(200, sample.read_bytes(), "text/csv; charset=utf-8", sample.name if urlsplit(self.path).query == "download=1" else None)

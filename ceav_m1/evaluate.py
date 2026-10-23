@@ -2,7 +2,7 @@
 
 from fractions import Fraction as F
 
-from . import V32_MODEL_VERSION
+from . import V32_MODEL_VERSION, V33_MODEL_VERSION
 from .model import JUDGES, signal_diagnostics
 from .signals import audit_probability_for_report
 from .scoring import anchor_score, reward, score_judge
@@ -30,7 +30,12 @@ def evaluate(config, candidate, mechanism="rbts"):
     conditional = [[{key: F(0) for key in total_keys} for _ in range(2)] for _ in range(3)]
     verification_matches = [F(0), F(0), F(0)]
     audit_exposure = [F(0), F(0), F(0)]
-    report_sensitive = config.model_version == V32_MODEL_VERSION
+    report_sensitive = config.model_version in (V32_MODEL_VERSION, V33_MODEL_VERSION)
+    ipw = config.model_version == V33_MODEL_VERSION
+    anchor_second_moment = [F(0), F(0), F(0)]
+    anchor_cross_moment = [[F(0) for _ in range(3)] for _ in range(3)]
+    report_one_rate = [F(0), F(0), F(0)]
+    report_one_by_y = [[F(0), F(0)] for _ in range(3)]
     accuracy = fp = fn = approvals = F(0)
     for state in candidate.rows:
         reports, predictions = realized(candidate, state)
@@ -45,7 +50,7 @@ def evaluate(config, candidate, mechanism="rbts"):
             score = score_judge(reports, predictions, i)
             action = candidate.profile.branches[state.z][i]
             audit_probability = audit_probability_for_report(config, reports[i]) if hybrid else F(0)
-            anchor = (audit_probability * (reports[i] == state.verification) if report_sensitive else
+            anchor = ((reports[i] == state.verification) if ipw else audit_probability * (reports[i] == state.verification) if report_sensitive else
                       anchor_score(reports[i], state.audit, state.verification) if hybrid else F(0))
             paid = reward(score["total_score"], mechanism, config, anchor)
             cost = config.costs[i] if action[0] == "H" else F(0)
@@ -56,6 +61,14 @@ def evaluate(config, candidate, mechanism="rbts"):
                               anchor_reward=config.anchor_weight * anchor)
                 verification_matches[i] += state.probability * (anchor if report_sensitive else (reports[i] == state.verification))
                 audit_exposure[i] += state.probability * audit_probability
+                if ipw and reports[i] == state.verification:
+                    anchor_second_moment[i] += state.probability * config.anchor_weight * config.anchor_weight / audit_probability
+                if ipw:
+                    for j in range(3):
+                        if reports[i] == state.verification and reports[j] == state.verification:
+                            factor = (config.anchor_weight * config.anchor_weight / audit_probability
+                                      if i == j else config.anchor_weight * config.anchor_weight)
+                            anchor_cross_moment[i][j] += state.probability * factor
             for key, value in values.items():
                 totals[i][key] += state.probability * value
                 conditional[i][state.z][key] += state.probability / branch_mass[state.z] * value
@@ -69,6 +82,9 @@ def evaluate(config, candidate, mechanism="rbts"):
         fp += state.probability * (state.y == 0 and decision == 1)
         fn += state.probability * (state.y == 1 and decision == 0)
         approvals += state.probability * decision
+        for i, report in enumerate(reports):
+            report_one_rate[i] += state.probability * report
+            report_one_by_y[i][state.y] += state.probability * report
     reward_total = sum(row["reward"] for row in totals)
     effort_cost = sum(row["effort_cost"] for row in totals)
     metrics = {"accuracy": accuracy, "false_approval_rate": fp / (1 - config.pi), "false_rejection_rate": fn / config.pi,
@@ -76,6 +92,8 @@ def evaluate(config, candidate, mechanism="rbts"):
                "expected_payout": config.payout_value * approvals, "expected_reward_total": reward_total,
                "expected_effort_cost": effort_cost, "expected_judge_utility": [row["utility"] for row in totals],
                "operating_cost": config.operating_cost, "cash_review_cost": reward_total + config.operating_cost}
+    metrics.update(report_one_rate=report_one_rate,
+                   report_one_rate_by_y=[[values[0] / (1 - config.pi), values[1] / config.pi] for values in report_one_by_y])
     if hybrid:
         expected_audit_cost = ((sum(audit_exposure) * config.audit_cost_per_audit) if report_sensitive else
                                config.audit_probability * config.audit_cost_per_audit)
@@ -84,8 +102,16 @@ def evaluate(config, candidate, mechanism="rbts"):
                        verification_agreement=verification_matches,
                        expected_audit_cost=expected_audit_cost,
                        cash_review_cost=reward_total + config.operating_cost + expected_audit_cost)
+        if ipw:
+            metrics.update(anchor_reward_second_moment=anchor_second_moment,
+                           anchor_reward_variance=[anchor_second_moment[i] - totals[i]["anchor_reward"] ** 2 for i in range(3)],
+                           anchor_reward_covariance=[[anchor_cross_moment[i][j] - totals[i]["anchor_reward"] * totals[j]["anchor_reward"] for j in range(3)] for i in range(3)],
+                           max_realized_anchor_payment=config.anchor_weight / min(config.audit_probability_by_report),
+                           payment_cap_ratio=(config.anchor_weight / min(config.audit_probability_by_report)) / config.reward_budget)
     cap = (3 * config.fixed_reward if mechanism == "fixed" else
-           3 * config.f + 6 * config.multiplier + (3 * config.anchor_weight if hybrid else 0))
+           3 * config.f + 6 * config.multiplier +
+           (3 * config.anchor_weight / min(config.audit_probability_by_report) if ipw else
+            3 * config.anchor_weight if hybrid else 0))
     assert reward_total <= cap <= config.reward_budget
     if report_sensitive:
         metrics["expected_audit_exposure"] = audit_exposure
