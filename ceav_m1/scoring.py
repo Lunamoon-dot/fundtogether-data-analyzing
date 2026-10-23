@@ -25,9 +25,17 @@ def score_judge(reports, predictions, judge):
             "prediction_score": prediction, "total_score": information + prediction}
 
 
-def reward(score, mechanism, config):
+def anchor_score(report, audit, verification):
+    if any(type(value) is not int or value not in (0, 1) for value in (report, audit, verification)):
+        raise ValueError("Anchor score requires binary report, audit and verification")
+    return F(audit and report == verification)
+
+
+def reward(score, mechanism, config, anchor=F(0)):
     if mechanism == "fixed":
         return config.fixed_reward
     if mechanism == "rbts":
         return config.f + config.multiplier * score
+    if mechanism == "hybrid_anchor":
+        return config.f + config.multiplier * score + config.anchor_weight * anchor
     raise ValueError("Unknown mechanism")

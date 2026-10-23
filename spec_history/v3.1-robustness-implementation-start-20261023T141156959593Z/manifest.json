@@ -1,0 +1,97 @@
+{
+  "analysis_version": "ceav-m1-v3.1-robustness",
+  "analyzer_existed_before_event": true,
+  "created_at_utc": "2026-10-23T14:11:56.964795+00:00",
+  "design_revision": "engine-robustness-grid-r1",
+  "event": "analyzer_revision_implementation_start",
+  "files": {
+    "CEAV_M1_V3_1_ROBUSTNESS_SPEC.md": {
+      "bytes": 8572,
+      "role": "analysis_spec",
+      "sha256": "8e353a3c15a3f52d070a0a283cb4fa6e61d48a720c1f200d7ecb0483d031d468"
+    },
+    "CEAV_M1_V3_ANCHOR_SPEC.md": {
+      "bytes": 26805,
+      "role": "parent_spec",
+      "sha256": "ab3fd7d797472077ae57147898449dd249695b5693ca3047b930f142cd87111e"
+    },
+    "ENGINE_DESIGN_V3_1_ROBUSTNESS.md": {
+      "bytes": 4514,
+      "role": "analysis_engine_design",
+      "sha256": "2340f3718eb4f9cf71d72f014b43b7e1411bad9a02164e9c79eadf8c2f30c727"
+    },
+    "ENGINE_DESIGN_V3_ANCHOR.md": {
+      "bytes": 9823,
+      "role": "parent_engine_design",
+      "sha256": "e0096632303b321361a970444053fd4d3c4737316e9b57e086f43cd6a5da85c9"
+    },
+    "VERIFICATION_PLAN_V3_1_ROBUSTNESS.md": {
+      "bytes": 3699,
+      "role": "analysis_verification_plan",
+      "sha256": "8a036929eab369bfa5a46987bae7afaae3d42217d3af157feaf801ef8bd8357a"
+    },
+    "VERIFICATION_PLAN_V3_ANCHOR.md": {
+      "bytes": 8574,
+      "role": "parent_verification_plan",
+      "sha256": "281e099533a6438bc439657950759d5643b495ecabdfa4358e63d27216bd7dab"
+    }
+  },
+  "freeze_status": "frozen_at_analyzer_revision_implementation_start",
+  "model_version": "ceav-m1-v3.0",
+  "parent_manifest_sha256": "dd8329009a0ac2aaeeed23fe32ded4e4a48d61e2944607c2d6950f89083fa0c5",
+  "parent_revision": "v3-anchor-r2-implementation-start-20261023T070915835165Z",
+  "parent_source": {
+    "git_head": "f29a1bcf2f48aa4a795cf4a403ddd1d00988a6e9",
+    "working_tree_note": "V3 r2 implementation and closeout evidence preexisted; V3.1 specs, oracle, fixtures and red tests added before production robustness module."
+  },
+  "preexisting_test_assets": {
+    "configs/v3/robustness_base_v3_1.json": {
+      "bytes": 800,
+      "role": "v3_1_base_config",
+      "sha256": "6484c4c4ef6935d2c3c3c18bb0508a5958241bb0144dc69114f52d8cf84c1d11"
+    },
+    "configs/v3/robustness_v3_1.json": {
+      "bytes": 1796,
+      "role": "predeclared_108_point_study",
+      "sha256": "9a2d9abe9078c120e44976bf0993e0d0fc5386bd831f95eeb4c8fdf8d95fab31"
+    },
+    "tests/fixtures/v3_1_robustness_expected.json": {
+      "bytes": 2643,
+      "role": "independent_expected_fixture",
+      "sha256": "a412fbe104edd7a4edb64ec13bdf02470e75a85bf0485b22dbf7ae8c68341ae1"
+    },
+    "tests/fixtures/v3_1_robustness_study.json": {
+      "bytes": 976,
+      "role": "acceptance_study",
+      "sha256": "e58619ecb4de667a29fc95dcac16f3b41b8f2d87465e45b80c029dd0487deadc"
+    },
+    "tests/oracle_v3_1.py": {
+      "bytes": 4321,
+      "role": "independent_v3_1_oracle",
+      "sha256": "457f6a87d755d0a11d6ad66987f836b2560c8b84f14878754445f42484efd525"
+    },
+    "tests/registry_robustness.json": {
+      "bytes": 1918,
+      "role": "robustness_test_registry",
+      "sha256": "591387a25a672b60a1d592eacb318bcc2b48fdf9c0f4a476505fb6303765c2d4"
+    },
+    "tests/test_robustness.py": {
+      "bytes": 12137,
+      "role": "red_robustness_tests",
+      "sha256": "0d5539b8057f21ba5bcc96a6a949ec845b537289355f8c9973fc80c8c85fc42a"
+    }
+  },
+  "red_test": {
+    "command": "python -B -m unittest tests.test_robustness -v",
+    "failure": "ModuleNotFoundError: No module named 'ceav_m1.robustness'",
+    "status": "failed_as_expected"
+  },
+  "reference_checker_preexisted": true,
+  "spec_revision": "robustness-grid-r1",
+  "v3_1_oracle_preexisted": true,
+  "v3_1_robustness_support_existed_before_event": false,
+  "v3_oracle_preexisted": true,
+  "v3_production_support_existed_before_event": true,
+  "v3_r2_closeout_support_existed_before_event": true,
+  "verification_revision": "verification-robustness-grid-r1"
+}

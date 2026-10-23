@@ -1,0 +1,16 @@
+{
+  "tests": {
+    "V3-T01": {"unittest_ids": ["tests.test_v3.V3EngineTests.test_V3_T01_schema_and_mechanism_dispatch"], "fixture_ids": ["V3-F05"], "browser_scenario_ids": ["V3-B01"]},
+    "V3-T02": {"unittest_ids": ["tests.test_v3.V3EngineTests.test_V3_T02_exact_distribution_and_support"], "fixture_ids": ["V3-F01", "V3-F03"], "browser_scenario_ids": []},
+    "V3-T03": {"unittest_ids": ["tests.test_v3.V3EngineTests.test_V3_T03_observation_never_contains_audit_or_verification"], "fixture_ids": ["V3-F01"], "browser_scenario_ids": []},
+    "V3-T04": {"unittest_ids": ["tests.test_v3.V3EngineTests.test_V3_T04_candidate_accounting_matches_independent_fixture"], "fixture_ids": ["V3-F01"], "browser_scenario_ids": ["V3-B01"]},
+    "V3-T05": {"unittest_ids": ["tests.test_v3.V3EngineTests.test_V3_T05_best_responses_match_independent_fixture"], "fixture_ids": ["V3-F01", "V3-F04"], "browser_scenario_ids": []},
+    "V3-T06": {"unittest_ids": ["tests.test_v3.V3EngineTests.test_V3_T06_zero_anchor_reduces_to_v2"], "fixture_ids": ["V3-F02"], "browser_scenario_ids": []},
+    "V3-T07": {"unittest_ids": ["tests.test_v3.V3EngineTests.test_V3_T07_exhaustive_search_matches_independent_fixture"], "fixture_ids": ["V3-F01"], "browser_scenario_ids": ["V3-B01"]},
+    "V3-T08": {"unittest_ids": ["tests.test_v3.V3EngineTests.test_V3_T08_worst_case_budget_does_not_multiply_by_q"], "fixture_ids": ["V3-F05"], "browser_scenario_ids": []},
+    "V3-T09": {"unittest_ids": ["tests.test_v3.V3EngineTests.test_V3_T09_cli_artifacts_freeze_and_no_overwrite"], "fixture_ids": ["V3-F01"], "browser_scenario_ids": []},
+    "V3-T10": {"unittest_ids": ["tests.test_v3.V3EngineTests.test_V3_T10_server_status_validate_and_worker_parity"], "fixture_ids": ["V3-F01"], "browser_scenario_ids": ["V3-B01"]},
+    "V3-T11": {"unittest_ids": ["tests.test_v3.V3EngineTests.test_V3_T11_sweep_preserves_valid_and_invalid_points"], "fixture_ids": ["V3-F01"], "browser_scenario_ids": ["V3-B01"]},
+    "V3-T12": {"unittest_ids": ["tests.test_v3.V3EngineTests.test_V3_T12_registry_is_complete_and_discoverable"], "fixture_ids": [], "browser_scenario_ids": ["V3-B01"]}
+  }
+}

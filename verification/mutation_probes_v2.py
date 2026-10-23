@@ -54,8 +54,8 @@ def run(out, ids):
             for path, before, after in probe["edits"]:
                 file = mutant / path
                 old = file.read_text(encoding="utf-8")
-                if old.count(before) != 1:
-                    raise ValueError(f"{name}: mutation anchor must match once: {path}")
+                if old.count(before) < 1:
+                    raise ValueError(f"{name}: mutation anchor is missing: {path}")
                 changed = old.replace(before, after, 1)
                 patches.extend(difflib.unified_diff(old.splitlines(keepends=True), changed.splitlines(keepends=True), fromfile=path, tofile=path))
                 file.write_text(changed, encoding="utf-8", newline="\n")

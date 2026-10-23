@@ -8,10 +8,12 @@ import sys
 import time
 
 from .calibration import PROVENANCE_STATUSES, write_calibration_run
-from .equilibria import CancelledError, search_pure
+from .equilibria import CancelledError, search_pure, summarize_equilibrium_metrics
 from .evaluate import analyze
+from .incentives import classify_landscape, validate_incentive_axes, write_incentive_run
 from .model import ValidationError, rational, validate_config, validate_scenario
 from .output import finish_run, new_run, research_context, semantic_hash, write_analysis, write_csv, write_json, write_search
+from .robustness import load_robustness_study, write_robustness_run
 from .strategies import validate_profile
 
 
@@ -34,10 +36,20 @@ V2_SWEEP_AXES = (
     "judges.B.private_signal.sensitivity", "judges.B.private_signal.specificity", "judges.B.high_effort_cost",
     "judges.C.private_signal.sensitivity", "judges.C.private_signal.specificity", "judges.C.high_effort_cost", "lambda",
 )
+V3_SWEEP_AXES = (
+    "pi", "public_signal.sensitivity", "public_signal.specificity",
+    "judges.A.private_signal.sensitivity", "judges.A.private_signal.specificity", "judges.A.high_effort_cost",
+    "judges.B.private_signal.sensitivity", "judges.B.private_signal.specificity", "judges.B.high_effort_cost",
+    "judges.C.private_signal.sensitivity", "judges.C.private_signal.specificity", "judges.C.high_effort_cost",
+    "verification_anchor.audit_probability", "verification_anchor.sensitivity", "verification_anchor.specificity",
+    "verification_anchor.cost_per_audit",
+    "lambda_peer", "anchor_weight",
+)
 
 
 def validate_sweep_axes(sweep, model_version):
-    allowed = V1_SWEEP_AXES if model_version == "ceav-m1-v1.0" else V2_SWEEP_AXES
+    allowed = (V1_SWEEP_AXES if model_version == "ceav-m1-v1.0" else
+               V2_SWEEP_AXES if model_version == "ceav-m1-v2.0" else V3_SWEEP_AXES)
     if not isinstance(sweep, dict) or not sweep or set(sweep) - set(allowed):
         raise ValidationError("axes", "Sweep chứa axis không được hỗ trợ cho model version này.")
     axes = [key for key in allowed if key in sweep]
@@ -92,6 +104,7 @@ def execute(operation, raw_config, raw_profile, mechanism, out, on_progress=None
         elif operation == "sweep":
             from itertools import product
             axes = validate_sweep_axes(sweep, config.model_version)
+            exhaustive_landscape = config.model_version == "ceav-m1-v3.0"
             rows = []
             grid = list(product(*(sweep[key] for key in axes)))
             for index, point in enumerate(grid):
@@ -109,15 +122,37 @@ def execute(operation, raw_config, raw_profile, mechanism, out, on_progress=None
                     for branch in analyzed["best_responses"]:
                         for key in ("delta_utility", "regret"):
                             row[f"{branch['judge']}_z{branch['z']}_{key}"] = branch[key]
+                    if exhaustive_landscape:
+                        def search_progress(progress):
+                            if on_progress:
+                                on_progress({**progress, "point": index + 1, "points_total": len(grid)})
+                        search = search_pure(point_config, mechanism, search_progress)
+                        landscape = classify_landscape(search)
+                        landscape["equilibrium_metrics"] = summarize_equilibrium_metrics(point_config, search, mechanism)
+                        row["landscape"] = landscape
+                        for key in ("branch_candidate_count", "full_equilibrium_count", "low_effort_exists",
+                                    "all_high_signal_dependent_exists", "all_high_signal_ignored_exists",
+                                    "coexistence_low_and_dependent_high"):
+                            row[key] = landscape[key]
+                        equilibrium_metrics = landscape["equilibrium_metrics"]
+                        row["equilibrium_metrics_status"] = equilibrium_metrics["status"]
+                        if equilibrium_metrics["status"] == "pure_equilibria_evaluated":
+                            for metric, values in equilibrium_metrics["ranges"].items():
+                                row[f"equilibrium_{metric}_min"] = values["min"]
+                                row[f"equilibrium_{metric}_max"] = values["max"]
                 except ValidationError as error:
                     row.update(status="invalid_budget" if error.field == "reward_budget" else "invalid_input", error=str(error))
                 rows.append(row)
                 if on_progress:
                     on_progress({"phase": "sweep", "completed": index + 1, "total": len(grid)})
-            result = {"rows": rows, "axes": sweep, "scope": "fixed_candidate_analysis_only"}
-            write_csv(out / "sweep.csv", rows)
+            scope = ("candidate_analysis_plus_exhaustive_pure_equilibrium_landscape" if exhaustive_landscape
+                     else "fixed_candidate_analysis_only")
+            result = {"rows": rows, "axes": sweep, "scope": scope}
+            write_csv(out / "sweep.csv", [{key: value for key, value in row.items() if key != "landscape"} for row in rows])
             write_json(out / "sweep.json", result)
-            (out / "report.md").write_text(f"# CEAV-M1 — Sweep\n\n{len(rows)} điểm trên candidate cố định; không phải bản đồ mọi cân bằng. "
+            scope_text = ("Mỗi điểm V3 hợp lệ gồm candidate diagnostics và exhaustive pure-equilibrium landscape."
+                          if exhaustive_landscape else "Các điểm chỉ phân tích candidate cố định; không phải bản đồ mọi cân bằng.")
+            (out / "report.md").write_text(f"# CEAV-M1 — Sweep\n\n{len(rows)} điểm. {scope_text} "
                 f"Hàng lỗi được giữ: {sum(r['status'] != 'valid' for r in rows)}.\n\nAxes:\n\n```json\n" + json.dumps(sweep, sort_keys=True, indent=2) + "\n```\n\n" + research_context(config.raw(), profile.raw(), scenario), encoding="utf-8", newline="\n")
         else:
             raise ValueError("Unknown operation")
@@ -144,14 +179,14 @@ def main(argv=None):
         if name != "equilibria":
             command.add_argument("--profile", type=Path, required=True)
         if name != "compare":
-            command.add_argument("--mechanism", choices=("fixed", "rbts"), default="rbts")
+            command.add_argument("--mechanism", choices=("fixed", "rbts", "hybrid_anchor"), default="rbts")
         command.add_argument("--out", type=Path, required=True)
         command.add_argument("--scenario", type=Path)
         command.add_argument("--progress-json", action="store_true", help=argparse.SUPPRESS)
         command.add_argument("--defer-publication", action="store_true", help=argparse.SUPPRESS)
         command.add_argument("--parent-pid", type=int, help=argparse.SUPPRESS)
     tests = commands.add_parser("tests")
-    tests.add_argument("--suite", choices=("reference", "goldens", "v2", "calibration", "all", "selected"), required=True)
+    tests.add_argument("--suite", choices=("reference", "goldens", "v2", "calibration", "incentives", "v3", "robustness", "all", "selected"), required=True)
     tests.add_argument("--test-id", action="append", default=[])
     tests.add_argument("--failure-fixture", action="store_true")
     tests.add_argument("--out", type=Path, required=True)
@@ -166,6 +201,22 @@ def main(argv=None):
     calibrate.add_argument("--out", type=Path, required=True)
     calibrate.add_argument("--defer-publication", action="store_true", help=argparse.SUPPRESS)
     calibrate.add_argument("--parent-pid", type=int, help=argparse.SUPPRESS)
+    incentives = commands.add_parser("incentives")
+    incentives.add_argument("--config", type=Path, required=True)
+    incentives.add_argument("--profile", type=Path, required=True)
+    incentives.add_argument("--mechanism", choices=("rbts",), default="rbts")
+    incentives.add_argument("--axes", type=Path)
+    incentives.add_argument("--out", type=Path, required=True)
+    incentives.add_argument("--scenario", type=Path)
+    incentives.add_argument("--progress-json", action="store_true", help=argparse.SUPPRESS)
+    incentives.add_argument("--defer-publication", action="store_true", help=argparse.SUPPRESS)
+    incentives.add_argument("--parent-pid", type=int, help=argparse.SUPPRESS)
+    robustness = commands.add_parser("robustness")
+    robustness.add_argument("--study", type=Path, required=True)
+    robustness.add_argument("--out", type=Path, required=True)
+    robustness.add_argument("--progress-json", action="store_true", help=argparse.SUPPRESS)
+    robustness.add_argument("--defer-publication", action="store_true", help=argparse.SUPPRESS)
+    robustness.add_argument("--parent-pid", type=int, help=argparse.SUPPRESS)
     serve = commands.add_parser("serve")
     serve.add_argument("--port", type=int, default=8765)
     args = parser.parse_args(argv)
@@ -187,6 +238,25 @@ def main(argv=None):
                                   args.provenance_status, args.out, args.source_name or args.dataset.name,
                                   defer_publication=args.defer_publication)
             print(f"Completed calibrate: {args.out.resolve()}")
+            return 0
+        if args.operation == "incentives":
+            axes = read_json(args.axes) if args.axes else {}
+            validate_incentive_axes(axes)
+            def incentive_progress(value):
+                if args.progress_json:
+                    print(json.dumps({"progress": value}), flush=True)
+            write_incentive_run(read_json(args.config), read_json(args.profile), args.out, axes,
+                                read_json(args.scenario) if args.scenario else None,
+                                defer_publication=args.defer_publication, on_progress=incentive_progress)
+            print(f"Completed incentives: {args.out.resolve()}")
+            return 0
+        if args.operation == "robustness":
+            def robustness_progress(value):
+                if args.progress_json:
+                    print(json.dumps({"progress": value}), flush=True)
+            write_robustness_run(load_robustness_study(args.study), args.out,
+                                 defer_publication=args.defer_publication, on_progress=robustness_progress)
+            print(f"Completed robustness: {args.out.resolve()}")
             return 0
         raw_config = read_json(args.config)
         raw_profile = read_json(args.profile) if args.operation != "equilibria" else None

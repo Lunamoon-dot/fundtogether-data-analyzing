@@ -1,0 +1,64 @@
+{
+  "analyzer_existed_before_event": true,
+  "created_at_utc": "2026-10-23T07:09:15.882932+00:00",
+  "design_revision": "engine-design-v3-anchor-r2-closeout",
+  "event": "analyzer_revision_implementation_start",
+  "files": {
+    "CEAV_M1_V3_ANCHOR_SPEC.md": {
+      "bytes": 26665,
+      "role": "spec",
+      "sha256": "82a02d446c6b7fe7c16526709fdca951163f3257308aac109ece7439958aa923"
+    },
+    "ENGINE_DESIGN_V3_ANCHOR.md": {
+      "bytes": 9682,
+      "role": "engine_design",
+      "sha256": "6bf00fd26b91a46314b073dabdb6e0f50e906523dea2afa5e436b1db7966d0ed"
+    },
+    "VERIFICATION_PLAN_V3_ANCHOR.md": {
+      "bytes": 8426,
+      "role": "verification_plan",
+      "sha256": "07f3476c21d976605af24b1aadd7230e1854fdc705eb2bde5836d4d56636fd7a"
+    }
+  },
+  "freeze_status": "frozen_at_analyzer_revision_implementation_start",
+  "model_version": "ceav-m1-v3.0",
+  "parent_manifest_sha256": "4c76424a5aeabcb83dfa631a142621b0eba911344672e40d164235770c6d99f5",
+  "parent_revision": "v3-anchor-implementation-start-20261023T023422438734Z",
+  "parent_source": {
+    "git_head": "f29a1bcf2f48aa4a795cf4a403ddd1d00988a6e9",
+    "working_tree_note": "V3 r1 implementation and experimental preset already present; r2 equilibrium metric summary and audit-cost support absent"
+  },
+  "preexisting_test_assets": {
+    "configs/v3/anchor_dominant_q50.json": {
+      "bytes": 870,
+      "role": "v3_closeout_config",
+      "sha256": "18dc4ebfa730cd9f7bb2b6a28ca26ac899e4c9bd61c48bb35dffcfbec693f8d3"
+    },
+    "tests/fixtures/v3_closeout_expected.json": {
+      "bytes": 2103,
+      "role": "independent_closeout_fixture",
+      "sha256": "40b14c16693aeb1811f483478a957d5fcfceebd09e7195222fef012a545e43b9"
+    },
+    "tests/oracle_v3.py": {
+      "bytes": 11927,
+      "role": "independent_v3_oracle_r2",
+      "sha256": "fef88af3752d09412610648283166c2df497075135215275dd8fd31a735bcfe0"
+    },
+    "tests/test_v3.py": {
+      "bytes": 14329,
+      "role": "red_closeout_tests",
+      "sha256": "12f49a9188d511dd45273a652872cbaefba258cdbc70478ff35838556fccf1bd"
+    }
+  },
+  "red_test": {
+    "command": "python -B -m unittest tests.test_v3 -v",
+    "failure": "ImportError: cannot import name 'summarize_equilibrium_metrics' from ceav_m1.equilibria",
+    "status": "failed_as_expected"
+  },
+  "reference_checker_preexisted": true,
+  "spec_revision": "verification-anchor-r2-closeout",
+  "v3_oracle_preexisted": true,
+  "v3_production_support_existed_before_event": true,
+  "v3_r2_closeout_support_existed_before_event": false,
+  "verification_revision": "verification-v3-anchor-r2-closeout"
+}

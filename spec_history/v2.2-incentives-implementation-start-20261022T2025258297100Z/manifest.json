@@ -1,0 +1,31 @@
+{
+  "event": "implementation_start",
+  "feature": "ceav-m1-v2.2-incentive-diagnostics",
+  "model_version": "ceav-m1-v2.0",
+  "created_at_utc": "2026-10-22T20:25:25.9145132Z",
+  "freeze_status": "frozen_before_production_module",
+  "production_module_existed_before_event": false,
+  "fixture_preexisted": true,
+  "files": [
+    {
+      "source": "CEAV_M1_V2_2_INCENTIVE_SPEC.md",
+      "snapshot": "CEAV_M1_V2_2_INCENTIVE_SPEC.md",
+      "sha256": "a687deb17d003f9194ec98851a35038d6a4fec0587aa8f72a8d059988e909d6e"
+    },
+    {
+      "source": "ENGINE_DESIGN_V2_2_INCENTIVES.md",
+      "snapshot": "ENGINE_DESIGN_V2_2_INCENTIVES.md",
+      "sha256": "104f300561615e0fbf546c845c98c290cbe8d5039a51e6da7f9d9c19d0950dc5"
+    },
+    {
+      "source": "VERIFICATION_PLAN_V2_2_INCENTIVES.md",
+      "snapshot": "VERIFICATION_PLAN_V2_2_INCENTIVES.md",
+      "sha256": "c9df79edd9342e6b7f94e89fedf67ad212b1ca63657396034475f35a3f0aa70b"
+    },
+    {
+      "source": "tests/fixtures/incentive_decomposition_expected.json",
+      "snapshot": "incentive_decomposition_expected.json",
+      "sha256": "d0747abf15686319678efd95df0d1e6d7e2341ba413a1ecd7e53079847c76eac"
+    }
+  ]
+}

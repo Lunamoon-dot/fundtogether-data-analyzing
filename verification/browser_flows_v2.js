@@ -9,7 +9,9 @@ async page => {
   const sample={scenario_version:"ceav-scenario-v1",scenario_id:"browser-sample",claim:{text:"Milestone đạt tiêu chí nghiệm thu",y_equals_1_when:"Mọi tiêu chí bắt buộc đạt",truth_resolution:"Đánh giá hậu nghiệm độc lập"},public_signal:{meaning_of_1:"Tài liệu công khai ủng hộ claim",source:"Bộ tài liệu công khai"},judges:{A:{private_check:"Đối chiếu hóa đơn"},B:{private_check:"Kiểm tra sản phẩm"},C:{private_check:"Đối chiếu nghiệm thu"}},parameter_provenance:{status:"assumption",notes:"Dữ liệu giả định cho browser acceptance"}};
   try{
     await page.setViewportSize({width:1366,height:768});await page.goto(base);await page.locator("#connection").filter({hasText:"Engine sẵn sàng"}).waitFor();
-    check(await page.locator("#model-version").inputValue()==="ceav-m1-v2.0","New form defaults to V2",await page.locator("#model-version").inputValue());
+    check(await page.locator("#model-version").inputValue()==="ceav-m1-v3.0","New form defaults to current V3",await page.locator("#model-version").inputValue());
+    await page.locator("#model-version").selectOption("ceav-m1-v2.0");
+    check(await page.locator("#model-version").inputValue()==="ceav-m1-v2.0","V2 flow selects its model explicitly",await page.locator("#model-version").inputValue());
     if(scenario==="V2-B01"){
       const groups=await page.locator("#model-fields .model-group").evaluateAll(items=>items.map(item=>({title:item.querySelector("legend")?.textContent,fields:[...item.querySelectorAll("[data-field]")].map(field=>field.dataset.field)})));
       check(JSON.stringify(groups)===JSON.stringify([

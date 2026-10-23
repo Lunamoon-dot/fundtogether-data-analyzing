@@ -16,16 +16,18 @@ import sys
 import threading
 from urllib.parse import unquote, urlsplit
 
-from . import DEFAULT_MODEL_VERSION, ENGINE_VERSION, SUPPORTED_MODEL_VERSIONS, V1_MODEL_VERSION, V2_MODEL_VERSION
+from . import DEFAULT_MODEL_VERSION, ENGINE_VERSION, SUPPORTED_MODEL_VERSIONS, V1_MODEL_VERSION, V2_MODEL_VERSION, V3_MODEL_VERSION
 from .__main__ import compare_config, validate_sweep_axes
 from .calibration import PROVENANCE_STATUSES, calibrate_dataset
+from .incentives import validate_incentive_axes
 from .model import ValidationError, signal_diagnostics, validate_config, validate_scenario
 from .output import FREEZES, ROOT, documents, exact_payload, finish_run, new_run, sha256, write_json
+from .robustness import expand_study, load_robustness_study, validate_robustness_study
 from .strategies import ACTIONS, validate_profile
 from .test_runner import SUITES
 
 TERMINAL = ("succeeded", "failed", "cancelled", "interrupted")
-OPERATIONS = ("analyze", "equilibria", "sweep", "compare", "tests", "calibrate")
+OPERATIONS = ("analyze", "equilibria", "sweep", "compare", "tests", "calibrate", "incentives", "robustness")
 SAFE_ID = re.compile(r"[A-Za-z0-9][A-Za-z0-9_-]{0,95}\Z")
 
 
@@ -98,12 +100,22 @@ class Laboratory:
         if not isinstance(request, dict):
             raise ValidationError("request", "Cần JSON object.")
         allowed = {"operation", "config", "profile", "mechanism", "axes", "suite", "test_ids", "failure_fixture", "scenario",
-                   "dataset_csv", "source_name", "provenance_status", "base_config"}
+                   "dataset_csv", "source_name", "provenance_status", "base_config", "study"}
         if set(request) - allowed:
             raise ValidationError(sorted(set(request) - allowed)[0], "Field không được hỗ trợ.")
         operation = request.get("operation", "analyze")
         if operation not in OPERATIONS:
             raise ValidationError("operation", "Operation không được hỗ trợ.")
+        if operation == "robustness":
+            if set(request) != {"operation", "study"}:
+                extra = set(request) - {"operation", "study"}
+                raise ValidationError(sorted(extra)[0] if extra else "study", "Robustness cần đúng operation và study.")
+            study = validate_robustness_study(request["study"])
+            points = expand_study(study)
+            return {"valid": True, "operation": operation, "analysis_version": study["analysis_version"],
+                    "model_version": V3_MODEL_VERSION, "grid": {"policy_count": len(study["policies"]),
+                    "scenario_count_per_policy": len(points) // len(study["policies"]), "total_points": len(points)},
+                    "gates": study["gates"]}
         if operation == "calibrate":
             fields = {"operation", "dataset_csv", "source_name", "provenance_status", "base_config", "mechanism"}
             if set(request) - fields:
@@ -122,7 +134,7 @@ class Laboratory:
             operation_fields.add("scenario")
         if operation not in ("tests", "equilibria"):
             operation_fields.add("profile")
-        if operation == "sweep":
+        if operation in ("sweep", "incentives"):
             operation_fields.add("axes")
         if set(request) - operation_fields:
             raise ValidationError(sorted(set(request) - operation_fields)[0], "Field không được hỗ trợ cho operation này.")
@@ -131,8 +143,8 @@ class Laboratory:
             if suite not in SUITES:
                 raise ValidationError("suite", "Suite không được hỗ trợ.")
             selected = request.get("test_ids", [])
-            if not isinstance(selected, list) or any(not isinstance(i, str) or not re.fullmatch(r"(?:T(?:0[1-9]|[12][0-9]|3[0-2])|V2-T(?:0[1-9]|1[0-5])|CAL-T0[1-8])", i) for i in selected):
-                raise ValidationError("test_ids", "Chỉ nhận IDs đã đăng ký V1, V2 hoặc CAL-T01–CAL-T08.")
+            if not isinstance(selected, list) or any(not isinstance(i, str) or not re.fullmatch(r"(?:T(?:0[1-9]|[12][0-9]|3[0-2])|V2-T(?:0[1-9]|1[0-5])|CAL-T0[1-8]|INC-T0[1-8]|V3-T(?:0[1-9]|1[0-2])|ROB-T(?:0[1-9]|10))", i) for i in selected):
+                raise ValidationError("test_ids", "Chỉ nhận IDs đã đăng ký V1, V2, CAL, INC, V3 hoặc ROB.")
             if type(request.get("failure_fixture", False)) is not bool:
                 raise ValidationError("failure_fixture", "Cần boolean.")
             fixture = request.get("failure_fixture", False)
@@ -142,17 +154,21 @@ class Laboratory:
                 raise ValidationError("test_ids", "Chọn ít nhất một test ID.")
             return {"valid": True, "operation": operation}
         mechanism = request.get("mechanism", "rbts")
-        if mechanism not in ("fixed", "rbts"):
-            raise ValidationError("mechanism", "Chỉ hỗ trợ fixed hoặc rbts.")
+        if mechanism not in ("fixed", "rbts", "hybrid_anchor"):
+            raise ValidationError("mechanism", "Chỉ hỗ trợ fixed, rbts hoặc hybrid_anchor.")
+        if operation == "incentives" and mechanism != "rbts":
+            raise ValidationError("mechanism", "V2.2 incentive diagnostics chỉ hỗ trợ rbts.")
         config = compare_config(request.get("config")) if operation == "compare" else validate_config(request.get("config"), mechanism)
         profile = validate_profile(request.get("profile")) if operation != "equilibria" else None
         scenario = validate_scenario(request["scenario"]) if request.get("scenario") is not None else None
         if operation == "sweep":
             axes = request.get("axes")
             validate_sweep_axes(axes, config.model_version)
+        if operation == "incentives":
+            validate_incentive_axes(request.get("axes", {}))
         return {"valid": True, "operation": operation, "config": config.raw(), "profile": profile.raw() if profile else None,
                 "scenario": scenario, "signal_diagnostics": signal_diagnostics(config),
-                "comparison_fixed_reward": str(config.f + 2 * config.multiplier)}
+                "comparison_fixed_reward": None if mechanism == "hybrid_anchor" else str(config.f + 2 * config.multiplier)}
 
     def snapshot(self, job):
         return {key: deepcopy(job.get(key)) for key in ("job_id", "run_id", "status", "progress", "error", "cancel_requested", "request", "worker_pid")}
@@ -191,6 +207,10 @@ class Laboratory:
             if request.get("failure_fixture"):
                 command += ["--failure-fixture"]
             return command
+        if operation == "robustness":
+            write_json(staged / "robustness_study.json", request["study"])
+            command += ["--study", str(staged / "robustness_study.json"), "--progress-json"]
+            return command
         if operation == "calibrate":
             dataset = staged / "dataset.csv"
             dataset.write_text(request["dataset_csv"], encoding="utf-8", newline="")
@@ -204,6 +224,9 @@ class Laboratory:
         if operation == "sweep":
             write_json(staged / "sweep.json", {"base_config": "config.json", "axes": request["axes"]})
             config_path = staged / "sweep.json"
+        if operation == "incentives" and request.get("axes"):
+            write_json(staged / "incentive_axes.json", request["axes"])
+            command += ["--axes", str(staged / "incentive_axes.json")]
         command += ["--config", str(config_path), "--progress-json"]
         if request.get("scenario") is not None:
             write_json(staged / "scenario.json", request["scenario"])
@@ -230,8 +253,13 @@ class Laboratory:
                                             request["provenance_status"], request["source_name"])
             return new_run(out, operation, validate_config(calibrated["config"], request["mechanism"]), mechanism=request["mechanism"],
                            request={key: value for key, value in request.items() if key != "dataset_csv"}, publication_owner="local_server")
+        if operation == "robustness":
+            study = validate_robustness_study(request["study"])
+            config = validate_config(study["base_config"], "hybrid_anchor")
+            return new_run(out, operation, config, mechanism="hybrid_anchor", request=request,
+                           publication_owner="local_server")
         config = None if operation == "tests" else (compare_config(request["config"]) if operation == "compare" else validate_config(request["config"], request.get("mechanism", "rbts")))
-        profile = validate_profile(request["profile"]) if operation in ("analyze", "compare", "sweep") else None
+        profile = validate_profile(request["profile"]) if operation in ("analyze", "compare", "sweep", "incentives") else None
         scenario = validate_scenario(request["scenario"]) if request.get("scenario") is not None else None
         return new_run(out, operation, config, profile, request.get("mechanism"), request=request, publication_owner="local_server", scenario=scenario)
 
@@ -355,7 +383,7 @@ class Laboratory:
                                     "source_comparison_scope": "engine_web_presets_datasets_and_browser_flows", "full_source_hash": manifest["engine_revision"]}
             except (OSError, ValueError, KeyError):
                 continue
-        required = [f"B{i:02}" for i in range(1, 10)] + [f"V2-B{i:02}" for i in range(1, 7)] + ["CAL-B01"]
+        required = [f"B{i:02}" for i in range(1, 10)] + [f"V2-B{i:02}" for i in range(1, 7)] + ["CAL-B01", "INC-B01", "V3-B01", "ROB-B01"]
         return {"records": [latest[key] for key in sorted(latest)], "required_scenarios": required}
 
 
@@ -417,12 +445,23 @@ def create_server(port=8765, results_dir=None, laboratory=None):
                         active = lab.snapshot(lab.jobs[lab.active]) if lab.active else None
                     presets = {name: json.loads((ROOT / "configs" / f"{name}.json").read_text(encoding="utf-8")) for name in ("golden_g1", "golden_g2", "golden_g3", "golden_g4", "asymmetric", "all_high", "all_inverted", "all_z", "all_not_z", "all_pass", "all_fail", "asymmetric_profile")}
                     v2_presets = {name: json.loads((ROOT / "configs" / "v2" / f"{name}.json").read_text(encoding="utf-8")) for name in ("symmetric_g1", "heterogeneous", "below_half")}
+                    v3_presets = {name: json.loads((ROOT / "configs" / "v3" / f"{name}.json").read_text(encoding="utf-8"))
+                                  for name in ("heterogeneous_anchor", "anchor_dominant_q50")}
+                    robustness_full = load_robustness_study(ROOT / "configs/v3/robustness_v3_1.json")
+                    robustness_acceptance = load_robustness_study(ROOT / "tests/fixtures/v3_1_robustness_study.json")
+                    robustness_acceptance["policies"] = robustness_acceptance["policies"][:1]
+                    robustness_acceptance["uncertainty_axes"] = {
+                        "pi": ["1/2"], "verification_anchor.quality": ["9/10"],
+                        "judges.high_effort_cost_multiplier": ["1"],
+                    }
                     self.send(200, {"model_version": DEFAULT_MODEL_VERSION, "default_model_version": DEFAULT_MODEL_VERSION,
                                    "supported_model_versions": list(SUPPORTED_MODEL_VERSIONS), "engine_version": ENGINE_VERSION,
                                    "freeze_status": events[DEFAULT_MODEL_VERSION]["freeze_status"],
                                    "freezes": {version: {"path": FREEZES[version], "status": events[version]["freeze_status"]} for version in SUPPORTED_MODEL_VERSIONS},
                                    "capabilities": {operation: True for operation in OPERATIONS}, "suites": list(SUITES),
-                                   "token": lab.token, "active_job": active, "actions": ACTIONS, "presets": presets, "v2_presets": v2_presets})
+                                   "token": lab.token, "active_job": active, "actions": ACTIONS, "presets": presets,
+                                   "v2_presets": v2_presets, "v3_presets": v3_presets,
+                                   "robustness_studies": {"acceptance": robustness_acceptance, "full": robustness_full}})
                 elif path == "/api/calibration/sample.csv":
                     sample = ROOT / "datasets" / "synthetic_v2_calibration.csv"
                     self.send(200, sample.read_bytes(), "text/csv; charset=utf-8", sample.name if urlsplit(self.path).query == "download=1" else None)

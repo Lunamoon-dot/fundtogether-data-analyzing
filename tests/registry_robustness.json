@@ -1,0 +1,14 @@
+{
+  "tests": {
+    "ROB-T01": {"unittest_ids": ["tests.test_robustness.RobustnessTests.test_ROB_T01_schema_version_provenance_and_allowlists"], "fixture_ids": ["ROB-F01", "ROB-F03"], "browser_scenario_ids": []},
+    "ROB-T02": {"unittest_ids": ["tests.test_robustness.RobustnessTests.test_ROB_T02_cartesian_expansion_and_pseudo_axes"], "fixture_ids": ["ROB-F01", "ROB-F05"], "browser_scenario_ids": []},
+    "ROB-T03": {"unittest_ids": ["tests.test_robustness.RobustnessTests.test_ROB_T03_real_point_completes_432_search_and_matches_oracle"], "fixture_ids": ["ROB-F02"], "browser_scenario_ids": ["ROB-B01"]},
+    "ROB-T04": {"unittest_ids": ["tests.test_robustness.RobustnessTests.test_ROB_T04_worst_equilibrium_gates_keep_all_reasons"], "fixture_ids": ["ROB-F02", "ROB-F03"], "browser_scenario_ids": []},
+    "ROB-T05": {"unittest_ids": ["tests.test_robustness.RobustnessTests.test_ROB_T05_policy_aggregation_and_classification"], "fixture_ids": ["ROB-F01"], "browser_scenario_ids": []},
+    "ROB-T06": {"unittest_ids": ["tests.test_robustness.RobustnessTests.test_ROB_T06_exact_pareto_dominance_and_ties"], "fixture_ids": ["ROB-F04"], "browser_scenario_ids": []},
+    "ROB-T07": {"unittest_ids": ["tests.test_robustness.RobustnessTests.test_ROB_T07_references_match_independent_fixture_and_labels"], "fixture_ids": ["ROB-F02"], "browser_scenario_ids": []},
+    "ROB-T08": {"unittest_ids": ["tests.test_robustness.RobustnessTests.test_ROB_T08_cli_artifacts_freeze_and_no_overwrite"], "fixture_ids": ["ROB-F01"], "browser_scenario_ids": []},
+    "ROB-T09": {"unittest_ids": ["tests.test_robustness.RobustnessTests.test_ROB_T09_server_validate_and_worker_parity"], "fixture_ids": ["ROB-F01"], "browser_scenario_ids": ["ROB-B01"]},
+    "ROB-T10": {"unittest_ids": ["tests.test_robustness.RobustnessTests.test_ROB_T10_registry_is_complete_and_discoverable"], "fixture_ids": [], "browser_scenario_ids": ["ROB-B01"]}
+  }
+}

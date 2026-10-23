@@ -54,9 +54,9 @@ class V2ServerTests(unittest.TestCase):
     def test_V2_T12_status_validate_run_and_direct_parity(self):
         status, metadata = self.http("/api/status")
         self.assertEqual(status, 200)
-        self.assertEqual(metadata["default_model_version"], "ceav-m1-v2.0")
-        self.assertEqual(metadata["supported_model_versions"], ["ceav-m1-v1.0", "ceav-m1-v2.0"])
-        self.assertEqual(set(metadata["freezes"]), {"ceav-m1-v1.0", "ceav-m1-v2.0"})
+        self.assertEqual(metadata["default_model_version"], "ceav-m1-v3.0")
+        self.assertEqual(metadata["supported_model_versions"], ["ceav-m1-v1.0", "ceav-m1-v2.0", "ceav-m1-v3.0"])
+        self.assertEqual(set(metadata["freezes"]), {"ceav-m1-v1.0", "ceav-m1-v2.0", "ceav-m1-v3.0"})
         self.assertEqual(metadata["v2_presets"]["heterogeneous"], raw_v2())
 
         status, checked = self.http("/api/validate", self.request(scenario=raw_scenario()))

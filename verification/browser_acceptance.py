@@ -15,7 +15,7 @@ from urllib.parse import urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
-from ceav_m1 import V2_MODEL_VERSION
+from ceav_m1 import V1_MODEL_VERSION, V2_MODEL_VERSION, V3_MODEL_VERSION
 from ceav_m1.output import finish_run, new_run, sha256, write_json
 from ceav_m1.runtime import process_alive
 
@@ -44,7 +44,13 @@ def until(predicate, timeout=15):
 
 def run(scenario, out, base):
     out = Path(out).resolve()
-    manifest = new_run(out, "browser_acceptance", request={"scenario": scenario, "base_url": base}, model_version=V2_MODEL_VERSION if scenario.startswith(("V2-", "CAL-")) else None)
+    if scenario.startswith(("V3-", "ROB-")):
+        model_version = V3_MODEL_VERSION
+    elif scenario.startswith(("V2-", "CAL-", "INC-")):
+        model_version = V2_MODEL_VERSION
+    else:
+        model_version = V1_MODEL_VERSION
+    manifest = new_run(out, "browser_acceptance", request={"scenario": scenario, "base_url": base}, model_version=model_version)
     servers, streams = [], []
     try:
         cli = shutil.which("playwright-cli.cmd") or shutil.which("playwright-cli")
@@ -86,7 +92,7 @@ def run(scenario, out, base):
             if process.returncode or "### Result\n" not in log:
                 raise ValueError("Browser flow failed; see " + log_name)
             return json.loads(log.split("### Result\n", 1)[1].split("\n###", 1)[0])
-        flow_name = "browser_flows_calibration.js" if scenario.startswith("CAL-") else "browser_flows_v2.js" if scenario.startswith("V2-") else "browser_flows.js"
+        flow_name = "browser_flows_robustness.js" if scenario.startswith("ROB-") else "browser_flows_v3.js" if scenario.startswith("V3-") else "browser_flows_incentives.js" if scenario.startswith("INC-") else "browser_flows_calibration.js" if scenario.startswith("CAL-") else "browser_flows_v2.js" if scenario.startswith("V2-") else "browser_flows.js"
         script = (ROOT / "verification" / flow_name).read_text(encoding="utf-8")
         script = script.replace('"__SCENARIO__"', json.dumps(scenario)).replace('"__OUTPUT_DIR__"', json.dumps(out.as_posix())).replace('"__BASE_URL__"', json.dumps(base))
         (out / "flow.js").write_text(script, encoding="utf-8", newline="\n")
@@ -170,7 +176,7 @@ def run(scenario, out, base):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--scenario", choices=[f"B{i:02}" for i in range(1, 10)] + [f"V2-B{i:02}" for i in range(1, 7)] + ["CAL-B01"], required=True)
+    parser.add_argument("--scenario", choices=[f"B{i:02}" for i in range(1, 10)] + [f"V2-B{i:02}" for i in range(1, 7)] + ["CAL-B01", "INC-B01", "V3-B01", "ROB-B01"], required=True)
     parser.add_argument("--out", type=Path, required=True)
     parser.add_argument("--base", default="http://127.0.0.1:8765")
     args = parser.parse_args()

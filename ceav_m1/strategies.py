@@ -74,7 +74,7 @@ def build_candidate(config, profile, rows=None, mechanism="rbts"):
             mass, ones = groups.get(own, (F(0), F(0)))
             groups[own] = (mass + state.probability, ones + state.probability * peer)
         tables.append(tuple((key, ones / mass) for key, (mass, ones) in groups.items()))
-    semantics = "unique_on_reachable_observations" if mechanism == "rbts" and config.multiplier > 0 else "arbitrary_reachable_predictions"
+    semantics = "unique_on_reachable_observations" if mechanism in ("rbts", "hybrid_anchor") and config.multiplier > 0 else "arbitrary_reachable_predictions"
     return Candidate(profile, tuple(tables), rows, semantics)
 
 

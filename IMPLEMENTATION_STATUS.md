@@ -1,5 +1,62 @@
 # CEAV-M1 — Trạng thái triển khai
 
+## Version 3 — Hybrid Reward với Verification Anchor
+
+**Trạng thái hiện tại: `SPECIFIED`, `IMPLEMENTED` và `VERIFIED` trong phạm vi M1 local.**
+
+[CEAV_M1_V3_ANCHOR_SPEC.md](CEAV_M1_V3_ANCHOR_SPEC.md) revision `verification-anchor-r2-closeout` định nghĩa model `ceav-m1-v3.0`: report được khóa trước khi audit ngẫu nhiên, verification signal `T` không được Judge biết trước, reward kết hợp RBTS peer score với anchor score và budget dùng worst-case cap. [ENGINE_DESIGN_V3_ANCHOR.md](ENGINE_DESIGN_V3_ANCHOR.md) và [VERIFICATION_PLAN_V3_ANCHOR.md](VERIFICATION_PLAN_V3_ANCHOR.md) là implementation contract/evidence plan; r2 được freeze trước các closeout changes và giữ parent r1.
+
+Nghiệm thu r2: [report](results/v3-acceptance-closeout-r2/report.md) và [acceptance.json](results/v3-acceptance-closeout-r2/acceptance.json). Audit đạt 7/7 checks; all-suite đạt 90/90, V3-T01–V3-T12 đạt 12/12, V3-B01 đạt 34/34 bước và V3-M01–V3-M10 đều killed trên source hash `bab5d6f3b62aadcd375f87160f162c225d24ac5bb1fe86f22ca48a6ba6edc8d1`.
+
+| Phần | Evidence V3 |
+| --- | --- |
+| Freeze/oracle | `spec_history/v3-anchor-r2-implementation-start-20261023T070915835165Z/`; parent r1 và oracle/fixture r2 được pin trước closeout changes |
+| Distribution và boundary | V3-T01–T03; 128 potential states; strategy chỉ thấy `Z` hoặc `(Z,X_i)` |
+| Accounting/best response | V3-T04–T06; peer/anchor/audit cost tách riêng; exact oracle; peer tables frozen; quy hồi V2 khi anchor bằng 0 |
+| Pure search/budget | V3-T07–T08; đủ 432 branch candidates; cap không nhân xác suất audit |
+| CLI/API/UI/sweep | V3-T09–T12; immutable artifacts, worker parity, mỗi valid point có exhaustive landscape và exact equilibrium metric ranges |
+| Browser | `results/v3-browser-closeout-r2-02/`; 34/34 bước, equilibrium accuracy/UI-artifact parity, desktop/mobile |
+| Mutation | `results/v3-mutations-closeout-r2/`; V3-M01–V3-M10 đều killed; production bytes unchanged |
+| Full regression | `results/v3-all-tests-closeout-r2-final/`; 90/90, không fail/error/skipped/not_run; toàn bộ 18 browser scenarios pass |
+
+Baseline synthetic vẫn bất lợi ở một phần mục tiêu: all-High đạt accuracy `1791/2000` nhưng không phải cân bằng; exhaustive search giữ Low equilibrium ở cả hai nhánh. Quét reward/audit sau đó tìm được preset experimental `configs/v3/anchor_dominant_q50.json`: equilibrium duy nhất dùng High cho A/B, Low cho C và đạt accuracy `1813/2000`. Xem [V3_PARAMETER_SWEEP_REPORT.md](V3_PARAMETER_SWEEP_REPORT.md). Engine đã có `cost_per_audit` và `expected_audit_cost=q*cost_per_audit`; preset để `0` vì chưa có số liệu chi phí ngoài đời. Robustness r2 giữ cả các điểm tụt về 70% và các điểm không có pure equilibrium.
+
+## Version 3.1 — Robustness trên game V3 không đổi
+
+**Trạng thái hiện tại: `SPECIFIED`, `IMPLEMENTED` và `VERIFIED` trong phạm vi M1 local.** Acceptance audit đã đọc test runner, browser ROB-B01, mutation ROB-M01–ROB-M06 và full 108-point study trên cùng source hash.
+
+V3.1 không thêm tín hiệu, payoff, Judge hay authority mới. Analyzer mở rộng theo Cartesian grid gồm 6 policy × 18 uncertainty scenarios; mỗi point chạy exhaustive pure search 432 branch candidates. Gate dùng equilibrium xấu nhất và yêu cầu mọi scenario của policy đều đạt. Baseline public-Z và forced-all-High được ghi là reference, không bị gọi là equilibrium.
+
+| Phần | Evidence đã kiểm chứng |
+| --- | --- |
+| Freeze, schema, independent oracle | `spec_history/v3.1-robustness-implementation-start-20261023T141156959593Z/`; ROB-T01–T02 |
+| Worst-case gates, policy aggregation, Pareto, references | ROB-T03–T07; fixture expected độc lập |
+| CLI/API/artifacts/runner | ROB-T08–T10; `results/v31-all-tests-final/` — 100/100 pass, không fail/error/skipped/not_run |
+| Browser | `results/v31-browser-final-ROB-B01/` — 10/10 bước pass, desktop/mobile, giữ caveat latency/provenance |
+| Mutation | `results/v31-mutations-final/` — ROB-M01–ROB-M06 đều killed trong isolated copies |
+| Full study | `results/v31-robustness-study-release-02/` — 108/108 points, mỗi point 432 branch candidates, search hoàn tất |
+
+Kết quả nghiên cứu không chọn được policy robust: cả 6 policy đều có ít nhất một uncertainty point vi phạm gate. Pareto frontier gồm `v3_r1_baseline`, `anchor_q50` và `anchor_q80`; `anchor_q80` có nhiều point pass nhất (6/18) nhưng vẫn vi phạm false-approval, false-rejection hoặc cash-cost gate ở các point khác. Đây là kết quả bất lợi được giữ nguyên, không phải bằng chứng V3.1 đã sẵn sàng production. [Acceptance audit](results/v31-acceptance-final/report.md) xác nhận toàn bộ gate, nhưng không biến assumption grid thành confidence interval và không mô hình hóa latency.
+
+## Version 2.2 — Incentive Diagnostics
+
+**Trạng thái hiện tại: `SPECIFIED`, `IMPLEMENTED` và targeted verification; chưa công bố full `VERIFIED` release.**
+
+V2.2 giữ model `ceav-m1-v2.0` và RBTS hiện có. Feature thêm exact decomposition theo từng `Judge × Z`, conditional lambda threshold, report-utilization gap, budget feasibility và exhaustive pure-equilibrium landscape tại từng điểm sweep.
+
+Nguồn chuẩn: [spec](CEAV_M1_V2_2_INCENTIVE_SPEC.md), [engine design](ENGINE_DESIGN_V2_2_INCENTIVES.md), [verification plan](VERIFICATION_PLAN_V2_2_INCENTIVES.md), [hướng dẫn](HUONG_DAN_CHAN_DOAN_DONG_LUC_V2_2.md).
+
+| Phần | Evidence hiện tại |
+| --- | --- |
+| Freeze/fixture | `spec_history/v2.2-incentives-implementation-start-20261022T2025258297100Z/`; docs và INC-F01 được pin trước production module |
+| Exact decomposition | INC-T01–INC-T03; bốn High action, `V_L/V_H/V_H_dep`, net incentive, threshold và hierarchical status |
+| Equilibrium landscape | INC-T04–INC-T05; retained IDs giữ nguyên, 432 candidates mỗi valid point, G1 coexistence và heterogeneous Low-only |
+| CLI/API/artifacts | INC-T06–INC-T07; JSON/CSV, no-overwrite, feature freeze, worker/history/direct parity |
+| Browser | `results/v22-browser-INC-B01-implementation-01/`; 13/13 bước, desktop/mobile, không JavaScript error |
+| Targeted suite | `results/v22-incentive-tests-implementation-01/`; INC-T01–INC-T08 đạt 8/8 |
+
+INC-GATE-0–INC-GATE-4 có evidence targeted. INC-GATE-5 yêu cầu chạy lại toàn bộ V1/V2/V2.1 regression và acceptance audit trên current source trước khi gắn nhãn full `VERIFIED` hoặc tạo release tag.
+
 ## Version 2.1 — Data Calibration
 
 **Trạng thái hiện tại: `SPECIFIED`, `IMPLEMENTED` và `VERIFIED` trong phạm vi calibration local.**

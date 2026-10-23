@@ -13,12 +13,15 @@ import platform
 import shutil
 import sys
 
-from . import ENGINE_VERSION, V1_MODEL_VERSION, V2_MODEL_VERSION
+from . import ENGINE_VERSION, V1_MODEL_VERSION, V2_MODEL_VERSION, V3_MODEL_VERSION
 
 ROOT = Path(__file__).resolve().parents[1]
 FREEZE = "spec_history/implementation-start-20261022T081942148684Z"
 V2_FREEZE = "spec_history/v2-implementation-start-20261022T161522230020Z"
-FREEZES = {V1_MODEL_VERSION: FREEZE, V2_MODEL_VERSION: V2_FREEZE}
+V3_FREEZE = "spec_history/v3.1-robustness-implementation-start-20261023T141156959593Z"
+FREEZES = {V1_MODEL_VERSION: FREEZE, V2_MODEL_VERSION: V2_FREEZE, V3_MODEL_VERSION: V3_FREEZE}
+SPEC_FILES = {V1_MODEL_VERSION: "CEAV_M1_SPEC.md", V2_MODEL_VERSION: "CEAV_M1_V2_SPEC.md",
+              V3_MODEL_VERSION: "CEAV_M1_V3_ANCHOR_SPEC.md"}
 
 
 def sha256(raw):
@@ -85,11 +88,16 @@ def documents(root=ROOT, model_version=V1_MODEL_VERSION):
     freeze = FREEZES[model_version]
     folder = root / freeze
     event = json.loads((folder / "manifest.json").read_text(encoding="utf-8"))
-    if event["event"] != "analyzer_implementation_start" or event["freeze_status"] != "frozen_at_analyzer_implementation_start":
+    allowed_events = {("analyzer_implementation_start", "frozen_at_analyzer_implementation_start")}
+    if model_version == V3_MODEL_VERSION:
+        allowed_events.add(("analyzer_revision_implementation_start", "frozen_at_analyzer_revision_implementation_start"))
+    if (event["event"], event["freeze_status"]) not in allowed_events:
         raise ValueError("Missing implementation-start freeze event")
     if event.get("model_version", V1_MODEL_VERSION) != model_version:
         raise ValueError("Freeze event model version mismatch")
-    if not event["reference_checker_preexisted"] or event["analyzer_existed_before_event"]:
+    if not event["reference_checker_preexisted"]:
+        raise ValueError("Invalid implementation-start provenance")
+    if event["event"] == "analyzer_implementation_start" and event["analyzer_existed_before_event"]:
         raise ValueError("Invalid implementation-start provenance")
     for filename, record in event["files"].items():
         if sha256((folder / filename).read_bytes()) != record["sha256"]:
@@ -110,8 +118,27 @@ def documents(root=ROOT, model_version=V1_MODEL_VERSION):
             if previous["sha256"] != review["parent_sha256"] or sha256((previous_folder / previous["file"]).read_bytes()) != previous["sha256"]:
                 raise ValueError("Historical snapshot chain checksum mismatch")
             review = previous
-    elif not event.get("v2_oracle_preexisted") or event.get("v2_production_support_existed_before_event"):
-        raise ValueError("Invalid V2 implementation-start provenance")
+    elif model_version == V2_MODEL_VERSION:
+        if not event.get("v2_oracle_preexisted") or event.get("v2_production_support_existed_before_event"):
+            raise ValueError("Invalid V2 implementation-start provenance")
+    elif event["event"] == "analyzer_implementation_start":
+        if not event.get("v3_oracle_preexisted") or event.get("v3_production_support_existed_before_event"):
+            raise ValueError("Invalid V3 implementation-start provenance")
+    elif event.get("analysis_version") == "ceav-m1-v3.1-robustness":
+        parent = root / "spec_history" / event["parent_revision"] / "manifest.json"
+        if sha256(parent.read_bytes()) != event.get("parent_manifest_sha256"):
+            raise ValueError("Invalid V3.1 revision parent")
+        if (not event.get("v3_oracle_preexisted") or not event.get("v3_production_support_existed_before_event")
+                or not event.get("v3_r2_closeout_support_existed_before_event")
+                or not event.get("v3_1_oracle_preexisted") or event.get("v3_1_robustness_support_existed_before_event")):
+            raise ValueError("Invalid V3.1 revision-start provenance")
+    else:
+        parent = root / "spec_history" / event["parent_revision"] / "manifest.json"
+        if sha256(parent.read_bytes()) != event.get("parent_manifest_sha256"):
+            raise ValueError("Invalid V3 revision parent")
+        if (not event.get("v3_oracle_preexisted") or not event.get("v3_production_support_existed_before_event")
+                or event.get("v3_r2_closeout_support_existed_before_event")):
+            raise ValueError("Invalid V3 revision-start provenance")
     return event
 
 
@@ -143,6 +170,7 @@ def new_run(out, operation, config=None, profile=None, mechanism=None, request=N
         destination.parent.mkdir(parents=True, exist_ok=True)
         destination.write_bytes(raw)
         sources.append({"path": relative.as_posix(), "sha256": sha256(raw)})
+    spec_file = SPEC_FILES[model_version]
     manifest = {"run_id": out.name, "operation": operation, "mechanism": mechanism, "status": "running",
                 "model_version": model_version, "engine_version": ENGINE_VERSION,
                 "engine_revision": semantic_hash(sources), "source_files": sources,
@@ -150,8 +178,8 @@ def new_run(out, operation, config=None, profile=None, mechanism=None, request=N
                 "publication_owner": publication_owner,
                 "created_at_utc": datetime.now(timezone.utc).isoformat(), "argv": list(argv or sys.argv),
                 "randomness": "none", "spec": {"revision": event["spec_revision"],
-                "snapshot": freeze + "/" + ("CEAV_M1_SPEC.md" if model_version == V1_MODEL_VERSION else "CEAV_M1_V2_SPEC.md"),
-                "sha256": event["files"]["CEAV_M1_SPEC.md" if model_version == V1_MODEL_VERSION else "CEAV_M1_V2_SPEC.md"]["sha256"],
+                "snapshot": freeze + "/" + spec_file,
+                "sha256": event["files"][spec_file]["sha256"],
                 "freeze_event": freeze + "/manifest.json",
                 "freeze_status": event["freeze_status"], "reference_checker_preexisted": True},
                 "documents": event["files"], "artifacts": []}
@@ -217,14 +245,17 @@ def finish_run(out, manifest, status="succeeded", error=None):
     write_json(out / "manifest.json", manifest)
 
 
-LIMITATIONS = "M1: một claim, ba Judge; effort sau public Z; không stake/slashing, không ground-truth reward; chỉ cân bằng thuần, không chứng nhận mixed/coalition hoặc equilibrium selection. Đơn vị nghiên cứu chuẩn hóa, không phải tiền thực. Cân bằng không effort như all-Z có thể cùng tồn tại với high-effort; tăng lambda không tự loại bỏ cân bằng đạt score maximum."
+LIMITATIONS = "M1: một claim, ba Judge; effort sau public Z; không stake/slashing; chỉ cân bằng thuần, không chứng nhận mixed/coalition hoặc equilibrium selection. Đơn vị nghiên cứu chuẩn hóa, không phải tiền thực. V3 dùng verification signal sau report cho reward, không chứng minh nguồn kiểm chứng production đáng tin và không tự sửa payout đã quyết định."
 
 
 def research_context(config, profile=None, scenario=None):
     version = config.get("model_version", V1_MODEL_VERSION)
-    domain = ("0 < pi,a,b < 1; costs, f, lambda, F, B, V, operating_cost >= 0."
-              if version == V1_MODEL_VERSION else
-              "0 < pi,sensitivity,specificity < 1; cost, f, lambda, F, B, V, operating_cost >= 0.")
+    if version == V1_MODEL_VERSION:
+        domain = "0 < pi,a,b < 1; costs, f, lambda, F, B, V, operating_cost >= 0."
+    elif version == V2_MODEL_VERSION:
+        domain = "0 < pi,sensitivity,specificity < 1; cost, f, lambda, F, B, V, operating_cost >= 0."
+    else:
+        domain = "V2 signal domain; 0<=q<=1; 1/2<verification sensitivity/specificity<=1; reward/cost nonnegative."
     text = f"Model: {version}. Miền tham số: {domain}\n\nCấu hình thực tế của run:\n\n```json\n" + json.dumps(config, ensure_ascii=False, sort_keys=True, indent=2) + "\n```\n\n"
     if profile is not None:
         text += "Candidate effort/report profile:\n\n```json\n" + json.dumps(profile, sort_keys=True, indent=2) + "\n```\n\n"

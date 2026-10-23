@@ -1,0 +1,14 @@
+{
+  "feature_version": "ceav-m1-v2.2-incentive-diagnostics",
+  "verification_revision": "incentive-diagnostics-verification-r1",
+  "tests": {
+    "INC-T01": {"unittest_ids": ["tests.test_incentives.IncentiveDiagnosticsTests.test_INC_T01_hand_computed_exact_decomposition"], "fixture_ids": ["INC-F01"], "browser_scenario_ids": []},
+    "INC-T02": {"unittest_ids": ["tests.test_incentives.IncentiveDiagnosticsTests.test_INC_T02_threshold_budget_and_hierarchical_statuses"], "fixture_ids": ["INC-F01"], "browser_scenario_ids": []},
+    "INC-T03": {"unittest_ids": ["tests.test_incentives.IncentiveDiagnosticsTests.test_INC_T03_synthetic_candidate_has_six_peer_fixed_diagnostics"], "fixture_ids": ["INC-F02"], "browser_scenario_ids": []},
+    "INC-T04": {"unittest_ids": ["tests.test_incentives.IncentiveDiagnosticsTests.test_INC_T04_landscape_classification_preserves_exhaustive_sets"], "fixture_ids": ["INC-F02", "INC-F03"], "browser_scenario_ids": []},
+    "INC-T05": {"unittest_ids": ["tests.test_incentives.IncentiveDiagnosticsTests.test_INC_T05_global_sweep_searches_every_valid_point_and_keeps_invalid"], "fixture_ids": ["INC-F02"], "browser_scenario_ids": []},
+    "INC-T06": {"unittest_ids": ["tests.test_incentives.IncentiveDiagnosticsTests.test_INC_T06_cli_artifacts_freeze_and_no_overwrite"], "fixture_ids": ["INC-F02"], "browser_scenario_ids": []},
+    "INC-T07": {"unittest_ids": ["tests.test_incentives.IncentiveServerTests.test_INC_T07_api_worker_history_and_direct_parity"], "fixture_ids": ["INC-F02"], "browser_scenario_ids": []},
+    "INC-T08": {"unittest_ids": ["tests.test_incentives.IncentiveBrowserEvidenceTests.test_INC_T08_current_source_browser_evidence"], "fixture_ids": ["INC-F02"], "browser_scenario_ids": ["INC-B01"]}
+  }
+}

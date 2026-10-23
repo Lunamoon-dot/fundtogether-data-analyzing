@@ -1,0 +1,94 @@
+{
+  "audit_cost_case": {
+    "cost_per_audit": "1/5",
+    "expected_audit_cost": "1/10",
+    "cash_review_cost": "2509/1000"
+  },
+  "equilibrium_metrics": {
+    "best_accuracy": {
+      "metrics": {
+        "accuracy": "1813/2000",
+        "cash_review_cost": "2409/1000",
+        "expected_audit_cost": "0",
+        "expected_effort_cost": "3/20",
+        "expected_reward_total": "2409/1000",
+        "false_approval_rate": "51/500",
+        "false_rejection_rate": "17/200",
+        "wrong_payout_value": "51/1000"
+      },
+      "profile": {
+        "0": [
+          "H01",
+          "H01",
+          "L0"
+        ],
+        "1": [
+          "H01",
+          "H01",
+          "L1"
+        ]
+      }
+    },
+    "count": 1,
+    "ranges": {
+      "accuracy": {
+        "max": "1813/2000",
+        "min": "1813/2000"
+      },
+      "cash_review_cost": {
+        "max": "2409/1000",
+        "min": "2409/1000"
+      },
+      "expected_audit_cost": {
+        "max": "0",
+        "min": "0"
+      },
+      "expected_effort_cost": {
+        "max": "3/20",
+        "min": "3/20"
+      },
+      "expected_reward_total": {
+        "max": "2409/1000",
+        "min": "2409/1000"
+      },
+      "false_approval_rate": {
+        "max": "51/500",
+        "min": "51/500"
+      },
+      "false_rejection_rate": {
+        "max": "17/200",
+        "min": "17/200"
+      },
+      "wrong_payout_value": {
+        "max": "51/1000",
+        "min": "51/1000"
+      }
+    },
+    "status": "pure_equilibria_evaluated",
+    "worst_accuracy": {
+      "metrics": {
+        "accuracy": "1813/2000",
+        "cash_review_cost": "2409/1000",
+        "expected_audit_cost": "0",
+        "expected_effort_cost": "3/20",
+        "expected_reward_total": "2409/1000",
+        "false_approval_rate": "51/500",
+        "false_rejection_rate": "17/200",
+        "wrong_payout_value": "51/1000"
+      },
+      "profile": {
+        "0": [
+          "H01",
+          "H01",
+          "L0"
+        ],
+        "1": [
+          "H01",
+          "H01",
+          "L1"
+        ]
+      }
+    }
+  },
+  "fixture_version": "v3-closeout-oracle-r2"
+}

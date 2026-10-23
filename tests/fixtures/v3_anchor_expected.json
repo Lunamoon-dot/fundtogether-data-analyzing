@@ -1,0 +1,114 @@
+{
+  "best_responses": {
+    "A-z0": {
+      "best_utility": "60089/64000",
+      "candidate_action": "H01",
+      "optimal_actions": [
+        "L0"
+      ],
+      "regret": "150754951/4612800000"
+    },
+    "A-z1": {
+      "best_utility": "86175583987/96984120000",
+      "candidate_action": "H01",
+      "optimal_actions": [
+        "H01"
+      ],
+      "regret": "0"
+    },
+    "B-z0": {
+      "best_utility": "17516399/19220000",
+      "candidate_action": "H01",
+      "optimal_actions": [
+        "H01"
+      ],
+      "regret": "0"
+    },
+    "B-z1": {
+      "best_utility": "4303/4500",
+      "candidate_action": "H01",
+      "optimal_actions": [
+        "L1"
+      ],
+      "regret": "391743461/10356480000"
+    },
+    "C-z0": {
+      "best_utility": "81261/80000",
+      "candidate_action": "H01",
+      "optimal_actions": [
+        "L0"
+      ],
+      "regret": "21248801/387500000"
+    },
+    "C-z1": {
+      "best_utility": "2149939/2400000",
+      "candidate_action": "H01",
+      "optimal_actions": [
+        "H01"
+      ],
+      "regret": "0"
+    }
+  },
+  "branch_equilibria": {
+    "0": [
+      "z0:L0,L0,L0"
+    ],
+    "1": [
+      "z1:L1,L1,L1"
+    ]
+  },
+  "candidate_metrics": {
+    "accuracy": "1791/2000",
+    "expected_anchor_reward_total": "44/125",
+    "expected_effort_cost": "19/100",
+    "expected_payout": "949/2000",
+    "expected_peer_reward_total": "24935142465297161/9698412000000000",
+    "expected_reward_total": "28348983489297161/9698412000000000",
+    "false_approval_rate": "79/1000",
+    "false_rejection_rate": "13/100",
+    "wrong_payout_probability": "79/2000",
+    "wrong_payout_value": "79/2000"
+  },
+  "candidate_totals": [
+    {
+      "anchor_reward": "78/625",
+      "anchor_score": "39/250",
+      "effort_cost": "1/20",
+      "peer_reward": "31096125584/37884421875",
+      "peer_score": "54615366793/37884421875",
+      "reward": "35824101434/37884421875",
+      "utility": "135719521361/151537687500"
+    },
+    {
+      "anchor_reward": "78/625",
+      "anchor_score": "39/250",
+      "effort_cost": "1/10",
+      "peer_reward": "158881484951/178361600000",
+      "peer_score": "141045324951/89180800000",
+      "reward": "181141012631/178361600000",
+      "utility": "163304852631/178361600000"
+    },
+    {
+      "anchor_reward": "64/625",
+      "anchor_score": "16/125",
+      "effort_cost": "1/25",
+      "peer_reward": "13321560309/15500000000",
+      "peer_score": "11771560309/7750000000",
+      "reward": "14908760309/15500000000",
+      "utility": "14288760309/15500000000"
+    }
+  ],
+  "fixture_version": "v3-anchor-oracle-r1",
+  "selected_state_masses": {
+    "0": "3591/31250",
+    "1": "399/31250",
+    "127": "3159/100000",
+    "2": "3591/125000",
+    "3": "399/125000",
+    "32": "1197/15625",
+    "63": "3/250000",
+    "64": "7/100000",
+    "96": "7/25000"
+  },
+  "support_size": 128
+}

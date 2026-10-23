@@ -1,0 +1,110 @@
+{
+  "equilibrium": {
+    "best_accuracy": {
+      "metrics": {
+        "accuracy": "1813/2000",
+        "cash_review_cost": "2509/1000",
+        "expected_audit_cost": "1/10",
+        "expected_effort_cost": "3/20",
+        "expected_reward_total": "2409/1000",
+        "false_approval_rate": "51/500",
+        "false_rejection_rate": "17/200",
+        "wrong_payout_value": "51/1000"
+      },
+      "profile": {
+        "0": [
+          "H01",
+          "H01",
+          "L0"
+        ],
+        "1": [
+          "H01",
+          "H01",
+          "L1"
+        ]
+      }
+    },
+    "count": 1,
+    "ranges": {
+      "accuracy": {
+        "max": "1813/2000",
+        "min": "1813/2000"
+      },
+      "cash_review_cost": {
+        "max": "2509/1000",
+        "min": "2509/1000"
+      },
+      "expected_audit_cost": {
+        "max": "1/10",
+        "min": "1/10"
+      },
+      "expected_effort_cost": {
+        "max": "3/20",
+        "min": "3/20"
+      },
+      "expected_reward_total": {
+        "max": "2409/1000",
+        "min": "2409/1000"
+      },
+      "false_approval_rate": {
+        "max": "51/500",
+        "min": "51/500"
+      },
+      "false_rejection_rate": {
+        "max": "17/200",
+        "min": "17/200"
+      },
+      "wrong_payout_value": {
+        "max": "51/1000",
+        "min": "51/1000"
+      }
+    },
+    "status": "pure_equilibria_evaluated",
+    "worst_accuracy": {
+      "metrics": {
+        "accuracy": "1813/2000",
+        "cash_review_cost": "2509/1000",
+        "expected_audit_cost": "1/10",
+        "expected_effort_cost": "3/20",
+        "expected_reward_total": "2409/1000",
+        "false_approval_rate": "51/500",
+        "false_rejection_rate": "17/200",
+        "wrong_payout_value": "51/1000"
+      },
+      "profile": {
+        "0": [
+          "H01",
+          "H01",
+          "L0"
+        ],
+        "1": [
+          "H01",
+          "H01",
+          "L1"
+        ]
+      }
+    }
+  },
+  "failure_reasons": [],
+  "forced_all_high": {
+    "accuracy": "1791/2000",
+    "cash_review_cost": "249/100",
+    "false_approval_rate": "79/1000",
+    "false_rejection_rate": "13/100",
+    "wrong_payout_value": "79/2000"
+  },
+  "public_signal_rule": {
+    "accuracy": "7/10",
+    "false_approval_rate": "2/5",
+    "false_rejection_rate": "1/5",
+    "wrong_payout_value": "1/5"
+  },
+  "status": "pass",
+  "worst": {
+    "accuracy": "1813/2000",
+    "cash_review_cost": "2509/1000",
+    "false_approval_rate": "51/500",
+    "false_rejection_rate": "17/200",
+    "wrong_payout_value": "51/1000"
+  }
+}
