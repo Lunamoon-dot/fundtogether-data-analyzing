@@ -76,6 +76,7 @@ Nghiệm thu M1 local đã đạt GATE-0–GATE-5: 47 tests pass, B01–B09 pass
 - [HUONG_DAN_THAM_SO_V2.md](HUONG_DAN_THAM_SO_V2.md): giải thích các biến, config và cách dùng V2.
 - [HUONG_DAN_DATASET_V2_1.md](HUONG_DAN_DATASET_V2_1.md): CSV lấy từ đâu, nhập ở đâu và cách đọc config được ước lượng.
 - [HUONG_DAN_CHAN_DOAN_DONG_LUC_V2_2.md](HUONG_DAN_CHAN_DOAN_DONG_LUC_V2_2.md): cách chạy và đọc từng kết quả V2.2.
+- [V3.1 incentive mechanisms research](references/research/ceav-m1-v3-1-incentive-mechanisms.md): tổng hợp nguồn primary, trade-off và hướng thử nghiệm cho bài toán high-effort.
 
 Mọi run pin input/source cùng spec/design/verification và event freeze thực tế trong `inputs/`. JSON có `exact` là nguồn số chính xác; `decimal` chỉ để xem. Có số quá lớn để hiển thị decimal thì giữ exact và ghi lý do.
 
