@@ -3,6 +3,7 @@
   "scope": "CEAV-M1 V3.3 only",
   "implementation_commit": "3ec3121",
   "closeout_commit": "7a48400197cfb5dc2a688d3ed075d4101dacdbf4",
+  "test_source_engine_revision": "1b9ab8db3c63c716b70b98594c46fdc38e9b1671c6729d3d02ed4dde4eee57e2",
   "full_suite": {
     "path": "full-suite/test_results.json",
     "pass": 123,
