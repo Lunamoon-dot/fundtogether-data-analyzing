@@ -3,7 +3,8 @@
 - **Scope:** CEAV-M1 V3.3 IPW audit reward only.
 - **Verification status:** **VERIFIED** for the declared local verification plan and pinned synthetic/assumption model.
 - **Mechanism/payoff scope:** no mechanism/payoff or research-gate criteria were changed during this closeout. Changes are acceptance routing, artifact rendering, mutation assertions, and release-evidence wiring.
-- **Implementation commit:** `2835559652b912536439c5b504da30ba68c91436` is the pre-closeout repository base; the final closeout commit is recorded after this report is committed.
+- **Implementation/evidence commit:** `3ec3121`.
+- **Final report commit:** recorded after this report and evidence index are updated.
 
 ## Evidence gates
 
