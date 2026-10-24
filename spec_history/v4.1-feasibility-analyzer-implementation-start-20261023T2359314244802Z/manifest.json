@@ -1,0 +1,26 @@
+{
+  "event_type": "v4.1_feasibility_analyzer_implementation_start",
+  "model_version": "ceav-m1-v4.1-feasibility",
+  "status": "frozen",
+  "implementation_start": true,
+  "preregistered": false,
+  "scope": "finite analytic feasibility certificate for F41-01 and F41-02; no policy grid, exhaustive equilibrium search, engine, UI, or production acceptance",
+  "created_at_utc": "2026-10-23T23:59:31.5733048Z",
+  "inputs": [
+    {
+      "source": "CEAV_M1_V4_CONDITIONAL_SPEC.md",
+      "snapshot": "spec_history/v4.1-feasibility-analyzer-implementation-start-20261023T2359314244802Z/CEAV_M1_V4_CONDITIONAL_SPEC.md",
+      "sha256": "5a18d14099159e434f397bda55a268a3426729cf8af8f9c51d40d9fd651e0885"
+    },
+    {
+      "source": "CEAV_M1_V4_1_FEASIBILITY.md",
+      "snapshot": "spec_history/v4.1-feasibility-analyzer-implementation-start-20261023T2359314244802Z/CEAV_M1_V4_1_FEASIBILITY.md",
+      "sha256": "7d844536af41e3e92f7b436d7c0d73c1bd434a2d560c6a5f45ea58f67e5a85dc"
+    },
+    {
+      "source": "references/V4_CONDITIONAL_SCORING_SOURCES.md",
+      "snapshot": "spec_history/v4.1-feasibility-analyzer-implementation-start-20261023T2359314244802Z/references/V4_CONDITIONAL_SCORING_SOURCES.md",
+      "sha256": "f0035e4893d8cc16dcdd21c8c77667d3daf50714094c285adecdd1580f338707"
+    }
+  ]
+}
