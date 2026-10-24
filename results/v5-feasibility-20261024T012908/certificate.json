@@ -1,0 +1,985 @@
+{
+  "status": "passed",
+  "scope": "phase1_exact_feasibility_only",
+  "finding": "v5_a_infeasible_on_f51_01_and_f51_02; direct_brier_requires_separate_screening",
+  "f51_01_incremental": {
+    "fixture": "F51-01",
+    "mechanism": "incremental",
+    "policy": {
+      "mechanism": "incremental",
+      "f": "0",
+      "mu": "1",
+      "q": "1",
+      "budget": "6",
+      "kappa": "0",
+      "operating_cost": "0"
+    },
+    "policy_valid": true,
+    "mu_max": "1",
+    "reserve_cap_total": "6",
+    "payment_bounds_per_judge": {
+      "minimum": "0",
+      "maximum": "2",
+      "cap_total": "6"
+    },
+    "delta_t_by_judge": [
+      [
+        "3249/1106875",
+        "3249/1106875"
+      ],
+      [
+        "3249/1106875",
+        "3249/1106875"
+      ],
+      [
+        "3249/1106875",
+        "3249/1106875"
+      ]
+    ],
+    "delta_y_by_judge": [
+      [
+        "3249/708400",
+        "3249/708400"
+      ],
+      [
+        "3249/708400",
+        "3249/708400"
+      ],
+      [
+        "3249/708400",
+        "3249/708400"
+      ]
+    ],
+    "gain_by_judge_z": [
+      [
+        "-208379/4427500",
+        "-208379/4427500"
+      ],
+      [
+        "-208379/4427500",
+        "-208379/4427500"
+      ],
+      [
+        "-208379/4427500",
+        "-208379/4427500"
+      ]
+    ],
+    "max_gain_at_mu_max_by_judge_z": [
+      [
+        "-208379/4427500",
+        "-208379/4427500"
+      ],
+      [
+        "-208379/4427500",
+        "-208379/4427500"
+      ],
+      [
+        "-208379/4427500",
+        "-208379/4427500"
+      ]
+    ],
+    "audit_threshold_q_by_judge_z": [
+      [
+        "221375/12996",
+        "221375/12996"
+      ],
+      [
+        "221375/12996",
+        "221375/12996"
+      ],
+      [
+        "221375/12996",
+        "221375/12996"
+      ]
+    ],
+    "strict_entry_exists": false,
+    "strict_entry_possible_at_cap": false,
+    "all_low_persists_at_policy": true,
+    "low_rewards_by_judge_z": [
+      [
+        "1",
+        "1"
+      ],
+      [
+        "1",
+        "1"
+      ],
+      [
+        "1",
+        "1"
+      ]
+    ],
+    "high_rewards_by_judge_z": [
+      [
+        "1110124/1106875",
+        "1110124/1106875"
+      ],
+      [
+        "1110124/1106875",
+        "1110124/1106875"
+      ],
+      [
+        "1110124/1106875",
+        "1110124/1106875"
+      ]
+    ],
+    "cash_floor_by_z": [
+      "3",
+      "3"
+    ],
+    "cash_floor_target_population": "3",
+    "cash_floor_batch_average": "3",
+    "cash_floor_actual_batch": "12",
+    "target_weights": [
+      "1/2",
+      "1/2"
+    ],
+    "batch_weights": [
+      "1/2",
+      "1/2"
+    ],
+    "quality_status": "not_evaluated",
+    "scope": "fixed-fixture-feasibility-only"
+  },
+  "f51_02_incremental": {
+    "fixture": "F51-02",
+    "mechanism": "incremental",
+    "policy": {
+      "mechanism": "incremental",
+      "f": "0",
+      "mu": "1",
+      "q": "1",
+      "budget": "6",
+      "kappa": "0",
+      "operating_cost": "0"
+    },
+    "policy_valid": true,
+    "mu_max": "1",
+    "reserve_cap_total": "6",
+    "payment_bounds_per_judge": {
+      "minimum": "0",
+      "maximum": "2",
+      "cap_total": "6"
+    },
+    "delta_t_by_judge": [
+      [
+        "15876/368125",
+        "15876/368125"
+      ],
+      [
+        "15876/368125",
+        "15876/368125"
+      ],
+      [
+        "15876/368125",
+        "15876/368125"
+      ]
+    ],
+    "delta_y_by_judge": [
+      [
+        "3969/58900",
+        "3969/58900"
+      ],
+      [
+        "3969/58900",
+        "3969/58900"
+      ],
+      [
+        "3969/58900",
+        "3969/58900"
+      ]
+    ],
+    "gain_by_judge_z": [
+      [
+        "-10121/1472500",
+        "-10121/1472500"
+      ],
+      [
+        "-10121/1472500",
+        "-10121/1472500"
+      ],
+      [
+        "-10121/1472500",
+        "-10121/1472500"
+      ]
+    ],
+    "max_gain_at_mu_max_by_judge_z": [
+      [
+        "-10121/1472500",
+        "-10121/1472500"
+      ],
+      [
+        "-10121/1472500",
+        "-10121/1472500"
+      ],
+      [
+        "-10121/1472500",
+        "-10121/1472500"
+      ]
+    ],
+    "audit_threshold_q_by_judge_z": [
+      [
+        "73625/63504",
+        "73625/63504"
+      ],
+      [
+        "73625/63504",
+        "73625/63504"
+      ],
+      [
+        "73625/63504",
+        "73625/63504"
+      ]
+    ],
+    "strict_entry_exists": false,
+    "strict_entry_possible_at_cap": false,
+    "all_low_persists_at_policy": true,
+    "low_rewards_by_judge_z": [
+      [
+        "1",
+        "1"
+      ],
+      [
+        "1",
+        "1"
+      ],
+      [
+        "1",
+        "1"
+      ]
+    ],
+    "high_rewards_by_judge_z": [
+      [
+        "384001/368125",
+        "384001/368125"
+      ],
+      [
+        "384001/368125",
+        "384001/368125"
+      ],
+      [
+        "384001/368125",
+        "384001/368125"
+      ]
+    ],
+    "cash_floor_by_z": [
+      "3",
+      "3"
+    ],
+    "cash_floor_target_population": "3",
+    "cash_floor_batch_average": "3",
+    "cash_floor_actual_batch": "12",
+    "target_weights": [
+      "1/2",
+      "1/2"
+    ],
+    "batch_weights": [
+      "1/2",
+      "1/2"
+    ],
+    "quality_status": "not_evaluated",
+    "scope": "fixed-fixture-feasibility-only"
+  },
+  "f51_01_direct": {
+    "fixture": "F51-01",
+    "mechanism": "direct",
+    "policy": {
+      "mechanism": "direct",
+      "f": "0",
+      "mu": "2",
+      "q": "1",
+      "budget": "6",
+      "kappa": "0",
+      "operating_cost": "0"
+    },
+    "policy_valid": true,
+    "mu_max": "2",
+    "reserve_cap_total": "6",
+    "payment_bounds_per_judge": {
+      "minimum": "0",
+      "maximum": "2",
+      "cap_total": "6"
+    },
+    "delta_t_by_judge": [
+      [
+        "3249/1106875",
+        "3249/1106875"
+      ],
+      [
+        "3249/1106875",
+        "3249/1106875"
+      ],
+      [
+        "3249/1106875",
+        "3249/1106875"
+      ]
+    ],
+    "delta_y_by_judge": [
+      [
+        "3249/708400",
+        "3249/708400"
+      ],
+      [
+        "3249/708400",
+        "3249/708400"
+      ],
+      [
+        "3249/708400",
+        "3249/708400"
+      ]
+    ],
+    "gain_by_judge_z": [
+      [
+        "-195383/4427500",
+        "-195383/4427500"
+      ],
+      [
+        "-195383/4427500",
+        "-195383/4427500"
+      ],
+      [
+        "-195383/4427500",
+        "-195383/4427500"
+      ]
+    ],
+    "max_gain_at_mu_max_by_judge_z": [
+      [
+        "-195383/4427500",
+        "-195383/4427500"
+      ],
+      [
+        "-195383/4427500",
+        "-195383/4427500"
+      ],
+      [
+        "-195383/4427500",
+        "-195383/4427500"
+      ]
+    ],
+    "audit_threshold_q_by_judge_z": [
+      [
+        "221375/25992",
+        "221375/25992"
+      ],
+      [
+        "221375/25992",
+        "221375/25992"
+      ],
+      [
+        "221375/25992",
+        "221375/25992"
+      ]
+    ],
+    "strict_entry_exists": false,
+    "strict_entry_possible_at_cap": false,
+    "all_low_persists_at_policy": true,
+    "low_rewards_by_judge_z": [
+      [
+        "2199/1250",
+        "2199/1250"
+      ],
+      [
+        "2199/1250",
+        "2199/1250"
+      ],
+      [
+        "2199/1250",
+        "2199/1250"
+      ]
+    ],
+    "high_rewards_by_judge_z": [
+      [
+        "156297/88550",
+        "156297/88550"
+      ],
+      [
+        "156297/88550",
+        "156297/88550"
+      ],
+      [
+        "156297/88550",
+        "156297/88550"
+      ]
+    ],
+    "cash_floor_by_z": [
+      "6597/1250",
+      "6597/1250"
+    ],
+    "cash_floor_target_population": "6597/1250",
+    "cash_floor_batch_average": "6597/1250",
+    "cash_floor_actual_batch": "13194/625",
+    "target_weights": [
+      "1/2",
+      "1/2"
+    ],
+    "batch_weights": [
+      "1/2",
+      "1/2"
+    ],
+    "quality_status": "not_evaluated",
+    "scope": "fixed-fixture-feasibility-only"
+  },
+  "f51_02_direct": {
+    "fixture": "F51-02",
+    "mechanism": "direct",
+    "policy": {
+      "mechanism": "direct",
+      "f": "0",
+      "mu": "2",
+      "q": "3/5",
+      "budget": "6",
+      "kappa": "0",
+      "operating_cost": "0"
+    },
+    "policy_valid": true,
+    "mu_max": "2",
+    "reserve_cap_total": "6",
+    "payment_bounds_per_judge": {
+      "minimum": "0",
+      "maximum": "2",
+      "cap_total": "6"
+    },
+    "delta_t_by_judge": [
+      [
+        "15876/368125",
+        "15876/368125"
+      ],
+      [
+        "15876/368125",
+        "15876/368125"
+      ],
+      [
+        "15876/368125",
+        "15876/368125"
+      ]
+    ],
+    "delta_y_by_judge": [
+      [
+        "3969/58900",
+        "3969/58900"
+      ],
+      [
+        "3969/58900",
+        "3969/58900"
+      ],
+      [
+        "3969/58900",
+        "3969/58900"
+      ]
+    ],
+    "gain_by_judge_z": [
+      [
+        "12899/7362500",
+        "12899/7362500"
+      ],
+      [
+        "12899/7362500",
+        "12899/7362500"
+      ],
+      [
+        "12899/7362500",
+        "12899/7362500"
+      ]
+    ],
+    "max_gain_at_mu_max_by_judge_z": [
+      [
+        "53383/1472500",
+        "53383/1472500"
+      ],
+      [
+        "53383/1472500",
+        "53383/1472500"
+      ],
+      [
+        "53383/1472500",
+        "53383/1472500"
+      ]
+    ],
+    "audit_threshold_q_by_judge_z": [
+      [
+        "73625/127008",
+        "73625/127008"
+      ],
+      [
+        "73625/127008",
+        "73625/127008"
+      ],
+      [
+        "73625/127008",
+        "73625/127008"
+      ]
+    ],
+    "strict_entry_exists": true,
+    "strict_entry_possible_at_cap": true,
+    "all_low_persists_at_policy": false,
+    "low_rewards_by_judge_z": [
+      [
+        "5817/6250",
+        "5817/6250"
+      ],
+      [
+        "5817/6250",
+        "5817/6250"
+      ],
+      [
+        "5817/6250",
+        "5817/6250"
+      ]
+    ],
+    "high_rewards_by_judge_z": [
+      [
+        "144669/147250",
+        "144669/147250"
+      ],
+      [
+        "144669/147250",
+        "144669/147250"
+      ],
+      [
+        "144669/147250",
+        "144669/147250"
+      ]
+    ],
+    "cash_floor_by_z": [
+      "17451/6250",
+      "17451/6250"
+    ],
+    "cash_floor_target_population": "17451/6250",
+    "cash_floor_batch_average": "17451/6250",
+    "cash_floor_actual_batch": "34902/3125",
+    "target_weights": [
+      "1/2",
+      "1/2"
+    ],
+    "batch_weights": [
+      "1/2",
+      "1/2"
+    ],
+    "quality_status": "not_evaluated",
+    "scope": "fixed-fixture-feasibility-only"
+  },
+  "v3_het_incremental": {
+    "fixture": "V3-HET",
+    "mechanism": "incremental",
+    "policy": {
+      "mechanism": "incremental",
+      "f": "1/10",
+      "mu": "19/20",
+      "q": "1",
+      "budget": "6",
+      "kappa": "0",
+      "operating_cost": "0"
+    },
+    "policy_valid": true,
+    "mu_max": "19/20",
+    "reserve_cap_total": "6",
+    "payment_bounds_per_judge": {
+      "minimum": "1/10",
+      "maximum": "2",
+      "cap_total": "6"
+    },
+    "delta_t_by_judge": [
+      [
+        "147/3125",
+        "392/5625"
+      ],
+      [
+        "49/775",
+        "12544/202275"
+      ],
+      [
+        "9/775",
+        "7/450"
+      ]
+    ],
+    "delta_y_by_judge": [
+      [
+        "147/2000",
+        "49/450"
+      ],
+      [
+        "49/496",
+        "784/8091"
+      ],
+      [
+        "9/496",
+        "7/288"
+      ]
+    ],
+    "gain_by_judge_z": [
+      [
+        "-83/15625",
+        "1823/112500"
+      ],
+      [
+        "-619/15500",
+        "-83107/2022750"
+      ],
+      [
+        "-449/15500",
+        "-227/9000"
+      ]
+    ],
+    "max_gain_at_mu_max_by_judge_z": [
+      [
+        "-83/15625",
+        "1823/112500"
+      ],
+      [
+        "-619/15500",
+        "-83107/2022750"
+      ],
+      [
+        "-449/15500",
+        "-227/9000"
+      ]
+    ],
+    "audit_threshold_q_by_judge_z": [
+      [
+        "3125/2793",
+        "5625/7448"
+      ],
+      [
+        "1550/931",
+        "202275/119168"
+      ],
+      [
+        "620/171",
+        "360/133"
+      ]
+    ],
+    "strict_entry_exists": true,
+    "strict_entry_possible_at_cap": true,
+    "all_low_persists_at_policy": false,
+    "low_rewards_by_judge_z": [
+      [
+        "21/20",
+        "21/20"
+      ],
+      [
+        "21/20",
+        "21/20"
+      ],
+      [
+        "21/20",
+        "21/20"
+      ]
+    ],
+    "high_rewards_by_judge_z": [
+      [
+        "34209/31250",
+        "125573/112500"
+      ],
+      [
+        "8603/7750",
+        "4486111/4045500"
+      ],
+      [
+        "8223/7750",
+        "9583/9000"
+      ]
+    ],
+    "cash_floor_by_z": [
+      "63/20",
+      "63/20"
+    ],
+    "cash_floor_target_population": "63/20",
+    "cash_floor_batch_average": "63/20",
+    "cash_floor_actual_batch": "63/5",
+    "target_weights": [
+      "2/5",
+      "3/5"
+    ],
+    "batch_weights": [
+      "1/2",
+      "1/2"
+    ],
+    "quality_status": "not_evaluated",
+    "scope": "fixed-fixture-feasibility-only"
+  },
+  "v3_het_direct": {
+    "fixture": "V3-HET",
+    "mechanism": "direct",
+    "policy": {
+      "mechanism": "direct",
+      "f": "1/10",
+      "mu": "19/10",
+      "q": "4/5",
+      "budget": "6",
+      "kappa": "0",
+      "operating_cost": "0"
+    },
+    "policy_valid": true,
+    "mu_max": "19/10",
+    "reserve_cap_total": "6",
+    "payment_bounds_per_judge": {
+      "minimum": "1/10",
+      "maximum": "2",
+      "cap_total": "6"
+    },
+    "delta_t_by_judge": [
+      [
+        "147/3125",
+        "392/5625"
+      ],
+      [
+        "49/775",
+        "12544/202275"
+      ],
+      [
+        "9/775",
+        "7/450"
+      ]
+    ],
+    "delta_y_by_judge": [
+      [
+        "147/2000",
+        "49/450"
+      ],
+      [
+        "49/496",
+        "784/8091"
+      ],
+      [
+        "9/496",
+        "7/288"
+      ]
+    ],
+    "gain_by_judge_z": [
+      [
+        "6719/312500",
+        "31459/562500"
+      ],
+      [
+        "-151/38750",
+        "-58031/10113750"
+      ],
+      [
+        "-433/19375",
+        "-92/5625"
+      ]
+    ],
+    "max_gain_at_mu_max_by_judge_z": [
+      [
+        "2461/62500",
+        "9271/112500"
+      ],
+      [
+        "78/3875",
+        "36061/2022750"
+      ],
+      [
+        "-139/7750",
+        "-47/4500"
+      ]
+    ],
+    "audit_threshold_q_by_judge_z": [
+      [
+        "3125/5586",
+        "5625/14896"
+      ],
+      [
+        "775/931",
+        "202275/238336"
+      ],
+      [
+        "310/171",
+        "180/133"
+      ]
+    ],
+    "strict_entry_exists": true,
+    "strict_entry_possible_at_cap": true,
+    "all_low_persists_at_policy": false,
+    "low_rewards_by_judge_z": [
+      [
+        "813/625",
+        "7127/5625"
+      ],
+      [
+        "813/625",
+        "7127/5625"
+      ],
+      [
+        "813/625",
+        "7127/5625"
+      ]
+    ],
+    "high_rewards_by_judge_z": [
+      [
+        "107211/78125",
+        "64357/46875"
+      ],
+      [
+        "5413/3875",
+        "458923/337125"
+      ],
+      [
+        "5109/3875",
+        "484/375"
+      ]
+    ],
+    "cash_floor_by_z": [
+      "2439/625",
+      "7127/1875"
+    ],
+    "cash_floor_target_population": "2401/625",
+    "cash_floor_batch_average": "7222/1875",
+    "cash_floor_actual_batch": "28888/1875",
+    "target_weights": [
+      "2/5",
+      "3/5"
+    ],
+    "batch_weights": [
+      "1/2",
+      "1/2"
+    ],
+    "quality_status": "not_evaluated",
+    "scope": "fixed-fixture-feasibility-only"
+  },
+  "direct_boundary": {
+    "fixture": "V3-HET",
+    "mechanism": "direct",
+    "policy": {
+      "mechanism": "direct",
+      "f": "1/10",
+      "mu": "19/10",
+      "q": "5625/14896",
+      "budget": "6",
+      "kappa": "0",
+      "operating_cost": "0"
+    },
+    "policy_valid": true,
+    "mu_max": "19/10",
+    "reserve_cap_total": "6",
+    "payment_bounds_per_judge": {
+      "minimum": "1/10",
+      "maximum": "2",
+      "cap_total": "6"
+    },
+    "delta_t_by_judge": [
+      [
+        "147/3125",
+        "392/5625"
+      ],
+      [
+        "49/775",
+        "12544/202275"
+      ],
+      [
+        "9/775",
+        "7/450"
+      ]
+    ],
+    "delta_y_by_judge": [
+      [
+        "147/2000",
+        "49/450"
+      ],
+      [
+        "49/496",
+        "784/8091"
+      ],
+      [
+        "9/496",
+        "7/288"
+      ]
+    ],
+    "gain_by_judge_z": [
+      [
+        "-13/800",
+        "0"
+      ],
+      [
+        "-271/4960",
+        "-499/8990"
+      ],
+      [
+        "-38483/1215200",
+        "-323/11200"
+      ]
+    ],
+    "max_gain_at_mu_max_by_judge_z": [
+      [
+        "2461/62500",
+        "9271/112500"
+      ],
+      [
+        "78/3875",
+        "36061/2022750"
+      ],
+      [
+        "-139/7750",
+        "-47/4500"
+      ]
+    ],
+    "audit_threshold_q_by_judge_z": [
+      [
+        "3125/5586",
+        "5625/14896"
+      ],
+      [
+        "775/931",
+        "202275/238336"
+      ],
+      [
+        "310/171",
+        "180/133"
+      ]
+    ],
+    "strict_entry_exists": false,
+    "strict_entry_possible_at_cap": true,
+    "all_low_persists_at_policy": true,
+    "low_rewards_by_judge_z": [
+      [
+        "20911/31360",
+        "20411/31360"
+      ],
+      [
+        "20911/31360",
+        "20411/31360"
+      ],
+      [
+        "20911/31360",
+        "20411/31360"
+      ]
+    ],
+    "high_rewards_by_judge_z": [
+      [
+        "109847/156800",
+        "21979/31360"
+      ],
+      [
+        "692341/972160",
+        "19603889/28192640"
+      ],
+      [
+        "93763/138880",
+        "20761/31360"
+      ]
+    ],
+    "cash_floor_by_z": [
+      "62733/31360",
+      "61233/31360"
+    ],
+    "cash_floor_target_population": "61833/31360",
+    "cash_floor_batch_average": "61983/31360",
+    "cash_floor_actual_batch": "61983/7840",
+    "target_weights": [
+      "2/5",
+      "3/5"
+    ],
+    "batch_weights": [
+      "1/2",
+      "1/2"
+    ],
+    "quality_status": "not_evaluated",
+    "scope": "fixed-fixture-feasibility-only"
+  },
+  "limits": [
+    "no decision-quality evaluator",
+    "no equilibrium selection",
+    "no global optimum",
+    "no continuous policy search",
+    "no production conclusion"
+  ]
+}

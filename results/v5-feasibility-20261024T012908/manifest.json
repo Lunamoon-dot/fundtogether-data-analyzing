@@ -1,0 +1,52 @@
+{
+  "event_type": "v5.0_agiis_phase1_feasibility_run",
+  "model_version": "ceav-m1-v5.0-agiis",
+  "status": "succeeded",
+  "created_at_utc": "2026-10-24T01:29:08.470246+00:00",
+  "inputs": [
+    {
+      "source": "CEAV_M1_V5_INFORMATION_SCORING_SPEC.md",
+      "snapshot": "inputs/CEAV_M1_V5_INFORMATION_SCORING_SPEC.md",
+      "sha256": "974441df7e6de3d200e10cc0eb8c90eb00b5f960b95233d2e9f0fd225011686a"
+    },
+    {
+      "source": "CEAV_M1_V5_FEASIBILITY.md",
+      "snapshot": "inputs/CEAV_M1_V5_FEASIBILITY.md",
+      "sha256": "7ed67830f4283fc47e27f1fce6c1087e403a269ca791eb1f74cb98cc6973d5e6"
+    },
+    {
+      "source": "references/V5_INFORMATION_SCORING_SOURCES.md",
+      "snapshot": "inputs/references/V5_INFORMATION_SCORING_SOURCES.md",
+      "sha256": "46f8bbfb4711186f322abb74ab3378151b8260f7c0c6f65f6f74d3c7cd15c923"
+    },
+    {
+      "source": "verification/oracle_v5.py",
+      "snapshot": "inputs/verification/oracle_v5.py",
+      "sha256": "2b4f5195b5d1e3d88282ffa6444beb12d6aaf0fa434c3df5eabf941d6c2a1f9d"
+    },
+    {
+      "source": "verification/feasibility_v5.py",
+      "snapshot": "inputs/verification/feasibility_v5.py",
+      "sha256": "3335afe4380334a46234686ae13bb94fc6178c73a919bd6f357bc51a11f37875"
+    },
+    {
+      "source": "tests/test_v5_feasibility.py",
+      "snapshot": "inputs/tests/test_v5_feasibility.py",
+      "sha256": "41616cc8fef646928611a4494a8b0a07ddf7c6393cbac847fd95dfc30fb5b117"
+    },
+    {
+      "source": "configs/v3/heterogeneous_anchor.json",
+      "snapshot": "inputs/configs/v3/heterogeneous_anchor.json",
+      "sha256": "b6553f008878e6eee1ef7429377b803a136c110ffdb6b90e243350034fcf95f0"
+    },
+    {
+      "source": "spec_history/v5.0-agiis-phase1-implementation-start-20261024/MANIFEST.json",
+      "snapshot": "inputs/spec_history/v5.0-agiis-phase1-implementation-start-20261024/MANIFEST.json",
+      "sha256": "1e082cd8cff05d63161d571ddf176d26a6ccbc6cb71f8a684cd87465d32e6dc0"
+    }
+  ],
+  "outputs": {
+    "certificate.json": "bc8fb88027b1c4988afabcaf1ea62a4de9618e8861176feb68cecc6b2ddbaa70",
+    "report.md": "2ef5c9dc3cd145c50ef67564fb2f52ef74cc522332974b818ce39d52f00f8a43"
+  }
+}

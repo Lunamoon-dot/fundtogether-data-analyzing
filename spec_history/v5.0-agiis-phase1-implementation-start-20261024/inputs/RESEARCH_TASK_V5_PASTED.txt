@@ -1,0 +1,619 @@
+# RESEARCH TASK — CEAV-M1 V5.0
+## Audit-Grounded Incremental Information Scoring (AGIIS)
+
+**Project:** FundTogether — CEAV-M1 Research Laboratory  
+**Parent evidence:** V3.1, V3.2, V3.3, V4.0, V4.1  
+**Status:** PROPOSED — chưa phải verified mechanism  
+**Research priority:** Feasibility first, implementation second  
+**Target:** Thiết kế và kiểm chứng cơ chế khuyến khích thu thập thông tin riêng với limited trusted audits.
+
+---
+
+# 1. Bối cảnh và bài toán nghiên cứu
+
+Đọc code, specs và artifacts mới nhất trong repository `Lunamoon-dot/fundtogether-data-analyzing` trước khi thực hiện.
+
+Các kết quả nghiên cứu trước đã xác định:
+
+- **V3.1:** Không tìm được chính sách audit robust trên uncertainty grid đã xét.
+- **V3.2:** Report-sensitive audit gây strategic reporting bias.
+- **V3.3:** IPW khử reporting bias do xác suất audit nhưng không thay đổi expected equilibrium incentives khi chỉ đổi q0/q1.
+- **V4.0:** Conditional Agreement không loại bỏ all-Low equilibrium; tồn tại cả vấn đề label inversion.
+- **V4.1:** Conditional Agreement + Audit không cải thiện unilateral effort-entry gain so với Audit-only khi giữ nguyên μ,q.
+- **V4.1 sensitivity:** Hybrid có thể giảm audit exposure và cash cost khi audit đắt, nhưng tồn tại quality trade-off; chưa chứng minh được ưu thế toàn diện.
+
+Không sửa hoặc thay thế kết luận lịch sử.
+
+## Research question
+
+> Khi Judge quan sát tín hiệu công khai Z và có quyền trả chi phí để thu thập tín hiệu riêng X, liệu một cơ chế thưởng dựa trên cải thiện dự đoán xác suất, được xác minh qua noisy trusted audit, có thể tạo effort incentive với chi phí hợp lý và cải thiện decision quality so với binary audit-only hay không?
+
+Phân biệt bốn mục tiêu:
+
+1. **Information acquisition:** Judge có tự nguyện mua X không?
+2. **Truthful probabilistic reporting:** Judge có báo đúng posterior của mình không?
+3. **Decision quality:** Quyết định majority có giảm false approval, false rejection và wrong payout không?
+4. **Economic feasibility:** Có đạt cash budget, reward cap và giới hạn audit không?
+
+Không đánh đồng bốn mục tiêu. Một cơ chế có thể strictly proper nhưng không tạo được effort incentive.
+
+# 2. Model V5.0
+
+Giữ các primitive assumptions của V4.1:
+
+- Ba Judge A, B, C.
+- Ground truth ẩn Y ∈ {0,1}.
+- Public signal Z ∈ {0,1}, miễn phí.
+- Judge i có private signal X_i ∈ {0,1}, chỉ quan sát sau khi chọn H.
+- Effort cost c_i.
+- Trusted verification T ∈ {0,1}, với sensitivity và specificity.
+- T độc lập Z và X_i khi điều kiện theo Y.
+- Audit xảy ra sau khi Judge đã khóa báo cáo.
+- Audit probability q ∈ [0,1], claim-level, độc lập báo cáo và chiến lược.
+- Nếu audited, cùng một T được dùng để chấm ba Judge.
+- Quyết định release vẫn do majority 2/3, không được dùng T hậu kiểm để sửa quyết định trong model này.
+
+Không thêm DAO, stake, slashing, collusion, appeals hoặc blockchain settlement vào V5.0.
+
+## Thay đổi quan trọng
+
+Judge không còn chỉ báo một nhãn nhị phân để nhận reward.
+
+Judge gửi xác suất dự đoán:
+
+\[
+p_i=P(T=1\mid I_i)
+\]
+
+trong đó:
+
+- Low effort: I_i=Z.
+- High effort: I_i=(Z,X_i).
+
+Dự đoán công khai làm baseline:
+
+\[
+p_0(z)=P(T=1\mid Z=z).
+\]
+
+Baseline phải được xác định từ mô hình đã khai báo và công bố trước khi Judge quyết định, không được ước lượng bằng chính report của Judge trong cùng task.
+
+**Ranh giới quan trọng:** p_i là posterior về verification signal T, không mặc nhiên là posterior về ground truth Y.
+
+# 3. Proper scoring mechanism
+
+Dùng quadratic/Brier scoring dạng reward:
+
+\[
+S(p,t)=1-(p-t)^2.
+\]
+
+Định nghĩa incremental information score:
+
+\[
+G_i=S(p_i,T)-S(p_0(Z),T).
+\]
+
+Trong đó:
+
+\[
+-1\le G_i\le1.
+\]
+
+## Payment proposal V5.0-A
+
+Thiết lập một cơ chế không âm để kiểm tra:
+
+\[
+\boxed{
+R_i=f+\mu A\left[1+G_i\right]
+}
+\]
+
+với:
+
+\[
+A\sim Bernoulli(q)
+\]
+
+và f,μ không âm.
+
+Khi audit không xảy ra, Judge nhận f. Khi audit xảy ra, payment nằm trong [f,f+2μ].
+
+Do đó:
+
+\[
+\boxed{RewardCap=3f+6\mu\le B.}
+\]
+
+Expected cash cost:
+
+\[
+C=E\left[\sum_iR_i\right]+q\kappa+operatingCost.
+\]
+
+Effort cost trừ khỏi Judge utility, không được cộng lần nữa vào cash payout.
+
+**Không được dùng công thức signed reward f+μAG_i như thể nó luôn không âm.** Nếu nghiên cứu payment có thể âm, phải khai báo rõ deposit, limited liability và bảo đảm ngân sách; không lén thêm slashing.
+
+Cần báo cáo rằng offset +1 thực sự tốn tiền khi audit. Nó không tạo thêm thông tin và có thể làm cơ chế kém hiệu quả về ngân sách.
+
+## Property P5-1 — Truthful forecasting
+
+Với Judge đã quan sát thông tin I, đặt:
+
+\[
+p^*=P(T=1\mid I).
+\]
+
+Do quadratic score strictly proper:
+
+\[
+\underset{p\in[0,1]}{\arg\max}
+E[S(p,T)\mid I]=p^*.
+\]
+
+Khi μq>0 và không có payoff khác phụ thuộc p, truthful posterior là unique optimal probabilistic report.
+
+Khi μq=0, không được tuyên bố strict truthfulness.
+
+Đây là strict propriety **đối với T** dưới các giả định của model, không chứng minh báo cáo hay quyết định luôn đúng Y.
+
+# 4. Property P5-2 — Giá trị thông tin riêng
+
+Đặt:
+
+\[
+p_L(z)=P(T=1\mid Z=z)
+\]
+
+và
+
+\[
+p_H(z,x)=P(T=1\mid Z=z,X_i=x).
+\]
+
+Expected score improvement tối đa từ High Effort:
+
+\[
+\boxed{
+\Delta_i(z)
+=
+E[(p_H(Z,X_i)-p_L(Z))^2\mid Z=z].
+}
+\]
+
+Đây là conditional variance của posterior về T.
+
+Expected utility gain:
+
+\[
+\boxed{
+Gain_i(z)=\mu q\Delta_i(z)-c_i.
+}
+\]
+
+Strict High Effort chỉ xảy ra nếu:
+
+\[
+\boxed{\mu q\Delta_i(z)>c_i.}
+\]
+
+Tại equality, Low và High hòa; không được kết luận đã loại bỏ Low Effort.
+
+## Noise attenuation
+
+Đặt:
+
+\[
+a=1-specificity_T
+\]
+
+\[
+d=sensitivity_T+specificity_T-1.
+\]
+
+Khi đó:
+
+\[
+p_T(I)=a+d\,p_Y(I).
+\]
+
+Suy ra:
+
+\[
+\boxed{
+\Delta_T=d^2\Delta_Y.
+}
+\]
+
+Vì vậy, một trusted audit bị nhiễu làm giảm động lực thu thập thông tin khi dùng Brier scoring.
+
+Phải chứng minh các đẳng thức trên bằng finite sums độc lập, không chỉ kiểm tra vài kết quả floating point.
+
+# 5. Pre-implementation feasibility — BẮT BUỘC
+
+Trước khi xây engine, tính các cận và điều kiện bất khả thi.
+
+Từ reward cap:
+
+\[
+\mu_{\max}=\frac{B-3f}{6}.
+\]
+
+Nếu B-3f âm thì policy invalid.
+
+Điều kiện cần để Judge i chọn H ở nhánh z:
+
+\[
+\boxed{
+\mu_{\max}\Delta_i(z)>c_i.
+}
+\]
+
+Vì q≤1, nếu điều kiện này không đạt thì **không tồn tại μ,q hợp lệ nào thuộc V5.0-A tạo strict High Effort cho Judge đó tại nhánh đó**.
+
+Khi Δ_i(z)>0, ngưỡng audit ở μ cố định là:
+
+\[
+q>\frac{c_i}{\mu\Delta_i(z)}.
+\]
+
+Không gọi boundary này là minimum audit quality threshold; nó chỉ là ngưỡng effort-entry.
+
+## Fixtures phải kiểm tra
+
+### F51-01 — Public signal cực mạnh
+
+Kế thừa F41-01:
+
+- π=1/2
+- Sensitivity/Specificity của Z = 19/20
+- Sensitivity/Specificity của X_i = 4/5
+- Sensitivity/Specificity của T = 9/10
+- c_i=1/20 cho cả ba Judge
+- B=6, f=0
+
+Expected benchmark:
+
+\[
+\Delta_Y=\frac{3249}{708400}
+\]
+
+\[
+\boxed{\Delta_T=\frac{3249}{1106875}\approx0.00293529.}
+\]
+
+Dưới V5.0-A, μ≤1, nên không thể tạo strict H với q≤1.
+
+### F51-02 — Public signal trung bình
+
+Kế thừa F41-02:
+
+- π=1/2
+- Sensitivity/Specificity của Z = 7/10
+- Sensitivity/Specificity của X_i = 4/5
+- Sensitivity/Specificity của T = 9/10
+- c_i=1/20
+- B=6, f=0
+
+Expected benchmark:
+
+\[
+\Delta_Y=\frac{3969}{58900}
+\]
+
+\[
+\boxed{\Delta_T=\frac{15876}{368125}\approx0.04312666.}
+\]
+
+Với μ≤1 và q≤1:
+
+\[
+Gain_H\le0.04312666-0.05<0.
+\]
+
+Do đó cơ chế V5.0-A cũng không tạo strict H trong fixture này.
+
+### F51-03 — V3-HET
+
+Kế thừa toàn bộ primitive signals và heterogeneous effort costs từ V3-HET.
+
+Giữ f=1/10, B=6.
+
+Tính riêng Δ_i(z), effort gain, budget bound và audit threshold của từng Judge × Z.
+
+Không mặc định tất cả Judge có cùng value of information.
+
+**Acceptance:** Những negative feasibility certificates này phải xuất hiện nguyên trạng. Không tăng budget hoặc chỉnh effort cost để biến chúng thành positive results.
+
+# 6. Rà soát payment design trước khi quyết định dừng
+
+Nếu V5.0-A thất bại, chưa được kết luận toàn bộ proper scoring mechanism đều thất bại.
+
+Yêu cầu agent nghiên cứu hữu hạn các cách thiết kế payment:
+
+**A — Nonnegative shifted incremental Brier**
+
+Cơ chế V5.0-A ở trên.
+
+**B — Direct Brier audit scoring**
+
+\[
+R_i=f+\mu A S(p_i,T).
+\]
+
+Cơ chế này strictly proper nhưng không trực tiếp trả theo baseline improvement. Cần tính effort gain, cash cost và worst-case cap; phân biệt incentive improvement với accounting differences.
+
+**C — Alternative bounded strictly proper scoring**
+
+Chỉ chọn thêm một hoặc hai scoring rules có prior art rõ, ví dụ spherical scoring, nếu có thể chứng minh bound, properness và payment feasibility.
+
+Không thêm hàng loạt rules khi chưa xác định giả thuyết cụ thể.
+
+Với mỗi cơ chế, yêu cầu báo cáo:
+
+- Strict propriety và miền hợp lệ.
+- Expected value of information.
+- Minimum/maximum realized payment.
+- Worst-case reserve cap.
+- Expected payout khi Judge chỉ dùng Z.
+- Necessary condition tạo High Effort.
+- Ngưỡng μq nếu tồn tại.
+- Có cần negative payment/slashing không.
+- Giới hạn do audit quality.
+
+Tất cả cơ chế phải dùng cùng B và cost accounting.
+
+Nếu sự khác biệt chỉ là affine scaling của cùng một scoring rule, phải giải thích rõ. Không tính nó như một đóng góp mechanism mới.
+
+# 7. Decision aggregation và truthful label orientation
+
+Đây là một phần độc lập với scoring incentive.
+
+Judge nhận reward theo posterior về T, nhưng FundTogether cần quyết định claim có đúng Y hay không.
+
+Khi audit sensitivity và specificity đều biết và:
+
+\[
+d=sensitivity_T+specificity_T-1>0,
+\]
+
+ta có:
+
+\[
+\boxed{
+p_Y=\frac{p_T-(1-specificity_T)}{d}.
+}
+\]
+
+Quyết định nhị phân của Judge có thể được suy ra từ p_Y theo threshold 1/2, với tie rule được định nghĩa trước.
+
+**Không tạo một binary vote không được chấm điểm và cho Judge gửi độc lập tùy ý.** Nếu binary vote không ảnh hưởng utility, Judge không có incentive để báo đúng vote đó.
+
+Trong prototype, voting bit phải được xác định một cách deterministic từ probability report đã khóa.
+
+Kiểm tra riêng:
+
+1. Judge báo đúng posterior T.
+2. Hệ thống chuyển posterior T sang posterior Y đúng theo calibration.
+3. Majority 2/3 tạo quyết định.
+4. Tính FA, FR, wrong payout và accuracy.
+5. Đối chiếu với chiến lược sử dụng Z בלבד và binary audit-only.
+
+Nếu audit confusion matrix bị misspecified, phải báo cáo ảnh hưởng đến truthfulness và decision quality; không đưa robustness này vào kết luận chính nếu chưa thực nghiệm.
+
+# 8. Baselines phải công bằng
+
+So sánh tối thiểu:
+
+| Mechanism | Vai trò |
+|---|---|
+| Public-Z only | Zero-effort reference |
+| V3.0 binary audit-only | Strong baseline đã có |
+| V5.0-A incremental Brier | Proposed mechanism |
+| Direct Brier scoring | Ablation |
+| V4.1 best feasible hybrid | Historical reference, khi input/budget tương thích |
+
+Các baseline phải sử dụng:
+
+- Cùng signal distributions.
+- Cùng prior và heterogeneous costs.
+- Cùng audit quality.
+- Cùng claim-level audit definition.
+- Cùng B.
+- Cùng operating cost và κ.
+- Cùng majority rule.
+- Cùng quality gates.
+- Cùng target population weights.
+
+Binary audit-only được phép tối ưu μ,q trong cùng budget. Không cố ý chọn một baseline yếu.
+
+Đặc biệt, V5 sử dụng posterior từ cả Z và X; baseline binary cũng phải được phép kết hợp hai tín hiệu qua mọi report map H00/H01/H10/H11 theo từng public branch. Không được tạo cải thiện giả bằng cách cho V5 thêm thông tin mà baseline không được dùng.
+
+# 9. Search và equilibrium analysis
+
+Ở V5.0-A không có peer score.
+
+Do đó, expected utility của mỗi Judge phụ thuộc vào effort, forecast và audit riêng, không phụ thuộc vào báo cáo của hai Judge còn lại.
+
+Hệ quả: best response tách theo từng Judge × Z. Cân bằng thu được từ tích Descartes các individual best responses.
+
+Vì vậy:
+
+**Không copy nguyên 432-candidate engine V4.1 nếu không cần.**
+
+Cần:
+
+- Tối ưu exact continuous forecast bằng posterior formula.
+- Tính Low/High utility theo từng observation.
+- Giữ mọi tie.
+- Tạo exact best-response certificate.
+- Tổ hợp các effort/report policies tối ưu.
+- Tính worst-equilibrium decision quality, kể cả trường hợp q=0 hoặc μ=0 có reporting indifference.
+- So sánh analytic certificate với brute-force/discrete oracle trên toy cases, không dùng discretized grid để tuyên bố đã chứng minh continuous optimality.
+
+Chỉ mở rộng sang strategic multi-agent equilibrium search khi payoff thật sự phụ thuộc vào peer reports hoặc một coupling constraint mới.
+
+# 10. Quality, budget và uncertainty
+
+Giữ các gates lịch sử:
+
+\[
+FA\le\frac15,\quad FR\le\frac14
+\]
+
+\[
+WrongPayoutValue\le\frac3{20}
+\]
+
+\[
+CashReviewCost\le4.
+\]
+
+Mỗi policy cần báo cáo:
+
+- Expected reward total.
+- Expected audit exposure và cost.
+- Effort cost.
+- Worst-case payment cap.
+- Accuracy.
+- False approval.
+- False rejection.
+- Wrong payout.
+- Judge information-acquisition profile.
+- Prediction calibration và Brier loss đối với T và Y.
+- Worst-equilibrium metrics.
+- Giá trị thông tin Δ_i(z).
+- Audit threshold và infeasibility witnesses.
+
+Không thay gate lịch sử sau khi thấy kết quả. Một nghiên cứu có objective/loss khác phải dùng study revision độc lập.
+
+Với các positive candidates, mở uncertainty grid cho:
+
+- Prior π.
+- Public-signal quality.
+- Private-signal quality.
+- Audit sensitivity/specificity.
+- Heterogeneous effort costs.
+- Audit cost κ.
+- Budget B — dùng separate sensitivity study, không trộn vào fixed-B comparison.
+
+Không đưa ra robustness claim chỉ từ hai toy fixtures.
+
+# 11. Research workflow và stop gates
+
+## Phase 1 — Theory & Feasibility
+
+Deliverables:
+
+- `CEAV_M1_V5_INFORMATION_SCORING_SPEC.md`
+- `CEAV_M1_V5_FEASIBILITY.md`
+- `references/V5_INFORMATION_SCORING_SOURCES.md`
+- `verification/feasibility_v5.py`
+- Independent finite-sum oracle
+- Exact F51-01/F51-02/V3-HET certificates
+
+Không implement production engine tại phase này.
+
+**Stop Gate 1:** Nếu cơ chế ban đầu không có miền tạo incentive dưới ngân sách thì đóng prototype đó bằng negative result. Chỉ tiếp tục với một biến thể scoring khác khi có lập luận feasibility rõ.
+
+## Phase 2 — Minimal Offline Screening
+
+Chỉ thực hiện nếu Phase 1 còn ít nhất một miền khả thi có ý nghĩa.
+
+Deliverables:
+
+- Offline expected-payoff evaluator.
+- Continuous optimal-forecast certificate.
+- Effort-choice evaluator.
+- Decision-quality evaluator.
+- Baseline comparison.
+- Immutable study artifacts.
+
+Không cần UI/API ở phase này.
+
+**Stop Gate 2:** Nếu không tìm được incremental advantage so với binary audit-only trên một finite grid đã công bố, không mở full engine chỉ để chứng minh lại negative result.
+
+## Phase 3 — Robustness & Mechanism Comparison
+
+Chỉ thực hiện nếu có một positive candidate.
+
+Kiểm tra quality–cost frontier, audit efficiency, calibration robustness và các equilibrium/tie cases.
+
+Công bố negative cases đầy đủ.
+
+**Stop Gate 3:** Chỉ đề xuất integration vào FundTogether khi có evidence improvement rõ, không dựa vào một synthetic fixture.
+
+# 12. Verification requirements
+
+- Exact Fraction arithmetic.
+- Independent oracle không import production evaluator.
+- Formula-level tests cho strict propriety.
+- Noisy T calibration.
+- Conditional variance identity.
+- Nonnegative payment.
+- Worst-case budget cap.
+- Audit q=0 and q=1 boundaries.
+- High/Low effort tie handling.
+- Continuous optimum certificate.
+- Honest probability-to-binary decision mapping.
+- Target versus batch weighting.
+- Worst-equilibrium witness.
+- Mutation probes cho các công thức quan trọng.
+- Source hash và immutable run manifest.
+
+Không sử dụng `assert` là cơ chế validation duy nhất; kiểm tra được cả khi chạy Python optimized mode nếu phù hợp.
+
+Không tuyên bố verified chỉ vì report generator chạy thành công.
+
+# 13. Prior art và novelty requirement
+
+Rà soát trực tiếp ít nhất:
+
+1. Gao, Wright & Leyton-Brown (2019), *Incentivizing Evaluation with Peer Prediction and Limited Access to Ground Truth*.
+2. Witkowski et al. (2017), *Proper Proxy Scoring Rules*.
+3. Chen et al. (2023), *Learning to Incentivize Information Acquisition: Proper Scoring Rules Meet Principal-Agent Model*.
+4. Literature nền tảng về Brier/quadratic strictly proper scoring rules.
+
+Phân biệt:
+
+- Known proper-scoring properties.
+- Known value-of-information properties.
+- Những suy luận riêng cho CEAV-M1.
+- Những thành phần thực sự mới nếu có.
+
+Không gọi Brier score, quadratic scoring hoặc baseline subtraction là phát minh của FundTogether.
+
+Research contribution tiềm năng nằm ở việc phân tích **budget-feasible, noisy-audit-grounded information acquisition under common public signals**, kết hợp decision-risk constraints của milestone verification.
+
+Tính mới học thuật chỉ được khẳng định sau literature review.
+
+# 14. Final output yêu cầu agent
+
+Sau Phase 1, bắt buộc trả lời:
+
+1. Cơ chế AGIIS có strictly proper đối với T không?
+2. Value of information Δ_i(z) chính xác là bao nhiêu?
+3. Có tạo strict High Effort với B=6 không?
+4. Có tình huống posterior thay đổi nhưng incentive không đủ không?
+5. Noisy audit suy giảm incentive bao nhiêu?
+6. Payment cap và minimum cash floor có khả thi không?
+7. Cơ chế có cải thiện được gì so với binary audit-only về mặt lý thuyết?
+8. Có đáng làm Phase 2 hay nên dừng?
+9. Nếu dừng, counterexample/negative result nào có thể công bố?
+10. Bước nghiên cứu có cơ sở nhất tiếp theo là gì?
+
+## Yêu cầu cuối
+
+**Không triển khai full V5 engine, CLI, API, UI hay blockchain integration khi Phase 1 chưa pass feasibility gate.**
+
+Không thay dữ liệu hoặc ngân sách để tạo kết quả tích cực. Không biến negative result thành implementation failure.
+
+Nếu V5.0-A không khả thi, agent phải báo cáo rõ lý do toán học và giới hạn phạm vi kết luận, thay vì tự động mở V5.1.
+
+Mục tiêu là một nghiên cứu khoa học có thể phản biện, không phải tích lũy thêm phiên bản phần mềm.
+
+---
+
+**Expected first action:** Review repo, freeze research assumptions, đối chiếu P5-1/P5-2 và các benchmark F51 bằng independent Fraction oracle, sau đó thực hiện Phase 1 בלבד.

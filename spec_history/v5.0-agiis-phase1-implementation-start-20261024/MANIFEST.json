@@ -1,0 +1,55 @@
+{
+  "event_type": "v5.0_agiis_phase1_implementation_start",
+  "model_version": "ceav-m1-v5.0-agiis",
+  "status": "frozen",
+  "implementation_start": true,
+  "scope": "Phase 1 exact feasibility only; no production CLI/API/UI",
+  "created_at_utc": "2026-10-24T01:21:08.5532910Z",
+  "inputs": [
+    {
+      "source": "CEAV_M1_V5_INFORMATION_SCORING_SPEC.md",
+      "snapshot": "inputs/CEAV_M1_V5_INFORMATION_SCORING_SPEC.md",
+      "sha256": "974441df7e6de3d200e10cc0eb8c90eb00b5f960b95233d2e9f0fd225011686a"
+    },
+    {
+      "source": "CEAV_M1_V5_FEASIBILITY.md",
+      "snapshot": "inputs/CEAV_M1_V5_FEASIBILITY.md",
+      "sha256": "b8c14c39614f85c8e38aff3eda010c25519ef10fa065e48b1bae4a643000fe72"
+    },
+    {
+      "source": "CEAV_M1_V4_1_FEASIBILITY.md",
+      "snapshot": "inputs/CEAV_M1_V4_1_FEASIBILITY.md",
+      "sha256": "7d844536af41e3e92f7b436d7c0d73c1bd434a2d560c6a5f45ea58f67e5a85dc"
+    },
+    {
+      "source": "CEAV_M1_V4_1_SCREENING_SPEC.md",
+      "snapshot": "inputs/CEAV_M1_V4_1_SCREENING_SPEC.md",
+      "sha256": "bf68f7eb202d1f5f593e603c3a58d17a5234b952238e45dc2d89949cf69022ad"
+    },
+    {
+      "source": "CEAV_M1_V4_1_AUDIT_COST_SENSITIVITY_SPEC.md",
+      "snapshot": "inputs/CEAV_M1_V4_1_AUDIT_COST_SENSITIVITY_SPEC.md",
+      "sha256": "eba9c986642bacf4e5d764b2cd189a965a2855a7e769bc055615d53c4680a4d5"
+    },
+    {
+      "source": "references/V4_CONDITIONAL_SCORING_SOURCES.md",
+      "snapshot": "inputs/references/V4_CONDITIONAL_SCORING_SOURCES.md",
+      "sha256": "f0035e4893d8cc16dcdd21c8c77667d3daf50714094c285adecdd1580f338707"
+    },
+    {
+      "source": "references/V5_INFORMATION_SCORING_SOURCES.md",
+      "snapshot": "inputs/references/V5_INFORMATION_SCORING_SOURCES.md",
+      "sha256": "46f8bbfb4711186f322abb74ab3378151b8260f7c0c6f65f6f74d3c7cd15c923"
+    },
+    {
+      "source": "configs/v3/heterogeneous_anchor.json",
+      "snapshot": "inputs/configs/v3/heterogeneous_anchor.json",
+      "sha256": "b6553f008878e6eee1ef7429377b803a136c110ffdb6b90e243350034fcf95f0"
+    },
+    {
+      "source": "C:/Users/dell/.codex/attachments/81799c53-186e-4472-9831-c5d4ebca01ad/Pasted text.txt",
+      "snapshot": "inputs/RESEARCH_TASK_V5_PASTED.txt",
+      "sha256": "45c525cb6075208d3813e59cf3eec1153a86635188cc8f87175f169eda1f5d9d"
+    }
+  ]
+}
