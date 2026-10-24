@@ -184,7 +184,7 @@ U_i=E[R_i]-effort_cost_i+b_i*P(D_final=1).
 `b_i` is utility for release in the same units as rewards. It is an analysis
 parameter, not an enforced bound or a measured reviewer trait.
 
-![CEAV-M1 dual-purpose verification architecture](../figures/ceav_m1_dual_purpose_architecture.svg)
+![CEAV-M1 dual-purpose verification architecture](../figures/ceav_m1_dual_purpose_architecture.png)
 
 *Figure 1. Payment and decision audits have separate lotteries and objectives; a common trusted audit is observed on their union.*
 
@@ -488,7 +488,7 @@ manipulation. The Selective mechanism remains locally truthful at `b=1/10`
 while its bad equilibria fail the false-approval gate. Local truthful stability
 and global all-equilibrium quality must be reported as separate properties.
 
-![Local versus global equilibrium analysis](../figures/ceav_m1_local_vs_global.svg)
+![Local versus global equilibrium analysis](../figures/ceav_m1_local_vs_global.png)
 
 *Figure 2. A local best-response interval against frozen peers does not imply that every pure equilibrium satisfies the quality gates.*
 

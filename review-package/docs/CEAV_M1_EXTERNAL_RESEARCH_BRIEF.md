@@ -9,7 +9,7 @@ FundTogether studies milestone verification for an escrow-like crowdfunding work
 
 The central difficulty is strategic. A reviewer may value a particular release outcome, may choose an uninformative report when reporting has no marginal payoff, or may seek an audit when an audit-contingent reward makes that privately profitable. Therefore truthful behavior cannot be inferred from a good signal model or from one truthful profile alone.
 
-![FundTogether milestone verification problem](../figures/ceav_m1_problem_overview.svg)
+![FundTogether milestone verification problem](../figures/ceav_m1_problem_overview.png)
 
 *Figure 1. The practical milestone-verification problem: escrow safety depends on decision quality, reviewer behavior, audit exposure and incentive design.*
 
@@ -37,7 +37,7 @@ The dual-purpose architecture keeps two independent lotteries:
 
 The union event is charged once, so exposure is `P(A_pay ∪ A_dec)`. Separating the lotteries is intended to remove the direct report-to-payment channel while preserving risk-targeted decision verification. The study does not assume that this separation solves external-interest manipulation or global equilibrium selection.
 
-![CEAV-M1 dual-purpose verification architecture](../figures/ceav_m1_dual_purpose_architecture.svg)
+![CEAV-M1 dual-purpose verification architecture](../figures/ceav_m1_dual_purpose_architecture.png)
 
 *Figure 2. The signature architecture separates report-independent payment eligibility from risk-dependent decision verification while sharing trusted audit `T`.*
 
@@ -62,7 +62,7 @@ These are local best-response results against frozen peers and calibration. They
 
 At symmetric preferences `b=(1/10,1/10,1/10)`, exhaustive factorized checking of the declared pure stationary class finds four pure equilibria for each frozen mechanism. All-H01 remains one equilibrium, but three additional strict equilibria are bad: each fails the false-accept gate. For Selective, the safe all-pure component around zero is `-70/633 < b < 175/1922`; the positive endpoint is much smaller than the local one-Judge endpoint because global deviations can coordinate through equilibrium profiles. The frozen report labels the study `STRATEGIC_FAILURE` for global robustness, while preserving a nonempty local neutral neighborhood.
 
-![CEAV-M1 T3, T4 and T5 results](../figures/ceav_m1_t3_t4_t5_summary.svg)
+![CEAV-M1 T3, T4 and T5 results](../figures/ceav_m1_t3_t4_t5_summary.png)
 
 *Figure 3. T3 establishes neutral feasibility, T4 gives local best-response intervals, and T5 exposes the global bad-equilibrium boundary.*
 
