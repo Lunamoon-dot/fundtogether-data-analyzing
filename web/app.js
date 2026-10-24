@@ -221,7 +221,20 @@ function renderRobustness(result){
 function renderIPW(result){
   const rows=(result.policies||[]).map(policy=>[esc(policy.policy_id),policy.pass_count+"/"+policy.point_count,policy.robust?badge("succeeded"):badge("failed"),esc(Object.entries(policy.failure_reason_counts||{}).map(([k,v])=>`${k}: ${v}`).join("; ")||"—")]);
   const summary=result.baseline_comparison||{};
-  $("ipw-result").innerHTML=`<div class="verdict ${result.status==="succeeded"?"":"bad"}"><strong>V3.3 IPW ${result.status==="succeeded"?"đã chạy":"chưa hoàn tất"}</strong><span class="tag">${esc(String(result.grid?.total_points||0))} point</span></div><p class="notice">IPW chỉ đổi phần thưởng anchor: kỳ vọng anchor không phụ thuộc q, còn chi phí audit và trần thanh toán vẫn được báo riêng.</p>${table(["Policy","Pass/total","Robust","Failure map"],rows,true)}<details><summary>Baseline và giới hạn</summary>${jsonBlock({baseline_comparison:summary,limitations:result.limitations||[]})}</details>`;
+  const config=result.points?.[0]?.config||{};
+  const anchor=config.verification_anchor||{};
+  const q0=anchor.audit_probability_by_report?.["0"]||"—",q1=anchor.audit_probability_by_report?.["1"]||"—";
+  const ratio=value=>{const parts=String(value).split("/");return parts.length===2?Number(parts[0])/Number(parts[1]):Number(value);};
+  const qMin=[q0,q1].filter(value=>value!=="—").sort((left,right)=>ratio(left)-ratio(right))[0]||"—";
+  const first=result.points?.[0]||{};
+  const firstPolicy=result.policies?.[0]||{};
+  const worst=firstPolicy.worst||{};
+  const variance=first.equilibrium_diagnostics?.[0]?.anchor_reward_variance||[];
+  const reportRate=first.equilibrium_diagnostics?.[0]?.report_one_rate?.[0]||null;
+  const witness=first.failure_witnesses?.[0]||null;
+  const witnessText=witness?`${witness.judge} · point ${witness.point_id} · ${witness.failure_type} · Δutility ${witness.witness?.delta_utility?.exact||"—"}`:"—";
+  const metricRows=[["Report-one rate (first Judge)",reportRate?numeric(reportRate):"—"],["False approval",numeric(worst.false_approval_rate)],["Wrongly paid value",numeric(worst.wrong_payout_value)],["False rejection",numeric(worst.false_rejection_rate)],["Cash review cost",numeric(worst.cash_review_cost)],["Anchor reward variance (first Judge)",variance[0]?numeric(variance[0]):"—"],["Failure witness",esc(witnessText)]];
+  $("ipw-result").innerHTML=`<div class="verdict ${result.status==="succeeded"?"":"bad"}><strong>V3.3 IPW ${result.status==="succeeded"?"đã chạy":"chưa hoàn tất"}</strong><span class="tag">${esc(String(result.grid?.total_points||0))} point</span></div><p class="notice">IPW chỉ đổi phần thưởng anchor: kỳ vọng anchor không phụ thuộc q, còn chi phí audit và trần thanh toán vẫn được báo riêng.</p><div class="metrics">${metric("q0",{exact:q0,decimal:null},"Xác suất audit khi report = 0")}${metric("q1",{exact:q1,decimal:null},"Xác suất audit khi report = 1")}${metric("q_min",{exact:qMin,decimal:null},"Nhỏ nhất của q0 và q1; dùng cho trần IPW")}${metric("IPW mode",{exact:anchor.audit_reward_mode||"—",decimal:null},"Chế độ reward anchor")}${metric("Reward budget",{exact:config.reward_budget||"—",decimal:null},"Trần reward dùng chung")}</div>${table(["Metric","Artifact value"],metricRows,true)}${table(["Policy","Pass/total","Robust","Failure map"],rows,true)}<details><summary>Baseline và giới hạn</summary>${jsonBlock({baseline_comparison:summary,limitations:result.limitations||[],grid:result.grid})}</details>`;
 }
 function metric(label,value,definition) {return `<div class="metric"><div class="label">${esc(label)}</div><div class="value">${esc(decimal(value))}</div><span class="exact">${esc(value?.exact||"")}</span><span class="help">${esc(definition)}</span></div>`;}
 function branchDetails(branch,withWitness=false) {

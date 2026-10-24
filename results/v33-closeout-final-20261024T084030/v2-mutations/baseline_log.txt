@@ -1,0 +1,12 @@
+test_V2_T05_candidate_predictions_metrics_and_observations (tests.test_v2_engine.V2EngineTests.test_V2_T05_candidate_predictions_metrics_and_observations) ... ok
+test_V2_T08_scenario_validation_and_mathematical_neutrality (tests.test_v2_io.V2IOTests.test_V2_T08_scenario_validation_and_mathematical_neutrality) ... ok
+test_V2_T09_manifest_certificate_freeze_and_scenario_identity (tests.test_v2_io.V2IOTests.test_V2_T09_manifest_certificate_freeze_and_scenario_identity) ... ok
+test_V2_T01_nested_schema_dispatch_and_errors (tests.test_v2_model.V2ModelTests.test_V2_T01_nested_schema_dispatch_and_errors) ... ok
+test_V2_T02_distribution_matches_independent_oracle (tests.test_v2_model.V2ModelTests.test_V2_T02_distribution_matches_independent_oracle) ... ok
+test_V2_T03_signal_diagnostics_exact (tests.test_v2_model.V2ModelTests.test_V2_T03_signal_diagnostics_exact) ... ok
+test_V2_T04_v1_reduction_states_predictions_and_analysis (tests.test_v2_model.V2ModelTests.test_V2_T04_v1_reduction_states_predictions_and_analysis) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 1.603s
+
+OK

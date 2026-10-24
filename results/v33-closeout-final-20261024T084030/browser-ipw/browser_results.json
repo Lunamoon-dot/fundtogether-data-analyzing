@@ -1,0 +1,229 @@
+{
+  "artifact": {
+    "policy_results": [
+      {
+        "pass_count": 0,
+        "point_count": 18,
+        "policy_id": "v3_3_ipw_symmetric",
+        "robust": false
+      },
+      {
+        "pass_count": 0,
+        "point_count": 18,
+        "policy_id": "v3_3_ipw_report_1",
+        "robust": false
+      },
+      {
+        "pass_count": 0,
+        "point_count": 18,
+        "policy_id": "v3_3_ipw_report_0",
+        "robust": false
+      }
+    ],
+    "q0": "1/2",
+    "q1": "1/2",
+    "q_min": "1/2",
+    "total_points": 54
+  },
+  "browser": "156.0.4314.42",
+  "errors": [],
+  "network": [
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8771/"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8771/styles.css"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8771/app.js"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8771/api/status"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8771/api/runs"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8771/api/runs/run-20261023T233141-ee9de97be5"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8771/api/runs/run-20261023T233141-ee9de97be5/artifacts/ipw.json"
+    }
+  ],
+  "runs": {
+    "ipw": "run-20261023T233141-ee9de97be5",
+    "reused": true
+  },
+  "scenario": "IPW-B01",
+  "status": "passed",
+  "steps": [
+    {
+      "observed": "ceav-m1-v3.3",
+      "status": "pass",
+      "step": "UI selects the V3.3 model"
+    },
+    {
+      "observed": "hybrid_anchor",
+      "status": "pass",
+      "step": "V3.3 keeps the hybrid mechanism"
+    },
+    {
+      "observed": {
+        "budget": "24",
+        "q0": "1/4",
+        "q1": "3/4"
+      },
+      "status": "pass",
+      "step": "V3.3 input shows q0, q1 and shared reward budget"
+    },
+    {
+      "observed": "V3.3 / IPW AUDIT REWARD\n\nReward anchor có bền với q không?\nChạy IPW study\n\nStudy đã đóng gồm 3 policy audit và 18 điểm uncertainty. V3.3 giữ nguyên game V3.2, chỉ dùng inverse-probability weighting cho anchor reward.\n\nStudy đã đóng trước\nPhạm vi\nAcceptance · 1 policy × 1 point\nFull study · 3 policy × 18 point = 54 point\n\nMỗi point tìm đủ 432 branch candidates. Synthetic/assumption chỉ kiểm tra pipeline và độ bền trong lưới đã khai báo.\n\nChưa chạy study V3.3.",
+      "status": "pass",
+      "step": "IPW full study advertises 54 points"
+    },
+    {
+      "observed": {
+        "created_at_utc": "2026-10-23T23:31:42.050186+00:00",
+        "run_id": "run-20261023T233141-ee9de97be5"
+      },
+      "status": "pass",
+      "step": "UI reopened a succeeded full IPW worker run"
+    },
+    {
+      "observed": "succeeded",
+      "status": "pass",
+      "step": "IPW worker reached succeeded"
+    },
+    {
+      "observed": {
+        "grid_only_no_interpolation": true,
+        "policy_count": 3,
+        "scenario_count_per_policy": 18,
+        "total_points": 54,
+        "uncertainty_axes": {
+          "judges.high_effort_cost_multiplier": [
+            "1",
+            "6/5"
+          ],
+          "pi": [
+            "3/10",
+            "1/2",
+            "7/10"
+          ],
+          "verification_anchor.quality": [
+            "4/5",
+            "9/10",
+            "19/20"
+          ]
+        }
+      },
+      "status": "pass",
+      "step": "Worker artifact is the declared 3×18 V3.3 study"
+    },
+    {
+      "observed": {
+        "complete": true,
+        "counts": [
+          432
+        ],
+        "points": 54
+      },
+      "status": "pass",
+      "step": "All 54 points completed exhaustive 432-candidate search"
+    },
+    {
+      "observed": [
+        {
+          "id": "v3_3_ipw_symmetric",
+          "pass": 0,
+          "robust": false,
+          "total": 18
+        },
+        {
+          "id": "v3_3_ipw_report_1",
+          "pass": 0,
+          "robust": false,
+          "total": 18
+        },
+        {
+          "id": "v3_3_ipw_report_0",
+          "pass": 0,
+          "robust": false,
+          "total": 18
+        }
+      ],
+      "status": "pass",
+      "step": "Artifact preserves exact 0/18 policy results"
+    },
+    {
+      "observed": "hybrid_anchor · model ceav-m1-v3.3 · profile theo phạm vi tác vụ · run run-20261023T233141-ee9de97be5\n\n54 point\n\nIPW chỉ đổi phần thưởng anchor: kỳ vọng anchor không phụ thuộc q, còn chi phí audit và trần thanh toán vẫn được báo riêng.\n\nq0\n1/2\n1/2\nXác suất audit khi report = 0\nq1\n1/2\n1/2\nXác suất audit khi report = 1\nq_min\n1/2\n1/2\nNhỏ nhất của q0 và q1; dùng cho trần IPW\nIPW mode\nipw\nipw\nChế độ reward anchor\nReward budget\n24\n24\nTrần reward dùng chung\nMetric\tArtifact value\nReport-one rate (first Judge)\t0,272\n34/125\n\nFalse approval\t0,4474\n2237/5000\n\nWrongly paid value\t0,13422\n6711/50000\n\nFalse rejection\t0,304\n38/125\n\nCash review cost\t5,15658\n257829/50000\n\nAnchor reward variance (first Judge)\t3,31883184\n20742699/6250000\n\nFailure witness\tC · point 0 · report_sensitive_anchor · Δutility 171/200\nPolicy\tPass/total\tRobust\tFailure map\nv3_3_ipw_symmetric\t0/18\tThất bại\tcash_review_cost_gate: 18; false_approval_gate: 6; false_rejection_gate: 6\nv3_3_ipw_report_1\t0/18\tThất bại\tcash_review_cost_gate: 18; false_approval_gate: 6; false_rejection_gate: 6\nv3_3_ipw_report_0\t0/18\tThất bại\tcash_review_cost_gate: 18; false_approval_gate: 6; false_rejection_gate: 6\nBaseline và giới hạn",
+      "status": "pass",
+      "step": "UI displays q0, q1, q_min, IPW mode and reward budget from artifact"
+    },
+    {
+      "observed": {
+        "decimal": 0.272,
+        "exact": "34/125"
+      },
+      "status": "pass",
+      "step": "UI matches artifact exact metric 34/125"
+    },
+    {
+      "observed": {
+        "decimal": 0.4474,
+        "exact": "2237/5000"
+      },
+      "status": "pass",
+      "step": "UI matches artifact exact metric 2237/5000"
+    },
+    {
+      "observed": {
+        "decimal": 0.13422,
+        "exact": "6711/50000"
+      },
+      "status": "pass",
+      "step": "UI matches artifact exact metric 6711/50000"
+    },
+    {
+      "observed": {
+        "decimal": 3.31883184,
+        "exact": "20742699/6250000"
+      },
+      "status": "pass",
+      "step": "UI matches artifact exact metric 20742699/6250000"
+    },
+    {
+      "observed": {
+        "delta_utility": {
+          "decimal": 0.855,
+          "exact": "171/200"
+        },
+        "judge": "C",
+        "point_id": 0
+      },
+      "status": "pass",
+      "step": "UI exposes an artifact failure witness"
+    },
+    {
+      "observed": "cost\t5,15658\n257829/50000\n\nAnchor reward variance (first Judge)\t3,31883184\n20742699/6250000\n\nFailure witness\tC · point 0 · report_sensitive_anchor · Δutility 171/200\nPolicy\tPass/total\tRobust\tFailure map\nv3_3_ipw_symmetric\t0/18\tThất bại\tcash_review_cost_gate: 18; false_approval_gate: 6; false_rejection_gate: 6\nv3_3_ipw_report_1\t0/18\tThất bại\tcash_review_cost_gate: 18; false_approval_gate: 6; false_rejection_gate: 6\nv3_3_ipw_report_0\t0/18\tThất bại\tcash_review_cost_gate: 18; false_approval_gate: 6; false_rejection_gate: 6\nBaseline và giới hạn\n{\n  \"baseline_comparison\": {\n    \"models\": [\n      {\n        \"model_version\": \"ceav-m1-v3.2\",\n        \"status\": \"rerun_required_same_budget\"\n      },\n      {\n        \"model_version\": \"ceav-m1-v3.0\",\n        \"status\": \"reference_only\"\n      }\n    ],\n    \"shared_reward_budget\": \"24\",\n    \"status\": \"reference_only\"\n  },\n  \"limitations\": [\n    \"q0_q1_are_per_judge_audits\",\n    \"assumption_ranges_are_not_confidence_intervals\",\n    \"pure_strategies_only\",\n    \"no_participation_collusion_sybil_or_stake\",\n    \"audit_does_not_change_decision_or_payout\",\n    \"baseline_comparison_requires_same_budget_rerun\",\n    \"latency_not_modeled\"\n  ],\n  \"grid\": {\n    \"grid_only_no_interpolation\": true,\n    \"policy_count\": 3,\n    \"scenario_count_per_policy\": 18,\n    \"total_points\": 54,\n    \"uncertainty_axes\": {\n      \"judges.high_effort_cost_multiplier\": [\n        \"1\",\n        \"6/5\"\n      ],\n      \"pi\": [\n        \"3/10\",\n        \"1/2\",\n        \"7/10\"\n      ],\n      \"verification_anchor.quality\": [\n        \"4/5\",\n        \"9/10\",\n        \"19/20\"\n      ]\n    }\n  }\n}",
+      "status": "pass",
+      "step": "UI preserves the synthetic/assumption and grid-only disclaimer"
+    },
+    {
+      "observed": [],
+      "status": "pass",
+      "step": "No JavaScript runtime errors"
+    }
+  ],
+  "viewport": {
+    "height": 768,
+    "width": 1366
+  }
+}

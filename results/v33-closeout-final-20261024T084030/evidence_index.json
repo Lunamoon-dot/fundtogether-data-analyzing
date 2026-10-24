@@ -1,0 +1,59 @@
+{
+  "status": "VERIFIED",
+  "scope": "CEAV-M1 V3.3 only",
+  "implementation_commit": "2835559652b912536439c5b504da30ba68c91436",
+  "closeout_commit": "to be filled after closeout commit",
+  "full_suite": {
+    "path": "full-suite/test_results.json",
+    "pass": 123,
+    "fail": 0,
+    "error": 0,
+    "skipped": 0,
+    "not_run": 0
+  },
+  "regressions": {
+    "v1": 47,
+    "v2": 15,
+    "v3_3": 13
+  },
+  "browser_ipw": {
+    "path": "browser-ipw/browser_results.json",
+    "status": "passed",
+    "scenario": "IPW-B01",
+    "worker_run": "run-20261023T233141-ee9de97be5"
+  },
+  "mutations": {
+    "v3_3": {
+      "path": "v3_3-mutations/mutation_results.json",
+      "killed": 10,
+      "total": 10
+    },
+    "v2": {
+      "path": "v2-mutations/mutation_results.json",
+      "killed": 9,
+      "total": 9
+    }
+  },
+  "study": {
+    "path": "ipw_public.json",
+    "points": 54,
+    "points_per_policy": 18,
+    "policies": 3,
+    "candidates_per_point": 432,
+    "policy_results": {
+      "v3_3_ipw_symmetric": "0/18",
+      "v3_3_ipw_report_1": "0/18",
+      "v3_3_ipw_report_0": "0/18"
+    }
+  },
+  "raw_worker_artifact": {
+    "path": "results/run-20261023T233141-ee9de97be5/ipw.json",
+    "bytes": 117018796,
+    "sha256": "c51009e33eded1942d19b00c132320ef88e2c705bf26a0bc78584b89919e9001"
+  },
+  "public_projection": {
+    "path": "ipw_public.json",
+    "sha256": "935e38fb19d8b1c17bded9521b00cd61ad4921892644057eef448e5221cdf9e0"
+  },
+  "historical_failures": ["T32", "V2-T14", "V2-T15", "CAL-T07", "CAL-T08", "INC-T08"]
+}

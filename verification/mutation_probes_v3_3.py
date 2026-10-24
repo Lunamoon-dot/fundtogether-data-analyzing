@@ -15,6 +15,8 @@ PROBES={
  "IPW-M06":{"tests":["tests.test_v3_3.V33IPWTests.test_IPW_T08_failure_witness_reconstructs_utility_exactly"],"target":"witness decomposes utility gain","edits":[("ceav_m1/best_response.py","delta_anchor_reward = new_option[\"anchor_reward\"] - candidate_payoff.get(\"anchor_reward\", F(0))","delta_anchor_reward = F(0)")]},
  "IPW-M07":{"tests":["tests.test_v3_3.V33IPWTests.test_IPW_T10_study_rejects_non_q_policy_override"],"target":"study policy allowlist is q-only","edits":[("ceav_m1/ipw.py","if not isinstance(overrides, dict) or set(overrides) != set(POLICY_PATHS):","if False:")]},
  "IPW-M08":{"tests":["tests.test_v3_3.V33IPWTests.test_IPW_T03_ipw_cap_is_checked_against_shared_budget"],"target":"budget is not silently inflated","edits":[("ceav_m1/model.py","if cap > config.reward_budget:","if cap > config.reward_budget * 2:")]},
+ "IPW-M09":{"tests":["verification.mutation_assertions_v3_3.V33MutationAssertions.test_policy_robust_requires_every_point"],"target":"policy robustness requires every uncertainty point","edits":[("ceav_m1/ipw.py","all(point[\"status\"] == \"pass\" for point in selected)","any(point[\"status\"] == \"pass\" for point in selected)")]},
+ "IPW-M10":{"tests":["verification.mutation_assertions_v3_3.V33MutationAssertions.test_invalid_budget_point_is_retained_in_policy_summary"],"target":"invalid-budget points remain visible in the policy summary","edits":[("ceav_m1/ipw.py","selected = [point for point in points if point[\"policy_id\"] == policy[\"policy_id\"]]","selected = [point for point in points if point[\"policy_id\"] == policy[\"policy_id\"] and point[\"status\"] == \"pass\"]")]},
 }
 
 def copy_workspace(dest):

@@ -1,0 +1,188 @@
+{
+  "baseline_exit_code": 0,
+  "production_bytes_unchanged": true,
+  "records": [
+    {
+      "argv": [
+        "C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "tests.test_v2_model.V2ModelTests.test_V2_T02_distribution_matches_independent_oracle",
+        "-v"
+      ],
+      "assertion_log": "V2-M01/test_log.txt",
+      "baseline_source_hash": "1b9ab8db3c63c716b70b98594c46fdc38e9b1671c6729d3d02ed4dde4eee57e2",
+      "exit_code": 1,
+      "expected_failure": "Y=0 uses specificity",
+      "mutation_id": "V2-M01",
+      "patch_sha256": "e51545865f47849de05f96c9b25c3e22521ded2663e6e3eda840f059b4ed0d99",
+      "status": "killed",
+      "test_ids": [
+        "tests.test_v2_model.V2ModelTests.test_V2_T02_distribution_matches_independent_oracle"
+      ]
+    },
+    {
+      "argv": [
+        "C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "tests.test_v2_model.V2ModelTests.test_V2_T02_distribution_matches_independent_oracle",
+        "-v"
+      ],
+      "assertion_log": "V2-M02/test_log.txt",
+      "baseline_source_hash": "1b9ab8db3c63c716b70b98594c46fdc38e9b1671c6729d3d02ed4dde4eee57e2",
+      "exit_code": 1,
+      "expected_failure": "Y=1 uses sensitivity",
+      "mutation_id": "V2-M02",
+      "patch_sha256": "beb5e4005de4881c90c3e935e7e71f3aafde2f62070bb4bc81148ba1630ff923",
+      "status": "killed",
+      "test_ids": [
+        "tests.test_v2_model.V2ModelTests.test_V2_T02_distribution_matches_independent_oracle"
+      ]
+    },
+    {
+      "argv": [
+        "C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "tests.test_v2_model.V2ModelTests.test_V2_T02_distribution_matches_independent_oracle",
+        "tests.test_v2_engine.V2EngineTests.test_V2_T05_candidate_predictions_metrics_and_observations",
+        "-v"
+      ],
+      "assertion_log": "V2-M03/test_log.txt",
+      "baseline_source_hash": "1b9ab8db3c63c716b70b98594c46fdc38e9b1671c6729d3d02ed4dde4eee57e2",
+      "exit_code": 1,
+      "expected_failure": "B/C retain their own channels",
+      "mutation_id": "V2-M03",
+      "patch_sha256": "594d08853af4b7dca0ee934ea0ec498a925c916b9ea84f500b0c7ff3e87f1801",
+      "status": "killed",
+      "test_ids": [
+        "tests.test_v2_model.V2ModelTests.test_V2_T02_distribution_matches_independent_oracle",
+        "tests.test_v2_engine.V2EngineTests.test_V2_T05_candidate_predictions_metrics_and_observations"
+      ]
+    },
+    {
+      "argv": [
+        "C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "tests.test_v2_model.V2ModelTests.test_V2_T01_nested_schema_dispatch_and_errors",
+        "-v"
+      ],
+      "assertion_log": "V2-M04/test_log.txt",
+      "baseline_source_hash": "1b9ab8db3c63c716b70b98594c46fdc38e9b1671c6729d3d02ed4dde4eee57e2",
+      "exit_code": 1,
+      "expected_failure": "Judge names, not JSON order, determine positions",
+      "mutation_id": "V2-M04",
+      "patch_sha256": "5670a4625ddd88d9e835eb7bacc95b636d7bd87f100c6c5511670584e82d8769",
+      "status": "killed",
+      "test_ids": [
+        "tests.test_v2_model.V2ModelTests.test_V2_T01_nested_schema_dispatch_and_errors"
+      ]
+    },
+    {
+      "argv": [
+        "C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "tests.test_v2_model.V2ModelTests.test_V2_T01_nested_schema_dispatch_and_errors",
+        "-v"
+      ],
+      "assertion_log": "V2-M05/test_log.txt",
+      "baseline_source_hash": "1b9ab8db3c63c716b70b98594c46fdc38e9b1671c6729d3d02ed4dde4eee57e2",
+      "exit_code": 1,
+      "expected_failure": "Missing specificity is rejected",
+      "mutation_id": "V2-M05",
+      "patch_sha256": "fbcd2c9f1180d57a3eb6925d414efff3646ac2e9443c391e024bae43bb961f5c",
+      "status": "killed",
+      "test_ids": [
+        "tests.test_v2_model.V2ModelTests.test_V2_T01_nested_schema_dispatch_and_errors"
+      ]
+    },
+    {
+      "argv": [
+        "C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "tests.test_v2_io.V2IOTests.test_V2_T09_manifest_certificate_freeze_and_scenario_identity",
+        "-v"
+      ],
+      "assertion_log": "V2-M06/test_log.txt",
+      "baseline_source_hash": "1b9ab8db3c63c716b70b98594c46fdc38e9b1671c6729d3d02ed4dde4eee57e2",
+      "exit_code": 1,
+      "expected_failure": "Semantic hash includes model_version",
+      "mutation_id": "V2-M06",
+      "patch_sha256": "de9cdcdb902a26d4f93f53daecd319f71be930c5330da28b2061bb2805d3026f",
+      "status": "killed",
+      "test_ids": [
+        "tests.test_v2_io.V2IOTests.test_V2_T09_manifest_certificate_freeze_and_scenario_identity"
+      ]
+    },
+    {
+      "argv": [
+        "C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "tests.test_v2_model.V2ModelTests.test_V2_T03_signal_diagnostics_exact",
+        "-v"
+      ],
+      "assertion_log": "V2-M07/test_log.txt",
+      "baseline_source_hash": "1b9ab8db3c63c716b70b98594c46fdc38e9b1671c6729d3d02ed4dde4eee57e2",
+      "exit_code": 1,
+      "expected_failure": "Signal accuracy is prior weighted",
+      "mutation_id": "V2-M07",
+      "patch_sha256": "66998d9db59f57e33bedc39f6efd381f871a56698c83fe0585a14311b77554dc",
+      "status": "killed",
+      "test_ids": [
+        "tests.test_v2_model.V2ModelTests.test_V2_T03_signal_diagnostics_exact"
+      ]
+    },
+    {
+      "argv": [
+        "C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "tests.test_v2_io.V2IOTests.test_V2_T08_scenario_validation_and_mathematical_neutrality",
+        "-v"
+      ],
+      "assertion_log": "V2-M08/test_log.txt",
+      "baseline_source_hash": "1b9ab8db3c63c716b70b98594c46fdc38e9b1671c6729d3d02ed4dde4eee57e2",
+      "exit_code": 1,
+      "expected_failure": "Scenario cannot alter mathematics",
+      "mutation_id": "V2-M08",
+      "patch_sha256": "01d50078112a6f5bacfe0ef49c2e8c0812039986aee874fed856596673902b42",
+      "status": "killed",
+      "test_ids": [
+        "tests.test_v2_io.V2IOTests.test_V2_T08_scenario_validation_and_mathematical_neutrality"
+      ]
+    },
+    {
+      "argv": [
+        "C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "tests.test_v2_model.V2ModelTests.test_V2_T04_v1_reduction_states_predictions_and_analysis",
+        "-v"
+      ],
+      "assertion_log": "V2-M09/test_log.txt",
+      "baseline_source_hash": "1b9ab8db3c63c716b70b98594c46fdc38e9b1671c6729d3d02ed4dde4eee57e2",
+      "exit_code": 1,
+      "expected_failure": "V1 state generator semantics remain unchanged",
+      "mutation_id": "V2-M09",
+      "patch_sha256": "233da038545e1222a71fef0dd89651b532d3ca5862d2a30f90eefcacddb240fb",
+      "status": "killed",
+      "test_ids": [
+        "tests.test_v2_model.V2ModelTests.test_V2_T04_v1_reduction_states_predictions_and_analysis"
+      ]
+    }
+  ]
+}

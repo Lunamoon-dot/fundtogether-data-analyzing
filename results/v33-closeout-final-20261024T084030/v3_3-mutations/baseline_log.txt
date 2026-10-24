@@ -1,0 +1,12 @@
+test_IPW_T02_zero_report_probability_is_rejected (tests.test_v3_3.V33IPWTests.test_IPW_T02_zero_report_probability_is_rejected) ... ok
+test_IPW_T03_ipw_cap_is_checked_against_shared_budget (tests.test_v3_3.V33IPWTests.test_IPW_T03_ipw_cap_is_checked_against_shared_budget) ... ok
+test_IPW_T06_expected_anchor_and_audit_cost_match_oracle (tests.test_v3_3.V33IPWTests.test_IPW_T06_expected_anchor_and_audit_cost_match_oracle) ... ok
+test_IPW_T08_failure_witness_reconstructs_utility_exactly (tests.test_v3_3.V33IPWTests.test_IPW_T08_failure_witness_reconstructs_utility_exactly) ... ok
+test_IPW_T10_study_rejects_non_q_policy_override (tests.test_v3_3.V33IPWTests.test_IPW_T10_study_rejects_non_q_policy_override) ... ok
+test_invalid_budget_point_is_retained_in_policy_summary (verification.mutation_assertions_v3_3.V33MutationAssertions.test_invalid_budget_point_is_retained_in_policy_summary) ... ok
+test_policy_robust_requires_every_point (verification.mutation_assertions_v3_3.V33MutationAssertions.test_policy_robust_requires_every_point) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 13.073s
+
+OK

@@ -1,7 +1,7 @@
 # CEAV-M1 V3.3 — Verification plan cho IPW audit reward
 
 **Analysis version:** `ceav-m1-v3.3-ipw`  
-**Trạng thái:** targeted evidence đã pass; full browser/release gate còn pending trong môi trường không có browser local.
+**Trạng thái:** `VERIFIED` trên source pin local sau khi tất cả gate bắt buộc pass; phạm vi vẫn chỉ là model synthetic/assumption của workspace.
 
 ## 1. Preconditions
 
@@ -118,4 +118,4 @@ Completion report phải phân biệt:
 - `VERIFIED`: gates và evidence;
 - `STUDY_RESULT`: policy comparison trên synthetic/assumption inputs.
 
-V3.3 đã `IMPLEMENTED` và có targeted engine/CLI/API evidence; full browser/release verification vẫn pending.
+V3.3 đã `IMPLEMENTED` và `VERIFIED` trong phạm vi các gate ở tài liệu này. Closeout giữ nguyên negative result `0/18` cho cả ba policy; verification không phải kết luận Judge ngoài đời sẽ truthful/high-effort hoặc hệ thống production chống collusion/Sybil.

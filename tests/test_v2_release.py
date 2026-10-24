@@ -18,7 +18,8 @@ def latest_browser(scenario):
         if result.get("scenario") != scenario or result.get("status") != "passed":
             continue
         manifest = json.loads((path.parent / "manifest.json").read_text(encoding="utf-8"))
-        flow = ("verification/browser_flows_v3.js" if scenario.startswith("V3-") else
+        flow = ("verification/browser_flows_ipw.js" if scenario.startswith("IPW-") else
+                "verification/browser_flows_v3.js" if scenario.startswith("V3-") else
                 "verification/browser_flows_incentives.js" if scenario.startswith("INC-") else
                 "verification/browser_flows_calibration.js" if scenario.startswith("CAL-") else
                 "verification/browser_flows_v2.js" if scenario.startswith("V2-") else

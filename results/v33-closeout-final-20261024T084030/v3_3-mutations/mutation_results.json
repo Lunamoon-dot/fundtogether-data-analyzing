@@ -1,0 +1,196 @@
+{
+  "baseline_exit_code": 0,
+  "production_bytes_unchanged": true,
+  "records": [
+    {
+      "argv": [
+        "C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "tests.test_v3_3.V33IPWTests.test_IPW_T06_expected_anchor_and_audit_cost_match_oracle",
+        "-v"
+      ],
+      "assertion_log": "IPW-M01/test_log.txt",
+      "exit_code": 1,
+      "expected_failure": "IPW denominator is retained",
+      "mutation_id": "IPW-M01",
+      "patch_sha256": "c4a2823f48fb1dd613d25376a0927491079e16d208296008e50a4de93690120a",
+      "status": "killed",
+      "test_ids": [
+        "tests.test_v3_3.V33IPWTests.test_IPW_T06_expected_anchor_and_audit_cost_match_oracle"
+      ]
+    },
+    {
+      "argv": [
+        "C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "tests.test_v3_3.V33IPWTests.test_IPW_T02_zero_report_probability_is_rejected",
+        "-v"
+      ],
+      "assertion_log": "IPW-M02/test_log.txt",
+      "exit_code": 1,
+      "expected_failure": "q0 and q1 must be strictly positive",
+      "mutation_id": "IPW-M02",
+      "patch_sha256": "0c00b835c9d767aa382b924d28b71459ec2fe18c32986b2096640c1189a72ba5",
+      "status": "killed",
+      "test_ids": [
+        "tests.test_v3_3.V33IPWTests.test_IPW_T02_zero_report_probability_is_rejected"
+      ]
+    },
+    {
+      "argv": [
+        "C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "tests.test_v3_3.V33IPWTests.test_IPW_T03_ipw_cap_is_checked_against_shared_budget",
+        "-v"
+      ],
+      "assertion_log": "IPW-M03/test_log.txt",
+      "exit_code": 1,
+      "expected_failure": "IPW worst-case cap uses q_min",
+      "mutation_id": "IPW-M03",
+      "patch_sha256": "b2fb204f85387ea3ed30022b2a519840a5a165beb66a747b9889f75a23f6360f",
+      "status": "killed",
+      "test_ids": [
+        "tests.test_v3_3.V33IPWTests.test_IPW_T03_ipw_cap_is_checked_against_shared_budget"
+      ]
+    },
+    {
+      "argv": [
+        "C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "tests.test_v3_3.V33IPWTests.test_IPW_T06_expected_anchor_and_audit_cost_match_oracle",
+        "-v"
+      ],
+      "assertion_log": "IPW-M04/test_log.txt",
+      "exit_code": 1,
+      "expected_failure": "audit operating cost remains q-weighted",
+      "mutation_id": "IPW-M04",
+      "patch_sha256": "62ca4182c3483e68ba54156d52ad1f75b626850ee9c29ba3b77879c950e45f55",
+      "status": "killed",
+      "test_ids": [
+        "tests.test_v3_3.V33IPWTests.test_IPW_T06_expected_anchor_and_audit_cost_match_oracle"
+      ]
+    },
+    {
+      "argv": [
+        "C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "tests.test_v3_3.V33IPWTests.test_IPW_T06_expected_anchor_and_audit_cost_match_oracle",
+        "-v"
+      ],
+      "assertion_log": "IPW-M05/test_log.txt",
+      "exit_code": 1,
+      "expected_failure": "shared T drives covariance matrix",
+      "mutation_id": "IPW-M05",
+      "patch_sha256": "486fc0bade51be4e710c2afbf717700dd38c61ded647efd72fe597a7acf01eab",
+      "status": "killed",
+      "test_ids": [
+        "tests.test_v3_3.V33IPWTests.test_IPW_T06_expected_anchor_and_audit_cost_match_oracle"
+      ]
+    },
+    {
+      "argv": [
+        "C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "tests.test_v3_3.V33IPWTests.test_IPW_T08_failure_witness_reconstructs_utility_exactly",
+        "-v"
+      ],
+      "assertion_log": "IPW-M06/test_log.txt",
+      "exit_code": 1,
+      "expected_failure": "witness decomposes utility gain",
+      "mutation_id": "IPW-M06",
+      "patch_sha256": "9b966c0dbb7cce26554412aa1256d80a9766f53abeb3b40aeca70898cabd8806",
+      "status": "killed",
+      "test_ids": [
+        "tests.test_v3_3.V33IPWTests.test_IPW_T08_failure_witness_reconstructs_utility_exactly"
+      ]
+    },
+    {
+      "argv": [
+        "C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "tests.test_v3_3.V33IPWTests.test_IPW_T10_study_rejects_non_q_policy_override",
+        "-v"
+      ],
+      "assertion_log": "IPW-M07/test_log.txt",
+      "exit_code": 1,
+      "expected_failure": "study policy allowlist is q-only",
+      "mutation_id": "IPW-M07",
+      "patch_sha256": "afcdda5b7663a95d604f616c34b8d1c0b757e83a8495811688a8f5bac5829b91",
+      "status": "killed",
+      "test_ids": [
+        "tests.test_v3_3.V33IPWTests.test_IPW_T10_study_rejects_non_q_policy_override"
+      ]
+    },
+    {
+      "argv": [
+        "C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "tests.test_v3_3.V33IPWTests.test_IPW_T03_ipw_cap_is_checked_against_shared_budget",
+        "-v"
+      ],
+      "assertion_log": "IPW-M08/test_log.txt",
+      "exit_code": 1,
+      "expected_failure": "budget is not silently inflated",
+      "mutation_id": "IPW-M08",
+      "patch_sha256": "c83b37522131be9a89f6f674eb0b2568a55cce8cc83ae17b88f0cf92c2247756",
+      "status": "killed",
+      "test_ids": [
+        "tests.test_v3_3.V33IPWTests.test_IPW_T03_ipw_cap_is_checked_against_shared_budget"
+      ]
+    },
+    {
+      "argv": [
+        "C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "verification.mutation_assertions_v3_3.V33MutationAssertions.test_policy_robust_requires_every_point",
+        "-v"
+      ],
+      "assertion_log": "IPW-M09/test_log.txt",
+      "exit_code": 1,
+      "expected_failure": "policy robustness requires every uncertainty point",
+      "mutation_id": "IPW-M09",
+      "patch_sha256": "13a53157f9ad729bdcf1acd5b8163430309270c515c5c143cd6c06540406d89e",
+      "status": "killed",
+      "test_ids": [
+        "verification.mutation_assertions_v3_3.V33MutationAssertions.test_policy_robust_requires_every_point"
+      ]
+    },
+    {
+      "argv": [
+        "C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "verification.mutation_assertions_v3_3.V33MutationAssertions.test_invalid_budget_point_is_retained_in_policy_summary",
+        "-v"
+      ],
+      "assertion_log": "IPW-M10/test_log.txt",
+      "exit_code": 1,
+      "expected_failure": "invalid-budget points remain visible in the policy summary",
+      "mutation_id": "IPW-M10",
+      "patch_sha256": "ae5a7add07f9216626084a82631ce09803af4b6af042724f33f73c297cdcac70",
+      "status": "killed",
+      "test_ids": [
+        "verification.mutation_assertions_v3_3.V33MutationAssertions.test_invalid_budget_point_is_retained_in_policy_summary"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "browser_acceptance_executed": false,
+  "counts": {
+    "error": 0,
+    "fail": 0,
+    "not_run": 0,
+    "pass": 13,
+    "skipped": 0
+  },
+  "duration_seconds": 25.416276600008132,
+  "failure_fixture": false,
+  "records": [
+    {
+      "assertion_or_error": null,
+      "duration_seconds": 0.0007518000056734309,
+      "evidence": null,
+      "status": "pass",
+      "test_id": "IPW-T01",
+      "unittest_id": "tests.test_v3_3.V33IPWTests.test_IPW_T01_version_constant_and_schema_round_trip"
+    },
+    {
+      "assertion_or_error": null,
+      "duration_seconds": 0.00023499999952036887,
+      "evidence": null,
+      "status": "pass",
+      "test_id": "IPW-T02",
+      "unittest_id": "tests.test_v3_3.V33IPWTests.test_IPW_T02_zero_report_probability_is_rejected"
+    },
+    {
+      "assertion_or_error": null,
+      "duration_seconds": 0.00022509999689646065,
+      "evidence": null,
+      "status": "pass",
+      "test_id": "IPW-T03",
+      "unittest_id": "tests.test_v3_3.V33IPWTests.test_IPW_T03_ipw_cap_is_checked_against_shared_budget"
+    },
+    {
+      "assertion_or_error": null,
+      "duration_seconds": 0.0001939999929163605,
+      "evidence": null,
+      "status": "pass",
+      "test_id": "IPW-T04",
+      "unittest_id": "tests.test_v3_3.V33IPWTests.test_IPW_T04_v3_scalar_audit_input_is_rejected"
+    },
+    {
+      "assertion_or_error": null,
+      "duration_seconds": 0.0007162999972933903,
+      "evidence": null,
+      "status": "pass",
+      "test_id": "IPW-T05",
+      "unittest_id": "tests.test_v3_3.V33IPWTests.test_IPW_T05_distribution_is_64_states_and_normalized"
+    },
+    {
+      "assertion_or_error": null,
+      "duration_seconds": 0.01615470000251662,
+      "evidence": null,
+      "status": "pass",
+      "test_id": "IPW-T06",
+      "unittest_id": "tests.test_v3_3.V33IPWTests.test_IPW_T06_expected_anchor_and_audit_cost_match_oracle"
+    },
+    {
+      "assertion_or_error": null,
+      "duration_seconds": 0.01536290001240559,
+      "evidence": null,
+      "status": "pass",
+      "test_id": "IPW-T07",
+      "unittest_id": "tests.test_v3_3.V33IPWTests.test_IPW_T07_expected_anchor_cancels_report_probability"
+    },
+    {
+      "assertion_or_error": null,
+      "duration_seconds": 12.279264999990119,
+      "evidence": null,
+      "status": "pass",
+      "test_id": "IPW-T08",
+      "unittest_id": "tests.test_v3_3.V33IPWTests.test_IPW_T08_failure_witness_reconstructs_utility_exactly"
+    },
+    {
+      "assertion_or_error": null,
+      "duration_seconds": 0.008344000001670793,
+      "evidence": null,
+      "status": "pass",
+      "test_id": "IPW-T09",
+      "unittest_id": "tests.test_v3_3.V33IPWTests.test_IPW_T09_study_expands_predeclared_54_points"
+    },
+    {
+      "assertion_or_error": null,
+      "duration_seconds": 0.0015754999913042411,
+      "evidence": null,
+      "status": "pass",
+      "test_id": "IPW-T10",
+      "unittest_id": "tests.test_v3_3.V33IPWTests.test_IPW_T10_study_rejects_non_q_policy_override"
+    },
+    {
+      "assertion_or_error": null,
+      "duration_seconds": 0.03014249999250751,
+      "evidence": null,
+      "status": "pass",
+      "test_id": "IPW-T11",
+      "unittest_id": "tests.test_v3_3.V33IPWTests.test_IPW_T11_server_validate_exposes_54_point_grid"
+    },
+    {
+      "assertion_or_error": null,
+      "duration_seconds": 0.009321899997303262,
+      "evidence": null,
+      "status": "pass",
+      "test_id": "IPW-T12",
+      "unittest_id": "tests.test_v3_3.V33IPWTests.test_IPW_T12_registry_is_complete_and_discoverable"
+    },
+    {
+      "assertion_or_error": null,
+      "duration_seconds": 12.883109500005958,
+      "evidence": null,
+      "status": "pass",
+      "test_id": "IPW-T13",
+      "unittest_id": "tests.test_v3_3.V33IPWTests.test_IPW_T13_cli_manifest_pins_v33_documents"
+    }
+  ],
+  "reference_results": null,
+  "selected_ids": [],
+  "status": "passed",
+  "suite": "v3_3"
+}

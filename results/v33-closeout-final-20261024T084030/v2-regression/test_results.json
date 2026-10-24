@@ -1,0 +1,194 @@
+{
+  "browser_acceptance_executed": false,
+  "counts": {
+    "error": 0,
+    "fail": 0,
+    "not_run": 0,
+    "pass": 15,
+    "skipped": 0
+  },
+  "duration_seconds": 30.784384200000204,
+  "failure_fixture": false,
+  "records": [
+    {
+      "assertion_or_error": null,
+      "duration_seconds": 0.0021472000080393627,
+      "evidence": null,
+      "status": "pass",
+      "test_id": "V2-T01",
+      "unittest_id": "tests.test_v2_model.V2ModelTests.test_V2_T01_nested_schema_dispatch_and_errors"
+    },
+    {
+      "assertion_or_error": null,
+      "duration_seconds": 0.0016979000065475702,
+      "evidence": null,
+      "status": "pass",
+      "test_id": "V2-T02",
+      "unittest_id": "tests.test_v2_model.V2ModelTests.test_V2_T02_distribution_matches_independent_oracle"
+    },
+    {
+      "assertion_or_error": null,
+      "duration_seconds": 0.0002952999930130318,
+      "evidence": null,
+      "status": "pass",
+      "test_id": "V2-T03",
+      "unittest_id": "tests.test_v2_model.V2ModelTests.test_V2_T03_signal_diagnostics_exact"
+    },
+    {
+      "assertion_or_error": null,
+      "duration_seconds": 0.018101699999533594,
+      "evidence": null,
+      "status": "pass",
+      "test_id": "V2-T04",
+      "unittest_id": "tests.test_v2_model.V2ModelTests.test_V2_T04_v1_reduction_states_predictions_and_analysis"
+    },
+    {
+      "assertion_or_error": null,
+      "duration_seconds": 0.018913000007160008,
+      "evidence": null,
+      "status": "pass",
+      "test_id": "V2-T05",
+      "unittest_id": "tests.test_v2_engine.V2EngineTests.test_V2_T05_candidate_predictions_metrics_and_observations"
+    },
+    {
+      "assertion_or_error": null,
+      "duration_seconds": 0.019056500008446164,
+      "evidence": null,
+      "status": "pass",
+      "test_id": "V2-T06",
+      "unittest_id": "tests.test_v2_engine.V2EngineTests.test_V2_T06_best_response_matches_independent_six_map_oracle"
+    },
+    {
+      "assertion_or_error": null,
+      "duration_seconds": 18.49276280000049,
+      "evidence": {
+        "arithmetic": "exact_integer_ratios",
+        "common_denominator": "19396824000000000",
+        "conditional_payoffs_integrated": 7776,
+        "equilibrium_count": 64,
+        "fixture": "V2-F01",
+        "full_strategy_deviations_compared": 5038848,
+        "payoff_cache_keys": "full raw config, mechanism, z, branch tuple, judge, trial action",
+        "profiles_checked": 46656,
+        "set_difference": []
+      },
+      "status": "pass",
+      "test_id": "V2-T07",
+      "unittest_id": "tests.test_v2_engine.V2EngineTests.test_V2_T07_search_direct_oracle_and_complete_branch_space"
+    },
+    {
+      "assertion_or_error": null,
+      "duration_seconds": 0.8643682999972953,
+      "evidence": null,
+      "status": "pass",
+      "test_id": "V2-T08",
+      "unittest_id": "tests.test_v2_io.V2IOTests.test_V2_T08_scenario_validation_and_mathematical_neutrality"
+    },
+    {
+      "assertion_or_error": null,
+      "duration_seconds": 0.46070090000284836,
+      "evidence": null,
+      "status": "pass",
+      "test_id": "V2-T09",
+      "unittest_id": "tests.test_v2_io.V2IOTests.test_V2_T09_manifest_certificate_freeze_and_scenario_identity"
+    },
+    {
+      "assertion_or_error": null,
+      "duration_seconds": 0.8354976999980863,
+      "evidence": null,
+      "status": "pass",
+      "test_id": "V2-T10",
+      "unittest_id": "tests.test_v2_io.V2IOTests.test_V2_T10_cli_analyze_scenario_and_no_overwrite"
+    },
+    {
+      "assertion_or_error": null,
+      "duration_seconds": 0.3347630000062054,
+      "evidence": null,
+      "status": "pass",
+      "test_id": "V2-T11",
+      "unittest_id": "tests.test_v2_io.V2IOTests.test_V2_T11_nested_sweep_axes_replay_and_invalid_rows"
+    },
+    {
+      "assertion_or_error": null,
+      "duration_seconds": 1.3530226000002585,
+      "evidence": null,
+      "status": "pass",
+      "test_id": "V2-T12",
+      "unittest_id": "tests.test_v2_server.V2ServerTests.test_V2_T12_status_validate_run_and_direct_parity"
+    },
+    {
+      "assertion_or_error": null,
+      "duration_seconds": 2.64062429999467,
+      "evidence": null,
+      "status": "pass",
+      "test_id": "V2-T13",
+      "unittest_id": "tests.test_v2_server.V2ServerTests.test_V2_T13_history_version_scenario_and_round_trip"
+    },
+    {
+      "assertion_or_error": null,
+      "duration_seconds": 0.1829316000075778,
+      "evidence": {
+        "counts": {
+          "error": 0,
+          "fail": 0,
+          "not_run": 0,
+          "pass": 47,
+          "skipped": 0
+        },
+        "run_id": "v33-v1-regression-closeout-snapshot-20261024T080204",
+        "source_matches": true
+      },
+      "status": "pass",
+      "test_id": "V2-T14",
+      "unittest_id": "tests.test_v2_release.V2ReleaseTests.test_V2_T14_current_source_full_v1_regression"
+    },
+    {
+      "assertion_or_error": null,
+      "duration_seconds": 5.386377999995602,
+      "evidence": {
+        "browser_runs": {
+          "B01": "v33-browser-regression-snapshot-B01-20261024T074827",
+          "B02": "v33-browser-regression-snapshot-B02-20261024T074834",
+          "B03": "v33-browser-regression-snapshot-B03-20261024T074841",
+          "B04": "v33-browser-regression-snapshot-B04-20261024T074905",
+          "B05": "v33-browser-regression-snapshot-B05-20261024T074928",
+          "B06": "v33-browser-regression-snapshot-B06-20261024T074952",
+          "B07": "v33-browser-regression-snapshot-B07-20261024T075931",
+          "B08": "v33-browser-regression-snapshot-B08-20261024T075942",
+          "B09": "v33-browser-regression-snapshot-B09-20261024T075950",
+          "V2-B01": "v33-browser-regression-snapshot-V2-B01-20261024T080036",
+          "V2-B02": "v33-browser-regression-snapshot-V2-B02-20261024T080046",
+          "V2-B03": "v33-browser-regression-snapshot-V2-B03-20261024T080052",
+          "V2-B04": "v33-browser-regression-snapshot-V2-B04-20261024T080059",
+          "V2-B05": "v33-browser-regression-snapshot-V2-B05-20261024T080113",
+          "V2-B06": "v33-browser-regression-snapshot-V2-B06-20261024T080122"
+        },
+        "mutation_run": "v33-v2-mutations-closeout-final",
+        "registry_ids": [
+          "V2-T01",
+          "V2-T02",
+          "V2-T03",
+          "V2-T04",
+          "V2-T05",
+          "V2-T06",
+          "V2-T07",
+          "V2-T08",
+          "V2-T09",
+          "V2-T10",
+          "V2-T11",
+          "V2-T12",
+          "V2-T13",
+          "V2-T14",
+          "V2-T15"
+        ]
+      },
+      "status": "pass",
+      "test_id": "V2-T15",
+      "unittest_id": "tests.test_v2_release.V2ReleaseTests.test_V2_T15_registry_browser_and_mutation_evidence"
+    }
+  ],
+  "reference_results": null,
+  "selected_ids": [],
+  "status": "passed",
+  "suite": "v2"
+}

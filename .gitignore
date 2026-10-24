@@ -103,3 +103,9 @@ results/run-20261023T231205-a85292b95a/inputs/
 !results/v4-1-screening-mutations-curated-20261024T010000/**
 !results/v4-1-audit-cost-sensitivity-20261024T020000/
 !results/v4-1-audit-cost-sensitivity-20261024T020000/**
+
+# Curated CEAV-M1 V3.3 final closeout evidence. The large raw IPW worker
+# artifact remains local; this directory contains the exact public projection,
+# manifests, browser parity result, regression and mutation certificates.
+!results/v33-closeout-final-20261024T084030/
+!results/v33-closeout-final-20261024T084030/**
