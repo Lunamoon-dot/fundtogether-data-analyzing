@@ -1,0 +1,76 @@
+# CEAV-M1 — External Research Brief
+
+**Version:** 0.2 review package
+**Scope:** verified V3–V6 evidence, the separated payment/decision-audit study, and its declared strategic boundary. This brief is a research package, not a production design or a submission-readiness claim.
+
+## 1. Motivation
+
+FundTogether studies milestone verification for an escrow-like crowdfunding workflow. A creator presents evidence that a milestone is complete; reviewers spend effort to acquire private information; a final decision controls whether a payout is released. The practical problem is to obtain useful effort and accurate decisions while keeping audit exposure, reviewer payments, and false payouts within a fixed budget.
+
+The central difficulty is strategic. A reviewer may value a particular release outcome, may choose an uninformative report when reporting has no marginal payoff, or may seek an audit when an audit-contingent reward makes that privately profitable. Therefore truthful behavior cannot be inferred from a good signal model or from one truthful profile alone.
+
+## 2. Formal question
+
+For a fixed finite CEAV-M1 game, can a mechanism simultaneously provide (i) a strict effort incentive, (ii) a truthful local equilibrium, (iii) acceptable decision quality and cash cost, and (iv) resistance to external release preferences? The study separates claims about the truthful profile from claims about every pure equilibrium in the declared stationary six-action-per-branch class.
+
+The model uses binary ground truth `Y`, public signal `Z`, private signal `X`, a trusted audit `T`, three Judges, two public branches, exact rational arithmetic, `B=6`, `C_FA=2`, `C_FR=1`, and payout value `V=1`. False-accept and false-reject rates are conditional probabilities:
+
+```text
+FA = P(D=1 | Y=0)
+FR = P(D=0 | Y=1)
+WrongPayout = V × P(Y=0,D=1)
+DecisionLoss = C_FA × P(Y=0,D=1) + C_FR × P(Y=1,D=0)
+```
+
+With `π=P(Y=1)=1/2`, `V=1`, `C_FA=2`, and `C_FR=1`, this reduces to `WrongPayout=FA/2` and `DecisionLoss=FA+FR/2`.
+
+## 3. Mechanism architecture under study
+
+The dual-purpose architecture keeps two independent lotteries:
+
+- `A_pay` selects reward eligibility with probability `a=2/5`, independently of the report. A trusted audit is observed when this event occurs, and the reviewer bonus is paid only on this event.
+- `A_dec` selects decision verification with probability `t=1/6`, but only for the frozen risk class `S={Z=0, sum(reports)=2}`. It affects decision verification and does not create reward eligibility.
+
+The union event is charged once, so exposure is `P(A_pay ∪ A_dec)`. Separating the lotteries is intended to remove the direct report-to-payment channel while preserving risk-targeted decision verification. The study does not assume that this separation solves external-interest manipulation or global equilibrium selection.
+
+## 4. Verified results
+
+### T3 — Neutral feasibility
+
+Under neutral reviewers and the frozen All-H01 peer profile, the payment lottery supplies an exact effort gap of `7/500` between high and low effort. The independent proof review records the corresponding private values `M_L=33/50` and `M_H=37/50`, with effort cost `2/25`. The neutral profile passes the declared quality, cash, reserve, and exposure gates for the certified Selective and Uniform comparisons.
+
+### T4 — Local external-interest stability
+
+For one Judge with utility `E[R_i] - effort_cost_i + b_i P(D_final=1)`, affine exact payoff comparison gives the following strict All-H01 intervals:
+
+| Mechanism | Local interval for `b_i` |
+|---|---:|
+| Selective | `-70/633 < b_i < 175/1102` |
+| Uniform | `-218750/2070709 < b_i < 218750/1365587` |
+
+These are local best-response results against frozen peers and calibration. They are not a global uniqueness theorem.
+
+### T5 — Global-quality failure at `b=1/10`
+
+At symmetric preferences `b=(1/10,1/10,1/10)`, exhaustive factorized checking of the declared pure stationary class finds four pure equilibria for each frozen mechanism. All-H01 remains one equilibrium, but three additional strict equilibria are bad: each fails the false-accept gate. For Selective, the safe all-pure component around zero is `-70/633 < b < 175/1922`; the positive endpoint is much smaller than the local one-Judge endpoint because global deviations can coordinate through equilibrium profiles. The frozen report labels the study `STRATEGIC_FAILURE` for global robustness, while preserving a nonempty local neutral neighborhood.
+
+At neutral `b=0`, Selective has `FA=43/1250`, `FR=481/3125`, loss `348/3125`; Uniform has `FA=328691/9765625`, `FR=3184297/19531250`, loss `4499061/39062500`. Both have union exposure `2557/6250` and expected cash `46957/25000` under All-H01. These comparisons are equilibrium-specific; equal neutral exposure does not imply equal exposure under different equilibrium reports.
+
+## 5. Contribution relative to prior work
+
+The candidate contribution is instance-level and conditional: exact rational incentive and equilibrium boundaries for a separated payment/decision-audit architecture under the stated finite CEAV game. It is not a claim to have invented proper scoring, peer grading, costly-information incentives, or report-sensitive auditing. Relevant prior sources include Boutilier’s decision-maker scoring rules ([AAMAS 2012 primary PDF](https://www.cs.toronto.edu/~cebly/Papers/Boutilier_aamas12.pdf)), Chen et al.’s principal-agent treatment of information acquisition ([ICML 2023 / PMLR](https://proceedings.mlr.press/v202/chen23ah.html)), and Zarkoob, Fu, and Leyton-Brown’s report-sensitive spot checking ([AAMAS 2020 primary PDF](https://www.ifaamas.org/Proceedings/aamas2020/pdfs/p1593.pdf)). A systematic literature review is still required before making a broad novelty claim.
+
+## 6. Limitations and trust assumptions
+
+- The equilibrium conclusions are exact for the frozen finite strategy class and named distributions; they do not cover mixed strategies, coalitions, dynamic learning, or arbitrary mechanisms.
+- `T`, `Z`, and `X` accuracy and conditional independence are synthetic assumptions. No field measurements of audit sensitivity, specificity, effort, cost, latency, or reviewer participation are supplied.
+- The bound on `b` is an assumption about reviewer preferences, not an enforcement mechanism. Sybil resistance, independence, collusion resistance, evidence integrity, and settlement reliability remain open operational questions.
+- Hashes establish artifact identity. Independent code checks establish the reported finite calculations; neither constitutes external human peer review.
+
+## 7. Questions for an external reviewer
+
+1. Is the separation of report-independent payment auditing from risk-dependent decision auditing a meaningful instance-level contribution once the prior-art boundaries are fully screened?
+2. Are the finite-class equilibrium claims, conditioning conventions, and factorized exhaustive coverage sufficient for the stated local-versus-global conclusions?
+3. Which empirical milestone, audit protocol, and reviewer-participation assumptions must be measured before these theoretical results can inform a real escrow workflow?
+
+The detailed derivations, certificates, hashes, and clean replay instructions are in [`CEAV_M1_MANUSCRIPT_V0_2.md`](CEAV_M1_MANUSCRIPT_V0_2.md) and [`review-package/README.md`](review-package/README.md).
