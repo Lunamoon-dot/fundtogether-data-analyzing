@@ -1,0 +1,41 @@
+{
+  "event_type": "v4.1_audit_cost_sensitivity_implementation_start",
+  "model_version": "ceav-m1-v4.1-audit-cost-sensitivity",
+  "status": "frozen",
+  "implementation_start": true,
+  "preregistered": false,
+  "scope": "fixed V3-HET policy-pair kappa sensitivity; no frontier re-optimization; no production CLI/API/UI",
+  "created_at_utc": "2026-10-24T00:42:58.328791+00:00",
+  "inputs": [
+    {
+      "source": "CEAV_M1_V4_1_AUDIT_COST_SENSITIVITY_SPEC.md",
+      "snapshot": "spec_history/v4.1-audit-cost-sensitivity-implementation-start-20261024T014500/CEAV_M1_V4_1_AUDIT_COST_SENSITIVITY_SPEC.md",
+      "sha256": "eba9c986642bacf4e5d764b2cd189a965a2855a7e769bc055615d53c4680a4d5"
+    },
+    {
+      "source": "CEAV_M1_V4_1_SCREENING_SPEC.md",
+      "snapshot": "spec_history/v4.1-audit-cost-sensitivity-implementation-start-20261024T014500/CEAV_M1_V4_1_SCREENING_SPEC.md",
+      "sha256": "bf68f7eb202d1f5f593e603c3a58d17a5234b952238e45dc2d89949cf69022ad"
+    },
+    {
+      "source": "verification/v4_1_screening.py",
+      "snapshot": "spec_history/v4.1-audit-cost-sensitivity-implementation-start-20261024T014500/verification/v4_1_screening.py",
+      "sha256": "ec0e4aed5ffa73a4dc3b1c8dcdd355edf9173094f59ce12434183143f1bbd4dc"
+    },
+    {
+      "source": "verification/oracle_v4_1_screening.py",
+      "snapshot": "spec_history/v4.1-audit-cost-sensitivity-implementation-start-20261024T014500/verification/oracle_v4_1_screening.py",
+      "sha256": "165a95c863d23b35f1ca0bf00c35d86d2a857449ea48f444f68519b26fa26e13"
+    },
+    {
+      "source": "results/v4-1-minimal-screening-curated-20261024T011500/screening_summary.json",
+      "snapshot": "spec_history/v4.1-audit-cost-sensitivity-implementation-start-20261024T014500/results/v4-1-minimal-screening-curated-20261024T011500/screening_summary.json",
+      "sha256": "648e6f4b2a1f84939bf467d04e53c6d333a51151ef6cdf609afa229aacb2f7bd"
+    },
+    {
+      "source": "results/v4-1-minimal-screening-curated-20261024T011500/manifest.json",
+      "snapshot": "spec_history/v4.1-audit-cost-sensitivity-implementation-start-20261024T014500/results/v4-1-minimal-screening-curated-20261024T011500/manifest.json",
+      "sha256": "3cf1100200ad253d5c8c69883bd10f5cae03ee3690f4faf76b7c12748293d43c"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+--- verification/v4_1_screening.py
++++ verification/v4_1_screening.py
+@@ -164,7 +164,7 @@
+                          * report_for(action_i, row["signals"][judge_i])
+                          * report_for(action_j, row["signals"][judge_j])
+                          for row in rows)
+-            self._score_cache[key] = moment - mean_i * mean_j
++            self._score_cache[key] = moment + mean_i * mean_j
+         return self._score_cache[key]
+ 
+     def anchor_match(self, z, action, judge):

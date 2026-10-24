@@ -1,0 +1,14 @@
+test_tie_boundary_keeps_all_low_equilibrium (tests.test_v4_1_screening.V41ScreeningTests.test_tie_boundary_keeps_all_low_equilibrium) ... FAIL
+
+======================================================================
+FAIL: test_tie_boundary_keeps_all_low_equilibrium (tests.test_v4_1_screening.V41ScreeningTests.test_tie_boundary_keeps_all_low_equilibrium)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\dell\AppData\Local\Temp\ceav-v41-mutants-98x15tqi\V41-M05\tests\test_v4_1_screening.py", line 91, in test_tie_boundary_keeps_all_low_equilibrium
+    self.assertIn((action,) * 3, profiles)
+AssertionError: ('L0', 'L0', 'L0') not found in {('L1', 'H00', 'H10'), ('L1', 'H10', 'H11'), ('L1', 'H10', 'H10'), ('H10', 'L1', 'H00'), ('H00', 'L1', 'H10'), ('H10', 'H00', 'H11'), ('H11', 'H00', 'H11'), ('H10', 'H11', 'L1'), ('H11', 'H11', 'L1'), ('H00', 'H11', 'H11'), ('H00', 'H11', 'H10'), ('H10', 'L1', 'L1'), ('H10', 'H00', 'H10'), ('H11', 'H00', 'H10'), ('H00', 'L1', 'H00'), ('L1', 'H00', 'H00'), ('L1', 'H10', 'H00'), ('L1', 'H00', 'L1'), ('H11', 'H10', 'H11'), ('H00', 'L1', 'L1'), ('L1', 'H10', 'L1'), ('H00', 'H11', 'H00'), ('H10', 'H00', 'H00'), ('H11', 'H00', 'H00'), ('H11', 'H10', 'H10'), ('H10', 'H00', 'L1'), ('H11', 'H00', 'L1'), ('H00', 'H00', 'H11'), ('H10', 'H10', 'H11'), ('H00', 'H11', 'L1'), ('H00', 'H00', 'H10'), ('H00', 'H10', 'H11'), ('H10', 'H10', 'H10'), ('H00', 'H10', 'H10'), ('H11', 'H10', 'H00'), ('H11', 'L1', 'L1'), ('L1', 'L1', 'H11'), ('L1', 'L1', 'H10'), ('H11', 'H10', 'L1'), ('H00', 'H00', 'H00'), ('L1', 'H11', 'H11'), ('H11', 'L1', 'H11'), ('H10', 'H10', 'H00'), ('H00', 'H10', 'H00'), ('L1', 'H11', 'H10'), ('H00', 'H00', 'L1'), ('H10', 'H10', 'L1'), ('H00', 'H10', 'L1'), ('H11', 'L1', 'H10'), ('H10', 'H11', 'H11'), ('H11', 'H11', 'H11'), ('L1', 'L1', 'H00'), ('H10', 'L1', 'H11'), ('L1', 'L1', 'L1'), ('H10', 'L1', 'H10'), ('H10', 'H11', 'H10'), ('H11', 'H11', 'H10'), ('L1', 'H11', 'H00'), ('H11', 'L1', 'H00'), ('L1', 'H11', 'L1'), ('H00', 'L1', 'H11'), ('L1', 'H00', 'H11'), ('H10', 'H11', 'H00'), ('H11', 'H11', 'H00')}
+
+----------------------------------------------------------------------
+Ran 1 test in 0.085s
+
+FAILED (failures=1)

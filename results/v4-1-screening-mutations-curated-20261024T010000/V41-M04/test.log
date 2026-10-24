@@ -1,0 +1,14 @@
+test_target_cash_uses_target_weights_separately_from_batch_average (tests.test_v4_1_screening.V41ScreeningTests.test_target_cash_uses_target_weights_separately_from_batch_average) ... FAIL
+
+======================================================================
+FAIL: test_target_cash_uses_target_weights_separately_from_batch_average (tests.test_v4_1_screening.V41ScreeningTests.test_target_cash_uses_target_weights_separately_from_batch_average)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\dell\AppData\Local\Temp\ceav-v41-mutants-98x15tqi\V41-M04\tests\test_v4_1_screening.py", line 136, in test_target_cash_uses_target_weights_separately_from_batch_average
+    self.assertEqual(evaluated["metrics"]["cash_review_cost"], expected_target)
+AssertionError: Fraction(1583, 450) != Fraction(2671, 750)
+
+----------------------------------------------------------------------
+Ran 1 test in 0.032s
+
+FAILED (failures=1)

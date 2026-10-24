@@ -1,0 +1,23 @@
+test_branch_search_keeps_all_low_and_label_inversion (tests.test_v4_1_screening.V41ScreeningTests.test_branch_search_keeps_all_low_and_label_inversion) ... FAIL
+test_full_screening_retains_asymmetric_effort_equilibria (tests.test_v4_1_screening.V41ScreeningTests.test_full_screening_retains_asymmetric_effort_equilibria) ... FAIL
+
+======================================================================
+FAIL: test_branch_search_keeps_all_low_and_label_inversion (tests.test_v4_1_screening.V41ScreeningTests.test_branch_search_keeps_all_low_and_label_inversion)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\dell\AppData\Local\Temp\ceav-v41-mutants-98x15tqi\V41-M06\tests\test_v4_1_screening.py", line 81, in test_branch_search_keeps_all_low_and_label_inversion
+    self.assertIn(("L0", "L0", "L0"), profiles)
+AssertionError: ('L0', 'L0', 'L0') not found in {('H01', 'H01', 'H01')}
+
+======================================================================
+FAIL: test_full_screening_retains_asymmetric_effort_equilibria (tests.test_v4_1_screening.V41ScreeningTests.test_full_screening_retains_asymmetric_effort_equilibria)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\dell\AppData\Local\Temp\ceav-v41-mutants-98x15tqi\V41-M06\tests\test_v4_1_screening.py", line 144, in test_full_screening_retains_asymmetric_effort_equilibria
+    self.assertTrue(any(record["classification"] == "asymmetric_effort" for record in result["equilibria"]))
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.218s
+
+FAILED (failures=2)

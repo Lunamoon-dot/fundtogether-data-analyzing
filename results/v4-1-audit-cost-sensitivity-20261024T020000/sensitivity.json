@@ -1,0 +1,325 @@
+{
+  "status": "passed",
+  "fixture": "V3-HET",
+  "study_scope": "fixed_pair_only",
+  "policies": {
+    "audit_only": {
+      "lambda_peer": "0",
+      "mu": "3/2",
+      "q": "5/8"
+    },
+    "hybrid": {
+      "lambda_peer": "1/4",
+      "mu": "5/4",
+      "q": "1/2"
+    }
+  },
+  "baseline_cash": {
+    "audit_only": "381/160",
+    "hybrid": "14551/6000"
+  },
+  "kappa_star": "527/1500",
+  "audit_gate_kappa_max": "259/100",
+  "hybrid_gate_kappa_max": "9449/3000",
+  "hybrid_cheaper_and_gate_feasible_interval": {
+    "lower_exclusive": "527/1500",
+    "upper_inclusive": "9449/3000"
+  },
+  "points": [
+    {
+      "kappa": "0",
+      "audit_only": {
+        "policy": {
+          "lambda_peer": "0",
+          "mu": "3/2",
+          "q": "5/8"
+        },
+        "kappa": "0",
+        "cash_review_cost": "381/160",
+        "cash_gate_pass": true,
+        "quality_gate_pass": true,
+        "robust_under_declared_gates": true,
+        "quality": {
+          "accuracy": "1813/2000",
+          "false_approval_rate": "51/500",
+          "false_rejection_rate": "17/200",
+          "wrong_payout_value": "51/1000"
+        }
+      },
+      "hybrid": {
+        "policy": {
+          "lambda_peer": "1/4",
+          "mu": "5/4",
+          "q": "1/2"
+        },
+        "kappa": "0",
+        "cash_review_cost": "14551/6000",
+        "cash_gate_pass": true,
+        "quality_gate_pass": true,
+        "robust_under_declared_gates": true,
+        "quality": {
+          "accuracy": "421/500",
+          "false_approval_rate": "12/125",
+          "false_rejection_rate": "11/50",
+          "wrong_payout_value": "6/125"
+        }
+      },
+      "cheaper": "audit_only",
+      "hybrid_economic_advantage_at_point": false
+    },
+    {
+      "kappa": "1/4",
+      "audit_only": {
+        "policy": {
+          "lambda_peer": "0",
+          "mu": "3/2",
+          "q": "5/8"
+        },
+        "kappa": "1/4",
+        "cash_review_cost": "203/80",
+        "cash_gate_pass": true,
+        "quality_gate_pass": true,
+        "robust_under_declared_gates": true,
+        "quality": {
+          "accuracy": "1813/2000",
+          "false_approval_rate": "51/500",
+          "false_rejection_rate": "17/200",
+          "wrong_payout_value": "51/1000"
+        }
+      },
+      "hybrid": {
+        "policy": {
+          "lambda_peer": "1/4",
+          "mu": "5/4",
+          "q": "1/2"
+        },
+        "kappa": "1/4",
+        "cash_review_cost": "15301/6000",
+        "cash_gate_pass": true,
+        "quality_gate_pass": true,
+        "robust_under_declared_gates": true,
+        "quality": {
+          "accuracy": "421/500",
+          "false_approval_rate": "12/125",
+          "false_rejection_rate": "11/50",
+          "wrong_payout_value": "6/125"
+        }
+      },
+      "cheaper": "audit_only",
+      "hybrid_economic_advantage_at_point": false
+    },
+    {
+      "kappa": "527/1500",
+      "audit_only": {
+        "policy": {
+          "lambda_peer": "0",
+          "mu": "3/2",
+          "q": "5/8"
+        },
+        "kappa": "527/1500",
+        "cash_review_cost": "3121/1200",
+        "cash_gate_pass": true,
+        "quality_gate_pass": true,
+        "robust_under_declared_gates": true,
+        "quality": {
+          "accuracy": "1813/2000",
+          "false_approval_rate": "51/500",
+          "false_rejection_rate": "17/200",
+          "wrong_payout_value": "51/1000"
+        }
+      },
+      "hybrid": {
+        "policy": {
+          "lambda_peer": "1/4",
+          "mu": "5/4",
+          "q": "1/2"
+        },
+        "kappa": "527/1500",
+        "cash_review_cost": "3121/1200",
+        "cash_gate_pass": true,
+        "quality_gate_pass": true,
+        "robust_under_declared_gates": true,
+        "quality": {
+          "accuracy": "421/500",
+          "false_approval_rate": "12/125",
+          "false_rejection_rate": "11/50",
+          "wrong_payout_value": "6/125"
+        }
+      },
+      "cheaper": "tie",
+      "hybrid_economic_advantage_at_point": false
+    },
+    {
+      "kappa": "3/8",
+      "audit_only": {
+        "policy": {
+          "lambda_peer": "0",
+          "mu": "3/2",
+          "q": "5/8"
+        },
+        "kappa": "3/8",
+        "cash_review_cost": "837/320",
+        "cash_gate_pass": true,
+        "quality_gate_pass": true,
+        "robust_under_declared_gates": true,
+        "quality": {
+          "accuracy": "1813/2000",
+          "false_approval_rate": "51/500",
+          "false_rejection_rate": "17/200",
+          "wrong_payout_value": "51/1000"
+        }
+      },
+      "hybrid": {
+        "policy": {
+          "lambda_peer": "1/4",
+          "mu": "5/4",
+          "q": "1/2"
+        },
+        "kappa": "3/8",
+        "cash_review_cost": "3919/1500",
+        "cash_gate_pass": true,
+        "quality_gate_pass": true,
+        "robust_under_declared_gates": true,
+        "quality": {
+          "accuracy": "421/500",
+          "false_approval_rate": "12/125",
+          "false_rejection_rate": "11/50",
+          "wrong_payout_value": "6/125"
+        }
+      },
+      "cheaper": "hybrid",
+      "hybrid_economic_advantage_at_point": true
+    },
+    {
+      "kappa": "1/2",
+      "audit_only": {
+        "policy": {
+          "lambda_peer": "0",
+          "mu": "3/2",
+          "q": "5/8"
+        },
+        "kappa": "1/2",
+        "cash_review_cost": "431/160",
+        "cash_gate_pass": true,
+        "quality_gate_pass": true,
+        "robust_under_declared_gates": true,
+        "quality": {
+          "accuracy": "1813/2000",
+          "false_approval_rate": "51/500",
+          "false_rejection_rate": "17/200",
+          "wrong_payout_value": "51/1000"
+        }
+      },
+      "hybrid": {
+        "policy": {
+          "lambda_peer": "1/4",
+          "mu": "5/4",
+          "q": "1/2"
+        },
+        "kappa": "1/2",
+        "cash_review_cost": "16051/6000",
+        "cash_gate_pass": true,
+        "quality_gate_pass": true,
+        "robust_under_declared_gates": true,
+        "quality": {
+          "accuracy": "421/500",
+          "false_approval_rate": "12/125",
+          "false_rejection_rate": "11/50",
+          "wrong_payout_value": "6/125"
+        }
+      },
+      "cheaper": "hybrid",
+      "hybrid_economic_advantage_at_point": true
+    },
+    {
+      "kappa": "1",
+      "audit_only": {
+        "policy": {
+          "lambda_peer": "0",
+          "mu": "3/2",
+          "q": "5/8"
+        },
+        "kappa": "1",
+        "cash_review_cost": "481/160",
+        "cash_gate_pass": true,
+        "quality_gate_pass": true,
+        "robust_under_declared_gates": true,
+        "quality": {
+          "accuracy": "1813/2000",
+          "false_approval_rate": "51/500",
+          "false_rejection_rate": "17/200",
+          "wrong_payout_value": "51/1000"
+        }
+      },
+      "hybrid": {
+        "policy": {
+          "lambda_peer": "1/4",
+          "mu": "5/4",
+          "q": "1/2"
+        },
+        "kappa": "1",
+        "cash_review_cost": "17551/6000",
+        "cash_gate_pass": true,
+        "quality_gate_pass": true,
+        "robust_under_declared_gates": true,
+        "quality": {
+          "accuracy": "421/500",
+          "false_approval_rate": "12/125",
+          "false_rejection_rate": "11/50",
+          "wrong_payout_value": "6/125"
+        }
+      },
+      "cheaper": "hybrid",
+      "hybrid_economic_advantage_at_point": true
+    },
+    {
+      "kappa": "9449/3000",
+      "audit_only": {
+        "policy": {
+          "lambda_peer": "0",
+          "mu": "3/2",
+          "q": "5/8"
+        },
+        "kappa": "9449/3000",
+        "cash_review_cost": "20879/4800",
+        "cash_gate_pass": false,
+        "quality_gate_pass": true,
+        "robust_under_declared_gates": false,
+        "quality": {
+          "accuracy": "1813/2000",
+          "false_approval_rate": "51/500",
+          "false_rejection_rate": "17/200",
+          "wrong_payout_value": "51/1000"
+        }
+      },
+      "hybrid": {
+        "policy": {
+          "lambda_peer": "1/4",
+          "mu": "5/4",
+          "q": "1/2"
+        },
+        "kappa": "9449/3000",
+        "cash_review_cost": "4",
+        "cash_gate_pass": true,
+        "quality_gate_pass": true,
+        "robust_under_declared_gates": true,
+        "quality": {
+          "accuracy": "421/500",
+          "false_approval_rate": "12/125",
+          "false_rejection_rate": "11/50",
+          "wrong_payout_value": "6/125"
+        }
+      },
+      "cheaper": "hybrid",
+      "hybrid_economic_advantage_at_point": true
+    }
+  ],
+  "finding": "hybrid_fixed_pair_has_a_positive_audit_cost_tradeoff_but_quality_tradeoff_remains",
+  "limits": [
+    "fixed policy pair",
+    "synthetic V3-HET",
+    "no frontier re-optimization",
+    "no human labor calibration",
+    "no global or production conclusion"
+  ]
+}

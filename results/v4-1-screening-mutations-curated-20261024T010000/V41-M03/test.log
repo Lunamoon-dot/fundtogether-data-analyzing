@@ -1,0 +1,14 @@
+test_frozen_peer_deviation_uses_candidate_action_in_utility (tests.test_v4_1_screening.V41ScreeningTests.test_frozen_peer_deviation_uses_candidate_action_in_utility) ... FAIL
+
+======================================================================
+FAIL: test_frozen_peer_deviation_uses_candidate_action_in_utility (tests.test_v4_1_screening.V41ScreeningTests.test_frozen_peer_deviation_uses_candidate_action_in_utility)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\dell\AppData\Local\Temp\ceav-v41-mutants-98x15tqi\V41-M03\tests\test_v4_1_screening.py", line 68, in test_frozen_peer_deviation_uses_candidate_action_in_utility
+    self.assertEqual(deviation["options"]["H10"], expected)
+AssertionError: Fraction(2753, 2500) != Fraction(1997, 2500)
+
+----------------------------------------------------------------------
+Ran 1 test in 0.046s
+
+FAILED (failures=1)

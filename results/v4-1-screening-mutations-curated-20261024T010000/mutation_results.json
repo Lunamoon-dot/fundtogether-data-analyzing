@@ -1,0 +1,72 @@
+{
+  "production_bytes_unchanged": true,
+  "records": [
+    {
+      "mutation_id": "V41-M01",
+      "status": "killed",
+      "target": "effort cost remains in utility",
+      "tests": [
+        "tests.test_v4_1_screening.V41ScreeningTests.test_effort_cost_is_in_utility"
+      ],
+      "exit_code": 1,
+      "assertion_log": "V41-M01/test.log",
+      "patch_sha256": "9a13cd8bd2337bc345d4891ccf5e117effdac02eae316850b283b06b52ca90f6"
+    },
+    {
+      "mutation_id": "V41-M02",
+      "status": "killed",
+      "target": "centered covariance subtracts independent means",
+      "tests": [
+        "tests.test_v4_1_screening.V41ScreeningTests.test_covariance_identity_matches_direct_finite_score"
+      ],
+      "exit_code": 1,
+      "assertion_log": "V41-M02/test.log",
+      "patch_sha256": "a561c384977d62cb94e92c9eb09e7ae8d3c7b13d9317bdb532c13d232db615e9"
+    },
+    {
+      "mutation_id": "V41-M03",
+      "status": "killed",
+      "target": "frozen-peer deviation changes only the focal action",
+      "tests": [
+        "tests.test_v4_1_screening.V41ScreeningTests.test_frozen_peer_deviation_uses_candidate_action_in_utility"
+      ],
+      "exit_code": 1,
+      "assertion_log": "V41-M03/test.log",
+      "patch_sha256": "e5f048d5079935f2cb8deacd240224ada13610432fa903bc5293a361df5f1b8e"
+    },
+    {
+      "mutation_id": "V41-M04",
+      "status": "killed",
+      "target": "target cash gate uses target population weights",
+      "tests": [
+        "tests.test_v4_1_screening.V41ScreeningTests.test_target_cash_uses_target_weights_separately_from_batch_average"
+      ],
+      "exit_code": 1,
+      "assertion_log": "V41-M04/test.log",
+      "patch_sha256": "7d263d3d124066b9410c5bf3db6b759502c5e0681b15472677a0af2eafd375a9"
+    },
+    {
+      "mutation_id": "V41-M05",
+      "status": "killed",
+      "target": "zero-regret tie profiles remain equilibria",
+      "tests": [
+        "tests.test_v4_1_screening.V41ScreeningTests.test_tie_boundary_keeps_all_low_equilibrium"
+      ],
+      "exit_code": 1,
+      "assertion_log": "V41-M05/test.log",
+      "patch_sha256": "1a197cb8c1598e497c73eba04777913ab2875cadfc98bd057d4e26d2adb0abd4"
+    },
+    {
+      "mutation_id": "V41-M06",
+      "status": "killed",
+      "target": "all-low, inverted and asymmetric pure equilibria are retained",
+      "tests": [
+        "tests.test_v4_1_screening.V41ScreeningTests.test_branch_search_keeps_all_low_and_label_inversion",
+        "tests.test_v4_1_screening.V41ScreeningTests.test_full_screening_retains_asymmetric_effort_equilibria"
+      ],
+      "exit_code": 1,
+      "assertion_log": "V41-M06/test.log",
+      "patch_sha256": "a23f39c835682d9b7019edf6afca45ac516fd024b9d940046afb8b5445b3f1a9"
+    }
+  ]
+}

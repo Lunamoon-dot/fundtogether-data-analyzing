@@ -1,0 +1,32 @@
+{
+  "event_type": "v4.1_curated_mutation_evidence",
+  "status": "succeeded",
+  "source_artifact": "results/v4-1-screening-mutations-20261024T0100000000000Z",
+  "inputs": [
+    {
+      "source": "verification/mutation_probes_v4_1.py",
+      "sha256": "15181939bb0720ac715739c20b63291feaf85ffe31c4cfb6dcff9db32102be47"
+    },
+    {
+      "source": "verification/v4_1_screening.py",
+      "sha256": "ec0e4aed5ffa73a4dc3b1c8dcdd355edf9173094f59ce12434183143f1bbd4dc"
+    },
+    {
+      "source": "verification/oracle_v4_1_screening.py",
+      "sha256": "165a95c863d23b35f1ca0bf00c35d86d2a857449ea48f444f68519b26fa26e13"
+    },
+    {
+      "source": "tests/test_v4_1_screening.py",
+      "sha256": "bbf3257c7d43d0d0d620facfce80d9e86bf53f3421cae7155aee13d53d70f69b"
+    },
+    {
+      "source": "results/v4-1-screening-mutations-20261024T0100000000000Z/mutation_results.json",
+      "sha256": "6fab4e733e04521e9e13ea20ecfa2b5e2c2d0896aa578f5750ec8c1b7b463d3c"
+    }
+  ],
+  "outputs": {
+    "baseline.log": "5f560e62ad3952a54a596cd1ab8e0ee954cb3b443c61e1d0589da8bc9849ca78",
+    "mutation_results.json": "6fab4e733e04521e9e13ea20ecfa2b5e2c2d0896aa578f5750ec8c1b7b463d3c",
+    "report.md": "f96856d972e6fe3dfc056a3b2097138418a6295168e3c832123e37b1bf624a63"
+  }
+}

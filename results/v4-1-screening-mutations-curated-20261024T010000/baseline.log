@@ -1,0 +1,12 @@
+test_branch_search_keeps_all_low_and_label_inversion (tests.test_v4_1_screening.V41ScreeningTests.test_branch_search_keeps_all_low_and_label_inversion) ... ok
+test_covariance_identity_matches_direct_finite_score (tests.test_v4_1_screening.V41ScreeningTests.test_covariance_identity_matches_direct_finite_score) ... ok
+test_effort_cost_is_in_utility (tests.test_v4_1_screening.V41ScreeningTests.test_effort_cost_is_in_utility) ... ok
+test_frozen_peer_deviation_uses_candidate_action_in_utility (tests.test_v4_1_screening.V41ScreeningTests.test_frozen_peer_deviation_uses_candidate_action_in_utility) ... ok
+test_full_screening_retains_asymmetric_effort_equilibria (tests.test_v4_1_screening.V41ScreeningTests.test_full_screening_retains_asymmetric_effort_equilibria) ... ok
+test_target_cash_uses_target_weights_separately_from_batch_average (tests.test_v4_1_screening.V41ScreeningTests.test_target_cash_uses_target_weights_separately_from_batch_average) ... ok
+test_tie_boundary_keeps_all_low_equilibrium (tests.test_v4_1_screening.V41ScreeningTests.test_tie_boundary_keeps_all_low_equilibrium) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.452s
+
+OK

@@ -1,0 +1,11 @@
+--- verification/v4_1_screening.py
++++ verification/v4_1_screening.py
+@@ -283,7 +283,7 @@
+ 
+     reward_total = sum(fixture.target_weights[z] * conditional[z]["reward_total"] for z in (0, 1))
+     effort_total = sum(fixture.target_weights[z] * conditional[z]["effort_cost"] for z in (0, 1))
+-    cash_target = sum(fixture.target_weights[z] * conditional[z]["cash_cost"] for z in (0, 1))
++    cash_target = sum(fixture.batch_weights[z] * conditional[z]["cash_cost"] for z in (0, 1))
+     cash_batch = sum(fixture.batch_weights[z] * conditional[z]["cash_cost"] for z in (0, 1))
+     return {
+         "metrics": {

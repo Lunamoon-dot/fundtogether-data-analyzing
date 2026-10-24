@@ -1,0 +1,14 @@
+test_covariance_identity_matches_direct_finite_score (tests.test_v4_1_screening.V41ScreeningTests.test_covariance_identity_matches_direct_finite_score) ... FAIL
+
+======================================================================
+FAIL: test_covariance_identity_matches_direct_finite_score (tests.test_v4_1_screening.V41ScreeningTests.test_covariance_identity_matches_direct_finite_score)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\dell\AppData\Local\Temp\ceav-v41-mutants-98x15tqi\V41-M02\tests\test_v4_1_screening.py", line 35, in test_covariance_identity_matches_direct_finite_score
+    self.assertEqual(
+AssertionError: Fraction(19, 25) != Fraction(0, 1)
+
+----------------------------------------------------------------------
+Ran 1 test in 0.052s
+
+FAILED (failures=1)

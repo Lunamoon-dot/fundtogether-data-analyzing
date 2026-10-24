@@ -1,0 +1,288 @@
+{
+  "status": "passed",
+  "conclusion": "negative_no_incremental_hybrid_advantage_on_declared_grid",
+  "scope": "finite_declared_grid_only",
+  "policy_search": "finite_grid_exhaustive_within_declared_grid",
+  "equilibrium_selection": "not_modeled",
+  "incremental_advantage_definition": "strict_robust_frontier_dominance",
+  "frontier_comparison": [
+    {
+      "fixture": "F41-01",
+      "audit_only_robust_count": 34,
+      "audit_only_pareto_frontier_count": 1,
+      "hybrid_robust_count": 58,
+      "audit_only_min_worst_cash": "129/800",
+      "hybrid_min_worst_cash": "729/800",
+      "audit_only_min_q": "1/4",
+      "hybrid_min_q": "1/4",
+      "hybrid_strict_dominance_witness_count": 0,
+      "hybrid_strict_dominance_witness": null,
+      "hybrid_unmatched_tradeoff_count": 0,
+      "hybrid_has_incremental_advantage": false,
+      "comparison_rule": "Hybrid must strictly dominate an Audit-only Pareto-frontier robust policy on q, worst cash, worst accuracy and all worst error metrics. A lower-q/higher-cash tradeoff is not an incremental advantage."
+    },
+    {
+      "fixture": "F41-02",
+      "audit_only_robust_count": 13,
+      "audit_only_pareto_frontier_count": 1,
+      "hybrid_robust_count": 12,
+      "audit_only_min_worst_cash": "333/200",
+      "hybrid_min_worst_cash": "6321/2500",
+      "audit_only_min_q": "1/2",
+      "hybrid_min_q": "1/2",
+      "hybrid_strict_dominance_witness_count": 0,
+      "hybrid_strict_dominance_witness": null,
+      "hybrid_unmatched_tradeoff_count": 0,
+      "hybrid_has_incremental_advantage": false,
+      "comparison_rule": "Hybrid must strictly dominate an Audit-only Pareto-frontier robust policy on q, worst cash, worst accuracy and all worst error metrics. A lower-q/higher-cash tradeoff is not an incremental advantage."
+    },
+    {
+      "fixture": "V3-HET",
+      "audit_only_robust_count": 6,
+      "audit_only_pareto_frontier_count": 1,
+      "hybrid_robust_count": 8,
+      "audit_only_min_worst_cash": "381/160",
+      "hybrid_min_worst_cash": "14551/6000",
+      "audit_only_min_q": "5/8",
+      "hybrid_min_q": "1/2",
+      "hybrid_strict_dominance_witness_count": 0,
+      "hybrid_strict_dominance_witness": null,
+      "hybrid_unmatched_tradeoff_count": 2,
+      "hybrid_has_incremental_advantage": false,
+      "comparison_rule": "Hybrid must strictly dominate an Audit-only Pareto-frontier robust policy on q, worst cash, worst accuracy and all worst error metrics. A lower-q/higher-cash tradeoff is not an incremental advantage."
+    }
+  ],
+  "fixtures": [
+    {
+      "fixture": "F41-01",
+      "target_weights": [
+        "1/2",
+        "1/2"
+      ],
+      "batch_weights": [
+        "1/2",
+        "1/2"
+      ],
+      "finite_grid": {
+        "Q": [
+          "0",
+          "1/4",
+          "1/2",
+          "5/8",
+          "3/4",
+          "1"
+        ],
+        "M": [
+          "0",
+          "1/4",
+          "1/2",
+          "3/4",
+          "1",
+          "5/4",
+          "3/2",
+          "2"
+        ],
+        "L": [
+          "1/4",
+          "1/2",
+          "3/4",
+          "1"
+        ]
+      },
+      "mechanisms": {
+        "audit_only": {
+          "policy_count": 48,
+          "feasible_policy_count": 48,
+          "pure_equilibrium_policy_count": 48,
+          "robust_policy_count": 34,
+          "selected_robust_policy": {
+            "lambda_peer": "0",
+            "mu": "1/4",
+            "q": "1/4",
+            "budget": "6"
+          },
+          "policy_selection_rule": "minimum worst-equilibrium cash among robust policies; null if none",
+          "equilibrium_selection": "not_modeled"
+        },
+        "conditional_only": {
+          "policy_count": 4,
+          "feasible_policy_count": 4,
+          "pure_equilibrium_policy_count": 4,
+          "robust_policy_count": 0,
+          "selected_robust_policy": null,
+          "policy_selection_rule": "minimum worst-equilibrium cash among robust policies; null if none",
+          "equilibrium_selection": "not_modeled"
+        },
+        "hybrid": {
+          "policy_count": 72,
+          "feasible_policy_count": 72,
+          "pure_equilibrium_policy_count": 72,
+          "robust_policy_count": 58,
+          "selected_robust_policy": {
+            "lambda_peer": "1/4",
+            "mu": "1/4",
+            "q": "1/4",
+            "budget": "6"
+          },
+          "policy_selection_rule": "minimum worst-equilibrium cash among robust policies; null if none",
+          "equilibrium_selection": "not_modeled"
+        }
+      },
+      "scope": "finite_declared_grid_only"
+    },
+    {
+      "fixture": "F41-02",
+      "target_weights": [
+        "1/2",
+        "1/2"
+      ],
+      "batch_weights": [
+        "1/2",
+        "1/2"
+      ],
+      "finite_grid": {
+        "Q": [
+          "0",
+          "1/4",
+          "1/2",
+          "5/8",
+          "3/4",
+          "1"
+        ],
+        "M": [
+          "0",
+          "1/4",
+          "1/2",
+          "3/4",
+          "1",
+          "5/4",
+          "3/2",
+          "2"
+        ],
+        "L": [
+          "1/4",
+          "1/2",
+          "3/4",
+          "1"
+        ]
+      },
+      "mechanisms": {
+        "audit_only": {
+          "policy_count": 48,
+          "feasible_policy_count": 48,
+          "pure_equilibrium_policy_count": 48,
+          "robust_policy_count": 13,
+          "selected_robust_policy": {
+            "lambda_peer": "0",
+            "mu": "3/4",
+            "q": "1",
+            "budget": "6"
+          },
+          "policy_selection_rule": "minimum worst-equilibrium cash among robust policies; null if none",
+          "equilibrium_selection": "not_modeled"
+        },
+        "conditional_only": {
+          "policy_count": 4,
+          "feasible_policy_count": 4,
+          "pure_equilibrium_policy_count": 4,
+          "robust_policy_count": 0,
+          "selected_robust_policy": null,
+          "policy_selection_rule": "minimum worst-equilibrium cash among robust policies; null if none",
+          "equilibrium_selection": "not_modeled"
+        },
+        "hybrid": {
+          "policy_count": 72,
+          "feasible_policy_count": 72,
+          "pure_equilibrium_policy_count": 72,
+          "robust_policy_count": 12,
+          "selected_robust_policy": {
+            "lambda_peer": "1/4",
+            "mu": "3/4",
+            "q": "1",
+            "budget": "6"
+          },
+          "policy_selection_rule": "minimum worst-equilibrium cash among robust policies; null if none",
+          "equilibrium_selection": "not_modeled"
+        }
+      },
+      "scope": "finite_declared_grid_only"
+    },
+    {
+      "fixture": "V3-HET",
+      "target_weights": [
+        "2/5",
+        "3/5"
+      ],
+      "batch_weights": [
+        "1/2",
+        "1/2"
+      ],
+      "finite_grid": {
+        "Q": [
+          "0",
+          "1/4",
+          "1/2",
+          "5/8",
+          "3/4",
+          "1"
+        ],
+        "M": [
+          "0",
+          "1/4",
+          "1/2",
+          "3/4",
+          "1",
+          "5/4",
+          "3/2",
+          "2"
+        ],
+        "L": [
+          "1/4",
+          "1/2",
+          "3/4",
+          "1"
+        ]
+      },
+      "mechanisms": {
+        "audit_only": {
+          "policy_count": 42,
+          "feasible_policy_count": 42,
+          "pure_equilibrium_policy_count": 42,
+          "robust_policy_count": 6,
+          "selected_robust_policy": {
+            "lambda_peer": "0",
+            "mu": "5/4",
+            "q": "3/4",
+            "budget": "6"
+          },
+          "policy_selection_rule": "minimum worst-equilibrium cash among robust policies; null if none",
+          "equilibrium_selection": "not_modeled"
+        },
+        "conditional_only": {
+          "policy_count": 3,
+          "feasible_policy_count": 3,
+          "pure_equilibrium_policy_count": 3,
+          "robust_policy_count": 0,
+          "selected_robust_policy": null,
+          "policy_selection_rule": "minimum worst-equilibrium cash among robust policies; null if none",
+          "equilibrium_selection": "not_modeled"
+        },
+        "hybrid": {
+          "policy_count": 54,
+          "feasible_policy_count": 54,
+          "pure_equilibrium_policy_count": 54,
+          "robust_policy_count": 8,
+          "selected_robust_policy": {
+            "lambda_peer": "1/4",
+            "mu": "1",
+            "q": "5/8",
+            "budget": "6"
+          },
+          "policy_selection_rule": "minimum worst-equilibrium cash among robust policies; null if none",
+          "equilibrium_selection": "not_modeled"
+        }
+      },
+      "scope": "finite_declared_grid_only"
+    }
+  ]
+}

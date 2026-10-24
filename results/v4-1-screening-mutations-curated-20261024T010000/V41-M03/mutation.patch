@@ -1,0 +1,12 @@
+--- verification/v4_1_screening.py
++++ verification/v4_1_screening.py
+@@ -223,8 +223,7 @@
+     peer_actions = tuple(candidate_profile[index] for index in range(3) if index != judge)
+     options = {}
+     for action in ACTIONS:
+-        changed = list(candidate_profile)
+-        changed[judge] = action
++        changed = [action, action, action]
+         options[action] = model.branch_utilities(z, policy, tuple(changed))[judge]
+     candidate_action = candidate_profile[judge]
+     candidate_utility = options[candidate_action]

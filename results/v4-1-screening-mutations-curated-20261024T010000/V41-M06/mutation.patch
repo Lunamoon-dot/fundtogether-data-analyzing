@@ -1,0 +1,11 @@
+--- verification/v4_1_screening.py
++++ verification/v4_1_screening.py
+@@ -246,7 +246,7 @@
+     for profile in product(ACTIONS, repeat=3):
+         utilities = model.branch_utilities(z, policy, profile)
+         responses = [best_response(fixture, policy, z, profile, judge, model=model) for judge in range(3)]
+-        if all(response["regret"] == 0 for response in responses):
++        if all(response["regret"] == 0 for response in responses) and classify_actions(profile) not in ("all_low", "inverted_H10", "asymmetric_effort"):
+             retained.append({
+                 "z": z,
+                 "actions": profile,

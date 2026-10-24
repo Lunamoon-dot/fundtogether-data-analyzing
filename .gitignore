@@ -95,3 +95,11 @@ results/v33-ipw-acceptance-20261024T060910/inputs/
 !results/run-20261023T231205-a85292b95a/
 !results/run-20261023T231205-a85292b95a/**
 results/run-20261023T231205-a85292b95a/inputs/
+
+# Curated V4.1 screening and audit-cost sensitivity evidence.
+!results/v4-1-minimal-screening-curated-20261024T011500/
+!results/v4-1-minimal-screening-curated-20261024T011500/**
+!results/v4-1-screening-mutations-curated-20261024T010000/
+!results/v4-1-screening-mutations-curated-20261024T010000/**
+!results/v4-1-audit-cost-sensitivity-20261024T020000/
+!results/v4-1-audit-cost-sensitivity-20261024T020000/**

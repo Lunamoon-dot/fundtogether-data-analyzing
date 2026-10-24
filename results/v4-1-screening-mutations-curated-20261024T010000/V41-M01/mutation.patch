@@ -1,0 +1,11 @@
+--- verification/v4_1_screening.py
++++ verification/v4_1_screening.py
+@@ -192,7 +192,7 @@
+         scores, anchors = self.profile_stats(z, profile)
+         utilities = tuple(self.fixture.f + policy.lambda_peer * (1 + scores[judge])
+                           + policy.mu * policy.q * anchors[judge]
+-                          - (self.fixture.costs[judge] if is_high(profile[judge]) else 0)
++                          - F(0)
+                           for judge in range(3))
+         self._utility_cache[key] = utilities
+         return utilities

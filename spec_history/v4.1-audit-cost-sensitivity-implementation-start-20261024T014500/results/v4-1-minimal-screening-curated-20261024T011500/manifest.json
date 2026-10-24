@@ -1,0 +1,44 @@
+{
+  "event_type": "v4.1_curated_screening_evidence",
+  "status": "succeeded",
+  "source_artifact": "results/v4-1-minimal-screening-20261024T0115000000000Z",
+  "curation": "summary omits full 17MB equilibrium JSON; source hash retained",
+  "inputs": [
+    {
+      "source": "CEAV_M1_V4_1_SCREENING_SPEC.md",
+      "sha256": "bf68f7eb202d1f5f593e603c3a58d17a5234b952238e45dc2d89949cf69022ad"
+    },
+    {
+      "source": "verification/v4_1_screening.py",
+      "sha256": "ec0e4aed5ffa73a4dc3b1c8dcdd355edf9173094f59ce12434183143f1bbd4dc"
+    },
+    {
+      "source": "verification/oracle_v4_1_screening.py",
+      "sha256": "165a95c863d23b35f1ca0bf00c35d86d2a857449ea48f444f68519b26fa26e13"
+    },
+    {
+      "source": "verification/mutation_probes_v4_1.py",
+      "sha256": "15181939bb0720ac715739c20b63291feaf85ffe31c4cfb6dcff9db32102be47"
+    },
+    {
+      "source": "tests/test_v4_1_screening.py",
+      "sha256": "bbf3257c7d43d0d0d620facfce80d9e86bf53f3421cae7155aee13d53d70f69b"
+    },
+    {
+      "source": "spec_history/v4.1-screening-implementation-start-20261024T0020244503411Z/manifest.json",
+      "sha256": "1d2f198d5f7563b76dc7c0efcf1248bdd2befa2ad79c819b8aaf7bfc61ab46ff"
+    },
+    {
+      "source": "results/v4-1-minimal-screening-20261024T0115000000000Z/screening.json",
+      "sha256": "b8424d41546edb3bd949a1bcc33610a1b5fefb7d82332fa1a90b5ff1aaf995e7"
+    },
+    {
+      "source": "results/v4-1-minimal-screening-20261024T0115000000000Z/report.md",
+      "sha256": "4d90979344a9e0beb74c61e148710596c16737fd500b4b01e19a05ae15c3749c"
+    }
+  ],
+  "outputs": {
+    "screening_summary.json": "648e6f4b2a1f84939bf467d04e53c6d333a51151ef6cdf609afa229aacb2f7bd",
+    "report.md": "3099422927810e2dd775b834664c517b09382bdcd7b3be59dccc51aaf4027fe7"
+  }
+}

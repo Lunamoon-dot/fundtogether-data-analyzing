@@ -1,0 +1,172 @@
+{
+  "fixture": "V3-HET",
+  "source_artifact": "results/v4-1-minimal-screening-20261024T0115000000000Z/screening.json",
+  "policies": {
+    "audit_only": {
+      "policy": {
+        "lambda_peer": "0",
+        "mu": "3/2",
+        "q": "5/8",
+        "budget": "6"
+      },
+      "equilibrium_count": 1,
+      "pure_equilibrium_exists": true,
+      "worst_equilibrium_metrics": {
+        "status": "pure_equilibria_evaluated",
+        "count": 1,
+        "accuracy": "1813/2000",
+        "false_approval_rate": "51/500",
+        "false_rejection_rate": "17/200",
+        "wrong_payout_value": "51/1000",
+        "cash_review_cost": "381/160",
+        "witnesses": {
+          "accuracy": {
+            "0": [
+              "H01",
+              "H01",
+              "L0"
+            ],
+            "1": [
+              "H01",
+              "H01",
+              "L1"
+            ]
+          },
+          "false_approval_rate": {
+            "0": [
+              "H01",
+              "H01",
+              "L0"
+            ],
+            "1": [
+              "H01",
+              "H01",
+              "L1"
+            ]
+          },
+          "false_rejection_rate": {
+            "0": [
+              "H01",
+              "H01",
+              "L0"
+            ],
+            "1": [
+              "H01",
+              "H01",
+              "L1"
+            ]
+          },
+          "wrong_payout_value": {
+            "0": [
+              "H01",
+              "H01",
+              "L0"
+            ],
+            "1": [
+              "H01",
+              "H01",
+              "L1"
+            ]
+          },
+          "cash_review_cost": {
+            "0": [
+              "H01",
+              "H01",
+              "L0"
+            ],
+            "1": [
+              "H01",
+              "H01",
+              "L1"
+            ]
+          }
+        },
+        "robust": true
+      },
+      "reward_cap": "24/5"
+    },
+    "hybrid": {
+      "policy": {
+        "lambda_peer": "1/4",
+        "mu": "5/4",
+        "q": "1/2",
+        "budget": "6"
+      },
+      "equilibrium_count": 1,
+      "pure_equilibrium_exists": true,
+      "worst_equilibrium_metrics": {
+        "status": "pure_equilibria_evaluated",
+        "count": 1,
+        "accuracy": "421/500",
+        "false_approval_rate": "12/125",
+        "false_rejection_rate": "11/50",
+        "wrong_payout_value": "6/125",
+        "cash_review_cost": "14551/6000",
+        "witnesses": {
+          "accuracy": {
+            "0": [
+              "L0",
+              "L0",
+              "L0"
+            ],
+            "1": [
+              "H01",
+              "H01",
+              "L1"
+            ]
+          },
+          "false_approval_rate": {
+            "0": [
+              "L0",
+              "L0",
+              "L0"
+            ],
+            "1": [
+              "H01",
+              "H01",
+              "L1"
+            ]
+          },
+          "false_rejection_rate": {
+            "0": [
+              "L0",
+              "L0",
+              "L0"
+            ],
+            "1": [
+              "H01",
+              "H01",
+              "L1"
+            ]
+          },
+          "wrong_payout_value": {
+            "0": [
+              "L0",
+              "L0",
+              "L0"
+            ],
+            "1": [
+              "H01",
+              "H01",
+              "L1"
+            ]
+          },
+          "cash_review_cost": {
+            "0": [
+              "L0",
+              "L0",
+              "L0"
+            ],
+            "1": [
+              "H01",
+              "H01",
+              "L1"
+            ]
+          }
+        },
+        "robust": true
+      },
+      "reward_cap": "111/20"
+    }
+  }
+}

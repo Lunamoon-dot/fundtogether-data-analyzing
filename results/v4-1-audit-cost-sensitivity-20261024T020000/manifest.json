@@ -1,0 +1,58 @@
+{
+  "event_type": "v4.1_audit_cost_sensitivity_run",
+  "status": "succeeded",
+  "created_at_utc": "2026-10-24T00:43:44.716094+00:00",
+  "implementation_start": false,
+  "preregistered": false,
+  "inputs": [
+    {
+      "source": "CEAV_M1_V4_1_AUDIT_COST_SENSITIVITY_SPEC.md",
+      "snapshot": "inputs/CEAV_M1_V4_1_AUDIT_COST_SENSITIVITY_SPEC.md",
+      "sha256": "eba9c986642bacf4e5d764b2cd189a965a2855a7e769bc055615d53c4680a4d5"
+    },
+    {
+      "source": "CEAV_M1_V4_1_SCREENING_SPEC.md",
+      "snapshot": "inputs/CEAV_M1_V4_1_SCREENING_SPEC.md",
+      "sha256": "bf68f7eb202d1f5f593e603c3a58d17a5234b952238e45dc2d89949cf69022ad"
+    },
+    {
+      "source": "verification/v4_1_audit_cost_sensitivity.py",
+      "snapshot": "inputs/verification/v4_1_audit_cost_sensitivity.py",
+      "sha256": "045bfb3935ed1acec16acfdb2c19dfdb747cedd9c3fb9192e904420dfca1f7df"
+    },
+    {
+      "source": "verification/v4_1_screening.py",
+      "snapshot": "inputs/verification/v4_1_screening.py",
+      "sha256": "ec0e4aed5ffa73a4dc3b1c8dcdd355edf9173094f59ce12434183143f1bbd4dc"
+    },
+    {
+      "source": "verification/oracle_v4_1_screening.py",
+      "snapshot": "inputs/verification/oracle_v4_1_screening.py",
+      "sha256": "165a95c863d23b35f1ca0bf00c35d86d2a857449ea48f444f68519b26fa26e13"
+    },
+    {
+      "source": "tests/test_v4_1_audit_cost_sensitivity.py",
+      "snapshot": "inputs/tests/test_v4_1_audit_cost_sensitivity.py",
+      "sha256": "08b75b609454f23919397693cc655645c122b4c00375ae9d70063c8235786cbe"
+    },
+    {
+      "source": "results/v4-1-minimal-screening-curated-20261024T011500/pair_projection.json",
+      "snapshot": "inputs/results/v4-1-minimal-screening-curated-20261024T011500/pair_projection.json",
+      "sha256": "73af6d0bb5543071999b55ca78a3c6c17338873eef5a7f2067489199da745608"
+    },
+    {
+      "source": "results/v4-1-minimal-screening-curated-20261024T011500/manifest.json",
+      "snapshot": "inputs/results/v4-1-minimal-screening-curated-20261024T011500/manifest.json",
+      "sha256": "db98d05ce23da9516d9f05653179d643704b63a1696d2e47ec938a2530a7cc15"
+    },
+    {
+      "source": "spec_history/v4.1-audit-cost-sensitivity-implementation-start-20261024T014500/manifest.json",
+      "snapshot": "inputs/spec_history/v4.1-audit-cost-sensitivity-implementation-start-20261024T014500/manifest.json",
+      "sha256": "ac40f4a1436864b9a9cd209101a00eee18da416f68482be9827cc0b09038b538"
+    }
+  ],
+  "outputs": {
+    "sensitivity.json": "74398c5f797078ef145c2111ab7c4c3324edde6b91080e6963840e1f9c89c169",
+    "report.md": "70a9c0d47846158a9926b219a0a565efe502ccd6bb9991b693e21e856e25cf53"
+  }
+}

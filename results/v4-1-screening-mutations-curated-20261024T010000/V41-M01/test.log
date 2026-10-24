@@ -1,0 +1,14 @@
+test_effort_cost_is_in_utility (tests.test_v4_1_screening.V41ScreeningTests.test_effort_cost_is_in_utility) ... FAIL
+
+======================================================================
+FAIL: test_effort_cost_is_in_utility (tests.test_v4_1_screening.V41ScreeningTests.test_effort_cost_is_in_utility)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\dell\AppData\Local\Temp\ceav-v41-mutants-98x15tqi\V41-M01\tests\test_v4_1_screening.py", line 74, in test_effort_cost_is_in_utility
+    self.assertEqual(utility, -F(1, 20))
+AssertionError: Fraction(0, 1) != Fraction(-1, 20)
+
+----------------------------------------------------------------------
+Ran 1 test in 0.036s
+
+FAILED (failures=1)
