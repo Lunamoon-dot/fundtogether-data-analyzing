@@ -1,0 +1,47 @@
+[
+  {
+    "command": [
+      "python",
+      "verification/research_synthesis_checks.py",
+      "--out",
+      "results\\research-synthesis-audit-20261024T045716506866Z\\named-checks"
+    ],
+    "exit_code": 0,
+    "log": "named-checks.log"
+  },
+  {
+    "command": [
+      "python",
+      "-O",
+      "verification/research_synthesis_checks.py",
+      "--out",
+      "results\\research-synthesis-audit-20261024T045716506866Z\\optimized-checks"
+    ],
+    "exit_code": 0,
+    "log": "optimized-checks.log"
+  },
+  {
+    "command": [
+      "python",
+      "results\\research-synthesis-audit-20261024T045716506866Z\\named-checks\\inputs\\verification\\research_synthesis_checks.py",
+      "--out",
+      "results\\research-synthesis-audit-20261024T045716506866Z\\pinned-replay"
+    ],
+    "exit_code": 0,
+    "log": "pinned-replay.log"
+  },
+  {
+    "command": [
+      "python",
+      "-m",
+      "unittest",
+      "tests.test_v6_feasibility",
+      "tests.test_v6_regressions",
+      "tests.test_v6_mutations",
+      "tests.test_v6_stop_certificates",
+      "-v"
+    ],
+    "exit_code": 0,
+    "log": "v6-regression.log"
+  }
+]

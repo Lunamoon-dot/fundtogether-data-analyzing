@@ -1,0 +1,544 @@
+{
+  "status": "passed",
+  "checks": 221,
+  "new_policy_grid": false,
+  "new_design_points": 1,
+  "new_version": false,
+  "bounded_pure_equilibrium_proof": "strict neutral H01 dominance",
+  "binary_effort_bounds": {
+    "F51-01": [
+      {
+        "judge": 0,
+        "z": 0,
+        "low_match": "43/50",
+        "high_match": "43/50",
+        "delta": "0",
+        "s_boundary": null
+      },
+      {
+        "judge": 0,
+        "z": 1,
+        "low_match": "43/50",
+        "high_match": "43/50",
+        "delta": "0",
+        "s_boundary": null
+      },
+      {
+        "judge": 1,
+        "z": 0,
+        "low_match": "43/50",
+        "high_match": "43/50",
+        "delta": "0",
+        "s_boundary": null
+      },
+      {
+        "judge": 1,
+        "z": 1,
+        "low_match": "43/50",
+        "high_match": "43/50",
+        "delta": "0",
+        "s_boundary": null
+      },
+      {
+        "judge": 2,
+        "z": 0,
+        "low_match": "43/50",
+        "high_match": "43/50",
+        "delta": "0",
+        "s_boundary": null
+      },
+      {
+        "judge": 2,
+        "z": 1,
+        "low_match": "43/50",
+        "high_match": "43/50",
+        "delta": "0",
+        "s_boundary": null
+      }
+    ],
+    "F51-02": [
+      {
+        "judge": 0,
+        "z": 0,
+        "low_match": "33/50",
+        "high_match": "37/50",
+        "delta": "2/25",
+        "s_boundary": "5/8"
+      },
+      {
+        "judge": 0,
+        "z": 1,
+        "low_match": "33/50",
+        "high_match": "37/50",
+        "delta": "2/25",
+        "s_boundary": "5/8"
+      },
+      {
+        "judge": 1,
+        "z": 0,
+        "low_match": "33/50",
+        "high_match": "37/50",
+        "delta": "2/25",
+        "s_boundary": "5/8"
+      },
+      {
+        "judge": 1,
+        "z": 1,
+        "low_match": "33/50",
+        "high_match": "37/50",
+        "delta": "2/25",
+        "s_boundary": "5/8"
+      },
+      {
+        "judge": 2,
+        "z": 0,
+        "low_match": "33/50",
+        "high_match": "37/50",
+        "delta": "2/25",
+        "s_boundary": "5/8"
+      },
+      {
+        "judge": 2,
+        "z": 1,
+        "low_match": "33/50",
+        "high_match": "37/50",
+        "delta": "2/25",
+        "s_boundary": "5/8"
+      }
+    ],
+    "V3-HET": [
+      {
+        "judge": 0,
+        "z": 0,
+        "low_match": "7/10",
+        "high_match": "19/25",
+        "delta": "3/50",
+        "s_boundary": "5/6"
+      },
+      {
+        "judge": 0,
+        "z": 1,
+        "low_match": "19/30",
+        "high_match": "119/150",
+        "delta": "4/25",
+        "s_boundary": "5/16"
+      },
+      {
+        "judge": 1,
+        "z": 0,
+        "low_match": "7/10",
+        "high_match": "41/50",
+        "delta": "3/25",
+        "s_boundary": "5/6"
+      },
+      {
+        "judge": 1,
+        "z": 1,
+        "low_match": "19/30",
+        "high_match": "113/150",
+        "delta": "3/25",
+        "s_boundary": "5/6"
+      },
+      {
+        "judge": 2,
+        "z": 0,
+        "low_match": "7/10",
+        "high_match": "7/10",
+        "delta": "0",
+        "s_boundary": null
+      },
+      {
+        "judge": 2,
+        "z": 1,
+        "low_match": "19/30",
+        "high_match": "19/30",
+        "delta": "0",
+        "s_boundary": null
+      }
+    ]
+  },
+  "dual_selective": {
+    "preliminary_accuracy": "112/125",
+    "accuracy": "11323/12500",
+    "fa": "43/1250",
+    "fr": "481/3125",
+    "wrong_payout_value": "43/2500",
+    "loss": "348/3125",
+    "exposure": "2557/6250",
+    "pay_eligibility": "2/5",
+    "reward": "222/125",
+    "audit_cost": "2557/25000",
+    "cash": "46957/25000",
+    "reserve": "6",
+    "utility_by_z": [
+      [
+        "271/500",
+        "271/500",
+        "271/500"
+      ],
+      [
+        "271/500",
+        "271/500",
+        "271/500"
+      ]
+    ],
+    "release": "5503/12500",
+    "release_by_z": [
+      "134/625",
+      "4163/6250"
+    ]
+  },
+  "dual_uniform": {
+    "preliminary_accuracy": "112/125",
+    "accuracy": "35220821/39062500",
+    "fa": "328691/9765625",
+    "fr": "3184297/19531250",
+    "wrong_payout_value": "328691/19531250",
+    "loss": "4499061/39062500",
+    "exposure": "2557/6250",
+    "pay_eligibility": "2/5",
+    "reward": "222/125",
+    "audit_cost": "2557/25000",
+    "cash": "46957/25000",
+    "reserve": "6",
+    "utility_by_z": [
+      [
+        "271/500",
+        "271/500",
+        "271/500"
+      ],
+      [
+        "271/500",
+        "271/500",
+        "271/500"
+      ]
+    ],
+    "release": "3400867/7812500",
+    "release_by_z": [
+      "399154/1953125",
+      "2602559/3906250"
+    ]
+  },
+  "pay_only": {
+    "preliminary_accuracy": "112/125",
+    "accuracy": "14078/15625",
+    "fa": "527/15625",
+    "fr": "2567/15625",
+    "wrong_payout_value": "527/31250",
+    "loss": "3621/31250",
+    "exposure": "2/5",
+    "pay_eligibility": "2/5",
+    "reward": "222/125",
+    "audit_cost": "1/10",
+    "cash": "469/250",
+    "reserve": "6",
+    "utility_by_z": [
+      [
+        "271/500",
+        "271/500",
+        "271/500"
+      ],
+      [
+        "271/500",
+        "271/500",
+        "271/500"
+      ]
+    ],
+    "release": "2717/6250",
+    "release_by_z": [
+      "1271/6250",
+      "4163/6250"
+    ]
+  },
+  "decision_loss_improvement": "149061/39062500",
+  "economic_improvement_vs_pay_only": "279/125000",
+  "six_action_witnesses": [
+    {
+      "z": 0,
+      "judge": 0,
+      "action": "L0",
+      "neutral_loss": "7/500",
+      "release_change": "-633/5000"
+    },
+    {
+      "z": 0,
+      "judge": 0,
+      "action": "L1",
+      "neutral_loss": "27/100",
+      "release_change": "3/50"
+    },
+    {
+      "z": 0,
+      "judge": 0,
+      "action": "H00",
+      "neutral_loss": "8/125",
+      "release_change": "-633/5000"
+    },
+    {
+      "z": 0,
+      "judge": 0,
+      "action": "H01",
+      "neutral_loss": "0",
+      "release_change": "0"
+    },
+    {
+      "z": 0,
+      "judge": 0,
+      "action": "H10",
+      "neutral_loss": "48/125",
+      "release_change": "-333/5000"
+    },
+    {
+      "z": 0,
+      "judge": 0,
+      "action": "H11",
+      "neutral_loss": "8/25",
+      "release_change": "3/50"
+    },
+    {
+      "z": 0,
+      "judge": 1,
+      "action": "L0",
+      "neutral_loss": "7/500",
+      "release_change": "-633/5000"
+    },
+    {
+      "z": 0,
+      "judge": 1,
+      "action": "L1",
+      "neutral_loss": "27/100",
+      "release_change": "3/50"
+    },
+    {
+      "z": 0,
+      "judge": 1,
+      "action": "H00",
+      "neutral_loss": "8/125",
+      "release_change": "-633/5000"
+    },
+    {
+      "z": 0,
+      "judge": 1,
+      "action": "H01",
+      "neutral_loss": "0",
+      "release_change": "0"
+    },
+    {
+      "z": 0,
+      "judge": 1,
+      "action": "H10",
+      "neutral_loss": "48/125",
+      "release_change": "-333/5000"
+    },
+    {
+      "z": 0,
+      "judge": 1,
+      "action": "H11",
+      "neutral_loss": "8/25",
+      "release_change": "3/50"
+    },
+    {
+      "z": 0,
+      "judge": 2,
+      "action": "L0",
+      "neutral_loss": "7/500",
+      "release_change": "-633/5000"
+    },
+    {
+      "z": 0,
+      "judge": 2,
+      "action": "L1",
+      "neutral_loss": "27/100",
+      "release_change": "3/50"
+    },
+    {
+      "z": 0,
+      "judge": 2,
+      "action": "H00",
+      "neutral_loss": "8/125",
+      "release_change": "-633/5000"
+    },
+    {
+      "z": 0,
+      "judge": 2,
+      "action": "H01",
+      "neutral_loss": "0",
+      "release_change": "0"
+    },
+    {
+      "z": 0,
+      "judge": 2,
+      "action": "H10",
+      "neutral_loss": "48/125",
+      "release_change": "-333/5000"
+    },
+    {
+      "z": 0,
+      "judge": 2,
+      "action": "H11",
+      "neutral_loss": "8/25",
+      "release_change": "3/50"
+    },
+    {
+      "z": 1,
+      "judge": 0,
+      "action": "L0",
+      "neutral_loss": "27/100",
+      "release_change": "-899/6250"
+    },
+    {
+      "z": 1,
+      "judge": 0,
+      "action": "L1",
+      "neutral_loss": "7/500",
+      "release_change": "551/6250"
+    },
+    {
+      "z": 1,
+      "judge": 0,
+      "action": "H00",
+      "neutral_loss": "8/25",
+      "release_change": "-899/6250"
+    },
+    {
+      "z": 1,
+      "judge": 0,
+      "action": "H01",
+      "neutral_loss": "0",
+      "release_change": "0"
+    },
+    {
+      "z": 1,
+      "judge": 0,
+      "action": "H10",
+      "neutral_loss": "48/125",
+      "release_change": "-174/3125"
+    },
+    {
+      "z": 1,
+      "judge": 0,
+      "action": "H11",
+      "neutral_loss": "8/125",
+      "release_change": "551/6250"
+    },
+    {
+      "z": 1,
+      "judge": 1,
+      "action": "L0",
+      "neutral_loss": "27/100",
+      "release_change": "-899/6250"
+    },
+    {
+      "z": 1,
+      "judge": 1,
+      "action": "L1",
+      "neutral_loss": "7/500",
+      "release_change": "551/6250"
+    },
+    {
+      "z": 1,
+      "judge": 1,
+      "action": "H00",
+      "neutral_loss": "8/25",
+      "release_change": "-899/6250"
+    },
+    {
+      "z": 1,
+      "judge": 1,
+      "action": "H01",
+      "neutral_loss": "0",
+      "release_change": "0"
+    },
+    {
+      "z": 1,
+      "judge": 1,
+      "action": "H10",
+      "neutral_loss": "48/125",
+      "release_change": "-174/3125"
+    },
+    {
+      "z": 1,
+      "judge": 1,
+      "action": "H11",
+      "neutral_loss": "8/125",
+      "release_change": "551/6250"
+    },
+    {
+      "z": 1,
+      "judge": 2,
+      "action": "L0",
+      "neutral_loss": "27/100",
+      "release_change": "-899/6250"
+    },
+    {
+      "z": 1,
+      "judge": 2,
+      "action": "L1",
+      "neutral_loss": "7/500",
+      "release_change": "551/6250"
+    },
+    {
+      "z": 1,
+      "judge": 2,
+      "action": "H00",
+      "neutral_loss": "8/25",
+      "release_change": "-899/6250"
+    },
+    {
+      "z": 1,
+      "judge": 2,
+      "action": "H01",
+      "neutral_loss": "0",
+      "release_change": "0"
+    },
+    {
+      "z": 1,
+      "judge": 2,
+      "action": "H10",
+      "neutral_loss": "48/125",
+      "release_change": "-174/3125"
+    },
+    {
+      "z": 1,
+      "judge": 2,
+      "action": "H11",
+      "neutral_loss": "8/125",
+      "release_change": "551/6250"
+    }
+  ],
+  "P1_audit_seeking_gain": "17/50",
+  "P2_bad_NE": {
+    "preliminary_accuracy": "1/2",
+    "accuracy": "1/2",
+    "fa": "1",
+    "fr": "0",
+    "wrong_payout_value": "1/2",
+    "loss": "1",
+    "exposure": "1/2",
+    "pay_eligibility": "1/2",
+    "reward": "129/100",
+    "audit_cost": "1/8",
+    "cash": "283/200",
+    "reserve": "3",
+    "utility_by_z": [
+      [
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "43/50",
+        "43/50",
+        "43/50"
+      ]
+    ],
+    "release": "1",
+    "release_by_z": [
+      "1",
+      "1"
+    ]
+  },
+  "P2_max_regret": "0",
+  "external_b_sufficient_bound": "abs(b_i)<7/500",
+  "recommendation": "GO_bounded_theory_only_no_implementation_or_grid"
+}

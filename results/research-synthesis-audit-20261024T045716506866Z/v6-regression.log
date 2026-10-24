@@ -1,0 +1,29 @@
+test_T01_posterior_normalization_independence_and_exact_values (tests.test_v6_feasibility.V6FeasibilityTests.test_T01_posterior_normalization_independence_and_exact_values) ... ok
+test_T02_audit_observable_only_and_bounds (tests.test_v6_feasibility.V6FeasibilityTests.test_T02_audit_observable_only_and_bounds) ... ok
+test_T03_majority_noisy_posterior_and_voi (tests.test_v6_feasibility.V6FeasibilityTests.test_T03_majority_noisy_posterior_and_voi) ... ok
+test_T04_policy_and_peers_frozen_under_deviation (tests.test_v6_feasibility.V6FeasibilityTests.test_T04_policy_and_peers_frozen_under_deviation) ... ok
+test_T05_exposure_uses_realized_reports (tests.test_v6_feasibility.V6FeasibilityTests.test_T05_exposure_uses_realized_reports) ... ok
+test_T06_copyZ_and_audit_seeking_reporting_bias (tests.test_v6_feasibility.V6FeasibilityTests.test_T06_copyZ_and_audit_seeking_reporting_bias) ... ok
+test_T07_uniform_endpoints_and_allocation_attribution (tests.test_v6_feasibility.V6FeasibilityTests.test_T07_uniform_endpoints_and_allocation_attribution) ... ok
+test_T08_false_approval_rejection_denominators (tests.test_v6_feasibility.V6FeasibilityTests.test_T08_false_approval_rejection_denominators) ... ok
+test_T09_cash_claim_cost_reserve_and_effort (tests.test_v6_feasibility.V6FeasibilityTests.test_T09_cash_claim_cost_reserve_and_effort) ... ok
+test_T10_exact_ties_and_six_deviations (tests.test_v6_feasibility.V6FeasibilityTests.test_T10_exact_ties_and_six_deviations) ... ok
+test_T11_stop_gates_witnesses_and_non_exhaustive_scope (tests.test_v6_feasibility.V6FeasibilityTests.test_T11_stop_gates_witnesses_and_non_exhaustive_scope) ... ok
+test_T12_target_and_batch_weights_separate (tests.test_v6_feasibility.V6FeasibilityTests.test_T12_target_and_batch_weights_separate) ... ok
+test_T13_independent_oracle_all_declared_profiles (tests.test_v6_feasibility.V6FeasibilityTests.test_T13_independent_oracle_all_declared_profiles) ... ok
+test_T14_freeze_and_output_refusal (tests.test_v6_feasibility.V6FeasibilityTests.test_T14_freeze_and_output_refusal) ... ok
+test_T15_misspecification_fixed_not_actual_recalibration (tests.test_v6_feasibility.V6FeasibilityTests.test_T15_misspecification_fixed_not_actual_recalibration) ... ok
+test_R01_frozen_calibration_with_external_b_and_deviation (tests.test_v6_regressions.V6RegressionTests.test_R01_frozen_calibration_with_external_b_and_deviation) ... ok
+test_R02_bayes_tie_releases (tests.test_v6_regressions.V6RegressionTests.test_R02_bayes_tie_releases) ... ok
+test_R03_T_conditionally_independent (tests.test_v6_regressions.V6RegressionTests.test_R03_T_conditionally_independent) ... ok
+test_R04_run_contains_complete_replayable_freeze (tests.test_v6_regressions.V6RegressionTests.test_R04_run_contains_complete_replayable_freeze) ... ok
+test_R05_unresolved_stop_report_does_not_claim_NOGO (tests.test_v6_regressions.V6RegressionTests.test_R05_unresolved_stop_report_does_not_claim_NOGO) ... ok
+test_R06_unresolved_status_does_not_claim_gate_refutation (tests.test_v6_regressions.V6RegressionTests.test_R06_unresolved_status_does_not_claim_gate_refutation) ... ok
+test_T16_mutations_execute_and_are_killed (tests.test_v6_mutations.V6MutationTests.test_T16_mutations_execute_and_are_killed) ... ok
+test_S01_all_discovery_candidates_have_exact_bad_NE (tests.test_v6_stop_certificates.V6StopCertificateTests.test_S01_all_discovery_candidates_have_exact_bad_NE) ... ok
+test_S02_unverified_or_incomplete_witnesses_cannot_close (tests.test_v6_stop_certificates.V6StopCertificateTests.test_S02_unverified_or_incomplete_witnesses_cannot_close) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 14.093s
+
+OK

@@ -1,0 +1,65 @@
+{
+  "status": "passed",
+  "historical_manifest_identities": [
+    {
+      "manifest": "results\\v3-closeout-study-r2\\manifest.json",
+      "sha256": "046bc3f93cd0a4b67ab4eb0850aba7045fe983ea17499ad80b1bc89b5b2be1b0",
+      "artifact_checks": 5
+    },
+    {
+      "manifest": "results\\v31-robustness-study-release-02\\manifest.json",
+      "sha256": "bb62019ea505834bdf3c57e4d757aa02c912170c3df63dda6f0878fac41b5e82",
+      "artifact_checks": 9
+    },
+    {
+      "manifest": "results\\v32-report-sensitive-final-02\\manifest.json",
+      "sha256": "3483c5083434096a10ef2d8a8f2bc0d9fdd5c398f10b1719431341cfbc461926",
+      "artifact_checks": 6
+    },
+    {
+      "manifest": "results\\v33-ipw-full-20261024T052707\\manifest.json",
+      "sha256": "94be5a1e75b49ba98ef43be768d7e9c1445cc98a795c1d06dabd9b6600d60da9",
+      "artifact_checks": 7
+    },
+    {
+      "manifest": "results\\v4-research-closeout-20261023T2357325229450Z\\manifest.json",
+      "sha256": "ca10517273656a376fc21e150ea22a68e13bfda5650f300875c2e0535643eaaf",
+      "artifact_checks": 2
+    },
+    {
+      "manifest": "results\\v4-1-minimal-screening-curated-20261024T011500\\manifest.json",
+      "sha256": "db98d05ce23da9516d9f05653179d643704b63a1696d2e47ec938a2530a7cc15",
+      "artifact_checks": 3
+    },
+    {
+      "manifest": "results\\v4-1-audit-cost-sensitivity-20261024T020000\\manifest.json",
+      "sha256": "7266cc193b421ea76334412b640258e27a57d0f86d92bdf16a371cdc3a12fca0",
+      "artifact_checks": 2
+    },
+    {
+      "manifest": "results\\v5-feasibility-20261024T012908\\manifest.json",
+      "sha256": "0692284a0ac22e99663608ce5b360bf230f66c756c692425e686fcc2bfc778a2",
+      "artifact_checks": 2
+    },
+    {
+      "manifest": "results\\v5-1-quality-certificates-20261024T084411\\manifest.json",
+      "sha256": "9d0573a236bd48decdd0b5284892f2d2359da1ba470995c1dceb733f683f2845",
+      "artifact_checks": 2
+    },
+    {
+      "manifest": "results\\v6-rave-phase1-20261024T021148403371Z\\manifest.json",
+      "sha256": "0565679f19e3999d24313a56f8730f61750fe6ce3349dcae2c4b2204188065a6",
+      "artifact_checks": 2
+    },
+    {
+      "manifest": "results\\v6-closeout-20261024T021405861852Z\\negative-certificates\\manifest.json",
+      "sha256": "fa71d008ac0b02afbe47284b5159ab4a85b74f2a606e0fd007335a12ac098ea2",
+      "artifact_checks": 2
+    }
+  ],
+  "cross_oracle_decision_comparisons": 10,
+  "cross_oracle_payoff_and_six_branch_optima": "matched",
+  "new_policy_grid": false,
+  "new_design_points": 1,
+  "checks_in_new_standalone_calculation": 224
+}
