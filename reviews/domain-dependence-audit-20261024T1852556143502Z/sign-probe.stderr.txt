@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "C:\Users\dell\Desktop\fundtogether_data_analyzing\reviews\domain-dependence-audit-20261024T1852556143502Z\sign_probe.py", line 18, in <module>
+    raise AssertionError("Confirmed proof transcription error: both stability inequalities must use <= 0 (strict < 0 in the interior)")
+AssertionError: Confirmed proof transcription error: both stability inequalities must use <= 0 (strict < 0 in the interior)

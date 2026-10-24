@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "certificate_sha256": "fde3ad4745b37e270469aaec2692a51c83cbcf5db7fcb0a16938296a6e25b7d5",
+  "metric_rows_checked": 80,
+  "conditional_definitions": {
+    "FA": "P(D=1|Y=0)",
+    "FR": "P(D=0|Y=1)",
+    "WrongPayout": "V*P(Y=0,D=1)",
+    "Loss": "C_FA*P(Y=0,D=1)+C_FR*P(Y=1,D=0)",
+    "fixed_reduction": "pi=1/2,C_FA=2,C_FR=1,V=1 => WrongPayout=FA/2, Loss=FA+FR/2"
+  }
+}

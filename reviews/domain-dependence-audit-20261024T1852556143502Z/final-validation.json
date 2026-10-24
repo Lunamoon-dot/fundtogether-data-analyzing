@@ -1,0 +1,25 @@
+{
+  "report_sections": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8"
+  ],
+  "assumptions": 22,
+  "local_links_checked": 10,
+  "protected_input_files_unchanged": 19,
+  "focused_tests": "10 passed normally and 10 under -O",
+  "independent_checks": 5590,
+  "numerical_commands_exit_zero": 6,
+  "sign_probe": "expected failure in both manuscript copies",
+  "replay_matches_frozen": true,
+  "git_diff_check": "PASS",
+  "tracked_changes": [
+    "CEAV_M1_DOMAIN_DEPENDENCE_AUDIT.md"
+  ],
+  "report_raw_sha256": "62ad2c2440080382f650631c3b8ce202d25d09c84d787c59511decdae20acb13"
+}

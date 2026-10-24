@@ -1,0 +1,2 @@
+CEAV_M1_MANUSCRIPT_V0_2.md: b=0, deviation_gain=-7/500, printed_gain_ge_0=False, correct_gain_lt_0=True
+review-package/docs/CEAV_M1_MANUSCRIPT_V0_2.md: b=0, deviation_gain=-7/500, printed_gain_ge_0=False, correct_gain_lt_0=True

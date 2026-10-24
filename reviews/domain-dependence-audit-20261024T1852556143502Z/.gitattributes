@@ -1,0 +1,2 @@
+# Preserve raw bytes in this audit's immutable snapshots, replay and logs.
+** -text

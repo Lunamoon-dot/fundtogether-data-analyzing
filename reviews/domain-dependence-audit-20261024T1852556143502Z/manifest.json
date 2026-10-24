@@ -1,0 +1,110 @@
+{
+  "audit_utc": "2026-10-24T18:54:23.661981+00:00",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "input_raw_sha256": {
+    "AGENTS.md": "492404aec0c3665cff6f28a39767461bea42458e91b2ee8ef0c0f3a4aed7b37c",
+    "CEAV_M1_DOMAIN_DEPENDENCE_AUDIT.md": "748bca86f7580a433be55a3a382e8f8e83bd12cdb1109a78789dd5c26a36b7d3",
+    "CEAV_M1_MANUSCRIPT_V0_2.md": "0ce2c2ddaf653b211a955fb9b8dd7c589b0aa840d4fcf3732b635f97d929b666",
+    "CEAV_M1_EXTERNAL_RESEARCH_BRIEF.md": "bcbe75109e201d0830e3cfe6fd6876d4b6bc5bdfb030b84c2f8b1c9cfb8b6665",
+    "CEAV_M1_THEOREM_AND_COUNTEREXAMPLE_CATALOG.md": "d81a48394c732d2733dddc044036df506d4165bdcf8d7bd2ba8bc18395dc8161",
+    "CEAV_M1_NOVELTY_AUDIT_T3_T5.md": "6f835ff42758af057cb4c8c39b571d3cf0b80891f07b13cdaabc53fd13a35bca",
+    "CEAV_M1_EMPIRICAL_TRUST_PROTOCOL.md": "d19cf593da782504af653f477650d72a2b9e25eb2700c3f94149f3e20375b749",
+    "review-package/CLAIM_EVIDENCE_MAP.md": "bb6ae56984dc20aeeba3f588a4822fd5aec269cf2ab05170f6b6e426da639a86",
+    "review-package/KNOWN_LIMITATIONS.md": "91cf4627834ac679a384e2d6d0ff579841d156b816fcded1565f560211ee1eae",
+    "review-package/docs/CEAV_M1_MANUSCRIPT_V0_2.md": "4f4c7db086a7acf1efe39d9b3fe779125d3b6b567511daf5364f638911c805b8",
+    "configs/dual_boundary.json": "17001d4aabcc971bd29b68a690d5d6b26e0c4c9c41be5670d60e1cac19d9cce5",
+    "review-package/configs/dual_boundary.json": "17001d4aabcc971bd29b68a690d5d6b26e0c4c9c41be5670d60e1cac19d9cce5",
+    "verification/dual_boundary.py": "8c943bb2f6f23c5032768dd60834f9e926a1d6aa3f83205482b54f4a645d6d0b",
+    "verification/dual_boundary_oracle.py": "bab19a553f73be9d843c0e199dd66b3ef2d0c25ab918f2e9b81dc8d9e4e4d3a9",
+    "verification/dual_boundary_audit.py": "35dcbcf243ba20ba4d2f3fe0d7258de73667f5c012bc6b2807d271d916c0a6e9",
+    "verification/independent_t3_t5_review.py": "d875505cd83c32e93c46c47445ff09f785574c78d01dc82a3c72903727dbb897",
+    "verification/manuscript_editorial_audit.py": "cfc1bde6ebbedcce2cec9680308dc44fb836c7156d4509d41aeb47beade08247",
+    "tests/test_dual_boundary.py": "d2e7d79d5d1e1cca93ec08b44cccd588f394954b66578e22c12f0ef9a8894a38",
+    "results/dual-strategic-boundary-20261024T0524070523492Z/analysis/certificate.json": "fde3ad4745b37e270469aaec2692a51c83cbcf5db7fcb0a16938296a6e25b7d5",
+    "review-package/frozen-boundary/certificate.json": "fde3ad4745b37e270469aaec2692a51c83cbcf5db7fcb0a16938296a6e25b7d5"
+  },
+  "inputs_unchanged_during_checks": true,
+  "runs": [
+    {
+      "name": "independent",
+      "cwd": "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing",
+      "command": [
+        "C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-X",
+        "utf8",
+        "-m",
+        "verification.independent_t3_t5_review"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "metrics",
+      "cwd": "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing",
+      "command": [
+        "C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-X",
+        "utf8",
+        "-m",
+        "verification.manuscript_editorial_audit"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "focused",
+      "cwd": "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing",
+      "command": [
+        "C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-X",
+        "utf8",
+        "-m",
+        "unittest",
+        "tests.test_dual_boundary",
+        "-v"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "focused-optimized",
+      "cwd": "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing",
+      "command": [
+        "C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-X",
+        "utf8",
+        "-O",
+        "-m",
+        "unittest",
+        "tests.test_dual_boundary",
+        "-v"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "package-metrics",
+      "cwd": "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\review-package",
+      "command": [
+        "C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-X",
+        "utf8",
+        "-m",
+        "verification.manuscript_editorial_audit"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "replay",
+      "cwd": "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing",
+      "command": [
+        "C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-X",
+        "utf8",
+        "verification/dual_boundary.py",
+        "--out",
+        "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\reviews\\domain-dependence-audit-20261024T1852556143502Z\\replay"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "replay_raw_sha256": "fde3ad4745b37e270469aaec2692a51c83cbcf5db7fcb0a16938296a6e25b7d5",
+  "replay_matches_frozen": true,
+  "scope": "T3-T5 research replay, not full V1-V6 or browser acceptance"
+}

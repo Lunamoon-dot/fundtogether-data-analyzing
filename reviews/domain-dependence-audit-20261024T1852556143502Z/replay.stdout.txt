@@ -1,0 +1,1 @@
+{"out": "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\reviews\\domain-dependence-audit-20261024T1852556143502Z\\replay", "verdict": "STRATEGIC_FAILURE", "scenarios": 10}

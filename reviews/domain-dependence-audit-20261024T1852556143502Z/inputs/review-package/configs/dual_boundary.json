@@ -1,0 +1,19 @@
+{
+  "study": "dual-purpose-strategic-boundary-r1",
+  "parent_commit": "df931b0ad73d464a6937a3a7c34879a978981b90",
+  "fixture": "F51-02",
+  "pi": "1/2", "public_accuracy": "7/10", "private_accuracy": "4/5",
+  "audit_accuracy": "9/10", "effort_cost": "1/20", "f": "0",
+  "a": "2/5", "t": "1/6", "uniform_d": "19/1250", "mu": "2",
+  "budget": "6", "kappa": "1/4", "c_fa": "2", "c_fr": "1",
+  "payout_value": "1", "operating_cost": "0",
+  "risk_class": "Z=0 and report sum=2",
+  "lotteries": "independent; shared T; one union audit cost; bonus only A_pay",
+  "gates": {"fa": "1/5", "fr": "1/4", "wrong_payout": "3/20", "cash": "4", "exposure": "1/2", "reserve": "6"},
+  "actions": ["L0", "L1", "H00", "H01", "H10", "H11"],
+  "g0_by_z_and_report_sum": [[0,0,0,1],[0,0,1,1]],
+  "g1_by_z_and_report_sum": [[[0,0],[0,0],[0,1],[1,1]],[[0,0],[0,1],[0,1],[1,1]]],
+  "scenarios": {"neutral": [0,0,0], "one_A": [1,0,0], "one_B": [0,1,0], "one_C": [0,0,1], "symmetric": [1,1,1]},
+  "b_domain": "all real numbers; exact rational endpoints",
+  "equilibrium_class": "pure stationary action at each public Z; all unilateral task-local deviations"
+}

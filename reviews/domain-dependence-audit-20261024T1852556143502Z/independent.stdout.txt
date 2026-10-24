@@ -1,0 +1,73 @@
+{
+  "T3": {
+    "certified_effort_gap": "7/500",
+    "match_values": [
+      {
+        "M_H": "37/50",
+        "M_L": "33/50",
+        "delta": "2/25",
+        "z": 0
+      },
+      {
+        "M_H": "37/50",
+        "M_L": "33/50",
+        "delta": "2/25",
+        "z": 1
+      }
+    ]
+  },
+  "T4": {
+    "selective": {
+      "negative": {
+        "breakpoint": "-70/633",
+        "intercept": "-7/500",
+        "slope": "-633/5000"
+      },
+      "positive": {
+        "breakpoint": "175/1102",
+        "intercept": "-7/500",
+        "slope": "551/6250"
+      }
+    },
+    "uniform": {
+      "negative": {
+        "breakpoint": "-218750/2070709",
+        "intercept": "-7/500",
+        "slope": "-2070709/15625000"
+      },
+      "positive": {
+        "breakpoint": "218750/1365587",
+        "intercept": "-7/500",
+        "slope": "1365587/15625000"
+      }
+    }
+  },
+  "T5": {
+    "independent_audit": {
+      "all_real_b": true,
+      "branch_candidates": 4320,
+      "checks": 5590,
+      "full_profiles_covered": 466560,
+      "oracle_branch_profiles": 864,
+      "status": "PASS"
+    },
+    "selective_at_b_1_10": {
+      "bad_equilibria": 3,
+      "pure_equilibria": 4
+    },
+    "symmetric_safe_components": {
+      "selective": {
+        "hi": "175/1922",
+        "hi_included": false,
+        "lo": "-70/633",
+        "lo_included": false
+      },
+      "uniform": {
+        "hi": "109375/1189451",
+        "hi_included": false,
+        "lo": "-218750/2070709",
+        "lo_included": false
+      }
+    }
+  }
+}
