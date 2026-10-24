@@ -1,12 +1,44 @@
 # CEAV-M1
 
-**Phiên bản chạy được hiện tại:** Version 3.3 · IPW audit reward `ceav-m1-v3.3`; V3.2 vẫn giữ nguyên làm baseline. V3.3 đã pass toàn bộ gate local trên source pin: engine/CLI/API/UI, IPW-B01 parity, 10 mutation probes, 54-point study và full suite 123/123. Đây là verification của mô hình synthetic/assumption trong workspace, không phải production readiness.
+**Phiên bản ứng dụng chạy được hiện tại:** Version 3.3 · IPW audit reward `ceav-m1-v3.3`; V3.2 vẫn giữ nguyên làm baseline. V3.3 đã pass toàn bộ gate local trên source pin: engine/CLI/API/UI, IPW-B01 parity, 10 mutation probes, 54-point study và full suite 123/123. Đây là verification của mô hình synthetic/assumption trong workspace, không phải production readiness.
 
 **Version 2.2 diagnostics:** `SPECIFIED`, `IMPLEMENTED` và đã qua targeted verification INC-T01–INC-T08 cùng INC-B01. Trạng thái full release còn chờ toàn bộ regression/evidence INC-GATE-5. V2.1, V2.0 và V1 giữ trạng thái nghiệm thu trước đó trên source đã pin của từng release.
 
 **Version 3:** `SPECIFIED`, `IMPLEMENTED` và `VERIFIED` local. Report khóa trước khi audit; `T` chỉ xuất hiện sau đó và chỉ tham gia reward. V3 không dùng `Y` làm reward oracle và không cho Judge thấy `A/T`. Nghiệm thu r2 tại [report V3](results/v3-acceptance-closeout-r2/report.md) và [acceptance.json](results/v3-acceptance-closeout-r2/acceptance.json).
 
 **Version 3.3:** `VERIFIED` trong phạm vi local verification plan. IPW-T01–T13 pass 13/13; IPW-B01 pass với UI/worker/artifact parity; IPW-M01–M10 pass 10/10; full 54-point study có 54/54 point, mỗi point 432/432 branch candidates; full suite pass 123/123. Ba policy đều `0/18` robust: đây là kết quả nghiên cứu bất lợi được giữ nguyên, không phải lỗi analyzer. Closeout report và evidence đã pin tại [V3.3 closeout](results/v33-closeout-final-20261024T084030/report.md). V3.3 thử IPW cho anchor reward khi `q0 != q1`, giữ V3.2 làm baseline, bắt buộc `q0,q1 > 0`, dùng cap `3f + 6lambda + 3mu/q_min` và đo variance/covariance. Đây vẫn là synthetic/assumption study; không chứng minh Judge ngoài đời, collusion/Sybil resistance hay production readiness. Xem [spec V3.3](CEAV_M1_V3_3_IPW_SPEC.md), [engine design](ENGINE_DESIGN_V3_3_IPW.md) và [verification plan](VERIFICATION_PLAN_V3_3_IPW.md).
+
+## CEAV-M1 research review package (V3–V6)
+
+Phần dưới đây là research synthesis và external-review packaging, tách khỏi
+trạng thái ứng dụng V3.3 ở trên. Không có V7, production integration hay thay
+đổi historical certificates trong package này.
+
+- [Research Brief](CEAV_M1_EXTERNAL_RESEARCH_BRIEF.md): motivation, T3–T5 và câu hỏi cho reviewer.
+- [Manuscript v0.2](CEAV_M1_MANUSCRIPT_V0_2.md): definitions, propositions, proofs và claim-to-evidence map.
+- [Dual Strategic Boundary Report](CEAV_M1_DUAL_STRATEGIC_BOUNDARY_REPORT.md): frozen F51-02 witness và exact external-interest boundary.
+- [Review package README](review-package/README.md): clean reproduction, immutable certificates, independent verification code và generated figures.
+
+Các kết quả trung tâm đã được giữ nguyên:
+
+- T3 net effort benefit: `7/500`, với `c=1/20` và `Delta=M_H-M_L=2/25`.
+- T4 local All-H01 intervals: Selective `(-70/633, 175/1102)`; Uniform `(-218750/2070709, 218750/1365587)`.
+- T5 tại `b=1/10`: bốn pure equilibria và ba bad-equilibrium witnesses; quyết định global là `STRATEGIC_FAILURE` trong strategy class đã khai báo.
+- Frozen dual certificate SHA-256: `fde3ad4745b37e270469aaec2692a51c83cbcf5db7fcb0a16938296a6e25b7d5`.
+
+Reviewer có thể chạy lại từ thư mục sạch:
+
+```powershell
+Push-Location review-package
+python -X utf8 -m verification.manuscript_editorial_audit
+python -X utf8 -m verification.independent_t3_t5_review
+python -X utf8 -m verification.review_summary
+python -X utf8 -m unittest tests.test_dual_boundary -v
+Pop-Location
+```
+
+Đây là exact finite research evidence với synthetic assumptions; chưa phải
+external peer review, submission readiness hoặc production readiness.
 
 Phòng thí nghiệm local để phân tích incentive và cân bằng thuần của game một claim, ba Judge. Python 3.12+; ứng dụng chỉ dùng standard library và HTML/CSS/JavaScript thuần. Không cần ví, database, Node hoặc Internet để chạy ứng dụng.
 
