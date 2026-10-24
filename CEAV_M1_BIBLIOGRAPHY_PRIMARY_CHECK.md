@@ -43,3 +43,20 @@ The first page of the official PDF supplies the title, complete author list, ACM
 ## Editorial action for manuscript v0.2
 
 Replace the three v0.1 bibliography entries with the records above. Keep the novelty audit’s claim scope unchanged: these sources establish adjacent prior art and do not by themselves establish priority for the CEAV dual-lottery instance or its exact finite certificate. This check verifies metadata only; it is not an independent proof review or a substitute for a systematic literature search.
+
+## v0.3 byline correction addendum — 2026-10-25
+
+This addendum resolves audit F2 at commit `15387a7`. The earlier v0.2 check
+above covered three different entries; it did not verify the bylines below.
+The v0.2 manuscript and historical snapshots remain unchanged.
+
+| v0.3 reference | Verified byline | Primary record checked |
+|---|---|---|
+| 4, *Incentivizing Evaluation with Peer Prediction and Limited Access to Ground Truth* | Xi Alice Gao, James R. Wright, Kevin Leyton-Brown | [Accepted manuscript](https://dspacemainprd01.lib.uwaterloo.ca/server/api/core/bitstreams/2cf2eab2-324c-402f-98eb-ee05f2a446f4/content), PDF cover and article title page. “Gao, Siyu” in v0.2 was incorrect. |
+| 6, *Putting Peer Prediction Under the Micro(economic)scope and Making Truth-telling Focal* | Yuqing Kong, Katrina Ligett, Grant Schoenebeck | [Author-hosted record](https://mail.schoeneb.people.si.umich.edu/papers/PeerFocal.html), byline. The names “Yiling” and “Jennifer” in v0.2 were incorrect. |
+| 7, *Equilibrium Selection in Information Elicitation without Verification via Information Monotonicity* | Yuqing Kong, Grant Schoenebeck | [Official Dagstuhl record](https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITCS.2018.13), author list and publisher BibTeX. “Kong, Yiling” in v0.2 was incorrect. |
+
+All three primary records were accessed for this correction on 2026-10-25.
+The official Dagstuhl HTML metadata supplied the third byline when the direct
+PDF fetch timed out. This is a metadata correction, not a new prior-art or
+novelty audit; the substantive comparisons and open priority caveat remain.

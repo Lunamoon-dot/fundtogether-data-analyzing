@@ -1,0 +1,219 @@
+{
+  "status": "PASS",
+  "checks": 88,
+  "boundary_cases": [
+    {
+      "mechanism": "selective",
+      "judge": 0,
+      "case": "neutral",
+      "b": "0",
+      "max_nonself_deviation_gain": "-7/500"
+    },
+    {
+      "mechanism": "selective",
+      "judge": 0,
+      "case": "lower",
+      "b": "-70/633",
+      "max_nonself_deviation_gain": "0"
+    },
+    {
+      "mechanism": "selective",
+      "judge": 0,
+      "case": "upper",
+      "b": "175/1102",
+      "max_nonself_deviation_gain": "0"
+    },
+    {
+      "mechanism": "selective",
+      "judge": 0,
+      "case": "below_lower",
+      "b": "-70000633/633000000",
+      "max_nonself_deviation_gain": "633/5000000000"
+    },
+    {
+      "mechanism": "selective",
+      "judge": 0,
+      "case": "above_upper",
+      "b": "87500551/551000000",
+      "max_nonself_deviation_gain": "551/6250000000"
+    },
+    {
+      "mechanism": "selective",
+      "judge": 1,
+      "case": "neutral",
+      "b": "0",
+      "max_nonself_deviation_gain": "-7/500"
+    },
+    {
+      "mechanism": "selective",
+      "judge": 1,
+      "case": "lower",
+      "b": "-70/633",
+      "max_nonself_deviation_gain": "0"
+    },
+    {
+      "mechanism": "selective",
+      "judge": 1,
+      "case": "upper",
+      "b": "175/1102",
+      "max_nonself_deviation_gain": "0"
+    },
+    {
+      "mechanism": "selective",
+      "judge": 1,
+      "case": "below_lower",
+      "b": "-70000633/633000000",
+      "max_nonself_deviation_gain": "633/5000000000"
+    },
+    {
+      "mechanism": "selective",
+      "judge": 1,
+      "case": "above_upper",
+      "b": "87500551/551000000",
+      "max_nonself_deviation_gain": "551/6250000000"
+    },
+    {
+      "mechanism": "selective",
+      "judge": 2,
+      "case": "neutral",
+      "b": "0",
+      "max_nonself_deviation_gain": "-7/500"
+    },
+    {
+      "mechanism": "selective",
+      "judge": 2,
+      "case": "lower",
+      "b": "-70/633",
+      "max_nonself_deviation_gain": "0"
+    },
+    {
+      "mechanism": "selective",
+      "judge": 2,
+      "case": "upper",
+      "b": "175/1102",
+      "max_nonself_deviation_gain": "0"
+    },
+    {
+      "mechanism": "selective",
+      "judge": 2,
+      "case": "below_lower",
+      "b": "-70000633/633000000",
+      "max_nonself_deviation_gain": "633/5000000000"
+    },
+    {
+      "mechanism": "selective",
+      "judge": 2,
+      "case": "above_upper",
+      "b": "87500551/551000000",
+      "max_nonself_deviation_gain": "551/6250000000"
+    },
+    {
+      "mechanism": "uniform",
+      "judge": 0,
+      "case": "neutral",
+      "b": "0",
+      "max_nonself_deviation_gain": "-7/500"
+    },
+    {
+      "mechanism": "uniform",
+      "judge": 0,
+      "case": "lower",
+      "b": "-218750/2070709",
+      "max_nonself_deviation_gain": "0"
+    },
+    {
+      "mechanism": "uniform",
+      "judge": 0,
+      "case": "upper",
+      "b": "218750/1365587",
+      "max_nonself_deviation_gain": "0"
+    },
+    {
+      "mechanism": "uniform",
+      "judge": 0,
+      "case": "below_lower",
+      "b": "-218752070709/2070709000000",
+      "max_nonself_deviation_gain": "2070709/15625000000000"
+    },
+    {
+      "mechanism": "uniform",
+      "judge": 0,
+      "case": "above_upper",
+      "b": "218751365587/1365587000000",
+      "max_nonself_deviation_gain": "1365587/15625000000000"
+    },
+    {
+      "mechanism": "uniform",
+      "judge": 1,
+      "case": "neutral",
+      "b": "0",
+      "max_nonself_deviation_gain": "-7/500"
+    },
+    {
+      "mechanism": "uniform",
+      "judge": 1,
+      "case": "lower",
+      "b": "-218750/2070709",
+      "max_nonself_deviation_gain": "0"
+    },
+    {
+      "mechanism": "uniform",
+      "judge": 1,
+      "case": "upper",
+      "b": "218750/1365587",
+      "max_nonself_deviation_gain": "0"
+    },
+    {
+      "mechanism": "uniform",
+      "judge": 1,
+      "case": "below_lower",
+      "b": "-218752070709/2070709000000",
+      "max_nonself_deviation_gain": "2070709/15625000000000"
+    },
+    {
+      "mechanism": "uniform",
+      "judge": 1,
+      "case": "above_upper",
+      "b": "218751365587/1365587000000",
+      "max_nonself_deviation_gain": "1365587/15625000000000"
+    },
+    {
+      "mechanism": "uniform",
+      "judge": 2,
+      "case": "neutral",
+      "b": "0",
+      "max_nonself_deviation_gain": "-7/500"
+    },
+    {
+      "mechanism": "uniform",
+      "judge": 2,
+      "case": "lower",
+      "b": "-218750/2070709",
+      "max_nonself_deviation_gain": "0"
+    },
+    {
+      "mechanism": "uniform",
+      "judge": 2,
+      "case": "upper",
+      "b": "218750/1365587",
+      "max_nonself_deviation_gain": "0"
+    },
+    {
+      "mechanism": "uniform",
+      "judge": 2,
+      "case": "below_lower",
+      "b": "-218752070709/2070709000000",
+      "max_nonself_deviation_gain": "2070709/15625000000000"
+    },
+    {
+      "mechanism": "uniform",
+      "judge": 2,
+      "case": "above_upper",
+      "b": "218751365587/1365587000000",
+      "max_nonself_deviation_gain": "1365587/15625000000000"
+    }
+  ],
+  "root_package_synchronized": true,
+  "manuscript_text_sha256": "21d6c2f43d162ba43a2811e59b55ecd1a7d0a814428726f881ded3515258fdee",
+  "scope": "fixed T4 neutral/boundary and selected editorial conditions, not a general prose-proof verifier"
+}

@@ -1,0 +1,124 @@
+# Reproduction guide
+
+## Environment
+
+Use Python 3.12 or newer. The package uses only the standard library. Run all
+commands from the `review-package` directory so that the namespace packages
+`verification` and `tests` resolve only to files in this bundle.
+
+## Commands
+
+```text
+python -X utf8 -m verification.manuscript_editorial_audit
+```
+
+Expected output:
+
+```text
+status: PASS
+certificate_sha256: fde3ad4745b37e270469aaec2692a51c83cbcf5db7fcb0a16938296a6e25b7d5
+metric_rows_checked: 80
+```
+
+This checks every equilibrium row stored in the certificate. It verifies the
+conditional definitions and exact reductions `WrongPayout=FA/2` and
+`Loss=FA+FR/2`, then checks the neutral, positive-witness, negative-witness,
+local-boundary, and safe-component values used by the manuscript.
+It does not read the manuscript or validate written inequalities or bylines.
+
+```text
+python -X utf8 -m verification.independent_t3_t5_review
+```
+
+Expected exact outputs include:
+
+```text
+T3 certified_effort_gap: 7/500
+T3 M_L: 33/50
+T3 M_H: 37/50
+T3 delta: 2/25
+T4 Selective: (-70/633, 175/1102)
+T4 Uniform: (-218750/2070709, 218750/1365587)
+T5 branch_candidates: 4320
+T5 full_profiles_covered: 466560
+T5 checks: 5590
+T5 Selective symmetric safe component: (-70/633, 175/1922)
+T5 Uniform symmetric safe component: (-218750/2070709, 109375/1189451)
+```
+
+The runner's T3 subsection derives match values from primitive probabilities.
+Its T4 subsection divides hardcoded binding intercepts/slopes; it does not
+derive them. Its T5 subsection calls the independent primitive-oracle
+completeness audit and checks four pure equilibria at Selective `b=1/10`,
+three of which fail a quality gate. DB01–DB03 in the focused suite supply
+local-boundary/calibration checks and all 864 primitive branch comparisons.
+
+To regenerate the central certificate from the packaged source, choose a new
+empty output directory and run:
+
+```text
+python -X utf8 verification/dual_boundary.py --out generated-replay
+python -X utf8 -c "from pathlib import Path; import hashlib; a=hashlib.sha256(Path('generated-replay/certificate.json').read_bytes()).hexdigest(); b=hashlib.sha256(Path('frozen-boundary/certificate.json').read_bytes()).hexdigest(); print('generated_certificate_sha256='+a); print('matches_frozen='+str(a==b))"
+```
+
+The expected verdict is `STRATEGIC_FAILURE`, the generated certificate hash is
+`fde3ad4745b37e270469aaec2692a51c83cbcf5db7fcb0a16938296a6e25b7d5`, and
+`matches_frozen=True`. Never regenerate into an existing output directory.
+
+```text
+python -X utf8 -m verification.review_summary
+```
+
+This prints the full active equilibrium profiles and metrics at `b=1/10` for
+both mechanisms, followed by the neutral All-H01 metrics. It is the quickest
+reviewer-facing check of the three bad witnesses and the Selective/Uniform
+baseline.
+
+```text
+python -X utf8 -m unittest tests.test_dual_boundary -v
+```
+
+Expected result: ten tests, all passing. The suite checks frozen calibration,
+all branch profiles, exact local boundaries, closed interval behavior, metric
+weights, mutation probes, all three Judge positions, the `b=1/10` failure tie,
+and the independent completeness audit.
+
+## Manuscript v0.3 correction check
+
+```text
+python -X utf8 -m verification.manuscript_correction_checks
+```
+
+This scoped command was executed from the package and workspace root. The
+package invocation checks 85 conditions, including 30 T4 local diagnostic
+cases across all three Judges and both mechanisms: neutral is strict,
+endpoints are weak with ties, and a profitable deviation appears immediately
+outside each bound. It checks the displayed Selective coefficients against
+the existing independent primitive oracle. The root invocation has 88 checks
+because it additionally compares the three active package document copies.
+Both retain every baseline/witness metric row and all T4 result-table values.
+
+The command checks selected text conditions, not arbitrary proof validity or
+the truth of a primary-source byline. The source-byline verification, scoped
+prose inspection and complete logs are recorded in the
+[v0.3 correction closeout](docs/CEAV_M1_MANUSCRIPT_V0_3_CORRECTION_CLOSEOUT.md).
+
+## Clean-directory procedure
+
+To avoid accidental imports from a parent checkout, copy this directory to a
+new empty directory, change into that directory, and run the four commands
+above. Do not set `PYTHONPATH` to the parent repository. A valid clean run
+must show the package root as the current directory and must not require any
+file outside it.
+
+## Expected central values
+
+| Result | Selective | Uniform |
+|---|---:|---:|
+| neutral exposure | `2557/6250` | `2557/6250` |
+| neutral expected cash | `46957/25000` | `46957/25000` |
+| neutral loss | `348/3125` | `4499061/39062500` |
+| local H01 interval | `(-70/633,175/1102)` | `(-218750/2070709,218750/1365587)` |
+| symmetric all-pure safe component | `(-70/633,175/1922)` | `(-218750/2070709,109375/1189451)` |
+| pure equilibria at symmetric `b=1/10` | 4 | 4 |
+| bad equilibria at symmetric `b=1/10` | 3 | 3 |

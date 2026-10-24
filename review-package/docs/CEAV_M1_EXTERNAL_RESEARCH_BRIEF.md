@@ -1,11 +1,13 @@
 # CEAV-M1 — External Research Brief
 
-**Version:** 0.2 review package
+**Version:** 0.3 manuscript correction closeout
 **Scope:** verified V3–V6 evidence, the separated payment/decision-audit study, and its declared strategic boundary. This brief is a research package, not a production design or a submission-readiness claim.
 
 ## 1. Motivation
 
-FundTogether studies milestone verification for an escrow-like crowdfunding workflow. A creator presents evidence that a milestone is complete; reviewers spend effort to acquire private information; a final decision controls whether a payout is released. The practical problem is to obtain useful effort and accurate decisions while keeping audit exposure, reviewer payments, and false payouts within a fixed budget.
+FundTogether is a general-purpose decentralized crowdfunding protocol with escrow, milestone verification and conditional fund release. Charity is one optional use case. CEAV-M1 studies one observable milestone acceptance task motivated by that workflow. A creator presents evidence that a milestone is complete; reviewers spend effort to acquire private information; a final decision controls whether a payout is released. The practical problem is to obtain useful effort and accurate decisions while keeping audit exposure, reviewer payments, and false payouts within a fixed budget.
+
+The proposed school-desk study is one physical-acceptance exemplar. It neither defines FundTogether's overall domain nor establishes transfer across campaign categories. CEAV-M1 does not prove decentralized identity, creator incentives, donor welfare or production settlement guarantees.
 
 The central difficulty is strategic. A reviewer may value a particular release outcome, may choose an uninformative report when reporting has no marginal payoff, or may seek an audit when an audit-contingent reward makes that privately profitable. Therefore truthful behavior cannot be inferred from a good signal model or from one truthful profile alone.
 
@@ -30,12 +32,12 @@ With `π=P(Y=1)=1/2`, `V=1`, `C_FA=2`, and `C_FR=1`, this reduces to `WrongPayou
 
 ## 3. Mechanism architecture under study
 
-The dual-purpose architecture keeps two independent lotteries:
+The dual-purpose architecture uses independent random draws for two lotteries. Conditional on locked `(Z,r)`, `A_pay` and `A_dec` are independent Bernoulli events; the Selective decision probability still depends on the reports:
 
 - `A_pay` selects reward eligibility with probability `a=2/5`, independently of the report. A trusted audit is observed when this event occurs, and the reviewer bonus is paid only on this event.
 - `A_dec` selects decision verification with probability `t=1/6`, but only for the frozen risk class `S={Z=0, sum(reports)=2}`. It affects decision verification and does not create reward eligibility.
 
-The union event is charged once, so exposure is `P(A_pay ∪ A_dec)`. Separating the lotteries is intended to remove the direct report-to-payment channel while preserving risk-targeted decision verification. The study does not assume that this separation solves external-interest manipulation or global equilibrium selection.
+Whenever either lottery fires, one common audit signal `T` informs the final decision through the frozen `g1` table, including when only `A_pay` fires. Without either event, the decision uses `g0`. Only `A_pay` creates matching-bonus eligibility. The union event is charged once, so exposure is `P(A_pay ∪ A_dec)`. Separating the lotteries removes the direct report-to-payment-eligibility channel under the stated assumptions; it does not solve external-interest manipulation or global equilibrium selection.
 
 ![CEAV-M1 dual-purpose verification architecture](../figures/ceav_m1_dual_purpose_architecture.png)
 
@@ -60,7 +62,7 @@ These are local best-response results against frozen peers and calibration. They
 
 ### T5 — Global-quality failure at `b=1/10`
 
-At symmetric preferences `b=(1/10,1/10,1/10)`, exhaustive factorized checking of the declared pure stationary class finds four pure equilibria for each frozen mechanism. All-H01 remains one equilibrium, but three additional strict equilibria are bad: each fails the false-accept gate. For Selective, the safe all-pure component around zero is `-70/633 < b < 175/1922`; the positive endpoint is much smaller than the local one-Judge endpoint because global deviations can coordinate through equilibrium profiles. The frozen report labels the study `STRATEGIC_FAILURE` for global robustness, while preserving a nonempty local neutral neighborhood.
+At symmetric preferences `b=(1/10,1/10,1/10)`, exhaustive factorized checking of the declared pure stationary class finds four pure Nash equilibria for each frozen mechanism. All-H01 remains locally strict, while three additional strict pure Nash equilibria are bad: each fails the false-accept gate. For Selective, the safe all-pure component around zero is `-70/633 < b < 175/1922`; additional bad pure equilibrium profiles become sustainable before All-H01 loses local stability. Each candidate is checked against unilateral task-local deviations. The analysis does not model coordinated deviations or an equilibrium-selection process. The frozen report labels the study `STRATEGIC_FAILURE` for global robustness, while preserving a nonempty local neutral neighborhood.
 
 ![CEAV-M1 T3, T4 and T5 results](../figures/ceav_m1_t3_t4_t5_summary.png)
 
@@ -79,10 +81,12 @@ The candidate contribution is instance-level and conditional: exact rational inc
 - The bound on `b` is an assumption about reviewer preferences, not an enforcement mechanism. Sybil resistance, independence, collusion resistance, evidence integrity, and settlement reliability remain open operational questions.
 - Hashes establish artifact identity. Independent code checks establish the reported finite calculations; neither constitutes external human peer review.
 
+Verification attribution is specific: the independent primitive oracle and DB01–DB03 support payoff/calibration and local-boundary calculations. The existing proof-review runner derives T3 from primitive probabilities, checks T4 arithmetic on hardcoded binding rows, and calls the independent completeness audit for T5. The certificate metric checker verifies stored values, not the prose. The v0.3 correction checker and the documented prose inspection address the corrected signs and document consistency; they are not general proof verification.
+
 ## 7. Questions for an external reviewer
 
 1. Is the separation of report-independent payment auditing from risk-dependent decision auditing a meaningful instance-level contribution once the prior-art boundaries are fully screened?
 2. Are the finite-class equilibrium claims, conditioning conventions, and factorized exhaustive coverage sufficient for the stated local-versus-global conclusions?
 3. Which empirical milestone, audit protocol, and reviewer-participation assumptions must be measured before these theoretical results can inform a real escrow workflow?
 
-The detailed derivations, certificates, hashes, and clean replay instructions are in [`CEAV_M1_MANUSCRIPT_V0_2.md`](CEAV_M1_MANUSCRIPT_V0_2.md) and [`review-package/README.md`](../README.md).
+The detailed derivations, certificates, hashes, and clean replay instructions are in [`CEAV_M1_MANUSCRIPT_V0_3.md`](CEAV_M1_MANUSCRIPT_V0_3.md) and [`review-package/README.md`](../README.md). The [v0.3 correction closeout](CEAV_M1_MANUSCRIPT_V0_3_CORRECTION_CLOSEOUT.md) maps the resolved findings and remaining review limitations. Historical v0.2 and audit evidence remain preserved.

@@ -1,0 +1,17 @@
+T3 effort gap: 7/500
+selective T4 local interval: (Fraction(-70, 633), Fraction(175, 1102))
+selective T5 symmetric safe component: {'lo': Fraction(-70, 633), 'hi': Fraction(175, 1922), 'lo_included': False, 'hi_included': False}
+selective pure equilibria at b=1/10: 4
+{"all_gates_pass": false, "metrics": {"cash": "45357/25000", "exposure": "2557/6250", "fa": "1391/6250", "fr": "313/3125", "loss": "852/3125", "release": "1403/2500", "reserve": "6", "reward": "214/125", "wrong_payout": "1391/12500"}, "profile": [["H01", "H01", "H01"], ["L1", "L1", "H01"]]}
+{"all_gates_pass": false, "metrics": {"cash": "45357/25000", "exposure": "2557/6250", "fa": "1391/6250", "fr": "313/3125", "loss": "852/3125", "release": "1403/2500", "reserve": "6", "reward": "214/125", "wrong_payout": "1391/12500"}, "profile": [["H01", "H01", "H01"], ["L1", "H01", "L1"]]}
+{"all_gates_pass": false, "metrics": {"cash": "45357/25000", "exposure": "2557/6250", "fa": "1391/6250", "fr": "313/3125", "loss": "852/3125", "release": "1403/2500", "reserve": "6", "reward": "214/125", "wrong_payout": "1391/12500"}, "profile": [["H01", "H01", "H01"], ["H01", "L1", "L1"]]}
+{"all_gates_pass": true, "metrics": {"cash": "46957/25000", "exposure": "2557/6250", "fa": "43/1250", "fr": "481/3125", "loss": "348/3125", "release": "5503/12500", "reserve": "6", "reward": "222/125", "wrong_payout": "43/2500"}, "profile": [["H01", "H01", "H01"], ["H01", "H01", "H01"]]}
+uniform T4 local interval: (Fraction(-218750, 2070709), Fraction(218750, 1365587))
+uniform T5 symmetric safe component: {'lo': Fraction(-218750, 2070709), 'hi': Fraction(109375, 1189451), 'lo_included': False, 'hi_included': False}
+uniform pure equilibria at b=1/10: 4
+{"all_gates_pass": false, "metrics": {"cash": "45357/25000", "exposure": "2557/6250", "fa": "2148236/9765625", "fr": "8571103/78125000", "loss": "42942879/156250000", "release": "17347957/31250000", "reserve": "6", "reward": "214/125", "wrong_payout": "1074118/9765625"}, "profile": [["H01", "H01", "H01"], ["L1", "L1", "H01"]]}
+{"all_gates_pass": false, "metrics": {"cash": "45357/25000", "exposure": "2557/6250", "fa": "2148236/9765625", "fr": "8571103/78125000", "loss": "42942879/156250000", "release": "17347957/31250000", "reserve": "6", "reward": "214/125", "wrong_payout": "1074118/9765625"}, "profile": [["H01", "H01", "H01"], ["L1", "H01", "L1"]]}
+{"all_gates_pass": false, "metrics": {"cash": "45357/25000", "exposure": "2557/6250", "fa": "2148236/9765625", "fr": "8571103/78125000", "loss": "42942879/156250000", "release": "17347957/31250000", "reserve": "6", "reward": "214/125", "wrong_payout": "1074118/9765625"}, "profile": [["H01", "H01", "H01"], ["H01", "L1", "L1"]]}
+{"all_gates_pass": true, "metrics": {"cash": "46957/25000", "exposure": "2557/6250", "fa": "328691/9765625", "fr": "3184297/19531250", "loss": "4499061/39062500", "release": "3400867/7812500", "reserve": "6", "reward": "222/125", "wrong_payout": "328691/19531250"}, "profile": [["H01", "H01", "H01"], ["H01", "H01", "H01"]]}
+{"mechanism": "selective", "neutral_metrics": {"cash": "46957/25000", "exposure": "2557/6250", "fa": "43/1250", "fr": "481/3125", "loss": "348/3125", "release": "5503/12500", "reserve": "6", "reward": "222/125", "wrong_payout": "43/2500"}}
+{"mechanism": "uniform", "neutral_metrics": {"cash": "46957/25000", "exposure": "2557/6250", "fa": "328691/9765625", "fr": "3184297/19531250", "loss": "4499061/39062500", "release": "3400867/7812500", "reserve": "6", "reward": "222/125", "wrong_payout": "328691/19531250"}}

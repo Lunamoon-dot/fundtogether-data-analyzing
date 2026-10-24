@@ -24,6 +24,7 @@ This checks every equilibrium row stored in the certificate. It verifies the
 conditional definitions and exact reductions `WrongPayout=FA/2` and
 `Loss=FA+FR/2`, then checks the neutral, positive-witness, negative-witness,
 local-boundary, and safe-component values used by the manuscript.
+It does not read the manuscript or validate written inequalities or bylines.
 
 ```text
 python -X utf8 -m verification.independent_t3_t5_review
@@ -45,8 +46,12 @@ T5 Selective symmetric safe component: (-70/633, 175/1922)
 T5 Uniform symmetric safe component: (-218750/2070709, 109375/1189451)
 ```
 
-The runner reports exact Fraction values and checks four pure equilibria at
-Selective `b=1/10`, three of which fail a quality gate.
+The runner's T3 subsection derives match values from primitive probabilities.
+Its T4 subsection divides hardcoded binding intercepts/slopes; it does not
+derive them. Its T5 subsection calls the independent primitive-oracle
+completeness audit and checks four pure equilibria at Selective `b=1/10`,
+three of which fail a quality gate. DB01–DB03 in the focused suite supply
+local-boundary/calibration checks and all 864 primitive branch comparisons.
 
 To regenerate the central certificate from the packaged source, choose a new
 empty output directory and run:
@@ -77,6 +82,26 @@ Expected result: ten tests, all passing. The suite checks frozen calibration,
 all branch profiles, exact local boundaries, closed interval behavior, metric
 weights, mutation probes, all three Judge positions, the `b=1/10` failure tie,
 and the independent completeness audit.
+
+## Manuscript v0.3 correction check
+
+```text
+python -X utf8 -m verification.manuscript_correction_checks
+```
+
+This scoped command was executed from the package and workspace root. The
+package invocation checks 85 conditions, including 30 T4 local diagnostic
+cases across all three Judges and both mechanisms: neutral is strict,
+endpoints are weak with ties, and a profitable deviation appears immediately
+outside each bound. It checks the displayed Selective coefficients against
+the existing independent primitive oracle. The root invocation has 88 checks
+because it additionally compares the three active package document copies.
+Both retain every baseline/witness metric row and all T4 result-table values.
+
+The command checks selected text conditions, not arbitrary proof validity or
+the truth of a primary-source byline. The source-byline verification, scoped
+prose inspection and complete logs are recorded in the
+[v0.3 correction closeout](docs/CEAV_M1_MANUSCRIPT_V0_3_CORRECTION_CLOSEOUT.md).
 
 ## Clean-directory procedure
 

@@ -15,7 +15,8 @@ trạng thái ứng dụng V3.3 ở trên. Không có V7, production integration
 đổi historical certificates trong package này.
 
 - [Research Brief](CEAV_M1_EXTERNAL_RESEARCH_BRIEF.md): motivation, T3–T5 và câu hỏi cho reviewer.
-- [Manuscript v0.2](CEAV_M1_MANUSCRIPT_V0_2.md): definitions, propositions, proofs và claim-to-evidence map.
+- [Manuscript v0.3](CEAV_M1_MANUSCRIPT_V0_3.md): bản sửa F1–F5, assumptions tự đầy đủ, definitions, proofs và claim-to-evidence map; v0.2 được giữ làm lịch sử.
+- [Manuscript correction closeout](CEAV_M1_MANUSCRIPT_V0_3_CORRECTION_CLOSEOUT.md): mapping corrections, evidence và quyết định external-review readiness.
 - [Dual Strategic Boundary Report](CEAV_M1_DUAL_STRATEGIC_BOUNDARY_REPORT.md): frozen F51-02 witness và exact external-interest boundary.
 - [Review package README](review-package/README.md): clean reproduction, immutable certificates, independent verification code và generated figures.
 
@@ -34,6 +35,7 @@ python -X utf8 -m verification.manuscript_editorial_audit
 python -X utf8 -m verification.independent_t3_t5_review
 python -X utf8 -m verification.review_summary
 python -X utf8 -m unittest tests.test_dual_boundary -v
+python -X utf8 -m verification.manuscript_correction_checks
 Pop-Location
 ```
 

@@ -5,6 +5,13 @@ CEAV-M1 dual-purpose strategic-boundary study. It is an academic review
 package, not a new mechanism, production implementation, or submission
 decision.
 
+The active reviewer draft is [manuscript v0.3](docs/CEAV_M1_MANUSCRIPT_V0_3.md),
+with the synchronized [Research Brief](docs/CEAV_M1_EXTERNAL_RESEARCH_BRIEF.md).
+The [v0.3 correction closeout](docs/CEAV_M1_MANUSCRIPT_V0_3_CORRECTION_CLOSEOUT.md)
+resolves audit F1–F5 and records verification and remaining review limits.
+`docs/CEAV_M1_MANUSCRIPT_V0_2.md` is retained as a historical draft with the
+reported errors; use v0.3 for review.
+
 The package preserves the certified values for:
 
 - the neutral T3 effort gap `7/500`;
@@ -56,14 +63,20 @@ python -X utf8 -m verification.manuscript_editorial_audit
 python -X utf8 -m verification.independent_t3_t5_review
 python -X utf8 -m verification.review_summary
 python -X utf8 -m unittest tests.test_dual_boundary -v
+python -X utf8 -m verification.manuscript_correction_checks
 ```
 
 Expected results are documented in
 [`REPRODUCTION_GUIDE.md`](REPRODUCTION_GUIDE.md). The first command checks
 all 80 equilibrium metric rows against the certificate and verifies the
-conditional reductions. The second independently checks T3–T5. The summary
+conditional reductions; it does not read manuscript prose. The second derives
+T3 from primitive probabilities, checks supplied hardcoded T4 binding rows,
+and invokes the independent completeness audit for T5. DB01–DB03 compare
+local boundaries, calibration and primitive-oracle branch payoffs. The summary
 prints every pure equilibrium active at `b=1/10` and both neutral baselines.
-The final command runs ten focused tests.
+The unittest command runs ten focused tests. The v0.3 correction command
+checks local T4 neutral/endpoint conditions and selected editorial conditions;
+it does not replace the numerical suite or prose inspection.
 
 ## Evidence and limitations
 

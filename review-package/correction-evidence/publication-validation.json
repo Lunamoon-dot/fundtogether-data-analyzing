@@ -1,0 +1,49 @@
+{
+  "status": "PASS",
+  "baseline_commit": "15387a7b5606154e72739ff71cad45564b0a021b",
+  "checks": 88,
+  "local_boundary_cases": 30,
+  "local_links_checked": 105,
+  "active_copies_synchronized": true,
+  "t3_t4_t5_values_unchanged": true,
+  "historical_source_files_unchanged": 8084,
+  "commands_exit_zero": 12,
+  "focused_test_counts": [
+    10,
+    10,
+    10
+  ],
+  "final_input_raw_sha256": {
+    "CEAV_M1_MANUSCRIPT_V0_3.md": "6e634b9e8e72cafb04c03509e706dfe058fd50031542d4df3e2783d880660473",
+    "CEAV_M1_MANUSCRIPT_V0_3_CORRECTION_CLOSEOUT.md": "9f8e97256066760fcf415f9af04464e51e2a50189ecffa859afaac92ca63cbf2",
+    "CEAV_M1_EXTERNAL_RESEARCH_BRIEF.md": "8d5ecaa1b9d511f7cc54780ae13f8f5455a12aa7f586f9cdd4f1fcb23cc875c2",
+    "CEAV_M1_BIBLIOGRAPHY_PRIMARY_CHECK.md": "34adff945b8aaaa197612ed5d3ddc77f256b4b84b5a7b7747923c735978eb30f",
+    "README.md": "e796b82d8ce86d28a5382fac828455190a1eabbf8005a34a4094f20f09f1e7ea",
+    "review-package/README.md": "1c7ae4f811f36c3890c40cf351a64f1b0312c8d6afbfe833c7f71b1510e37785",
+    "review-package/CLAIM_EVIDENCE_MAP.md": "b18980efb629cfbf022048bfc7869166c075066428b971cde81ea8c0768758c8",
+    "review-package/REPRODUCTION_GUIDE.md": "28bb70e1fac01061776e02fff2dd5d0b2b52bd282565ce242d1e309b7fd9d00e",
+    "review-package/docs/CEAV_M1_MANUSCRIPT_V0_3.md": "155a153c0b183ab3912d701f1c39809135f64a50ee9677f9345130c8a76cd608",
+    "review-package/docs/CEAV_M1_MANUSCRIPT_V0_3_CORRECTION_CLOSEOUT.md": "756672861f921a41fa549e607fb60a693e08122fd6a5d588854b19ae29f3fd83",
+    "review-package/docs/CEAV_M1_EXTERNAL_RESEARCH_BRIEF.md": "a35fae0306ae9e62d300e731f362d7fc42d7ae003872f09931f0080792811bfc",
+    "review-package/docs/CEAV_M1_BIBLIOGRAPHY_PRIMARY_CHECK.md": "34adff945b8aaaa197612ed5d3ddc77f256b4b84b5a7b7747923c735978eb30f",
+    "verification/manuscript_correction_checks.py": "5b72b3928932e6e602346ba5ff29c63cf759cc6fe2eba59aad8ab5c787d8073d",
+    "review-package/verification/manuscript_correction_checks.py": "5b72b3928932e6e602346ba5ff29c63cf759cc6fe2eba59aad8ab5c787d8073d",
+    "docs/superpowers/plans/2026-10-25-manuscript-correction-closeout.md": "209d1aef9a32d99fd1192a9f2a81f4cee2e9781bbb99b74bfdffe1f9d6b48f9f"
+  },
+  "finding_disposition": {
+    "F1": "RESOLVED in active v0.3",
+    "F2": "RESOLVED in active v0.3",
+    "F3": "RESOLVED in active v0.3",
+    "F4": "RESOLVED in active v0.3",
+    "F5": "RESOLVED in active v0.3"
+  },
+  "external_academic_review_ready": true,
+  "remaining_limits": [
+    "novelty priority",
+    "empirical validity",
+    "declared pure stationary scope",
+    "production integration/settlement",
+    "external human review not yet performed"
+  ],
+  "publication_note": "Editable README normalized to repository LF policy; earlier run snapshots and validation preserved."
+}

@@ -1,0 +1,15 @@
+test_DB01_local_paper_boundaries (tests.test_dual_boundary.BoundaryTests.test_DB01_local_paper_boundaries) ... ok
+test_DB02_frozen_calibration (tests.test_dual_boundary.BoundaryTests.test_DB02_frozen_calibration) ... ok
+test_DB03_all_profiles_independent_oracle (tests.test_dual_boundary.BoundaryTests.test_DB03_all_profiles_independent_oracle) ... ok
+test_DB04_closed_intersections (tests.test_dual_boundary.BoundaryTests.test_DB04_closed_intersections) ... ok
+test_DB05_neutral_metrics (tests.test_dual_boundary.BoundaryTests.test_DB05_neutral_metrics) ... ok
+test_DB06_all_interval_constraints_and_cells (tests.test_dual_boundary.BoundaryTests.test_DB06_all_interval_constraints_and_cells) ... ok
+test_DB07_mutations_detected (tests.test_dual_boundary.BoundaryTests.test_DB07_mutations_detected) ... ok
+test_DB08_positions_and_dominated_high_constants (tests.test_dual_boundary.BoundaryTests.test_DB08_positions_and_dominated_high_constants) ... ok
+test_DB09_global_boundary_and_failure_ties (tests.test_dual_boundary.BoundaryTests.test_DB09_global_boundary_and_failure_ties) ... ok
+test_DB10_independent_completeness_audit (tests.test_dual_boundary.BoundaryTests.test_DB10_independent_completeness_audit) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 13.904s
+
+OK

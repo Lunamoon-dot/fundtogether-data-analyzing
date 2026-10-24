@@ -1,0 +1,187 @@
+{
+  "utc": "2026-10-24T19:27:00.898532+00:00",
+  "baseline_commit": "15387a7b5606154e72739ff71cad45564b0a021b",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "runs": [
+    {
+      "name": "root-metrics",
+      "cwd": "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing",
+      "command": [
+        "C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "-m",
+        "verification.manuscript_editorial_audit"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "root-independent",
+      "cwd": "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing",
+      "command": [
+        "C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "-m",
+        "verification.independent_t3_t5_review"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "root-focused",
+      "cwd": "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing",
+      "command": [
+        "C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "-m",
+        "unittest",
+        "tests.test_dual_boundary",
+        "-v"
+      ],
+      "exit_code": 0,
+      "tests_executed": 10
+    },
+    {
+      "name": "root-focused-optimized",
+      "cwd": "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing",
+      "command": [
+        "C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "-O",
+        "-m",
+        "unittest",
+        "tests.test_dual_boundary",
+        "-v"
+      ],
+      "exit_code": 0,
+      "tests_executed": 10
+    },
+    {
+      "name": "root-correction",
+      "cwd": "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing",
+      "command": [
+        "C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "-m",
+        "verification.manuscript_correction_checks"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "root-correction-optimized",
+      "cwd": "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing",
+      "command": [
+        "C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "-O",
+        "-m",
+        "verification.manuscript_correction_checks"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "package-origins",
+      "cwd": "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\results\\manuscript-correction-closeout-20261024T191947409255Z\\standalone-n3jkeh9z\\review-package",
+      "command": [
+        "C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "-c",
+        "from pathlib import Path; import verification.dual_boundary as d; import tests.test_dual_boundary as t; root=Path.cwd(); print(d.__file__); print(t.__file__); assert Path(d.__file__).is_relative_to(root); assert Path(t.__file__).is_relative_to(root)"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "package-metrics",
+      "cwd": "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\results\\manuscript-correction-closeout-20261024T191947409255Z\\standalone-n3jkeh9z\\review-package",
+      "command": [
+        "C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "-m",
+        "verification.manuscript_editorial_audit"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "package-independent",
+      "cwd": "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\results\\manuscript-correction-closeout-20261024T191947409255Z\\standalone-n3jkeh9z\\review-package",
+      "command": [
+        "C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "-m",
+        "verification.independent_t3_t5_review"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "package-focused",
+      "cwd": "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\results\\manuscript-correction-closeout-20261024T191947409255Z\\standalone-n3jkeh9z\\review-package",
+      "command": [
+        "C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "-m",
+        "unittest",
+        "tests.test_dual_boundary",
+        "-v"
+      ],
+      "exit_code": 0,
+      "tests_executed": 10
+    },
+    {
+      "name": "package-correction",
+      "cwd": "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\results\\manuscript-correction-closeout-20261024T191947409255Z\\standalone-n3jkeh9z\\review-package",
+      "command": [
+        "C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "-m",
+        "verification.manuscript_correction_checks"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "package-summary",
+      "cwd": "C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\results\\manuscript-correction-closeout-20261024T191947409255Z\\standalone-n3jkeh9z\\review-package",
+      "command": [
+        "C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "-m",
+        "verification.review_summary"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "protected_files_unchanged": 8084,
+  "independent_audit": {
+    "all_real_b": true,
+    "branch_candidates": 4320,
+    "checks": 5590,
+    "full_profiles_covered": 466560,
+    "oracle_branch_profiles": 864,
+    "status": "PASS"
+  },
+  "correction_checks": 88,
+  "local_boundary_cases": 30,
+  "root_package_synchronized": true,
+  "scope": "limited manuscript corrections; no certificate regeneration or equilibrium expansion"
+}
