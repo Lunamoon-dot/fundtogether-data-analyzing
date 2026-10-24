@@ -1,0 +1,47 @@
+[
+  {
+    "mutation": "union_payment",
+    "detected": true,
+    "detector": "DB03 separate-coin identity"
+  },
+  {
+    "mutation": "double_audit",
+    "detected": true,
+    "detector": "DB03 separate-coin identity"
+  },
+  {
+    "mutation": "recalibrate_actual_reports",
+    "detected": true,
+    "detector": "DB02 frozen calibration"
+  },
+  {
+    "mutation": "discard_exact_ties",
+    "detected": true,
+    "detector": "direct best responses in exact cell"
+  },
+  {
+    "mutation": "omit_low_profiles",
+    "detected": true,
+    "detector": "selective all864/2 independent branch metrics"
+  },
+  {
+    "mutation": "omit_asymmetric_profiles",
+    "detected": true,
+    "detector": "selective all864/2 independent branch metrics"
+  },
+  {
+    "mutation": "reverse_external_slope",
+    "detected": true,
+    "detector": "independent candidate interval ('selective', (1, 0, 0), 0, ('L0', 'H01', 'H01'))"
+  },
+  {
+    "mutation": "change_peers_on_deviation",
+    "detected": true,
+    "detector": "independent candidate interval ('selective', (1, 0, 0), 0, ('L0', 'H01', 'H01'))"
+  },
+  {
+    "mutation": "report_minimum_as_worst",
+    "detected": true,
+    "detector": "independent worst metric and witness IDs: fa"
+  }
+]

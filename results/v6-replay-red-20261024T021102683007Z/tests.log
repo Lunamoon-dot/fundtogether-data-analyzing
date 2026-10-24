@@ -1,0 +1,23 @@
+test_R04_run_contains_complete_replayable_freeze (tests.test_v6_regressions.V6RegressionTests.test_R04_run_contains_complete_replayable_freeze) ... ERROR
+
+======================================================================
+ERROR: test_R04_run_contains_complete_replayable_freeze (tests.test_v6_regressions.V6RegressionTests.test_R04_run_contains_complete_replayable_freeze)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\dell\Desktop\fundtogether_data_analyzing\tests\test_v6_regressions.py", line 54, in test_R04_run_contains_complete_replayable_freeze
+    checker.verify_freeze()
+  File "C:\Users\dell\Desktop\fundtogether_data_analyzing\verification\feasibility_v6.py", line 325, in verify_freeze
+    if sha256((path.parent / row["snapshot"]).read_bytes()).hexdigest() != row["sha256"]:
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1019, in read_bytes
+    with self.open(mode='rb') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\dell\\AppData\\Local\\Temp\\tmp32xz_e3z\\run\\inputs\\spec_history\\v6.0-rave-pre-checker-freeze-20261024T020618028417Z\\CEAV_M1_V6_RAVE_SPEC.md'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.327s
+
+FAILED (errors=1)

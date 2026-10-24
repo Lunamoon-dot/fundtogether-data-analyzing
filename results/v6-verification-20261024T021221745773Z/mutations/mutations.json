@@ -1,0 +1,201 @@
+{
+  "created_at_utc": "2026-10-24T02:14:05.607855+00:00",
+  "probes": [
+    {
+      "tests_run": 1,
+      "errors": 0,
+      "failures": 1,
+      "skipped": 0,
+      "details": [
+        "Traceback (most recent call last):\n  File \"C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\tests\\test_v6_feasibility.py\", line 67, in test_T03_majority_noisy_posterior_and_voi\n    self.assertEqual(state[\"g0\"], 0)\nAssertionError: 1 != 0\n"
+      ],
+      "name": "threshold",
+      "test_id": "tests.test_v6_feasibility.V6FeasibilityTests.test_T03_majority_noisy_posterior_and_voi",
+      "source_sha256": "e592b3a8ef8b22292f08d38697a9dcd6dd217a4fd2c8e78c725818e888985349",
+      "status": "killed_by_assertion"
+    },
+    {
+      "tests_run": 1,
+      "errors": 0,
+      "failures": 1,
+      "skipped": 0,
+      "details": [
+        "Traceback (most recent call last):\n  File \"C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\tests\\test_v6_feasibility.py\", line 93, in test_T05_exposure_uses_realized_reports\n    self.assertEqual(high[\"audit_exposure\"], F(12, 25))\nAssertionError: Fraction(6, 25) != Fraction(12, 25)\n"
+      ],
+      "name": "future_T_selection",
+      "test_id": "tests.test_v6_feasibility.V6FeasibilityTests.test_T05_exposure_uses_realized_reports",
+      "source_sha256": "1f619e635d99045d42cd5856b5f286376e7bc61f6e86174b88b1abfb8865be9b",
+      "status": "killed_by_assertion"
+    },
+    {
+      "tests_run": 1,
+      "errors": 0,
+      "failures": 1,
+      "skipped": 0,
+      "details": [
+        "Traceback (most recent call last):\n  File \"C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\tests\\test_v6_regressions.py\", line 27, in test_R01_frozen_calibration_with_external_b_and_deviation\n    self.assertEqual(actual, expected, (fixture[\"name\"], z, i, action))\nAssertionError: {'pre[60 chars]tion(19, 20), 'preliminary_fa': Fraction(27, 6[1041 chars]H'))} != {'pre[60 chars]tion(24077, 25000), 'preliminary_fa': Fraction[1081 chars]H'))}\nDiff is 2615 characters long. Set self.maxDiff to None to see it. : ('F51-01', 0, 0, 'L0')\n"
+      ],
+      "name": "recalibrate_on_deviation",
+      "test_id": "tests.test_v6_regressions.V6RegressionTests.test_R01_frozen_calibration_with_external_b_and_deviation",
+      "source_sha256": "3fbb72407c5356349db090971a6e8c5c97cfe791d99ce84319307ba8a5962975",
+      "status": "killed_by_assertion"
+    },
+    {
+      "tests_run": 1,
+      "errors": 0,
+      "failures": 1,
+      "skipped": 0,
+      "details": [
+        "Traceback (most recent call last):\n  File \"C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\tests\\test_v6_feasibility.py\", line 87, in test_T04_policy_and_peers_frozen_under_deviation\n    self.assertEqual(action[\"utility\"], expected)\nAssertionError: Fraction(0, 1) != Fraction(639, 2500)\n"
+      ],
+      "name": "peer_adapts",
+      "test_id": "tests.test_v6_feasibility.V6FeasibilityTests.test_T04_policy_and_peers_frozen_under_deviation",
+      "source_sha256": "743fb3071563441bc0a3eeb667e8ee94772dae140b8a88f73fbe1623ebf4ff0d",
+      "status": "killed_by_assertion"
+    },
+    {
+      "tests_run": 1,
+      "errors": 0,
+      "failures": 1,
+      "skipped": 0,
+      "details": [
+        "Traceback (most recent call last):\n  File \"C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\tests\\test_v6_feasibility.py\", line 73, in test_T03_majority_noisy_posterior_and_voi\n    self.assertEqual(result[\"preliminary_accuracy\"], F(112, 125))\nAssertionError: Fraction(94, 125) != Fraction(112, 125)\n"
+      ],
+      "name": "majority",
+      "test_id": "tests.test_v6_feasibility.V6FeasibilityTests.test_T03_majority_noisy_posterior_and_voi",
+      "source_sha256": "f84290cba5657dc314b2d5069704ba5233d5e4ca214f98502582d84744002d0d",
+      "status": "killed_by_assertion"
+    },
+    {
+      "tests_run": 1,
+      "errors": 0,
+      "failures": 1,
+      "skipped": 0,
+      "details": [
+        "Traceback (most recent call last):\n  File \"C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\tests\\test_v6_feasibility.py\", line 94, in test_T05_exposure_uses_realized_reports\n    self.assertEqual(low[\"audit_exposure\"], 0)\nAssertionError: Fraction(12, 25) != 0\n"
+      ],
+      "name": "frozen_exposure_distribution",
+      "test_id": "tests.test_v6_feasibility.V6FeasibilityTests.test_T05_exposure_uses_realized_reports",
+      "source_sha256": "8ea3ef31e08ed366dddaff6f0778d9c90723668e812989537c19812455a31ce9",
+      "status": "killed_by_assertion"
+    },
+    {
+      "tests_run": 1,
+      "errors": 0,
+      "failures": 1,
+      "skipped": 0,
+      "details": [
+        "Traceback (most recent call last):\n  File \"C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\tests\\test_v6_feasibility.py\", line 137, in test_T08_false_approval_rejection_denominators\n    self.assertEqual(result[\"final_fa\"], F(2, 5))\nAssertionError: Fraction(1, 5) != Fraction(2, 5)\n"
+      ],
+      "name": "FA_denominator",
+      "test_id": "tests.test_v6_feasibility.V6FeasibilityTests.test_T08_false_approval_rejection_denominators",
+      "source_sha256": "6c6cf4d4ba0b83348ba5401ba542a2ce5615b1304572d91c570ea7147e4f5c6b",
+      "status": "killed_by_assertion"
+    },
+    {
+      "tests_run": 1,
+      "errors": 0,
+      "failures": 1,
+      "skipped": 0,
+      "details": [
+        "Traceback (most recent call last):\n  File \"C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\tests\\test_v6_feasibility.py\", line 146, in test_T09_cash_claim_cost_reserve_and_effort\n    self.assertEqual(result[\"expected_audit_cost\"], F(1, 8))\nAssertionError: Fraction(3, 8) != Fraction(1, 8)\n"
+      ],
+      "name": "audit_cost_tripled",
+      "test_id": "tests.test_v6_feasibility.V6FeasibilityTests.test_T09_cash_claim_cost_reserve_and_effort",
+      "source_sha256": "408233613703dc1297c24907b060ff33bf4abbc5b434ce1daa2add1d9fef46e2",
+      "status": "killed_by_assertion"
+    },
+    {
+      "tests_run": 1,
+      "errors": 0,
+      "failures": 1,
+      "skipped": 0,
+      "details": [
+        "Traceback (most recent call last):\n  File \"C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\tests\\test_v6_feasibility.py\", line 148, in test_T09_cash_claim_cost_reserve_and_effort\n    self.assertEqual(result[\"reward_cap\"], 3)\nAssertionError: Fraction(3, 2) != 3\n"
+      ],
+      "name": "reserve_discounted",
+      "test_id": "tests.test_v6_feasibility.V6FeasibilityTests.test_T09_cash_claim_cost_reserve_and_effort",
+      "source_sha256": "da144cddaa5eb79317dbf462ac4f23378efc1e83b709128313ece9e5b777812a",
+      "status": "killed_by_assertion"
+    },
+    {
+      "tests_run": 1,
+      "errors": 0,
+      "failures": 1,
+      "skipped": 0,
+      "details": [
+        "Traceback (most recent call last):\n  File \"C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\tests\\test_v6_feasibility.py\", line 149, in test_T09_cash_claim_cost_reserve_and_effort\n    self.assertEqual(result[\"utility_by_z\"][0][0], F(8, 25))\nAssertionError: Fraction(37, 100) != Fraction(8, 25)\n"
+      ],
+      "name": "effort_cost_omitted",
+      "test_id": "tests.test_v6_feasibility.V6FeasibilityTests.test_T09_cash_claim_cost_reserve_and_effort",
+      "source_sha256": "7d00a47a165d9312d4aaef4ae1ff6784151ff602252f0f217372573213aa041e",
+      "status": "killed_by_assertion"
+    },
+    {
+      "tests_run": 1,
+      "errors": 0,
+      "failures": 1,
+      "skipped": 0,
+      "details": [
+        "Traceback (most recent call last):\n  File \"C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\tests\\test_v6_feasibility.py\", line 159, in test_T10_exact_ties_and_six_deviations\n    self.assertEqual(set(rec[\"best_actions\"]), {f\"L{z}\", \"H01\"})\nAssertionError: Items in the second set but not the first:\n'H01'\n'L0'\n"
+      ],
+      "name": "ties_dropped",
+      "test_id": "tests.test_v6_feasibility.V6FeasibilityTests.test_T10_exact_ties_and_six_deviations",
+      "source_sha256": "d9c1f822fb17fc2347bdaac70edcce8d2d535bb0c0683e00cf327275dc93fb48",
+      "status": "killed_by_assertion"
+    },
+    {
+      "tests_run": 1,
+      "errors": 0,
+      "failures": 1,
+      "skipped": 0,
+      "details": [
+        "Traceback (most recent call last):\n  File \"C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\tests\\test_v6_feasibility.py\", line 183, in test_T12_target_and_batch_weights_separate\n    self.assertEqual(result[\"cash_review_cost\"], F(31, 25))\nAssertionError: Fraction(59, 40) != Fraction(31, 25)\n"
+      ],
+      "name": "target_replaced_by_batch",
+      "test_id": "tests.test_v6_feasibility.V6FeasibilityTests.test_T12_target_and_batch_weights_separate",
+      "source_sha256": "3552b511f6f19c1410ae0a1c6c856d6e3e15dd3780244e821efba8636567ab7d",
+      "status": "killed_by_assertion"
+    },
+    {
+      "tests_run": 1,
+      "errors": 0,
+      "failures": 1,
+      "skipped": 0,
+      "details": [
+        "Traceback (most recent call last):\n  File \"C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\tests\\test_v6_feasibility.py\", line 161, in test_T10_exact_ties_and_six_deviations\n    self.assertEqual({a[\"action\"] for a in rec[\"actions\"]},\nAssertionError: Items in the second set but not the first:\n'H11'\n"
+      ],
+      "name": "deviation_omitted",
+      "test_id": "tests.test_v6_feasibility.V6FeasibilityTests.test_T10_exact_ties_and_six_deviations",
+      "source_sha256": "292c3d0d073d61d85dda7a0e83188c1823e243ffcd9caf7bd7797ce8336edba7",
+      "status": "killed_by_assertion"
+    },
+    {
+      "tests_run": 1,
+      "errors": 0,
+      "failures": 1,
+      "skipped": 0,
+      "details": [
+        "Traceback (most recent call last):\n  File \"C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\tests\\test_v6_feasibility.py\", line 166, in test_T11_stop_gates_witnesses_and_non_exhaustive_scope\n    self.assertEqual(self.m.phase2_decision(False), \"NO-GO\")\nAssertionError: 'GO_candidate_discovery_only' != 'NO-GO'\n- GO_candidate_discovery_only\n+ NO-GO\n\n"
+      ],
+      "name": "false_stop_GO",
+      "test_id": "tests.test_v6_feasibility.V6FeasibilityTests.test_T11_stop_gates_witnesses_and_non_exhaustive_scope",
+      "source_sha256": "f2da59c6b102947608933696ebe46afb5480974cf70f4c5aa7c73ebb34e1e434",
+      "status": "killed_by_assertion"
+    },
+    {
+      "tests_run": 1,
+      "errors": 0,
+      "failures": 1,
+      "skipped": 0,
+      "details": [
+        "Traceback (most recent call last):\n  File \"C:\\Users\\dell\\Desktop\\fundtogether_data_analyzing\\tests\\test_v6_regressions.py\", line 34, in test_R02_bayes_tie_releases\n    self.assertEqual(decisions[0, (1, 0, 0)][\"g0\"], 1)\nAssertionError: 0 != 1\n"
+      ],
+      "name": "decision_tie_dropped",
+      "test_id": "tests.test_v6_regressions.V6RegressionTests.test_R02_bayes_tie_releases",
+      "source_sha256": "ac14a9c8b5bbe9ed0a34b7147184db3953273a9e0387fac921a347f7bf3b9c48",
+      "status": "killed_by_assertion"
+    }
+  ],
+  "status": "passed"
+}

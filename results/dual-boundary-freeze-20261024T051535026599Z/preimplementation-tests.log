@@ -1,0 +1,19 @@
+test_dual_boundary (unittest.loader._FailedTest.test_dual_boundary) ... ERROR
+
+======================================================================
+ERROR: test_dual_boundary (unittest.loader._FailedTest.test_dual_boundary)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_dual_boundary
+Traceback (most recent call last):
+  File "C:\Users\dell\AppData\Local\Programs\Python\Python312\Lib\unittest\loader.py", line 137, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dell\Desktop\fundtogether_data_analyzing\tests\test_dual_boundary.py", line 7, in <module>
+    from verification import dual_boundary as subject
+ImportError: cannot import name 'dual_boundary' from 'verification' (unknown location)
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)

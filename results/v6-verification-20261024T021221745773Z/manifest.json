@@ -1,0 +1,41 @@
+{
+  "status": "passed",
+  "commands": [
+    {
+      "command": [
+        "python",
+        "-O",
+        "-m",
+        "unittest",
+        "tests.test_v6_feasibility",
+        "tests.test_v6_regressions",
+        "tests.test_v6_mutations",
+        "-v"
+      ],
+      "exit_code": 0,
+      "log": "tests-0.log"
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "tests.test_v4_research_oracle",
+        "tests.test_v4_1_feasibility",
+        "tests.test_v4_1_screening",
+        "tests.test_v4_1_audit_cost_sensitivity",
+        "tests.test_v5_feasibility",
+        "tests.test_v5_1_quality_certificates",
+        "tests.test_v5_1_mutations",
+        "-v"
+      ],
+      "exit_code": 0,
+      "log": "tests-1.log"
+    }
+  ],
+  "outputs": {
+    "tests-0.log": "dd160227fd209f3a7c8559cd0e30fefe6583bf7b4a6d5a73d7b94d1a4d351492",
+    "tests-1.log": "ba58262229f1ae0f06e4edb0d0ef9d629935552f9cb4cab09ee51995ea64c1c3"
+  },
+  "mutation_manifest_sha256": "f4e3ef26e700f4e02c6ff6c35f9b99a8278109d4ba1bb91d12789d54d8e47173"
+}

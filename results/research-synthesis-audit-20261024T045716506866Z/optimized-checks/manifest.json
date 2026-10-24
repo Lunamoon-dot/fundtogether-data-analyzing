@@ -1,0 +1,24 @@
+{
+  "created_at_utc": "2026-10-24T05:00:30.954768+00:00",
+  "status": "passed",
+  "inputs": [
+    {
+      "source": "CEAV_M1_RESEARCH_SYNTHESIS_AND_FEASIBILITY_MEMO.md",
+      "snapshot": "inputs/CEAV_M1_RESEARCH_SYNTHESIS_AND_FEASIBILITY_MEMO.md",
+      "sha256": "c2bee5633dcf6722d09f7572ba256f11a2fe6446cd81734f0752eb173ae75b2f"
+    },
+    {
+      "source": "verification/research_synthesis_checks.py",
+      "snapshot": "inputs/verification/research_synthesis_checks.py",
+      "sha256": "44619badde8e41303a517417b3a31ca33e2239689114354062a8c6807b90e36c"
+    },
+    {
+      "source": "configs/v6/rave_phase1.json",
+      "snapshot": "inputs/configs/v6/rave_phase1.json",
+      "sha256": "4ff7cc4f6236af06f896ffc35b1d12d138d822324f32e83dd9a7dcebe7d3ebc8"
+    }
+  ],
+  "outputs": {
+    "certificate.json": "299276eba5840d3fb7ec83501eab6f559e8cb9ad805544dc1488e3cb37f03837"
+  }
+}

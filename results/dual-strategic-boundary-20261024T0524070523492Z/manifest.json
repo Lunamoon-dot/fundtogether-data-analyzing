@@ -1,0 +1,105 @@
+{
+  "utc": "2026-10-24T05:25:04.560938+00:00",
+  "status": "VERIFIED",
+  "verdict": "STRATEGIC_FAILURE",
+  "parent_commit": "df931b0ad73d464a6937a3a7c34879a978981b90",
+  "command": "python -X utf8 -m verification.dual_boundary_evidence --out NEW_DIRECTORY",
+  "test_runs": [
+    {
+      "name": "focused",
+      "tests_executed": 10,
+      "exit_code": 0,
+      "command": [
+        "C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-X",
+        "utf8",
+        "-m",
+        "unittest",
+        "tests.test_dual_boundary",
+        "-v"
+      ]
+    },
+    {
+      "name": "optimized",
+      "tests_executed": 10,
+      "exit_code": 0,
+      "command": [
+        "C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-X",
+        "utf8",
+        "-O",
+        "-m",
+        "unittest",
+        "tests.test_dual_boundary",
+        "-v"
+      ]
+    },
+    {
+      "name": "historical-v6",
+      "tests_executed": 24,
+      "exit_code": 0,
+      "command": [
+        "C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-X",
+        "utf8",
+        "-m",
+        "unittest",
+        "tests.test_v6_feasibility",
+        "tests.test_v6_regressions",
+        "tests.test_v6_mutations",
+        "tests.test_v6_stop_certificates",
+        "-v"
+      ]
+    }
+  ],
+  "independent_audit": {
+    "checks": 5590,
+    "oracle_branch_profiles": 864,
+    "branch_candidates": 4320,
+    "full_profiles_covered": 466560,
+    "all_real_b": true,
+    "status": "PASS"
+  },
+  "mutants_detected": 9,
+  "raw_sha256": {
+    "analysis/certificate.json": "fde3ad4745b37e270469aaec2692a51c83cbcf5db7fcb0a16938296a6e25b7d5",
+    "analysis/interval-report.md": "7807d683e7e5a9881fbf52e7b2dda2f7a0ba525de290a36a9933465270ccf82a",
+    "analysis/manifest.json": "207701504e7f23d3c64fb1ddcf12d2731be8e178f67a32354f5faf9e840dc463",
+    "analysis/pinned/CEAV_M1_DUAL_BOUNDARY_PROTOCOL.md": "44cea5f9e548ed44456ca2a248bd22787cfa68be7330f626a6b463294eed878a",
+    "analysis/pinned/CEAV_M1_DUAL_STRATEGIC_BOUNDARY_REPORT.md": "b8774454d5aa7503cb558ac18a24886de350e47b0077102e1f80071cdcfa90fe",
+    "analysis/pinned/CEAV_M1_RESEARCH_SYNTHESIS_AND_FEASIBILITY_MEMO.md": "c2bee5633dcf6722d09f7572ba256f11a2fe6446cd81734f0752eb173ae75b2f",
+    "analysis/pinned/configs/dual_boundary.json": "17001d4aabcc971bd29b68a690d5d6b26e0c4c9c41be5670d60e1cac19d9cce5",
+    "analysis/pinned/tests/__init__.py": "14ecdce21e733e50c3e5bca221b9d10c520cfa180380f733bdbf57e4e988488e",
+    "analysis/pinned/tests/test_dual_boundary.py": "d2e7d79d5d1e1cca93ec08b44cccd588f394954b66578e22c12f0ef9a8894a38",
+    "analysis/pinned/verification/dual_boundary.py": "8c943bb2f6f23c5032768dd60834f9e926a1d6aa3f83205482b54f4a645d6d0b",
+    "analysis/pinned/verification/dual_boundary_audit.py": "35dcbcf243ba20ba4d2f3fe0d7258de73667f5c012bc6b2807d271d916c0a6e9",
+    "analysis/pinned/verification/dual_boundary_evidence.py": "292ba7fa4f497aaa8e6a4a56bc119ecd2794b1562361df57619c2bafeedb89f5",
+    "analysis/pinned/verification/DUAL_BOUNDARY_INDEPENDENT_REVIEW.md": "aa2f99f44abfd9d2dbaa0093da7c64f440d28ffd0b584915a213badc29cd30c7",
+    "analysis/pinned/verification/dual_boundary_mutations.py": "afe6a42f68fbaf7d2337b216df0c8cce980bd13cf974c1379e0f3176ae85bfe3",
+    "analysis/pinned/verification/dual_boundary_oracle.py": "bab19a553f73be9d843c0e199dd66b3ef2d0c25ab918f2e9b81dc8d9e4e4d3a9",
+    "focused.log": "5c2fbc0d8294c15569eb3240b1125c0b8a905b9bcccc9951fda7f191156b2a61",
+    "historical-v6.log": "eb2f5ac38f421aae33faf1236fec7ecd4330d5df72f47c3f17708515dd6b2408",
+    "identity-and-replay.json": "2915936156392c0d2e1c1bc6bd77bb33deeb5b25c3a1dbdf74b6765dc311a515",
+    "independent-audit.json": "a18a870ac80fee5e497b5b996b93e8bc588a6b9ddbc025fc8afd9b07811ab9e8",
+    "mutation-probes.json": "042b293b5608cad16067a19cda2fc3a737b4cbc1761902af1d461a673fd23438",
+    "optimized.log": "6a541b824dfc5e1c6116f329c4839316113e4c918eac62cc958662c14eb4964f",
+    "pinned-replay/certificate.json": "fde3ad4745b37e270469aaec2692a51c83cbcf5db7fcb0a16938296a6e25b7d5",
+    "pinned-replay/interval-report.md": "7807d683e7e5a9881fbf52e7b2dda2f7a0ba525de290a36a9933465270ccf82a",
+    "pinned-replay/manifest.json": "079e8dc74df0a87790e77daaa452d95df7cd02bcfd186bb8d96f130262cf764e",
+    "pinned-replay/pinned/CEAV_M1_DUAL_BOUNDARY_PROTOCOL.md": "44cea5f9e548ed44456ca2a248bd22787cfa68be7330f626a6b463294eed878a",
+    "pinned-replay/pinned/CEAV_M1_DUAL_STRATEGIC_BOUNDARY_REPORT.md": "b8774454d5aa7503cb558ac18a24886de350e47b0077102e1f80071cdcfa90fe",
+    "pinned-replay/pinned/CEAV_M1_RESEARCH_SYNTHESIS_AND_FEASIBILITY_MEMO.md": "c2bee5633dcf6722d09f7572ba256f11a2fe6446cd81734f0752eb173ae75b2f",
+    "pinned-replay/pinned/configs/dual_boundary.json": "17001d4aabcc971bd29b68a690d5d6b26e0c4c9c41be5670d60e1cac19d9cce5",
+    "pinned-replay/pinned/tests/__init__.py": "14ecdce21e733e50c3e5bca221b9d10c520cfa180380f733bdbf57e4e988488e",
+    "pinned-replay/pinned/tests/test_dual_boundary.py": "d2e7d79d5d1e1cca93ec08b44cccd588f394954b66578e22c12f0ef9a8894a38",
+    "pinned-replay/pinned/verification/dual_boundary.py": "8c943bb2f6f23c5032768dd60834f9e926a1d6aa3f83205482b54f4a645d6d0b",
+    "pinned-replay/pinned/verification/dual_boundary_audit.py": "35dcbcf243ba20ba4d2f3fe0d7258de73667f5c012bc6b2807d271d916c0a6e9",
+    "pinned-replay/pinned/verification/dual_boundary_evidence.py": "292ba7fa4f497aaa8e6a4a56bc119ecd2794b1562361df57619c2bafeedb89f5",
+    "pinned-replay/pinned/verification/DUAL_BOUNDARY_INDEPENDENT_REVIEW.md": "aa2f99f44abfd9d2dbaa0093da7c64f440d28ffd0b584915a213badc29cd30c7",
+    "pinned-replay/pinned/verification/dual_boundary_mutations.py": "afe6a42f68fbaf7d2337b216df0c8cce980bd13cf974c1379e0f3176ae85bfe3",
+    "pinned-replay/pinned/verification/dual_boundary_oracle.py": "bab19a553f73be9d843c0e199dd66b3ef2d0c25ab918f2e9b81dc8d9e4e4d3a9",
+    "pinned-replay.log": "30b943df85ba4eddd50421923cf3f8d766c119dbbd0142566b85ef0554086607"
+  },
+  "source_hash_manifest": "analysis/manifest.json",
+  "history_identity_scope": "all tracked parent bytes unchanged; V6 manifest identities recorded; historical correctness separately covered by 24 regressions"
+}

@@ -1,0 +1,13 @@
+{
+  "created_at_utc": "2026-10-24T02:14:05.607855+00:00",
+  "status": "passed",
+  "source_hashes": {
+    "verification/feasibility_v6.py": "7902668d1f72a1156c007835a875e948f25c57e87daf43361d456e1cea293a01",
+    "verification/mutation_probes_v6.py": "3ad3e61402900dc582c4ce0b88a9400dd71f50ca790684a26d2f491fac97d873",
+    "tests/test_v6_feasibility.py": "5d8d4dc3f26317ea18caccec6badb1f7441d679fd7a4aaf9c73bd769e528da0c",
+    "tests/test_v6_mutations.py": "7ab8a74fa6590e5f32787f9bc3817246d1cb1c832527ef3eed3aa3e2b51bce81"
+  },
+  "outputs": {
+    "mutations.json": "2d0671af7901eedf0cd299a53b51c6cf99b38800ba4cd4738795f366185ea8ea"
+  }
+}

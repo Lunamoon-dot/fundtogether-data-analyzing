@@ -1,0 +1,14 @@
+test_R05_unresolved_stop_report_does_not_claim_NOGO (tests.test_v6_regressions.V6RegressionTests.test_R05_unresolved_stop_report_does_not_claim_NOGO) ... FAIL
+
+======================================================================
+FAIL: test_R05_unresolved_stop_report_does_not_claim_NOGO (tests.test_v6_regressions.V6RegressionTests.test_R05_unresolved_stop_report_does_not_claim_NOGO)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\dell\Desktop\fundtogether_data_analyzing\tests\test_v6_regressions.py", line 64, in test_R05_unresolved_stop_report_does_not_claim_NOGO
+    self.assertIn("UNRESOLVED", report)
+AssertionError: 'UNRESOLVED' not found in '# V6 Phase 1 — final negative certificates\n\n**NO-GO for Phase 2 on the declared candidate set.**\n\nFour exogenous Gate-B winners each have a certified bad pure equilibrium.\nThese are post-discovery targeted counterexamples; no exhaustive search ran.\n\n| Fixture | Policy | Maximum regret | Exposure | FA | FR | Cash | Failure |\n|---|---|---:|---:|---:|---:|---:|---|\n\nEach witness checks 36 unilateral actions with frozen peers/policy and the independent potential-state oracle. One bad NE refutes an all-NE requirement; it does not determine the total equilibrium count or worst metric over the whole class.\n\nThe primary GO_candidate_discovery_only remains a truthful decision-feasibility result. This negative certificate supersedes its recommendation for further screening. No game/policy/gate was tuned, no historical artifact was changed, and no general RAVE impossibility is claimed.\n'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.401s
+
+FAILED (failures=1)

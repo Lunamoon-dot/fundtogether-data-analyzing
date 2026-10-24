@@ -1,0 +1,25 @@
+{
+  "model_version": "ceav-m1-v6.0-rave",
+  "revision": "phase01-r1",
+  "c_fa": "2", "c_fr": "1", "mu": "1", "budget": "6",
+  "kappa": "1/4", "operating_cost": "0", "payout_value": "1",
+  "exposure_limit": "1/2", "external_b_diagnostic": "1/10",
+  "calibration": "H01", "batch_weights": ["1/2", "1/2"],
+  "allocations": [
+    {"name": "Q1-zero", "kind": "disagreement", "params": ["1", "0"]},
+    {"name": "Q1-floor", "kind": "disagreement", "params": ["1", "1/4"]},
+    {"name": "Q2-z0", "kind": "public", "params": ["1", "0"]},
+    {"name": "Q2-z1", "kind": "public", "params": ["0", "1"]}
+  ],
+  "fixtures": [
+    {"name": "F51-01", "pi": "1/2", "public": ["19/20", "19/20"],
+     "private": [["4/5", "4/5", "1/20"], ["4/5", "4/5", "1/20"], ["4/5", "4/5", "1/20"]],
+     "audit": ["9/10", "9/10"], "f": "0"},
+    {"name": "F51-02", "pi": "1/2", "public": ["7/10", "7/10"],
+     "private": [["4/5", "4/5", "1/20"], ["4/5", "4/5", "1/20"], ["4/5", "4/5", "1/20"]],
+     "audit": ["9/10", "9/10"], "f": "0"},
+    {"name": "V3-HET", "pi": "1/2", "public": ["4/5", "3/5"],
+     "private": [["9/10", "4/5", "1/20"], ["3/4", "19/20", "1/10"], ["13/20", "7/10", "1/25"]],
+     "audit": ["9/10", "9/10"], "f": "1/10"}
+  ]
+}

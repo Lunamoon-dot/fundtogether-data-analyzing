@@ -1,0 +1,15 @@
+{
+  "utc": "2026-10-24T05:15:35.194641+00:00",
+  "stage": "before new interval analyzer implementation; after exploratory local arithmetic",
+  "not_preregistration": true,
+  "parent_commit": "df931b0ad73d464a6937a3a7c34879a978981b90",
+  "source_hashes": {
+    "configs/dual_boundary.json": "17001d4aabcc971bd29b68a690d5d6b26e0c4c9c41be5670d60e1cac19d9cce5",
+    "CEAV_M1_DUAL_BOUNDARY_PROTOCOL.md": "44cea5f9e548ed44456ca2a248bd22787cfa68be7330f626a6b463294eed878a",
+    "verification/dual_boundary_oracle.py": "bab19a553f73be9d843c0e199dd66b3ef2d0c25ab918f2e9b81dc8d9e4e4d3a9",
+    "tests/test_dual_boundary.py": "4c7533c9e7e6d2faa0a73765b138a3baf46d9ee17a7a070963b3bf139929ac66",
+    "CEAV_M1_RESEARCH_SYNTHESIS_AND_FEASIBILITY_MEMO.md": "c2bee5633dcf6722d09f7572ba256f11a2fe6446cd81734f0752eb173ae75b2f",
+    "configs/v6/rave_phase1.json": "4ff7cc4f6236af06f896ffc35b1d12d138d822324f32e83dd9a7dcebe7d3ebc8"
+  },
+  "preimplementation_test_exit": 1
+}

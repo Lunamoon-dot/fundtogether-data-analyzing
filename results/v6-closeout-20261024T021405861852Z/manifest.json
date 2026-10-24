@@ -1,0 +1,246 @@
+{
+  "created_at_utc": "2026-10-24T02:25:24.176183+00:00",
+  "event_type": "v6_phase01_final_closeout",
+  "status": "verified",
+  "decision": "NO-GO_declared_phase1_candidates",
+  "phase2_executed": false,
+  "discovery_status": "positive_exogenous_Gate_B_only",
+  "post_discovery_counterexamples_disclosed": true,
+  "primary_run": "results/v6-rave-phase1-20261024T021148403371Z",
+  "primary_manifest_sha256": "0565679f19e3999d24313a56f8730f61750fe6ce3349dcae2c4b2204188065a6",
+  "regression_manifest": "results/v6-verification-20261024T021221745773Z/manifest.json",
+  "regression_manifest_sha256": "e363f72a231edaf6c7f422874ffc203823a119f382958c34b63cd409173c1158",
+  "tests": {
+    "v6_normal": 24,
+    "v6_optimized": 24,
+    "v4_v5_regression": 60,
+    "skipped": 0,
+    "mutations_killed": 15,
+    "mutations_total": 15
+  },
+  "oracle_checks": 40202,
+  "independent_primary_deviations": 8640,
+  "independent_negative_deviations": 144,
+  "pinned_primary_replay_identical": true,
+  "pinned_negative_replay_identical": true,
+  "inputs": [
+    {
+      "source": "CEAV_M1_V6_RAVE_SPEC.md",
+      "snapshot": "source_snapshot/CEAV_M1_V6_RAVE_SPEC.md",
+      "sha256": "463c52bcc35ec469e95d8148a993b0e93ac9a0cc4d11cd2628936309e670836e"
+    },
+    {
+      "source": "CEAV_M1_V6_FEASIBILITY.md",
+      "snapshot": "source_snapshot/CEAV_M1_V6_FEASIBILITY.md",
+      "sha256": "8ba9fdac906f1b675091096da163b805221b1383372d6b771152c040fa3eee2f"
+    },
+    {
+      "source": "CEAV_M1_V6_PHASE1_COUNTEREXAMPLES.md",
+      "snapshot": "source_snapshot/CEAV_M1_V6_PHASE1_COUNTEREXAMPLES.md",
+      "sha256": "c91cffa00a030192bcdd5dfbc7f8273a0104fd10adba9d8e994e324c88f61ece"
+    },
+    {
+      "source": "references/V6_RAVE_PRIMARY_SOURCES.md",
+      "snapshot": "source_snapshot/references/V6_RAVE_PRIMARY_SOURCES.md",
+      "sha256": "9c10c63c31552bfcb9328213bb2e12f68c0f94a31c3ffdfb9621a77f8ba8cf15"
+    },
+    {
+      "source": "configs/v6/rave_phase1.json",
+      "snapshot": "source_snapshot/configs/v6/rave_phase1.json",
+      "sha256": "4ff7cc4f6236af06f896ffc35b1d12d138d822324f32e83dd9a7dcebe7d3ebc8"
+    },
+    {
+      "source": "docs/superpowers/plans/2026-10-24-v6-rave-phase01.md",
+      "snapshot": "source_snapshot/docs/superpowers/plans/2026-10-24-v6-rave-phase01.md",
+      "sha256": "b7833a89505959486cec6952bfb2d14d34c47fda6c6e2f28d8a1f4a9645e97de"
+    },
+    {
+      "source": "verification/feasibility_v6.py",
+      "snapshot": "source_snapshot/verification/feasibility_v6.py",
+      "sha256": "7902668d1f72a1156c007835a875e948f25c57e87daf43361d456e1cea293a01"
+    },
+    {
+      "source": "verification/oracle_v6_feasibility.py",
+      "snapshot": "source_snapshot/verification/oracle_v6_feasibility.py",
+      "sha256": "e4fe65e40b2938d9097d6980df02b1bee6d498c2008716b3a31fdd97ea6db2c2"
+    },
+    {
+      "source": "verification/mutation_probes_v6.py",
+      "snapshot": "source_snapshot/verification/mutation_probes_v6.py",
+      "sha256": "3ad3e61402900dc582c4ce0b88a9400dd71f50ca790684a26d2f491fac97d873"
+    },
+    {
+      "source": "verification/v6_phase1_stop.py",
+      "snapshot": "source_snapshot/verification/v6_phase1_stop.py",
+      "sha256": "27b0242cd5847e60eae20eb6b8f0cda7bc3484bc9c5141d6158f0e6400a5a596"
+    },
+    {
+      "source": "tests/test_v6_feasibility.py",
+      "snapshot": "source_snapshot/tests/test_v6_feasibility.py",
+      "sha256": "5d8d4dc3f26317ea18caccec6badb1f7441d679fd7a4aaf9c73bd769e528da0c"
+    },
+    {
+      "source": "tests/test_v6_regressions.py",
+      "snapshot": "source_snapshot/tests/test_v6_regressions.py",
+      "sha256": "6fc313f7db00bdcec4cfd06c2d12fffbe1cbc59ecfb301e84a7f10df8aeb671c"
+    },
+    {
+      "source": "tests/test_v6_mutations.py",
+      "snapshot": "source_snapshot/tests/test_v6_mutations.py",
+      "sha256": "7ab8a74fa6590e5f32787f9bc3817246d1cb1c832527ef3eed3aa3e2b51bce81"
+    },
+    {
+      "source": "tests/test_v6_stop_certificates.py",
+      "snapshot": "source_snapshot/tests/test_v6_stop_certificates.py",
+      "sha256": "74d406ef0692bfdea7cd00f535266847986ca9acae3f9095a13ad12360eddbd6"
+    },
+    {
+      "source": "spec_history/v6.0-rave-pre-checker-freeze-20261024T020618028417Z/CEAV_M1_V6_FEASIBILITY.md",
+      "snapshot": "source_snapshot/spec_history/v6.0-rave-pre-checker-freeze-20261024T020618028417Z/CEAV_M1_V6_FEASIBILITY.md",
+      "sha256": "8ba9fdac906f1b675091096da163b805221b1383372d6b771152c040fa3eee2f"
+    },
+    {
+      "source": "spec_history/v6.0-rave-pre-checker-freeze-20261024T020618028417Z/CEAV_M1_V6_RAVE_SPEC.md",
+      "snapshot": "source_snapshot/spec_history/v6.0-rave-pre-checker-freeze-20261024T020618028417Z/CEAV_M1_V6_RAVE_SPEC.md",
+      "sha256": "463c52bcc35ec469e95d8148a993b0e93ac9a0cc4d11cd2628936309e670836e"
+    },
+    {
+      "source": "spec_history/v6.0-rave-pre-checker-freeze-20261024T020618028417Z/manifest.json",
+      "snapshot": "source_snapshot/spec_history/v6.0-rave-pre-checker-freeze-20261024T020618028417Z/manifest.json",
+      "sha256": "68df7db18166287a5d4c78903459133c55b13270bcd33cd7619470c4f63c4aba"
+    },
+    {
+      "source": "spec_history/v6.0-rave-pre-checker-freeze-20261024T020618028417Z/references/V6_RAVE_PRIMARY_SOURCES.md",
+      "snapshot": "source_snapshot/spec_history/v6.0-rave-pre-checker-freeze-20261024T020618028417Z/references/V6_RAVE_PRIMARY_SOURCES.md",
+      "sha256": "9c10c63c31552bfcb9328213bb2e12f68c0f94a31c3ffdfb9621a77f8ba8cf15"
+    },
+    {
+      "source": "spec_history/v6.0-rave-pre-checker-freeze-20261024T020618028417Z/tests/test_v6_feasibility.py",
+      "snapshot": "source_snapshot/spec_history/v6.0-rave-pre-checker-freeze-20261024T020618028417Z/tests/test_v6_feasibility.py",
+      "sha256": "5d8d4dc3f26317ea18caccec6badb1f7441d679fd7a4aaf9c73bd769e528da0c"
+    },
+    {
+      "source": "spec_history/v6.0-rave-pre-checker-freeze-20261024T020618028417Z/verification/oracle_v6_feasibility.py",
+      "snapshot": "source_snapshot/spec_history/v6.0-rave-pre-checker-freeze-20261024T020618028417Z/verification/oracle_v6_feasibility.py",
+      "sha256": "e4fe65e40b2938d9097d6980df02b1bee6d498c2008716b3a31fdd97ea6db2c2"
+    },
+    {
+      "source": "spec_history/v6.0-rave-pre-checker-freeze-20261024T020618028417Z/configs/v6/rave_phase1.json",
+      "snapshot": "source_snapshot/spec_history/v6.0-rave-pre-checker-freeze-20261024T020618028417Z/configs/v6/rave_phase1.json",
+      "sha256": "4ff7cc4f6236af06f896ffc35b1d12d138d822324f32e83dd9a7dcebe7d3ebc8"
+    },
+    {
+      "source": "spec_history/v6.0-rave-pre-checker-freeze-20261024T020618028417Z/docs/superpowers/plans/2026-10-24-v6-rave-phase01.md",
+      "snapshot": "source_snapshot/spec_history/v6.0-rave-pre-checker-freeze-20261024T020618028417Z/docs/superpowers/plans/2026-10-24-v6-rave-phase01.md",
+      "sha256": "b7833a89505959486cec6952bfb2d14d34c47fda6c6e2f28d8a1f4a9645e97de"
+    },
+    {
+      "source": "spec_history/v6.0-rave-negative-witness-check-20261024T021827535728Z/CEAV_M1_V6_PHASE1_COUNTEREXAMPLES.md",
+      "snapshot": "source_snapshot/spec_history/v6.0-rave-negative-witness-check-20261024T021827535728Z/CEAV_M1_V6_PHASE1_COUNTEREXAMPLES.md",
+      "sha256": "c91cffa00a030192bcdd5dfbc7f8273a0104fd10adba9d8e994e324c88f61ece"
+    },
+    {
+      "source": "spec_history/v6.0-rave-negative-witness-check-20261024T021827535728Z/manifest.json",
+      "snapshot": "source_snapshot/spec_history/v6.0-rave-negative-witness-check-20261024T021827535728Z/manifest.json",
+      "sha256": "8795f51d4cbea45a616d327ed048dbadbd81268fc21b7469202b713f337b1702"
+    },
+    {
+      "source": "spec_history/v6.0-rave-negative-witness-check-20261024T021827535728Z/tests/test_v6_stop_certificates.py",
+      "snapshot": "source_snapshot/spec_history/v6.0-rave-negative-witness-check-20261024T021827535728Z/tests/test_v6_stop_certificates.py",
+      "sha256": "74d406ef0692bfdea7cd00f535266847986ca9acae3f9095a13ad12360eddbd6"
+    },
+    {
+      "source": "spec_history/v6.0-rave-negative-witness-check-20261024T021827535728Z/verification/feasibility_v6.py",
+      "snapshot": "source_snapshot/spec_history/v6.0-rave-negative-witness-check-20261024T021827535728Z/verification/feasibility_v6.py",
+      "sha256": "7902668d1f72a1156c007835a875e948f25c57e87daf43361d456e1cea293a01"
+    },
+    {
+      "source": "spec_history/v6.0-rave-negative-witness-check-20261024T021827535728Z/verification/oracle_v6_feasibility.py",
+      "snapshot": "source_snapshot/spec_history/v6.0-rave-negative-witness-check-20261024T021827535728Z/verification/oracle_v6_feasibility.py",
+      "sha256": "e4fe65e40b2938d9097d6980df02b1bee6d498c2008716b3a31fdd97ea6db2c2"
+    },
+    {
+      "source": "spec_history/v6.0-rave-negative-witness-check-20261024T021827535728Z/configs/v6/rave_phase1.json",
+      "snapshot": "source_snapshot/spec_history/v6.0-rave-negative-witness-check-20261024T021827535728Z/configs/v6/rave_phase1.json",
+      "sha256": "4ff7cc4f6236af06f896ffc35b1d12d138d822324f32e83dd9a7dcebe7d3ebc8"
+    },
+    {
+      "source": "spec_history/v6.0-rave-negative-witness-check-20261024T021827535728Z/results/v6-rave-phase1-20261024T021148403371Z/manifest.json",
+      "snapshot": "source_snapshot/spec_history/v6.0-rave-negative-witness-check-20261024T021827535728Z/results/v6-rave-phase1-20261024T021148403371Z/manifest.json",
+      "sha256": "0565679f19e3999d24313a56f8730f61750fe6ce3349dcae2c4b2204188065a6"
+    }
+  ],
+  "outputs": {
+    "execution-review.md": "518b27a8fb3bf380e203c58820b0321b4f152eff0fcd976423d6365b58fb9ac3",
+    "independent-recheck.json": "56d3414c29589d1e113886e0f64c54233c31493307768d7c6af51f16889b7836",
+    "recheck_certificate.py": "f4eec7f07e894a37fefa70669edad3ec8d985c2de58d0eef5cde7accfd9a4ee8",
+    "REPORT.md": "7736a58969598637a5ca65212072211e4624e8a6d2b5f955cbec2237ab82457c",
+    "stop-red.log": "904a7c5a2ecba443b2336857a3b33f0b40728544d0ca3a28174a6ad8a0102f88",
+    "unresolved-report-red.log": "f1105061fe9377e75725caf3f6b028f8a53bb80425e52bda6200b048ae204433",
+    "unresolved-status-red.log": "a1df3cdce837482c8b08bd6eead3be4ffa039a4dae69f74d3b97a82c400df414",
+    "v6-tests-normal.log": "7223c1665f2045a0350f6d8489a2fb2f60a7f2d991c6766cf09ce35339dc872a",
+    "v6-tests-optimized.log": "8b33613bacb212436770493c5cc9c639e92258894d7da26610bf0114dae1fcc0",
+    "verification-summary.json": "2204154d88ecdf5adfd9d947e94998f53888054a952f927efe923dd7e9590803",
+    "negative-certificates/certificate.json": "edd11133109d71625473bd35210409f9da9d35b6f836475c71b4eef6ce7d5df1",
+    "negative-certificates/report.md": "cfbddfb71b778b951c92bd6158a19923087913cbe0b77c740980350a8b535ecf",
+    "negative-pinned-replay/certificate.json": "edd11133109d71625473bd35210409f9da9d35b6f836475c71b4eef6ce7d5df1",
+    "negative-pinned-replay/report.md": "cfbddfb71b778b951c92bd6158a19923087913cbe0b77c740980350a8b535ecf",
+    "pinned-replay/certificate.json": "84f112ef8d042834886a13bd8a9b3765a60da65f11c9fb02a9254eb1933f5c8c",
+    "pinned-replay/report.md": "c286436f5f99ffb3dd9a900820135d13eb4c170fc42511060df089d183dd938a",
+    "negative-certificates/inputs/CEAV_M1_V6_PHASE1_COUNTEREXAMPLES.md": "c91cffa00a030192bcdd5dfbc7f8273a0104fd10adba9d8e994e324c88f61ece",
+    "negative-certificates/inputs/tests/test_v6_stop_certificates.py": "74d406ef0692bfdea7cd00f535266847986ca9acae3f9095a13ad12360eddbd6",
+    "negative-certificates/inputs/verification/feasibility_v6.py": "7902668d1f72a1156c007835a875e948f25c57e87daf43361d456e1cea293a01",
+    "negative-certificates/inputs/verification/oracle_v6_feasibility.py": "e4fe65e40b2938d9097d6980df02b1bee6d498c2008716b3a31fdd97ea6db2c2",
+    "negative-certificates/inputs/verification/v6_phase1_stop.py": "27b0242cd5847e60eae20eb6b8f0cda7bc3484bc9c5141d6158f0e6400a5a596",
+    "negative-certificates/inputs/configs/v6/rave_phase1.json": "4ff7cc4f6236af06f896ffc35b1d12d138d822324f32e83dd9a7dcebe7d3ebc8",
+    "negative-certificates/inputs/results/v6-rave-phase1-20261024T021148403371Z/certificate.json": "84f112ef8d042834886a13bd8a9b3765a60da65f11c9fb02a9254eb1933f5c8c",
+    "negative-certificates/inputs/spec_history/v6.0-rave-negative-witness-check-20261024T021827535728Z/CEAV_M1_V6_PHASE1_COUNTEREXAMPLES.md": "c91cffa00a030192bcdd5dfbc7f8273a0104fd10adba9d8e994e324c88f61ece",
+    "negative-certificates/inputs/spec_history/v6.0-rave-negative-witness-check-20261024T021827535728Z/tests/test_v6_stop_certificates.py": "74d406ef0692bfdea7cd00f535266847986ca9acae3f9095a13ad12360eddbd6",
+    "negative-certificates/inputs/spec_history/v6.0-rave-negative-witness-check-20261024T021827535728Z/verification/feasibility_v6.py": "7902668d1f72a1156c007835a875e948f25c57e87daf43361d456e1cea293a01",
+    "negative-certificates/inputs/spec_history/v6.0-rave-negative-witness-check-20261024T021827535728Z/verification/oracle_v6_feasibility.py": "e4fe65e40b2938d9097d6980df02b1bee6d498c2008716b3a31fdd97ea6db2c2",
+    "negative-certificates/inputs/spec_history/v6.0-rave-negative-witness-check-20261024T021827535728Z/configs/v6/rave_phase1.json": "4ff7cc4f6236af06f896ffc35b1d12d138d822324f32e83dd9a7dcebe7d3ebc8",
+    "negative-pinned-replay/inputs/CEAV_M1_V6_PHASE1_COUNTEREXAMPLES.md": "c91cffa00a030192bcdd5dfbc7f8273a0104fd10adba9d8e994e324c88f61ece",
+    "negative-pinned-replay/inputs/tests/test_v6_stop_certificates.py": "74d406ef0692bfdea7cd00f535266847986ca9acae3f9095a13ad12360eddbd6",
+    "negative-pinned-replay/inputs/verification/feasibility_v6.py": "7902668d1f72a1156c007835a875e948f25c57e87daf43361d456e1cea293a01",
+    "negative-pinned-replay/inputs/verification/oracle_v6_feasibility.py": "e4fe65e40b2938d9097d6980df02b1bee6d498c2008716b3a31fdd97ea6db2c2",
+    "negative-pinned-replay/inputs/verification/v6_phase1_stop.py": "27b0242cd5847e60eae20eb6b8f0cda7bc3484bc9c5141d6158f0e6400a5a596",
+    "negative-pinned-replay/inputs/configs/v6/rave_phase1.json": "4ff7cc4f6236af06f896ffc35b1d12d138d822324f32e83dd9a7dcebe7d3ebc8",
+    "negative-pinned-replay/inputs/results/v6-rave-phase1-20261024T021148403371Z/certificate.json": "84f112ef8d042834886a13bd8a9b3765a60da65f11c9fb02a9254eb1933f5c8c",
+    "negative-pinned-replay/inputs/spec_history/v6.0-rave-negative-witness-check-20261024T021827535728Z/CEAV_M1_V6_PHASE1_COUNTEREXAMPLES.md": "c91cffa00a030192bcdd5dfbc7f8273a0104fd10adba9d8e994e324c88f61ece",
+    "negative-pinned-replay/inputs/spec_history/v6.0-rave-negative-witness-check-20261024T021827535728Z/tests/test_v6_stop_certificates.py": "74d406ef0692bfdea7cd00f535266847986ca9acae3f9095a13ad12360eddbd6",
+    "negative-pinned-replay/inputs/spec_history/v6.0-rave-negative-witness-check-20261024T021827535728Z/verification/feasibility_v6.py": "7902668d1f72a1156c007835a875e948f25c57e87daf43361d456e1cea293a01",
+    "negative-pinned-replay/inputs/spec_history/v6.0-rave-negative-witness-check-20261024T021827535728Z/verification/oracle_v6_feasibility.py": "e4fe65e40b2938d9097d6980df02b1bee6d498c2008716b3a31fdd97ea6db2c2",
+    "negative-pinned-replay/inputs/spec_history/v6.0-rave-negative-witness-check-20261024T021827535728Z/configs/v6/rave_phase1.json": "4ff7cc4f6236af06f896ffc35b1d12d138d822324f32e83dd9a7dcebe7d3ebc8",
+    "pinned-replay/inputs/CEAV_M1_V6_FEASIBILITY.md": "8ba9fdac906f1b675091096da163b805221b1383372d6b771152c040fa3eee2f",
+    "pinned-replay/inputs/CEAV_M1_V6_RAVE_SPEC.md": "463c52bcc35ec469e95d8148a993b0e93ac9a0cc4d11cd2628936309e670836e",
+    "pinned-replay/inputs/references/V6_RAVE_PRIMARY_SOURCES.md": "9c10c63c31552bfcb9328213bb2e12f68c0f94a31c3ffdfb9621a77f8ba8cf15",
+    "pinned-replay/inputs/tests/test_v6_feasibility.py": "5d8d4dc3f26317ea18caccec6badb1f7441d679fd7a4aaf9c73bd769e528da0c",
+    "pinned-replay/inputs/tests/test_v6_mutations.py": "7ab8a74fa6590e5f32787f9bc3817246d1cb1c832527ef3eed3aa3e2b51bce81",
+    "pinned-replay/inputs/tests/test_v6_regressions.py": "04eb510b967689cd43a8f5152ae3335a4c1f3e780981791d84f492c4ac68a82f",
+    "pinned-replay/inputs/verification/feasibility_v6.py": "7902668d1f72a1156c007835a875e948f25c57e87daf43361d456e1cea293a01",
+    "pinned-replay/inputs/verification/mutation_probes_v6.py": "3ad3e61402900dc582c4ce0b88a9400dd71f50ca790684a26d2f491fac97d873",
+    "pinned-replay/inputs/verification/oracle_v6_feasibility.py": "e4fe65e40b2938d9097d6980df02b1bee6d498c2008716b3a31fdd97ea6db2c2",
+    "pinned-replay/inputs/configs/v6/rave_phase1.json": "4ff7cc4f6236af06f896ffc35b1d12d138d822324f32e83dd9a7dcebe7d3ebc8",
+    "pinned-replay/inputs/docs/superpowers/plans/2026-10-24-v6-rave-phase01.md": "b7833a89505959486cec6952bfb2d14d34c47fda6c6e2f28d8a1f4a9645e97de",
+    "pinned-replay/inputs/spec_history/v6.0-rave-pre-checker-freeze-20261024T020618028417Z/CEAV_M1_V6_FEASIBILITY.md": "8ba9fdac906f1b675091096da163b805221b1383372d6b771152c040fa3eee2f",
+    "pinned-replay/inputs/spec_history/v6.0-rave-pre-checker-freeze-20261024T020618028417Z/CEAV_M1_V6_RAVE_SPEC.md": "463c52bcc35ec469e95d8148a993b0e93ac9a0cc4d11cd2628936309e670836e",
+    "pinned-replay/inputs/spec_history/v6.0-rave-pre-checker-freeze-20261024T020618028417Z/references/V6_RAVE_PRIMARY_SOURCES.md": "9c10c63c31552bfcb9328213bb2e12f68c0f94a31c3ffdfb9621a77f8ba8cf15",
+    "pinned-replay/inputs/spec_history/v6.0-rave-pre-checker-freeze-20261024T020618028417Z/tests/test_v6_feasibility.py": "5d8d4dc3f26317ea18caccec6badb1f7441d679fd7a4aaf9c73bd769e528da0c",
+    "pinned-replay/inputs/spec_history/v6.0-rave-pre-checker-freeze-20261024T020618028417Z/verification/oracle_v6_feasibility.py": "e4fe65e40b2938d9097d6980df02b1bee6d498c2008716b3a31fdd97ea6db2c2",
+    "pinned-replay/inputs/spec_history/v6.0-rave-pre-checker-freeze-20261024T020618028417Z/configs/v6/rave_phase1.json": "4ff7cc4f6236af06f896ffc35b1d12d138d822324f32e83dd9a7dcebe7d3ebc8",
+    "pinned-replay/inputs/spec_history/v6.0-rave-pre-checker-freeze-20261024T020618028417Z/docs/superpowers/plans/2026-10-24-v6-rave-phase01.md": "b7833a89505959486cec6952bfb2d14d34c47fda6c6e2f28d8a1f4a9645e97de",
+    "negative-certificates/manifest.json": "fa71d008ac0b02afbe47284b5159ab4a85b74f2a606e0fd007335a12ac098ea2",
+    "negative-pinned-replay/manifest.json": "53db780a1453bf7ae605107d4997fc620518cdfd4aeb0a67a98713bd2eda3725",
+    "pinned-replay/manifest.json": "6132af8782c07ea2cd3618becda9ec85bb30fad42cb165e9578cf1da2ec4ac67",
+    "negative-certificates/inputs/results/v6-rave-phase1-20261024T021148403371Z/manifest.json": "0565679f19e3999d24313a56f8730f61750fe6ce3349dcae2c4b2204188065a6",
+    "negative-certificates/inputs/spec_history/v6.0-rave-negative-witness-check-20261024T021827535728Z/manifest.json": "8795f51d4cbea45a616d327ed048dbadbd81268fc21b7469202b713f337b1702",
+    "negative-certificates/inputs/spec_history/v6.0-rave-negative-witness-check-20261024T021827535728Z/results/v6-rave-phase1-20261024T021148403371Z/manifest.json": "0565679f19e3999d24313a56f8730f61750fe6ce3349dcae2c4b2204188065a6",
+    "negative-pinned-replay/inputs/results/v6-rave-phase1-20261024T021148403371Z/manifest.json": "0565679f19e3999d24313a56f8730f61750fe6ce3349dcae2c4b2204188065a6",
+    "negative-pinned-replay/inputs/spec_history/v6.0-rave-negative-witness-check-20261024T021827535728Z/manifest.json": "8795f51d4cbea45a616d327ed048dbadbd81268fc21b7469202b713f337b1702",
+    "negative-pinned-replay/inputs/spec_history/v6.0-rave-negative-witness-check-20261024T021827535728Z/results/v6-rave-phase1-20261024T021148403371Z/manifest.json": "0565679f19e3999d24313a56f8730f61750fe6ce3349dcae2c4b2204188065a6",
+    "pinned-replay/inputs/spec_history/v6.0-rave-pre-checker-freeze-20261024T020618028417Z/manifest.json": "68df7db18166287a5d4c78903459133c55b13270bcd33cd7619470c4f63c4aba",
+    "source_snapshot/spec_history/v6.0-rave-negative-witness-check-20261024T021827535728Z/manifest.json": "8795f51d4cbea45a616d327ed048dbadbd81268fc21b7469202b713f337b1702",
+    "source_snapshot/spec_history/v6.0-rave-pre-checker-freeze-20261024T020618028417Z/manifest.json": "68df7db18166287a5d4c78903459133c55b13270bcd33cd7619470c4f63c4aba",
+    "source_snapshot/spec_history/v6.0-rave-negative-witness-check-20261024T021827535728Z/results/v6-rave-phase1-20261024T021148403371Z/manifest.json": "0565679f19e3999d24313a56f8730f61750fe6ce3349dcae2c4b2204188065a6"
+  }
+}

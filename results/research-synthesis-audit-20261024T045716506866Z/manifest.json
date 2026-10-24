@@ -1,0 +1,67 @@
+{
+  "created_at_utc": "2026-10-24T05:02:58.781647+00:00",
+  "status": "verified_named_instances_and_paper_bounds",
+  "base_commit": "6fb0f4367187cc9eeefb180d4336f237275e38c5",
+  "recommendation": "GO_bounded_theory_only",
+  "new_version": false,
+  "new_policy_grid": false,
+  "new_design_points": 1,
+  "merge_performed": false,
+  "exact_checks_normal": 224,
+  "exact_checks_optimized": 224,
+  "historical_v6_regression_tests": 24,
+  "historical_manifests_checked": 11,
+  "historical_output_hashes_checked": 42,
+  "pinned_replay_byte_identical": true,
+  "inputs": [
+    {
+      "source": "CEAV_M1_RESEARCH_SYNTHESIS_AND_FEASIBILITY_MEMO.md",
+      "snapshot": "source_snapshot/CEAV_M1_RESEARCH_SYNTHESIS_AND_FEASIBILITY_MEMO.md",
+      "sha256": "c2bee5633dcf6722d09f7572ba256f11a2fe6446cd81734f0752eb173ae75b2f"
+    },
+    {
+      "source": "verification/research_synthesis_checks.py",
+      "snapshot": "source_snapshot/verification/research_synthesis_checks.py",
+      "sha256": "44619badde8e41303a517417b3a31ca33e2239689114354062a8c6807b90e36c"
+    },
+    {
+      "source": "configs/v6/rave_phase1.json",
+      "snapshot": "source_snapshot/configs/v6/rave_phase1.json",
+      "sha256": "4ff7cc4f6236af06f896ffc35b1d12d138d822324f32e83dd9a7dcebe7d3ebc8"
+    },
+    {
+      "source": "verification/oracle_v6_feasibility.py",
+      "snapshot": "source_snapshot/verification/oracle_v6_feasibility.py",
+      "sha256": "e4fe65e40b2938d9097d6980df02b1bee6d498c2008716b3a31fdd97ea6db2c2"
+    },
+    {
+      "source": "verification/oracle_v5_1_quality.py",
+      "snapshot": "source_snapshot/verification/oracle_v5_1_quality.py",
+      "sha256": "50a021e3e84418c463d0741fe1f9fb2bea55f21198e7076a1fcefaab727d0dae"
+    }
+  ],
+  "outputs": {
+    "audit_evidence.py": "94f8adb7cbd3f5a764c82f7399461e2b27c9c31d0c0d46954c3b7ae032d59ffb",
+    "commands.json": "9c9f8e5942904ceb8a4330dd0f870d9a06ab906b111164bfc0b52b9904cc03be",
+    "cross-oracle-and-identity.json": "ff0669639e59ec780fee7e1e34189a5576c470f7a5936a020ec9db05384f618d",
+    "named-checks.log": "22af7e7d8ab6e1d5757ec09fe0234515a7c96466cfc392ac8b3b3015fdc8756e",
+    "optimized-checks.log": "22af7e7d8ab6e1d5757ec09fe0234515a7c96466cfc392ac8b3b3015fdc8756e",
+    "pinned-replay.log": "22af7e7d8ab6e1d5757ec09fe0234515a7c96466cfc392ac8b3b3015fdc8756e",
+    "v6-regression.log": "613c1a9b07d93723e43ca775a11891f0aa5f4856592f28ad5cf1809e63176251",
+    "named-checks/certificate.json": "299276eba5840d3fb7ec83501eab6f559e8cb9ad805544dc1488e3cb37f03837",
+    "optimized-checks/certificate.json": "299276eba5840d3fb7ec83501eab6f559e8cb9ad805544dc1488e3cb37f03837",
+    "pinned-replay/certificate.json": "299276eba5840d3fb7ec83501eab6f559e8cb9ad805544dc1488e3cb37f03837",
+    "named-checks/inputs/CEAV_M1_RESEARCH_SYNTHESIS_AND_FEASIBILITY_MEMO.md": "c2bee5633dcf6722d09f7572ba256f11a2fe6446cd81734f0752eb173ae75b2f",
+    "named-checks/inputs/verification/research_synthesis_checks.py": "44619badde8e41303a517417b3a31ca33e2239689114354062a8c6807b90e36c",
+    "named-checks/inputs/configs/v6/rave_phase1.json": "4ff7cc4f6236af06f896ffc35b1d12d138d822324f32e83dd9a7dcebe7d3ebc8",
+    "optimized-checks/inputs/CEAV_M1_RESEARCH_SYNTHESIS_AND_FEASIBILITY_MEMO.md": "c2bee5633dcf6722d09f7572ba256f11a2fe6446cd81734f0752eb173ae75b2f",
+    "optimized-checks/inputs/verification/research_synthesis_checks.py": "44619badde8e41303a517417b3a31ca33e2239689114354062a8c6807b90e36c",
+    "optimized-checks/inputs/configs/v6/rave_phase1.json": "4ff7cc4f6236af06f896ffc35b1d12d138d822324f32e83dd9a7dcebe7d3ebc8",
+    "pinned-replay/inputs/CEAV_M1_RESEARCH_SYNTHESIS_AND_FEASIBILITY_MEMO.md": "c2bee5633dcf6722d09f7572ba256f11a2fe6446cd81734f0752eb173ae75b2f",
+    "pinned-replay/inputs/verification/research_synthesis_checks.py": "44619badde8e41303a517417b3a31ca33e2239689114354062a8c6807b90e36c",
+    "pinned-replay/inputs/configs/v6/rave_phase1.json": "4ff7cc4f6236af06f896ffc35b1d12d138d822324f32e83dd9a7dcebe7d3ebc8",
+    "named-checks/manifest.json": "ed828b23f2fa35d0711cffabc6aa37d849e05e074efbd8ee2dc161bc9a92cd4c",
+    "optimized-checks/manifest.json": "8f6b8e65818d492784866b674900ad7718939ad2fa55bc3b0a2a766a9c6fddeb",
+    "pinned-replay/manifest.json": "58cd7feeb389ee09288c426daf64b69b3eca41f53dddcf5feeb59895f44d786f"
+  }
+}

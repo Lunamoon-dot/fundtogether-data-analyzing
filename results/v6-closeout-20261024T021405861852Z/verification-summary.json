@@ -1,0 +1,40 @@
+{
+  "created_at_utc": "2026-10-24T02:21:39.356166+00:00",
+  "status": "passed",
+  "tests": [
+    {
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "tests.test_v6_feasibility",
+        "tests.test_v6_regressions",
+        "tests.test_v6_mutations",
+        "tests.test_v6_stop_certificates",
+        "-v"
+      ],
+      "count": 24,
+      "accepted": true,
+      "log": "v6-tests-normal.log"
+    },
+    {
+      "command": [
+        "python",
+        "-O",
+        "-m",
+        "unittest",
+        "tests.test_v6_feasibility",
+        "tests.test_v6_regressions",
+        "tests.test_v6_mutations",
+        "tests.test_v6_stop_certificates",
+        "-v"
+      ],
+      "count": 24,
+      "accepted": true,
+      "log": "v6-tests-optimized.log"
+    }
+  ],
+  "primary_certificate_sha256": "84f112ef8d042834886a13bd8a9b3765a60da65f11c9fb02a9254eb1933f5c8c",
+  "primary_pinned_replay_matches": true,
+  "negative_certificate_manifest_sha256": "fa71d008ac0b02afbe47284b5159ab4a85b74f2a606e0fd007335a12ac098ea2"
+}
