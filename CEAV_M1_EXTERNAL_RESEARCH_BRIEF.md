@@ -37,7 +37,7 @@ The union event is charged once, so exposure is `P(A_pay ∪ A_dec)`. Separating
 
 ### T3 — Neutral feasibility
 
-Under neutral reviewers and the frozen All-H01 peer profile, the payment lottery supplies an exact effort gap of `7/500` between high and low effort. The independent proof review records the corresponding private values `M_L=33/50` and `M_H=37/50`, with effort cost `2/25`. The neutral profile passes the declared quality, cash, reserve, and exposure gates for the certified Selective and Uniform comparisons.
+Under neutral reviewers and the frozen All-H01 peer profile, the payment lottery supplies an exact effort calculation. The independent proof review records `M_L=33/50` and `M_H=37/50`, so the information value before effort cost is `Δ=M_H-M_L=2/25`. High effort itself costs `c=1/20`; with `μa=2·(2/5)`, the net benefit is `μaΔ-c=7/500`. The neutral profile passes the declared quality, cash, reserve, and exposure gates for the certified Selective and Uniform comparisons.
 
 ### T4 — Local external-interest stability
 

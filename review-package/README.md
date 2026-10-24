@@ -25,7 +25,7 @@ configs/dual_boundary.json                 frozen study configuration
 verification/                              analyzer, independent oracle, audits
 tests/                                     focused 10-test verification suite
 frozen-boundary/                           immutable certificate copies and hashes
-docs/                                      manuscript, theorem, novelty and limitation notes
+docs/                                      brief, manuscript, theorem, novelty and limitation notes
 ```
 
 `frozen-boundary/certificate.json` is the central immutable certificate. Its

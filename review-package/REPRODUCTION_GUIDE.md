@@ -48,6 +48,18 @@ T5 Uniform symmetric safe component: (-218750/2070709, 109375/1189451)
 The runner reports exact Fraction values and checks four pure equilibria at
 Selective `b=1/10`, three of which fail a quality gate.
 
+To regenerate the central certificate from the packaged source, choose a new
+empty output directory and run:
+
+```text
+python -X utf8 verification/dual_boundary.py --out generated-replay
+python -X utf8 -c "from pathlib import Path; import hashlib; a=hashlib.sha256(Path('generated-replay/certificate.json').read_bytes()).hexdigest(); b=hashlib.sha256(Path('frozen-boundary/certificate.json').read_bytes()).hexdigest(); print('generated_certificate_sha256='+a); print('matches_frozen='+str(a==b))"
+```
+
+The expected verdict is `STRATEGIC_FAILURE`, the generated certificate hash is
+`fde3ad4745b37e270469aaec2692a51c83cbcf5db7fcb0a16938296a6e25b7d5`, and
+`matches_frozen=True`. Never regenerate into an existing output directory.
+
 ```text
 python -X utf8 -m verification.review_summary
 ```
