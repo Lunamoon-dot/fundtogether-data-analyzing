@@ -4,7 +4,7 @@
 - **Verification status:** **VERIFIED** for the declared local verification plan and pinned synthetic/assumption model.
 - **Mechanism/payoff scope:** no mechanism/payoff or research-gate criteria were changed during this closeout. Changes are acceptance routing, artifact rendering, mutation assertions, and release-evidence wiring.
 - **Implementation/evidence commit:** `3ec3121`.
-- **Final report commit:** recorded after this report and evidence index are updated.
+- **Evidence/report commit:** `7a48400197cfb5dc2a688d3ed075d4101dacdbf4`.
 
 ## Evidence gates
 
