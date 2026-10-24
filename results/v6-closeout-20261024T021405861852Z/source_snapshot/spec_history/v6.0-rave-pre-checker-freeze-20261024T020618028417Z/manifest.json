@@ -1,0 +1,46 @@
+{
+  "event_type": "v6.0_rave_pre_checker_implementation_freeze",
+  "created_at_utc": "2026-10-24T02:06:18.218109+00:00",
+  "baseline_commit": "258d2178cfe11f67d8570484c49a9c91bd8c325e",
+  "pre_checker_implementation": true,
+  "pre_oracle_preregistration": false,
+  "disclosure": "Formalization, independent oracle, hand fixtures and RED tests prepared before this event. Checker does not yet exist. No retrospective preregistration claim.",
+  "config_semantic_sha256": "e6562768a3c1b28f908170ffb1c87b511f68f2b2462abdd8eb4f1575566391bd",
+  "inputs": [
+    {
+      "source": "CEAV_M1_V6_RAVE_SPEC.md",
+      "snapshot": "CEAV_M1_V6_RAVE_SPEC.md",
+      "sha256": "463c52bcc35ec469e95d8148a993b0e93ac9a0cc4d11cd2628936309e670836e"
+    },
+    {
+      "source": "CEAV_M1_V6_FEASIBILITY.md",
+      "snapshot": "CEAV_M1_V6_FEASIBILITY.md",
+      "sha256": "8ba9fdac906f1b675091096da163b805221b1383372d6b771152c040fa3eee2f"
+    },
+    {
+      "source": "references/V6_RAVE_PRIMARY_SOURCES.md",
+      "snapshot": "references/V6_RAVE_PRIMARY_SOURCES.md",
+      "sha256": "9c10c63c31552bfcb9328213bb2e12f68c0f94a31c3ffdfb9621a77f8ba8cf15"
+    },
+    {
+      "source": "configs/v6/rave_phase1.json",
+      "snapshot": "configs/v6/rave_phase1.json",
+      "sha256": "4ff7cc4f6236af06f896ffc35b1d12d138d822324f32e83dd9a7dcebe7d3ebc8"
+    },
+    {
+      "source": "verification/oracle_v6_feasibility.py",
+      "snapshot": "verification/oracle_v6_feasibility.py",
+      "sha256": "e4fe65e40b2938d9097d6980df02b1bee6d498c2008716b3a31fdd97ea6db2c2"
+    },
+    {
+      "source": "tests/test_v6_feasibility.py",
+      "snapshot": "tests/test_v6_feasibility.py",
+      "sha256": "5d8d4dc3f26317ea18caccec6badb1f7441d679fd7a4aaf9c73bd769e528da0c"
+    },
+    {
+      "source": "docs/superpowers/plans/2026-10-24-v6-rave-phase01.md",
+      "snapshot": "docs/superpowers/plans/2026-10-24-v6-rave-phase01.md",
+      "sha256": "b7833a89505959486cec6952bfb2d14d34c47fda6c6e2f28d8a1f4a9645e97de"
+    }
+  ]
+}

@@ -1,0 +1,178 @@
+[
+  {
+    "manifest": "results\\v33-ipw-full-20261024T052707\\manifest.json",
+    "sha256": "94be5a1e75b49ba98ef43be768d7e9c1445cc98a795c1d06dabd9b6600d60da9",
+    "checks": [
+      {
+        "path": "results\\v33-ipw-full-20261024T052707\\baseline_comparison.json",
+        "match": true
+      },
+      {
+        "path": "results\\v33-ipw-full-20261024T052707\\config.json",
+        "match": true
+      },
+      {
+        "path": "results\\v33-ipw-full-20261024T052707\\failure_map.json",
+        "match": true
+      },
+      {
+        "path": "results\\v33-ipw-full-20261024T052707\\ipw.json",
+        "match": true
+      },
+      {
+        "path": "results\\v33-ipw-full-20261024T052707\\ipw_points.csv",
+        "match": true
+      },
+      {
+        "path": "results\\v33-ipw-full-20261024T052707\\report.md",
+        "match": true
+      },
+      {
+        "path": "results\\v33-ipw-full-20261024T052707\\request.json",
+        "match": true
+      }
+    ]
+  },
+  {
+    "manifest": "results\\v4-1-minimal-screening-curated-20261024T011500\\manifest.json",
+    "sha256": "db98d05ce23da9516d9f05653179d643704b63a1696d2e47ec938a2530a7cc15",
+    "checks": [
+      {
+        "path": "CEAV_M1_V4_1_SCREENING_SPEC.md",
+        "match": true
+      },
+      {
+        "path": "verification\\v4_1_screening.py",
+        "match": true
+      },
+      {
+        "path": "verification\\oracle_v4_1_screening.py",
+        "match": true
+      },
+      {
+        "path": "verification\\mutation_probes_v4_1.py",
+        "match": true
+      },
+      {
+        "path": "tests\\test_v4_1_screening.py",
+        "match": true
+      },
+      {
+        "path": "spec_history\\v4.1-screening-implementation-start-20261024T0020244503411Z\\manifest.json",
+        "match": true
+      },
+      {
+        "path": "results\\v4-1-minimal-screening-20261024T0115000000000Z\\screening.json",
+        "match": true
+      },
+      {
+        "path": "results\\v4-1-minimal-screening-20261024T0115000000000Z\\report.md",
+        "match": true
+      },
+      {
+        "path": "results\\v4-1-minimal-screening-curated-20261024T011500\\screening_summary.json",
+        "match": true
+      },
+      {
+        "path": "results\\v4-1-minimal-screening-curated-20261024T011500\\report.md",
+        "match": true
+      },
+      {
+        "path": "results\\v4-1-minimal-screening-curated-20261024T011500\\pair_projection.json",
+        "match": true
+      }
+    ]
+  },
+  {
+    "manifest": "results\\v5-feasibility-20261024T012908\\manifest.json",
+    "sha256": "0692284a0ac22e99663608ce5b360bf230f66c756c692425e686fcc2bfc778a2",
+    "checks": [
+      {
+        "path": "results\\v5-feasibility-20261024T012908\\inputs\\CEAV_M1_V5_INFORMATION_SCORING_SPEC.md",
+        "match": true
+      },
+      {
+        "path": "results\\v5-feasibility-20261024T012908\\inputs\\CEAV_M1_V5_FEASIBILITY.md",
+        "match": true
+      },
+      {
+        "path": "results\\v5-feasibility-20261024T012908\\inputs\\references\\V5_INFORMATION_SCORING_SOURCES.md",
+        "match": true
+      },
+      {
+        "path": "results\\v5-feasibility-20261024T012908\\inputs\\verification\\oracle_v5.py",
+        "match": true
+      },
+      {
+        "path": "results\\v5-feasibility-20261024T012908\\inputs\\verification\\feasibility_v5.py",
+        "match": true
+      },
+      {
+        "path": "results\\v5-feasibility-20261024T012908\\inputs\\tests\\test_v5_feasibility.py",
+        "match": true
+      },
+      {
+        "path": "results\\v5-feasibility-20261024T012908\\inputs\\configs\\v3\\heterogeneous_anchor.json",
+        "match": true
+      },
+      {
+        "path": "results\\v5-feasibility-20261024T012908\\inputs\\spec_history\\v5.0-agiis-phase1-implementation-start-20261024\\MANIFEST.json",
+        "match": true
+      },
+      {
+        "path": "results\\v5-feasibility-20261024T012908\\certificate.json",
+        "match": true
+      },
+      {
+        "path": "results\\v5-feasibility-20261024T012908\\report.md",
+        "match": true
+      }
+    ]
+  },
+  {
+    "manifest": "results\\v5-1-quality-certificates-20261024T084411\\manifest.json",
+    "sha256": "9d0573a236bd48decdd0b5284892f2d2359da1ba470995c1dceb733f683f2845",
+    "checks": [
+      {
+        "path": "results\\v5-1-quality-certificates-20261024T084411\\inputs\\CEAV_M1_V5_1_DECISION_QUALITY_CERTIFICATES.md",
+        "match": true
+      },
+      {
+        "path": "results\\v5-1-quality-certificates-20261024T084411\\inputs\\CEAV_M1_V5_INFORMATION_SCORING_SPEC.md",
+        "match": true
+      },
+      {
+        "path": "results\\v5-1-quality-certificates-20261024T084411\\inputs\\CEAV_M1_V5_FEASIBILITY.md",
+        "match": true
+      },
+      {
+        "path": "results\\v5-1-quality-certificates-20261024T084411\\inputs\\verification\\oracle_v5_1_quality.py",
+        "match": true
+      },
+      {
+        "path": "results\\v5-1-quality-certificates-20261024T084411\\inputs\\verification\\v5_1_quality_certificates.py",
+        "match": true
+      },
+      {
+        "path": "results\\v5-1-quality-certificates-20261024T084411\\inputs\\tests\\test_v5_1_quality_certificates.py",
+        "match": true
+      },
+      {
+        "path": "results\\v5-1-quality-certificates-20261024T084411\\inputs\\configs\\v3\\heterogeneous_anchor.json",
+        "match": true
+      },
+      {
+        "path": "results\\v5-1-quality-certificates-20261024T084411\\inputs\\spec_history\\v5.1-phase1.5-implementation-start-20261024\\MANIFEST.json",
+        "match": true
+      },
+      {
+        "path": "results\\v5-1-quality-certificates-20261024T084411\\certificate.json",
+        "match": true
+      },
+      {
+        "path": "results\\v5-1-quality-certificates-20261024T084411\\report.md",
+        "match": true
+      }
+    ]
+  }
+]

@@ -1,0 +1,2033 @@
+{
+  "status": "verified",
+  "scope": "post_discovery_four_targeted_counterexamples",
+  "preregistered_before_discovery": false,
+  "game_policy_gates_changed": false,
+  "decision": "NO-GO_declared_phase1_candidates",
+  "Gate_B": "positive_exogenous_only",
+  "Gate_C": "universal_requirement_refuted_by_witnesses",
+  "Gate_D": "no_robust_improving_candidate_in_declared_discovery_set",
+  "equilibrium_count": "not_computed",
+  "phase2_executed": false,
+  "witnesses": [
+    {
+      "fixture": "F51-01",
+      "allocation": "Q1-zero",
+      "profile": [
+        [
+          "L0",
+          "L0",
+          "L1"
+        ],
+        [
+          "L1",
+          "L1",
+          "L0"
+        ]
+      ],
+      "b": [
+        "0",
+        "0",
+        "0"
+      ],
+      "metrics": {
+        "preliminary_accuracy": "19/20",
+        "final_accuracy": "19/20",
+        "preliminary_fa": "1/20",
+        "preliminary_fr": "1/20",
+        "final_fa": "1/20",
+        "final_fr": "1/20",
+        "wrong_payout_value": "1/40",
+        "expected_decision_loss": "3/40",
+        "audit_exposure": "1",
+        "audit_given_y": [
+          "1",
+          "1"
+        ],
+        "expected_reviewer_payout": "93/50",
+        "expected_audit_cost": "1/4",
+        "cash_review_cost": "211/100",
+        "reward_cap": "3",
+        "release_probability": "1/2",
+        "utility_by_z": [
+          [
+            "43/50",
+            "43/50",
+            "7/50"
+          ],
+          [
+            "43/50",
+            "43/50",
+            "7/50"
+          ]
+        ],
+        "reward_by_z": [
+          [
+            "43/50",
+            "43/50",
+            "7/50"
+          ],
+          [
+            "43/50",
+            "43/50",
+            "7/50"
+          ]
+        ],
+        "release_by_z": [
+          "0",
+          "1"
+        ],
+        "reviewer_payout_by_z": [
+          "93/50",
+          "93/50"
+        ],
+        "exposure_by_z": [
+          "1",
+          "1"
+        ],
+        "batch_cash_review_cost": "211/100",
+        "effort_by_z": [
+          [
+            "L",
+            "L",
+            "L"
+          ],
+          [
+            "L",
+            "L",
+            "L"
+          ]
+        ]
+      },
+      "max_regret": "0",
+      "best_responses": {
+        "by_z": [
+          [
+            {
+              "judge": 0,
+              "candidate_action": "L0",
+              "candidate_utility": "43/50",
+              "best_actions": [
+                "L0"
+              ],
+              "regret": "0",
+              "actions": [
+                {
+                  "action": "L0",
+                  "utility": "43/50",
+                  "gain": "0",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "0",
+                  "delta_reward": "0"
+                },
+                {
+                  "action": "L1",
+                  "utility": "7/50",
+                  "gain": "-18/25",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "0",
+                  "delta_reward": "-18/25"
+                },
+                {
+                  "action": "H00",
+                  "utility": "81/100",
+                  "gain": "-1/20",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "0",
+                  "delta_reward": "0"
+                },
+                {
+                  "action": "H01",
+                  "utility": "69/100",
+                  "gain": "-17/100",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "0",
+                  "delta_reward": "-3/25"
+                },
+                {
+                  "action": "H10",
+                  "utility": "21/100",
+                  "gain": "-13/20",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "0",
+                  "delta_reward": "-3/5"
+                },
+                {
+                  "action": "H11",
+                  "utility": "9/100",
+                  "gain": "-77/100",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "0",
+                  "delta_reward": "-18/25"
+                }
+              ]
+            },
+            {
+              "judge": 1,
+              "candidate_action": "L0",
+              "candidate_utility": "43/50",
+              "best_actions": [
+                "L0"
+              ],
+              "regret": "0",
+              "actions": [
+                {
+                  "action": "L0",
+                  "utility": "43/50",
+                  "gain": "0",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "0",
+                  "delta_reward": "0"
+                },
+                {
+                  "action": "L1",
+                  "utility": "7/50",
+                  "gain": "-18/25",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "0",
+                  "delta_reward": "-18/25"
+                },
+                {
+                  "action": "H00",
+                  "utility": "81/100",
+                  "gain": "-1/20",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "0",
+                  "delta_reward": "0"
+                },
+                {
+                  "action": "H01",
+                  "utility": "69/100",
+                  "gain": "-17/100",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "0",
+                  "delta_reward": "-3/25"
+                },
+                {
+                  "action": "H10",
+                  "utility": "21/100",
+                  "gain": "-13/20",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "0",
+                  "delta_reward": "-3/5"
+                },
+                {
+                  "action": "H11",
+                  "utility": "9/100",
+                  "gain": "-77/100",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "0",
+                  "delta_reward": "-18/25"
+                }
+              ]
+            },
+            {
+              "judge": 2,
+              "candidate_action": "L1",
+              "candidate_utility": "7/50",
+              "best_actions": [
+                "L1"
+              ],
+              "regret": "0",
+              "actions": [
+                {
+                  "action": "L0",
+                  "utility": "0",
+                  "gain": "-7/50",
+                  "audit_exposure": "0",
+                  "delta_exposure": "-1",
+                  "delta_release": "0",
+                  "delta_reward": "-7/50"
+                },
+                {
+                  "action": "L1",
+                  "utility": "7/50",
+                  "gain": "0",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "0",
+                  "delta_reward": "0"
+                },
+                {
+                  "action": "H00",
+                  "utility": "-1/20",
+                  "gain": "-19/100",
+                  "audit_exposure": "0",
+                  "delta_exposure": "-1",
+                  "delta_release": "0",
+                  "delta_reward": "-7/50"
+                },
+                {
+                  "action": "H01",
+                  "utility": "1/200",
+                  "gain": "-27/200",
+                  "audit_exposure": "23/100",
+                  "delta_exposure": "-77/100",
+                  "delta_release": "0",
+                  "delta_reward": "-17/200"
+                },
+                {
+                  "action": "H10",
+                  "utility": "7/200",
+                  "gain": "-21/200",
+                  "audit_exposure": "77/100",
+                  "delta_exposure": "-23/100",
+                  "delta_release": "0",
+                  "delta_reward": "-11/200"
+                },
+                {
+                  "action": "H11",
+                  "utility": "9/100",
+                  "gain": "-1/20",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "0",
+                  "delta_reward": "0"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "judge": 0,
+              "candidate_action": "L1",
+              "candidate_utility": "43/50",
+              "best_actions": [
+                "L1"
+              ],
+              "regret": "0",
+              "actions": [
+                {
+                  "action": "L0",
+                  "utility": "7/50",
+                  "gain": "-18/25",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "-7/50",
+                  "delta_reward": "-18/25"
+                },
+                {
+                  "action": "L1",
+                  "utility": "43/50",
+                  "gain": "0",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "0",
+                  "delta_reward": "0"
+                },
+                {
+                  "action": "H00",
+                  "utility": "9/100",
+                  "gain": "-77/100",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "-7/50",
+                  "delta_reward": "-18/25"
+                },
+                {
+                  "action": "H01",
+                  "utility": "69/100",
+                  "gain": "-17/100",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "-11/200",
+                  "delta_reward": "-3/25"
+                },
+                {
+                  "action": "H10",
+                  "utility": "21/100",
+                  "gain": "-13/20",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "-17/200",
+                  "delta_reward": "-3/5"
+                },
+                {
+                  "action": "H11",
+                  "utility": "81/100",
+                  "gain": "-1/20",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "0",
+                  "delta_reward": "0"
+                }
+              ]
+            },
+            {
+              "judge": 1,
+              "candidate_action": "L1",
+              "candidate_utility": "43/50",
+              "best_actions": [
+                "L1"
+              ],
+              "regret": "0",
+              "actions": [
+                {
+                  "action": "L0",
+                  "utility": "7/50",
+                  "gain": "-18/25",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "-7/50",
+                  "delta_reward": "-18/25"
+                },
+                {
+                  "action": "L1",
+                  "utility": "43/50",
+                  "gain": "0",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "0",
+                  "delta_reward": "0"
+                },
+                {
+                  "action": "H00",
+                  "utility": "9/100",
+                  "gain": "-77/100",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "-7/50",
+                  "delta_reward": "-18/25"
+                },
+                {
+                  "action": "H01",
+                  "utility": "69/100",
+                  "gain": "-17/100",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "-11/200",
+                  "delta_reward": "-3/25"
+                },
+                {
+                  "action": "H10",
+                  "utility": "21/100",
+                  "gain": "-13/20",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "-17/200",
+                  "delta_reward": "-3/5"
+                },
+                {
+                  "action": "H11",
+                  "utility": "81/100",
+                  "gain": "-1/20",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "0",
+                  "delta_reward": "0"
+                }
+              ]
+            },
+            {
+              "judge": 2,
+              "candidate_action": "L0",
+              "candidate_utility": "7/50",
+              "best_actions": [
+                "L0"
+              ],
+              "regret": "0",
+              "actions": [
+                {
+                  "action": "L0",
+                  "utility": "7/50",
+                  "gain": "0",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "0",
+                  "delta_reward": "0"
+                },
+                {
+                  "action": "L1",
+                  "utility": "0",
+                  "gain": "-7/50",
+                  "audit_exposure": "0",
+                  "delta_exposure": "-1",
+                  "delta_release": "0",
+                  "delta_reward": "-7/50"
+                },
+                {
+                  "action": "H00",
+                  "utility": "9/100",
+                  "gain": "-1/20",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "0",
+                  "delta_reward": "0"
+                },
+                {
+                  "action": "H01",
+                  "utility": "1/200",
+                  "gain": "-27/200",
+                  "audit_exposure": "23/100",
+                  "delta_exposure": "-77/100",
+                  "delta_release": "0",
+                  "delta_reward": "-17/200"
+                },
+                {
+                  "action": "H10",
+                  "utility": "7/200",
+                  "gain": "-21/200",
+                  "audit_exposure": "77/100",
+                  "delta_exposure": "-23/100",
+                  "delta_release": "0",
+                  "delta_reward": "-11/200"
+                },
+                {
+                  "action": "H11",
+                  "utility": "-1/20",
+                  "gain": "-19/100",
+                  "audit_exposure": "0",
+                  "delta_exposure": "-1",
+                  "delta_release": "0",
+                  "delta_reward": "-7/50"
+                }
+              ]
+            }
+          ]
+        ],
+        "max_regret": "0",
+        "is_equilibrium": true,
+        "scope": "targeted_profile_only"
+      },
+      "independent_deviation_checks": 36,
+      "gates": {
+        "fa": true,
+        "fr": true,
+        "wrong_payout": true,
+        "cash": true,
+        "reserve": true,
+        "exposure": false,
+        "all_pass": false
+      },
+      "finding": "strategic_failure"
+    },
+    {
+      "fixture": "F51-01",
+      "allocation": "Q2-z1",
+      "profile": [
+        [
+          "L1",
+          "L1",
+          "L1"
+        ],
+        [
+          "L1",
+          "L1",
+          "L1"
+        ]
+      ],
+      "b": [
+        "0",
+        "0",
+        "0"
+      ],
+      "metrics": {
+        "preliminary_accuracy": "1/2",
+        "final_accuracy": "1/2",
+        "preliminary_fa": "1",
+        "preliminary_fr": "0",
+        "final_fa": "1",
+        "final_fr": "0",
+        "wrong_payout_value": "1/2",
+        "expected_decision_loss": "1",
+        "audit_exposure": "1/2",
+        "audit_given_y": [
+          "1/20",
+          "19/20"
+        ],
+        "expected_reviewer_payout": "129/100",
+        "expected_audit_cost": "1/8",
+        "cash_review_cost": "283/200",
+        "reward_cap": "3",
+        "release_probability": "1",
+        "utility_by_z": [
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "43/50",
+            "43/50",
+            "43/50"
+          ]
+        ],
+        "reward_by_z": [
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "43/50",
+            "43/50",
+            "43/50"
+          ]
+        ],
+        "release_by_z": [
+          "1",
+          "1"
+        ],
+        "reviewer_payout_by_z": [
+          "0",
+          "129/50"
+        ],
+        "exposure_by_z": [
+          "0",
+          "1"
+        ],
+        "batch_cash_review_cost": "283/200",
+        "effort_by_z": [
+          [
+            "L",
+            "L",
+            "L"
+          ],
+          [
+            "L",
+            "L",
+            "L"
+          ]
+        ]
+      },
+      "max_regret": "0",
+      "best_responses": {
+        "by_z": [
+          [
+            {
+              "judge": 0,
+              "candidate_action": "L1",
+              "candidate_utility": "0",
+              "best_actions": [
+                "L0",
+                "L1"
+              ],
+              "regret": "0",
+              "actions": [
+                {
+                  "action": "L0",
+                  "utility": "0",
+                  "gain": "0",
+                  "audit_exposure": "0",
+                  "delta_exposure": "0",
+                  "delta_release": "-1",
+                  "delta_reward": "0"
+                },
+                {
+                  "action": "L1",
+                  "utility": "0",
+                  "gain": "0",
+                  "audit_exposure": "0",
+                  "delta_exposure": "0",
+                  "delta_release": "0",
+                  "delta_reward": "0"
+                },
+                {
+                  "action": "H00",
+                  "utility": "-1/20",
+                  "gain": "-1/20",
+                  "audit_exposure": "0",
+                  "delta_exposure": "0",
+                  "delta_release": "-1",
+                  "delta_reward": "0"
+                },
+                {
+                  "action": "H01",
+                  "utility": "-1/20",
+                  "gain": "-1/20",
+                  "audit_exposure": "0",
+                  "delta_exposure": "0",
+                  "delta_release": "-77/100",
+                  "delta_reward": "0"
+                },
+                {
+                  "action": "H10",
+                  "utility": "-1/20",
+                  "gain": "-1/20",
+                  "audit_exposure": "0",
+                  "delta_exposure": "0",
+                  "delta_release": "-23/100",
+                  "delta_reward": "0"
+                },
+                {
+                  "action": "H11",
+                  "utility": "-1/20",
+                  "gain": "-1/20",
+                  "audit_exposure": "0",
+                  "delta_exposure": "0",
+                  "delta_release": "0",
+                  "delta_reward": "0"
+                }
+              ]
+            },
+            {
+              "judge": 1,
+              "candidate_action": "L1",
+              "candidate_utility": "0",
+              "best_actions": [
+                "L0",
+                "L1"
+              ],
+              "regret": "0",
+              "actions": [
+                {
+                  "action": "L0",
+                  "utility": "0",
+                  "gain": "0",
+                  "audit_exposure": "0",
+                  "delta_exposure": "0",
+                  "delta_release": "-1",
+                  "delta_reward": "0"
+                },
+                {
+                  "action": "L1",
+                  "utility": "0",
+                  "gain": "0",
+                  "audit_exposure": "0",
+                  "delta_exposure": "0",
+                  "delta_release": "0",
+                  "delta_reward": "0"
+                },
+                {
+                  "action": "H00",
+                  "utility": "-1/20",
+                  "gain": "-1/20",
+                  "audit_exposure": "0",
+                  "delta_exposure": "0",
+                  "delta_release": "-1",
+                  "delta_reward": "0"
+                },
+                {
+                  "action": "H01",
+                  "utility": "-1/20",
+                  "gain": "-1/20",
+                  "audit_exposure": "0",
+                  "delta_exposure": "0",
+                  "delta_release": "-77/100",
+                  "delta_reward": "0"
+                },
+                {
+                  "action": "H10",
+                  "utility": "-1/20",
+                  "gain": "-1/20",
+                  "audit_exposure": "0",
+                  "delta_exposure": "0",
+                  "delta_release": "-23/100",
+                  "delta_reward": "0"
+                },
+                {
+                  "action": "H11",
+                  "utility": "-1/20",
+                  "gain": "-1/20",
+                  "audit_exposure": "0",
+                  "delta_exposure": "0",
+                  "delta_release": "0",
+                  "delta_reward": "0"
+                }
+              ]
+            },
+            {
+              "judge": 2,
+              "candidate_action": "L1",
+              "candidate_utility": "0",
+              "best_actions": [
+                "L0",
+                "L1"
+              ],
+              "regret": "0",
+              "actions": [
+                {
+                  "action": "L0",
+                  "utility": "0",
+                  "gain": "0",
+                  "audit_exposure": "0",
+                  "delta_exposure": "0",
+                  "delta_release": "-1",
+                  "delta_reward": "0"
+                },
+                {
+                  "action": "L1",
+                  "utility": "0",
+                  "gain": "0",
+                  "audit_exposure": "0",
+                  "delta_exposure": "0",
+                  "delta_release": "0",
+                  "delta_reward": "0"
+                },
+                {
+                  "action": "H00",
+                  "utility": "-1/20",
+                  "gain": "-1/20",
+                  "audit_exposure": "0",
+                  "delta_exposure": "0",
+                  "delta_release": "-1",
+                  "delta_reward": "0"
+                },
+                {
+                  "action": "H01",
+                  "utility": "-1/20",
+                  "gain": "-1/20",
+                  "audit_exposure": "0",
+                  "delta_exposure": "0",
+                  "delta_release": "-77/100",
+                  "delta_reward": "0"
+                },
+                {
+                  "action": "H10",
+                  "utility": "-1/20",
+                  "gain": "-1/20",
+                  "audit_exposure": "0",
+                  "delta_exposure": "0",
+                  "delta_release": "-23/100",
+                  "delta_reward": "0"
+                },
+                {
+                  "action": "H11",
+                  "utility": "-1/20",
+                  "gain": "-1/20",
+                  "audit_exposure": "0",
+                  "delta_exposure": "0",
+                  "delta_release": "0",
+                  "delta_reward": "0"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "judge": 0,
+              "candidate_action": "L1",
+              "candidate_utility": "43/50",
+              "best_actions": [
+                "L1"
+              ],
+              "regret": "0",
+              "actions": [
+                {
+                  "action": "L0",
+                  "utility": "7/50",
+                  "gain": "-18/25",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "0",
+                  "delta_reward": "-18/25"
+                },
+                {
+                  "action": "L1",
+                  "utility": "43/50",
+                  "gain": "0",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "0",
+                  "delta_reward": "0"
+                },
+                {
+                  "action": "H00",
+                  "utility": "9/100",
+                  "gain": "-77/100",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "0",
+                  "delta_reward": "-18/25"
+                },
+                {
+                  "action": "H01",
+                  "utility": "69/100",
+                  "gain": "-17/100",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "0",
+                  "delta_reward": "-3/25"
+                },
+                {
+                  "action": "H10",
+                  "utility": "21/100",
+                  "gain": "-13/20",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "0",
+                  "delta_reward": "-3/5"
+                },
+                {
+                  "action": "H11",
+                  "utility": "81/100",
+                  "gain": "-1/20",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "0",
+                  "delta_reward": "0"
+                }
+              ]
+            },
+            {
+              "judge": 1,
+              "candidate_action": "L1",
+              "candidate_utility": "43/50",
+              "best_actions": [
+                "L1"
+              ],
+              "regret": "0",
+              "actions": [
+                {
+                  "action": "L0",
+                  "utility": "7/50",
+                  "gain": "-18/25",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "0",
+                  "delta_reward": "-18/25"
+                },
+                {
+                  "action": "L1",
+                  "utility": "43/50",
+                  "gain": "0",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "0",
+                  "delta_reward": "0"
+                },
+                {
+                  "action": "H00",
+                  "utility": "9/100",
+                  "gain": "-77/100",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "0",
+                  "delta_reward": "-18/25"
+                },
+                {
+                  "action": "H01",
+                  "utility": "69/100",
+                  "gain": "-17/100",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "0",
+                  "delta_reward": "-3/25"
+                },
+                {
+                  "action": "H10",
+                  "utility": "21/100",
+                  "gain": "-13/20",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "0",
+                  "delta_reward": "-3/5"
+                },
+                {
+                  "action": "H11",
+                  "utility": "81/100",
+                  "gain": "-1/20",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "0",
+                  "delta_reward": "0"
+                }
+              ]
+            },
+            {
+              "judge": 2,
+              "candidate_action": "L1",
+              "candidate_utility": "43/50",
+              "best_actions": [
+                "L1"
+              ],
+              "regret": "0",
+              "actions": [
+                {
+                  "action": "L0",
+                  "utility": "7/50",
+                  "gain": "-18/25",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "0",
+                  "delta_reward": "-18/25"
+                },
+                {
+                  "action": "L1",
+                  "utility": "43/50",
+                  "gain": "0",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "0",
+                  "delta_reward": "0"
+                },
+                {
+                  "action": "H00",
+                  "utility": "9/100",
+                  "gain": "-77/100",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "0",
+                  "delta_reward": "-18/25"
+                },
+                {
+                  "action": "H01",
+                  "utility": "69/100",
+                  "gain": "-17/100",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "0",
+                  "delta_reward": "-3/25"
+                },
+                {
+                  "action": "H10",
+                  "utility": "21/100",
+                  "gain": "-13/20",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "0",
+                  "delta_reward": "-3/5"
+                },
+                {
+                  "action": "H11",
+                  "utility": "81/100",
+                  "gain": "-1/20",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "0",
+                  "delta_reward": "0"
+                }
+              ]
+            }
+          ]
+        ],
+        "max_regret": "0",
+        "is_equilibrium": true,
+        "scope": "targeted_profile_only"
+      },
+      "independent_deviation_checks": 36,
+      "gates": {
+        "fa": false,
+        "fr": true,
+        "wrong_payout": false,
+        "cash": true,
+        "reserve": true,
+        "exposure": true,
+        "all_pass": false
+      },
+      "finding": "strategic_failure"
+    },
+    {
+      "fixture": "F51-02",
+      "allocation": "Q1-zero",
+      "profile": [
+        [
+          "L0",
+          "L1",
+          "H01"
+        ],
+        [
+          "L0",
+          "L1",
+          "H01"
+        ]
+      ],
+      "b": [
+        "0",
+        "0",
+        "0"
+      ],
+      "metrics": {
+        "preliminary_accuracy": "4/5",
+        "final_accuracy": "901/1000",
+        "preliminary_fa": "1/5",
+        "preliminary_fr": "1/5",
+        "final_fa": "11/250",
+        "final_fr": "77/500",
+        "wrong_payout_value": "11/500",
+        "expected_decision_loss": "121/1000",
+        "audit_exposure": "1",
+        "audit_given_y": [
+          "1",
+          "1"
+        ],
+        "expected_reviewer_payout": "87/50",
+        "expected_audit_cost": "1/4",
+        "cash_review_cost": "199/100",
+        "reward_cap": "3",
+        "release_probability": "89/200",
+        "utility_by_z": [
+          [
+            "33/50",
+            "17/50",
+            "69/100"
+          ],
+          [
+            "17/50",
+            "33/50",
+            "69/100"
+          ]
+        ],
+        "reward_by_z": [
+          [
+            "33/50",
+            "17/50",
+            "37/50"
+          ],
+          [
+            "17/50",
+            "33/50",
+            "37/50"
+          ]
+        ],
+        "release_by_z": [
+          "23/100",
+          "33/50"
+        ],
+        "reviewer_payout_by_z": [
+          "87/50",
+          "87/50"
+        ],
+        "exposure_by_z": [
+          "1",
+          "1"
+        ],
+        "batch_cash_review_cost": "199/100",
+        "effort_by_z": [
+          [
+            "L",
+            "L",
+            "H"
+          ],
+          [
+            "L",
+            "L",
+            "H"
+          ]
+        ]
+      },
+      "max_regret": "0",
+      "best_responses": {
+        "by_z": [
+          [
+            {
+              "judge": 0,
+              "candidate_action": "L0",
+              "candidate_utility": "33/50",
+              "best_actions": [
+                "L0"
+              ],
+              "regret": "0",
+              "actions": [
+                {
+                  "action": "L0",
+                  "utility": "33/50",
+                  "gain": "0",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "0",
+                  "delta_reward": "0"
+                },
+                {
+                  "action": "L1",
+                  "utility": "11/100",
+                  "gain": "-11/20",
+                  "audit_exposure": "31/50",
+                  "delta_exposure": "-19/50",
+                  "delta_release": "13/50",
+                  "delta_reward": "-11/20"
+                },
+                {
+                  "action": "H00",
+                  "utility": "61/100",
+                  "gain": "-1/20",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "0",
+                  "delta_reward": "0"
+                },
+                {
+                  "action": "H01",
+                  "utility": "643/1250",
+                  "gain": "-91/625",
+                  "audit_exposure": "39/50",
+                  "delta_exposure": "-11/50",
+                  "delta_release": "247/2500",
+                  "delta_reward": "-239/2500"
+                },
+                {
+                  "action": "H10",
+                  "utility": "389/2500",
+                  "gain": "-1261/2500",
+                  "audit_exposure": "21/25",
+                  "delta_exposure": "-4/25",
+                  "delta_release": "403/2500",
+                  "delta_reward": "-284/625"
+                },
+                {
+                  "action": "H11",
+                  "utility": "3/50",
+                  "gain": "-3/5",
+                  "audit_exposure": "31/50",
+                  "delta_exposure": "-19/50",
+                  "delta_release": "13/50",
+                  "delta_reward": "-11/20"
+                }
+              ]
+            },
+            {
+              "judge": 1,
+              "candidate_action": "L1",
+              "candidate_utility": "17/50",
+              "best_actions": [
+                "L1"
+              ],
+              "regret": "0",
+              "actions": [
+                {
+                  "action": "L0",
+                  "utility": "3/20",
+                  "gain": "-19/100",
+                  "audit_exposure": "19/50",
+                  "delta_exposure": "-31/50",
+                  "delta_release": "-23/100",
+                  "delta_reward": "-19/100"
+                },
+                {
+                  "action": "L1",
+                  "utility": "17/50",
+                  "gain": "0",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "0",
+                  "delta_reward": "0"
+                },
+                {
+                  "action": "H00",
+                  "utility": "1/10",
+                  "gain": "-6/25",
+                  "audit_exposure": "19/50",
+                  "delta_exposure": "-31/50",
+                  "delta_release": "-23/100",
+                  "delta_reward": "-19/100"
+                },
+                {
+                  "action": "H01",
+                  "utility": "357/1250",
+                  "gain": "-34/625",
+                  "audit_exposure": "27/50",
+                  "delta_exposure": "-23/50",
+                  "delta_release": "-34/625",
+                  "delta_reward": "-11/2500"
+                },
+                {
+                  "action": "H10",
+                  "utility": "261/2500",
+                  "gain": "-589/2500",
+                  "audit_exposure": "21/25",
+                  "delta_exposure": "-4/25",
+                  "delta_release": "-439/2500",
+                  "delta_reward": "-116/625"
+                },
+                {
+                  "action": "H11",
+                  "utility": "29/100",
+                  "gain": "-1/20",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "0",
+                  "delta_reward": "0"
+                }
+              ]
+            },
+            {
+              "judge": 2,
+              "candidate_action": "H01",
+              "candidate_utility": "69/100",
+              "best_actions": [
+                "H01"
+              ],
+              "regret": "0",
+              "actions": [
+                {
+                  "action": "L0",
+                  "utility": "33/50",
+                  "gain": "-3/100",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "-23/100",
+                  "delta_reward": "-2/25"
+                },
+                {
+                  "action": "L1",
+                  "utility": "17/50",
+                  "gain": "-7/20",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "11/100",
+                  "delta_reward": "-2/5"
+                },
+                {
+                  "action": "H00",
+                  "utility": "61/100",
+                  "gain": "-2/25",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "-23/100",
+                  "delta_reward": "-2/25"
+                },
+                {
+                  "action": "H01",
+                  "utility": "69/100",
+                  "gain": "0",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "0",
+                  "delta_reward": "0"
+                },
+                {
+                  "action": "H10",
+                  "utility": "21/100",
+                  "gain": "-12/25",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "-3/25",
+                  "delta_reward": "-12/25"
+                },
+                {
+                  "action": "H11",
+                  "utility": "29/100",
+                  "gain": "-2/5",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "11/100",
+                  "delta_reward": "-2/5"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "judge": 0,
+              "candidate_action": "L0",
+              "candidate_utility": "17/50",
+              "best_actions": [
+                "L0"
+              ],
+              "regret": "0",
+              "actions": [
+                {
+                  "action": "L0",
+                  "utility": "17/50",
+                  "gain": "0",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "0",
+                  "delta_reward": "0"
+                },
+                {
+                  "action": "L1",
+                  "utility": "3/20",
+                  "gain": "-19/100",
+                  "audit_exposure": "19/50",
+                  "delta_exposure": "-31/50",
+                  "delta_release": "11/100",
+                  "delta_reward": "-19/100"
+                },
+                {
+                  "action": "H00",
+                  "utility": "29/100",
+                  "gain": "-1/20",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "0",
+                  "delta_reward": "0"
+                },
+                {
+                  "action": "H01",
+                  "utility": "357/1250",
+                  "gain": "-34/625",
+                  "audit_exposure": "27/50",
+                  "delta_exposure": "-23/50",
+                  "delta_release": "139/2500",
+                  "delta_reward": "-11/2500"
+                },
+                {
+                  "action": "H10",
+                  "utility": "261/2500",
+                  "gain": "-589/2500",
+                  "audit_exposure": "21/25",
+                  "delta_exposure": "-4/25",
+                  "delta_release": "34/625",
+                  "delta_reward": "-116/625"
+                },
+                {
+                  "action": "H11",
+                  "utility": "1/10",
+                  "gain": "-6/25",
+                  "audit_exposure": "19/50",
+                  "delta_exposure": "-31/50",
+                  "delta_release": "11/100",
+                  "delta_reward": "-19/100"
+                }
+              ]
+            },
+            {
+              "judge": 1,
+              "candidate_action": "L1",
+              "candidate_utility": "33/50",
+              "best_actions": [
+                "L1"
+              ],
+              "regret": "0",
+              "actions": [
+                {
+                  "action": "L0",
+                  "utility": "11/100",
+                  "gain": "-11/20",
+                  "audit_exposure": "31/50",
+                  "delta_exposure": "-19/50",
+                  "delta_release": "-3/20",
+                  "delta_reward": "-11/20"
+                },
+                {
+                  "action": "L1",
+                  "utility": "33/50",
+                  "gain": "0",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "0",
+                  "delta_reward": "0"
+                },
+                {
+                  "action": "H00",
+                  "utility": "3/50",
+                  "gain": "-3/5",
+                  "audit_exposure": "31/50",
+                  "delta_exposure": "-19/50",
+                  "delta_release": "-3/20",
+                  "delta_reward": "-11/20"
+                },
+                {
+                  "action": "H01",
+                  "utility": "643/1250",
+                  "gain": "-91/625",
+                  "audit_exposure": "39/50",
+                  "delta_exposure": "-11/50",
+                  "delta_release": "-111/2500",
+                  "delta_reward": "-239/2500"
+                },
+                {
+                  "action": "H10",
+                  "utility": "389/2500",
+                  "gain": "-1261/2500",
+                  "audit_exposure": "21/25",
+                  "delta_exposure": "-4/25",
+                  "delta_release": "-66/625",
+                  "delta_reward": "-284/625"
+                },
+                {
+                  "action": "H11",
+                  "utility": "61/100",
+                  "gain": "-1/20",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "0",
+                  "delta_reward": "0"
+                }
+              ]
+            },
+            {
+              "judge": 2,
+              "candidate_action": "H01",
+              "candidate_utility": "69/100",
+              "best_actions": [
+                "H01"
+              ],
+              "regret": "0",
+              "actions": [
+                {
+                  "action": "L0",
+                  "utility": "17/50",
+                  "gain": "-7/20",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "0",
+                  "delta_reward": "-2/5"
+                },
+                {
+                  "action": "L1",
+                  "utility": "33/50",
+                  "gain": "-3/100",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "0",
+                  "delta_reward": "-2/25"
+                },
+                {
+                  "action": "H00",
+                  "utility": "29/100",
+                  "gain": "-2/5",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "0",
+                  "delta_reward": "-2/5"
+                },
+                {
+                  "action": "H01",
+                  "utility": "69/100",
+                  "gain": "0",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "0",
+                  "delta_reward": "0"
+                },
+                {
+                  "action": "H10",
+                  "utility": "21/100",
+                  "gain": "-12/25",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "0",
+                  "delta_reward": "-12/25"
+                },
+                {
+                  "action": "H11",
+                  "utility": "61/100",
+                  "gain": "-2/25",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "0",
+                  "delta_reward": "-2/25"
+                }
+              ]
+            }
+          ]
+        ],
+        "max_regret": "0",
+        "is_equilibrium": true,
+        "scope": "targeted_profile_only"
+      },
+      "independent_deviation_checks": 36,
+      "gates": {
+        "fa": true,
+        "fr": true,
+        "wrong_payout": true,
+        "cash": true,
+        "reserve": true,
+        "exposure": false,
+        "all_pass": false
+      },
+      "finding": "strategic_failure"
+    },
+    {
+      "fixture": "F51-02",
+      "allocation": "Q2-z0",
+      "profile": [
+        [
+          "H01",
+          "H01",
+          "H01"
+        ],
+        [
+          "L0",
+          "L0",
+          "L0"
+        ]
+      ],
+      "b": [
+        "0",
+        "0",
+        "0"
+      ],
+      "metrics": {
+        "preliminary_accuracy": "299/500",
+        "final_accuracy": "7781/12500",
+        "preliminary_fa": "91/1250",
+        "preliminary_fr": "457/625",
+        "final_fa": "77/6250",
+        "final_fr": "2321/3125",
+        "wrong_payout_value": "77/12500",
+        "expected_decision_loss": "1199/3125",
+        "audit_exposure": "1/2",
+        "audit_given_y": [
+          "7/10",
+          "3/10"
+        ],
+        "expected_reviewer_payout": "111/100",
+        "expected_audit_cost": "1/8",
+        "cash_review_cost": "247/200",
+        "reward_cap": "3",
+        "release_probability": "337/2500",
+        "utility_by_z": [
+          [
+            "69/100",
+            "69/100",
+            "69/100"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "reward_by_z": [
+          [
+            "37/50",
+            "37/50",
+            "37/50"
+          ],
+          [
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "release_by_z": [
+          "337/1250",
+          "0"
+        ],
+        "reviewer_payout_by_z": [
+          "111/50",
+          "0"
+        ],
+        "exposure_by_z": [
+          "1",
+          "0"
+        ],
+        "batch_cash_review_cost": "247/200",
+        "effort_by_z": [
+          [
+            "H",
+            "H",
+            "H"
+          ],
+          [
+            "L",
+            "L",
+            "L"
+          ]
+        ]
+      },
+      "max_regret": "0",
+      "best_responses": {
+        "by_z": [
+          [
+            {
+              "judge": 0,
+              "candidate_action": "H01",
+              "candidate_utility": "69/100",
+              "best_actions": [
+                "H01"
+              ],
+              "regret": "0",
+              "actions": [
+                {
+                  "action": "L0",
+                  "utility": "33/50",
+                  "gain": "-3/100",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "-47/500",
+                  "delta_reward": "-2/25"
+                },
+                {
+                  "action": "L1",
+                  "utility": "17/50",
+                  "gain": "-7/20",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "37/625",
+                  "delta_reward": "-2/5"
+                },
+                {
+                  "action": "H00",
+                  "utility": "61/100",
+                  "gain": "-2/25",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "-47/500",
+                  "delta_reward": "-2/25"
+                },
+                {
+                  "action": "H01",
+                  "utility": "69/100",
+                  "gain": "0",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "0",
+                  "delta_reward": "0"
+                },
+                {
+                  "action": "H10",
+                  "utility": "21/100",
+                  "gain": "-12/25",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "-87/2500",
+                  "delta_reward": "-12/25"
+                },
+                {
+                  "action": "H11",
+                  "utility": "29/100",
+                  "gain": "-2/5",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "37/625",
+                  "delta_reward": "-2/5"
+                }
+              ]
+            },
+            {
+              "judge": 1,
+              "candidate_action": "H01",
+              "candidate_utility": "69/100",
+              "best_actions": [
+                "H01"
+              ],
+              "regret": "0",
+              "actions": [
+                {
+                  "action": "L0",
+                  "utility": "33/50",
+                  "gain": "-3/100",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "-47/500",
+                  "delta_reward": "-2/25"
+                },
+                {
+                  "action": "L1",
+                  "utility": "17/50",
+                  "gain": "-7/20",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "37/625",
+                  "delta_reward": "-2/5"
+                },
+                {
+                  "action": "H00",
+                  "utility": "61/100",
+                  "gain": "-2/25",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "-47/500",
+                  "delta_reward": "-2/25"
+                },
+                {
+                  "action": "H01",
+                  "utility": "69/100",
+                  "gain": "0",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "0",
+                  "delta_reward": "0"
+                },
+                {
+                  "action": "H10",
+                  "utility": "21/100",
+                  "gain": "-12/25",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "-87/2500",
+                  "delta_reward": "-12/25"
+                },
+                {
+                  "action": "H11",
+                  "utility": "29/100",
+                  "gain": "-2/5",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "37/625",
+                  "delta_reward": "-2/5"
+                }
+              ]
+            },
+            {
+              "judge": 2,
+              "candidate_action": "H01",
+              "candidate_utility": "69/100",
+              "best_actions": [
+                "H01"
+              ],
+              "regret": "0",
+              "actions": [
+                {
+                  "action": "L0",
+                  "utility": "33/50",
+                  "gain": "-3/100",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "-47/500",
+                  "delta_reward": "-2/25"
+                },
+                {
+                  "action": "L1",
+                  "utility": "17/50",
+                  "gain": "-7/20",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "37/625",
+                  "delta_reward": "-2/5"
+                },
+                {
+                  "action": "H00",
+                  "utility": "61/100",
+                  "gain": "-2/25",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "-47/500",
+                  "delta_reward": "-2/25"
+                },
+                {
+                  "action": "H01",
+                  "utility": "69/100",
+                  "gain": "0",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "0",
+                  "delta_reward": "0"
+                },
+                {
+                  "action": "H10",
+                  "utility": "21/100",
+                  "gain": "-12/25",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "-87/2500",
+                  "delta_reward": "-12/25"
+                },
+                {
+                  "action": "H11",
+                  "utility": "29/100",
+                  "gain": "-2/5",
+                  "audit_exposure": "1",
+                  "delta_exposure": "0",
+                  "delta_release": "37/625",
+                  "delta_reward": "-2/5"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "judge": 0,
+              "candidate_action": "L0",
+              "candidate_utility": "0",
+              "best_actions": [
+                "L0",
+                "L1"
+              ],
+              "regret": "0",
+              "actions": [
+                {
+                  "action": "L0",
+                  "utility": "0",
+                  "gain": "0",
+                  "audit_exposure": "0",
+                  "delta_exposure": "0",
+                  "delta_release": "0",
+                  "delta_reward": "0"
+                },
+                {
+                  "action": "L1",
+                  "utility": "0",
+                  "gain": "0",
+                  "audit_exposure": "0",
+                  "delta_exposure": "0",
+                  "delta_release": "0",
+                  "delta_reward": "0"
+                },
+                {
+                  "action": "H00",
+                  "utility": "-1/20",
+                  "gain": "-1/20",
+                  "audit_exposure": "0",
+                  "delta_exposure": "0",
+                  "delta_release": "0",
+                  "delta_reward": "0"
+                },
+                {
+                  "action": "H01",
+                  "utility": "-1/20",
+                  "gain": "-1/20",
+                  "audit_exposure": "0",
+                  "delta_exposure": "0",
+                  "delta_release": "0",
+                  "delta_reward": "0"
+                },
+                {
+                  "action": "H10",
+                  "utility": "-1/20",
+                  "gain": "-1/20",
+                  "audit_exposure": "0",
+                  "delta_exposure": "0",
+                  "delta_release": "0",
+                  "delta_reward": "0"
+                },
+                {
+                  "action": "H11",
+                  "utility": "-1/20",
+                  "gain": "-1/20",
+                  "audit_exposure": "0",
+                  "delta_exposure": "0",
+                  "delta_release": "0",
+                  "delta_reward": "0"
+                }
+              ]
+            },
+            {
+              "judge": 1,
+              "candidate_action": "L0",
+              "candidate_utility": "0",
+              "best_actions": [
+                "L0",
+                "L1"
+              ],
+              "regret": "0",
+              "actions": [
+                {
+                  "action": "L0",
+                  "utility": "0",
+                  "gain": "0",
+                  "audit_exposure": "0",
+                  "delta_exposure": "0",
+                  "delta_release": "0",
+                  "delta_reward": "0"
+                },
+                {
+                  "action": "L1",
+                  "utility": "0",
+                  "gain": "0",
+                  "audit_exposure": "0",
+                  "delta_exposure": "0",
+                  "delta_release": "0",
+                  "delta_reward": "0"
+                },
+                {
+                  "action": "H00",
+                  "utility": "-1/20",
+                  "gain": "-1/20",
+                  "audit_exposure": "0",
+                  "delta_exposure": "0",
+                  "delta_release": "0",
+                  "delta_reward": "0"
+                },
+                {
+                  "action": "H01",
+                  "utility": "-1/20",
+                  "gain": "-1/20",
+                  "audit_exposure": "0",
+                  "delta_exposure": "0",
+                  "delta_release": "0",
+                  "delta_reward": "0"
+                },
+                {
+                  "action": "H10",
+                  "utility": "-1/20",
+                  "gain": "-1/20",
+                  "audit_exposure": "0",
+                  "delta_exposure": "0",
+                  "delta_release": "0",
+                  "delta_reward": "0"
+                },
+                {
+                  "action": "H11",
+                  "utility": "-1/20",
+                  "gain": "-1/20",
+                  "audit_exposure": "0",
+                  "delta_exposure": "0",
+                  "delta_release": "0",
+                  "delta_reward": "0"
+                }
+              ]
+            },
+            {
+              "judge": 2,
+              "candidate_action": "L0",
+              "candidate_utility": "0",
+              "best_actions": [
+                "L0",
+                "L1"
+              ],
+              "regret": "0",
+              "actions": [
+                {
+                  "action": "L0",
+                  "utility": "0",
+                  "gain": "0",
+                  "audit_exposure": "0",
+                  "delta_exposure": "0",
+                  "delta_release": "0",
+                  "delta_reward": "0"
+                },
+                {
+                  "action": "L1",
+                  "utility": "0",
+                  "gain": "0",
+                  "audit_exposure": "0",
+                  "delta_exposure": "0",
+                  "delta_release": "0",
+                  "delta_reward": "0"
+                },
+                {
+                  "action": "H00",
+                  "utility": "-1/20",
+                  "gain": "-1/20",
+                  "audit_exposure": "0",
+                  "delta_exposure": "0",
+                  "delta_release": "0",
+                  "delta_reward": "0"
+                },
+                {
+                  "action": "H01",
+                  "utility": "-1/20",
+                  "gain": "-1/20",
+                  "audit_exposure": "0",
+                  "delta_exposure": "0",
+                  "delta_release": "0",
+                  "delta_reward": "0"
+                },
+                {
+                  "action": "H10",
+                  "utility": "-1/20",
+                  "gain": "-1/20",
+                  "audit_exposure": "0",
+                  "delta_exposure": "0",
+                  "delta_release": "0",
+                  "delta_reward": "0"
+                },
+                {
+                  "action": "H11",
+                  "utility": "-1/20",
+                  "gain": "-1/20",
+                  "audit_exposure": "0",
+                  "delta_exposure": "0",
+                  "delta_release": "0",
+                  "delta_reward": "0"
+                }
+              ]
+            }
+          ]
+        ],
+        "max_regret": "0",
+        "is_equilibrium": true,
+        "scope": "targeted_profile_only"
+      },
+      "independent_deviation_checks": 36,
+      "gates": {
+        "fa": true,
+        "fr": false,
+        "wrong_payout": true,
+        "cash": true,
+        "reserve": true,
+        "exposure": true,
+        "all_pass": false
+      },
+      "finding": "strategic_failure"
+    }
+  ],
+  "supersedes_recommendation_only": "results\\v6-rave-phase1-20261024T021148403371Z\\certificate.json"
+}

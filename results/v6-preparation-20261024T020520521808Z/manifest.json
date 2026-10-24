@@ -1,0 +1,10 @@
+{
+  "status": "expected_red",
+  "created_at_utc": "2026-10-24T02:05:21.017054+00:00",
+  "red_exit_code": 5,
+  "checker_implemented": false,
+  "outputs": {
+    "red-tests.log": "ed2c21c2cf083643b22dc38a9da0b6efdc60eb2ccf47cc0160f269abb144c52f",
+    "historical-identity.json": "599462291e5cd24d6f12b5397a42637faf2492b528bfee737e8f12535eb37baa"
+  }
+}

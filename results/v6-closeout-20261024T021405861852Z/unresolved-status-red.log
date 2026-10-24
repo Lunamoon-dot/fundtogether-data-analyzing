@@ -1,0 +1,17 @@
+test_R06_unresolved_status_does_not_claim_gate_refutation (tests.test_v6_regressions.V6RegressionTests.test_R06_unresolved_status_does_not_claim_gate_refutation) ... FAIL
+
+======================================================================
+FAIL: test_R06_unresolved_status_does_not_claim_gate_refutation (tests.test_v6_regressions.V6RegressionTests.test_R06_unresolved_status_does_not_claim_gate_refutation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\dell\Desktop\fundtogether_data_analyzing\tests\test_v6_regressions.py", line 72, in test_R06_unresolved_status_does_not_claim_gate_refutation
+    self.assertEqual(result["status"], "unresolved")
+AssertionError: 'verified' != 'unresolved'
+- verified
++ unresolved
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.828s
+
+FAILED (failures=1)

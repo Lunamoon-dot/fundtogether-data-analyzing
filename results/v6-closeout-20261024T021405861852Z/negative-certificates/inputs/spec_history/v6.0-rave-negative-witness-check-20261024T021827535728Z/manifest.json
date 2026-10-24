@@ -1,0 +1,39 @@
+{
+  "event_type": "post_discovery_negative_witness_pre_writer_freeze",
+  "created_at_utc": "2026-10-24T02:18:27.674572+00:00",
+  "preregistered_before_discovery": false,
+  "game_or_policy_changed": false,
+  "scope": "four targeted negative witnesses only; no equilibrium search",
+  "inputs": [
+    {
+      "source": "CEAV_M1_V6_PHASE1_COUNTEREXAMPLES.md",
+      "snapshot": "CEAV_M1_V6_PHASE1_COUNTEREXAMPLES.md",
+      "sha256": "c91cffa00a030192bcdd5dfbc7f8273a0104fd10adba9d8e994e324c88f61ece"
+    },
+    {
+      "source": "tests/test_v6_stop_certificates.py",
+      "snapshot": "tests/test_v6_stop_certificates.py",
+      "sha256": "74d406ef0692bfdea7cd00f535266847986ca9acae3f9095a13ad12360eddbd6"
+    },
+    {
+      "source": "configs/v6/rave_phase1.json",
+      "snapshot": "configs/v6/rave_phase1.json",
+      "sha256": "4ff7cc4f6236af06f896ffc35b1d12d138d822324f32e83dd9a7dcebe7d3ebc8"
+    },
+    {
+      "source": "verification/feasibility_v6.py",
+      "snapshot": "verification/feasibility_v6.py",
+      "sha256": "7902668d1f72a1156c007835a875e948f25c57e87daf43361d456e1cea293a01"
+    },
+    {
+      "source": "verification/oracle_v6_feasibility.py",
+      "snapshot": "verification/oracle_v6_feasibility.py",
+      "sha256": "e4fe65e40b2938d9097d6980df02b1bee6d498c2008716b3a31fdd97ea6db2c2"
+    },
+    {
+      "source": "results/v6-rave-phase1-20261024T021148403371Z/manifest.json",
+      "snapshot": "results/v6-rave-phase1-20261024T021148403371Z/manifest.json",
+      "sha256": "0565679f19e3999d24313a56f8730f61750fe6ce3349dcae2c4b2204188065a6"
+    }
+  ]
+}

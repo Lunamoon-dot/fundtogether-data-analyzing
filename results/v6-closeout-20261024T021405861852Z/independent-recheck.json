@@ -1,0 +1,104 @@
+{
+  "status": "passed",
+  "checks": 40202,
+  "targeted_profile_records": 240,
+  "independent_deviation_records": 8640,
+  "meaningful_exogenous_candidates": [
+    [
+      "F51-01",
+      "Q1-zero"
+    ],
+    [
+      "F51-01",
+      "Q2-z1"
+    ],
+    [
+      "F51-02",
+      "Q1-zero"
+    ],
+    [
+      "F51-02",
+      "Q2-z0"
+    ]
+  ],
+  "truthful_candidates_not_equilibria": [
+    {
+      "fixture": "F51-01",
+      "allocation": "Q1-zero",
+      "max_regret": "421/5000"
+    },
+    {
+      "fixture": "F51-01",
+      "allocation": "Q2-z1",
+      "max_regret": "17/100"
+    },
+    {
+      "fixture": "F51-02",
+      "allocation": "Q1-zero",
+      "max_regret": "17/625"
+    },
+    {
+      "fixture": "F51-02",
+      "allocation": "Q2-z0",
+      "max_regret": "1/20"
+    }
+  ],
+  "strategic_failure_witnesses": [
+    {
+      "fixture": "F51-01",
+      "allocation": "Q1-zero",
+      "policy": "selective",
+      "study": "neutral_primary",
+      "profile": "split_copy_Z",
+      "audit_exposure": "1",
+      "finding": "strategic_failure_witness_exposure"
+    },
+    {
+      "fixture": "F51-01",
+      "allocation": "Q1-zero",
+      "policy": "selective",
+      "study": "external_b_diagnostic",
+      "profile": "split_copy_Z",
+      "audit_exposure": "1",
+      "finding": "strategic_failure_witness_exposure"
+    },
+    {
+      "fixture": "F51-01",
+      "allocation": "Q1-floor",
+      "policy": "matched_uniform",
+      "study": "neutral_primary",
+      "profile": "copy_Z",
+      "audit_exposure": "61/100",
+      "finding": "strategic_failure_witness_exposure"
+    },
+    {
+      "fixture": "F51-01",
+      "allocation": "Q1-floor",
+      "policy": "matched_uniform",
+      "study": "external_b_diagnostic",
+      "profile": "copy_Z",
+      "audit_exposure": "61/100",
+      "finding": "strategic_failure_witness_exposure"
+    },
+    {
+      "fixture": "F51-02",
+      "allocation": "Q1-floor",
+      "policy": "matched_uniform",
+      "study": "neutral_primary",
+      "profile": "copy_Z",
+      "audit_exposure": "61/100",
+      "finding": "strategic_failure_witness_exposure"
+    },
+    {
+      "fixture": "F51-02",
+      "allocation": "Q1-floor",
+      "policy": "matched_uniform",
+      "study": "external_b_diagnostic",
+      "profile": "copy_Z",
+      "audit_exposure": "61/100",
+      "finding": "strategic_failure_witness_exposure"
+    }
+  ],
+  "source": "pinned independent potential-state oracle",
+  "equilibrium_search": "not_run_phase2"
+}
