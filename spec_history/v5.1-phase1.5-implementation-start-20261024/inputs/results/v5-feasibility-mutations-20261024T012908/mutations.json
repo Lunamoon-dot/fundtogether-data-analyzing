@@ -1,0 +1,31 @@
+{
+  "status": "passed",
+  "mutations": [
+    {
+      "id": "M01_noise_factor",
+      "status": "rejected",
+      "reason": "noise attenuation must use d squared"
+    },
+    {
+      "id": "M02_effort_cost_sign",
+      "status": "rejected",
+      "reason": "effort cost must reduce utility"
+    },
+    {
+      "id": "M03_cap_coefficient",
+      "status": "rejected",
+      "reason": "shifted incremental cap must reserve 6 mu"
+    },
+    {
+      "id": "M04_strict_boundary",
+      "status": "rejected",
+      "reason": "equality must retain a tie, not strict entry"
+    },
+    {
+      "id": "M05_baseline_posterior",
+      "status": "rejected",
+      "reason": "baseline posterior must remain model-derived"
+    }
+  ],
+  "scope": "temporary-copy-only"
+}

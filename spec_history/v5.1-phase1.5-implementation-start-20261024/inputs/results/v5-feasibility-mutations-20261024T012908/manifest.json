@@ -1,0 +1,30 @@
+{
+  "event_type": "v5.0_agiis_phase1_mutation_run",
+  "status": "succeeded",
+  "created_at_utc": "2026-10-24T01:29:09.056214+00:00",
+  "inputs": [
+    {
+      "source": "verification/oracle_v5.py",
+      "snapshot": "inputs/verification/oracle_v5.py",
+      "sha256": "2b4f5195b5d1e3d88282ffa6444beb12d6aaf0fa434c3df5eabf941d6c2a1f9d"
+    },
+    {
+      "source": "verification/feasibility_v5.py",
+      "snapshot": "inputs/verification/feasibility_v5.py",
+      "sha256": "3335afe4380334a46234686ae13bb94fc6178c73a919bd6f357bc51a11f37875"
+    },
+    {
+      "source": "verification/mutation_probes_v5.py",
+      "snapshot": "inputs/verification/mutation_probes_v5.py",
+      "sha256": "942f9d3f4cfd90b74818a6a880fc2bebf278e69e05db740164a5311b621e8108"
+    },
+    {
+      "source": "tests/test_v5_feasibility.py",
+      "snapshot": "inputs/tests/test_v5_feasibility.py",
+      "sha256": "41616cc8fef646928611a4494a8b0a07ddf7c6393cbac847fd95dfc30fb5b117"
+    }
+  ],
+  "outputs": {
+    "mutations.json": "107ed98dfacebcd3545603520935f6f8b5f7ec98d2e16f4f4394c633bd1d751b"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "event_type": "v5.1_phase1.5_quality_mutation_run",
+  "status": "succeeded",
+  "created_at_utc": "2026-10-24T01:44:19.123583+00:00",
+  "inputs": [
+    {
+      "source": "verification/oracle_v5_1_quality.py",
+      "snapshot": "inputs/verification/oracle_v5_1_quality.py",
+      "sha256": "50a021e3e84418c463d0741fe1f9fb2bea55f21198e7076a1fcefaab727d0dae"
+    },
+    {
+      "source": "verification/v5_1_quality_certificates.py",
+      "snapshot": "inputs/verification/v5_1_quality_certificates.py",
+      "sha256": "7a866599c3d4010b47e72e8dfc44dafdab69b5a1debbfb595e156bfa5040f8e7"
+    },
+    {
+      "source": "verification/mutation_probes_v5_1.py",
+      "snapshot": "inputs/verification/mutation_probes_v5_1.py",
+      "sha256": "5746255b10c91c9f3689bcf81be5046380d25bf1de43192f9413347139274832"
+    }
+  ],
+  "outputs": {
+    "mutations.json": "7241e7c40d2e2abf68732b20c36cfa4c604c9d520f5428c72b9efaa464c8168f"
+  }
+}

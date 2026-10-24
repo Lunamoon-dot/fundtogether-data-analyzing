@@ -1,0 +1,30 @@
+{
+  "status": "passed",
+  "mutations": [
+    {
+      "id": "M01_vote_tie_rule",
+      "status": "rejected",
+      "reason": "majority decision must use the declared two-of-three threshold",
+      "returncode": 1
+    },
+    {
+      "id": "M02_wrong_direct_forecast_target",
+      "status": "rejected",
+      "reason": "Direct Brier must forecast the audit T, not Y",
+      "returncode": 1
+    },
+    {
+      "id": "M03_wrong_decision_error_side",
+      "status": "rejected",
+      "reason": "false-approval event must use Y=0 and D=1",
+      "returncode": 1
+    },
+    {
+      "id": "M04_wrong_direct_score",
+      "status": "rejected",
+      "reason": "Brier score expectation must remain exact",
+      "returncode": 1
+    }
+  ],
+  "scope": "temporary-copy-only"
+}
