@@ -1,0 +1,32 @@
+{
+  "historical_manifests": [
+    {
+      "path": "results\\v6-closeout-20261024T021405861852Z\\manifest.json",
+      "raw_sha256": "978fc7aed07a02f01c735783559da8f2752684015e8c5bfd33b10da33011480e",
+      "role": "historical identity only"
+    },
+    {
+      "path": "results\\v6-mutations-initial-20261024T021033309627Z\\manifest.json",
+      "raw_sha256": "f1825d2288b8726e8934c6f6a29025676971847b3ab84c8f59dcfe485b6c4aaa",
+      "role": "historical identity only"
+    },
+    {
+      "path": "results\\v6-preparation-20261024T020520521808Z\\manifest.json",
+      "raw_sha256": "9c44af034bff31cafc4bb938cc7757d5f33333c96c438111c92c3a698b13cdc8",
+      "role": "historical identity only"
+    },
+    {
+      "path": "results\\v6-rave-phase1-20261024T021148403371Z\\manifest.json",
+      "raw_sha256": "0565679f19e3999d24313a56f8730f61750fe6ce3349dcae2c4b2204188065a6",
+      "role": "historical identity only"
+    },
+    {
+      "path": "results\\v6-verification-20261024T021221745773Z\\manifest.json",
+      "raw_sha256": "e363f72a231edaf6c7f422874ffc203823a119f382958c34b63cd409173c1158",
+      "role": "historical identity only"
+    }
+  ],
+  "tracked_diff_from_parent": [],
+  "pinned_certificate_and_report_identical": true,
+  "existing_output_refused": true
+}

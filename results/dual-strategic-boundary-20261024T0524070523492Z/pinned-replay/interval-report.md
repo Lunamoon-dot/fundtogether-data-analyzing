@@ -1,0 +1,346 @@
+# Exact pure equilibrium boundary: complete interval tables
+
+VERIFIED: all real b in the frozen six-action stationary class. Verdict: **STRATEGIC_FAILURE**.
+
+All-H01 local stability and all-equilibrium gate safety are different. Every row below is an exact arrangement cell, not a floating-point sample. At endpoints all ties are retained. NONE means no pure equilibrium; that row fails robustness.
+
+Metric maxima can have different witnesses. Full action profiles, their closed equilibrium intervals, all gates, utility/release tables and every maximizing witness ID are in certificate.json. IDs are local to each mechanism/scenario. b has utility units with reward coefficient mu=2.
+
+## selective
+
+### Local deviations against frozen All-H01
+
+All three Judge positions have the following identical values; certificate retains all 36 rows. Deviation gain = -gap + b*slope. A nonzero slope crosses at gap/slope; a crossing need not be the first optimal deviation.
+
+|Z|Action|Neutral gap|Release slope|Indifference b|
+|---|---|---|---|---|
+|0|L0|7/500|-633/5000|-70/633|
+|0|L1|27/100|3/50|9/2|
+|0|H00|8/125|-633/5000|-320/633|
+|0|H01|0|0|None|
+|0|H10|48/125|-333/5000|-640/111|
+|0|H11|8/25|3/50|16/3|
+|1|L0|27/100|-899/6250|-3375/1798|
+|1|L1|7/500|551/6250|175/1102|
+|1|H00|8/25|-899/6250|-2000/899|
+|1|H01|0|0|None|
+|1|H10|48/125|-174/3125|-200/29|
+|1|H11|8/125|551/6250|400/551|
+
+### neutral : b_i = b * (0, 0, 0)
+
+All-gates-safe component containing zero: {'lo': None, 'hi': None, 'lo_included': False, 'hi_included': False}. A None endpoint means infinity. Pure existence for all real b: True.
+
+|b cell|All-H01|Pure count|All gates|Worst FA|Worst FR|Wrong payout|Decision loss|Cash|Union exposure|Reserve|Bad IDs|
+|---|---|---:|---|---|---|---|---|---|---|---|---|
+|(-inf, +inf)|STRICT|1|True|43/1250|481/3125|43/2500|348/3125|46957/25000|2557/6250|6||
+
+Closed full-equilibrium intervals and action witnesses (Z=0 / Z=1):
+
+|ID|Z=0 actions|Z=1 actions|Closed b interval|Failed gates|
+|---|---|---|---|---|
+|0|H01, H01, H01|H01, H01, H01|[-inf, +inf]|none|
+
+### one_A : b_i = b * (1, 0, 0)
+
+All-gates-safe component containing zero: {'lo': Fraction(-70, 633), 'hi': None, 'lo_included': False, 'hi_included': False}. A None endpoint means infinity. Pure existence for all real b: True.
+
+|b cell|All-H01|Pure count|All gates|Worst FA|Worst FR|Wrong payout|Decision loss|Cash|Union exposure|Reserve|Bad IDs|
+|---|---|---:|---|---|---|---|---|---|---|---|---|
+|(-inf, -3375/1798)|NOT_EQUILIBRIUM|1|False|323/25000|1259/3125|323/50000|5359/25000|6747/4000|411/1000|6|0|
+|{-3375/1798}|NOT_EQUILIBRIUM|2|False|671/25000|1259/3125|671/50000|5359/25000|7387/4000|411/1000|6|0,1|
+|(-3375/1798, -70/633)|NOT_EQUILIBRIUM|1|False|671/25000|853/3125|671/50000|4083/25000|7387/4000|411/1000|6|1|
+|{-70/633}|WEAK_WITH_TIES|2|False|43/1250|853/3125|43/2500|4083/25000|46957/25000|411/1000|6|1|
+|(-70/633, 175/1102)|STRICT|1|True|43/1250|481/3125|43/2500|348/3125|46957/25000|2557/6250|6||
+|{175/1102}|WEAK_WITH_TIES|2|True|563/6250|481/3125|563/12500|377/2500|46957/25000|2557/6250|6||
+|(175/1102, 9/2)|NOT_EQUILIBRIUM|1|True|563/6250|759/6250|563/12500|377/2500|46157/25000|2557/6250|6||
+|{9/2}|NOT_EQUILIBRIUM|2|True|376/3125|759/6250|188/3125|2077/12500|46157/25000|52/125|6||
+|(9/2, +inf)|NOT_EQUILIBRIUM|1|True|376/3125|573/6250|188/3125|2077/12500|211/125|52/125|6||
+
+Closed full-equilibrium intervals and action witnesses (Z=0 / Z=1):
+
+|ID|Z=0 actions|Z=1 actions|Closed b interval|Failed gates|
+|---|---|---|---|---|
+|0|L0, H01, H01|L0, H01, H01|[-inf, -3375/1798]|fr|
+|1|L0, H01, H01|H01, H01, H01|[-3375/1798, -70/633]|fr|
+|2|L1, H01, H01|L1, H01, H01|[9/2, +inf]|none|
+|3|H01, H01, H01|L1, H01, H01|[175/1102, 9/2]|none|
+|4|H01, H01, H01|H01, H01, H01|[-70/633, 175/1102]|none|
+
+### one_B : b_i = b * (0, 1, 0)
+
+All-gates-safe component containing zero: {'lo': Fraction(-70, 633), 'hi': None, 'lo_included': False, 'hi_included': False}. A None endpoint means infinity. Pure existence for all real b: True.
+
+|b cell|All-H01|Pure count|All gates|Worst FA|Worst FR|Wrong payout|Decision loss|Cash|Union exposure|Reserve|Bad IDs|
+|---|---|---:|---|---|---|---|---|---|---|---|---|
+|(-inf, -3375/1798)|NOT_EQUILIBRIUM|1|False|323/25000|1259/3125|323/50000|5359/25000|6747/4000|411/1000|6|0|
+|{-3375/1798}|NOT_EQUILIBRIUM|2|False|671/25000|1259/3125|671/50000|5359/25000|7387/4000|411/1000|6|0,1|
+|(-3375/1798, -70/633)|NOT_EQUILIBRIUM|1|False|671/25000|853/3125|671/50000|4083/25000|7387/4000|411/1000|6|1|
+|{-70/633}|WEAK_WITH_TIES|2|False|43/1250|853/3125|43/2500|4083/25000|46957/25000|411/1000|6|1|
+|(-70/633, 175/1102)|STRICT|1|True|43/1250|481/3125|43/2500|348/3125|46957/25000|2557/6250|6||
+|{175/1102}|WEAK_WITH_TIES|2|True|563/6250|481/3125|563/12500|377/2500|46957/25000|2557/6250|6||
+|(175/1102, 9/2)|NOT_EQUILIBRIUM|1|True|563/6250|759/6250|563/12500|377/2500|46157/25000|2557/6250|6||
+|{9/2}|NOT_EQUILIBRIUM|2|True|376/3125|759/6250|188/3125|2077/12500|46157/25000|52/125|6||
+|(9/2, +inf)|NOT_EQUILIBRIUM|1|True|376/3125|573/6250|188/3125|2077/12500|211/125|52/125|6||
+
+Closed full-equilibrium intervals and action witnesses (Z=0 / Z=1):
+
+|ID|Z=0 actions|Z=1 actions|Closed b interval|Failed gates|
+|---|---|---|---|---|
+|0|H01, L0, H01|H01, L0, H01|[-inf, -3375/1798]|fr|
+|1|H01, L0, H01|H01, H01, H01|[-3375/1798, -70/633]|fr|
+|2|H01, L1, H01|H01, L1, H01|[9/2, +inf]|none|
+|3|H01, H01, H01|H01, L1, H01|[175/1102, 9/2]|none|
+|4|H01, H01, H01|H01, H01, H01|[-70/633, 175/1102]|none|
+
+### one_C : b_i = b * (0, 0, 1)
+
+All-gates-safe component containing zero: {'lo': Fraction(-70, 633), 'hi': None, 'lo_included': False, 'hi_included': False}. A None endpoint means infinity. Pure existence for all real b: True.
+
+|b cell|All-H01|Pure count|All gates|Worst FA|Worst FR|Wrong payout|Decision loss|Cash|Union exposure|Reserve|Bad IDs|
+|---|---|---:|---|---|---|---|---|---|---|---|---|
+|(-inf, -3375/1798)|NOT_EQUILIBRIUM|1|False|323/25000|1259/3125|323/50000|5359/25000|6747/4000|411/1000|6|0|
+|{-3375/1798}|NOT_EQUILIBRIUM|2|False|671/25000|1259/3125|671/50000|5359/25000|7387/4000|411/1000|6|0,1|
+|(-3375/1798, -70/633)|NOT_EQUILIBRIUM|1|False|671/25000|853/3125|671/50000|4083/25000|7387/4000|411/1000|6|1|
+|{-70/633}|WEAK_WITH_TIES|2|False|43/1250|853/3125|43/2500|4083/25000|46957/25000|411/1000|6|1|
+|(-70/633, 175/1102)|STRICT|1|True|43/1250|481/3125|43/2500|348/3125|46957/25000|2557/6250|6||
+|{175/1102}|WEAK_WITH_TIES|2|True|563/6250|481/3125|563/12500|377/2500|46957/25000|2557/6250|6||
+|(175/1102, 9/2)|NOT_EQUILIBRIUM|1|True|563/6250|759/6250|563/12500|377/2500|46157/25000|2557/6250|6||
+|{9/2}|NOT_EQUILIBRIUM|2|True|376/3125|759/6250|188/3125|2077/12500|46157/25000|52/125|6||
+|(9/2, +inf)|NOT_EQUILIBRIUM|1|True|376/3125|573/6250|188/3125|2077/12500|211/125|52/125|6||
+
+Closed full-equilibrium intervals and action witnesses (Z=0 / Z=1):
+
+|ID|Z=0 actions|Z=1 actions|Closed b interval|Failed gates|
+|---|---|---|---|---|
+|0|H01, H01, L0|H01, H01, L0|[-inf, -3375/1798]|fr|
+|1|H01, H01, L0|H01, H01, H01|[-3375/1798, -70/633]|fr|
+|2|H01, H01, L1|H01, H01, L1|[9/2, +inf]|none|
+|3|H01, H01, H01|H01, H01, L1|[175/1102, 9/2]|none|
+|4|H01, H01, H01|H01, H01, H01|[-70/633, 175/1102]|none|
+
+### symmetric : b_i = b * (1, 1, 1)
+
+All-gates-safe component containing zero: {'lo': Fraction(-70, 633), 'hi': Fraction(175, 1922), 'lo_included': False, 'hi_included': False}. A None endpoint means infinity. Pure existence for all real b: True.
+
+|b cell|All-H01|Pure count|All gates|Worst FA|Worst FR|Wrong payout|Decision loss|Cash|Union exposure|Reserve|Bad IDs|
+|---|---|---:|---|---|---|---|---|---|---|---|---|
+|(-inf, -3375/1798)|NOT_EQUILIBRIUM|3|False|0|1|0|1/2|333/250|2/5|6|0,5,12|
+|{-3375/1798}|NOT_EQUILIBRIUM|6|False|159/6250|1|159/12500|1/2|453/250|2/5|6|0,4,5,9,12,16|
+|(-3375/1798, -45/34)|NOT_EQUILIBRIUM|6|False|159/6250|1|159/12500|1/2|453/250|2/5|6|0,4,5,9,12,16|
+|{-45/34}|NOT_EQUILIBRIUM|15|False|159/6250|1|159/12500|1/2|453/250|2/5|6|0,1,2,3,4,5,6,7,8,9,12,13,14,15,16|
+|(-45/34, -375/442)|NOT_EQUILIBRIUM|12|False|159/6250|499/625|159/12500|251/625|453/250|2/5|6|1,2,3,4,6,7,8,9,13,14,15,16|
+|{-375/442}|NOT_EQUILIBRIUM|12|False|159/6250|499/625|159/12500|251/625|453/250|2/5|6|1,2,3,4,6,7,8,9,13,14,15,16|
+|(-375/442, -70/439)|NOT_EQUILIBRIUM|3|False|159/6250|1123/3125|159/12500|641/3125|453/250|2/5|6|4,9,16|
+|{-70/439}|NOT_EQUILIBRIUM|6|False|671/25000|1123/3125|671/50000|641/3125|7387/4000|411/1000|6|4,9,10,16,17,18|
+|(-70/439, -70/633)|NOT_EQUILIBRIUM|3|False|671/25000|853/3125|671/50000|4083/25000|7387/4000|411/1000|6|10,17,18|
+|{-70/633}|WEAK_WITH_TIES|4|False|43/1250|853/3125|43/2500|4083/25000|46957/25000|411/1000|6|10,17,18|
+|(-70/633, 175/1922)|STRICT|1|True|43/1250|481/3125|43/2500|348/3125|46957/25000|2557/6250|6||
+|{175/1922}|STRICT|4|False|1391/6250|481/3125|1391/12500|852/3125|46957/25000|2557/6250|6|20,21,22|
+|(175/1922, 7/46)|STRICT|4|False|1391/6250|481/3125|1391/12500|852/3125|46957/25000|2557/6250|6|20,21,22|
+|{7/46}|STRICT|5|False|1931/6250|481/3125|1931/12500|4453/12500|46957/25000|2557/6250|6|19,20,21,22|
+|(7/46, 175/1102)|STRICT|2|False|1931/6250|481/3125|1931/12500|4453/12500|46957/25000|2557/6250|6|19|
+|{175/1102}|WEAK_WITH_TIES|2|False|1931/6250|481/3125|1931/12500|4453/12500|46957/25000|2557/6250|6|19|
+|(175/1102, 54/113)|NOT_EQUILIBRIUM|1|False|1931/6250|591/6250|1931/12500|4453/12500|44557/25000|2557/6250|6|19|
+|{54/113}|NOT_EQUILIBRIUM|2|False|1|591/6250|1/2|1|44557/25000|2557/6250|6|11,19|
+|(54/113, 9/2)|NOT_EQUILIBRIUM|2|False|1|591/6250|1/2|1|44557/25000|2557/6250|6|11,19|
+|{9/2}|NOT_EQUILIBRIUM|2|False|1|591/6250|1/2|1|44557/25000|2557/6250|6|11,19|
+|(9/2, +inf)|NOT_EQUILIBRIUM|1|False|1|0|1/2|1|13/10|2/5|6|11|
+
+Closed full-equilibrium intervals and action witnesses (Z=0 / Z=1):
+
+|ID|Z=0 actions|Z=1 actions|Closed b interval|Failed gates|
+|---|---|---|---|---|
+|0|L0, L0, H01|L0, L0, L0|[-inf, -45/34]|fr|
+|1|L0, L0, H01|L0, L0, H01|[-45/34, -375/442]|fr|
+|2|L0, L0, H01|L0, H01, L0|[-45/34, -375/442]|fr|
+|3|L0, L0, H01|H01, L0, L0|[-45/34, -375/442]|fr|
+|4|L0, L0, H01|H01, H01, H01|[-3375/1798, -70/439]|fr|
+|5|L0, H01, L0|L0, L0, L0|[-inf, -45/34]|fr|
+|6|L0, H01, L0|L0, L0, H01|[-45/34, -375/442]|fr|
+|7|L0, H01, L0|L0, H01, L0|[-45/34, -375/442]|fr|
+|8|L0, H01, L0|H01, L0, L0|[-45/34, -375/442]|fr|
+|9|L0, H01, L0|H01, H01, H01|[-3375/1798, -70/439]|fr|
+|10|L0, H01, H01|H01, H01, H01|[-70/439, -70/633]|fr|
+|11|L1, L1, L1|L1, L1, L1|[54/113, +inf]|fa, wrong_payout|
+|12|H01, L0, L0|L0, L0, L0|[-inf, -45/34]|fr|
+|13|H01, L0, L0|L0, L0, H01|[-45/34, -375/442]|fr|
+|14|H01, L0, L0|L0, H01, L0|[-45/34, -375/442]|fr|
+|15|H01, L0, L0|H01, L0, L0|[-45/34, -375/442]|fr|
+|16|H01, L0, L0|H01, H01, H01|[-3375/1798, -70/439]|fr|
+|17|H01, L0, H01|H01, H01, H01|[-70/439, -70/633]|fr|
+|18|H01, H01, L0|H01, H01, H01|[-70/439, -70/633]|fr|
+|19|H01, H01, H01|L1, L1, L1|[7/46, 9/2]|fa, wrong_payout|
+|20|H01, H01, H01|L1, L1, H01|[175/1922, 7/46]|fa|
+|21|H01, H01, H01|L1, H01, L1|[175/1922, 7/46]|fa|
+|22|H01, H01, H01|H01, L1, L1|[175/1922, 7/46]|fa|
+|23|H01, H01, H01|H01, H01, H01|[-70/633, 175/1102]|none|
+## uniform
+
+### Local deviations against frozen All-H01
+
+All three Judge positions have the following identical values; certificate retains all 36 rows. Deviation gain = -gap + b*slope. A nonzero slope crosses at gap/slope; a crossing need not be the first optimal deviation.
+
+|Z|Action|Neutral gap|Release slope|Indifference b|
+|---|---|---|---|---|
+|0|L0|7/500|-2070709/15625000|-218750/2070709|
+|0|L1|27/100|234943/3906250|2109375/469886|
+|0|H00|8/125|-2070709/15625000|-1000000/2070709|
+|0|H01|0|0|None|
+|0|H10|48/125|-1130937/15625000|-2000000/376979|
+|0|H11|8/25|234943/3906250|1250000/234943|
+|1|L0|27/100|-2228063/15625000|-4218750/2228063|
+|1|L1|7/500|1365587/15625000|218750/1365587|
+|1|H00|8/25|-2228063/15625000|-5000000/2228063|
+|1|H01|0|0|None|
+|1|H10|48/125|-215619/3906250|-500000/71873|
+|1|H11|8/125|1365587/15625000|1000000/1365587|
+
+### neutral : b_i = b * (0, 0, 0)
+
+All-gates-safe component containing zero: {'lo': None, 'hi': None, 'lo_included': False, 'hi_included': False}. A None endpoint means infinity. Pure existence for all real b: True.
+
+|b cell|All-H01|Pure count|All gates|Worst FA|Worst FR|Wrong payout|Decision loss|Cash|Union exposure|Reserve|Bad IDs|
+|---|---|---:|---|---|---|---|---|---|---|---|---|
+|(-inf, +inf)|STRICT|1|True|328691/9765625|3184297/19531250|328691/19531250|4499061/39062500|46957/25000|2557/6250|6||
+
+Closed full-equilibrium intervals and action witnesses (Z=0 / Z=1):
+
+|ID|Z=0 actions|Z=1 actions|Closed b interval|Failed gates|
+|---|---|---|---|---|
+|0|H01, H01, H01|H01, H01, H01|[-inf, +inf]|none|
+
+### one_A : b_i = b * (1, 0, 0)
+
+All-gates-safe component containing zero: {'lo': Fraction(-218750, 2070709), 'hi': None, 'lo_included': False, 'hi_included': False}. A None endpoint means infinity. Pure existence for all real b: True.
+
+|b cell|All-H01|Pure count|All gates|Worst FA|Worst FR|Wrong payout|Decision loss|Cash|Union exposure|Reserve|Bad IDs|
+|---|---|---:|---|---|---|---|---|---|---|---|---|
+|(-inf, -4218750/2228063)|NOT_EQUILIBRIUM|1|False|24716/1953125|814754/1953125|12358/1953125|432093/1953125|42157/25000|2557/6250|6|0|
+|{-4218750/2228063}|NOT_EQUILIBRIUM|2|False|413347/15625000|814754/1953125|413347/31250000|432093/1953125|46157/25000|2557/6250|6|0,1|
+|(-4218750/2228063, -218750/2070709)|NOT_EQUILIBRIUM|1|False|413347/15625000|1126397/3906250|413347/31250000|2666141/15625000|46157/25000|2557/6250|6|1|
+|{-218750/2070709}|WEAK_WITH_TIES|2|False|328691/9765625|1126397/3906250|328691/19531250|2666141/15625000|46957/25000|2557/6250|6|1|
+|(-218750/2070709, 218750/1365587)|STRICT|1|True|328691/9765625|3184297/19531250|328691/19531250|4499061/39062500|46957/25000|2557/6250|6||
+|{218750/1365587}|WEAK_WITH_TIES|2|True|1735477/19531250|3184297/19531250|1735477/39062500|24105449/156250000|46957/25000|2557/6250|6||
+|(218750/1365587, 2109375/469886)|NOT_EQUILIBRIUM|1|True|1735477/19531250|10221633/78125000|1735477/39062500|24105449/156250000|46157/25000|2557/6250|6||
+|{2109375/469886}|NOT_EQUILIBRIUM|2|True|229827/1953125|10221633/78125000|229827/3906250|5232021/31250000|46157/25000|2557/6250|6||
+|(2109375/469886, +inf)|NOT_EQUILIBRIUM|1|True|229827/1953125|1554789/15625000|229827/3906250|5232021/31250000|42157/25000|2557/6250|6||
+
+Closed full-equilibrium intervals and action witnesses (Z=0 / Z=1):
+
+|ID|Z=0 actions|Z=1 actions|Closed b interval|Failed gates|
+|---|---|---|---|---|
+|0|L0, H01, H01|L0, H01, H01|[-inf, -4218750/2228063]|fr|
+|1|L0, H01, H01|H01, H01, H01|[-4218750/2228063, -218750/2070709]|fr|
+|2|L1, H01, H01|L1, H01, H01|[2109375/469886, +inf]|none|
+|3|H01, H01, H01|L1, H01, H01|[218750/1365587, 2109375/469886]|none|
+|4|H01, H01, H01|H01, H01, H01|[-218750/2070709, 218750/1365587]|none|
+
+### one_B : b_i = b * (0, 1, 0)
+
+All-gates-safe component containing zero: {'lo': Fraction(-218750, 2070709), 'hi': None, 'lo_included': False, 'hi_included': False}. A None endpoint means infinity. Pure existence for all real b: True.
+
+|b cell|All-H01|Pure count|All gates|Worst FA|Worst FR|Wrong payout|Decision loss|Cash|Union exposure|Reserve|Bad IDs|
+|---|---|---:|---|---|---|---|---|---|---|---|---|
+|(-inf, -4218750/2228063)|NOT_EQUILIBRIUM|1|False|24716/1953125|814754/1953125|12358/1953125|432093/1953125|42157/25000|2557/6250|6|0|
+|{-4218750/2228063}|NOT_EQUILIBRIUM|2|False|413347/15625000|814754/1953125|413347/31250000|432093/1953125|46157/25000|2557/6250|6|0,1|
+|(-4218750/2228063, -218750/2070709)|NOT_EQUILIBRIUM|1|False|413347/15625000|1126397/3906250|413347/31250000|2666141/15625000|46157/25000|2557/6250|6|1|
+|{-218750/2070709}|WEAK_WITH_TIES|2|False|328691/9765625|1126397/3906250|328691/19531250|2666141/15625000|46957/25000|2557/6250|6|1|
+|(-218750/2070709, 218750/1365587)|STRICT|1|True|328691/9765625|3184297/19531250|328691/19531250|4499061/39062500|46957/25000|2557/6250|6||
+|{218750/1365587}|WEAK_WITH_TIES|2|True|1735477/19531250|3184297/19531250|1735477/39062500|24105449/156250000|46957/25000|2557/6250|6||
+|(218750/1365587, 2109375/469886)|NOT_EQUILIBRIUM|1|True|1735477/19531250|10221633/78125000|1735477/39062500|24105449/156250000|46157/25000|2557/6250|6||
+|{2109375/469886}|NOT_EQUILIBRIUM|2|True|229827/1953125|10221633/78125000|229827/3906250|5232021/31250000|46157/25000|2557/6250|6||
+|(2109375/469886, +inf)|NOT_EQUILIBRIUM|1|True|229827/1953125|1554789/15625000|229827/3906250|5232021/31250000|42157/25000|2557/6250|6||
+
+Closed full-equilibrium intervals and action witnesses (Z=0 / Z=1):
+
+|ID|Z=0 actions|Z=1 actions|Closed b interval|Failed gates|
+|---|---|---|---|---|
+|0|H01, L0, H01|H01, L0, H01|[-inf, -4218750/2228063]|fr|
+|1|H01, L0, H01|H01, H01, H01|[-4218750/2228063, -218750/2070709]|fr|
+|2|H01, L1, H01|H01, L1, H01|[2109375/469886, +inf]|none|
+|3|H01, H01, H01|H01, L1, H01|[218750/1365587, 2109375/469886]|none|
+|4|H01, H01, H01|H01, H01, H01|[-218750/2070709, 218750/1365587]|none|
+
+### one_C : b_i = b * (0, 0, 1)
+
+All-gates-safe component containing zero: {'lo': Fraction(-218750, 2070709), 'hi': None, 'lo_included': False, 'hi_included': False}. A None endpoint means infinity. Pure existence for all real b: True.
+
+|b cell|All-H01|Pure count|All gates|Worst FA|Worst FR|Wrong payout|Decision loss|Cash|Union exposure|Reserve|Bad IDs|
+|---|---|---:|---|---|---|---|---|---|---|---|---|
+|(-inf, -4218750/2228063)|NOT_EQUILIBRIUM|1|False|24716/1953125|814754/1953125|12358/1953125|432093/1953125|42157/25000|2557/6250|6|0|
+|{-4218750/2228063}|NOT_EQUILIBRIUM|2|False|413347/15625000|814754/1953125|413347/31250000|432093/1953125|46157/25000|2557/6250|6|0,1|
+|(-4218750/2228063, -218750/2070709)|NOT_EQUILIBRIUM|1|False|413347/15625000|1126397/3906250|413347/31250000|2666141/15625000|46157/25000|2557/6250|6|1|
+|{-218750/2070709}|WEAK_WITH_TIES|2|False|328691/9765625|1126397/3906250|328691/19531250|2666141/15625000|46957/25000|2557/6250|6|1|
+|(-218750/2070709, 218750/1365587)|STRICT|1|True|328691/9765625|3184297/19531250|328691/19531250|4499061/39062500|46957/25000|2557/6250|6||
+|{218750/1365587}|WEAK_WITH_TIES|2|True|1735477/19531250|3184297/19531250|1735477/39062500|24105449/156250000|46957/25000|2557/6250|6||
+|(218750/1365587, 2109375/469886)|NOT_EQUILIBRIUM|1|True|1735477/19531250|10221633/78125000|1735477/39062500|24105449/156250000|46157/25000|2557/6250|6||
+|{2109375/469886}|NOT_EQUILIBRIUM|2|True|229827/1953125|10221633/78125000|229827/3906250|5232021/31250000|46157/25000|2557/6250|6||
+|(2109375/469886, +inf)|NOT_EQUILIBRIUM|1|True|229827/1953125|1554789/15625000|229827/3906250|5232021/31250000|42157/25000|2557/6250|6||
+
+Closed full-equilibrium intervals and action witnesses (Z=0 / Z=1):
+
+|ID|Z=0 actions|Z=1 actions|Closed b interval|Failed gates|
+|---|---|---|---|---|
+|0|H01, H01, L0|H01, H01, L0|[-inf, -4218750/2228063]|fr|
+|1|H01, H01, L0|H01, H01, H01|[-4218750/2228063, -218750/2070709]|fr|
+|2|H01, H01, L1|H01, H01, L1|[2109375/469886, +inf]|none|
+|3|H01, H01, H01|H01, H01, L1|[218750/1365587, 2109375/469886]|none|
+|4|H01, H01, H01|H01, H01, H01|[-218750/2070709, 218750/1365587]|none|
+
+### symmetric : b_i = b * (1, 1, 1)
+
+All-gates-safe component containing zero: {'lo': Fraction(-218750, 2070709), 'hi': Fraction(109375, 1189451), 'lo_included': False, 'hi_included': False}. A None endpoint means infinity. Pure existence for all real b: True.
+
+|b cell|All-H01|Pure count|All gates|Worst FA|Worst FR|Wrong payout|Decision loss|Cash|Union exposure|Reserve|Bad IDs|
+|---|---|---:|---|---|---|---|---|---|---|---|---|
+|(-inf, -4218750/2228063)|NOT_EQUILIBRIUM|3|False|0|1|0|1/2|33357/25000|2557/6250|6|0,5,12|
+|{-4218750/2228063}|NOT_EQUILIBRIUM|6|False|49431/1953125|1|49431/3906250|1/2|45357/25000|2557/6250|6|0,4,5,9,12,16|
+|(-4218750/2228063, -56250/43469)|NOT_EQUILIBRIUM|6|False|49431/1953125|1|49431/3906250|1/2|45357/25000|2557/6250|6|0,4,5,9,12,16|
+|{-56250/43469}|NOT_EQUILIBRIUM|15|False|49431/1953125|1|49431/3906250|1/2|45357/25000|2557/6250|6|0,1,2,3,4,5,6,7,8,9,12,13,14,15,16|
+|(-56250/43469, -703125/820333)|NOT_EQUILIBRIUM|12|False|49431/1953125|620159/781250|49431/3906250|1247989/3125000|45357/25000|2557/6250|6|1,2,3,4,6,7,8,9,13,14,15,16|
+|{-703125/820333}|NOT_EQUILIBRIUM|12|False|49431/1953125|620159/781250|49431/3906250|1247989/3125000|45357/25000|2557/6250|6|1,2,3,4,6,7,8,9,13,14,15,16|
+|(-703125/820333, -218750/1122523)|NOT_EQUILIBRIUM|3|False|49431/1953125|1402553/3906250|49431/3906250|1600277/7812500|45357/25000|2557/6250|6|4,9,16|
+|{-218750/1122523}|NOT_EQUILIBRIUM|6|False|413347/15625000|1402553/3906250|413347/31250000|1600277/7812500|46157/25000|2557/6250|6|4,9,10,16,17,18|
+|(-218750/1122523, -218750/2070709)|NOT_EQUILIBRIUM|3|False|413347/15625000|1126397/3906250|413347/31250000|2666141/15625000|46157/25000|2557/6250|6|10,17,18|
+|{-218750/2070709}|WEAK_WITH_TIES|4|False|328691/9765625|1126397/3906250|328691/19531250|2666141/15625000|46957/25000|2557/6250|6|10,17,18|
+|(-218750/2070709, 109375/1189451)|STRICT|1|True|328691/9765625|3184297/19531250|328691/19531250|4499061/39062500|46957/25000|2557/6250|6||
+|{109375/1189451}|STRICT|4|False|2148236/9765625|3184297/19531250|1074118/9765625|42942879/156250000|46957/25000|2557/6250|6|20,21,22|
+|(109375/1189451, 8750/58811)|STRICT|4|False|2148236/9765625|3184297/19531250|1074118/9765625|42942879/156250000|46957/25000|2557/6250|6|20,21,22|
+|{8750/58811}|STRICT|5|False|6022447/19531250|3184297/19531250|6022447/39062500|14075801/39062500|46957/25000|2557/6250|6|19,20,21,22|
+|(8750/58811, 218750/1365587)|STRICT|2|False|6022447/19531250|3184297/19531250|6022447/39062500|14075801/39062500|46957/25000|2557/6250|6|19|
+|{218750/1365587}|WEAK_WITH_TIES|2|False|6022447/19531250|3184297/19531250|6022447/39062500|14075801/39062500|46957/25000|2557/6250|6|19|
+|(218750/1365587, 56250/119791)|NOT_EQUILIBRIUM|1|False|6022447/19531250|2030907/19531250|6022447/39062500|14075801/39062500|44557/25000|2557/6250|6|19|
+|{56250/119791}|NOT_EQUILIBRIUM|2|False|1|2030907/19531250|1/2|1|44557/25000|2557/6250|6|11,19|
+|(56250/119791, 2109375/469886)|NOT_EQUILIBRIUM|2|False|1|2030907/19531250|1/2|1|44557/25000|2557/6250|6|11,19|
+|{2109375/469886}|NOT_EQUILIBRIUM|2|False|1|2030907/19531250|1/2|1|44557/25000|2557/6250|6|11,19|
+|(2109375/469886, +inf)|NOT_EQUILIBRIUM|1|False|1|0|1/2|1|32557/25000|2557/6250|6|11|
+
+Closed full-equilibrium intervals and action witnesses (Z=0 / Z=1):
+
+|ID|Z=0 actions|Z=1 actions|Closed b interval|Failed gates|
+|---|---|---|---|---|
+|0|L0, L0, H01|L0, L0, L0|[-inf, -56250/43469]|fr|
+|1|L0, L0, H01|L0, L0, H01|[-56250/43469, -703125/820333]|fr|
+|2|L0, L0, H01|L0, H01, L0|[-56250/43469, -703125/820333]|fr|
+|3|L0, L0, H01|H01, L0, L0|[-56250/43469, -703125/820333]|fr|
+|4|L0, L0, H01|H01, H01, H01|[-4218750/2228063, -218750/1122523]|fr|
+|5|L0, H01, L0|L0, L0, L0|[-inf, -56250/43469]|fr|
+|6|L0, H01, L0|L0, L0, H01|[-56250/43469, -703125/820333]|fr|
+|7|L0, H01, L0|L0, H01, L0|[-56250/43469, -703125/820333]|fr|
+|8|L0, H01, L0|H01, L0, L0|[-56250/43469, -703125/820333]|fr|
+|9|L0, H01, L0|H01, H01, H01|[-4218750/2228063, -218750/1122523]|fr|
+|10|L0, H01, H01|H01, H01, H01|[-218750/1122523, -218750/2070709]|fr|
+|11|L1, L1, L1|L1, L1, L1|[56250/119791, +inf]|fa, wrong_payout|
+|12|H01, L0, L0|L0, L0, L0|[-inf, -56250/43469]|fr|
+|13|H01, L0, L0|L0, L0, H01|[-56250/43469, -703125/820333]|fr|
+|14|H01, L0, L0|L0, H01, L0|[-56250/43469, -703125/820333]|fr|
+|15|H01, L0, L0|H01, L0, L0|[-56250/43469, -703125/820333]|fr|
+|16|H01, L0, L0|H01, H01, H01|[-4218750/2228063, -218750/1122523]|fr|
+|17|H01, L0, H01|H01, H01, H01|[-218750/1122523, -218750/2070709]|fr|
+|18|H01, H01, L0|H01, H01, H01|[-218750/1122523, -218750/2070709]|fr|
+|19|H01, H01, H01|L1, L1, L1|[8750/58811, 2109375/469886]|fa, wrong_payout|
+|20|H01, H01, H01|L1, L1, H01|[109375/1189451, 8750/58811]|fa|
+|21|H01, H01, H01|L1, H01, L1|[109375/1189451, 8750/58811]|fa|
+|22|H01, H01, H01|H01, L1, L1|[109375/1189451, 8750/58811]|fa|
+|23|H01, H01, H01|H01, H01, H01|[-218750/2070709, 218750/1365587]|none|

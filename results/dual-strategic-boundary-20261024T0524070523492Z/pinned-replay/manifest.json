@@ -1,0 +1,25 @@
+{
+  "utc": "2026-10-24T05:25:04.263241+00:00",
+  "source_raw_sha256": {
+    "configs/dual_boundary.json": "17001d4aabcc971bd29b68a690d5d6b26e0c4c9c41be5670d60e1cac19d9cce5",
+    "CEAV_M1_DUAL_BOUNDARY_PROTOCOL.md": "44cea5f9e548ed44456ca2a248bd22787cfa68be7330f626a6b463294eed878a",
+    "verification/dual_boundary.py": "8c943bb2f6f23c5032768dd60834f9e926a1d6aa3f83205482b54f4a645d6d0b",
+    "verification/dual_boundary_oracle.py": "bab19a553f73be9d843c0e199dd66b3ef2d0c25ab918f2e9b81dc8d9e4e4d3a9",
+    "tests/test_dual_boundary.py": "d2e7d79d5d1e1cca93ec08b44cccd588f394954b66578e22c12f0ef9a8894a38",
+    "tests/__init__.py": "14ecdce21e733e50c3e5bca221b9d10c520cfa180380f733bdbf57e4e988488e",
+    "CEAV_M1_RESEARCH_SYNTHESIS_AND_FEASIBILITY_MEMO.md": "c2bee5633dcf6722d09f7572ba256f11a2fe6446cd81734f0752eb173ae75b2f",
+    "CEAV_M1_DUAL_STRATEGIC_BOUNDARY_REPORT.md": "b8774454d5aa7503cb558ac18a24886de350e47b0077102e1f80071cdcfa90fe",
+    "verification/DUAL_BOUNDARY_INDEPENDENT_REVIEW.md": "aa2f99f44abfd9d2dbaa0093da7c64f440d28ffd0b584915a213badc29cd30c7",
+    "verification/dual_boundary_mutations.py": "afe6a42f68fbaf7d2337b216df0c8cce980bd13cf974c1379e0f3176ae85bfe3",
+    "verification/dual_boundary_audit.py": "35dcbcf243ba20ba4d2f3fe0d7258de73667f5c012bc6b2807d271d916c0a6e9",
+    "verification/dual_boundary_evidence.py": "292ba7fa4f497aaa8e6a4a56bc119ecd2794b1562361df57619c2bafeedb89f5"
+  },
+  "outputs_raw_sha256": {
+    "certificate.json": "fde3ad4745b37e270469aaec2692a51c83cbcf5db7fcb0a16938296a6e25b7d5",
+    "interval-report.md": "7807d683e7e5a9881fbf52e7b2dda2f7a0ba525de290a36a9933465270ccf82a"
+  },
+  "config_semantic_sha256": "0d1f10a0c480ac9558ce70f58e50019bb7fe59c7675d2f8a8832a61ae98b3451",
+  "command": "python -X utf8 verification/dual_boundary.py --out NEW_DIRECTORY",
+  "frozen_parent_commit": "df931b0ad73d464a6937a3a7c34879a978981b90",
+  "no_historical_mutation": true
+}

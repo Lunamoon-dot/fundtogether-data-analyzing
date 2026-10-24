@@ -1,0 +1,8 @@
+{
+  "checks": 5590,
+  "oracle_branch_profiles": 864,
+  "branch_candidates": 4320,
+  "full_profiles_covered": 466560,
+  "all_real_b": true,
+  "status": "PASS"
+}
