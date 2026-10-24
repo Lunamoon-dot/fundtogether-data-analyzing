@@ -25,6 +25,7 @@ configs/dual_boundary.json                 frozen study configuration
 verification/                              analyzer, independent oracle, audits
 tests/                                     focused 10-test verification suite
 frozen-boundary/                           immutable certificate copies and hashes
+figures/                                    four generated reviewer-facing PNG diagrams
 docs/                                      brief, manuscript, theorem, novelty and limitation notes
 ```
 

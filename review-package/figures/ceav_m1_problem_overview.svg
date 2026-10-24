@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="820" viewBox="0 0 1400 820" role="img" aria-labelledby="title desc">
+  <title id="title">FundTogether milestone verification problem</title>
+  <desc id="desc">A clean workflow from backers through escrow and milestone evidence to judge review and a release decision, followed by four explanatory risk cards and the research question.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="4" orient="auto"><path d="M0,0 L12,4 L0,8 Z" fill="#2f6487"/></marker>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#16324f" flood-opacity="0.10"/></filter>
+    <style>
+      .bg{fill:#f7fafc}.header{fill:#102f4a}.title{font:700 31px Arial,sans-serif;fill:#fff}.subtitle{font:400 17px Arial,sans-serif;fill:#d8e7f0}.section{font:700 14px Arial,sans-serif;letter-spacing:2px;fill:#527187}.card{fill:#fff;stroke:#d4e0e8;stroke-width:2}.step{fill:#edf5fa;stroke:#2f6487;stroke-width:2}.num{fill:#2f6487}.numtext{font:700 16px Arial,sans-serif;fill:#fff}.cardtitle{font:700 19px Arial,sans-serif;fill:#16324f}.body{font:400 15px Arial,sans-serif;fill:#486173}.flow{stroke:#2f6487;stroke-width:4;fill:none;marker-end:url(#arrow)}.risk{fill:#fff8ef;stroke:#e59a43;stroke-width:2}.riskbar{fill:#e59a43}.risktag{font:700 12px Arial,sans-serif;letter-spacing:1px;fill:#9a4d00}.riskhead{font:700 19px Arial,sans-serif;fill:#6e3d08}.risktext{font:400 15px Arial,sans-serif;fill:#75501f}.question{fill:#eaf4f6;stroke:#2f8791;stroke-width:2}.qhead{font:700 22px Arial,sans-serif;fill:#14545b}.qtext{font:400 18px Arial,sans-serif;fill:#245c64}.foot{font:400 14px Arial,sans-serif;fill:#6b8190}
+    </style>
+  </defs>
+  <rect class="bg" width="1400" height="820"/>
+  <rect class="header" width="1400" height="112"/>
+  <text class="title" x="70" y="52">FundTogether: why milestone verification is a research problem</text>
+  <text class="subtitle" x="70" y="82">Protect escrow funds while inducing useful, unbiased review effort.</text>
+
+  <text class="section" x="70" y="154">THE OPERATIONAL WORKFLOW</text>
+  <rect class="step" x="70" y="185" width="210" height="145" rx="18" filter="url(#shadow)"/><circle class="num" cx="101" cy="216" r="17"/><text class="numtext" x="101" y="222" text-anchor="middle">1</text><text class="cardtitle" x="175" y="245" text-anchor="middle">Backers</text><text class="body" x="175" y="275" text-anchor="middle">contribute funds</text>
+  <rect class="step" x="330" y="185" width="210" height="145" rx="18" filter="url(#shadow)"/><circle class="num" cx="361" cy="216" r="17"/><text class="numtext" x="361" y="222" text-anchor="middle">2</text><text class="cardtitle" x="435" y="245" text-anchor="middle">Escrow</text><text class="body" x="435" y="275" text-anchor="middle">holds payout</text>
+  <rect class="step" x="590" y="185" width="210" height="145" rx="18" filter="url(#shadow)"/><circle class="num" cx="621" cy="216" r="17"/><text class="numtext" x="621" y="222" text-anchor="middle">3</text><text class="cardtitle" x="695" y="245" text-anchor="middle">Milestone</text><text class="body" x="695" y="275" text-anchor="middle">creator submits evidence</text>
+  <rect class="step" x="850" y="185" width="210" height="145" rx="18" filter="url(#shadow)"/><circle class="num" cx="881" cy="216" r="17"/><text class="numtext" x="881" y="222" text-anchor="middle">4</text><text class="cardtitle" x="955" y="245" text-anchor="middle">Judge review</text><text class="body" x="955" y="275" text-anchor="middle">reports and decision</text>
+  <rect class="step" x="1110" y="185" width="220" height="145" rx="18" filter="url(#shadow)"/><circle class="num" cx="1141" cy="216" r="17"/><text class="numtext" x="1141" y="222" text-anchor="middle">5</text><text class="cardtitle" x="1220" y="245" text-anchor="middle">Outcome</text><text class="body" x="1220" y="275" text-anchor="middle">release / reject / refund</text>
+  <path class="flow" d="M280 257 L330 257"/><path class="flow" d="M540 257 L590 257"/><path class="flow" d="M800 257 L850 257"/><path class="flow" d="M1060 257 L1110 257"/>
+
+  <text class="section" x="70" y="408">WHERE THE STRATEGIC RISKS ENTER</text>
+  <rect class="risk" x="70" y="440" width="360" height="108" rx="16" filter="url(#shadow)"/><rect class="riskbar" x="70" y="440" width="8" height="108" rx="4"/><text class="risktag" x="100" y="470">QUALITY LOSS</text><text class="riskhead" x="100" y="500">Decision error</text><text class="risktext" x="100" y="527">wrong release → false payout; wrong rejection → false reject</text>
+  <rect class="risk" x="450" y="440" width="360" height="108" rx="16" filter="url(#shadow)"/><rect class="riskbar" x="450" y="440" width="8" height="108" rx="4"/><text class="risktag" x="480" y="470">REPORTING</text><text class="riskhead" x="480" y="500">Reviewer behavior</text><text class="risktext" x="480" y="527">low effort or biased reports reduce decision quality</text>
+  <rect class="risk" x="70" y="570" width="360" height="108" rx="16" filter="url(#shadow)"/><rect class="riskbar" x="70" y="570" width="8" height="108" rx="4"/><text class="risktag" x="100" y="600">BUDGET</text><text class="riskhead" x="100" y="630">Audit exposure</text><text class="risktext" x="100" y="657">more checking increases expected cash cost</text>
+  <rect class="risk" x="450" y="570" width="360" height="108" rx="16" filter="url(#shadow)"/><rect class="riskbar" x="450" y="570" width="8" height="108" rx="4"/><text class="risktag" x="480" y="600">STRATEGY</text><text class="riskhead" x="480" y="630">Bad incentives</text><text class="risktext" x="480" y="657">strategic reports or audit seeking</text>
+
+  <rect class="question" x="850" y="440" width="480" height="238" rx="18" filter="url(#shadow)"/><text class="qhead" x="890" y="490">Research question</text><text class="qtext" x="890" y="540">Can effort, reporting,</text><text class="qtext" x="890" y="570">decision quality and budget</text><text class="qtext" x="890" y="600">constraints hold together?</text><line x1="890" y1="625" x2="1290" y2="625" stroke="#9fc9cf" stroke-width="2"/><text class="body" x="890" y="653">T3–T5 evaluate these tensions</text>
+  <text class="foot" x="70" y="748">Risk cards explain what the research tests; they are not additional workflow stages.</text><text class="foot" x="70" y="773">Figure 1 · CEAV-M1 external research brief</text>
+</svg>

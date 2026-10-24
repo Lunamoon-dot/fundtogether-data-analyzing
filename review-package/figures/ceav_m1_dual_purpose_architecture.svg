@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">CEAV-M1 dual-purpose verification architecture</title>
+  <desc id="desc">Judge reports feed separate payment-audit and decision-audit lotteries that share trusted audit T but have different purposes.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L10,3 L0,6 Z" fill="#274c77"/></marker>
+    <style>
+      .bg{fill:#f7fafc}.title{font:700 30px Arial,sans-serif;fill:#16324f}.sub{font:400 16px Arial,sans-serif;fill:#476072}.box{fill:#fff;stroke:#274c77;stroke-width:2}.pay{fill:#e8f4f8;stroke:#087e8b;stroke-width:2}.dec{fill:#fff4e6;stroke:#d97706;stroke-width:2}.audit{fill:#edf7ed;stroke:#3a7d44;stroke-width:2}.head{font:700 20px Arial,sans-serif;fill:#16324f}.small{font:400 15px Arial,sans-serif;fill:#334e68}.label{font:700 16px Arial,sans-serif;fill:#16324f}.line{stroke:#274c77;stroke-width:3;fill:none;marker-end:url(#arrow)}.dash{stroke:#6b8799;stroke-width:2;stroke-dasharray:8 7;fill:none}
+    </style>
+  </defs>
+  <rect class="bg" width="1200" height="760"/>
+  <text class="title" x="60" y="58">Dual-purpose verification: separate the two jobs of auditing</text>
+  <text class="sub" x="60" y="88">The payment lottery controls reward eligibility; the decision lottery targets release-risk verification.</text>
+
+  <rect class="box" x="430" y="125" width="340" height="95" rx="14"/><text class="head" x="600" y="166" text-anchor="middle">Judge reports</text><text class="small" x="600" y="194" text-anchor="middle">three reports lock the public branch</text>
+  <path class="line" d="M600 220 L600 275"/>
+  <rect class="pay" x="95" y="300" width="425" height="170" rx="16"/><text class="head" x="307" y="342" text-anchor="middle">A_pay: payment audit lottery</text><text class="label" x="125" y="380">a = 2/5, independent of report</text><text class="small" x="125" y="410">A_pay = 1 → reward eligibility</text><text class="small" x="125" y="438">purpose: create an effort incentive</text>
+  <rect class="dec" x="680" y="300" width="425" height="170" rx="16"/><text class="head" x="892" y="342" text-anchor="middle">A_dec: decision audit lottery</text><text class="label" x="710" y="380">t = 1/6 on risk class S</text><text class="small" x="710" y="410">S = {Z=0, sum(reports)=2}</text><text class="small" x="710" y="438">purpose: verify final release decision</text>
+  <path class="line" d="M600 275 L307 300"/><path class="line" d="M600 275 L892 300"/>
+
+  <rect class="audit" x="415" y="545" width="370" height="100" rx="16"/><text class="head" x="600" y="585" text-anchor="middle">Trusted audit T</text><text class="small" x="600" y="613" text-anchor="middle">observed if A_pay ∪ A_dec occurs</text>
+  <path class="dash" d="M307 470 L500 545"/><path class="dash" d="M892 470 L700 545"/>
+  <rect class="box" x="90" y="675" width="1020" height="48" rx="12"/><text class="small" x="600" y="705" text-anchor="middle">Union exposure is charged once: P(A_pay ∪ A_dec). Bonus is paid only when A_pay=1.</text>
+  <text class="sub" x="70" y="535">shared evidence source</text><text class="sub" x="920" y="535">different objectives</text>
+</svg>
