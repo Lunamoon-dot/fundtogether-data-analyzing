@@ -1,29 +1,32 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="820" viewBox="0 0 1400 820" role="img" aria-labelledby="title desc">
   <title id="title">FundTogether milestone verification problem</title>
-  <desc id="desc">A workflow from backers through escrow and milestone evidence to judge review and release or refund, with four strategic risks.</desc>
+  <desc id="desc">A clean workflow from backers through escrow and milestone evidence to judge review and a release decision, followed by four explanatory risk cards and the research question.</desc>
   <defs>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L10,3 L0,6 Z" fill="#274c77"/></marker>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="4" orient="auto"><path d="M0,0 L12,4 L0,8 Z" fill="#2f6487"/></marker>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#16324f" flood-opacity="0.10"/></filter>
     <style>
-      .bg{fill:#f7fafc}.title{font:700 30px Arial,sans-serif;fill:#16324f}.sub{font:400 16px Arial,sans-serif;fill:#476072}.box{fill:#fff;stroke:#274c77;stroke-width:2}.boxtext{font:700 18px Arial,sans-serif;fill:#16324f}.small{font:400 15px Arial,sans-serif;fill:#334e68}.risk{fill:#fff4e6;stroke:#d97706;stroke-width:2}.riskhead{font:700 17px Arial,sans-serif;fill:#9a4d00}.risktext{font:400 15px Arial,sans-serif;fill:#6b3b08}.line{stroke:#274c77;stroke-width:3;fill:none;marker-end:url(#arrow)}
+      .bg{fill:#f7fafc}.header{fill:#102f4a}.title{font:700 31px Arial,sans-serif;fill:#fff}.subtitle{font:400 17px Arial,sans-serif;fill:#d8e7f0}.section{font:700 14px Arial,sans-serif;letter-spacing:2px;fill:#527187}.card{fill:#fff;stroke:#d4e0e8;stroke-width:2}.step{fill:#edf5fa;stroke:#2f6487;stroke-width:2}.num{fill:#2f6487}.numtext{font:700 16px Arial,sans-serif;fill:#fff}.cardtitle{font:700 19px Arial,sans-serif;fill:#16324f}.body{font:400 15px Arial,sans-serif;fill:#486173}.flow{stroke:#2f6487;stroke-width:4;fill:none;marker-end:url(#arrow)}.risk{fill:#fff8ef;stroke:#e59a43;stroke-width:2}.riskbar{fill:#e59a43}.risktag{font:700 12px Arial,sans-serif;letter-spacing:1px;fill:#9a4d00}.riskhead{font:700 19px Arial,sans-serif;fill:#6e3d08}.risktext{font:400 15px Arial,sans-serif;fill:#75501f}.question{fill:#eaf4f6;stroke:#2f8791;stroke-width:2}.qhead{font:700 22px Arial,sans-serif;fill:#14545b}.qtext{font:400 18px Arial,sans-serif;fill:#245c64}.foot{font:400 14px Arial,sans-serif;fill:#6b8190}
     </style>
   </defs>
-  <rect class="bg" width="1200" height="700"/>
-  <text class="title" x="60" y="58">FundTogether: why milestone verification is a research problem</text>
-  <text class="sub" x="60" y="88">The mechanism must protect escrow funds while inducing useful, unbiased review effort.</text>
+  <rect class="bg" width="1400" height="820"/>
+  <rect class="header" width="1400" height="112"/>
+  <text class="title" x="70" y="52">FundTogether: why milestone verification is a research problem</text>
+  <text class="subtitle" x="70" y="82">Protect escrow funds while inducing useful, unbiased review effort.</text>
 
-  <rect class="box" x="70" y="150" width="190" height="105" rx="14"/><text class="boxtext" x="165" y="190" text-anchor="middle">Backers</text><text class="small" x="165" y="218" text-anchor="middle">contribute funds</text>
-  <rect class="box" x="335" y="150" width="190" height="105" rx="14"/><text class="boxtext" x="430" y="190" text-anchor="middle">Escrow</text><text class="small" x="430" y="218" text-anchor="middle">holds payout</text>
-  <rect class="box" x="600" y="150" width="220" height="105" rx="14"/><text class="boxtext" x="710" y="190" text-anchor="middle">Creator milestone</text><text class="small" x="710" y="218" text-anchor="middle">submits evidence</text>
-  <rect class="box" x="895" y="150" width="220" height="105" rx="14"/><text class="boxtext" x="1005" y="190" text-anchor="middle">Judges review</text><text class="small" x="1005" y="218" text-anchor="middle">reports and decision</text>
-  <path class="line" d="M260 202 L335 202"/><path class="line" d="M525 202 L600 202"/><path class="line" d="M820 202 L895 202"/>
+  <text class="section" x="70" y="154">THE OPERATIONAL WORKFLOW</text>
+  <rect class="step" x="70" y="185" width="210" height="145" rx="18" filter="url(#shadow)"/><circle class="num" cx="101" cy="216" r="17"/><text class="numtext" x="101" y="222" text-anchor="middle">1</text><text class="cardtitle" x="175" y="245" text-anchor="middle">Backers</text><text class="body" x="175" y="275" text-anchor="middle">contribute funds</text>
+  <rect class="step" x="330" y="185" width="210" height="145" rx="18" filter="url(#shadow)"/><circle class="num" cx="361" cy="216" r="17"/><text class="numtext" x="361" y="222" text-anchor="middle">2</text><text class="cardtitle" x="435" y="245" text-anchor="middle">Escrow</text><text class="body" x="435" y="275" text-anchor="middle">holds payout</text>
+  <rect class="step" x="590" y="185" width="210" height="145" rx="18" filter="url(#shadow)"/><circle class="num" cx="621" cy="216" r="17"/><text class="numtext" x="621" y="222" text-anchor="middle">3</text><text class="cardtitle" x="695" y="245" text-anchor="middle">Milestone</text><text class="body" x="695" y="275" text-anchor="middle">creator submits evidence</text>
+  <rect class="step" x="850" y="185" width="210" height="145" rx="18" filter="url(#shadow)"/><circle class="num" cx="881" cy="216" r="17"/><text class="numtext" x="881" y="222" text-anchor="middle">4</text><text class="cardtitle" x="955" y="245" text-anchor="middle">Judge review</text><text class="body" x="955" y="275" text-anchor="middle">reports and decision</text>
+  <rect class="step" x="1110" y="185" width="220" height="145" rx="18" filter="url(#shadow)"/><circle class="num" cx="1141" cy="216" r="17"/><text class="numtext" x="1141" y="222" text-anchor="middle">5</text><text class="cardtitle" x="1220" y="245" text-anchor="middle">Outcome</text><text class="body" x="1220" y="275" text-anchor="middle">release / reject / refund</text>
+  <path class="flow" d="M280 257 L330 257"/><path class="flow" d="M540 257 L590 257"/><path class="flow" d="M800 257 L850 257"/><path class="flow" d="M1060 257 L1110 257"/>
 
-  <path class="line" d="M1005 255 L1005 335"/>
-  <rect class="box" x="840" y="350" width="330" height="105" rx="14"/><text class="boxtext" x="1005" y="390" text-anchor="middle">Final outcome</text><text class="small" x="1005" y="418" text-anchor="middle">release funds / reject / refund</text>
+  <text class="section" x="70" y="408">WHERE THE STRATEGIC RISKS ENTER</text>
+  <rect class="risk" x="70" y="440" width="360" height="108" rx="16" filter="url(#shadow)"/><rect class="riskbar" x="70" y="440" width="8" height="108" rx="4"/><text class="risktag" x="100" y="470">QUALITY LOSS</text><text class="riskhead" x="100" y="500">Decision error</text><text class="risktext" x="100" y="527">wrong release → false payout; wrong rejection → false reject</text>
+  <rect class="risk" x="450" y="440" width="360" height="108" rx="16" filter="url(#shadow)"/><rect class="riskbar" x="450" y="440" width="8" height="108" rx="4"/><text class="risktag" x="480" y="470">REPORTING</text><text class="riskhead" x="480" y="500">Reviewer behavior</text><text class="risktext" x="480" y="527">low effort or biased reports reduce decision quality</text>
+  <rect class="risk" x="70" y="570" width="360" height="108" rx="16" filter="url(#shadow)"/><rect class="riskbar" x="70" y="570" width="8" height="108" rx="4"/><text class="risktag" x="100" y="600">BUDGET</text><text class="riskhead" x="100" y="630">Audit exposure</text><text class="risktext" x="100" y="657">more checking increases expected cash cost</text>
+  <rect class="risk" x="450" y="570" width="360" height="108" rx="16" filter="url(#shadow)"/><rect class="riskbar" x="450" y="570" width="8" height="108" rx="4"/><text class="risktag" x="480" y="600">STRATEGY</text><text class="riskhead" x="480" y="630">Bad incentives</text><text class="risktext" x="480" y="657">strategic reports or audit seeking</text>
 
-  <rect class="risk" x="70" y="365" width="300" height="150" rx="14"/><text class="riskhead" x="95" y="405">Decision error</text><text class="risktext" x="95" y="434">wrong release creates false payout</text><text class="risktext" x="95" y="459">or false rejection</text>
-  <rect class="risk" x="400" y="365" width="300" height="150" rx="14"/><text class="riskhead" x="425" y="405">Reviewer behavior</text><text class="risktext" x="425" y="434">low effort or biased reports</text><text class="risktext" x="425" y="459">can reduce decision quality</text>
-  <rect class="risk" x="70" y="545" width="300" height="100" rx="14"/><text class="riskhead" x="95" y="582">Audit exposure</text><text class="risktext" x="95" y="611">more checking raises cost</text>
-  <rect class="risk" x="400" y="545" width="300" height="100" rx="14"/><text class="riskhead" x="425" y="582">Bad incentives</text><text class="risktext" x="425" y="611">strategic reports or audit seeking</text>
-  <path class="line" d="M700 415 L840 390"/><path class="line" d="M550 545 L550 515"/>
-  <text class="sub" x="840" y="540">Research question: can effort, reporting,</text><text class="sub" x="840" y="566">quality and budget constraints hold together?</text>
+  <rect class="question" x="850" y="440" width="480" height="238" rx="18" filter="url(#shadow)"/><text class="qhead" x="890" y="490">Research question</text><text class="qtext" x="890" y="540">Can effort, reporting,</text><text class="qtext" x="890" y="570">decision quality and budget</text><text class="qtext" x="890" y="600">constraints hold together?</text><line x1="890" y1="625" x2="1290" y2="625" stroke="#9fc9cf" stroke-width="2"/><text class="body" x="890" y="653">T3–T5 evaluate these tensions</text>
+  <text class="foot" x="70" y="748">Risk cards explain what the research tests; they are not additional workflow stages.</text><text class="foot" x="70" y="773">Figure 1 · CEAV-M1 external research brief</text>
 </svg>
