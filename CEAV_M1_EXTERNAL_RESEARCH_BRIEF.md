@@ -9,6 +9,10 @@ FundTogether studies milestone verification for an escrow-like crowdfunding work
 
 The central difficulty is strategic. A reviewer may value a particular release outcome, may choose an uninformative report when reporting has no marginal payoff, or may seek an audit when an audit-contingent reward makes that privately profitable. Therefore truthful behavior cannot be inferred from a good signal model or from one truthful profile alone.
 
+![FundTogether milestone verification problem](figures/ceav_m1_problem_overview.svg)
+
+*Figure 1. The practical milestone-verification problem: escrow safety depends on decision quality, reviewer behavior, audit exposure and incentive design.*
+
 ## 2. Formal question
 
 For a fixed finite CEAV-M1 game, can a mechanism simultaneously provide (i) a strict effort incentive, (ii) a truthful local equilibrium, (iii) acceptable decision quality and cash cost, and (iv) resistance to external release preferences? The study separates claims about the truthful profile from claims about every pure equilibrium in the declared stationary six-action-per-branch class.
@@ -33,6 +37,10 @@ The dual-purpose architecture keeps two independent lotteries:
 
 The union event is charged once, so exposure is `P(A_pay ∪ A_dec)`. Separating the lotteries is intended to remove the direct report-to-payment channel while preserving risk-targeted decision verification. The study does not assume that this separation solves external-interest manipulation or global equilibrium selection.
 
+![CEAV-M1 dual-purpose verification architecture](figures/ceav_m1_dual_purpose_architecture.svg)
+
+*Figure 2. The signature architecture separates report-independent payment eligibility from risk-dependent decision verification while sharing trusted audit `T`.*
+
 ## 4. Verified results
 
 ### T3 — Neutral feasibility
@@ -53,6 +61,10 @@ These are local best-response results against frozen peers and calibration. They
 ### T5 — Global-quality failure at `b=1/10`
 
 At symmetric preferences `b=(1/10,1/10,1/10)`, exhaustive factorized checking of the declared pure stationary class finds four pure equilibria for each frozen mechanism. All-H01 remains one equilibrium, but three additional strict equilibria are bad: each fails the false-accept gate. For Selective, the safe all-pure component around zero is `-70/633 < b < 175/1922`; the positive endpoint is much smaller than the local one-Judge endpoint because global deviations can coordinate through equilibrium profiles. The frozen report labels the study `STRATEGIC_FAILURE` for global robustness, while preserving a nonempty local neutral neighborhood.
+
+![CEAV-M1 T3, T4 and T5 results](figures/ceav_m1_t3_t4_t5_summary.svg)
+
+*Figure 3. T3 establishes neutral feasibility, T4 gives local best-response intervals, and T5 exposes the global bad-equilibrium boundary.*
 
 At neutral `b=0`, Selective has `FA=43/1250`, `FR=481/3125`, loss `348/3125`; Uniform has `FA=328691/9765625`, `FR=3184297/19531250`, loss `4499061/39062500`. Both have union exposure `2557/6250` and expected cash `46957/25000` under All-H01. These comparisons are equilibrium-specific; equal neutral exposure does not imply equal exposure under different equilibrium reports.
 

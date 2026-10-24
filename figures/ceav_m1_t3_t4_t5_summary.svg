@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="760" viewBox="0 0 1400 760" role="img" aria-labelledby="title desc">
+  <title id="title">CEAV-M1 T3, T4 and T5 results</title>
+  <desc id="desc">Three panels summarize neutral feasibility, local external-interest intervals, and global bad equilibria.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L10,3 L0,6 Z" fill="#274c77"/></marker>
+    <style>
+      .bg{fill:#f7fafc}.title{font:700 30px Arial,sans-serif;fill:#16324f}.panel{fill:#fff;stroke:#b6c7d6;stroke-width:2}.t3{fill:#edf7ed;stroke:#3a7d44;stroke-width:2}.t4{fill:#e8f4f8;stroke:#087e8b;stroke-width:2}.t5{fill:#fff4e6;stroke:#d97706;stroke-width:2}.head{font:700 22px Arial,sans-serif;fill:#16324f}.subhead{font:700 17px Arial,sans-serif;fill:#274c77}.text{font:400 16px Arial,sans-serif;fill:#334e68}.formula{font:700 18px Arial,sans-serif;fill:#16324f}.good{font:700 17px Arial,sans-serif;fill:#28733c}.bad{font:700 17px Arial,sans-serif;fill:#a34b00}.axis{stroke:#274c77;stroke-width:3}.tick{stroke:#274c77;stroke-width:2}.line{stroke:#274c77;stroke-width:2;fill:none;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect class="bg" width="1400" height="760"/>
+  <text class="title" x="70" y="58">The verified story: feasibility, local stability, global failure</text>
+  <text class="text" x="70" y="88">The three results must be read together; a local truthful result is not an all-equilibrium guarantee.</text>
+
+  <rect class="panel t3" x="60" y="135" width="390" height="510" rx="18"/><text class="head" x="255" y="180" text-anchor="middle">T3 · Neutral feasibility</text><text class="text" x="90" y="225">High effort has positive net value:</text><text class="formula" x="90" y="263">c = 1/20</text><text class="formula" x="90" y="297">Δ = M_H − M_L = 2/25</text><text class="formula" x="90" y="331">μaΔ − c = 7/500</text><path class="line" d="M255 355 L255 405"/><text class="good" x="255" y="440" text-anchor="middle">quality gates pass</text><text class="good" x="255" y="472" text-anchor="middle">cash / exposure gates pass</text><text class="good" x="255" y="504" text-anchor="middle">neutral All-H01 is viable</text><text class="text" x="90" y="570">Exact Fraction proof and</text><text class="text" x="90" y="596">independent review agree.</text>
+
+  <rect class="panel t4" x="505" y="135" width="390" height="510" rx="18"/><text class="head" x="700" y="180" text-anchor="middle">T4 · Local stability</text><text class="text" x="535" y="225">All-H01 against frozen peers:</text>
+  <text class="subhead" x="535" y="270">Selective</text><text class="text" x="535" y="298">−70/633 &lt; bᵢ &lt; 175/1102</text>
+  <text class="subhead" x="535" y="352">Uniform</text><text class="text" x="535" y="380">−218750/2070709 &lt; bᵢ</text><text class="text" x="535" y="404">&lt; 218750/1365587</text>
+  <line class="axis" x1="560" y1="505" x2="840" y2="505"/><line class="tick" x1="590" y1="493" x2="590" y2="517"/><line class="tick" x1="810" y1="493" x2="810" y2="517"/><rect x="590" y="496" width="220" height="18" rx="9" fill="#53a8b5"/><text class="text" x="700" y="550" text-anchor="middle">strict local interval</text><text class="text" x="555" y="535">bad</text><text class="text" x="815" y="535">bad</text>
+  <text class="text" x="535" y="600">Local best response only;</text><text class="text" x="535" y="626">not global uniqueness.</text>
+
+  <rect class="panel t5" x="950" y="135" width="390" height="510" rx="18"/><text class="head" x="1145" y="180" text-anchor="middle">T5 · Global quality</text><text class="text" x="980" y="225">At symmetric b = 1/10:</text><text class="formula" x="980" y="265">4 pure equilibria</text><path class="line" d="M1145 285 L1145 330"/><rect x="990" y="350" width="310" height="55" rx="12" fill="#edf7ed"/><text class="good" x="1145" y="384" text-anchor="middle">1 All-H01 · gates pass</text><rect x="990" y="425" width="310" height="120" rx="12" fill="#ffe8cc"/><text class="bad" x="1145" y="460" text-anchor="middle">3 additional equilibria</text><text class="bad" x="1145" y="490" text-anchor="middle">false-accept gate fails</text><text class="bad" x="1145" y="520" text-anchor="middle">bad global quality</text><text class="text" x="980" y="595">Declared conclusion:</text><text class="bad" x="980" y="625">STRATEGIC_FAILURE globally</text>
+</svg>

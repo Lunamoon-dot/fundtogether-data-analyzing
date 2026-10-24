@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Local versus global equilibrium analysis</title>
+  <desc id="desc">A two-level diagram contrasts a one-Judge local best-response check with an exhaustive pure-equilibrium check.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L10,3 L0,6 Z" fill="#274c77"/></marker>
+    <style>
+      .bg{fill:#f7fafc}.title{font:700 30px Arial,sans-serif;fill:#16324f}.sub{font:400 16px Arial,sans-serif;fill:#476072}.local{fill:#e8f4f8;stroke:#087e8b;stroke-width:2}.global{fill:#fff4e6;stroke:#d97706;stroke-width:2}.out{fill:#fff;stroke:#274c77;stroke-width:2}.head{font:700 23px Arial,sans-serif;fill:#16324f}.text{font:400 16px Arial,sans-serif;fill:#334e68}.strong{font:700 18px Arial,sans-serif;fill:#16324f}.good{font:700 18px Arial,sans-serif;fill:#28733c}.bad{font:700 18px Arial,sans-serif;fill:#a34b00}.line{stroke:#274c77;stroke-width:3;fill:none;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect class="bg" width="1200" height="760"/>
+  <text class="title" x="70" y="58">Local truthful stability is not global equilibrium quality</text>
+  <text class="sub" x="70" y="88">The two statements use different deviation sets and answer different scientific questions.</text>
+
+  <rect class="local" x="100" y="145" width="1000" height="185" rx="18"/><text class="head" x="135" y="190">Local view · one Judge's best response</text><text class="text" x="135" y="230">Hold the two peer tables at All-H01 and freeze calibration.</text><text class="text" x="135" y="258">Compare all six actions for one focal Judge as bᵢ varies.</text><rect class="out" x="720" y="205" width="330" height="85" rx="12"/><text class="good" x="885" y="240" text-anchor="middle">All-H01 remains strict</text><text class="text" x="885" y="266" text-anchor="middle">inside the T4 interval</text>
+  <path class="line" d="M600 330 L600 395"/>
+  <rect class="global" x="100" y="420" width="1000" height="185" rx="18"/><text class="head" x="135" y="465">Global view · all pure profiles</text><text class="text" x="135" y="505">Enumerate the declared six-action-per-branch class and retain ties.</text><text class="text" x="135" y="533">Check every Judge deviation, report distribution and quality gate.</text><rect class="out" x="720" y="480" width="330" height="85" rx="12"/><text class="bad" x="885" y="515" text-anchor="middle">Three bad equilibria appear</text><text class="text" x="885" y="541" text-anchor="middle">at symmetric b = 1/10</text>
+  <rect class="out" x="230" y="665" width="740" height="55" rx="14"/><text class="strong" x="600" y="700" text-anchor="middle">Local guarantee ≠ global guarantee</text>
+</svg>
